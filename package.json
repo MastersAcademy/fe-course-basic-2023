@@ -3,14 +3,14 @@
   "version": "21.0.0",
   "description": "Репозиторій з курсу \"Front-End for beginners 2023\" проекту Masters Academy",
   "scripts": {
-      "lint": "lint-staged",
-      "lint:all": "npm run lint:branch-name && npm run lint:css && npm run lint:js && npm run lint:ts && npm run lint:html",
-      "lint:js": "npx eslint --config .eslintrc.js --no-error-on-unmatched-pattern ./homeworks/**/*.js",
-      "lint:ts": "npx eslint --config .eslintrc.js --no-error-on-unmatched-pattern ./homeworks/**/*.ts",
-      "lint:css": "npx stylelint --config .stylelintrc --allow-empty-input ./homeworks/**/*.{css,scss}",
-      "lint:html": "npx eslint --config .eslintrc.js --no-error-on-unmatched-pattern ./homeworks/**/*.html",
-      "lint:branch-name": "npx branch-name-lint ./.branchlintrc.json",
-      "prepare": "husky install"
+    "lint": "lint-staged",
+    "lint:all": "npm run lint:branch-name && npm run lint:css && npm run lint:js && npm run lint:ts && npm run lint:html",
+    "lint:js": "npx eslint --config .eslintrc.js --no-error-on-unmatched-pattern ./homeworks/**/*.js",
+    "lint:ts": "npx eslint --config .eslintrc.js --no-error-on-unmatched-pattern ./homeworks/**/*.ts",
+    "lint:css": "npx stylelint --config .stylelintrc --allow-empty-input ./homeworks/**/*.{css,scss}",
+    "lint:html": "npx eslint --config .eslintrc.js --no-error-on-unmatched-pattern ./homeworks/**/*.html",
+    "lint:branch-name": "npx branch-name-lint ./.branchlintrc.json",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@angular-eslint/eslint-plugin": "^13.0.1",
