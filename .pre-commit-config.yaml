@@ -1,0 +1,2 @@
+- name: Remove .DS_Store files
+  run: rm -rf .DS_Store
