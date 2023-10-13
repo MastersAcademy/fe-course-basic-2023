@@ -1,0 +1,5 @@
+repos:
+- id: remove-macos-trash
+  name: Remove macOS .DS_Store files
+  description: Removes all files named .DS_Store from the repository.
+  entry: pre-commit run --hook-name remove-macos-trash
