@@ -1,3 +1,3 @@
-node v20.8.0
-npm 10.1.0
-"D:\node.exe"
+версія node v20.8.0
+версія npm 10.1.0
+шлях "D:\node.exe"
