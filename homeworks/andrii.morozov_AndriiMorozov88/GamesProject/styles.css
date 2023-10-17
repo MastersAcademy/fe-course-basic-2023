@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+.main {
+  width: 575px;
+  border: 2px #F00 solid;
+  padding-left: 20px;
+  font-size: 20px;
+}
+
+.main__paragraf {
+  margin-bottom: 20px;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.link--red {
+  color: #F00;
+}
+
+.link--blue {
+  color: #00F;
+}
