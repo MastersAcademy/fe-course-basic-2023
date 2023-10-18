@@ -1,0 +1,13 @@
+body {
+  font-family: Roboto;
+}
+
+.about-me {
+  max-width: 575px;
+  width: 100%;
+}
+
+.about-me__link {
+  color: #EF4934;
+}
+
