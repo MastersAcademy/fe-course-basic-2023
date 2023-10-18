@@ -4,23 +4,23 @@
 
 .main {
   width: 575px;
-  border: 2px #F00 solid;
   padding-left: 20px;
   font-size: 20px;
 }
 
-.main__paragraf {
-  margin-bottom: 20px;
+.main__heading--h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 32px;
 }
 
-.link {
-  text-decoration: none;
+.main__paragraf {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 32px;
 }
 
 .link--red {
   color: #F00;
-}
-
-.link--blue {
-  color: #00F;
 }
