@@ -6,19 +6,18 @@
   width: 575px;
   padding-left: 20px;
   color: #221F1F;
+  line-height: 32px;
 }
 
 .main__heading--h1 {
   font-size: 48px;
   font-weight: 700;
-  line-height: 32px;
 }
 
 .main__paragraf {
   margin-bottom: 20px;
   font-size: 22px;
   font-weight: 400;
-  line-height: 32px;
 }
 
 .link--red {
