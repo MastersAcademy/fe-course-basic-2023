@@ -7,6 +7,7 @@ body {
 * {
   font-family: Roboto, sans-serif;
 }
+
 /*
 .header {
     background: #EF4934;
@@ -41,7 +42,7 @@ img {
   display: block;
 }
 
-.text-about > * + * {
+.text-about>*+* {
   margin-top: 24px;
 }
 
