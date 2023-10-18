@@ -1,3 +1,15 @@
-.colortext {
-  color: #F00;
+p {
+  color: #221F1F;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+}
+
+.link {
+  color: #EF4934;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
 }
