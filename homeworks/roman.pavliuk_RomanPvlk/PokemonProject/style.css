@@ -3,6 +3,7 @@ body {
 }
 
 .about_section {
+  max-width: 1175px;
   display: flex;
   flex-direction: row;
   justify-content: center;
