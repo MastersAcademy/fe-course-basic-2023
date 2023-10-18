@@ -5,7 +5,7 @@
 .main {
   width: 575px;
   padding-left: 20px;
-  font-size: 20px;
+  color: #221F1F;
 }
 
 .main__heading--h1 {
@@ -22,5 +22,5 @@
 }
 
 .link--red {
-  color: #F00;
+  color: #EF4934;
 }
