@@ -1,0 +1,33 @@
+.about {
+
+}
+
+.about__all {
+  height: 479px;
+  weigth: 1175px;
+}
+
+.about__text {
+  height: 479px;
+  width: 575px;
+}
+
+.about__all .about__text .about__text_title {
+  color: #221F1F;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 32px;
+}
+
+.about__all .about__text .about__text_inf {
+  color: #221F1F;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+}
+
+.about__all .about__text .about__text_link {
+  color: #EF4934;
+}
