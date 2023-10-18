@@ -12,7 +12,7 @@ jobs:
               with:
                   node-version: 14.18.1
             - run: npm install --production
-            - run: npm run lint:js
+            - run: npm run lint:all
 
     lint-branch-name:
         name: Validate branch name
