@@ -1,18 +1,17 @@
-main{
+main {
   width: 1175px;
-  height: 479px;
 }
 
-.intro{
+.intro {
   color: #221F1F;
   width: 575px;
-  height: 479px;
   font-size: 22px;
   font-weight: 400;
+  font-family: Roboto, sans-serif;
   line-height: 32px;
 }
 
-h1{
+h1 {
   color: #221F1F;
   font-size: 48px;
   font-weight: 700;
@@ -20,8 +19,6 @@ h1{
   margin-block-start: 0;
 }
 
-.MA-link{
+.MA-link {
   color: #EF4934;
 }
-
-
