@@ -6,16 +6,10 @@ h1 {
   font-weight: 700;
 }
 
-/* p {
+.main__content {
   font-family: Roboto;
   font-size: 22px;
-  font-weight: 400;
-} */
-
-.main_content {
-  font-family: Roboto;
-  font-size: 22px;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 p a {
