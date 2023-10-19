@@ -1,13 +1,3 @@
-.about__all {
-  height: 479px;
-  weigth: 1175px;
-}
-
-.about__text {
-  height: 479px;
-  width: 575px;
-}
-
 .about__all .about__text .about__text_title {
   color: #221F1F;
   font-family: "Roboto", sans-serif;
