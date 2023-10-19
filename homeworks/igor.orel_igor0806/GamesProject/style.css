@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 
 .nav {
@@ -14,17 +11,16 @@
 
 .link_list {
   list-style: none;
-  color: #ffff;
+  color: #FFF;
   display: flex;
   gap: 50px;
 }
 
 .nav-link {
   text-decoration: none;
-  color: #ffffff;
+  color: #FFF;
   font-size: 16px;
   font-weight: 500;
-
 }
 
 .hero {
@@ -32,12 +28,8 @@
   justify-content: space-between;
   gap: 60px;
   padding: 50px 40px;
-
 }
 
-.hero-img {
-
-}
 
 .hero_flex {
   display: flex;
@@ -45,9 +37,7 @@
   gap: 50px;
 }
 
-.hero_title {
 
-}
 .title_one {
   margin: 0;
   font-weight: 700;
@@ -62,7 +52,6 @@ p {
   font-size: 22px;
   font-weight: 400;
   line-height: 32px;
-
 }
 
 
@@ -70,18 +59,17 @@ p {
 
 .footer {
   background-color: #221F1F;
-  padding:20px 20px;
+  padding: 20px;
 }
 
 .social {
   display: flex;
   justify-content: center;
-
   gap: 20px;
 }
 
 .footer_text {
-  color: white;
+  color: #FFF;
   text-align: center;
 }
 
@@ -90,5 +78,5 @@ a {
 }
 
 .footer_link {
-  color: #ffffff;
+  color: #FFF;
 }
