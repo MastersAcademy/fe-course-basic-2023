@@ -1,0 +1,23 @@
+.headline {
+  color: #221F1F;
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 32px;
+}
+
+p {
+  color: #221F1F;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+}
+
+.link {
+  color: #EF4934;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+}
