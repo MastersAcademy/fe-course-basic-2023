@@ -1,0 +1,30 @@
+.text_box {
+  width: 575px;
+  height: 479px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  color: #221F1F;
+  line-height: 32px;
+}
+
+.text_title_box {
+  width: 575px;
+  height: 46px;
+}
+
+.text_title_box h1 {
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.text_box_info {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.text_box_info a {
+  color: #EF4934;
+}
