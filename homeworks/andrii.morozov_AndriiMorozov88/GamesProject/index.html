@@ -5,8 +5,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>About Me</title>
         <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Roboto:wght@500&display=swap" rel="stylesheet">
     </head>
     <body>
+        <header class="header">
+            <svg class="logo">
+                <use xlink:href="sprite.svg#logo"></use>
+            </svg>
+            <ul class="header__list">
+                <li class="header__line">
+                    <a class="header__link header__link--non-underline" href="#">Games</a>
+                </li>
+                <li class="header__line">
+                    <a class="header__link" href="#">About</a>
+                </li>
+            </ul>
+        </header>
         <main class="main">
             <h1 class="main__heading--h1">About Me</h1>
             <p class="main__paragraf">Hi! My name is Andrii Morozov and I'm a Junior Frontend Developer. I am already familiar with main Web Technologies like HTML, CSS, JavaScript and Git version control system.</p>
