@@ -3,6 +3,7 @@ body {
 }
 
 .about_section {
+  max-width: 1175px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -20,7 +21,7 @@ body {
 }
 
 .about_section__text h1 {
-  font-family: Roboto, serif;
+  font-family: Roboto, sans-serif;
   font-weight: 700;
   font-size: 48px;
   color: #221F1F;
@@ -28,7 +29,7 @@ body {
 }
 
 .about_section__text p {
-  font-family: Roboto, serif;
+  font-family: Roboto, sans-serif;
   font-weight: 400;
   font-size: 22px;
   color: #221F1F;
@@ -37,7 +38,7 @@ body {
 }
 
 .about_section__text .link {
-  font-family: Roboto, serif;
+  font-family: Roboto, sans-serif;
   font-weight: 400;
   font-size: 22px;
   color: #EF4934;
