@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .header {
@@ -38,10 +40,12 @@
 }
 
 .main {
-  width: 575px;
-  padding-left: 20px;
+  padding-left: 53px;
+  padding-top: 60px;
   color: #221F1F;
-  line-height: 32px;
+  display: flex;
+  justify-content: space-between;
+  font-family: Roboto;
 }
 
 .main__heading--h1 {
@@ -49,10 +53,23 @@
   font-weight: 700;
 }
 
+.main__image {
+  width: 500px;
+  height: 356px;
+  border-radius: 5%;
+}
+
+.main__article {
+  display: block;
+  width: 575px;
+  padding-right: 53px;
+}
+
 .main__paragraf {
   margin-bottom: 20px;
   font-size: 22px;
   font-weight: 400;
+  line-height: 32px;
 }
 
 .link--red {
