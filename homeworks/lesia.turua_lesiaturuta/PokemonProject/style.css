@@ -15,11 +15,14 @@ body {
 .description {
   font-size: 48px;
   font-weight: 700;
+  line-height: 32px;
 }
 
 .text {
   font-size: 22px;
   font-weight: 400;
+  margin-top: 28px;
+  line-height: 32px;
 }
 
 .link--red {
