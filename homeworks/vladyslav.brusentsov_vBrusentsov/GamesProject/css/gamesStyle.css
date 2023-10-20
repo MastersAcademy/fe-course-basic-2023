@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:regular,500,700&display=swap");
+
+body {
+  margin: 0;
+}
+
+header {
+  display: flex;
+  width: 1280px;
+  height: 80px;
+  background-color: #EF4934;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  margin: 11px 886px 11.7px 53px;
+}
+
+.nav-menu ul {
+  display: inline-flex;
+  padding: 0;
+  gap: 50px;
+  list-style: none;
+}
+
+.nav-menu a {
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.nav-menu a:hover {
+  color: #1085B7;
+}
+
+/*--------------------------------------------------------------------------*/
+
+.main-header {
+  width: 575px;
+  height: 46px;
+  margin-top: 100px;
+  margin-left: 53px;
+}
+
+.main-cards-container {
+  display: flex;
+  width: 1175px;
+  height: 545px;
+  align-items: flex-start;
+  align-items: flex-start;
+  margin-top: 40px;
+  margin-left: 52px;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 251px;
+  height: 226px;
+  padding: 12px 12px 22px;
+  gap: 22px;
+  border-radius: 12px;
+  background-color: #ECECEC;
+}
+
+.main-card-header {
+  display: flex;
+  width: 251px;
+  height: 90px;
+  gap: 12px;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 149px;
+  height: 77px;
+  gap: 12px;
+}
+
+.card-header h3 {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 700;
+  width: 134px;
+  height: 13px;
+  margin: 0;
+}
+
+.card-header p {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  width: 149px;
+  height: 52px;
+  margin: 0;
+}
+
+.card-actors {
+  display: flex;
+  width: 231px;
+  height: 114px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.card-actors * {
+  display: flex;
+  width: auto;
+  height: 10px;
+  margin: 0;
+  gap: 6px;
+}
+
+.card-actors .key {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.card-actors .value {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+}
