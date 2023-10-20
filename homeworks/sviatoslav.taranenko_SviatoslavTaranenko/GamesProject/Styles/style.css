@@ -13,8 +13,7 @@ body {
 
 .header__all {
   display: grid;
-  /* grid-template-columns: 3fr 1fr; змітити коли потрібно буде додати кнопку логін  */
-  grid-template-columns: 6fr 1fr;
+  grid-template-columns: 6fr 1fr;/* grid-template-columns: 3fr 1fr; змітити коли потрібно буде додати кнопку логін  */
 }
 
 .header__img {
@@ -26,16 +25,17 @@ body {
   margin-left: 61px;
 }
 
-.header__items {display: grid;grid-template-columns: 1fr 1fr;align-items: center;
+.header__items {
+  display: grid;grid-template-columns: 1fr 1fr;align-items: center;
 }
 
 .header__items a {
   text-decoration: none;
-  color: #FFFFFF;
+  color: #FFF;
 }
 
 .header__items_Games {
-  color: #FFFFFF;
+  color: #FFF;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -48,7 +48,7 @@ body {
 }
 
 .header__items_About {
-  color: #FFFFFF;
+  color: #FFF;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -62,7 +62,7 @@ body {
 
 
 .about .about__all {
-  margin: 60px
+  margin: 60px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: center;
