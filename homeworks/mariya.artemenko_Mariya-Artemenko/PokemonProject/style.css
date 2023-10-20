@@ -1,0 +1,18 @@
+/*styles for "about me" page*/
+.about_me {
+    width: 575px;
+    height: 409px;
+    color: #221F1F;
+    line-height: 32px;
+}
+.text_block h1 {
+    font-size: 48px;
+    font-weight: 700;
+}
+.text_block p {
+    font-size: 22px;
+    font-weight: 400;
+}
+.text_block a {
+    color: #EF4934;
+}
