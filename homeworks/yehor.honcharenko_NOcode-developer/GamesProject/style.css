@@ -1,0 +1,66 @@
+body {
+  width: 1280px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+* {
+  font-family: Roboto, sans-serif;
+}
+
+/*
+.header {
+    background: #EF4934;
+    width: 100vw;
+    height: 80px;
+}
+*/
+
+.about-me {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 53px 52px 0 53px;
+  gap: 68px;
+}
+
+.img-about {
+  width: 50%;
+  max-width: none;
+  display: block;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+}
+
+.text-about {
+  width: 50%;
+  max-width: none;
+  display: block;
+}
+
+h1 {
+  color: #221F1F;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 32px;
+  margin: 0;
+}
+
+p {
+  color: #221F1F;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 32px;
+  margin-top: 16px;
+}
+
+a {
+  color: #EF4934;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 32px;
+}
