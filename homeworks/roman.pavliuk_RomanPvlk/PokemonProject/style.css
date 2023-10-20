@@ -1,0 +1,46 @@
+body {
+  margin: 0 auto;
+}
+
+.about_section {
+  max-width: 1175px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.about_section__image {
+  width: 532px;
+  height: 297px;
+}
+
+.about_section__text {
+  width: 575px;
+}
+
+.about_section__text h1 {
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  color: #221F1F;
+  line-height: 32px;
+}
+
+.about_section__text p {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  color: #221F1F;
+  line-height: 32px;
+  margin-bottom: 30px;
+}
+
+.about_section__text .link {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  color: #EF4934;
+  line-height: 32px;
+}
