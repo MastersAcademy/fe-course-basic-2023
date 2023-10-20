@@ -24,6 +24,7 @@ a {
 
 ul li {
   list-style: none;
+  display: inline;
 }
 
 img {
@@ -61,29 +62,94 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  width: 1280px;
+}
+
+/* Налаштування адаптиву */
+
+[class*="__container"] {
+  max-width: 1175px; /* Обмежуючий + відступи */
+  padding-left: 15px;
+  padding-right: 15px;
   margin: 0 auto;
+}
+
+/* Header menu */
+
+.header {
+  position: relative;
+  left: 0;
+  top: 0;
+  z-index: 50;
+  background: #EF4934;
+  color: #FFF;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.header__container {
+  width: 1175px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px 0;
+}
+
+.header__logo {
+  cursor: pointer;
+  overflow: hidden;
+  width: 55px;
+  height: 58px;
+}
+
+.header__body {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+}
+
+.menu__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 50px;
+  row-gap: 50px;
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.menu__link:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
 }
 
 /* Main Section */
 
+.page {
+  display: flex;
+  justify-content: center;
+}
+
 .main-section {
   height: 100vh;
+  max-width: 1175px;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  justify-content: center;
+  margin-top: 72px;
 }
 
 .main-contend {
   display: grid;
   grid-template-columns: 50% 1fr;
+  width: 100%;
   gap: 64px;
 }
 
 .about-text {
   display: flex;
   flex-direction: column;
-  width: 575px;
+  max-width: 575px;
 }
 
 .about-me {
