@@ -8,7 +8,7 @@ body {
   font-size: 22px;
   font-weight: 400;
   line-height: 32px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   text-align: left;
 }
 
@@ -25,12 +25,10 @@ body {
   height: 80px;
 }
 
-
 .content {
   display: flex;
   margin: 60px 53px;
 }
-
 
 .logo_img {
   width: 55px;
@@ -43,7 +41,6 @@ body {
 .about_me_img {
   width: 532px;
   height: 356px;
-
 }
 
 .about_me_text {
@@ -79,16 +76,17 @@ body {
 .footer_text {
   display: flex;
   justify-content: center;
-  color: #FFFFFF;
+  color: #FFF;
 }
 
 .navbar a {
-  color: #FFFFFF;
+  color: #FFF;
   text-decoration: none;
 }
 
-.navbar_links a:hover {
-  text-decoration: underline;
+.footer a {
+  color: #FFF;
+  text-decoration: none;
 }
 
 .navbar_links a {
@@ -99,7 +97,6 @@ body {
   color: #EF4934;
 }
 
-.footer a {
-  color: #FFFFFF;
-  text-decoration: none;
+.navbar_links a:hover {
+  text-decoration: underline;
 }
