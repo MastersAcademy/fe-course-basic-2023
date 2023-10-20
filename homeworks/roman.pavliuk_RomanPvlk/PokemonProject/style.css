@@ -21,7 +21,7 @@ body {
 }
 
 .about_section__text h1 {
-  font-family: Roboto sans-serif;
+  font-family: Roboto, sans-serif;
   font-weight: 700;
   font-size: 48px;
   color: #221F1F;
