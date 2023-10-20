@@ -1,0 +1,28 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: #221F1F;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  margin: 0;
+  padding: 0;
+}
+
+.about__title {
+  margin-bottom: 24px;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.about__text {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.about__link-red {
+  color: #EF4934;
+}
