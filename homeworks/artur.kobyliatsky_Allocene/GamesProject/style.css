@@ -25,6 +25,8 @@ body {
   margin-top: 140px;
   color: #221F1F;
   font-size: 48px;
+  line-height: 32px;
+  font-weight: 700;
 }
 
 .text p {
