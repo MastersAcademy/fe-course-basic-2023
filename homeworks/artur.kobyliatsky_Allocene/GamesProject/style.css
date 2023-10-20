@@ -32,6 +32,8 @@ body {
 .text p {
   color: #221F1F;
   font-size: 22px;
+  line-height: 32px;
+  font-weight: 400;
 }
 
 .text p a {
