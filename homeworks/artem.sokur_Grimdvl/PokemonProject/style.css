@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+body {
+  color: #221F1F;
+}
+
 a {
   text-decoration: none;
 }
@@ -13,21 +17,21 @@ a {
 header, main, footer {
   display: flex;
   justify-content: center;
-  /* position: fixed; */
 }
 
 section {
   width: 1280px;
   margin: 0 auto;
+  padding: 0 50px;
 }
 
 /* section head  */
 
 header {
   width: 100%;
+  position: fixed;
   height: 80px;
   background-color: #333;
-  position: fixed;
   top: 0;
   left: 0;
 }
@@ -51,11 +55,16 @@ header {
 }
 
 .navigation {
-  min-width: 260px;
+  width: 260px;
   line-height: 19px;
   font-size: 16px;
+  font-weight: 500;
+  display: grid;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  /* grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "Pokemons About Login";
+  text-align: center; */
 }
 
 .navigation__item {
@@ -73,9 +82,8 @@ header {
   background-color: #FFF;
   color: #FFF;
   height: 2px;
-  width: 110%;
+  width: 100%;
   top: 22px;
-  left: -2px;
   transform: scaleX(0);
 }
 
@@ -84,22 +92,26 @@ header {
 }
 
 .navigation a {
-  margin: 0 15px;
   color: #FFF;
 }
 
 /* section about */
 
 main {
-  padding-top: 140px;
-  min-height: 663px;
+  min-height: 713px;
 }
 
 .about {
-  display: flex;
-  justify-content: space-between;
-  width: 1175px;
-  min-height: 479px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 530px);
+  grid-auto-rows: minmax(275px,auto);
+  gap: 50px;
+  justify-content: space-around;
+  margin-top: 140px;
+  min-height: 729px;
+  padding-bottom: 30px;
+  /* display: flex;
+  justify-content: space-between; */
 }
 
 .about__contact {
@@ -112,7 +124,7 @@ main {
 }
 
 .about__logo {
-  width: 532px;
+  width: 530px;
   height: 275px;
   border-radius: 22px;
   background-color: #FDB714;
@@ -214,13 +226,16 @@ main {
   max-width: 575px;
 }
 
-.about__text__title {
+h1 {
   font-size: 46px;
+  line-height: 32px;
+  font-weight: 700;
 }
 
 .about__text__subscription {
   line-height: 32px;
   font-size: 22px;
+  font-weight: 400;
   margin-top: 20px;
 }
 
@@ -256,13 +271,103 @@ footer {
 }
 
 .subscription {
-  display: flex;
-  justify-content: center;
+  margin: 0 auto;
   margin-top: 16px;
   line-height: 32px;
   font-size: 22px;
+  font-weight: 400;
 }
 
 .subscription__link {
   color: #FFF;
+}
+
+/* section pokemons */
+
+.pokemons {
+  margin-top: 134px;
+  min-height: 765px;
+}
+
+.pokemons__cards {
+  margin: 20px auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 270px);
+  grid-auto-rows: minmax (280px, auto);
+  gap: 25px;
+  justify-content: space-around;
+  /* minmax(270px,1fr) */
+}
+
+.pokemons__cards-item {
+  background-color: #ECECEC;
+  border-radius: 20px;
+}
+
+.card__pokemon {
+  display: flex;
+  align-items: center;
+}
+
+.card__pokemon-img {
+  background-color: #FDB714;
+  border-radius: 20px;
+  margin: 15px;
+}
+
+.card__pokemon-name {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21px;
+}
+
+.card__characteristics {
+  margin: 15px;
+}
+
+.card__characteristics-type, .card__characteristics-weaknesses {
+  margin-top: 10px;
+}
+
+.card__characteristics strong {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+}
+
+.card__characteristics span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.card__characteristics-type span {
+  display: inline-block;
+  width: 69px;
+  color: #FFF;
+  background-color: #FDB714;
+  text-align: center;
+  border-radius: 5px;
+  padding-top: 2px;
+  padding-bottom: 1px;
+}
+
+.card__characteristics-weaknesses span {
+  display: inline-block;
+  width: 69px;
+  color: #FFF;
+  background-color: #FF87F3;
+  text-align: center;
+  border-radius: 5px;
+  padding-top: 2px;
+  padding-bottom: 1px;
+}
+
+.card__characteristics-type span:nth-child(3) {
+  background-color: #EF4934;
+}
+
+.card__characteristics-weaknesses span:nth-child(3) {
+  background-color: #3447EF;
 }
