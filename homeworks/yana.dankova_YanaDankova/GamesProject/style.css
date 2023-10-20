@@ -1,4 +1,12 @@
-.p {
+.name {
+  font: Roboto;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+}
+
+.text {
+  font: Roboto;
   font-weight: 400;
   font-size: 22px;
   line-height: 32px;
