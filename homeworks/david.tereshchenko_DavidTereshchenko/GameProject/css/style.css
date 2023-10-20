@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 320px;
+  line-height: 1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+button {
+  line-height: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  color: inherit;
+  background-color: transparent;
+}
+
+/* Стилі за замовченням */
+
+body {
+  color: #221F1F;
+  font-family: Roboto, sans-serif;
+  font-size: 22px;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 1280px;
+  margin: 0 auto;
+}
+
+/* Main Section */
+
+.main-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.main-contend {
+  display: grid;
+  grid-template-columns: 50% 1fr;
+  gap: 64px;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  width: 575px;
+}
+
+.about-me {
+  font-size: 44px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.about-text {
+  font-size: 22px;
+  margin-bottom: 24px;
+}
+
+.about-text a {
+  text-decoration-line: underline;
+  color: #EF4934;
+}
+
+p {
+  line-height: 32px;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
