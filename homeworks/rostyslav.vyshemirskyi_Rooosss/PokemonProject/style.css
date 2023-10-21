@@ -17,7 +17,6 @@ body {
 
 .header__container {
   background-color: #333;
-  margin-bottom: 60px;
 }
 
 .header__inner {
@@ -65,6 +64,7 @@ body {
   padding-left: 53px;
   margin-bottom: 298px;
   display: flex;
+  margin-top: 60px;
 }
 
 .about__inner {
@@ -99,7 +99,7 @@ body {
 }
 
 .pokemon__title {
-  margin-bottom: 40px;
+  margin: 40px 0;
   font-size: 48px;
   font-style: normal;
   font-weight: 700;
