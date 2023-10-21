@@ -1,28 +1,19 @@
 h1 {
   font-size: 48px ;
-  font-family: Roboto, serif ;
+  font-family: Roboto, sans-serif ;
   font-weight: 700 ;
+  line-height: 32px;
 }
 
 .main_text {
   font-family: Roboto, serif ;
   font-size: 22px ;
   font-weight: 400 ;
+  line-height: 32px;
 }
 
-/* додав розміри для article щоб відповідати макету */
-
-article {
-  width: 575px ;
-  height: 479px ;
-}
-
-.link_MOC {
+.link {
   text-decoration: underline ;
   color: #EF4934 ;
 }
 
-.link_social {
-  text-decoration: none ;
-  color: #221F1F ;
-}
