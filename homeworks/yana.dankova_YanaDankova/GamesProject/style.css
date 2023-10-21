@@ -2,7 +2,6 @@
   font: Roboto;
   font-weight: 700;
   font-size: 48px;
-  text-trim: cap height;
   line-height: 32px;
 }
 
@@ -10,7 +9,6 @@
   font: Roboto;
   font-weight: 400;
   font-size: 22px;
-  text-trim: cap height;
   line-height: 32px;
   width: 575px;
 }
