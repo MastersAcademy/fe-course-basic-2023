@@ -1,0 +1,7 @@
+body {
+  font-family: sans-serif;
+  background-image: url("./images/img.png");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: left;
+}
