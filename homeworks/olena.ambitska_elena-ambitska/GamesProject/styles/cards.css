@@ -1,0 +1,64 @@
+.card__view {
+  background-image: url("../images/game_picture.jpg");
+  background-size: 90px;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  background-position: left center;
+}
+
+.cards .section__title {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-column: 1 / -1;
+}
+
+.card__list {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  gap: 25px;
+  grid-column: span 12;
+}
+
+.card__item {
+  background-color: var(--gray);
+  border-radius: 12px;
+  padding: 12px;
+  grid-column: span 12;
+}
+
+.card__list .card__title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+  padding-bottom: 12px;
+}
+
+.card__list p li {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.card__list strong {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+}
+
+.item-descriptions {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  margin-top: 22px;
+  white-space: pre-wrap;
+}
+
+@media only screen and (min-width: 768px) {
+
+  .card__item {
+    grid-column: span 3;
+  }
+}
