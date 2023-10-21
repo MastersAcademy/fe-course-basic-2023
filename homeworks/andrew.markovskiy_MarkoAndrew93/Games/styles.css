@@ -4,13 +4,13 @@
 
 
 a {
-  color: var(--color-1, #EF4934);
+  color: #EF4934;
   text-decoration-line: underline;
 }
 
 
 p {
-  color: var(--color-2, #221F1F);
+  color: #221F1F;
   line-height: 32px;
   margin: 0;
 }
