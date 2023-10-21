@@ -1,3 +1,10 @@
+.upper-header {
+  background-color: #333;
+  display: grid;
+  align-items: center;
+  padding: 10px;
+}
+
 .ma-logo {
   display: flex;
   align-items: center;
@@ -7,15 +14,35 @@
 .MAlogo {
   width: 29.11px;
   height: 29.95px;
-  padding-top: 25px;
   margin-left: 53px;
 }
 
 .MA {
   width: 147.68px;
   height: 9.08px;
-  padding-top: 40.68px;
-  padding-left: 13.21px;
+  margin-left: 13.21px;
+  margin-top: 10px;
+}
+
+.navigation {
+  text-align: right;
+}
+
+.navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation-item {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18.75px;
+  gap: 7px;
+  color: #FFF;
+  text-decoration: none;
 }
 
 .content {
@@ -24,7 +51,7 @@
 
 .yellow-rectangle {
   width: 532px;
-  height: 275px;
+  height: 297px;
   background-color: #FDB714;
   border-radius: 22px;
   margin-left: 53px;
@@ -95,6 +122,8 @@
   line-height: 32px;
   margin-top: 0;
   margin-left: 68px;
+  width: 575px;
+  height: 46px;
 }
 
 p {
@@ -106,6 +135,8 @@ p {
   line-height: 32px;
   margin-left: 68px;
   margin-top: auto;
+  width: 575px;
+  height: 409px;
 }
 
 .link {
