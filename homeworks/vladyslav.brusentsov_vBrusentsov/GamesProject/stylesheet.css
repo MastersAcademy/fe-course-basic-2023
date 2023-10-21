@@ -6,12 +6,12 @@ h1 {
   font-weight: 700;
 }
 
-.main__content {
+.main__paragraphs {
   font-family: Roboto;
   font-size: 22px;
   font-weight: 300;
 }
 
-p a {
+a {
   color: #EF4934;
 }
