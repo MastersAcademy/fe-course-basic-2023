@@ -5,3 +5,20 @@ body {
   background-size: 50%;
   background-position: left;
 }
+
+.name {
+  font: Roboto;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 32px;
+  position: right;
+}
+
+.text {
+  font: Roboto;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+  width: 575px;
+  position: right;
+}
