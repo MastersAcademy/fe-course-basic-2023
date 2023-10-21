@@ -2,14 +2,14 @@
 
 body {
   max-width: 1280px;
-  height: 1017px;
+  max-height: 1017px;
   margin: 0;
 }
 
 header {
   display: flex;
   max-width: 1280px;
-  height: 80px;
+  max-height: 80px;
   background-color: #EF4934;
   align-items: center;
   position: relative;
@@ -49,7 +49,7 @@ header {
 .main-cards-container {
   display: flex;
   max-width: 1175px;
-  height: 545px;
+  max-height: 545px;
   align-items: flex-start;
   align-items: flex-start;
   margin-top: 40px;
