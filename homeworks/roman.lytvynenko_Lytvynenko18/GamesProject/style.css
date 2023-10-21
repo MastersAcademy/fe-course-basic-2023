@@ -2,7 +2,7 @@
   font-family: Roboto;
 }
 
-.about_me_section {
+.about-me__section {
   width: 575px;
   height: 479px;
   top: 140px;
@@ -10,19 +10,19 @@
   gap: 24px;
 }
 
-.about_me_h1 {
+.about-me__h1 {
   font-Weight: 700;
   font-size: 48px;
   color: #221F1F;
 }
 
-.about_me_text {
+.about-me__text {
   font-weight: 400;
   font-size: 22px;
   color: #221F1F;
   line-height: 32px;
 }
 
-.about_me_links {
+.about-me__links {
   color: #EF4934;
 }
