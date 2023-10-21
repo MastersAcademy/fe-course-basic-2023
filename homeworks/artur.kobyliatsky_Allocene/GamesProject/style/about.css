@@ -27,13 +27,11 @@ body {
   align-items: center;
   width: 90%;
   margin: 0 auto;
-  z-index: 2;
 }
 
 .header__logo-section {
   display: flex;
   align-items: center;
-  z-index: 3;
 }
 
 .header__logo-section img {
@@ -43,7 +41,6 @@ body {
 .header__menu-section {
   display: flex;
   align-items: center;
-  z-index: 2;
 }
 
 .header__menu-section a {
@@ -67,7 +64,6 @@ body {
 
 .menu__list {
   display: flex;
-  z-index: 2;
 }
 
 .menu__list li {
@@ -98,6 +94,7 @@ main {
 }
 
 .content {
+  width: 90%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 68px;
@@ -107,10 +104,6 @@ main {
 
 .img {
   align-items: start;
-}
-
-.text {
-  width: 575px;
 }
 
 .text .text__heading {
@@ -178,6 +171,7 @@ main {
   align-items: flex-start;
   gap: 33px;
   position: relative;
+  list-style-type: none;
 }
 
 .footer .footer__container .footer__content .social-icon .icon__fb {
