@@ -5,26 +5,48 @@
         <meta name="viewport"
             content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="./styles.css">
         <title>GamesProject</title>
     </head>
     <body>
-        <section class="about">
-            <h1 class="about__title">About me</h1>
-            <p class="about__text">Hi! My name is [Text] and I'm a Junior Frontend Developer. I am already familiar with main
-                Web Technologies like HTML, CSS, JavaScript and Git version control system.<br>
-                <br>
-                This page was developed during the course <a class="about__link"
-                    href="https://www.mastersacademy.education/frontend-for-beginners-it">'Frontend
-                    for beginners' from Masters Academy in 2023.</a>
-                <br>
-                <br>
-                This is a social project from MOCG company where I got an opportunity to work with Frontend mentors and to
-                create my own small project for the portfolio.<br>
-                <br>
-                You can contact me via [Links to Socials Nets] and/or check out my GitHub.
+        <div class="wrapper">
+            <header class="header">
+                <img class="header__logo" src="./src/logo.png" width="55" height="58" alt="logo masters academy">
+                <nav class="navigation">
+                    <ul class="navigation__list">
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="./games.html">Games</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__link navigation__link_active" href="#">About</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="wrapper__about">
+                <img class="about__image" src="./src/image.png" width="532" height="356" alt="work space">
+                <section class="about">
+                    <h1 class="about__title">About me</h1>
+                    <p class="about__text">Hi! My name is [Text] and I'm a Junior Frontend Developer. I am already familiar with main
+                        Web Technologies like HTML, CSS, JavaScript and Git version control system.<br>
+                        <br>
+                        This page was developed during the course <a class="about__link"
+                            href="https://www.mastersacademy.education/frontend-for-beginners-it">'Frontend
+                            for beginners' from Masters Academy in 2023.</a>
+                        <br>
+                        <br>
+                        This is a social project from MOCG company where I got an opportunity to work with Frontend mentors and to
+                        create my own small project for the portfolio.<br>
+                        <br>
+                        You can contact me via [Links to Socials Nets] and/or check out my GitHub.
 
-            </p>
-        </section>
+                    </p>
+                </section>
+            </div>
+        </div>
+
     </body>
 </html>
