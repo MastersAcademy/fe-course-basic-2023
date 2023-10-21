@@ -2,70 +2,90 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: Roboto;
+}
+
+body {
+  width: 1280px;
 }
 
 .header {
+  display: grid;
   background-color: #EF4934;
   height: 80px;
-  display: flex;
-  align-items: center;
-  padding-left: 53px;
-  padding-right: 140px;
-  justify-content: space-between;
+  grid-template-columns: 10fr 3fr;
 }
 
 .logo {
   width: 55px;
   height: 57px;
+  margin-left: 53px;
 }
 
-.header__list {
-  list-style: none;
+.header__logo {
   display: flex;
+  align-items: center;
 }
 
-.header__line {
-  padding-left: 50px;
+.header__navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navigation {
+  display: flex;
+  list-style: none;
+  justify-content: flex-start;
+}
+
+.navigation__line {
+  padding-right: 50px;
   font-size: 16px;
   font-weight: 500;
   font-family: Roboto;
-}
-
-.header__link {
   color: #FFF;
 }
 
-.header__link--non-underline {
-  text-decoration: none;
+.navigation__link {
+  color: #FFF;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 40px;
 }
 
 .main {
   padding-left: 53px;
-  padding-top: 60px;
-  color: #221F1F;
-  display: flex;
-  justify-content: space-between;
-  font-family: Roboto;
 }
 
-.main__heading--h1 {
-  font-size: 48px;
-  font-weight: 700;
+.games__main {
+  margin-top: 40px;
 }
 
-.main__image {
-  width: 500px;
+.about__main {
+  margin-top: 60px;
+  display: inline-grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 63px;
+}
+
+.about__main__image {
+  width: 535px;
   height: 356px;
   border-radius: 5%;
 }
 
-.main__article {
+.about__main__article {
   display: block;
   width: 575px;
+  height: 410px;
   padding-right: 53px;
 }
 
-.main__paragraf {
+.about__main__paragraf {
   margin-bottom: 20px;
   font-size: 22px;
   font-weight: 400;
@@ -74,4 +94,49 @@
 
 .link--red {
   color: #EF4934;
+}
+
+.card-container {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+  gap: 25px;
+  width: 1175px;
+  height: 545px;
+}
+
+.card {
+  width: 275px;
+  height: 260px;
+  padding: 12px 12px 22px;
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  grid-template-rows: 90px 1fr;
+  gap: 12px;
+  grid-template-areas: "image text1" "text2 text2";
+  background-color: #ECECEC;
+}
+
+.card__image {
+  grid-area: image;
+}
+
+.card__name {
+  grid-area: text1;
+}
+
+.card__name__heading {
+  font-size: 18px;
+  font-weight: 700;
+  color: #221F1F;
+}
+
+.card__name--14px {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  margin-bottom: 6px;
+}
+
+.card__text2 {
+  grid-area: text2;
 }
