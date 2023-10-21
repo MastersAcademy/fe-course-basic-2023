@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+main {
+  width: 1175px;
+}
+
+.intro {
+  color: #221F1F;
+  width: 575px;
+  font-size: 22px;
+  font-weight: 400;
+  font-family: Roboto, sans-serif;
+  line-height: 32px;
+}
+
+h1 {
+  color: #221F1F;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 32px;
+  margin-top: 0;
+}
+
+.link {
+  color: #EF4934;
+}
