@@ -3,23 +3,22 @@
 }
 
 
-a {
+.about-link {
   color: #EF4934;
   text-decoration-line: underline;
 }
 
 
-p {
+.about-paragraf {
   color: #221F1F;
   line-height: 32px;
-  margin: 0;
+  font-size: 22px;
 }
 
 
 .about {
   width: 575px;
-  border: 2px #F00 solid;
   padding-left: 20px;
-  font-size: 20px;
+  font-size: 22px;
   gap: 24px;
 }
