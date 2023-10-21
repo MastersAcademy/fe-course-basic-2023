@@ -1,22 +1,117 @@
+.ma-logo {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.MAlogo {
+  width: 29.11px;
+  height: 29.95px;
+  padding-top: 25px;
+  margin-left: 53px;
+}
+
+.MA {
+  width: 147.68px;
+  height: 9.08px;
+  padding-top: 40.68px;
+  padding-left: 13.21px;
+}
+
+.content {
+  display: flex;
+}
+
+.yellow-rectangle {
+  width: 532px;
+  height: 275px;
+  background-color: #FDB714;
+  border-radius: 22px;
+  margin-left: 53px;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.white-rectangle {
+  width: 575px;
+  height: 479px;
+  background-color: #FFF;
+  margin-left: 53px;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pokemon {
+  width: 505.89px;
+  height: 185.79px;
+  padding-top: 28px;
+  padding-left: 6px;
+}
+
+.pokeball {
+  width: 102px;
+  height: 102px;
+}
+
+.upper-header {
+  background-color: #333;
+  color: #333;
+  width: 1280px;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-item {
+  color: #FFF;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  margin-right: 50px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 50px;
+  width: 77px;
+  height: 11px;
+}
+
 .headline {
   color: #221F1F;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
   font-weight: 700;
   font-size: 48px;
   line-height: 32px;
+  margin-top: 0;
+  margin-left: 68px;
 }
 
 p {
   color: #221F1F;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
   font-weight: 400;
   font-size: 22px;
   line-height: 32px;
+  margin-left: 68px;
+  margin-top: auto;
 }
 
 .link {
   color: #EF4934;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
   font-weight: 400;
   font-size: 22px;
   line-height: 32px;
