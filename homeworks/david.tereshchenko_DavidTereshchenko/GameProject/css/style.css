@@ -89,7 +89,8 @@ body {
 
 .header__container {
   width: 1175px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
   justify-content: space-between;
   align-items: center;
   padding: 11px 0;
@@ -103,9 +104,10 @@ body {
 }
 
 .header__body {
-  display: flex;
+  display: flex; /* на мою жумку тут не потрібно робити грід */
   align-items: center;
   column-gap: 50px;
+  justify-content: end;
 }
 
 .menu__list {
