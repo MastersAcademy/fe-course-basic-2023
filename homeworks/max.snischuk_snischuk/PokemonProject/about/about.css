@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+.header {
+  background-color: #333;
+  padding: 25px 0;
+}
+
+.header__container {
+  max-width: 1280px;
+  padding: 0 50px;
+  margin: 0 auto;
+  /* display: flex;
+  justify-content: space-between; */
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.header__nav {
+  /* display: flex;
+  align-items: center;
+  column-gap: 50px; */
+
+  justify-self: end;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  column-gap: 50px;
+  justify-items: center;
+  align-items: center;
+}
+
+.header__nav-link,
+.header__nav-link--active {
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color .3s ease-in-out;
+}
+
+.header__nav-link--active {
+  padding: 7px 0;
+  position: relative;
+}
+
+.header__nav-link:hover,
+.header__nav-link--active:hover {
+  color: #EF4934;
+}
+
+.header__nav-link--active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #FFF;
+  transition: background-color .3s ease-in-out;
+}
+
+.header__nav-link--active:hover::after {
+  background-color: #EF4934;
+}
+
+.about {
+  padding: 60px 0;
+}
+
+.about__container {
+  max-width: 1280px;
+  padding: 0 50px;
+  margin: 0 auto;
+  /* display: flex;
+  justify-content: space-between;
+  column-gap: 68px; */
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 68px;
+}
+
+.about__image {
+  /* flex: 1; */
+  /* align-self: flex-start; */
+
+  max-width: 532px;
+  object-fit: contain;
+}
+
+.about__content {
+  /* flex: 1;
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px; */
+
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 32px;
+}
+
+.about__title {
+  color: #221F1F;
+  font-size: 48px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+.about__text {
+  color: #221F1F;
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 400;
+}
+
+.about__link {
+  color: #EF4934;
+  transition: color .3s ease-in-out;
+}
+
+.about__link:hover {
+  color: #3354FA;
+}
