@@ -3,8 +3,40 @@
   margin: 0;
 }
 
+ul {
+  list-style: none;
+}
+
 body {
   font-family: Roboto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0 52px;
+  background: #EF4934;
+}
+
+.header__nav-list {
+  display: flex;
+  gap: 50px;
+}
+
+.header__nav-link {
+  color: #FFF;
+  text-decoration: none;
+  padding-bottom: 7px;
+}
+
+.header__nav-link:hover {
+  border-bottom: 1px solid #FFF;
+}
+
+.header__nav-link:active {
+  color: #FFF;
 }
 
 .about-me__title {
