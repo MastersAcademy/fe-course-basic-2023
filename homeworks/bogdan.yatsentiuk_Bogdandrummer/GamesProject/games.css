@@ -96,7 +96,6 @@
   display: flex;
   flex-direction: column;
   padding: 12px 12px 22px;
-  flex-direction: column;
   align-items: center;
   border-radius: 12px;
   background-color: #ECECEC;
