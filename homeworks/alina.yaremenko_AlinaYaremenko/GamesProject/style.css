@@ -11,13 +11,22 @@ body {
   font-family: Roboto;
 }
 
+.container {
+  padding: 0 52px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1280px;
+}
+
 .header {
+  background: #EF4934;
+}
+
+.header__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 80px;
-  padding: 0 52px;
-  background: #EF4934;
 }
 
 .header__nav-list {
@@ -39,6 +48,12 @@ body {
   color: #FFF;
 }
 
+.about__container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 60px;
+}
+
 .about-me__title {
   color: #221F1F;
   font-size: 48px;
@@ -58,7 +73,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding: 60px;
 }
 
 .about-me__link {
