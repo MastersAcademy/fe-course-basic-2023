@@ -1,0 +1,158 @@
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+    font-family: 'Roboto', sans-serif;
+  }
+
+  body  {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .headder-logo_img  {
+    text-decoration: none;
+    color: #fff;
+  }
+
+
+  .header  {
+    background-color: #EF4934;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header-logo  {
+    margin-left: 53px;
+  }
+
+
+  .menu-list  {
+    color: #fff;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0 50px;
+    margin-right: 52px;
+  }
+
+  .menu-link:hover  {
+    text-decoration: underline;
+  }
+
+  .menu-link  {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+  }
+
+  /* MAIN інформація */
+
+  .section-about  {
+    margin: 60px 53px 0 52px;
+  }
+
+  .about-img  {
+    border-radius: 22px;
+  }
+
+
+  .about-content  {
+    display: flex;
+    gap: 68px;
+  }
+
+  .about-title  {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 32px;
+    margin-bottom: 40px;
+  }
+
+  .about-text  {
+    display: block;
+    padding-right: 53px;
+
+  }
+
+
+  .about-paragraf {
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 32px;
+  }
+
+  .about-link  {
+    color: #EF4934;
+  }
+
+  /* Стилі для сторінки Cards */
+
+  .cards-title  {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 32px;
+    margin-top: 100px;
+    margin-left: 52px;
+  }
+
+  .cards-img  {
+    border-radius: 8px;
+    width: 90px;
+    height: 90px;
+  }
+
+  .container-title  {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .cards-text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+
+
+  .conteiner-info  {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+
+  .conteiner-cards  {
+    margin: 40px 53px 100px 52px;
+    display: grid;
+    grid-template-columns: repeat(4, 0fr);
+    grid-gap: 25px
+  }
+
+  .cards-list  {
+    margin-bottom: 3px;
+    margin-left: 10px;
+  }
+  
+
+  .conteiner-item  {
+    width: 275px;
+    height: 260px;
+    padding: 12px 12px 22px 12px;
+    border-radius: 12px;
+    background-color: #ECECEC;
+  }
+
+  .conteiner-list  {
+    list-style: none;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    margin-top: 22px;
+  }
