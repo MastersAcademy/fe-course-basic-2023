@@ -91,7 +91,7 @@ main {
   grid-template-rows: 1fr 1fr;
   align-items: center;
   justify-content: start;
-  margin-top: 180px;
+  margin-top: 140px;
 }
 
 .content {
@@ -101,10 +101,12 @@ main {
   margin-bottom: 100px;
 }
 
-.content .text {
+.text__heading {
+  margin-top: 0;
+  color: #221F1F;
   font-size: 48px;
-  font-weight: 700;
   line-height: 32px;
+  font-weight: 700;
 }
 
 .game__cards {
@@ -183,7 +185,7 @@ main {
 
 /*footer section*/
 
-.footer .footer__container {
+.footer__container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -195,11 +197,11 @@ main {
   background-color: #1C2321;
 }
 
-.footer .footer__container {
+.footer__container {
   width: 100%;
 }
 
-.footer .footer__container .footer__content {
+.footer__content {
   width: 90%;
   display: flex;
   align-items: center;
@@ -207,7 +209,7 @@ main {
   flex-direction: column;
 }
 
-.footer .footer__container .footer__content .copyright {
+.copyright {
   color: #EEF1EF;
   margin-bottom: 0;
   font-weight: 400;
@@ -216,7 +218,7 @@ main {
   text-align: center;
 }
 
-.footer .footer__container .footer__content .social-icon {
+.social-icon {
   height: 42px;
   width: 192px;
   padding: 0;
@@ -229,14 +231,14 @@ main {
   list-style-type: none;
 }
 
-.footer .footer__container .footer__content .social-icon .icon__fb {
+.icon__fb {
   background-color: #FFF;
   height: 42px;
   width: 42px;
   border-radius: 50%;
 }
 
-.footer .footer__container .footer__content .social-icon .icon__fb img {
+.icon__fb img {
   background-color: #FFF;
   height: 20px;
   width: 20px;
@@ -247,14 +249,14 @@ main {
   position: absolute;
 }
 
-.footer .footer__container .footer__content .social-icon .icon__link {
+.icon__link {
   background-color: #FFF;
   height: 42px;
   width: 42px;
   border-radius: 50%;
 }
 
-.footer .footer__container .footer__content .social-icon .icon__link img {
+.icon__link img {
   background-color: #FFF;
   height: 20px;
   width: 20px;
@@ -267,14 +269,14 @@ main {
   position: absolute;
 }
 
-.footer .footer__container .footer__content .social-icon .icon__inst {
+.icon__inst {
   background-color: #FFF;
   height: 42px;
   width: 42px;
   border-radius: 50%;
 }
 
-.footer .footer__container .footer__content .social-icon .icon__inst img {
+.icon__inst img {
   background-color: #FFF;
   height: 20px;
   width: 20.000892639160156px;
