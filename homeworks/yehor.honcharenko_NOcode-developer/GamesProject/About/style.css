@@ -1,0 +1,181 @@
+body {
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+/* Header */
+
+header {
+  grid-row: 1 / 2;
+  background: #EF4934;
+  padding: 8px 0;
+}
+
+.nav__container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.logoTop {
+  width: 64px;
+  height: 64px;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 50px;
+  justify-content: end;
+}
+
+li {
+  list-style: none;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #FFF;
+  font: 500 16/24px Roboto;
+}
+
+.navLink:hover {
+  text-decoration: underline;
+}
+
+.navLink:target {
+  text-decoration: underline;
+}
+
+/* Content */
+
+main {
+  grid-row: 2 / 3;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "img text";
+  grid-gap: 48px;
+  max-width: 100%;
+  padding: 48px 0;
+}
+
+.img-about {
+  grid-area: img;
+  width: 100%;
+  height: auto;
+}
+
+.aboutMe {
+  width: 100%;
+}
+
+.textAbout {
+  grid-area: text;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 24px;
+}
+
+.text__header {
+  margin: 0;
+}
+
+.text__block {
+  margin: 0;
+  display: grid;
+  grid-gap: 16px;
+}
+
+h1 {
+  color: #221F1F;
+  font: 700 48px/32px Roboto;
+  margin: 0;
+}
+
+.text__paragraph-black {
+  color: #221F1F;
+  font: 400 22px/32px Roboto;
+  margin: 0;
+}
+
+.link__paragraph-black {
+  color: #EF4934;
+  font: 400 22px/32px Roboto;
+}
+
+/* Footer */
+
+footer {
+  grid-row: 3 / 4;
+  background: #221F1F;
+}
+
+.footer__container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: "links"
+    "text";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  grid-gap: 24px;
+  max-width: 100%;
+  padding: 30px 0 40px;
+}
+
+.socialLinks {
+  grid-area: links;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(48px, 48px));
+  grid-gap: 33px;
+  justify-content: center;
+}
+
+.icon-wrapper {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #FFF;
+}
+
+.iconSocial {
+  width: 24px;
+  height: 24px;
+}
+
+.footerText {
+  grid-area: text;
+  text-align: center;
+}
+
+.link__paragraph-white {
+  color: #F2F2F2;
+  font: 400 22px/32px Roboto;
+  text-decoration: none;
+}
+
+.text__paragraph-white {
+  color: #FFF;
+  font: 400 22px/32px Roboto;
+  margin: 0;
+}
