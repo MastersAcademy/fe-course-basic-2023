@@ -104,7 +104,7 @@ body {
 }
 
 .header__body {
-  display: flex; /* на мою жумку тут не потрібно робити грід */
+  display: flex;
   align-items: center;
   column-gap: 50px;
   justify-content: end;
