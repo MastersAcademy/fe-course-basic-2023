@@ -7,7 +7,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.wrapper {
+.body__wrapper {
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
@@ -15,7 +15,7 @@ body {
 
 /* Header */
 
-header {
+.nav {
   grid-row: 1 / 2;
   background: #EF4934;
   padding: 8px 0;
@@ -35,124 +35,96 @@ header {
   height: 64px;
 }
 
-ul {
+.nav__ul {
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-gap: 50px;
   justify-content: end;
 }
 
-li {
+.nav__li {
   list-style: none;
 }
 
-.navLink {
+.nav_link {
   text-decoration: none;
   color: #FFF;
-  font: 500 16/24px Roboto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
 }
 
-.navLink:hover {
+.nav_link:hover {
   text-decoration: underline;
 }
 
-.navLink:target {
+.nav_link:target {
   text-decoration: underline;
 }
 
 /* Content */
 
-h1 {
-  color: #221F1F;
-  font: 700 48px/32px Roboto;
-  margin: 0;
-}
-
-p {
-  color: #221F1F;
-  font: 400 14px/150% Roboto;
-  margin: 0;
-}
-
-h3 {
-  color: #221F1F;
-  font: 700 18px/24px Roboto;
-  margin: 0;
-}
-
-.headline2 {
-  color: #221F1F;
-  font: 600 14px/130% Roboto;
-  margin: 0;
-}
-
-.item__value {
-  color: #221F1F;
-  font: 400 14px/150% Roboto;
-  margin: 0;
-}
-
-main {
+.content {
   grid-row: 2 / 3;
   max-width: 1280px;
   margin: 0 auto;
 }
 
-.content {
+.content__container {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr;
-  grid-row-gap: 40px;
-  padding: 40px 0;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "img text";
+  grid-gap: 48px;
+  max-width: 100%;
+  padding: 48px 0;
 }
 
-.text__header {
+.content__img {
+  grid-area: img;
+  width: 100%;
+  height: auto;
+}
+
+.content__about {
+  grid-area: text;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  grid-row-gap: 24px;
+}
+
+.about__header {
   grid-row: 1 / 2;
 }
 
-/* Card container */
-
-.card__container {
+.about__text {
   grid-row: 2 / 3;
+  margin: 0;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, auto);
-  grid-gap: 25px;
-}
-
-.card__games {
-  display: grid;
-  height: auto;
-  background-color: #ECECEC;
-  border-radius: 12px;
-  padding: 12px;
-  grid-template-rows: auto auto;
-  grid-row-gap: 12px;
-}
-
-.card__header {
-  display: grid;
-  grid-template-columns: 90px 1fr;
-  grid-template-rows: auto;
   grid-gap: 16px;
 }
 
-.card__image {
-  width: 90px;
-  height: 90px;
+.header__title {
+  color: #221F1F;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 32px;
+  margin: 0;
 }
 
-.text__gameInfo {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, auto);
-  grid-gap: 6px 16px;
-  padding: 10px;
+.text__paragraph-black {
+  color: #221F1F;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+  margin: 0;
 }
 
-.text__gameInfo-item {
-  display: flex;
-  gap: 6px;
+.link__paragraph-black {
+  color: #EF4934;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
 }
 
 /* Footer */
@@ -175,7 +147,7 @@ footer {
   padding: 30px 0 40px;
 }
 
-.socialLinks {
+.footer__socials {
   grid-area: links;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(48px, 48px));
@@ -183,7 +155,7 @@ footer {
   justify-content: center;
 }
 
-.icon-wrapper {
+.icon__wrapper {
   display: grid;
   place-items: center;
   width: 48px;
@@ -192,24 +164,23 @@ footer {
   background-color: #FFF;
 }
 
-.iconSocial {
-  width: 24px;
-  height: 24px;
-}
-
-.footerText {
+.footer__text {
   grid-area: text;
   text-align: center;
 }
 
 .link__paragraph-white {
   color: #F2F2F2;
-  font: 400 22px/32px Roboto;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
   text-decoration: none;
 }
 
 .text__paragraph-white {
   color: #FFF;
-  font: 400 22px/32px Roboto;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
   margin: 0;
 }
