@@ -1,12 +1,19 @@
 
 h1 {
   font-size: 48px;
+  font-family: "Roboto", sans-serif;
 }
 
 .paragraph {
   font-size: 22px;
+  font-family: "Roboto", sans-serif;
+  line-height: 32px;
 }
 
 .colorred {
   color: #EF4934;
+}
+
+.main-text {
+  max-width: 575px;
 }
