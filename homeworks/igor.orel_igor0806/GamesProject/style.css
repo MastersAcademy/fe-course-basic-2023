@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #221F1F;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #EF4934;
+}
+
+.link_list {
+  list-style: none;
+  color: #FFF;
+  display: flex;
+  gap: 50px;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 50px 40px;
+}
+
+
+.hero_flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+
+.title_one {
+  margin: 0;
+  font-weight: 700;
+  font-size: 48px;
+}
+
+.link_MA {
+  color: #EF4934;
+}
+
+.about_me {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+
+/* Footer */
+
+.footer {
+  background-color: #221F1F;
+  padding: 20px;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer_text {
+  color: #FFF;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.footer_link {
+  color: #FFF;
+}
+
+.title_about {
+  line-height: 32px;
+  font-size: 48px;
+  font-weight: 700;
+  padding-left: 40px;
+}
+
+.card {
+  background-color: #ECECEC;
+  width: 275px;
+  height: 260px;
+  border-radius: 10px;
+  padding-bottom: 80px;
+}
+
+.card_cards {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+
+.card_games {
+  display: flex;
+  padding: 12px 10px ;
+  gap: 10px;
+  line-height: 21px;
+}
+
+.card_text {
+  margin-left: 20px;
+}
+
+.info_game {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.name_game {
+  margin: 0;
+}
+
+.bolt {
+  font-weight: 600;
+  font-size: 14px;
+}
