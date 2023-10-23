@@ -106,10 +106,11 @@ body {
   line-height: 32px;
 }
 
-.pokemon__cards {
+.pokemon__cards-list {
   display: grid;
   gap: 25px;
   grid-template-columns: repeat(4, 275px);
+  list-style: none;
 }
 
 .pokemon__card-item {
@@ -143,8 +144,9 @@ body {
   line-height: 150%;
 }
 
-.pokemon__special-block {
+.pokemon__special-list {
   margin-left: 10px;
+  list-style: none;
 }
 
 .pokemon__special-bold {
