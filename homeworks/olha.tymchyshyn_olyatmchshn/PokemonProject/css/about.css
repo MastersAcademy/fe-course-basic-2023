@@ -44,12 +44,13 @@
 /* ABOUT SECTION STYLES*/
 
 .about-page {
+  min-width: 1280px;
+}
+
+.about-page-container {
   display: flex;
   width: 1175px;
-  margin-top: 60px;
-  margin-right: 52px;
-  margin-bottom: 458px;
-  margin-left: 58px;
+  margin: 60px 52px 458px 58px;
 }
 
 .about-page-img {

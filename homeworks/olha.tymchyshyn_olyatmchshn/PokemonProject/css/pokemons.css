@@ -53,12 +53,13 @@
   font-size: 48px;
   font-weight: 700;
   line-height: 32px;
+  width: 575px;
   margin-top: 40px;
   margin-left: 52px;
 }
 
 .cards-container {
-  max-width: 1175px;
+  width: 1175px;
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
