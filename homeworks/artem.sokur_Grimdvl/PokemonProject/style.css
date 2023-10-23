@@ -21,7 +21,6 @@ header, main, footer {
 
 section {
   width: 1280px;
-  margin: 0 auto;
   padding: 0 50px;
 }
 
@@ -29,11 +28,8 @@ section {
 
 header {
   width: 100%;
-  height: 5.4vw;
+  height: 7.6vh;
   background-color: #333;
-  top: 0;
-  left: 0;
-  z-index: 3;
 }
 
 .head {
@@ -95,7 +91,7 @@ header {
 /* section about */
 
 main {
-  height: 54.9vw;
+  height: 77.3vh;
 }
 
 .about {
@@ -236,7 +232,7 @@ h1 {
 /* section foot */
 
 footer {
-  height: 10.7vw;
+  height: 15.1vh;
   background-color: #EF4934;
   color: #FFF;
 }
@@ -286,9 +282,9 @@ footer {
   margin: 20px auto;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 270px);
-  grid-auto-rows: minmax (280px, auto);
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, 275px);
+  grid-auto-rows: minmax(280px, auto);
+  gap: 20px;
   justify-content: space-around;
 }
 
