@@ -24,6 +24,11 @@ body {
 .header__nav {
   justify-self: end;
   display: grid;
+}
+
+.header__nav-list {
+  list-style-type: none;
+  display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 1fr;
   column-gap: 50px;
@@ -31,8 +36,7 @@ body {
   align-items: center;
 }
 
-.header__nav-link,
-.header__nav-link--active {
+.header__nav-link {
   color: #FFF;
   font-size: 16px;
   font-weight: 500;
@@ -40,31 +44,8 @@ body {
   transition: color .3s ease-in-out;
 }
 
-.header__nav-link--active {
-  padding: 7px 0;
-  position: relative;
-}
-
-.header__nav-link:hover,
-.header__nav-link--active:hover {
+.header__nav-link:hover {
   color: #EF4934;
-}
-
-.header__nav-link--active::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  display: block;
-  width: 100%;
-  height: 1px;
-  background-color: #FFF;
-  transition: background-color .3s ease-in-out;
-}
-
-.header__nav-link--active:hover::after {
-  background-color: #EF4934;
 }
 
 .success {

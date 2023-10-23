@@ -31,6 +31,11 @@ body {
 
   justify-self: end;
   display: grid;
+}
+
+.header__nav-list {
+  list-style-type: none;
+  display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 1fr;
   column-gap: 50px;
