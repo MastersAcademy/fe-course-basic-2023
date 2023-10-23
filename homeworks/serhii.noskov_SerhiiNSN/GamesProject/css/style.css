@@ -143,7 +143,7 @@ a {
 }
 
 .card__text,
-.card__info {
+.card__about p {
   color: #221F1F;
   font-family: Roboto;
   font-size: 14px;
@@ -156,11 +156,11 @@ a {
   margin-left: 12px;
 }
 
-.card__info:not(:last-child) {
+.card__about p:not(:last-child) {
   margin-bottom: 16px;
 }
 
-.card__info span {
+.bold {
   color: #221F1F;
   font-family: Roboto;
   font-size: 14px;
