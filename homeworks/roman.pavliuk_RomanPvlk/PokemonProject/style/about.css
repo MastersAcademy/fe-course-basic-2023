@@ -1,0 +1,35 @@
+/*eslint-disable*/
+
+.about_section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  gap: 68px;
+  margin-top: 60px;
+  padding: 0 53px;
+}
+
+.about_section__text {
+  line-height: 32px;
+  width: 575px;
+  color: #221F1F;
+}
+
+.about_section__text h1 {
+  font-weight: 700;
+  font-size: 48px;
+  margin-bottom: 24px;
+}
+
+.about_section__text p {
+  font-weight: 400;
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
+.about_section__text .link {
+  font-weight: 400;
+  font-size: 22px;
+  color: #EF4934;
+}

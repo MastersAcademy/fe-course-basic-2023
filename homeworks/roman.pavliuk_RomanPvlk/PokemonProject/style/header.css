@@ -1,0 +1,42 @@
+/*eslint-disable*/
+
+.header {
+  width: 100%;
+  background-color: #333;
+  position: sticky;
+  top: 0;
+}
+
+.header_wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: sticky;
+  padding: 25px 0;
+}
+
+.container_logo {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  align-items: center;
+  gap: 14px;
+  margin: 0 auto;
+  background-color: #333;
+}
+
+.nav__links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+  list-style-type: none;
+}
+
+.nav__links a {
+  font-size: 16px;
+  font-weight: 500;
+  color: #FFF;
+  text-decoration: none;
+}
+
