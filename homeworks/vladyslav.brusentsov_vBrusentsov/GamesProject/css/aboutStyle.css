@@ -20,20 +20,20 @@
   margin: 0;
 }
 
-.main__paragraph {
-  max-width: 575px;
+.about-main__content p {
   font-family: Roboto;
   font-size: 22px;
   font-weight: 400;
   font-style: normal;
   line-height: 32px;
+  margin: 0;
 }
 
 .main-content {
   margin: 0;
 }
 
-.main-content a {
+.link {
   color: #EF4934;
 }
 
