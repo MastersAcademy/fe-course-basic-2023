@@ -29,11 +29,11 @@ section {
 
 header {
   width: 100%;
-  position: fixed;
-  height: 80px;
+  height: 5.4vw;
   background-color: #333;
   top: 0;
   left: 0;
+  z-index: 3;
 }
 
 .head {
@@ -62,9 +62,6 @@ header {
   display: grid;
   display: flex;
   justify-content: space-around;
-  /* grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "Pokemons About Login";
-  text-align: center; */
 }
 
 .navigation__item {
@@ -98,7 +95,7 @@ header {
 /* section about */
 
 main {
-  min-height: 713px;
+  height: 54.9vw;
 }
 
 .about {
@@ -108,10 +105,7 @@ main {
   gap: 50px;
   justify-content: space-around;
   margin-top: 140px;
-  min-height: 729px;
   padding-bottom: 30px;
-  /* display: flex;
-  justify-content: space-between; */
 }
 
 .about__contact {
@@ -242,7 +236,7 @@ h1 {
 /* section foot */
 
 footer {
-  height: 160px;
+  height: 10.7vw;
   background-color: #EF4934;
   color: #FFF;
 }
@@ -286,7 +280,6 @@ footer {
 
 .pokemons {
   margin-top: 134px;
-  min-height: 765px;
 }
 
 .pokemons__cards {
@@ -297,7 +290,6 @@ footer {
   grid-auto-rows: minmax (280px, auto);
   gap: 25px;
   justify-content: space-around;
-  /* minmax(270px,1fr) */
 }
 
 .pokemons__cards-item {
