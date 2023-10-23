@@ -2,7 +2,12 @@
   background-color: #333;
   display: grid;
   align-items: center;
+  grid-template-columns: 1fr auto;
   padding: 10px;
+  color: #333;
+  gap: 50px;
+  height: 80px;
+  justify-content: space-between;
 }
 
 .ma-logo {
@@ -26,6 +31,8 @@
 
 .navigation {
   text-align: right;
+  display: flex;
+  align-items: center;
 }
 
 .navigation ul {
@@ -39,10 +46,14 @@
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 18.75px;
-  gap: 7px;
   color: #FFF;
-  text-decoration: none;
+  line-height: 19px;
+  margin-right: 50px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 50px;
+  width: 77px;
+  height: 11px;
 }
 
 .content {
@@ -62,7 +73,6 @@
 }
 
 .white-rectangle {
-  width: 575px;
   height: 479px;
   background-color: #FFF;
   margin-left: 53px;
@@ -81,36 +91,6 @@
 .pokeball {
   width: 102px;
   height: 102px;
-}
-
-.upper-header {
-  background-color: #333;
-  color: #333;
-  width: 1280px;
-  height: 80px;
-  display: flex;
-  justify-content: space-between;
-  gap: 50px;
-}
-
-.navigation {
-  display: flex;
-  align-items: center;
-}
-
-.navigation-item {
-  color: #FFF;
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 19px;
-  margin-right: 50px;
-  display: flex;
-  justify-content: flex-end;
-  gap: 50px;
-  width: 77px;
-  height: 11px;
 }
 
 .headline {
@@ -135,7 +115,6 @@ p {
   line-height: 32px;
   margin-left: 25px;
   margin-top: auto;
-  width: 575px;
   height: 409px;
 }
 
