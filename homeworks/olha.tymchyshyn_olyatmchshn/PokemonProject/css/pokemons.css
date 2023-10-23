@@ -62,7 +62,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
-  margin-top: 40px 53px 210px 52px;
+  margin: 40px 53px 210px 52px;
 }
 
 .pokemon-card {
