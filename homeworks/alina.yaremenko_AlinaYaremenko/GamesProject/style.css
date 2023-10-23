@@ -79,3 +79,51 @@ body {
   color: #EF4934;
 }
 
+.games {
+  margin-top: 40px;
+}
+
+.games__content {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.games__title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #221F1F;
+  margin-bottom: 40px;
+}
+
+.card {
+  padding: 12px 12px 22px;
+  max-width: 275px;
+  border-radius: 12px;
+  background: #ECECEC;
+}
+
+.card__top-content, .card__top-content-text {
+  display: flex;
+  gap: 12px;
+}
+
+.card__top-content {
+  margin-bottom: 22px;
+}
+
+.card__top-content-text {
+  flex-direction: column;
+}
+
+.card__text {
+  margin-bottom: 16px;
+}
+
+.card__text span {
+  font-weight: 600;
+}
+
+.card__text:last-child {
+  margin-bottom: 0;
+}
