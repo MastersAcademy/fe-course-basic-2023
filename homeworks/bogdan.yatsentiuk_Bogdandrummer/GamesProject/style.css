@@ -6,6 +6,10 @@
 }
 
 .wrapper {
+  margin: 0 auto;
+}
+
+.content {
   max-width: 1280px;
   margin: 0 auto;
 }

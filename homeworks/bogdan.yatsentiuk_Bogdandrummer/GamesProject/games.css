@@ -6,6 +6,10 @@
 }
 
 .wrapper {
+  margin: 0 auto;
+}
+
+.content {
   max-width: 1280px;
   margin: 0 auto;
 }
@@ -71,7 +75,6 @@
 .main {
   display: flex;
   flex-direction: column;
-  max-width: 100%;
   box-sizing: border-box;
   padding: 40px 52px 0;
 }
@@ -86,10 +89,11 @@
 
 .games__row {
   display: grid;
-  grid-template-rows: repeat(4, minmax(250px, auto));
-  grid-template-columns: repeat(4, minmax(225px, auto));
+  grid-template-rows: repeat(2, minmax(250px, auto));
+  grid-template-columns: repeat(4, minmax(200px, 275px));
   gap: 25px;
   margin-top: 52px;
+  box-sizing: border-box;
 }
 
 .games__item {
