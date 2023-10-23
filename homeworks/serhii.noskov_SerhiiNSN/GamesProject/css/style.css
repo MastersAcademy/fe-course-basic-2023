@@ -111,7 +111,7 @@ a {
   margin: 40px 0;
 }
 
-.games__body {
+.games__list {
   display: grid;
   grid-template-columns: repeat(auto-fill, 275px);
   gap: 25px;
