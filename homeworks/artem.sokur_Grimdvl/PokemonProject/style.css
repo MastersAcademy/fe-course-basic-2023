@@ -28,7 +28,7 @@ section {
 
 header {
   width: 100%;
-  height: 7.6vh;
+  height: 8.4vh;
   background-color: #333;
 }
 
@@ -40,8 +40,8 @@ header {
 
 .logo {
   display: flex;
-  text-align: center;
   align-items: center;
+  letter-spacing: .1em;
 }
 
 .logo__title {
@@ -91,7 +91,7 @@ header {
 /* section about */
 
 main {
-  height: 77.3vh;
+  height: 74.8vh;
 }
 
 .about {
@@ -100,7 +100,7 @@ main {
   grid-auto-rows: minmax(275px,auto);
   gap: 50px;
   justify-content: space-around;
-  margin-top: 140px;
+  margin-top: 60px;
   padding-bottom: 30px;
 }
 
@@ -232,7 +232,7 @@ h1 {
 /* section foot */
 
 footer {
-  height: 15.1vh;
+  height: 16.8vh;
   background-color: #EF4934;
   color: #FFF;
 }
@@ -274,12 +274,17 @@ footer {
 
 /* section pokemons */
 
-.pokemons {
-  margin-top: 134px;
+.pokemons__search {
+  height: 60px;
+  background-color: #000;
+}
+
+.pokemons__title {
+  margin-top: 10px;
 }
 
 .pokemons__cards {
-  margin: 20px auto;
+  margin-top: 20px;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, 275px);
@@ -358,4 +363,98 @@ footer {
 
 .card__characteristics-weaknesses span:nth-child(3) {
   background-color: #3447EF;
+}
+
+/* section login */
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login__form {
+  min-width: 575px;
+}
+
+.login__form-input {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login__form-input input {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  padding: 0 20px;
+  height: 70px;
+  border-radius: 6px;
+  border: 1px solid #A9A;
+}
+
+.login__form-input label {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 26px;
+}
+
+.login__form-checkbox {
+  margin-top: 30px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.login__form-checkbox input[type="checkbox"] {
+  appearance: none;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  background-color: #FFF;
+  border: 1px solid #EF4934;
+  border-radius: 6px;
+  outline: none;
+}
+
+.login__form-checkbox input[type="checkbox"]::after {
+  content: "✓";
+  color: #FFF;
+  background-color: #EF4934;
+  display: none;
+  height: 18px;
+  width: 18px;
+  border-radius: 3px;
+  text-align: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.login__form-checkbox input[type="checkbox"]:checked::after {
+  display: block;
+}
+
+.login__form-checkbox label {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.login__form--submit {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #FFF;
+  background-color: #EF4934;
+  width: 100%;
+  height: 70px;
+  margin-top: 30px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
 }

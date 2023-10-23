@@ -17,37 +17,30 @@
 
                 <nav class="navigation">
                     <a class="navigation__item" href="pokemons.html">Pokemons</a>
-                    <a class="navigation__item active" href="#">About</a>
-                    <a class="navigation__item" href="login.html">Login</a>
+                    <a class="navigation__item" href="index.html">About</a>
+                    <a class="navigation__item active" href="#">Login</a>
                 </nav>
             </section>
         </header>
 
         <main>
-            <section class="about">
-                <div id="logo" class="about__logo">
-                    <img class="about__logo__pokemon" src="img/pokemon-title.png" alt="Pokemon">
-                    <div class="about__logo__pokemon__ball">
-                        <div class="about__logo__pokemon__ball__center"></div>
+            <section class="login">
+                <h1 class="login__title">Login page</h1>
+                <form class="login__form" action="#">
+                    <div class="login__form-input">
+                        <label for="email">Email</label>
+                        <input placeholder="Enter your email address" name="email" type="email">
                     </div>
-                </div>
-
-                <div class="about__text">
-                    <h1 class="about__text__title">About me</h1>
-
-                    <p class="about__text__subscription">
-                        Hi! My name is Artem Sokur and I'm a Junior Frontend Developer. I am already familiar with main Web Technologies like HTML, CSS, JavaScript and Git version control system.
-                        <br>
-                        <br>
-                        This page was developed during the course <a class="about__contact" href="https://www.mastersacademy.education/frontend-for-beginners-it">'Frontend for beginners' from Masters Academy in 2023.</a>
-                        <br>
-                        <br>
-                        This is a social project from MOCG company where I got an opportunity to work with Frontend mentors and to create my own small project for the portfolio.<br>
-                        <br>
-                        You can contact me via <a class="about__contact__telegram" href="https://t.me/Grim_679">Telegram</a>
-                        and/or check out my <a class="about__contact__github" href="https://github.com/Grimdvl">GitHub</a>.
-                    </p>
-                </div>
+                    <div class="login__form-input">
+                        <label for="password">Password</label>
+                        <input placeholder="Enter your password" name="password" type="password">
+                    </div>
+                    <div class="login__form-checkbox">
+                        <input name="checkbox" type="checkbox" id="checkbox">
+                        <label for="checkbox">I'm not a robot</label>
+                    </div>
+                    <button type="submit" class="login__form--submit">Login</button>
+                </form>
             </section>
         </main>
 
