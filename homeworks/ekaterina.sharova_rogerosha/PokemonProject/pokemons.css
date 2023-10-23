@@ -2,10 +2,24 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .upper-header {
   background-color: #333;
   display: grid;
   align-items: center;
+  grid-template-columns: 1fr auto;
+  padding: 10px;
+  color: #333;
+  gap: 50px;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .ma-logo {
@@ -40,35 +54,10 @@
 }
 
 .navigation-item {
-  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 18.75px;
-  gap: 7px;
   color: #FFF;
-  text-decoration: none;
-}
-
-body {
-  margin: 0;
-}
-
-.upper-header {
-  background-color: #333;
-  color: #333;
-  height: 80px;
-  display: flex;
-  justify-content: space-between;
-  gap: 50px;
-}
-
-.navigation-item {
-  color: #FFF;
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
   line-height: 19px;
   margin-right: 50px;
   display: flex;
@@ -78,23 +67,18 @@ body {
   height: 11px;
 }
 
+.content {
+  max-width: 1280px;
+  padding-inline: 52px;
+}
+
 .headline {
   color: #221F1F;
-  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 48px;
   line-height: 32px;
-  margin-top: 25px;
-  margin-left: 53px;
-}
-
-.white-rectangle {
-  height: 601px;
-  background-color: #FFF;
-  margin: 60px;
-  display: flex;
-  flex-direction: column;
+  margin-block: 40px;
 }
 
 .card-container {
@@ -108,13 +92,12 @@ body {
 .card {
   background-color: #ECECEC;
   width: 100%;
-  height: 288px;
   border-radius: 12px;
   padding: 12px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  font-size: 14px;
+  gap: 22px;
 }
 
 .card-header {
@@ -129,24 +112,59 @@ body {
   border-radius: 12px;
 }
 
-.card-text {
-  font-family: Roboto, sans-serif;
+.card-title {
   font-size: 18px;
   font-weight: 700;
 }
 
-.grey-rectangle {
-  width: 231px;
-  height: 142px;
-  color: #EF4934;
-  padding: 22px;
+.card-content {
   display: flex;
+  gap: 16px;
   flex-direction: column;
-  margin-left: 0;
 }
 
-.text-in-gray-rectangle {
-  font-family: Roboto, sans-serif;
-  color: #221F1F;
-  font-size: 14px;
+.card-text {
+  margin: 0;
+}
+
+.card-text-bold {
+  font-weight: 600;
+}
+
+.card-property {
+  display: flex;
+  gap: 12px;
+}
+
+.card-property-name {
+  margin-top: 6px;
+}
+
+.card-property-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.card-property-tag {
+  padding: 7px 9px;
+  background: #000;
+  color: #FFF;
+  border-radius: 3px;
+}
+
+.group-yellow {
+  background-color: #FDB714;
+}
+
+.group-red {
+  background-color: #EF4934;
+}
+
+.group-blue {
+  background-color: #3447EF;
+}
+
+.group-pink {
+  background-color: #FF87F3;
 }
