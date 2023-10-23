@@ -28,7 +28,7 @@ section {
 
 header {
   width: 100%;
-  height: 7.6vh;
+  height: 8.4vh;
   background-color: #333;
 }
 
@@ -91,7 +91,7 @@ header {
 /* section about */
 
 main {
-  height: 77.3vh;
+  height: 74.7vh;
 }
 
 .about {
@@ -232,7 +232,7 @@ h1 {
 /* section foot */
 
 footer {
-  height: 15.1vh;
+  height: 16.9vh;
   background-color: #EF4934;
   color: #FFF;
 }
@@ -275,7 +275,7 @@ footer {
 /* section pokemons */
 
 .pokemons {
-  margin-top: 134px;
+  margin-top: 40px;
 }
 
 .pokemons__cards {
