@@ -1,12 +1,75 @@
-.project-header {
+/* HEADER STYLES */
+
+.page-header {
+  background-color: #333;
+  width: 1280px;
+  height: 80px;
+}
+
+.page-header-container {
+  display: flex;
+  gap: 725px;
+}
+
+.logo {
+  width: 190px;
+  height: 29.945px;
+  margin-top: 25px;
+  margin-left: 53px;
+}
+
+.nav-menu {
+  list-style-type: none;
+  display: flex;
+  gap: 50px;
+}
+
+.nav-menu {
+  margin-top: 34px;
+}
+
+.nav-menu-item-link {
+  text-decoration: none;
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.nav-menu-item-link:hover,
+.nav-menu-item-link:focus {
+  color: #F04934;
+}
+
+/* ABOUT SECTION STYLES*/
+
+.about-page {
+  display: flex;
+  width: 1175px;
+  height: 479px;
+  margin-top: 60px;
+  margin-right: 52px;
+  margin-bottom: 458px;
+  margin-left: 58px;
+}
+
+.about-page-img {
+  width: 532px;
+  height: 342px;
+  padding-right: 68px;
+}
+
+.about-page-header {
   color: #221F1F;
   font-family: Roboto;
   font-size: 48px;
   font-weight: 700;
   line-height: 32px;
+  margin-top: 0;
+  margin-bottom: 24px;
 }
 
-.project-description {
+.about-page-text {
   color: #221F1F;
   font-family: Roboto;
   font-size: 22px;
@@ -22,4 +85,170 @@
   font-weight: 400;
   line-height: 32px;
   text-decoration-line: underline;
+}
+
+/* POKEMONS CARDS SECTION STYLES*/
+
+.cards-page {
+  width: 1280px;
+}
+
+.cards-page-header {
+  color: #221F1F;
+  font-family: Roboto;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 32px;
+  margin-top: 40px;
+  margin-left: 52px;
+}
+
+.cards-container {
+  width: 1175px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 40px;
+  margin-right: 53px;
+  margin-bottom: 210px;
+  margin-left: 52px;
+}
+
+.pokemon-card {
+  border-radius: 12px;
+  background: #ECECEC;
+  width: 251px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 12px 12px 22px;
+}
+
+.pokemon-img {
+  width: 90px;
+  height: 90px;
+}
+
+.pokemon-name {
+  color: #221F1F;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.pokemon-name-container {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.pokemon-descr {
+  width: 231px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
+  padding-left: 12px;
+  margin: 0;
+}
+
+.pokemon-descr-item {
+  color: #221F1F;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.pokemon-descr-item-value {
+  color: #221F1F;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+
+.pokemon-descr-type-list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 6px;
+  padding-left: 0;
+}
+
+.pokemon-descr-item-type {
+  color: #221F1F;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.pokemon-descr-type-first {
+  border-radius: 3px;
+  background: #FDB714;
+  width: 69px;
+  height: 24px;
+  color: #FFF;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.pokemon-descr-type-second {
+  border-radius: 3px;
+  background: #EF4934;
+  width: 69px;
+  height: 24px;
+  color: #FFF;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.pokemon-descr-weakness-list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 6px;
+  padding-left: 0;
+}
+
+.pokemon-descr-item-weakness {
+  color: #221F1F;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.pokemon-descr-weakness-first {
+  border-radius: 3px;
+  background: #FF87F3;
+  width: 69px;
+  height: 24px;
+  color: #FFF;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.pokemon-descr-weakness-second {
+  border-radius: 3px;
+  background: #3447EF;
+  width: 69px;
+  height: 24px;
+  color: #FFF;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
 }
