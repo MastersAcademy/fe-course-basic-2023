@@ -9,6 +9,7 @@
 .page-header-container {
   display: flex;
   gap: 725px;
+  max-width: 1280px;
 }
 
 .logo {
@@ -41,56 +42,10 @@
   color: #F04934;
 }
 
-/* ABOUT SECTION STYLES*/
-
-.about-page {
-  display: flex;
-  width: 1175px;
-  height: 479px;
-  margin-top: 60px;
-  margin-right: 52px;
-  margin-bottom: 458px;
-  margin-left: 58px;
-}
-
-.about-page-img {
-  width: 532px;
-  height: 342px;
-  padding-right: 68px;
-}
-
-.about-page-header {
-  color: #221F1F;
-  font-family: Roboto;
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 32px;
-  margin-top: 0;
-  margin-bottom: 24px;
-}
-
-.about-page-text {
-  color: #221F1F;
-  font-family: Roboto;
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 32px;
-  width: 575px;
-}
-
-.MA-website {
-  color: #EF4934;
-  font-family: Roboto;
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 32px;
-  text-decoration-line: underline;
-}
-
 /* POKEMONS CARDS SECTION STYLES*/
 
 .cards-page {
-  width: 1280px;
+  max-width: 1280px;
 }
 
 .cards-page-header {
@@ -104,7 +59,7 @@
 }
 
 .cards-container {
-  width: 1175px;
+  max-width: 1175px;
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
@@ -143,7 +98,6 @@
 }
 
 .pokemon-descr {
-  width: 231px;
   display: flex;
   flex-direction: column;
   gap: 16px;
