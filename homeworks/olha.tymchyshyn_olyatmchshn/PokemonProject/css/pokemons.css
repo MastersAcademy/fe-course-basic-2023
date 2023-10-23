@@ -14,7 +14,6 @@
 
 .logo {
   width: 190px;
-  height: 29.945px;
   margin-top: 25px;
   margin-left: 53px;
 }
@@ -63,10 +62,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
-  margin-top: 40px;
-  margin-right: 53px;
-  margin-bottom: 210px;
-  margin-left: 52px;
+  margin-top: 40px 53px 210px 52px;
 }
 
 .pokemon-card {
@@ -143,7 +139,6 @@
   border-radius: 3px;
   background: #FDB714;
   width: 69px;
-  height: 24px;
   color: #FFF;
   text-align: center;
   font-family: Roboto;
@@ -156,7 +151,6 @@
   border-radius: 3px;
   background: #EF4934;
   width: 69px;
-  height: 24px;
   color: #FFF;
   text-align: center;
   font-family: Roboto;
@@ -185,7 +179,6 @@
   border-radius: 3px;
   background: #FF87F3;
   width: 69px;
-  height: 24px;
   color: #FFF;
   text-align: center;
   font-family: Roboto;
@@ -198,7 +191,6 @@
   border-radius: 3px;
   background: #3447EF;
   width: 69px;
-  height: 24px;
   color: #FFF;
   text-align: center;
   font-family: Roboto;

@@ -14,7 +14,6 @@
 
 .logo {
   width: 190px;
-  height: 29.945px;
   margin-top: 25px;
   margin-left: 53px;
 }
@@ -47,7 +46,6 @@
 .about-page {
   display: flex;
   width: 1175px;
-  height: 479px;
   margin-top: 60px;
   margin-right: 52px;
   margin-bottom: 458px;
@@ -76,7 +74,7 @@
   font-size: 22px;
   font-weight: 400;
   line-height: 32px;
-  width: 575px;
+  max-width: 575px;
 }
 
 .MA-website {
