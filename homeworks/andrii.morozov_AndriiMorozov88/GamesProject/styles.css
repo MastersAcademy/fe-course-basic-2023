@@ -46,11 +46,16 @@ body {
   color: #FFF;
 }
 
-.navigation__link {
-  color: #FFF;
+.navigation__line--underline {
+  text-decoration: underline;
 }
 
-h1 {
+.navigation__link {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.heading--h1 {
   font-size: 48px;
   font-weight: 700;
   line-height: 32px;
