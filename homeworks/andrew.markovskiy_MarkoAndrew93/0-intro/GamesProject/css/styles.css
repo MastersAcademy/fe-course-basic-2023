@@ -155,7 +155,7 @@ body {
 .conteiner-item {
   width: 275px;
   height: 260px;
-  padding: '12px 12px 22px 12px';
+  padding: "12px 12px 22px 12px";
   border-radius: 12px;
   background-color: #ECECEC;
 }
