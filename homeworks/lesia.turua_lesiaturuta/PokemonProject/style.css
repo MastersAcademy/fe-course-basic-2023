@@ -7,7 +7,6 @@
 body {
   font-family: "Roboto", sans-serif;
   color: #221F1F;
-  width: 1280px;
   margin: 0 auto;
 }
 
@@ -37,7 +36,7 @@ body {
   line-height: 19px;
   color: #FFF;
   align-items: center;
-  width: 200px;
+  width: 170px;
   justify-content: space-between;
 }
 
