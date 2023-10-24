@@ -1,0 +1,105 @@
+.main-section {
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.main-header {
+  font-family: Roboto;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  margin: 0;
+}
+
+.main-cards-container {
+  display: flex;
+  max-width: 1175px;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+
+.card-list {
+  display: inline-flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 25px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 12px 22px;
+  gap: 22px;
+  border-radius: 12px;
+  background-color: #ECECEC;
+}
+
+.main-card-header {
+  display: flex;
+  width: 251px;
+  height: 90px;
+  gap: 12px;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 149px;
+  height: 77px;
+  gap: 12px;
+}
+
+.card-header h3 {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 700;
+  width: 134px;
+  height: 13px;
+  margin: 0;
+}
+
+.card-header p {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  width: 149px;
+  height: 52px;
+  margin: 0;
+}
+
+.card-actors {
+  display: flex;
+  width: 231px;
+  height: 114px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 16px;
+}
+
+.card-actors * {
+  display: flex;
+  width: auto;
+  height: 10px;
+  margin: 0;
+  gap: 6px;
+}
+
+.card-actors .key {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18.2px;
+}
+
+.card-actors .value {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
