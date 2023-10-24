@@ -13,20 +13,12 @@
 .ma-logo {
   display: flex;
   align-items: center;
-  flex-direction: row;
 }
 
 .MAlogo {
-  width: 29.11px;
-  height: 29.95px;
+  width: 190px;
+  height: 30px;
   margin-left: 53px;
-}
-
-.MA {
-  width: 147.68px;
-  height: 9.08px;
-  margin-left: 13.21px;
-  margin-top: 10px;
 }
 
 .navigation {
