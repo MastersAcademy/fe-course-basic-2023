@@ -58,6 +58,10 @@ body {
   text-decoration: none;
 }
 
+.login {
+  text-decoration: none;
+}
+
 .content {
   max-width: 1280px;
   padding-inline: 52px;
