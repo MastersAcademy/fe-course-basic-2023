@@ -1,14 +1,14 @@
 /*styles for "pokemons_game" page*/
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   line-height: 32px;
   color: #221F1F;
   margin: 0;
 }
 
 .header {
-  background-color: #333333;
+  background-color: #333;
   text-decoration: none;
 }
 
@@ -21,7 +21,7 @@ body {
 }
 
 .nav_links_list {
-  margin:0;
+  margin: 0;
 }
 
 .nav_links_list li {
@@ -41,11 +41,11 @@ body {
   text-decoration: none;
   font-size: 16px;
   font-weight: 500;
-  color: #FFFFFF;
+  color: #FFF;
 }
 
 .nav_links_list a:hover {
-  color: #FFFFFF;
+  color: #FFF;
   text-decoration: underline;
 }
 
@@ -59,19 +59,18 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin:0 28px 0 28px;
+  margin: 0 28px;
 }
 
 .pokemon_card {
   width: 251px;
   height: 288px;
-  padding: 12px 12px 22px 12px;
+  padding: 12px 12px;
   border-radius: 12px;
   background-color: #ECECEC;
   margin: 0 0 25px 25px;
   display: flex;
   flex-direction: column;
-
 }
 
 .pokemon_overview img {
@@ -90,8 +89,8 @@ body {
 }
 
 .pokemon_overview {
-  margin: 0 0 22px 0;
-  display:flex;
+  margin: 0 0 22px;
+  display: flex;
   flex-direction: row;
   align-items: center;
 }
@@ -106,7 +105,7 @@ body {
   font-size: 14px;
   line-height: 18px;
   padding: 0;
-  margin: 0 0 16px 0;
+  margin: 0 0 16px;
 }
 
 .pokemon_features p span {
@@ -116,10 +115,10 @@ body {
 
 .pokemon_type,
 .pokemon_weakness {
-  display:flex;
+  display: flex;
   flex-direction: row;
   align-items: baseline;
-  margin: 0 0 16px 0;
+  margin: 0 0 16px;
   padding: 0;
 }
 
@@ -143,7 +142,7 @@ body {
   font-weight: 400;
   list-style: none;
   line-height: 21px;
-  color: #FFFFFF;
+  color: #FFF;
   border-radius: 3px;
   display: flex;
   align-items: center;
@@ -152,26 +151,23 @@ body {
 
 .yellow_type {
   background-color: #FDB714;
-  padding: 7px 9px 7px 9px;
+  padding: 7px 9px;
 }
 
 .red_type {
   background-color: #EF4934;
-  padding: 7px 20px 7px 20px;
+  padding: 7px 20px;
   margin: 0;
 }
 
 .pink_type {
   background-color: #FF87F3;
-  padding: 7px 20px 7px 20px;
+  padding: 7px 20px;
   margin: 0 6px 0 0;
 }
 
 .blue_type {
   background-color: #3447EF;
-  padding: 7px 16px 7px 16px;
+  padding: 7px 16px;
   margin: 0;
 }
-
-
-

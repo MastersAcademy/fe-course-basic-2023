@@ -1,14 +1,14 @@
 /*styles for "about me" page*/
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   line-height: 32px;
   color: #221F1F;
   margin: 0;
 }
 
 .header {
-  background-color: #333333;
+  background-color: #333;
   text-decoration: none;
 }
 
@@ -21,7 +21,7 @@ body {
 }
 
 .nav_links_list {
-  margin:0;
+  margin: 0;
 }
 
 .nav_links_list li {
@@ -41,11 +41,15 @@ body {
   text-decoration: none;
   font-size: 16px;
   font-weight: 500;
-  color: #FFFFFF;
+  color: #FFF;
+}
+
+.text_block a {
+  color: #EF4934;
 }
 
 .nav_links_list a:hover {
-  color: #FFFFFF;
+  color: #FFF;
   text-decoration: underline;
 }
 
@@ -71,18 +75,18 @@ body {
   align-items: center;
   background-color: #FDB714;
   border-radius: 22px;
-  margin:0 68px 0 0;
+  margin: 0 68px 0 0;
 }
 
 .big_image {
   margin: 0;
-  padding: 25px 0 0 0;
+  padding: 25px 0 0;
 }
 
 .small_image {
-  margin: -15px 0 0 0;
+  margin: -15px 0 0;
   padding: 0;
-  background-image: url('./images/small_pokemon_back.png');
+  background-image: url("./images/small_pokemon_back.png");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -94,17 +98,11 @@ body {
 .text_block h1 {
   font-size: 48px;
   font-weight: 700;
-  margin: 0 0 24px 0;
+  margin: 0 0 24px;
 }
 
 .text_block p {
   font-size: 22px;
   font-weight: 400;
-  margin:0 0 32px 0;
+  margin: 0 0 32px;
 }
-
-.text_block a {
-  color: #EF4934;
-}
-
-
