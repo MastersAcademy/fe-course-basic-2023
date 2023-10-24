@@ -24,9 +24,21 @@
                 </ul>
             </nav>
         </header>
-        <main>
-            <div class="main-section">
-                <h1 class="login-header">Login page</h1>
+        <main class="login-main-section">
+            <h1 class="login-header">Login page</h1>
+            <div class="login-container">
+                <div class="login-email-container">
+                    <label class="label-email" for="email">Email</label>
+                    <br>
+                    <input class="email" type="email" id="email" name="email" placeholder="Enter your email address">
+                </div>
+                <div class="login-password-container">
+                    <label class="label-password" for="password">Password</label>
+                    <br>
+                    <input class="password" type="password" id="password" name="password" placeholder="Enter your password">
+                </div>
+                <input class="login-main-checkbox" type="checkbox">
+                <input class="login-main-submit" type="submit" value="Login">
             </div>
         </main>
     </body>

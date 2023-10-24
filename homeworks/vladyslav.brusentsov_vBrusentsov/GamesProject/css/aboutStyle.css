@@ -1,3 +1,7 @@
+body {
+  gap: 60px;
+}
+
 .main__section {
   display: flex;
   max-width: 1175px;

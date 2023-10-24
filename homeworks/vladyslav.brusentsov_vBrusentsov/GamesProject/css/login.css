@@ -1,9 +1,13 @@
-.main-section {
+body {
+  gap: 80px;
+}
+
+.login-main-section {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
   gap: 60px;
-  margin-top: 80px;
+  min-width: 575px;
 }
 
 .login-header {
@@ -12,4 +16,12 @@
   font-style: normal;
   font-weight: 700;
   line-height: 66%;
+  margin: 0;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 40px;
 }
