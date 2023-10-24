@@ -145,3 +145,45 @@ body {
 .card__text2 {
   grid-area: text2;
 }
+
+.loginPage__body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginPage__fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 400px;
+  border: none;
+}
+
+.fieldset__element {
+  margin-top: 20px;
+}
+
+.fieldset__heading {
+  text-align: center;
+}
+
+.fieldset__input {
+  height: 40px;
+  border: 2px solid #D1D1D1;
+}
+
+.fieldset__checkbox {
+  margin-right: 10px;
+}
+
+.fieldset__button {
+  background-color: #EF4934;
+  color: #FFF;
+  font-weight: 700;
+  padding: 25px;
+  border-radius: 5px;
+  border: none;
+}
