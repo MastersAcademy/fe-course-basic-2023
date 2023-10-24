@@ -65,7 +65,7 @@ body {
 .pokemon_card {
   width: 251px;
   height: 288px;
-  padding: 12px 12px;
+  padding: 12px;
   border-radius: 12px;
   background-color: #ECECEC;
   margin: 0 0 25px 25px;
@@ -97,7 +97,7 @@ body {
 
 .pokemon_features {
   margin: 0 0 0 10px;
-  display:flex;
+  display: flex;
   flex-direction: column;
 }
 
