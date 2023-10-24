@@ -3,6 +3,7 @@
 body {
   font-family: "Roboto", sans-serif;
   color: #221F1F;
+  margin: 0;
 }
 
 .nav {
@@ -99,9 +100,8 @@ a {
 .card {
   background-color: #ECECEC;
   width: 275px;
-  height: 260px;
-  border-radius: 10px;
-  padding-bottom: 80px;
+  border-radius: 12px;
+  padding: 12px 12px 20px;
 }
 
 .card_cards {
@@ -114,7 +114,6 @@ a {
 
 .card_games {
   display: flex;
-  padding: 12px 10px ;
   gap: 10px;
   line-height: 21px;
 }
@@ -124,7 +123,9 @@ a {
 }
 
 .info_game {
+  list-style: none;
   margin: 0;
+  padding: 14px 0 0;
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
@@ -137,4 +138,12 @@ a {
 .bolt {
   font-weight: 600;
   font-size: 14px;
+}
+
+.list_card {
+  padding-bottom: 10px;
+}
+
+.list_card:last-child {
+  padding-bottom: 0;
 }
