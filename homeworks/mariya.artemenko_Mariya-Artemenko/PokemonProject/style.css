@@ -1,22 +1,110 @@
 /*styles for "about me" page*/
 
-.about_me {
-  width: 575px;
-  height: 409px;
-  color: #221F1F;
+body {
+  font-family: 'Roboto', sans-serif;
   line-height: 32px;
+  color: #221F1F;
+  margin: 0;
+}
+
+.header {
+  background-color: #333333;
+  text-decoration: none;
+}
+
+.header_nav {
+  height: 80px;
+}
+
+.logo_link {
+  margin-left: 53px;
+}
+
+.nav_links_list {
+  margin:0;
+}
+
+.nav_links_list li {
+  list-style: none;
+  display: inline;
+  margin-right: 50px;
+}
+
+.header_nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_links_list a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+.nav_links_list a:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+.about_me {
+  width: 1175px;
+  height: 409px;
+  margin: 65px auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: normal;
+  justify-content: normal;
+}
+
+.image_block {
+  width: 532px;
+  height: 275px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FDB714;
+  border-radius: 22px;
+  margin:0 68px 0 0;
+}
+
+.big_image {
+  margin: 0;
+  padding: 25px 0 0 0;
+}
+
+.small_image {
+  margin: -15px 0 0 0;
+  padding: 0;
+  background-image: url('./images/small_pokemon_back.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.text_block {
+  width: 532px;
 }
 
 .text_block h1 {
   font-size: 48px;
   font-weight: 700;
+  margin: 0 0 24px 0;
 }
 
 .text_block p {
   font-size: 22px;
   font-weight: 400;
+  margin:0 0 32px 0;
 }
 
 .text_block a {
   color: #EF4934;
 }
+
+

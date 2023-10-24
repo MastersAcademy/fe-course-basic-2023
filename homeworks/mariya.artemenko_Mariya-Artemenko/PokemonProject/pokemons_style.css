@@ -1,0 +1,177 @@
+/*styles for "pokemons_game" page*/
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 32px;
+  color: #221F1F;
+  margin: 0;
+}
+
+.header {
+  background-color: #333333;
+  text-decoration: none;
+}
+
+.header_nav {
+  height: 80px;
+}
+
+.logo_link {
+  margin-left: 53px;
+}
+
+.nav_links_list {
+  margin:0;
+}
+
+.nav_links_list li {
+  list-style: none;
+  display: inline;
+  margin-right: 50px;
+}
+
+.header_nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_links_list a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+.nav_links_list a:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+.pokemon_h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 40px 0 40px 53px;
+}
+
+.pokemon_cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin:0 28px 0 28px;
+}
+
+.pokemon_card {
+  width: 251px;
+  height: 288px;
+  padding: 12px 12px 22px 12px;
+  border-radius: 12px;
+  background-color: #ECECEC;
+  margin: 0 0 25px 25px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.pokemon_overview img {
+  width: 90px;
+  height: 90px;
+  border-radius: 8px;
+  background-color: #FDB714;
+}
+
+.pokemon_overview h2 {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  padding: 0;
+  margin: 0 0 0 12px;
+}
+
+.pokemon_overview {
+  margin: 0 0 22px 0;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.pokemon_features {
+  margin: 0 0 0 10px;
+  display:flex;
+  flex-direction: column;
+}
+
+.pokemon_features p {
+  font-size: 14px;
+  line-height: 18px;
+  padding: 0;
+  margin: 0 0 16px 0;
+}
+
+.pokemon_features p span {
+  margin: 0 6px 0 0;
+  font-weight: 600;
+}
+
+.pokemon_type,
+.pokemon_weakness {
+  display:flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin: 0 0 16px 0;
+  padding: 0;
+}
+
+.pokemon_type h3,
+.pokemon_weakness h3 {
+  font-size: 14px;
+  line-height: 18px;
+  padding: 0;
+  margin: 0 12px 0 10px;
+}
+
+.type_list {
+  display: flex;
+  padding: 0;
+  margin: 0
+}
+
+.type_list li {
+  height: 15px;
+  font-size: 14px;
+  font-weight: 400;
+  list-style: none;
+  line-height: 21px;
+  color: #FFFFFF;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  margin: 0 6px 0 0;
+}
+
+.yellow_type {
+  background-color: #FDB714;
+  padding: 7px 9px 7px 9px;
+}
+
+.red_type {
+  background-color: #EF4934;
+  padding: 7px 20px 7px 20px;
+  margin: 0;
+}
+
+.pink_type {
+  background-color: #FF87F3;
+  padding: 7px 20px 7px 20px;
+  margin: 0 6px 0 0;
+}
+
+.blue_type {
+  background-color: #3447EF;
+  padding: 7px 16px 7px 16px;
+  margin: 0;
+}
+
+
+
