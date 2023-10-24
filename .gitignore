@@ -64,3 +64,4 @@ typings/
 
 karma.conf.js
 protractor.conf.js
+.DS_Store
