@@ -1,0 +1,89 @@
+.about-me__header {
+  display: grid;
+  grid-template-columns: 10fr 1fr 1fr 1fr;
+  align-content: center;
+  background-color: #EF4934;
+  width: 1280px;
+  height: 80px;
+  font-family: Roboto;
+  text-decoration: none;
+}
+
+.about-me__logo {
+  width: 55px;
+  height: 57px;
+  margin-left: 53px;
+}
+
+.about-me__header__menu {
+  margin-top: auto;
+  margin-bottom: auto;
+  list-style: none;
+  color: #FFF;
+  Width: 51px;
+  Height: 11px;
+}
+
+.header__link {
+  text-decoration: none;
+  color: #FFF;
+}
+
+.header__link:hover {
+  color: #1C2321;
+  text-decoration: underline;
+}
+
+.about-me__header__menu:hover {
+  color: #1C2321;
+  text-decoration: underline;
+}
+
+.games__article {
+  width: 575px;
+  height: 46px;
+  font-family: Roboto;
+}
+
+.games__container {
+  width: 275px;
+  height: 260px;
+  border-radius: 22px;
+  background-color: #ECECEC;
+}
+
+.games__img {
+  width: 90px;
+  height: 90px;
+  border-radius: 8px;
+}
+
+.games__h3 {
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+
+.games__p {
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+
+.games__list {
+  padding-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  list-style: none;
+}
+
+.games__section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 260px 260px;
+  grid-gap: 10px;
+}
