@@ -1,0 +1,84 @@
+main {
+  margin-left: 53px;
+  margin-right: 52px;
+}
+
+/* About Page*/
+
+.about_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 68px;
+  align-items: start;
+  margin-top: 60px;
+}
+
+.workplace_image {
+  width: 100%;
+  height: auto;
+}
+
+.section_text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  align-items: start;
+}
+
+/* Games Page */
+
+.games_header {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.game_card {
+  background-color: #ECECEC;
+  width: 275px;
+  height: 260px;
+  border-radius: 12px;
+}
+
+.games_list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.game_overview {
+  display: flex;
+  margin: 12px 12px 0;
+}
+
+.game_overview p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.game_info {
+  display: flex;
+  flex-direction: column;
+  margin: 6.5px 0 6.5px 12px;
+}
+
+.game_details {
+  display: flex;
+  flex-direction: column;
+  margin: 22px;
+}
+
+dt {
+  display: inline;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18.2px;
+}
+
+dd {
+  display: inline;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
