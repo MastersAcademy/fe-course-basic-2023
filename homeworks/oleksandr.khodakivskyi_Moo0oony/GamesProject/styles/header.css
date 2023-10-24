@@ -6,7 +6,7 @@ header {
   height: 80px;
 }
 
-.header__flexbox {
+.header_flexbox {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -19,14 +19,14 @@ header {
   height: 57.32px;
 }
 
-.nav__items {
+.nav_items {
   display: flex;
   flex-wrap: wrap;
   align-items: normal;
   column-gap: 50px;
 }
 
-.nav__item > a {
+.nav_item > a {
   text-decoration: none;
   font-style: normal;
   font-size: 16px;
@@ -34,6 +34,6 @@ header {
   color: #FFF;
 }
 
-.nav__item > a:hover {
+.nav_item > a:hover {
   text-decoration: underline;
 }

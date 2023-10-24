@@ -5,20 +5,20 @@ main {
 
 /* About Page*/
 
-.about__container {
+.about_container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 68px;
   align-items: start;
-  margin-top: 140px;
+  margin-top: 60px;
 }
 
-.workplace-image {
+.workplace_image {
   width: 100%;
   height: auto;
 }
 
-.section__text {
+.section_text {
   display: flex;
   flex-direction: column;
   row-gap: 24px;
@@ -27,43 +27,43 @@ main {
 
 /* Games Page */
 
-.games__header {
+.games_header {
   margin-top: 40px;
   margin-bottom: 40px;
 }
 
-.game__card {
+.game_card {
   background-color: #ECECEC;
   width: 275px;
   height: 260px;
   border-radius: 12px;
 }
 
-.games__list {
+.games_list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
   gap: 25px;
 }
 
-.game__overview {
+.game_overview {
   display: flex;
   margin: 12px 12px 0;
 }
 
-.game__overview p {
+.game_overview p {
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
 }
 
-.game__info {
+.game_info {
   display: flex;
   flex-direction: column;
   margin: 6.5px 0 6.5px 12px;
 }
 
-.game__details {
+.game_details {
   display: flex;
   flex-direction: column;
   margin: 22px;
