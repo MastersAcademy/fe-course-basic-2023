@@ -46,7 +46,7 @@ body {
   list-style: none;
 }
 
-.nav_link {
+.nav__link {
   text-decoration: none;
   color: #FFF;
   font-weight: 500;
@@ -112,7 +112,7 @@ body {
   margin: 0;
 }
 
-.text__paragraph-black {
+.about__paragraph {
   color: #221F1F;
   font-weight: 400;
   font-size: 22px;
@@ -120,7 +120,7 @@ body {
   margin: 0;
 }
 
-.paragraph__link-red {
+.about__link {
   color: #EF4934;
   font-weight: 400;
   font-size: 22px;
@@ -169,7 +169,7 @@ body {
   text-align: center;
 }
 
-.paragraph__link-white {
+.footer__link {
   color: #F2F2F2;
   font-weight: 400;
   font-size: 22px;
@@ -177,7 +177,7 @@ body {
   text-decoration: none;
 }
 
-.text__paragraph-white {
+.footer__paragraph {
   color: #FFF;
   font-weight: 400;
   font-size: 22px;
