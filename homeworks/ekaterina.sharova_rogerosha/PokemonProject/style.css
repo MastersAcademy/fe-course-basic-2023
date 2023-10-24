@@ -48,6 +48,10 @@
   height: 11px;
 }
 
+.pokemons {
+  text-decoration: none;
+}
+
 .content {
   display: flex;
 }
