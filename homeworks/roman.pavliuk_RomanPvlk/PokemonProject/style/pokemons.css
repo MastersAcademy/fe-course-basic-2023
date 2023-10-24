@@ -1,0 +1,97 @@
+.bottom-content .characteristic {
+  list-style-type: none;
+}
+
+.characteristic li {
+  font-size: 14px;
+  margin-bottom: 16px;
+  color: #221F1F;
+}
+
+.study_project {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cards_section {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin: 52px 0;
+}
+
+.card {
+  min-width: 285px;
+  padding: 12px 12px 22px;
+  background-color: #ECECEC;
+  border-radius: 12px;
+}
+
+.title_section {
+  margin-top: 60px;
+}
+
+.title_section h1 {
+  font-weight: 700;
+  font-size: 48px;
+  color: #221F1F;
+  line-height: 32px;
+}
+
+.top_content h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #221F1F;
+}
+
+.top_content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.bottom-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.pokemon__image {
+  border-radius: 8px;
+}
+
+.layout {
+  color: #FFF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.background_color_yellow {
+  background-color: #FDB714;
+  padding: 4px 9px;
+  border-radius: 3px;
+}
+
+.background_color_red {
+  background-color: #EF4934;
+  padding: 4px 20px;
+  border-radius: 3px;
+}
+
+.background_color_pink {
+  background-color: #FF87F3;
+  padding: 4px 19px;
+  border-radius: 3px;
+}
+
+.background_color_blue {
+  background-color: #3447EF;
+  padding: 4px 16px;
+  border-radius: 3px;
+}
