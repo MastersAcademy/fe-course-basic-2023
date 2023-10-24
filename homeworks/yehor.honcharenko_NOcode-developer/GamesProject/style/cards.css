@@ -41,7 +41,7 @@ body {
   list-style: none;
 }
 
-.nav_link {
+.nav__link {
   text-decoration: none;
   color: #FFF;
   font-weight: 500;
@@ -212,7 +212,7 @@ body {
   text-align: center;
 }
 
-.paragraph__link-white {
+.footer__link {
   color: #F2F2F2;
   font-weight: 400;
   font-size: 22px;
@@ -220,7 +220,7 @@ body {
   text-decoration: none;
 }
 
-.text__paragraph-white {
+.footer__paragraph {
   color: #FFF;
   font-weight: 400;
   font-size: 22px;
