@@ -41,3 +41,8 @@ body {
   font-size: 16px;
   font-weight: 500;
 }
+
+
+.nav-menu a:hover {
+  color: #1085B7;
+}
