@@ -142,11 +142,11 @@ body {
   margin-bottom: 6px;
 }
 
-.card__text2 {
+.card__description {
   grid-area: text2;
 }
 
-.loginPage__body {
+.body--display-flex {
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -154,7 +154,7 @@ body {
   align-items: center;
 }
 
-.loginPage__fieldset {
+.fieldset {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -183,6 +183,7 @@ body {
   background-color: #EF4934;
   color: #FFF;
   font-weight: 700;
+  font-size: 20px;
   padding: 25px;
   border-radius: 5px;
   border: none;
