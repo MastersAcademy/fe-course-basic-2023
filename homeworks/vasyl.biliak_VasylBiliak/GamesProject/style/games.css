@@ -47,107 +47,79 @@ body {
   width: 100%;
   border-bottom: 2px solid #FFF;
   opacity: 0;
-  transition: opacity .3s;
+  /*transition: opacity 0.3s;*/
 }
 
 .header__link:hover::after {
   opacity: 1;
 }
 
-main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .contain {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
   padding: 0 53px;
-  display: grid;
 }
 
-.content {
+.contain__heading {
   width: 100%;
   display: flex;
   flex-direction: column;
-}
-
-.content .heading {
   font-size: 48px;
   font-weight: 700;
   line-height: 50px;
 }
 
-.game__cards {
+.card-games {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 25px;
   justify-items: center;
 }
 
-.game__card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 275px;
-  width: 260px;
-  padding: 12px 12px 22px;
+.card {
+  padding: 12px;
   border-radius: 12px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 260px;
+  height: 275px;
+  grid-gap: 12px;
   background: #ECECEC;
 }
 
-.card__content {
-  display: flex;
-  flex-direction: row;
-  gap: 12px;
-}
-
-.card__content__img img {
+.game-card__img {
   height: 90px;
   width: 90px;
   border-radius: 9px;
   object-fit: cover;
 }
 
-.card__content--info {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  height: 52px;
-  width: 149px;
-}
-
-.card__content--info h3 {
+.description__title {
   font-size: 18px;
-  margin: 0;
-}
-
-.card__content--info p {
-  font-size: 14px;
-  margin: 0;
-}
-
-.card__content--info {
-  font-size: 14px;
-  line-height: 21px;
-  text-align: start;
-  gap: 16px;
-  margin: 0;
-  padding: 0;
-}
-
-.card__content--info li strong {
   font-weight: 700;
 }
 
-.card__content--info li {
+.description__text {
+  font-size: 14px;
   font-weight: 400;
-  list-style-type: none;
-  margin-top: 14px;
-  margin-bottom: 14px;
+  line-height: 21px;
+  margin-bottom: 0;
 }
 
-.card__content--info li:last-child {
-  margin-bottom: 0;
+.card__actors {
+  grid-column: span 2;
+  list-style: none;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+}
+
+.card__actor {
+  line-height: 26px;
+}
+
+.bold-text {
+  font-size: 14px;
+  font-weight: 600;
+  word-wrap: break-word
 }
