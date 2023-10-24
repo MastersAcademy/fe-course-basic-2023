@@ -1,3 +1,8 @@
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
 .upper-header {
   background-color: #333;
   display: grid;
@@ -6,7 +11,7 @@
   padding: 10px;
   color: #333;
   gap: 50px;
-  height: 80px;
+  width: 100%;
   justify-content: space-between;
 }
 
@@ -34,7 +39,6 @@
 }
 
 .navigation-item {
-  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -91,7 +95,6 @@
 
 .headline {
   color: #221F1F;
-  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 48px;
@@ -104,7 +107,6 @@
 
 p {
   color: #221F1F;
-  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
@@ -116,7 +118,6 @@ p {
 
 .link {
   color: #EF4934;
-  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
