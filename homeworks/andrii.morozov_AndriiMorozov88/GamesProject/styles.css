@@ -146,7 +146,7 @@ body {
   grid-area: text2;
 }
 
-.body--display-flex {
+.main--display-flex {
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -158,12 +158,16 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 400px;
+  width: 575px;
   border: none;
 }
 
-.fieldset__element {
-  margin-top: 20px;
+.fieldset__element--40px {
+  margin-top: 40px;
+}
+
+.fieldset__element--22px {
+  margin-top: 22px;
 }
 
 .fieldset__heading {
@@ -171,8 +175,10 @@ body {
 }
 
 .fieldset__input {
-  height: 40px;
+  height: 70px;
   border: 2px solid #D1D1D1;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .fieldset__checkbox {
@@ -182,9 +188,9 @@ body {
 .fieldset__button {
   background-color: #EF4934;
   color: #FFF;
-  font-weight: 700;
-  font-size: 20px;
-  padding: 25px;
+  font-weight: 600;
+  font-size: 22px;
+  padding: 35px 0;
   border-radius: 5px;
   border: none;
 }

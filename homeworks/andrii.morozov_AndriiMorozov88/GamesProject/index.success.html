@@ -5,13 +5,39 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Success</title>
         <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Roboto:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Roboto:wght@400&display=swap" rel="stylesheet">
     </head>
-    <body class="body--display-flex">
-        <form action="index_about.html" target="_self" method="post">
-            <fieldset class="fieldset">
-                <h1 class="fieldset__heading">Logged</h1>
-                <button type="submit" class="fieldset__element fieldset__button">Return to homepage</button>
-            </fieldset>
-        </form>
+    <body>
+        <header class="header">
+            <div class="header__logo">
+                <svg class="logo">
+                    <use xlink:href="sprite.svg#logo"></use>
+                </svg>
+            </div>
+            <div class="header__navigation">
+                <ul class="navigation">
+                    <li class="navigation__line">
+                        <a class="navigation__link" href="index_cards.html">Games</a>
+                    </li>
+                    <li class="navigation__line">
+                        <a class="navigation__link" href="index_about.html">About</a>
+                    </li>
+                    <li class="navigation__line navigation__line--underline">
+                        LogIn
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main class="main--display-flex">
+            <form action="index_about.html" target="_self" method="post">
+                <fieldset class="fieldset">
+                    <h1 class="fieldset__heading">Logged</h1>
+                    <button type="submit" class="fieldset__element--40px fieldset__button">Return to homepage</button>
+                </fieldset>
+            </form>
+        </main>
     </body>
 </html>
