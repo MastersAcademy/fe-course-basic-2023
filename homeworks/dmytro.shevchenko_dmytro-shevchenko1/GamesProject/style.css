@@ -1,19 +1,52 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
-main {
-  width: 1175px;
+body {
+  font-family: Roboto, sans-serif;
+  margin: 0;
 }
+
+header {
+  max-width: 100%;
+  background-color: #EF4934;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 53px;
+}
+
+.nav-items {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+}
+
+.nav-items a {
+  font-size: 16px;
+  font-weight: 500;
+  color: #FFF;
+  text-decoration: none;
+}
+
+/*.nav-items a:visited {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 0.01em;
+}*/
 
 .intro {
   color: #221F1F;
-  width: 575px;
   font-size: 22px;
   font-weight: 400;
-  font-family: Roboto, sans-serif;
   line-height: 32px;
+  display: flex;
+  justify-content: space-between;
+  gap: 70px;
+  padding-left: 53px;
+  padding-right: 53px;
 }
 
-h1 {
+.about-h1 {
   color: #221F1F;
   font-size: 48px;
   font-weight: 700;
@@ -21,6 +54,61 @@ h1 {
   margin-top: 0;
 }
 
+.cards-h1 {
+  color: #221F1F;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 32px;
+  margin-left: 53px;
+  margin-bottom: 50px;
+}
+
 .link {
   color: #EF4934;
+}
+
+.cards {
+  margin: 50px 53px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.game-card {
+  width: 275px;
+  background-color: #ECECEC;
+  padding: 12px 12px 22px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.game-title {
+  margin-left: 12px;
+}
+
+.game-name {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.text-game {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  margin-top: 0;
+}
+
+.upper-card {
+  display: flex;
+  align-items: flex-start;
+}
+
+.lower-card {
+  font-size: 14px;
+  line-height: 18px;
+  margin-left: 10px;
 }
