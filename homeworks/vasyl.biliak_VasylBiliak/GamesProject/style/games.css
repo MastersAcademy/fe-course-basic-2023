@@ -54,9 +54,7 @@ body {
   opacity: 1;
 }
 
-.contain {
-  display: flex;
-  flex-direction: column;
+.wrapper {
   padding: 0 53px;
 }
 
