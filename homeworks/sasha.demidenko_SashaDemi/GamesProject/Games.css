@@ -1,0 +1,106 @@
+.main {
+  /*display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 100%;*/
+}
+
+.games_body {
+  margin: 0;
+}
+
+.games_header--main {
+  background: #EF4934;
+  height: 80px;
+  display: grid;
+  grid-template: 1fr/ 996px 1fr;
+}
+
+.games_header--logo {
+  width: 55px;
+  height: 57px;
+  margin: 11px 1172px 11px 53px;
+}
+
+.games_header--nav {
+  display: grid;
+  justify-content: end;
+}
+
+.games_header--ul {
+  display: inline-grid;
+  justify-items: end;
+  grid-template: 1fr/ 78px 78px;
+  list-style-type: none;
+  font-family: Roboto, sans-serif;
+  margin: 34px 52px 34px 50px;
+}
+
+.games_li--underline {
+  border-bottom: 2px solid #FFF;
+  padding-bottom: 2px;
+}
+
+.games_header--li {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.games_h1 {
+  font-family: Roboto, sans-serif;
+  font-size: 48px;
+  line-height: 32px;
+  margin-left: 150px;
+}
+
+.cards_wrapper {
+  display: grid;
+  max-width: 100%;
+  grid-template: repeat(2, 260px)/repeat(4, minmax(200px, 270px));
+  gap: 68px;
+  justify-content: center;
+}
+
+.game_container {
+  display: grid;
+  width: 275px;
+  height: 260px;
+  background-color: #ECECEC;
+  border-radius: 12px;
+  margin: 0 25px 25px 0;
+}
+
+.game_title-name {
+  display: grid;
+  grid-template: repeat(2,1fr)/repeat(2,120px);
+  grid-template-rows: 35px 20px;
+}
+
+.title-img {
+  display: grid;
+  align-content: space-between;
+  justify-content: start;
+  grid-row: span 2;
+  margin: 12px 0 0 12px;
+}
+
+.title-name {
+  margin: 12px 12px 12px 0;
+  width: 134px;
+  font-weight: 700;
+}
+
+.title-description {
+  width: 149px;
+}
+
+.game_list {
+  display: grid;
+  justify-content: center;
+}
+
+.game_subtitle--style {
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
