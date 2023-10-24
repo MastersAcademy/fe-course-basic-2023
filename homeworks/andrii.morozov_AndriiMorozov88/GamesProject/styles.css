@@ -101,6 +101,34 @@ body {
   color: #EF4934;
 }
 
+.filter {
+  display: flex;
+  background-color: #221F1F;
+  height: 60px;
+  padding-left: 53px;
+  align-items: center;
+  justify-content: space-between;
+  color: #FFF;
+}
+
+.filter__select {
+  width: 114px;
+  height: 36px;
+  font-size: 14px;
+}
+
+.margin-right--85px {
+  margin-right: 85px;
+}
+
+.margin-right--35px {
+  margin-right: 35px;
+}
+
+.margin-right--65px {
+  margin-right: 65px;
+}
+
 .card-container {
   display: grid;
   grid-template: repeat(2, 1fr) / repeat(4, 1fr);
@@ -193,4 +221,9 @@ body {
   padding: 35px 0;
   border-radius: 5px;
   border: none;
+}
+
+.fieldset__button:hover {
+  cursor: pointer;
+  background-color: #080;
 }
