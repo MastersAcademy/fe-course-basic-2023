@@ -52,11 +52,6 @@ body {
   color: #FFF;
   line-height: 19px;
   margin-right: 50px;
-  display: flex;
-  justify-content: flex-end;
-  gap: 50px;
-  width: 77px;
-  height: 11px;
 }
 
 .about {
