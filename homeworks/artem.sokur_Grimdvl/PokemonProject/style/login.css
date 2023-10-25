@@ -80,6 +80,7 @@
 }
 
 .login__form--submit {
+  position: relative;
   font-size: 22px;
   font-weight: 600;
   line-height: 26px;
@@ -90,4 +91,28 @@
   border-radius: 6px;
   border: none;
   cursor: pointer;
+}
+
+.login__form--submit:hover {
+  background-color: #FF6C58;
+  transition: .5s;
+}
+
+.login__form--submit::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 104%;
+  height: 130%;
+  background: #FF6C58;
+  border-radius: 20px;
+  filter: blur(5px);
+  opacity: 0;
+  transition: .25s;
+  z-index: -1;
+}
+
+.login__form--submit:hover::before {
+  opacity: .25;
 }

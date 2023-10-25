@@ -29,17 +29,17 @@
         <main>
             <section class="login">
                 <h1 class="login__title">Login page</h1>
-                <form class="login__form" action="#">
+                <form class="login__form" action="success.html">
                     <div class="login__form-input">
                         <label for="email">Email</label>
-                        <input placeholder="Enter your email address" name="email" type="email">
+                        <input placeholder="Enter your email address" name="email" type="email" required>
                     </div>
                     <div class="login__form-input">
                         <label for="password">Password</label>
-                        <input placeholder="Enter your password" name="password" type="password">
+                        <input placeholder="Enter your password" name="password" type="password" required minlength="4">
                     </div>
                     <div class="login__form-checkbox">
-                        <input name="checkbox" type="checkbox" id="checkbox">
+                        <input name="checkbox" type="checkbox" id="checkbox" required>
                         <label for="checkbox">I'm not a robot</label>
                     </div>
                     <button type="submit" class="login__form--submit">Login</button>
