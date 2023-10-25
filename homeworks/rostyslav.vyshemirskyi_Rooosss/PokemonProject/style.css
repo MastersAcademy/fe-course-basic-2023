@@ -307,9 +307,9 @@ body {
   transform: translate(2px, 1px);
 }
 
-/* Login sucsses */
+/* Login success */
 
-.login__sucsses-title {
+.login__success-title {
   margin-bottom: 22px;
   font-size: 48px;
   font-style: normal;
@@ -318,7 +318,7 @@ body {
   text-align: center;
 }
 
-.login__sucsses-subtitle {
+.login__success-subtitle {
   margin-bottom: 49px;
   font-size: 22px;
   font-style: normal;
