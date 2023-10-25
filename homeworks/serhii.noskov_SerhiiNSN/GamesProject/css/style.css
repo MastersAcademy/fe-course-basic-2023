@@ -380,7 +380,7 @@ a {
 
 .email__input,
 .password__input {
-  padding: 30px 380px 30px 20px;
+  padding: 30px 20px;
   border-radius: 6px;
   border: 1px solid  #A9A9A9;
   background: #FFF;
@@ -426,7 +426,8 @@ a {
 }
 
 .check {
-  display: none;
+  opacity: 0;
+  margin-right: -16px;
 }
 
 .check:checked ~ label::before {
