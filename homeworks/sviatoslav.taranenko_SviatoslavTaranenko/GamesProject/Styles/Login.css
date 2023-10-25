@@ -6,6 +6,9 @@ body {
 .header {
     border: none;
     width: 100%;
+    min-height: 71px;
+    margin: 0;
+    padding: 0;
     background-color: #EF4934;
 }
 
@@ -22,7 +25,7 @@ body {
     height: 55px;
     justify-content: center;
     margin-left: 61px;
-} 
+}
 
 .header__items {
     display: grid;

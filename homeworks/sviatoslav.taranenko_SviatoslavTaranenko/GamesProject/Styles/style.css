@@ -6,6 +6,7 @@ body {
 .header {
     border: none;
     width: 100%;
+    min-height: 71px;
     margin: 0;
     padding: 0;
     /* min-height: 80px; */
@@ -25,7 +26,7 @@ body {
     height: 55px;
     justify-content: center;
     margin-left: 61px;
-} 
+}
 
 .header__items {
     display: grid;
@@ -96,7 +97,7 @@ body {
     line-height: 32px;
     color: #221F1F;
   }
-  
+
   .about__all .about__text .about__text_inf {
     color: #221F1F;
     font-family: "Roboto", sans-serif;
@@ -104,7 +105,7 @@ body {
     font-size: 22px;
     line-height: 32px;
   }
-  
+
   .about__all .about__text .about__text_link {
     color: #EF4934;
   }
