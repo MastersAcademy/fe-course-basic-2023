@@ -20,9 +20,9 @@ header {
   margin: 25px auto 25px 53px;
 }
 
-.logo > img {
+.logo__img {
   width: 190px;
-  height: 29.945px;
+  height: 30px;
 }
 
 .navigation {
@@ -53,7 +53,7 @@ header {
 
 /* основний вміст */
 
-h1 {
+.title__txt {
   font-family: Roboto, sans-serif;
   font-size: 48px;
   font-style: normal;
@@ -76,7 +76,7 @@ h1 {
   border-radius: 12px;
 }
 
-.card__information-title-img {
+.card__information-img {
   background-color: #FDB714;
   width: 90px;
   height: 90px;
@@ -84,7 +84,7 @@ h1 {
   margin: 0;
 }
 
-.card__information-title-img > img {
+.card__img {
   width: 90px;
   height: 90px;
   margin: 0;
@@ -96,7 +96,7 @@ h1 {
   gap: 12px;
 }
 
-.card__information-title-head {
+.card__information-head {
   font-family: Roboto, sans-serif;
   font-size: 18px;
   font-style: normal;
@@ -134,30 +134,31 @@ h1 {
   line-height: 150%;
 }
 
+.type, .weaknesses {
+  color: #FFF;
+  border-radius: 3px;
+}
+
+.type {
+  padding: 7px 9px;
+}
+
+.weaknesses {
+  padding: 9px 19px;
+}
+
 .value-yellow {
   background-color: #FDB714;
-  color: #FFF;
-  padding: 7px 9px;
-  border-radius: 3px;
 }
 
 .value-red {
   background-color: #EF4934;
-  color: #FFF;
-  padding: 7px 9px;
-  border-radius: 3px;
 }
 
 .value-pink {
   background-color: #FF87F3;
-  color: #FFF;
-  padding: 9px 16px;
-  border-radius: 3px;
 }
 
 .value-blue {
   background-color: #3447EF;
-  color: #FFF;
-  padding: 9px 19px;
-  border-radius: 3px;
 }

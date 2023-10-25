@@ -20,9 +20,9 @@ header {
   margin: 25px auto 25px 53px;
 }
 
-.logo > img {
+.logo__img {
   width: 190px;
-  height: 29.945px;
+  height: 30px;
 }
 
 .navigation {
@@ -60,12 +60,12 @@ article {
   margin: 60px 53px auto 52px;
 }
 
-.section__img > img {
+.section__img-image {
   width: 532px;
   height: 297px;
 }
 
-h1 {
+.title__txt {
   font-size: 48px ;
   font-family: Roboto, sans-serif ;
   font-weight: 700 ;
