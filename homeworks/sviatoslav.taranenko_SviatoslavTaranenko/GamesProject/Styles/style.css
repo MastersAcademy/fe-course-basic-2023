@@ -1,91 +1,110 @@
 body {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .header {
-  border: none;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: #EF4934;
+    border: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /* min-height: 80px; */
+    background-color: #EF4934;
 }
 
 .header__all {
-  display: grid;
-  grid-template-columns: 6fr 1fr;/* grid-template-columns: 3fr 1fr; змітити коли потрібно буде додати кнопку логін  */
+    display: grid;
+    /* grid-template-columns: 3fr 1fr; змітити коли потрібно буде додати кнопку логін  */
+    grid-template-columns: 6fr 1fr;
 }
 
 .header__img {
-  margin-top: 8px;
-  margin-bottom: 8px;
-  min-width: 55px;
-  min-height: 57.32px;
-  justify-content: center;
-  margin-left: 61px;
-}
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 55px;
+    height: 55px;
+    justify-content: center;
+    margin-left: 61px;
+} 
 
 .header__items {
-  display: grid;grid-template-columns: 1fr 1fr;align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
 }
 
 .header__items a {
-  text-decoration: none;
-  color: #FFF;
+    text-decoration: none;
+    color: #FFFFFF;
 }
 
 .header__items_Games {
-  color: #FFF;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 18.75px;
-  margin-right: 40px;
+    color: #FFFFFF;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18.75px;
+    margin-right: 40px;
 }
 
 .header__items_Games:active {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .header__items_About {
-  color: #FFF;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 18.75px;
-  margin-right: 40px;
+    color: #FFFFFF;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18.75px;
+    margin-right: 40px;
 }
 
 .header__items_About:active {
-  text-decoration: underline;
+    text-decoration: underline;
+}
+
+.header__items_Login {
+    color: #FFFFFF;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18.75px;
+    margin-right: 40px;
+}
+
+.header__items_Login:active {
+    text-decoration: underline;
 }
 
 
 .about .about__all {
-  margin: 60px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: center;
+    margin: 60px;
+    /* display: flex;
+    justify-content: space-between; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
 }
 
 .about__all .about__text .about__text_title {
-  margin-top: 0;
-  padding-top: 0;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 32px;
-  color: #221F1F;
-}
-
-.about__all .about__text .about__text_inf {
-  color: #221F1F;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 32px;
-}
-
-.about__all .about__text .about__text_link {
-  color: #EF4934;
-}
+    margin-top: 0;
+    padding-top: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 32px;
+    color: #221F1F;
+  }
+  
+  .about__all .about__text .about__text_inf {
+    color: #221F1F;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 32px;
+  }
+  
+  .about__all .about__text .about__text_link {
+    color: #EF4934;
+  }

@@ -1,144 +1,197 @@
 body {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .header {
-  border: none;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: #EF4934;
+    border: none;
+    width: 100%;
+    background-color: #EF4934;
 }
 
 .header__all {
-  display: grid;
-  grid-template-columns: 6fr 1fr; /* grid-template-columns: 3fr 1fr; змітити коли потрібно буде додати кнопку логін  */
+    display: grid;
+    /* grid-template-columns: 3fr 1fr; змітити коли потрібно буде додати кнопку логін  */
+    grid-template-columns: 6fr 1fr;
 }
 
 .header__img {
-  margin-top: 8px;
-  margin-bottom: 8px;
-  min-width: 55px;
-  min-height: 57.32px;
-  justify-content: center;
-  margin-left: 61px;
-}
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 55px;
+    height: 55px;
+    justify-content: center;
+    margin-left: 61px;
+} 
 
 .header__items {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
 }
 
+
 .header__items a {
-  text-decoration: none;
-  color: #FFF;
+    text-decoration: none;
+    color: #FFFFFF;
 }
 
 .header__items_Games {
-  color: #FFF;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 18.75px;
-  margin-right: 40px;
+    color: #FFFFFF;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18.75px;
+    margin-right: 40px;
 }
 
 .header__items_Games:active {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .header__items_About {
-  color: #FFF;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 18.75px;
-  margin-right: 40px;
+    color: #FFFFFF;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18.75px;
+    margin-right: 40px;
 }
 
 .header__items_About:active {
-  text-decoration: underline;
+    text-decoration: underline;
+}
+
+.header__items_Login {
+    color: #FFFFFF;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18.75px;
+    margin-right: 40px;
+}
+
+.header__items_Login:active {
+    text-decoration: underline;
+}
+
+.Filter {
+    width: 100%;
+    background-color: #221F1F;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.Filter__forms {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1.5fr 2fr;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.Filter__forms_select {
+    margin-left: 100px;
+}
+
+.Filter__forms_checkbox {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-left: 120px;
+}
+
+.Filter__forms_radio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 100px;
+}
+
+.Filter__forms_search {
+    margin-left: 150px;
 }
 
 .Games .Games__title {
-  margin: 60px 0 0 85px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 32px;
+    margin: 60px 0 0 85px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 32px;
 }
 
 .Games .Games__cards {
-  margin-top: 60px;
-  display: grid;
-  grid-template-columns: 275px 275px 275px 275px;
-  column-gap: 25px;
-  grid-template-rows: 260px;
-  row-gap: 60px;
-  justify-content: center;
-  min-height: auto;
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 275px 275px 275px 275px;
+    column-gap: 25px;
+    grid-template-rows: 260px;
+    row-gap: 60px;
+    justify-content: center;
+    min-height: auto;
 }
 
 .Games .Games__cards .Games__cards_desc {
-  margin-bottom: 15px;
-  border-radius: 12px;
-  padding: 12px 12px 22px;
-  background-color: #ECECEC;
-  height: 260px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    padding: 12px 12px 22px 12px;
+    background-color: #ECECEC;
+    height: 260px;
 }
 
 .Games .Games__cards .Games__cards_desc .Games__cards_top {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  column-gap: 12px;
-  grid-template-rows: 90px;
-  row-gap: 16px;
-  justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 12px;
+    grid-template-rows: 90px;
+    row-gap: 16px;
+    justify-content: center;
 }
 
 .Games .Games__cards .Games__cards_desc .Games__cards_top .Games__cards_top_img {
-  width: 90px;
-  height: 90px;
-  justify-content: center;
+    width: 90px;
+    height: 90px;
+    justify-content: center;
 }
 
 .Games .Games__cards .Games__cards_desc .Games__cards_top .Games__cards_top_text {
-  padding-top: 0;
-  margin-top: 0;
+    padding-top: 0;
+    margin-top: 0;
 }
 
 .Games .Games__cards .Games__cards_desc .Games__cards_top .Games__cards_top_text_title {
-  padding-top: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-bottom: 0;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 21.09px;
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21.09px;
 }
 
 .Games .Games__cards .Games__cards_desc .Games__cards_top .Games__cards_top_text_p {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
-  margin-top: 0;
-  padding-top: 10px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    margin-top: 0;
+    padding-top: 10px;
 }
 
 .Games .Games__cards .Games__cards_desc .Games__cards_btm {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
 }
 
 .Games .Games__cards .Games__cards_desc .Games__cards_btm .Games__cards_btm_bold {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 18.2px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18.2px;
 }
