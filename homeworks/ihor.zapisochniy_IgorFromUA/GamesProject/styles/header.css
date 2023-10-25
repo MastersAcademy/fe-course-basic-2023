@@ -1,0 +1,33 @@
+.header {
+  width: 100%;
+  height: 80px;
+  display: grid;
+  grid-template-columns: min-content min-content;
+  justify-content: space-between;
+  align-content: center;
+  background: #EF4934;
+}
+
+.header__logo {
+  margin-left: 50px;
+}
+
+.navigation {
+  margin-right: 50px;
+}
+
+.navigation__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 50px;
+  list-style: none;
+}
+
+.navigation__link {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.navigation__link_active {
+  border-bottom: 2px solid #FFF;
+}
