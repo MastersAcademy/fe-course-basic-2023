@@ -386,6 +386,7 @@ a {
   background: #FFF;
   margin-bottom: 40px;
   outline: none;
+  font-size: 14px;
 }
 
 .email__input::placeholder {
