@@ -66,6 +66,7 @@
 }
 
 .link {
+  font-family: Roboto;
   font-size: 16px;
   text-decoration: none;
 }
@@ -262,12 +263,12 @@ main {
 .icon-inst img {
   background-color: #FFF;
   height: 20px;
-  width: 20.000892639160156px;
-  width: 20.000892639160156px;
+  width: 20px;
+  width: 20px;
   height: 20px;
   left: 161px;
   top: 11px;
-  width: 20.000892639160156px;
+  width: 20px;
   height: 20px;
   position: absolute;
 }
