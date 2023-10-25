@@ -3,7 +3,6 @@
   grid-template-columns: 10fr 1fr 1fr 1fr;
   align-content: center;
   background-color: #EF4934;
-  width: 1280px;
   height: 80px;
   font-family: Roboto;
   text-decoration: none;
@@ -11,7 +10,7 @@
 
 .about-me__logo {
   width: 55px;
-  height: 57px;
+  height: 58px;
   margin-left: 53px;
 }
 
@@ -43,6 +42,11 @@
   width: 575px;
   height: 46px;
   font-family: Roboto;
+  padding-left: 53px;
+}
+
+.games__body {
+  margin: 0;
 }
 
 .games__container {
@@ -52,25 +56,37 @@
   background-color: #ECECEC;
 }
 
+.games__container-header {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  grid-auto-columns: minmax(200px, auto);
+}
+
 .games__img {
+  grid-row-start: 1;
+  grid-row-end: 3;
   width: 90px;
   height: 90px;
   border-radius: 8px;
+  margin-left: 10px;
+  margin-top: 10px;
 }
 
 .games__h3 {
   font-weight: 700;
   font-size: 18px;
-  margin-top: 5px;
+  margin-top: 10px;
   margin-bottom: 5px;
   margin-left: 10px;
 }
 
 .games__p {
+  grid-column-start: 2;
+  grid-column-end: 3;
   font-weight: 400;
   font-size: 14px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 0;
+  margin-bottom: 0;
   margin-left: 10px;
 }
 
@@ -85,5 +101,15 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 260px 260px;
-  grid-gap: 10px;
+  grid-gap: 24px;
+}
+
+.games__h1 {
+  font-weight: 700;
+  font-size: 48px;
+}
+
+.games__li-list {
+  margin-top: 10px;
+  margin-bottom: 3px;
 }
