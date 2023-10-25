@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upper-header {
+  background-color: #333;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr auto;
+  padding: 10px;
+  color: #333;
+  gap: 50px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.ma-logo {
+  display: flex;
+  align-items: center;
+}
+
+.MAlogo {
+  width: 190px;
+  height: 30px;
+  margin-left: 53px;
+}
+
+.navigation {
+  text-align: right;
+  display: flex;
+  align-items: center;
+}
+
+.navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation-item {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #FFF;
+  line-height: 19px;
+  margin-right: 50px;
+}
+
+.about {
+  text-decoration: none;
+}
+
+.content {
+  max-width: 1280px;
+  padding-inline: 52px;
+}
+
+.headline {
+  color: #221F1F;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 32px;
+  margin-block: 40px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: auto;
+  gap: 22px;
+  justify-content: flex-start;
+}
+
+.card {
+  background-color: #ECECEC;
+  width: 100%;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  gap: 22px;
+}
+
+.card-header {
+  display: flex;
+  gap: 12px;
+  align-items: normal;
+}
+
+.card-image {
+  width: 90px;
+  height: 90px;
+  border-radius: 12px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.card-content {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+
+.card-text {
+  margin: 0;
+}
+
+.card-text-bold {
+  font-weight: 600;
+}
+
+.card-property {
+  display: flex;
+  gap: 12px;
+}
+
+.card-property-name {
+  margin-top: 6px;
+}
+
+.card-property-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.card-property-tag {
+  padding: 7px 9px;
+  background: #000;
+  color: #FFF;
+  border-radius: 3px;
+}
+
+.group-yellow {
+  background-color: #FDB714;
+}
+
+.group-red {
+  background-color: #EF4934;
+}
+
+.group-blue {
+  background-color: #3447EF;
+}
+
+.group-pink {
+  background-color: #FF87F3;
+}
