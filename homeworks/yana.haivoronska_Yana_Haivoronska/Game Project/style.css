@@ -17,7 +17,9 @@
 .main {
   width: 575px;
   height: 409px;
-  font-family: Roboto,sans-serif;
+  font-family: Roboto, sans-serif;
+  color: #221F1F;
+  font-size: 22px;
 }
 
 h1 {
@@ -29,6 +31,7 @@ h1 {
 
 .paragraph {
   color: #221F1F;
+  font-family: Roboto, sans-serif;
   font-size: 22px;
   line-height: 32px;
   font-weight: 400;
