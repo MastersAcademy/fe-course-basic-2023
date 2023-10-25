@@ -125,11 +125,11 @@ body {
   border-bottom: 5px solid #EF4934;
 }
 
-.login__checkbox {
+.login__checkbox-input {
   display: none;
 }
 
-.login__label-checkbox {
+.login__checkbox-custom {
   display: flex;
   align-items: center;
   margin-bottom: 40px;
@@ -138,7 +138,7 @@ body {
   line-height: 21px;
 }
 
-.login__label-checkbox::before {
+.login__checkbox-custom::before {
   content: "";
   margin-right: 12px;
   padding: 3px;
@@ -150,8 +150,8 @@ body {
   background-color: #FFF;
 }
 
-.login__checkbox:checked+.login__label-checkbox::before {
-  background-image: url("../images/check.svg");
+.login__checkbox-input:checked+.login__checkbox-custom::before {
+  background-image: url("../images/icon-check-login.svg");
   background-repeat: no-repeat;
   background-size: contain;
 }

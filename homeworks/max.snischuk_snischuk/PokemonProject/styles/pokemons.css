@@ -8,6 +8,8 @@ body {
   font-family: Roboto, sans-serif;
 }
 
+/* Header */
+
 .header {
   background-color: #333;
   padding: 25px 0;
@@ -78,6 +80,137 @@ body {
 .header__nav-link--active:hover::after {
   background-color: #EF4934;
 }
+
+/* Filter form */
+
+.filters {
+  background-color: #221F1F;
+  padding: 12px 0;
+}
+
+.filters__container {
+  max-width: 1280px;
+  padding: 0 50px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  row-gap: 86px;
+}
+
+
+.filters__select {
+  appearance: none;
+  padding: 0 42px 0 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #333;
+  background-image: url("../images/icon-select-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 90% 50%;
+  font-family: Roboto;
+  color: #FFF;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.filters__group {
+  display: flex;
+  align-items: center;
+  column-gap: 64px;
+}
+
+.filters__input {
+  display: none;
+}
+
+.filters__custom {
+  display: flex;
+  align-items: center;
+  color: #FFF;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.filters__custom::before {
+  content: "";
+  margin-right: 12px;
+  padding: 3px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #FFF;
+  background-color: #221F1F;
+}
+
+.filters__custom--radio::before {
+  border-radius: 50%;
+}
+
+.filters__custom--checkbox::before {
+  border-radius: 6px;
+}
+
+.filters__input:checked+.filters__custom--radio::before {
+  background-image: url("../images/icon-radio-filter.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.filters__input:checked+.filters__custom--checkbox::before {
+  background-image: url("../images/icon-check-filter.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.filters__search {
+  display: flex;
+}
+
+.filters__search-input {
+  padding-left: 46px;
+  background-color: #FFF;
+  background-image: url("../images/icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: 10px;
+  border: none;
+  border-radius: 6px 0 0 6px;
+  font-family: Roboto;
+  color: #221F1F;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.filters__search-input::placeholder {
+  background-color: #FFF;
+  font-family: Roboto;
+  color: #A9A9A9;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.filters__btn-submit {
+  cursor: pointer;
+  padding: 13px 20px;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  background: #EF4934;
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  transition: filter .3s ease-in-out;
+}
+
+.filters__btn:hover {
+  filter: brightness(.9);
+}
+
+/* Cards */
 
 .pokemons {
   padding: 40px 0;
