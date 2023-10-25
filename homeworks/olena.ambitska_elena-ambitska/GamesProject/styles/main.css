@@ -75,8 +75,3 @@ body {
     grid-column: span 6;
   }
 }
-
-.success__picture {
-  width: 100%;
-  margin: 0 auto;
-}
