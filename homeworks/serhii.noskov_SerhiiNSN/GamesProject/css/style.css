@@ -240,6 +240,19 @@ a {
   background-size: 50% 50%;
 }
 
+.check ~ label::before {
+  content: "\2713";
+  text-align: center;
+  color: #FFF;
+  line-height: 1;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #EF4934;
+  border-radius: 6px;
+  margin-right: 12px;
+  display: inline-block;
+}
+
 .custom-radio:checked + label::before {
   border-color: #FFF;
   background-color: #000;
@@ -413,19 +426,6 @@ a {
 
 .check {
   display: none;
-}
-
-.custom-radio .check ~ label::before {
-  content: "\2713";
-  text-align: center;
-  color: #FFF;
-  line-height: 1;
-  width: 16px;
-  height: 16px;
-  border: 2px solid #EF4934;
-  border-radius: 6px;
-  margin-right: 12px;
-  display: inline-block;
 }
 
 .check:checked ~ label::before {
