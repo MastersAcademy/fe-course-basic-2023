@@ -232,7 +232,7 @@ body {
 /*CHECKBOX*/
 
 .login__form-checkbox-input,
-.form__search-radio-radio
+.form__search-radio-radio,
 .form__search-checkbox-checkbox {
   position: absolute;
   z-index: -1;
