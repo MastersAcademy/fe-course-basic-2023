@@ -1,0 +1,72 @@
+.login__title {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.main.login {
+  display: flex;
+  justify-content: center;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  flex: 1;
+  max-width: 575px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  row-gap: 22px;
+}
+
+.label__content {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.form-group .input__field, .button__login {
+  height: 70px;
+  padding: 0 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.form-group .input__field {
+  border: 1px solid var(--gray);
+}
+
+.form-group .input__field:focus {
+  color: var(--black);
+  border-bottom: 5px solid var(--red);
+  outline: none;
+}
+
+.button__login {
+  background-color: var(--red);
+  color: var(--white);
+  border: none;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.login .checkbox__label {
+  color: var(--black);
+}
+
+.login .checkbox__input + .checkbox__label::before {
+  border-color: var(--red);
+}
+
+.login .checkbox__input:checked + .checkbox__label::before {
+  content: "\2713";
+  color: var(--red);
+  text-align: center;
+}

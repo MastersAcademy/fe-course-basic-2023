@@ -23,11 +23,52 @@
                             <a href="index.html">About</a>
                         </li>
                         <li class="navigation__item">
-                            <a href="">Login</a>
+                            <a href="login.html">Login</a>
                         </li>
                     </ul>
                 </nav>
             </header>
+            <section class="filters">
+                <div class="filters__container">
+                    <div class="dropdown">
+                        <label>
+                            <select name="genre" id="genre" class="select__options">
+                                <option value="horror">Horror</option>
+                                <option value="racing">Racing</option>
+                                <option value="sport">Sport</option>
+                            </select>
+                        </label>
+                    </div>
+                    <form class="radio__form">
+                        <div class="radio">
+                            <input id="platform" name="radio" type="radio" checked class="radio__input">
+                            <label for="platform" class="radio__label">Platform</label>
+                        </div>
+                        <div class="radio">
+                            <input id="online" name="radio" type="radio" class="radio__input">
+                            <label for="online" class="radio__label">Online games</label>
+                        </div>
+                    </form>
+
+                    <form class="checkbox__form">
+                        <div class="checkbox">
+                            <input id="new" name="checkbox" type="checkbox" value="new" class="checkbox__input" checked>
+                            <label for="new" class="checkbox__label">New</label>
+                        </div>
+                        <div class="checkbox">
+                            <input id="old" name="checkbox" type="checkbox" class="checkbox__input">
+                            <label for="old" class="checkbox__label">Old</label>
+                        </div>
+                    </form>
+
+                    <form class="search__container">
+                        <label>
+                            <input type="text" placeholder="Search" class="search__input">
+                            <input type="button" class="search__button" value="Apply">
+                        </label>
+                    </form>
+                </div>
+            </section>
             <main class="main cards">
                 <h1 class="section__title">Study project "Games"</h1>
                 <ul class="card__list">
