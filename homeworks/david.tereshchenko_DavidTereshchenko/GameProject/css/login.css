@@ -1,0 +1,114 @@
+/* add header and default selectors */
+
+@import "header/header.css";
+@import "default selectors/default.css";
+
+/* Forms */
+
+.main__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 91.5vh;
+  max-width: 575px;
+  row-gap: 60px;
+  /*margin-bottom: 80px;*/
+}
+
+/* Style for title */
+
+.main__title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+/* Style for form */
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 40px;
+  font-weight: 500;
+}
+
+/* Style fot email */
+
+.form__email {
+  display: flex;
+  flex-direction: column;
+  row-gap: 22px;
+}
+
+.email {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  border: 1px solid #A9A9A9;
+  border-radius: 6px;
+  padding: 26px 0 26px 20px;
+}
+
+/* Style fot password */
+
+.form__password {
+  display: flex;
+  flex-direction: column;
+  row-gap: 22px;
+}
+
+.password {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  border: 1px solid #A9A9A9;
+  border-radius: 6px;
+  padding: 26px 0 26px 20px;
+}
+
+/* Style fot checkbox */
+
+.form__checkbox {
+  display: flex;
+  font-size: 14px;
+  font-weight: 400;
+  gap: 12px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox {
+  appearance: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 1px solid #EF4934;
+  cursor: pointer;
+}
+
+.form__checkbox label {
+  cursor: pointer;
+}
+
+.checkbox:checked {
+  background: url("../../GameProject/img/icons/_Radio/check1.png") no-repeat center #FFF;
+}
+
+/* Style fot button */
+
+.form__button {
+  display: flex;
+  width: 100%;
+  padding: 24px 0;
+  background-color: #EF4934;
+  border-radius: 6px;
+  justify-content: center;
+  color: #FFF;
+  font-weight: 600;
+}
