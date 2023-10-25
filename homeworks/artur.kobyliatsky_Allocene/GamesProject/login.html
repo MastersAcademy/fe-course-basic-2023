@@ -8,9 +8,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/b3adce1055.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="./style/main-about.css">
+        <link rel="stylesheet" href="./style/main-login.css">
         <link rel="icon" type="image/x-icon" href="./img/logo.png">
-        <title>About me</title>
+        <title>Login</title>
     </head>
 
     <body>
@@ -39,33 +39,32 @@
         <main>
             <div class="contain">
                 <div class="content">
-                    <div class="img">
-                        <img src="./img/image.png" alt="img">
+                    <div class="form__h1">
+                        <h1 class="h1">Login page</h1>
                     </div>
-                    <div class="text">
-                        <h1 class="text__heading">About me</h1>
-                        <p class="text__chapter">
-                            Hi! My name is Artur and I'm a Junior Frontend Developer. I am already familiar with main
-                            Web
-                            Technologies like HTML, CSS, JavaScript and Git version control system.
-                            <br>
-                            <br>
-                            This page was developed during the course <a
-                                href="https://www.mastersacademy.education/frontend-for-beginners-it"
-                                class="text__link">'Frontend for
-                                beginners' from Masters Academy in 2023.</a>
-                            <br>
-                            <br>
-                            This is a social project from MOCG company where I got an opportunity to work with Frontend
-                            mentors
-                            and to create my own small project for the portfolio.
-                            <br>
-                            <br>
-                            You can contact me via <a href="https://www.linkedin.com/in/artur-kobylatsky/"
-                                class="text__link">Linkedin</a>
-                            and/or check out mу <a href="https://github.com/Allocene" class="text__link">GitHub</a>.
-                        </p>
-                    </div>
+                    <form action="./login-success.html" method="#">
+                        <div class="form__login">
+                            <div class="item">
+                                <label class="label" for="email">Email</label>
+                                <input class="inp" type="email" name="email"
+                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$"
+                                    placeholder="Enter your email address" required>
+                            </div>
+                            <div class="item">
+                                <label class="label" for="password">Password</label>
+                                <input class="inp" type="password" minlength="9" maxlength="47" name="password"
+                                    placeholder="Enter your password" required>
+                            </div>
+                            <label class="item__check">
+                                <input class="inp__check" type="checkbox" name="checkbox" required>
+                                <span class="custom__check"></span>
+                                I’m not a robot
+                            </label>
+                            <div class="item__button">
+                                <button type="submit">Login</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </main>

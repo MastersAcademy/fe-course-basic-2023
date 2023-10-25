@@ -1,0 +1,49 @@
+@import url("./header.css");
+@import url("./footer.css");
+@import url("./font.css");
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contain {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 140px;
+}
+
+.content {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 68px;
+  justify-content: center;
+  margin-bottom: 150px;
+}
+
+.img {
+  align-items: start;
+}
+
+.text__heading {
+  margin-top: 0;
+  color: #221F1F;
+  font-size: 48px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+.text__chapter {
+  color: #221F1F;
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 400;
+}
+
+.text__chapter .text__link {
+  color: #EF4934;
+}
