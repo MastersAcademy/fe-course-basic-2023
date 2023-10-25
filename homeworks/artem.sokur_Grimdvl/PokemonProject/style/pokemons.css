@@ -3,9 +3,12 @@
 .filters {
   min-height: 60px;
   display: grid;
+  padding: 10px 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: minmax(36px, auto);
+  row-gap: 10px;
   align-items: center;
   color: #FFF;
-  gap: 20px;
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
@@ -17,7 +20,8 @@
   width: 114px;
   height: 36px;
   align-items: center;
-  justify-content: center;
+  margin: 0 auto;
+  align-content: center;
   background-color: #414141;
   transition: .25s;
   border-radius: 6px;
@@ -103,14 +107,98 @@
 
 .filters__choice {
   display: flex;
+  margin: 0 auto;
   justify-content: space-around;
   width: 190px;
 }
 
+.filters__choice {
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.filters__choice input[type="radio"] {
+  position: relative;
+  appearance: none;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  background-color: #221F1F;
+  border: 1px solid #FFF;
+  border-radius: 20px;
+  outline: none;
+}
+
+.filters__choice input[type="radio"]::after {
+  content: "";
+  background-color: #EF4934;
+  display: none;
+  height: 14px;
+  width: 14px;
+  border-radius: 20px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+
+.filters__choice input[type="radio"]:checked::after {
+  display: block;
+}
+
+.filters__choice label {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  cursor: pointer;
+}
+
 .filters__size {
   display: flex;
+  margin: 0 auto;
   justify-content: space-around;
-  width: 130px;
+  width: 150px;
+}
+
+.filters__size {
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.filters__size input[type="checkbox"] {
+  appearance: none;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  background-color: #221F1F;
+  border: 1px solid #FFF;
+  border-radius: 6px;
+  outline: none;
+}
+
+.filters__size input[type="checkbox"]::after {
+  content: "✓";
+  color: #EF4934;
+  background-color: #FFF;
+  display: none;
+  height: 18px;
+  width: 18px;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.filters__size input[type="checkbox"]:checked::after {
+  display: block;
+}
+
+.filters__size label {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  cursor: pointer;
 }
 
 .filters__search {
@@ -122,26 +210,36 @@
 .filters__search-input {
   height: 100%;
   width: 100%;
+  border: none;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  padding-left: 10px;
 }
 
 .filters__search--button {
-  height: 100%;
+  height: 36px;
   min-width: 70px;
   width: 100%;
+  cursor: pointer;
+  color: #FFF;
+  background-color: #EF4934;
+  border: none;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 /* section pokemons */
 
 .pokemons__title {
-  padding-top: 25px;
+  padding-top: 45px;
 }
 
 .pokemons__cards {
-  margin: 20px 0;
+  margin: 10px 0;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, 270px);
-  gap: 15px;
+  gap: 10px;
   justify-content: space-around;
 }
 

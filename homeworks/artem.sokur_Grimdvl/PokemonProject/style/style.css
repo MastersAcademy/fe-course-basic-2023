@@ -8,6 +8,9 @@
 
 body {
   color: #221F1F;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 a {
@@ -27,18 +30,19 @@ h1 {
 }
 
 main {
-  min-height: 673px;
-  margin-top: 140px;
+  padding-top: 140px;
+  flex: 1;
 }
 
 /* section head  */
 
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   min-height: 80px;
+  z-index: 3;
 }
 
 .head {
