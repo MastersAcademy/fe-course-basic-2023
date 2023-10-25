@@ -217,3 +217,127 @@ body {
   box-sizing: border-box;
   color: #FFF;
 }
+
+/* Login */
+
+.login__inner {
+  margin: 80px 352px 237px 353px;
+  width: 575px;
+}
+
+.login__title {
+  margin-bottom: 60px;
+  text-align: center;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.login__form-label {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.login__form-input {
+  margin: 22px 0 40px;
+  padding: 30px 216px 30px 20px;
+  border: .6px solid #A9A9A9;
+  border-radius: 6px;
+  width: 339px;
+}
+
+.login__form-label_check {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  cursor: pointer;
+}
+
+.login__form-checkbox {
+  opacity: 0;
+  margin-bottom: 40px;
+}
+
+.login__form-checkbox + .login__form-label_check::before {
+  content: "";
+  color: #FFF;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #EF4934;
+  border-radius: 6px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: 12px;
+  margin-left: -17px;
+  cursor: pointer;
+}
+
+.login__form-checkbox:checked + .login__form-label_check::before {
+  background: url("./image/check.svg") no-repeat;
+  background-size: contain;
+}
+
+.login__form-submit {
+  padding: 27px 258px;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: #FFF;
+  background-color: #EF4934;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 4px 30px 0 rgba(38, 58, 67, .15);
+}
+
+.login__form-input::placeholder {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.login__form-submit:active {
+  transform: translate(2px, 1px);
+}
+
+/* Login sucsses */
+
+.login__sucsses-title {
+  margin-bottom: 22px;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: center;
+}
+
+.login__sucsses-subtitle {
+  margin-bottom: 49px;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+}
+
+.login__return-homepage {
+  padding: 27px 187px;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: #FFF;
+  background-color: #EF4934;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 30px 0 rgba(38, 58, 67, .15);
+}
