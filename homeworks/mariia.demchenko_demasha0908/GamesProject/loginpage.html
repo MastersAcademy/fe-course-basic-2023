@@ -11,55 +11,53 @@
         <link rel="stylesheet" href="css/loginpage.css">
     </head>
     <body>
-        <div class="wrapper">
-            <header class="header">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <a class="logo" href="#">
+                        <img src="images/logo.png" alt="icon menu">
+                    </a>
+                    <nav class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__list-item">
+                                <a class="menu__list-link" href="games.html">Games</a>
+                            </li>
+                            <li class="menu__list-item">
+                                <a class="menu__list-link" href="index.html">About</a>
+                            </li>
+                            <li class="menu__list-item">
+                                <a class="menu__list-link menu__list-link--active" href="loginpage.html">Login</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="login">
                 <div class="container">
-                    <div class="header__inner">
-                        <a class="logo" href="#">
-                            <img src="images/logo.png" alt="icon menu">
-                        </a>
-                        <nav class="menu">
-                            <ul class="menu__list">
-                                <li class="menu__list-item">
-                                    <a class="menu__list-link" href="games.html">Games</a>
-                                </li>
-                                <li class="menu__list-item">
-                                    <a class="menu__list-link" href="index.html">About</a>
-                                </li>
-                                <li class="menu__list-item">
-                                    <a class="menu__list-link menu__list-link--active" href="loginpage.html">Login</a>
-                                </li>
-                            </ul>
-                        </nav>
+                    <div class="login__form">
+                        <form action="success.html">
+                            <h3 class="login__form-title">Login page</h3>
+                            <div class="login__form-group">
+                                <label class="login__form-label" for="email">Email</label>
+                                <input class="login__form-item" type="email" name="email" id="email" placeholder="Enter your email address" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required>
+                            </div>
+                            <div class="login__form-group">
+                                <label class="login__form-label" for="password">Password</label>
+                                <input class="login__form-item" type="password" name="Пароль" id="password" placeholder="Enter your password" required>
+                            </div>
+                            <div class="login__form-group">
+                                <input class="login__form-checkbox" id="checkbox" type="checkbox" required>
+                                <label class="login__form-text" for="checkbox">I’m not a robot</label>
+                            </div>
+                            <div class="login__form-group">
+                                <button class="login__form-btn" type="submit">Login</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
-            </header>
-            <main class="main">
-                <div class="login">
-                    <div class="container">
-                        <div class="login__form">
-                            <form action="success.html">
-                                <h3 class="login__form-title">Login page</h3>
-                                <div class="login__form-group">
-                                    <label class="login__form-label" for="email">Email</label>
-                                    <input class="login__form-item" type="email" name="email" id="email" placeholder="Enter your email address" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required>
-                                </div>
-                                <div class="login__form-group">
-                                    <label class="login__form-label" for="password">Password</label>
-                                    <input class="login__form-item" type="password" name="Пароль" id="password" placeholder="Enter your password" required>
-                                </div>
-                                <div class="login__form-group">
-                                    <input class="login__form-checkbox" id="checkbox" type="checkbox" required>
-                                    <label class="login__form-text" for="checkbox">I’m not a robot</label>
-                                </div>
-                                <div class="login__form-group">
-                                    <button class="login__form-btn" type="submit">Login</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </main>
-        </div>
+            </div>
+        </main>
     </body>
 </html>

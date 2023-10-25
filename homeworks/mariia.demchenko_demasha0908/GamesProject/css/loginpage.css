@@ -148,7 +148,7 @@ a {
   opacity: 1;
 }
 
-input[type=checkbox] {
+.login__form-checkbox {
   width: 20px;
   height: 20px;
   color: #FFF;
@@ -164,7 +164,7 @@ input[type=checkbox] {
 }
 
 
-input[type=checkbox]::before {
+.login__form-checkbox::before {
   content: "";
   color: transparent;
   display: block;
@@ -175,11 +175,11 @@ input[type=checkbox]::before {
   background-size: contain;
 }
 
-input[type=checkbox]:checked {
+.login__form-checkbox:checked {
   background-color: currentColor;
 }
 
-input[type=checkbox]:checked::before {
+.login__form-checkbox:checked::before {
   background-image: url("../images/check.svg");
 }
 
