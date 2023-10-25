@@ -139,6 +139,7 @@ body {
   line-height: 21px;
   font-weight: 400;
   position: relative;
+  padding-left: 40px;
 }
 
 .filters__custom::before,
@@ -153,7 +154,7 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: -35px;
+  left: 0;
 }
 
 .filters__custom--radio::before {
