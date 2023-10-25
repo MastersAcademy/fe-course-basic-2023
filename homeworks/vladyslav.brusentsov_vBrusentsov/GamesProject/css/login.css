@@ -52,21 +52,21 @@ body {
 }
 
 .login-main-checkbox input[type="checkbox"] {
-  display: none;
+  opacity: 0;
+  position: absolute;
 }
 
 .label-main-checkbox {
+  display: flex;
   font-family: Roboto;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 21px;
-  padding-left: 12px;
 }
 
 .login-main-checkbox label::before {
   content: "✖";
-  display: inline-block;
   width: 14px;
   height: 14px;
   border: 2px solid #EF4934;
@@ -76,7 +76,11 @@ body {
   text-align: center;
   line-height: 16px;
   font-size: 16px;
-  color: #FFF
+  color: #FFF;
+}
+
+.login-main-checkbox label:hover {
+  cursor: pointer;
 }
 
 .login-main-checkbox input[type="checkbox"]:checked + label::before {
@@ -84,7 +88,7 @@ body {
   color: #FFF;
 }
 
-.login-main-submit {
+.login-main-submit-button {
   display: flex;
   justify-content: center;
   align-items: center;
