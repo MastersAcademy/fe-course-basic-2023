@@ -101,7 +101,7 @@ body {
 .filters__select {
   appearance: none;
   padding: 0 42px 0 12px;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 6px;
   background-color: #333;
   background-image: url("../images/icon-select-arrow.svg");
@@ -112,6 +112,13 @@ body {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
+  transition: all .3s ease-in-out;
+}
+
+.filters__select:focus {
+  outline: none;
+  border: 1px solid #FFF;
+  transition: border .3s ease-in-out;
 }
 
 .filters__group {
@@ -131,17 +138,22 @@ body {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
+  position: relative;
 }
 
-.filters__custom::before {
+.filters__custom::before,
+.filters__custom::after {
   content: "";
-  margin-right: 12px;
   padding: 3px;
   display: inline-block;
   width: 20px;
   height: 20px;
   border: 1px solid #FFF;
   background-color: #221F1F;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -35px;
 }
 
 .filters__custom--radio::before {
@@ -152,16 +164,31 @@ body {
   border-radius: 6px;
 }
 
-.filters__input:checked+.filters__custom--radio::before {
+
+.filters__custom--radio::after {
+  opacity: 0;
+  border-radius: 50%;
   background-image: url("../images/icon-radio-filter.svg");
   background-repeat: no-repeat;
   background-size: contain;
+  transition: opacity .3s ease-in-out;
 }
 
-.filters__input:checked+.filters__custom--checkbox::before {
+.filters__custom--checkbox::after {
+  opacity: 0;
+  border-radius: 6px;
   background-image: url("../images/icon-check-filter.svg");
   background-repeat: no-repeat;
   background-size: contain;
+  transition: opacity .3s ease-in-out;
+}
+
+.filters__input:checked+.filters__custom--radio::after {
+  opacity: 1;
+}
+
+.filters__input:checked+.filters__custom--checkbox::after {
+  opacity: 1;
 }
 
 .filters__search {
@@ -174,7 +201,7 @@ body {
   background-image: url("../images/icon-search.svg");
   background-repeat: no-repeat;
   background-position: 10px;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 6px 0 0 6px;
   font-family: Roboto;
   color: #221F1F;
@@ -192,6 +219,12 @@ body {
   font-weight: 400;
 }
 
+.filters__search-input:focus {
+  outline: none;
+  border: 1px solid #EF4934;
+  transition: border .3s ease-in-out;
+}
+
 .filters__btn-submit {
   cursor: pointer;
   padding: 13px 20px;
@@ -206,7 +239,7 @@ body {
   transition: filter .3s ease-in-out;
 }
 
-.filters__btn:hover {
+.filters__btn-submit:hover {
   filter: brightness(.9);
 }
 
