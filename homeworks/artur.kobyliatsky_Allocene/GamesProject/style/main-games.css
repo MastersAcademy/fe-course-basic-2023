@@ -159,7 +159,7 @@ select option {
 .inp__search {
   width: 342px;
   height: 36px;
-  padding-left: 35px;
+  padding-left: 46px;
   border: none;
   outline: 0;
   border-top-left-radius: 6px;
@@ -168,6 +168,12 @@ select option {
   font-weight: 400;
   line-height: 21px;
   float: left;
+}
+
+.inp__search {
+  background-image: url("/homeworks/artur.kobyliatsky_Allocene/GamesProject/img/search.svg");
+  background-position: left 12px center;
+  background-repeat: no-repeat;
 }
 
 
@@ -195,12 +201,12 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 100vh;
 }
 
 .contain {
-  width: 90%;
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr;
   align-items: center;
   justify-content: start;
   margin-top: 180px;
