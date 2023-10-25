@@ -50,11 +50,11 @@ body {
   list-style: none;
 }
 
-.nav_link:hover {
+.nav__link:hover {
   text-decoration: underline;
 }
 
-.nav_link:target {
+.nav__link:target {
   text-decoration: underline;
 }
 

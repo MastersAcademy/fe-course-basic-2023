@@ -54,11 +54,11 @@ body {
   line-height: 24px;
 }
 
-.nav_link:hover {
+.nav__link:hover {
   text-decoration: underline;
 }
 
-.nav_link:target {
+.nav__link:target {
   text-decoration: underline;
 }
 
