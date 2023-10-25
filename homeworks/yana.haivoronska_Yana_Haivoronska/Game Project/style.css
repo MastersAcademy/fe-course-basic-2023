@@ -1,15 +1,23 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:regular,500,700&display=swap");
 
-.main {
-  max-width: 409px
+.container {
+  max-width: 1175px;
+  display: flex;
+  align-items: inherit;
+}
+
+.container img {
+  width: 75%;
+}
+
+.container main {
+  width: 75%;
 }
 
 .main {
+  width: 575px;
+  height: 409px;
   font-family: Roboto,sans-serif;
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 32px; /* 145.455% */
 }
 
 h1 {
@@ -59,4 +67,63 @@ header {
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
+}
+
+.cards-h1 {
+  color: #221F1F;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 32px;
+  margin-left: 53px;
+  margin-bottom: 50px;
+}
+
+.link {
+  color: #EF4934;
+}
+
+.cards {
+  margin: 50px 53px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.game-card {
+  max-width: 275px;
+  background-color: #ECECEC;
+  padding: 12px 12px 22px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.game-title {
+  margin-left: 12px;
+}
+
+.game-name {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.text-game {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  margin-top: 0;
+}
+
+.upper-card {
+  display: flex;
+  align-items: inherit;
+}
+
+.lower-card {
+  font-size: 14px;
+  line-height: 18px;
+  margin-left: 10px;
 }
