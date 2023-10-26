@@ -10,12 +10,12 @@
   background: #221F1F;
 }
 
-.filter__list__container {
+.filter__list {
   max-width: 1175px;
-  margin: 0 auto;
+  /*margin: 0 auto;*/
+
   display: grid;
-  grid-template-columns: 114px 40% 377px;
-  gap: 86px;
+  grid-template-columns: 2fr 1fr;
   justify-content: space-between;
   padding: 12px 0;
 }
@@ -36,12 +36,13 @@
 
 .filter__checkbox {
   display: flex;
-  gap: 86px;
+  gap: 63px;
 }
 
 .checkbox__radio {
   display: flex;
-  justify-content: center;
+  /*justify-content: center;*/
+
   gap: 32px;
   color: #FFF;
   font-size: 14px;
@@ -134,16 +135,14 @@
 /* Game Block */
 
 .game {
-  width: 1175px;
   display: flex;
   margin: 0 auto;
 }
 
-.game__contend {
+.game__contend__container {
   display: grid;
   width: 100%;
   gap: 40px;
-  flex-wrap: wrap;
 }
 
 .game__title-game {
@@ -154,7 +153,7 @@
 
 .game__item-blocks {
   display: grid;
-  grid-template-columns: 275px 275px 275px 275px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 25px;
 }
 
@@ -163,9 +162,10 @@
   grid-template-rows: 1fr;
   flex-direction: column;
   background-color: #ECECEC;
-  padding: 12px;
+  padding: 10px;
   border-radius: 12px;
   row-gap: 22px;
+  max-width: 280px;
 }
 
 .game-item-item__header {
@@ -212,3 +212,144 @@
   margin-right: 5px;
 }
 
+/* Adaptation Cards */
+
+@media (max-width: 650px) {
+
+  .game__title-game {
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1220px) {
+
+  .game__item-blocks {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+    margin: 0 auto;
+  }
+
+  .game__title-game {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 920px) {
+
+  .game__item-blocks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 570px) {
+
+  .game__item-blocks {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin: 0 auto;
+  }
+
+  .item-block__game-item {
+    max-width: 100%;
+  }
+}
+/* Adaptation Filter */
+
+.filter__icon {
+  position: fixed;
+  margin-top: 12px;
+  padding: 0 5px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  max-width: 114px;
+  height: 35px;
+  margin-left: 0;
+  color: #221F1F;
+  font-size: 14px;
+  gap: 12px;
+  background-color: #FFF;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.filter__icon label {
+  cursor: pointer;
+  padding-right: 10px;
+}
+
+@media (max-width: 1050px) {
+
+  .filter__icon {
+    display: flex;
+    position: relative;
+  }
+
+  .filter__checkbox {
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /*align-items: center;*/
+
+    position: fixed;
+    /*height: %;*/
+
+    gap: 20px;
+    width: 100%;
+    z-index: 50;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: #221F1F;
+    border-radius: 6px;
+    border: 1px solid #FFF;
+    top: 15.5%;
+    left: 0;
+  }
+
+  .filter__container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 0;
+  }
+
+  .filter__list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  .filter__search {
+    max-width: 100%;
+  }
+
+  .search__input {
+    max-width: 377px;
+  }
+
+  .filter__select select {
+    border: 1px solid #FFF;
+  }
+}
+
+
+@media (max-width: 550px) {
+
+  .filter__icon label {
+    display: none;
+  }
+
+  .filter__search {
+    max-width: 360px;
+  }
+}

@@ -82,7 +82,7 @@ body {
   margin: 0 auto;
 }
 
-@media (max-width: 1175px) {
+@media (max-width: 1225px) {
 
   [class*="__container"] {
     padding-left: 15px;
