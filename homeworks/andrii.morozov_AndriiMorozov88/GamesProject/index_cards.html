@@ -31,29 +31,42 @@
                 </ul>
             </div>
         </header>
-        <div class="filter">
-            <form action="#" method="post">
-                <select name="select" class="filter__select margin-right--85px">
+        <form action="#" method="post" class="filter">
+            <section>
+                <select name="select" class="filter__select">
                     <option value="Genre" selected>Genre</option>
                 </select>
+            </section>
+            <section>
                 <input type="radio" name="radio" id="new">
-                <label for="new" class="margin-right--35px">
+                <label for="new" class="filter-element-padding">
                     Only new
                 </label>
                 <input type="radio" name="radio" id="favorites">
-                <label for="favorites" class="margin-right--65px">
+                <label for="favorites">
                     Favorites
                 </label>
+            </section>
+            <section>
                 <input type="checkbox" id="big">
-                <label for="big" class="margin-right--35px">
+                <label for="big" class="filter-element-padding">
                     Big
                 </label>
                 <input type="checkbox" id="Small">
                 <label for="small">
                     Small
                 </label>
-            </form>
-        </div>
+            </section>
+            <section class="filter__svg">
+                <svg class="search__svg">
+                    <use xlink:href="sprite.svg#search"></use>
+                </svg>
+            </section>
+            <section class="filter__input-field">
+                <input type="text" class="filter__input" placeholder="Search">
+                <button type="submit" class="filter__button">Align</button>
+            </section>
+        </form>
         <main class="main games__main">
             <h1 class="heading--h1">Study project "Games"</h1>
             <article class="card-container">

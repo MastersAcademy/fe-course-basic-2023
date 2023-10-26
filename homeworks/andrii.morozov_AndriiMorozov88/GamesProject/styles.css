@@ -102,13 +102,18 @@ body {
 }
 
 .filter {
-  display: flex;
+  display: grid;
+  grid-template-columns: 200px 350px 300px 30px 320px;
   background-color: #221F1F;
-  height: 60px;
   padding-left: 53px;
+  padding-right: 53px;
   align-items: center;
-  justify-content: space-between;
+  height: 60px;
   color: #FFF;
+}
+
+.filter-element-padding {
+  margin-right: 30px;
 }
 
 .filter__select {
@@ -117,16 +122,45 @@ body {
   font-size: 14px;
 }
 
-.margin-right--85px {
-  margin-right: 85px;
+.filter__input-field {
+  background-color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 290px;
+  height: 40px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
-.margin-right--35px {
-  margin-right: 35px;
+.filter__input {
+  outline: none;
+  border: none;
 }
 
-.margin-right--65px {
-  margin-right: 65px;
+.filter__svg {
+  background-color: #FFF;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.search__svg {
+  width: 24px;
+  height: 24px;
+}
+
+.filter__button {
+  height: 40px;
+  width: 70px;
+  background-color: #EF4934;
+  border: none;
+  color: #FFF;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-weight: 400;
 }
 
 .card-container {
