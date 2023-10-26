@@ -319,7 +319,7 @@ body {
 }
 
 .login__success-subtitle {
-  margin-bottom: 49px;
+  margin-bottom: 50px;
   font-size: 22px;
   font-style: normal;
   font-weight: 600;
@@ -328,6 +328,7 @@ body {
 }
 
 .login__return-homepage {
+  display: block;
   padding: 27px 187px;
   font-size: 22px;
   font-style: normal;
