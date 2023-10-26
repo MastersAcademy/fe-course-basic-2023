@@ -1,3 +1,5 @@
+@import "./header.css";
+
 * {
   margin: 0;
   padding: 0;
@@ -6,77 +8,6 @@
 
 body {
   font-family: Roboto, sans-serif;
-}
-
-.header {
-  background-color: #333;
-  padding: 25px 0;
-}
-
-.header__container {
-  max-width: 1280px;
-  padding: 0 50px;
-  margin: 0 auto;
-  /* display: flex;
-  justify-content: space-between; */
-
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.header__nav {
-  /* display: flex;
-  align-items: center;
-  column-gap: 50px; */
-
-  justify-self: end;
-  display: grid;
-}
-
-.header__nav-list {
-  list-style-type: none;
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 1fr;
-  column-gap: 50px;
-  justify-items: center;
-  align-items: center;
-}
-
-.header__nav-link,
-.header__nav-link--active {
-  color: #FFF;
-  font-size: 16px;
-  font-weight: 500;
-  text-decoration: none;
-  transition: color .3s ease-in-out;
-}
-
-.header__nav-link--active {
-  padding: 7px 0;
-  position: relative;
-}
-
-.header__nav-link:hover,
-.header__nav-link--active:hover {
-  color: #EF4934;
-}
-
-.header__nav-link--active::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  display: block;
-  width: 100%;
-  height: 1px;
-  background-color: #FFF;
-  transition: background-color .3s ease-in-out;
-}
-
-.header__nav-link--active:hover::after {
-  background-color: #EF4934;
 }
 
 .about {
