@@ -1,5 +1,5 @@
 .login {
-  width: 575px;
+  max-width: 575px;
   margin: 80px auto 0;
   color: #221F1F;
 }
