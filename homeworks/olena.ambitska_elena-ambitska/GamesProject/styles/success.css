@@ -13,3 +13,7 @@
   position: relative;
 }
 
+.back__link {
+  color: var(--white);
+  text-decoration: none;
+}
