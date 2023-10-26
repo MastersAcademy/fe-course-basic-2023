@@ -1,6 +1,80 @@
-body {
-  gap: 40px;
+
+.games-filter {
+  display: flex;
+  width: 100%;
+  min-height: 60px;
+  background-color: #221F1F;
+  align-items: center;
+  justify-content: space-around;
 }
+
+.datalist-games-filter select {
+  background: none;
+  border: none;
+  background-color: #333;
+  appearance: none;
+  min-height: 36px;
+  border-radius: 6px;
+  align-items: center;
+  gap: 33px;
+  padding: 0 12px;
+  background-image: url("../Img/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 12px);
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  color: #FFF;
+}
+
+.radio-filter {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.radio-games-filter {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.radio-games-filter input {
+  appearance: none;
+  position: absolute;
+}
+
+.radio-games-filter label {
+  cursor: pointer;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  color: #FFF;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.radio-games-filter label::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  border: 1px solid #FFF;
+  align-items: center;
+  position: absolute;
+  left: -32px;
+}
+
+.search-bar {
+  display: flex;
+  width: 30%;
+}
+
 
 .main-section {
   flex-direction: column;
@@ -14,7 +88,6 @@ body {
   font-style: normal;
   font-weight: 700;
   line-height: 32px;
-  margin: 0;
 }
 
 .main-cards-container {

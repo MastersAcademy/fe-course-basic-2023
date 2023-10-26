@@ -24,6 +24,36 @@
                 </ul>
             </nav>
         </header>
+        <div class="games-filter">
+            <form class="datalist-games-filter">
+                <select id="game-properties">
+                    <option value="Genre">Genre</option>
+                    <option value="Publisher">Publisher</option>
+                    <option value="Developer">Developer</option>
+                    <option value="Release_date">Release_date</option>
+                </select>
+            </form>
+            <div class="radio-filter">
+                <form class="radio-games-filter">
+                    <input type="radio" id="platform" name="filter_games" value="Platform">
+                    <label for="platform">Platform</label>
+                </form>
+                <form class="radio-games-filter">
+                    <input type="radio" id="online-games" name="filter_games" value="Online games">
+                    <label for="online-games">Online games</label>
+                </form>
+            </div>
+            <form class="checkbox-games-filter">
+                <input type="checkbox" id="new-games" name="New">
+                <label for="new-games">New</label>
+                <input type="checkbox" id="old-games" name="Old">
+                <label for="old-games">Old</label>
+            </form>
+            <form class="search-bar">
+                <label for="search" class="search-label"></label>
+                <input type="text" id="search" class="search-input" placeholder="🔍 Пошук...">
+            </form>
+        </div>
         <main class="main__section">
             <h1 class="main-header">Study project "Games"</h1>
             <div class="main-cards-container">
