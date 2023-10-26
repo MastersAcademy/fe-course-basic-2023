@@ -24,13 +24,8 @@
 }
 
 
-
-
-
-
 .Login__table_btn {
     padding-top: 10px;
-
 }
 
 .Login__table_btn a {
@@ -52,5 +47,5 @@
 }
 
 .Login__table_btn_name:active {
-    box-shadow: 0 0 0 4px #A9A9A9;
+    box-shadow: 0 0 0 1px #A9A9A9;
 }

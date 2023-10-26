@@ -6,7 +6,6 @@ body {
 .header {
     border: none;
     width: 100%;
-    min-height: 71px;
     margin: 0;
     padding: 0;
     /* min-height: 80px; */
@@ -26,7 +25,7 @@ body {
     height: 55px;
     justify-content: center;
     margin-left: 61px;
-}
+} 
 
 .header__items {
     display: grid;
@@ -81,8 +80,6 @@ body {
 
 .about .about__all {
     margin: 60px;
-    /* display: flex;
-    justify-content: space-between; */
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
@@ -96,16 +93,16 @@ body {
     font-size: 48px;
     line-height: 32px;
     color: #221F1F;
-  }
-
-  .about__all .about__text .about__text_inf {
+}
+  
+.about__all .about__text .about__text_inf {
     color: #221F1F;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 22px;
     line-height: 32px;
-  }
-
-  .about__all .about__text .about__text_link {
+}
+  
+.about__all .about__text .about__text_link {
     color: #EF4934;
-  }
+}

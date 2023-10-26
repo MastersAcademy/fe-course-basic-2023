@@ -6,15 +6,11 @@ body {
 .header {
     border: none;
     width: 100%;
-    min-height: 71px;
-    margin: 0;
-    padding: 0;
     background-color: #EF4934;
 }
 
 .header__all {
     display: grid;
-    /* grid-template-columns: 3fr 1fr; змітити коли потрібно буде додати кнопку логін  */
     grid-template-columns: 6fr 1fr;
 }
 
@@ -25,7 +21,7 @@ body {
     height: 55px;
     justify-content: center;
     margin-left: 61px;
-}
+} 
 
 .header__items {
     display: grid;
@@ -199,7 +195,6 @@ body {
     line-height: 21px;
     color: #221F1F;
     padding-left: 10px;
-
 }
 
 .Login__table .Login__table_verif .Login__table_verif_input {
@@ -227,5 +222,5 @@ body {
 }
 
 .Login__table_btn_name:active {
-    box-shadow: 0 0 0 4px #A9A9A9;
+    box-shadow: 0 0 0 1px #A9A9A9;
 }
