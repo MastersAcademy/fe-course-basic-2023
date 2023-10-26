@@ -32,7 +32,7 @@ body {
 
 .nav__list {
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(3, auto);
   grid-gap: 50px;
   justify-content: end;
 }
@@ -48,6 +48,13 @@ body {
   font-size: 16px;
   line-height: 24px;
   list-style: none;
+}
+
+.nav__link-active {
+  color: #FFF;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .nav__link:hover {

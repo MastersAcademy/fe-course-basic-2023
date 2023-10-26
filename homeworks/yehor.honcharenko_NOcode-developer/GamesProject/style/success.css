@@ -1,0 +1,88 @@
+body {
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+}
+
+.notification {
+  min-width: 575px;
+  margin: 0 auto;
+  display: grid;
+  height: fit-content;
+  grid-template-areas:
+    "image"
+    "message"
+    "button";
+}
+
+.notification__image {
+  grid-area: image;
+  display: grid;
+  place-items: center;
+}
+
+.notification__message {
+  grid-area: message;
+  display: grid;
+  grid-row-gap: 16px;
+  margin-bottom: 40px;
+  grid-template-areas:
+    "title"
+    "text";
+}
+
+.notification__title {
+  grid-area: title;
+  text-align: center;
+}
+
+.notification__h1 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 32px;
+  color: #221F1F;
+  margin: 0;
+}
+
+.notification__text {
+  grid-area: text;
+  text-align: center;
+}
+
+.notification__paragraph {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+  color:#868686;
+  margin: 0;
+}
+
+.notification__link {
+  text-decoration: none;
+}
+
+.submit {
+  grid-area: button;
+  display: grid;
+  height: 70px;
+  padding: 27px 56px;
+  border: none;
+  border-radius: 4px;
+  background-color: #ef4934;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 16px;
+  color: #FFF;
+  margin: 0 auto;
+}

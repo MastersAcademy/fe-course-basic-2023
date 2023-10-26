@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Game Project</title>
+        <link rel="stylesheet" href="./style/login.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <section class="wrapper">
+            <header class="header">
+                <nav class="nav">
+                    <img src="./images/logo-ma.svg" alt="logotype master of code academy" style="width: 64px; height: 64px;">
+                    <ul class="nav__list">
+                        <a class="nav__link" href="cards.html">Games</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="index.html">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link-active" href="login.html">Login</a>
+                    </li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <section class="login">
+                    <section class="login__container">
+                        <article class="login__header">
+                            <h1 class="login__h1">Login page</h1>
+                        </article>
+                        <form action="./success.html" method="#">
+                            <section class="form__container">
+                                <article class="form__input">
+                                    <label class="label" for="email">Email
+                                    <input class="textfield" type="email" name="email"
+                                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$"
+                                        placeholder="Enter your email address" required>
+                                    </label>
+                                </article>
+                                <article class="form__input">
+                                    <label class="label" for="password">Password
+                                    <input class="textfield" type="password" minlength="9" maxlength="47" name="password"
+                                        placeholder="Enter your password" required>
+                                    </label>
+                                </article>
+                                <article class="form__control">
+                                    <label class="control control__checkbox">First checkbox
+                                    <input type="checkbox" required/>
+                                    <div class="control__proxy"></div>
+                                    </label>
+                                </article>
+                                <article class="form__button">
+                                    <button class="submit" type="submit">Login</button>
+                                </article>
+                            </section>
+                        </form>
+                    </section>
+                </section>
+            </main>
+            <footer class="footer">
+                <section class="footer__container">
+                    <article class="footer__socials">
+                        <a href="https://www.facebook.com/profile.php?id=100014476686798" target="_blank">
+                            <div class="footer__icon">
+                                <img src="./images/facebook.svg" alt="facebook icon" style="width: 24px; height: 24px;">
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/yehor-honcharenko/" target="_blank">
+                            <div class="footer__icon">
+                                <img src="./images/linkedin.svg" alt="linkedin icon" style="width: 24px; height: 24px;">
+                            </div>
+                        </a>
+                        <a href="https://www.instagram.com/yehor.design/" target="_blank">
+                            <div class="footer__icon">
+                                <img src="./images/instagram.svg" alt="instagram icon" style="width: 24px; height: 24px;">
+                            </div>
+                        </a>
+                    </article>
+                    <article class="footer__text">
+                        <p class="footer__paragraph">
+                            Made with 💗 on 
+                            <a class="footer__link" href="https://www.mastersacademy.education/frontend-for-beginners-it" target="_blank">
+                                course 'Frontend for beginners' from Masters Academy
+                            </a> 
+                            in 2023, by Yehor
+                        </p>
+                    </article>
+                </section>
+            </footer>
+        </section>
+    </body>
+</html>
