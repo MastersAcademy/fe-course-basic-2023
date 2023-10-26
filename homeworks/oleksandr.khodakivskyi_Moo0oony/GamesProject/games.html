@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Games</title>
         <link rel="stylesheet" href="./styles/style.css">
     </head>
+
     <body>
         <header class="header">
             <div class="header_flexbox">
@@ -16,12 +18,52 @@
                             <a href="./games.html">Games</a>
                         </li>
                         <li class="nav_item">
-                            <a href="./about.html">About</a>
+                            <a href="./index.html">About</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="./login-page.html">Login</a>
                         </li>
                     </ul>
                 </nav>
             </div>
         </header>
+        <section class="filter">
+            <form action="" class="filter_form">
+                <div class="filter_drop_down">
+                    <select name="genre" class="genre_list" id="genre">
+                        <option value="genre" selected hidden disabled>Genre</option>
+                        <option value="sport">Sport</option>
+                        <option value="shooter">Shooter</option>
+                        <option value="racing">Racing</option>
+                        <option value="horror">Horror</option>
+                    </select>
+                </div>
+                <div class="filter_radio">
+                    <label for="" class="platform">
+                        <input type="radio" class="radio_input" name="radios" value="platforms">
+                        Platforms
+                    </label>
+                    <label for="" class="platform">
+                        <input type="radio" class="radio_input" name="radios" value="online">
+                        Online Games
+                    </label>
+                </div>
+                <div class="filter_checkbox">
+                    <label for="" class="age">
+                        <input type="checkbox" class="checkbox_input" value="new">
+                        New
+                    </label>
+                    <label for="" class="age">
+                        <input type="checkbox" class="checkbox_input" value="old">
+                        Old
+                    </label>
+                </div>
+                <div class="filter_search">
+                    <input type="search" class="search_input" placeholder="Search">
+                    <button type="submit" class="filter_search_button">Apply</button>
+                </div>
+            </form>
+        </section>
         <main class="games_main">
             <h1 class="games_header">Study project "Games"</h1>
             <ul class="games_list">
@@ -94,7 +136,7 @@
                 <li class="game_card">
                     <div class="game_overview">
                         <img src="./images/Overwatch2.svg" alt="Overwatch2">
-                        <div class="game__info">
+                        <div class="game_info">
                             <h3>Overwatch 2</h3>
                             <p>Big changes come to the Overwatch formula in this sequel...</p>
                         </div>
@@ -291,6 +333,31 @@
                 </li>
             </ul>
         </main>
-  
+        <footer class="footer">
+            <div class="footer_items">
+                <ul class="social_icons">
+                    <li class="facebook">
+                        <a href="https://www.facebook.com/oleksandr.khodakivskyi">
+                            <img src="./images/fb.svg" alt="facebook_icon">
+                        </a>
+                    </li>
+                    <li class="linkedin">
+                        <a href="https://www.linkedin.com/in/oleksandrkhodakivskyi/">
+                            <img src="./images/linkedin.svg" alt="linkedin_icon">
+                        </a>
+                    </li>
+                    <li class="instagram">
+                        <a href="https://www.instagram.com/m00oony/">
+                            <img src="./images/insta.svg" alt="instagram_icon">
+                        </a>
+                    </li>
+                </ul>
+                <h3 class="copyright">
+                    Made with 💗 on course <a
+                        href="https://www.mastersacademy.education/frontend-for-beginners-it">'Frontend for
+                        beginners'</a> from Masters Academy in 2023, by Oleksandr Khodakivskyi
+                </h3>
+            </div>
+        </footer>
     </body>
 </html>
