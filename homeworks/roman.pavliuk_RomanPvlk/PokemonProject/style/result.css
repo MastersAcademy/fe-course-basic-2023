@@ -1,0 +1,23 @@
+.login_successful {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 232px;
+}
+
+.successful_title {
+  padding-top: 220px;
+  text-align: center;
+}
+
+.successful_title p {
+  font-size: 34px;
+  font-weight: 600;
+  margin-top: 20px;
+  color: #A9A9A9;
+}
+
+.form-login input {
+  cursor: pointer;
+}
