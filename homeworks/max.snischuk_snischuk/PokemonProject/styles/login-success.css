@@ -11,7 +11,8 @@ body {
 }
 
 .success {
-  max-width: 575px;
+  padding: 0 15px;
+  max-width: 605px;
   margin: 40px auto;
   display: flex;
   flex-direction: column;

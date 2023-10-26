@@ -18,29 +18,18 @@ body {
   max-width: 1280px;
   padding: 0 50px;
   margin: 0 auto;
-  /* display: flex;
-  justify-content: space-between;
-  column-gap: 68px; */
-
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   column-gap: 68px;
 }
 
 .about__image {
-  /* flex: 1; */
-  /* align-self: flex-start; */
-
+  width: 100%;
   max-width: 532px;
   object-fit: contain;
 }
 
 .about__content {
-  /* flex: 1;
-  display: flex;
-  flex-direction: column;
-  row-gap: 32px; */
-
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 32px;
