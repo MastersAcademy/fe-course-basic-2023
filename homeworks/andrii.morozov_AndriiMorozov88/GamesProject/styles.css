@@ -6,7 +6,7 @@
 }
 
 body {
-  width: 1280px;
+  width: 100%;
 }
 
 .header {
@@ -103,7 +103,7 @@ body {
 
 .filter {
   display: grid;
-  grid-template-columns: 200px 350px 300px 30px 320px;
+  grid-template-columns: 17fr 30fr 25fr 2fr 24fr;
   background-color: #221F1F;
   padding-left: 53px;
   padding-right: 53px;
@@ -166,14 +166,12 @@ body {
 .card-container {
   display: grid;
   grid-template: repeat(2, 1fr) / repeat(4, 1fr);
-  gap: 25px;
-  width: 1175px;
-  height: 545px;
+  gap: 20px;
 }
 
 .card {
-  width: 275px;
-  height: 260px;
+  width: 265px;
+  height: 250px;
   padding: 12px 12px 22px;
   display: grid;
   grid-template-columns: 90px 1fr;
@@ -216,7 +214,7 @@ body {
   align-items: center;
 }
 
-.fieldset {
+.log-in {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -224,30 +222,30 @@ body {
   border: none;
 }
 
-.fieldset__element--40px {
+.log-in__element--40px {
   margin-top: 40px;
 }
 
-.fieldset__element--22px {
+.log-in__element--22px {
   margin-top: 22px;
 }
 
-.fieldset__heading {
+.log-in__heading {
   text-align: center;
 }
 
-.fieldset__input {
+.log-in__input {
   height: 70px;
   border: 2px solid #D1D1D1;
   font-size: 14px;
   font-weight: 400;
 }
 
-.fieldset__checkbox {
+.log-in__checkbox {
   margin-right: 10px;
 }
 
-.fieldset__button {
+.log-in__button {
   background-color: #EF4934;
   color: #FFF;
   font-weight: 600;
@@ -260,4 +258,24 @@ body {
 .fieldset__button:hover {
   cursor: pointer;
   background-color: #080;
+}
+
+@media (min-width: 1500px) {
+
+  .card {
+    width: 350px;
+    height: 330px;
+    gap: 20px;
+  }
+
+  .card__name__heading {
+    font-size: 24px;
+  }
+
+  .card__name--14px {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
 }
