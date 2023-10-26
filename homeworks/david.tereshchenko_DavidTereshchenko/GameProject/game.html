@@ -29,49 +29,58 @@
                             </ul>
                         </nav>
                     </div>
+                    <div class="header__burger">
+                        <span></span>
+                    </div>
                 </div>
             </header>
             <div class="filter">
-                <nav class="filter__list">
-                    <div class="filter__select">
-                        <select class="select__option" name="user_profile_color_1">
-                            <option value="1">Genre</option>
-                            <option value="2">Sport</option>
-                            <option value="3">Shooter</option>
-                            <option value="4">Racing</option>
-                            <option value="5">Horror</option>
-                        </select>
+                <div class="filter__container">
+                    <div class="filter__icon">
+                        <img src="img/icons/filter.png" height="30" id="filter-icon">
+                        <label for="filter-icon">Filter</label>
                     </div>
-                    <div class="filter__checkbox">
-                        <div class="checkbox__radio">
-                            <label>
-                                <input type="radio" name="name1" class="radioButton" value="" checked>
-                                Platform
-                            </label>
-                            <label>
-                                <input type="radio" name="name1" class="radioButton" value="">
-                                Online games
-                            </label>
+                    <nav class="filter__list">
+                        <div class="filter__checkbox">
+                            <div class="filter__select">
+                                <select class="select__option" name="user_profile_color_1">
+                                    <option value="1">Genre</option>
+                                    <option value="2">Sport</option>
+                                    <option value="3">Shooter</option>
+                                    <option value="4">Racing</option>
+                                    <option value="5">Horror</option>
+                                </select>
+                            </div>
+                            <div class="checkbox__radio">
+                                <label>
+                                    <input type="radio" name="name1" class="radioButton" value="" checked>
+                                    Platform
+                                </label>
+                                <label>
+                                    <input type="radio" name="name1" class="radioButton" value="">
+                                    Online games
+                                </label>
+                            </div>
+                            <div class="checkbox__checkbox">
+                                <label>
+                                    <input type="checkbox" id="checkbox-1-1" class="regular-checkbox">
+                                    New
+                                </label>
+                                <label>
+                                    <input type="checkbox" id="checkbox-1-2" class="regular-checkbox">
+                                    Old
+                                </label>
+                            </div>
                         </div>
-                        <div class="checkbox__checkbox">
-                            <label>
-                                <input type="checkbox" id="checkbox-1-1" class="regular-checkbox">
-                                New
-                            </label>
-                            <label>
-                                <input type="checkbox" id="checkbox-1-2" class="regular-checkbox">
-                                Old
-                            </label>
+                        <div class="filter__search">
+                            <input type="search" class="search__input" placeholder="Search">
+                            <button type="button" class="search__button">Apply</button>
                         </div>
-                    </div>
-                    <div class="filter__search">
-                        <input type="search" class="search__input" placeholder="Search">
-                        <button type="button" class="search__button">Apply</button>
-                    </div>
-                </nav>
+                    </nav>
+                </div>
             </div>
             <main class="game">
-                <div class="game__contend">
+                <div class="game__contend__container">
                     <h1 class="game__title-game">Study project "Games"</h1>
                     <div class="game__item-blocks">
                         <div class="item-block__game-item">
@@ -318,5 +327,15 @@
                 </div>
             </main>
         </div>
+        <script>
+            document.querySelector('.header__burger').addEventListener('click', function () {
+                this.classList.toggle('active');
+                document.querySelector('.header__menu').classList.toggle('open');
+            })
+            document.querySelector('.filter__icon').addEventListener('click', function () {
+                this.classList.toggle('active');
+                document.querySelector('.filter__checkbox').classList.toggle('open');
+            })
+        </script>
     </body>
 </html>
