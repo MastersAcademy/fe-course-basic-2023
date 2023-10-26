@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Masters Academy</title>
         <link
-            href="styles/about.css"
+            href="styles/login.css"
             rel="stylesheet"
             type="text/css">
     </head>
@@ -34,30 +34,25 @@
             </div>
         </header>
         <main>
-            <div class="main-contain">
-                <div class="main-content">
-                    <img class="pic" src="Image/image.png">
-                    <div class="text">
-                        <h1>
-                            About me
-                        </h1>
-                        <p>
-                            Hi! My name is Evgeny and I'm a Junior Frontend Developer.
-                            I am already familiar with main Web Technologies like HTML, CSS, JavaScript and Git version control system.
-                        </p>
-                        <p>
-                            This page was developed during the course
-                            <a class="about__link" href="https://www.mastersacademy.education/frontend-for-beginners-it" target="_blank">'Frontend for beginners' from Masters Academy in 2023. </a>
-                        </p>
-                        <p>
-                            This is a social project from MOCG company where
-                            I got an opportunity to work with Frontend mentors and to create my own small project for the portfolio.
-                        </p>
-                        <p>
-                            You can contact me via <a href="https://www.linkedin.com/in/evgeny-tolchinsky/" target="_blank">LinkedIn</a> and/or check out my GitHub.
-                        </p>
+            <div class="login-form">
+                <form action="success.html">
+                    <h3 class="login-form-title">Login page</h3>
+                    <div class="login-form-group">
+                        <label class="login-form-label" for="email">Email</label>
+                        <input class="login-form-input" type="email" name="email" id="email" placeholder="Enter your email address" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required>
                     </div>
-                </div>
+                    <div class="login-form-group">
+                        <label class="login-form-label" for="password">Password</label>
+                        <input class="login-form-input" type="password" name="Пароль" id="password" placeholder="Enter your password" required>
+                    </div>
+                    <div class="login-form-group">
+                        <input class="login-form-checkbox" id="checkbox" type="checkbox" required>
+                        <label class="login-form-text" for="checkbox">I’m not a robot</label>
+                    </div>
+                    <div class="login-form-group">
+                        <button class="login-form-button" type="submit">Login</button>
+                    </div>
+                </form>
             </div>
         </main>
         <footer class="footer">
