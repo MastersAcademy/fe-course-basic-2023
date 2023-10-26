@@ -1,0 +1,110 @@
+body {
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.main__heading {
+  margin-top: 25px;
+  color: #221F1F;
+  font-size: 48px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+.main__operation {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+}
+
+.numbers {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  margin-bottom: 25px;
+}
+
+.number1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.number2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.inp {
+  height: 40px;
+  width: 150px;
+  font-size: 24px;
+  margin-top: 22px;
+  border-radius: 6px;
+  outline: 0;
+  border: solid .6px #A9A9A9;
+  padding-left: 19px;
+}
+
+.inp:focus {
+  border-bottom: solid 6px #EF4934;
+}
+
+.inp::placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.button {
+  height: 44px;
+  width: 406px;
+  font-size: 24px;
+  border-radius: 6px;
+  margin-bottom: 25px;
+  outline: 0;
+  border: 0;
+  color: #FFF;
+  background-color: #EF4934;
+  transition: background-color .2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #CD412F;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  background-color: rgba(204, 59, 59, .516);
+}
+
+td,
+th {
+  border: 1px solid #EF4934;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(204, 59, 59, .3);
+}
