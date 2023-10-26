@@ -18,8 +18,7 @@ main {
   margin: 0 auto;
   display: grid;
   height: fit-content;
-  grid-template-areas:
-    "image"
+  grid-template-areas: "image"
     "message"
     "button";
 }
@@ -35,8 +34,7 @@ main {
   display: grid;
   grid-row-gap: 16px;
   margin-bottom: 40px;
-  grid-template-areas:
-    "title"
+  grid-template-areas: "title"
     "text";
 }
 
@@ -62,7 +60,7 @@ main {
   font-weight: 400;
   font-size: 22px;
   line-height: 32px;
-  color:#868686;
+  color: #868686;
   margin: 0;
 }
 
@@ -77,8 +75,8 @@ main {
   padding: 27px 56px;
   border: none;
   border-radius: 4px;
-  background-color: #ef4934;
-  color: #fff;
+  background-color: #EF4934;
+  color: #FFF;
   cursor: pointer;
   font-weight: 600;
   font-size: 22px;
