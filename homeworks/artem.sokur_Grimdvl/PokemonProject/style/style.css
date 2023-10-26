@@ -157,7 +157,7 @@ footer {
   gap: 50px;
 }
 
-.success__link--button {
+.success--button {
   position: relative;
   height: 50px;
   width: 300px;
@@ -168,16 +168,16 @@ footer {
   color: #FFF;
   border-radius: 6px;
   cursor: pointer;
-  transition: .25s;
+  transition: .5s;
   border: none;
 }
 
-.success__link--button:hover {
+.success--button:hover {
   background-color: #FF6C58;
   transition: .5s;
 }
 
-.success__link--button::before {
+.success--button::before {
   content: "";
   position: absolute;
   top: -10px;
@@ -185,13 +185,12 @@ footer {
   width: 107%;
   height: 143%;
   background: #FF6C58;
-  border-radius: 20px;
+  border-radius: 6px;
   filter: blur(5px);
+  transition: .5s;
   opacity: 0;
-  transition: .25s;
-  z-index: -1;
 }
 
-.success__link--button:hover::before {
-  opacity: .5;
+.success--button:hover::before {
+  opacity: .3;
 }

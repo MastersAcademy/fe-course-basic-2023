@@ -6,13 +6,9 @@
   justify-content: space-around;
 }
 
-.about__contact {
+.about__text-contact {
   color: #EF4934;
   text-decoration: underline;
-}
-
-.about__contact-telegram, .about__contact-github {
-  color: #000;
 }
 
 .about__logo {
@@ -119,5 +115,5 @@
   line-height: 32px;
   font-size: 22px;
   font-weight: 400;
-  margin-top: 20px;
+  margin: 20px auto;
 }

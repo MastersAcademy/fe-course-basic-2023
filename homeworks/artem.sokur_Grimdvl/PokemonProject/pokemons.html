@@ -27,36 +27,36 @@
 
             <div class="container" style="background-color: #221F1F;">
                 <section class="filters">
-                    <form class="filters__drop">
-                        <input type="checkbox" id="drop-toggle" class="filters__drop-toggle">
-                        <label for="drop-toggle" class="filters__drop--btn">Type</label>
-                        <ul class="filters__drop__list">
-                            <li class="filters__drop__list-type">
-                                <a href="#">Fighting</a>
-                            </li>
-                            <li class="filters__drop__list-type">
-                                <a href="#">Dark</a>
-                            </li>
-                        </ul>
+                    <form class="filters__form" action="#">
+                        <div class="filters__form-select">
+                            <select title="type" name="type" id="type" size="1">
+                                <option value="Type" selected hidden>Type</option>
+                                <option value="fighting">Fighting</option>
+                                <option value="dark">Dark</option>
+                            </select>
+                        </div>
+
+                        <div class="filters__form-choice">
+                            <input id="new" name="choice" type="radio" value="new">
+                            <label for="new">Only new</label>
+                            <input id="favorites" name="choice" type="radio" value="favorites">
+                            <label for="favorites">Favorites</label>
+                        </div>
+
+                        <div class="filters__form-size">
+                            <input id="big" name="big" type="checkbox">
+                            <label for="big">Big</label>
+                            <input id="small" name="small" type="checkbox">
+                            <label for="small">Small</label>
+                        </div>
                     </form>
-                    
-                    <form class="filters__choice">
-                        <input id="new" name="choice" type="radio" value="new">
-                        <label for="new">Only new</label>
-                        <input id="favorites" name="choice" type="radio" value="favorites">
-                        <label for="favorites">Favorites</label>
-                    </form>
-    
-                    <form class="filters__size">
-                        <input id="big" name="big" type="checkbox">
-                        <label for="big">Big</label>
-                        <input id="small" name="small" type="checkbox">
-                        <label for="small">Small</label>
-                    </form>
-    
+
                     <form class="filters__search">
-                        <input class="filters__search-input" placeholder="&#128269; Search" type="search" id="site-search" name="search">
-                        <button class="filters__search--button" type="submit">Apply</button>
+                        <input class="filters__search-input" placeholder="Search" type="search" id="search" name="search">
+                        <label class="filters__search-icon" for="search">
+                            <img src="img/icons/search.svg" alt="search">
+                        </label>
+                        <button class="filters__search--button" type="button">Apply</button>
                     </form>
                 </section>
             </div>
