@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Pokemons | Login</title>
+        <link rel="stylesheet" type="text/css" href="login.css">
+    </head>
+    <body>
+        <header class="header__page">
+            <div class="logo">
+                <img class="logo__img" src="img/logo.png" alt="logo">
+            </div>
+            <nav>
+                <ul class="navigation">
+                    <li class="navigation__item">
+                        <a class="navigation__item-link" href="pokemons.html">Pokemons</a>
+                    </li>
+                    <li class="navigation__item ">
+                        <a class="navigation__item-link" href="index.html">About</a>
+                    </li>
+                    <li class="navigation__item active">
+                        <a class="navigation__item-link" href="login.html">Login</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="login">
+                <div>
+                    <h1 class="login__title">Login page</h1>
+                </div>
+                <form class="login__form" action="successful.html">
+                    <div class="login__form-email">
+                        <label class="form__txt" for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Enter your email address" required>
+                    </div>
+                    <div class="login__form-password">
+                        <label class="form__txt" for="password">Password</label>
+                        <input type="password" name="password" id="password" placeholder="Enter your password" required>
+                    </div>
+                    <div class="login__form-checkbox">
+                        <input type="checkbox" name="checkbox" id="checkbox" required>
+                        <label class="form__txt login__form-checkbox-captcha" for="checkbox">I'm not a robot</label>
+                    </div>
+                    <input type="submit" value="send">
+                </form>
+            </section>
+        </main>
+    </body>
+</html>
