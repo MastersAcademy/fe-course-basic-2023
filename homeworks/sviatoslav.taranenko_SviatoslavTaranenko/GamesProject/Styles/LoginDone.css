@@ -1,51 +1,51 @@
 .Login_Done {
-    margin: auto auto;
-    max-width: 575px;
+  margin: auto auto;
+  max-width: 575px;
 }
 
 .Login_Done_title {
-    display: flex;
-    justify-content: center;
-    color: #221F1F;
-    font-family: "Roboto", sans-serif;
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 40px;
+  display: flex;
+  justify-content: center;
+  color: #221F1F;
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 40px;
 }
 
 .Login_Done_text {
-    display: flex;
-    justify-content: center;
-    color: #221F1F;
-    font-family: "Roboto", sans-serif;
-    font-size: 48px;
-    font-weight: 400;
-    line-height: 0px;
+  display: flex;
+  justify-content: center;
+  color: #221F1F;
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 0px;
 }
 
-
 .Login__table_btn {
-    padding-top: 10px;
+  padding-top: 10px;
 }
 
 .Login__table_btn a {
-    text-decoration: none;
-    color: #FFFFFF;
+  text-decoration: none;
+  color: #FFF;
 }
 
 .Login__table_btn_name {
-    min-width: 575px;
-    min-height: 60px;
-    border-radius: 6px;
-    background-color: #EF4934;
-    font-family: "Roboto", sans-serif;
-    font-size: 22px;
-    font-weight: 600;
-    line-height: 25.78px;
-    color: #FFF;
-    border: none;
+  min-width: 575px;
+  min-height: 60px;
+  border-radius: 6px;
+  background-color: #EF4934;
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 25.78px;
+  color: #FFF;
+  border: none;
+  cursor: pointer;
 }
 
 .Login__table_btn_name:active {
-    box-shadow: 0 0 0 1px #A9A9A9;
+  box-shadow: 0 0 0 1px #A9A9A9;
 }
