@@ -1,29 +1,33 @@
 body {
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
 }
 
-/* навігаційне меню */
+/* navigation menu */
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.header__page {
   background-color: #333;
   color: #FFF;
 }
 
 .logo {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin: 25px auto 25px 53px;
 }
 
-.logo > img {
-  width: 190px;
-  height: 29.945px;
+.header__page, .logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+
+.logo__img {
+  width: 190px;
+  height: 30px;
+}
+
+/* navigation settings */
 
 .navigation {
   display: flex;
@@ -40,41 +44,43 @@ header {
 
 .navigation__item-link {
   text-decoration: none;
-  font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: normal;
   color: #FFF;
 }
 
+/*
+class that defines how the button of the
+page we are on will behave
+*/
+
 .active {
   text-decoration: underline;
 }
 
-/* основний вміст */
+/* main information */
 
-article {
+main {
   display: flex;
   justify-content: space-between;
   gap: 68px;
   margin: 60px 53px auto 52px;
 }
 
-.section__img > img {
+.main__img {
   width: 532px;
   height: 297px;
 }
 
-h1 {
+.title__txt {
   font-size: 48px ;
-  font-family: Roboto, sans-serif ;
   font-weight: 700 ;
   line-height: 32px;
   margin: 0;
 }
 
-.main_text {
-  font-family: Roboto, sans-serif ;
+.main__txt {
   font-size: 22px ;
   font-weight: 400 ;
   line-height: 32px;

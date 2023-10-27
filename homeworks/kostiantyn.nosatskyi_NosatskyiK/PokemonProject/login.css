@@ -21,7 +21,6 @@ body {
   align-items: center;
 }
 
-
 .logo__img {
   width: 190px;
   height: 30px;
@@ -100,6 +99,12 @@ body {
   line-height: 21px;
 }
 
+.login__form-checkbox {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
 .login__form-checkbox-captcha, .form__txt, .login__title {
   color: #221F1F;
 }
@@ -115,6 +120,10 @@ input[type="submit"] {
   width: 575px;
   height: 70px;
   box-shadow: 0 4px 30px 0;
+}
+
+input[type="checkbox"] {
+  margin: 0;
 }
 
 input[type="email"], [type="password"] {
