@@ -122,7 +122,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 22px;
   font-weight: 600;
-  line-height: 25.78px;
+  line-height: 26px;
   padding-top: 20px;
 }
 
@@ -161,8 +161,8 @@ body {
   cursor: pointer;
 }
 
-.Login__table_verif label:before {
-  content:'';
+.Login__table_verif label::before {
+  content: "";
   -webkit-appearance: none;
   background-color: transparent;
   border: 2px solid #EF4934;
@@ -174,7 +174,7 @@ body {
   cursor: pointer;margin-right: 5px;
 }
 
-.Login__table_verif input:checked + label:after {
+.Login__table_verif input:checked + label::after {
   content: '';
   display: block;
   position: absolute;
