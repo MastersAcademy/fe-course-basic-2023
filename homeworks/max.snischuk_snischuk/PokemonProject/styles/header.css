@@ -3,21 +3,18 @@
   padding: 25px 0;
 }
 
-.header__container {
-  max-width: 1280px;
-  padding: 0 50px;
-  margin: 0 auto;
+.header__nav {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 15px;
-}
-
-.header__nav {
-  justify-self: end;
-  display: grid;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 50px;
+  justify-content: space-between;
 }
 
 .header__nav-list {
+  justify-self: end;
   list-style-type: none;
   display: grid;
   grid-auto-flow: column;
