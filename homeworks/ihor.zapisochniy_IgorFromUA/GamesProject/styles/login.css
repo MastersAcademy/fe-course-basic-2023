@@ -27,6 +27,12 @@
   line-height: 21px;
   border: 1px solid #A9A9A9;
   border-radius: 6px;
+  outline: none;
+}
+
+.login__input:focus {
+  border-bottom: 5px solid #EF4934;
+  padding-bottom: 26px;
 }
 
 .label-checkbox {

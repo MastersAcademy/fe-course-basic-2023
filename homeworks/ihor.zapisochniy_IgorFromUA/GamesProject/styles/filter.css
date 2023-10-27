@@ -20,11 +20,11 @@
   border-radius: 6px;
   padding: 12px 18px 12px 12px;
   outline: none;
-  /*appearance: none;*/
 }
 
 .select__option {
-  color: #000;
+  height: 40px;
+  color: #221F1F;
   background-color: #FFF;
 }
 
@@ -35,7 +35,7 @@
 
 input[type="checkbox"]::before {
   border-color: #FFF;
-  background: #000;
+  background: #221F1F;
 }
 
 input[type="checkbox"]::after {
