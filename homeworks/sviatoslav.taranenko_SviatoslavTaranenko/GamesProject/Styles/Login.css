@@ -102,13 +102,14 @@ body {
   padding-top: 10px;
 }
 
-.Login__table_email_input {border: solid 0.6px #A9A9A9;
+.Login__table_email_input {
+  border: solid 1px #A9A9A9;
   border-radius: 6px;
   min-width: 575px;
   min-height: 40px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 14;
+  font-size: 14px;
   line-height: 21px;
 }
 
@@ -126,18 +127,18 @@ body {
 }
 
 .Login__table_password_input {
-  border: solid 0.6px #A9A9A9;
+  border: solid 1px #A9A9A9;
   border-radius: 6px;
   min-width: 575px;
   min-height: 40px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 14;
+  font-size: 14px;
   line-height: 21px;
 }
 
 .Login__table_verif {
-  margin: 10px 0 10px 0;
+  margin: 10px 0;
 }
 
 .Login__table_verif {

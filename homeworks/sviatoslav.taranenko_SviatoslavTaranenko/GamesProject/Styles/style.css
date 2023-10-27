@@ -32,11 +32,11 @@ body {
 
 .header__items a {
   text-decoration: none;
-  color: #FFFFFF;
+  color: #FFF;
 }
 
 .header__items_Games {
-  color: #FFFFFF;
+  color: #FFF;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -48,7 +48,8 @@ body {
   text-decoration: underline;
 }
 
-.header__items_About {color: #FFFFFF;
+.header__items_About {
+  color: #FFF;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -61,7 +62,7 @@ body {
 }
 
 .header__items_Login {
-  color: #FFFFFF;
+  color: #FFF;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -72,7 +73,6 @@ body {
 .header__items_Login:active {
   text-decoration: underline;
 }
-
 
 .about .about__all {
   margin: 60px;

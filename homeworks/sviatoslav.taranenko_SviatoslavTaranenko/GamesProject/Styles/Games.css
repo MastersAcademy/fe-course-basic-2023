@@ -173,7 +173,7 @@ body {
 .Games .Games__cards .Games__cards_desc {
   margin-bottom: 15px;
   border-radius: 12px;
-  padding: 12px 12px 22px 12px;
+  padding: 12px 12px 22px;
   background-color: #ECECEC;
   height: 260px;
 }
