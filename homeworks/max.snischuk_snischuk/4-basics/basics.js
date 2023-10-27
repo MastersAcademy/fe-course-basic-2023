@@ -8,7 +8,7 @@ const division = num1 / num2;
 const remainder = num1 % num2;
 const exponent = num1 ** num2;
 
-const mathResultsNode = document.querySelector('.math-results');
+const mathResultsNode = document.querySelector('[data="math-results"]');
 
 const mathResultsTemplate = `
     <p class='math-operations'>Operation addition: ${num1} + ${num2} = ${addition}</p>
