@@ -8,7 +8,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/b3adce1055.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="./style/games.css">
+        <link rel="stylesheet" href="./style/main-games.css">
         <link rel="icon" type="image/x-icon" href="./img/logo.png">
         <title>Games</title>
     </head>
@@ -29,12 +29,58 @@
                                 <li>
                                     <a href="./about.html" class="menu__list-link">About</a>
                                 </li>
+                                <li>
+                                    <a href="./login.html" class="menu__list-link">Login</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
+        <section class="search">
+            <div class="search__contain">
+                <form action="#" class="search__form">
+                    <div class="form__select">
+                        <select name="genre" id="genre" class="genre" title="genre">
+                            <option value="genre" selected disabled hidden>Genre</option>
+                            <option value="sport">Sport</option>
+                            <option value="shooter">Shooter</option>
+                            <option value="racing">Racing</option>
+                            <option value="horror">Horror</option>
+                        </select>
+                    </div>
+                    <div class="radio">
+                        <label class="form__radio">
+                            <input class="inp__radio" type="radio" name="platformsOrOnline" value="platform">
+                            <span class="custom__radio"></span>
+                            Platform
+                        </label>
+                        <label class="form__radio">
+                            <input class="inp__radio" type="radio" name="platformsOrOnline" value="online games">
+                            <span class="custom__radio"></span>
+                            Online games
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label class="form__checkbox">
+                            <input class="inp__check" type="checkbox" name="newOrOld" value="new">
+                            <span class="custom__check"></span>
+                            New
+                        </label>
+                        <label class="form__checkbox">
+                            <input class="inp__check" type="checkbox" name="newOrOld" value="old">
+                            <span class="custom__check"></span>
+                            Old
+                        </label>
+                    </div>
+                    <div class="form__search">
+                        <input class="inp__search" type="search" placeholder="Search">
+                        <button class="search__button" type="submit">Apply</button>
+                    </div>
+                </form>
+            </div>
+        </section>
         <main>
             <div class="contain">
                 <div class="content">
