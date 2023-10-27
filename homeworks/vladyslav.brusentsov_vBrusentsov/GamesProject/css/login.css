@@ -66,7 +66,7 @@ body {
 }
 
 .login-main-checkbox label::before {
-  content: "✖";
+  content: "";
   width: 14px;
   height: 14px;
   border: 2px solid #EF4934;
@@ -77,13 +77,14 @@ body {
   line-height: 16px;
   font-size: 16px;
   color: #FFF;
+  transition: background-color 300ms;
 }
 
 .login-main-checkbox label:hover {
   cursor: pointer;
 }
 
-.login-main-checkbox input[type="checkbox"]:checked + label::before {
+.login-main-checkbox input:checked + label::before {
   background-color: #EF4934;
   color: #FFF;
 }
