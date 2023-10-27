@@ -8,7 +8,6 @@ body {
 header {
   max-width: 100%;
   background-color: #EF4934;
-  margin-bottom: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -28,11 +27,25 @@ header {
   text-decoration: none;
 }
 
-/*.nav-items a:visited {
+.game-page .nav-items .cards-link {
   text-decoration: underline;
-  text-underline-offset: 5px;
-  text-decoration-thickness: 0.01em;
-}*/
+  text-underline-offset: 7px;
+  text-decoration-thickness: 1px;
+}
+
+.about-page .nav-items .about-link {
+  text-decoration: underline;
+  text-underline-offset: 7px;
+  text-decoration-thickness: 1px;
+}
+
+.login-page .nav-items .login-link {
+  text-decoration: underline;
+  text-underline-offset: 7px;
+  text-decoration-thickness: 1px;
+}
+
+/*about page*/
 
 .intro {
   color: #221F1F;
@@ -44,6 +57,7 @@ header {
   gap: 70px;
   padding-left: 53px;
   padding-right: 53px;
+  margin-top: 60px;
 }
 
 .about-h1 {
@@ -54,17 +68,67 @@ header {
   margin-top: 0;
 }
 
+.link {
+  color: #EF4934;
+}
+
+/*cards page*/
+
+.filter {
+  background-color: #221F1F;
+  padding: 12px 53px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #FFF;
+}
+
+.filter-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filter-search {
+  display: flex;
+}
+
+.search-input {
+  margin-right: 0;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  padding: 12px 100px 12px 45px;
+  background-image: url("./images/search_logo.svg");
+  background-repeat: no-repeat;
+  background-position: 10px 9px;
+  border: #FFF;
+}
+
+.search-button {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  margin-left: 0;
+  color: #FFF;
+  background-color: #EF4934;
+  border: none;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.select-name {
+  border-radius: 6px;
+  padding: 13px;
+  background-color: #333;
+  color: #FFF;
+}
+
 .cards-h1 {
   color: #221F1F;
   font-size: 48px;
   font-weight: 700;
   line-height: 32px;
+  margin-top: 40px;
   margin-left: 53px;
-  margin-bottom: 50px;
-}
-
-.link {
-  color: #EF4934;
+  margin-bottom: 40px;
 }
 
 .cards {
@@ -111,4 +175,91 @@ header {
   font-size: 14px;
   line-height: 18px;
   margin-left: 10px;
+}
+
+/* login page */
+
+.login-h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+
+.login-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox-group {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 14px;
+  gap: 12px;
+}
+
+label[for="email"],
+label[for="password"],
+label[for="checkbox"] {
+  display: flex;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 22px;
+}
+
+input[type="email"],
+input[type="password"],
+.login-checkbox {
+  padding: 30px 450px 30px 20px ;
+  margin-bottom: 40px;
+  font-size: 14px;
+  border: .006rem solid #A9A9A9;
+  border-radius: 6px;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-bottom: 5px solid #EF4934;
+}
+
+.submit-button {
+  padding: 27px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #FFF;
+  background-color: #EF4934;
+  border: none;
+  border-radius: 6px;
+}
+
+/*success login page*/
+
+.successful-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.successful-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.back-button {
+  padding: 27px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #FFF;
+  background-color: #EF4934;
+  border: none;
+  border-radius: 6px;
 }

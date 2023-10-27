@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Login Page</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body class="login-page">
+        <header>
+            <img src="images/logo.svg" alt="Logo">
+            <div class="nav">
+                <ul class="nav-items">
+                    <li>
+                        <a class="cards-link" href="cards.html">Games</a>
+                    </li>
+                    <li>
+                        <a class="about-link" href="index.html">About</a>
+                    </li>
+                    <li>
+                        <a class="login-link" href="login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main class="login-main">
+            <h1 class="login-h1">
+                Login Page
+            </h1>
+            <section class="login-section">
+                <form class="login-form" action="success-page.html">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="check" name="robot" class="login-checkbox" required>
+                        <label for="check">I'm not a robot</label>
+                    </div>
+                    <input type="submit" value="Login" class="submit-button">
+                </form>
+            </section>
+        </main>
+    </body>
+</html>
