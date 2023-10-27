@@ -121,7 +121,7 @@ body {
   padding-left: 30px;
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
-  background-image: url(../img/Icons.png);
+  background-image: url("../img/Icons.png");
   background-position: left;background-size: 24px 24px;
   background-repeat: no-repeat;
   font-family: "Roboto", sans-serif;

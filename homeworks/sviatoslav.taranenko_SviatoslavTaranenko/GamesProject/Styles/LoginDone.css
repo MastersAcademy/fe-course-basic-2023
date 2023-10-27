@@ -1,6 +1,7 @@
 .Login_Done {
   margin: auto;
   max-width: 575px;
+}
 
 .Login_Done_title {
   display: flex;
@@ -19,7 +20,6 @@
   font-family: "Roboto", sans-serif;
   font-size: 48px;
   font-weight: 400;
-  line-height: 0px;
 }
 
 .Login__table_btn {
@@ -39,7 +39,7 @@
   font-family: "Roboto", sans-serif;
   font-size: 22px;
   font-weight: 600;
-  line-height: 25.78px;
+  line-height: 26px;
   color: #FFF;
   border: none;
   cursor: pointer;
