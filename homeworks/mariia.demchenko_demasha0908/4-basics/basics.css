@@ -4,17 +4,10 @@ body {
   color: #221F1F;
   font-weight: 400;
   line-height: 32px;
+  font-size: 22px;
 }
 
 .basics__text-title {
   font-size: 48px;
   font-weight: 700;
-}
-
-.basics__operations {
-  font-size: 22px;
-}
-
-.basics__text-info {
-  font-size: 22px;
 }
