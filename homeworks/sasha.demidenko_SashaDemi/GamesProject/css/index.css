@@ -23,7 +23,7 @@
 .about_header--ul {
   display: inline-grid;
   justify-items: end;
-  grid-template: 1fr/ 78px 78px;
+  grid-template: 1fr/ 78px 78px 78px;
   list-style-type: none;
   font-family: Roboto, sans-serif;
   margin: 34px 52px 34px 50px;

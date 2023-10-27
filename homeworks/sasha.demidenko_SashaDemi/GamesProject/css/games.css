@@ -29,7 +29,7 @@
 .games_header--ul {
   display: inline-grid;
   justify-items: end;
-  grid-template: 1fr/ 78px 78px;
+  grid-template: 1fr/ 78px 78px 78px;
   list-style-type: none;
   font-family: Roboto, sans-serif;
   margin: 34px 52px 34px 50px;
@@ -50,6 +50,67 @@
   font-size: 48px;
   line-height: 32px;
   margin-left: 150px;
+}
+
+.form_section {
+  font-family: Roboto, sans-serif;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  background-color: #221F1F;
+  color: #FFF;
+}
+
+.select_type {
+  width: 100px;
+  height: 36px;
+  border-radius: 6px;
+  border-color: #221F1F;
+  background: #333;
+  color: #FFFF;
+  padding-left: 10px;
+  font-size: 14px;
+  margin-left: 53px;
+}
+
+.form_radio {
+  display: flex;
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 53px;
+}
+
+.form_radio--platform {
+  margin-right: 30px;
+}
+
+.form_checkbox {
+  display: flex;
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 53px;
+}
+
+.form_checkbox--new {
+  margin-right: 30px;
+}
+
+.form_input {
+  padding-left: 10px;
+  border-radius: 6px 0 0 6px;
+  height: 36px;
+  width: 377px;
+  border: solid;
+  margin-left: 450px;
+}
+
+.form_input--button {
+  border-radius: 0 6px 6px 0;
+  background: #EF4934;
+  color: #FFFF;
+  border: solid #EF4934;
+  height: 38px;
+  margin-left: -8px;
 }
 
 .cards_wrapper {
@@ -96,8 +157,9 @@
 
 .game_list {
   display: grid;
-  justify-content: center;
+  justify-content: start;
   font-size: 14px;
+  margin-left: 12px;
 }
 
 .game_subtitle--style {
