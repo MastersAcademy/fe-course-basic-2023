@@ -52,6 +52,7 @@ body {
   display: flex;
   align-items: center;
   column-gap: 64px;
+  border: none;
 }
 
 .filters__input {
@@ -120,6 +121,7 @@ body {
 
 .filters__search {
   display: flex;
+  border: none;
 }
 
 .filters__search-input {
