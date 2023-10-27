@@ -11,6 +11,8 @@
         <link rel="stylesheet" type="text/css" href="styles/styles.css">
         <link rel="stylesheet" type="text/css" href="styles/header.css">
         <link rel="stylesheet" type="text/css" href="styles/games.css">
+        <link rel="stylesheet" type="text/css" href="styles/custom-checkbox.css">
+        <link rel="stylesheet" type="text/css" href="styles/filter.css">
         <title>GamesProject</title>
     </head>
     <body>
@@ -32,6 +34,39 @@
                 </nav>
             </header>
             <main>
+                <form action="" class="filter">
+                    <label for="filter__select">
+                        <select id="filter__select" name="genre" class="filter__select">
+                            <option class="select__option" selected value="genre">Genre</option>
+                            <option class="select__option" value="sport">Sport</option>
+                            <option class="select__option" value="shooter">Shooter</option>
+                            <option class="select__option" value="racing">Racing</option>
+                            <option class="select__option" value="horror">Horror</option>
+                        </select>
+                    </label>
+                    <label for="type-games-1" class="radio-text">
+                        <input type="radio" name="type-games" class="radio-input" id="type-games-1">
+                        Platform
+                    </label>
+                    <label for="type-games-2" class="radio-text">
+                        <input type="radio" name="type-games" class="radio-input" id="type-games-2">
+                        Online games
+                    </label>
+                    <label for="age-1" class="checkbox-text">
+                        <input type="checkbox" class="checkbox-input" id="age-1">
+                        New
+                    </label>
+                    <label for="age-2" class="checkbox-text">
+                        <input type="checkbox" class="checkbox-input" id="age-2">
+                        Old
+                    </label>
+                    <div>
+                        <label for="filter__search">
+                            <input type="text" id="filter__search" class="filter__search" placeholder="Search">
+                        </label>
+                        <button type="submit" class="filter__btn">Apply</button>
+                    </div>
+                </form>
                 <h1 class="title">Study project "Games"</h1>
                 <div class="cards">
                     <div class="card">
