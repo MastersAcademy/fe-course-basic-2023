@@ -35,6 +35,10 @@
   padding-bottom: 26px;
 }
 
+.login__input:focus::placeholder {
+  color: #221F1F;
+}
+
 .label-checkbox {
   font-size: 14px;
   line-height: 21px;
