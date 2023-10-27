@@ -5,7 +5,8 @@
   font-size: 25px;
   align-items: end;
   color: #ECECEC;
-  margin-left: 200px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .header {
@@ -16,7 +17,6 @@
   Width: 1280px;
   Height: 80px;
   background-color: #EF4934;
-  padding: 20px;
 }
 
 .name {
