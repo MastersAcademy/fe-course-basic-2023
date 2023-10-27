@@ -4,9 +4,9 @@ body {
   padding: 0;
 }
 
-/* навігаційне меню */
+/* navigation menu */
 
-header {
+.header__page {
   background-color: #333;
   color: #FFF;
 }
@@ -15,7 +15,7 @@ header {
   margin: 25px auto 25px 53px;
 }
 
-header, .logo {
+.header__page, .logo {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,6 +26,8 @@ header, .logo {
   width: 190px;
   height: 30px;
 }
+
+/* navigation settings */
 
 .navigation {
   display: flex;
@@ -48,13 +50,18 @@ header, .logo {
   color: #FFF;
 }
 
+/*
+class that defines how the button of the
+page we are on will behave
+*/
+
 .active {
   text-decoration: underline;
 }
 
-/* основний вміст */
+/* main information */
 
-article {
+main {
   display: flex;
   justify-content: space-between;
   gap: 68px;

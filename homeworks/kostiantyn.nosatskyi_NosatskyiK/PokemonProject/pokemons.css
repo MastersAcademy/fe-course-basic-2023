@@ -4,9 +4,9 @@ body {
   padding: 0;
 }
 
-/* навігаційне меню */
+/* navigation menu */
 
-header {
+.header__page {
   background-color: #333;
   color: #FFF;
 }
@@ -15,7 +15,7 @@ header {
   margin: 25px auto 25px 53px;
 }
 
-header, .logo {
+.header__page, .logo {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,6 +25,8 @@ header, .logo {
   width: 190px;
   height: 30px;
 }
+
+/* navigation settings */
 
 .navigation {
   display: flex;
@@ -47,11 +49,16 @@ header, .logo {
   color: #FFF;
 }
 
+/*
+class that defines how the button of the
+page we are on will behave
+*/
+
 .active {
   text-decoration: underline;
 }
 
-/* основний вміст */
+/* main information */
 
 .title__txt {
   font-size: 48px;
@@ -60,6 +67,8 @@ header, .logo {
   line-height: 32px;
   margin: 40px auto auto 52px;
 }
+
+/* positioning of cards on the page */
 
 .card {
   display: flex;
@@ -74,6 +83,8 @@ header, .logo {
   background-color: #ECECEC;
   border-radius: 12px;
 }
+
+/* the image that is on the card */
 
 .card__information-img {
   background-color: #FDB714;
@@ -112,6 +123,8 @@ header, .logo {
   flex-direction: column;
   gap: 16px;
 }
+
+/* setting values and properties of the hero */
 
 .property {
   font-weight: 600;
