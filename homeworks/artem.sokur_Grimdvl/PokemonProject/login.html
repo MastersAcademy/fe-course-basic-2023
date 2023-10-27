@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://fonts.google.com/share?selection.family=Roboto:wght@100;300;700">
         <link rel="stylesheet" href="style/style.css">
-        <link rel="stylesheet" href="style/about.css">
+        <link rel="stylesheet" href="style/login.css">
         <title>PokemonProject</title>
     </head>
     <body>
@@ -19,45 +19,31 @@
     
                     <nav class="head__navigation">
                         <a class="head__navigation-item" href="pokemons.html">Pokemons</a>
-                        <a class="head__navigation-item active" href="#">About</a>
-                        <a class="head__navigation-item" href="login.html">Login</a>
+                        <a class="head__navigation-item" href="index.html">About</a>
+                        <a class="head__navigation-item active" href="#">Login</a>
                     </nav>
                 </section>
             </div>
         </header>
 
         <main>
-            <section class="about">
-                <div class="about__logo">
-                    <img class="about__logo-pokemon" src="img/pokemon-title.png" alt="Pokemon">
-                    <div class="about__logo__pokemon">
-                        <div class="about__logo__pokemon-ball"></div>
+            <section class="login">
+                <h1 class="login__title">Login page</h1>
+                <form class="login__form" action="success.html">
+                    <div class="login__form-input">
+                        <label for="email">Email</label>
+                        <input id="email" placeholder="Enter your email address" name="email" type="email" required>
                     </div>
-                </div>
-
-                <div class="about__text">
-                    <h1 class="about__text-title">About me</h1>
-
-                    <p class="about__text-subscription">
-                        Hi! My name is Artem Sokur and I'm a Junior Frontend Developer. I am already familiar with main Web Technologies like HTML, CSS, JavaScript and Git version control system.
-                    </P>
-
-                    <p class="about__text-subscription">
-                        This page was developed during the course 
-                        <a class="about__text-contact" href="https://www.mastersacademy.education/frontend-for-beginners-it">
-                            'Frontend for beginners' from Masters Academy in 2023.
-                        </a>
-                    </P>
-
-                    <p class="about__text-subscription">
-                        This is a social project from MOCG company where I got an opportunity to work with Frontend mentors and to create my own small project for the portfolio.
-                    </P>
-
-                    <p class="about__text-subscription">
-                        You can contact me via <a class="about__text-contact" href="https://t.me/Grim_679">Telegram</a>
-                        and/or check out my <a class="about__text-contact" href="https://github.com/Grimdvl">GitHub</a>.
-                    </p>
-                </div>
+                    <div class="login__form-input">
+                        <label for="password">Password</label>
+                        <input id="password" placeholder="Enter your password" name="password" type="password" required minlength="4">
+                    </div>
+                    <div class="login__form-checkbox">
+                        <input id="checkbox" name="checkbox" type="checkbox" required>
+                        <label for="checkbox">I'm not a robot</label>
+                    </div>
+                    <button type="submit" class="login__form--submit">Login</button>
+                </form>
             </section>
         </main>
 
