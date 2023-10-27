@@ -28,15 +28,17 @@
             </nav>
         </header>
         <main>
-            <form class="login" action="./login-success.html">
+            <form class="login" action="./login-success.html" method="post">
                 <h2 class="login__title">Login page</h2>
                 <label class="login__label">
                     Email
-                    <input class="login__field" type="email" placeholder="Enter your email address" required>
+                    <input class="login__field" type="email" placeholder="Enter your email address"
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
                 </label>
                 <label class="login__label">
                     Password
-                    <input class="login__field" type="password" placeholder="Enter your password" required>
+                    <input class="login__field" type="password" placeholder="Enter your password" required minlength="8"
+                        maxlength="20">
                 </label>
                 <input class="login__checkbox-input" type="checkbox" id="check" required>
                 <label class="login__checkbox-custom" for="check">I'm not a robot</label>
