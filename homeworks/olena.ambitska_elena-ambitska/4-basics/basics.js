@@ -1,16 +1,25 @@
-const VALUE_FIRST = 5;
-const VALUE_SECOND = 7;
 const FIELD = document.getElementById('field');
+const FORM_SUBMIT = document.querySelector('.count__button');
 
-const TEMPLATE = `
+function updateTemplate(num1, num2) {
+    const TEMPLATE = `
     <ul>
-        <li><b>Additional operation: </b>${VALUE_FIRST} + ${VALUE_SECOND} = ${VALUE_FIRST + VALUE_SECOND};</li>
-        <li><b>Substract operation: </b>${VALUE_FIRST} - ${VALUE_SECOND} =${VALUE_FIRST - VALUE_SECOND};</li>
-        <li><b>Multiplication  operation: </b>${VALUE_FIRST} * ${VALUE_SECOND} = ${VALUE_FIRST * VALUE_SECOND};</li>
-        <li><b>Division  operation: </b>${VALUE_FIRST} / ${VALUE_SECOND} = ${(VALUE_FIRST / VALUE_SECOND).toFixed(2)};</li>
-        <li><b>Modulo: </b>${VALUE_FIRST} % ${VALUE_SECOND} = ${VALUE_FIRST % VALUE_SECOND};</li>
-        <li><b>Exponentiation operation: </b>${VALUE_FIRST} ** ${VALUE_SECOND} = ${VALUE_FIRST ** VALUE_SECOND};</li>
+        <li><b>Additional operation: </b>${num1} + ${num2} = ${num1 + num2};</li>
+        <li><b>Substract operation: </b>${num1} - ${num2} =${num1 - num2};</li>
+        <li><b>Multiplication  operation: </b>${num1} * ${num2} = ${num1 * num2};</li>
+        <li><b>Division  operation: </b>${num1} / ${num2} = ${(num1 / num2).toFixed(2)};</li>
+        <li><b>Modulo: </b>${num1} % ${num2} = ${num1 % num2};</li>
+        <li><b>Exponentiation operation: </b>${num1} ** ${num2} = ${num1 ** num2};</li>
     </ul>
 `;
 
-FIELD.insertAdjacentHTML('beforeend', TEMPLATE);
+    FIELD.innerHTML = '';
+    FIELD.insertAdjacentHTML('beforeend', TEMPLATE);
+}
+FORM_SUBMIT.addEventListener('click', (e) => {
+    e.preventDefault();
+    const num1 = +document.querySelector('.counter__input--first').value;
+    const num2 = +document.querySelector('.counter__input--second').value;
+
+    updateTemplate(num1, num2);
+});

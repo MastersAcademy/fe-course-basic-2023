@@ -2,10 +2,21 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="../GamesProject/styles/reset.css">
+        <link rel="stylesheet" href="../GamesProject/styles/main.css">
         <title>Basic JS</title>
     </head>
     <body>
-        <h1>Basic math operation</h1>
+        <h1 class="section__title">Basic math operation</h1>
+        <form class="counter">
+            <label>
+                <input type="number" placeholder="Add the first number" class="counter__input--first" value="">
+            </label>
+            <label>
+                <input type="number" placeholder="Add the second number" class="counter__input--second">
+            </label>
+            <input type="submit" value="Count" class="count__button">
+        </form>
         <div id="field"></div>
         <script src="./basics.js"></script>
     </body>
