@@ -81,6 +81,7 @@ body {
   background-color: #333;
   border-radius: 6px;
   padding-left: 12px;
+  cursor: pointer;
 }
 
 .select-option {
@@ -99,6 +100,7 @@ body {
   border: 2px solid #FFF;
   border-radius: 50%;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .radio-select__btn:checked::before {
@@ -112,10 +114,12 @@ body {
   justify-content: space-around;
   left: 4px;
   top: 4px;
+  cursor: pointer;
 }
 
 .radio-select__btn:checked {
   border: 3px solid #FFF;
+  cursor: pointer;
 }
 
 .checkbox__game-date {
@@ -195,6 +199,12 @@ body {
   color: #FFF;
   background: #EF4934;
   border-radius: 0 6px 6px 0;
+  cursor: pointer;
+}
+
+.search__btn:hover {
+  background-color: #C03A24FF;
+  cursor: pointer;
 }
 
 @media (max-width: 800px) {
