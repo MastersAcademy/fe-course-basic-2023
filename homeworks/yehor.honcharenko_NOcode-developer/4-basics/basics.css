@@ -1,5 +1,5 @@
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #221F1F;
   font-weight: 400;
   line-height: 32px;
@@ -7,7 +7,7 @@ body {
 }
 
 .body__title {
-   font-weight: 700;
-   font-size: 48px;
-   line-height: 32px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 32px;
 }

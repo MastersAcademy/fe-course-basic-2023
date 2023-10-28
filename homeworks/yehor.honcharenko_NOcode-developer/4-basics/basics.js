@@ -1,13 +1,13 @@
-let firstNumber = 0;
-let secondNumber = 7;
-let thirdNumber = 73;
+const firstNumber = 0;
+const secondNumber = 7;
+const thirdNumber = 73;
 
-let x1 = firstNumber + thirdNumber;
-let x2 = secondNumber - firstNumber;
-let x3 = firstNumber * secondNumber;
-let x4 = secondNumber / firstNumber;
-let x5 = secondNumber % thirdNumber;
-let x6 = secondNumber ** thirdNumber;
+const x1 = firstNumber + thirdNumber;
+const x2 = secondNumber - firstNumber;
+const x3 = firstNumber * secondNumber;
+const x4 = secondNumber / firstNumber;
+const x5 = secondNumber % thirdNumber;
+const x6 = secondNumber ** thirdNumber;
 
 console.log(`Operation addition: ${firstNumber} + ${thirdNumber} = ${x1}`);
 console.log(`Operation addition: ${secondNumber} - ${firstNumber} = ${x2}`);
