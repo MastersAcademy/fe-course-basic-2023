@@ -1,4 +1,4 @@
-h1 {
+.title {
   display: flex;
   justify-content: center;
   color: #221F1F;
@@ -8,7 +8,7 @@ h1 {
   line-height: 40px;
 }
 
-div {
+.results {
   font-family: "Roboto", sans-serif;
   display: grid;
   grid-row: auto;
