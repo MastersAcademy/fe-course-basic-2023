@@ -1,12 +1,13 @@
 .menu {
   display: flex;
+  flex-direction: row;
   width: 234px;
   height: 18px;
   font-size: 25px;
-  align-items: end;
+  float: right;
   color: #ECECEC;
   margin-left: 10px;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .header {
@@ -14,9 +15,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  Width: 1280px;
-  Height: 80px;
+  Width: 100%;
   background-color: #EF4934;
+  padding: 20px;
+  padding-right: 180px;
 }
 
 .name {
@@ -29,7 +31,7 @@
 .picture {
   display: flex;
   flex-direction: row;
-  width: 1175px;
+  max-width: 1175px;
   height: 479px;
   top: 140 px;
   left: 53px;
@@ -146,4 +148,36 @@
   margin: 0;
   padding: 0;
   width: 1175px;
+}
+
+.title {
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+}
+
+.login {
+  width: 575px;
+  height: 520px;
+  margin-top: 160px;
+  margin-left: 353px;
+}
+
+.inside_login {
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+}
+
+button {
+  background-color: #EF4934;
+  width: 575px;
+  height: 60px;
+  color: #ECECEC;
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+}
+
+.password {
+  width: 575px;
+  height: 60px;
 }
