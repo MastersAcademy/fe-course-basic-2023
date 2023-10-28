@@ -1,0 +1,24 @@
+.intro {
+  color: #221F1F;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 32px;
+  display: flex;
+  justify-content: space-between;
+  gap: 70px;
+  padding-left: 53px;
+  padding-right: 53px;
+  margin-top: 60px;
+}
+
+.about-h1 {
+  color: #221F1F;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 32px;
+  margin-top: 0;
+}
+
+.link {
+  color: #EF4934;
+}
