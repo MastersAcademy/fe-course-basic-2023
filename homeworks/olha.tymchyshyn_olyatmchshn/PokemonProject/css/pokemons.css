@@ -44,6 +44,101 @@ html {
   color: #F04934;
 }
 
+/* FILTER STYLES */
+
+.filter {
+  width: 100%;
+  height: 60px;
+  background: #221F1F;
+}
+
+form {
+  width: 1280px;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+select {
+  border-radius: 6px;
+  border-width: 0;
+  background: #333;
+  color: #FFF;
+  font-family: Roboto;
+  width: 114px;
+  height: 36px;
+}
+
+.radio-container {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.radio-span {
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #333;
+}
+
+.checkbox-container {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #333;
+}
+
+label {
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.search-container {
+  display: flex;
+  gap: 0;
+}
+
+input[type="search"] {
+  width: 377px;
+  height: 36px;
+  border-width: 0;
+  border-radius: 6px 0 0 6px;
+  background: #FFF;
+}
+
+button {
+  border-radius: 0 6px 6px 0;
+  border-width: 0;
+  background: #EF4934;
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+  display: inline;
+  height: 36px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 /* POKEMONS CARDS SECTION STYLES*/
 
 .cards-page {
