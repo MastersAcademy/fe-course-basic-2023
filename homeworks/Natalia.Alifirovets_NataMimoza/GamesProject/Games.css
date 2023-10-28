@@ -1,18 +1,15 @@
-body {
-  margin: 0 auto;
-}
-
 .wrapper {
+  margin: 0 auto;
   max-width: 1280px;
   height: 1017px;
 }
 
-.Project {
+.project {
   background: #EF4934;
   height: 80px;
 }
 
-.header__in {
+.header-menu {
   padding: 0 52px 0 53px;
   height: 80px;
   display: flex;
@@ -21,7 +18,7 @@ body {
   position: relative;
 }
 
-.logo {
+.logo-box {
   width: 55px;
   height: 58px;
   position: relative;
@@ -46,13 +43,11 @@ body {
 
 .title {
   margin: 100px 652px 0 53px;
-}
-
-h1 {
   font-family: Roboto, serif;
   font-size: 48px;
   font-weight: 700;
 }
+
 /*Main*/
 
 .container {
@@ -66,7 +61,7 @@ h1 {
   position: relative;
 }
 
-.Card {
+.card {
   background: #ECECEC;
   width: 251px;
   height: 226px;
@@ -78,7 +73,7 @@ h1 {
   border-radius: 12px;
 }
 
-.image_header {
+.image-header {
   display: flex;
   justify-content: flex-start;
   flex-direction: row-reverse;
@@ -86,8 +81,6 @@ h1 {
   gap: 12px;
   align-items: flex-start;
   top: 0;
-  /*left: 12px;*/
-  /*z-index: 1000;*/
 }
 
 .header {
@@ -132,4 +125,8 @@ h1 {
   font-size: 14px;
   list-style: none;
   line-height: 21px;
+}
+
+.font {
+  font-weight: 600;
 }
