@@ -17,7 +17,7 @@
 .pokemons-cards__single-pokemon {
   width: 251px;
   height: 288px;
-  padding: 12px 12px 22px 12px;
+  padding: 12px 12px 22px;
   border-radius: 12px;
   background-color: #ECECEC;
   margin: 0 0 25px 25px;
