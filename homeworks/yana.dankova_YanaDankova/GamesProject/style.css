@@ -1,24 +1,34 @@
 .menu {
-  display: flex;
-  flex-direction: row;
-  width: 234px;
-  height: 18px;
-  font-size: 25px;
   float: right;
-  color: #ECECEC;
   margin-left: 10px;
-  margin-right: 20px;
+  padding-left: 20px;
+  margin-top: 15px;
+  color: #ECECEC;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
 }
 
 .header {
   color: #ECECEC;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  Width: 100%;
+  flex-direction: row;
+  max-width: 100%;
   background-color: #EF4934;
-  padding: 20px;
-  padding-right: 180px;
+}
+
+.logo {
+  height: 100%;
+  display: table;
+  float: left;
+  margin-right: 900px;
+}
+
+.inside_header {
+  width: 1200px;
+  height: 100%;
+  display: flex;
+  margin: 0 auto;
 }
 
 .name {
