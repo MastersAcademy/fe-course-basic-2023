@@ -33,14 +33,14 @@
   padding-left: 5px;
 }
 
-.checkbox-input input[type="checkbox"]:checked::before,
-.checkbox-input input[type="checkbox"]:not(:checked)::before {
+input[type="checkbox"]:checked::before,
+input[type="checkbox"]:not(:checked)::before {
   border-color: #FFF;
   background: #221F1F;
 }
 
-.checkbox-input input[type="checkbox"]:checked::after,
-.checkbox-input input[type="checkbox"]:not(:checked)::after {
+input[type="checkbox"]:checked::after,
+input[type="checkbox"]:not(:checked)::after {
   border-color: #FFF;
 }
 
