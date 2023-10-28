@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <link rel="stylesheet" href="https://fonts.gooleapis.com/css?family=Roboto">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>login</title>
+    </head>
+    <body>
+        <header>
+            <img src="logo.svg" alt="Logo">
+            <div class="nav">
+                <ul class="nav-items">
+                    <li>
+                        <a class="cards-link" href="game%20cards.html" title="Cards">Games</a>
+                    </li>
+                    <li>
+                        <a class="about-link" href="index.html" title="About">About</a>
+                        
+                    </li>
+                    <li>
+                        <a class="login-link" href="login.html" title="Login">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main class="main_login">
+            <h1 class="h1l">Login page</h1>
+            <form >
+                <label for="email">
+                    <h2>Email</h2>
+                </label>
+
+                <input class="input" type="email" id="email" name ="email" required>
+            </form>
+            <form>
+                <label for ="password">
+                    <h2>Password:</h2>
+                </label>
+                <input class="input" type="password" id="password" name="password" required>
+            </form>
+            <form>
+                <label for="checkbox"> I`m not a robot:</label>
+                <input class="checkbox" type="checkbox" id="checkbox" name="option" value="1">
+            </form>
+            <form action="Result.html">
+                <button class="button" type="submit">
+                    <h2>Login</h2>
+                </button>
+            </form>
+        </main>
+    </body>
+</html>
