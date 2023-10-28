@@ -1,6 +1,7 @@
 .main {
   display: flex;
   flex-direction: column;
+  min-width: 1280px;
   max-width: 100%;
 }
 
@@ -12,13 +13,15 @@
   background: #EF4934;
   height: 80px;
   display: grid;
-  grid-template: 1fr/ 996px 1fr;
+  grid-template: 1fr/ 1fr 1fr;
+  min-width: 1280px;
+  width: 100%;
 }
 
 .games_header--logo {
   width: 55px;
   height: 57px;
-  margin: 11px 1172px 11px 53px;
+  margin: 11px 0 11px 60px;
 }
 
 .games_header--nav {
@@ -32,7 +35,8 @@
   grid-template: 1fr/ 78px 78px 78px;
   list-style-type: none;
   font-family: Roboto, sans-serif;
-  margin: 34px 52px 34px 50px;
+  padding-right: 60px;
+  align-items: center;
 }
 
 .games_li--underline {
@@ -49,17 +53,26 @@
   font-family: Roboto, sans-serif;
   font-size: 48px;
   line-height: 32px;
-  margin-left: 150px;
+  margin-left: 60px;
+}
+
+.section_main {
+  min-width: 1280px;
+  width: 100%;
 }
 
 .form_section {
+  min-width: 1280px;
+  width: 100%;
   font-family: Roboto, sans-serif;
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
   height: 60px;
   background-color: #221F1F;
   color: #FFF;
 }
+
 
 .select_type {
   width: 100px;
@@ -70,29 +83,19 @@
   color: #FFFF;
   padding-left: 10px;
   font-size: 14px;
-  margin-left: 53px;
+  margin-left: 10px;
 }
 
 .form_radio {
   display: flex;
   font-size: 14px;
   font-weight: 400;
-  margin-left: 53px;
-}
-
-.form_radio--platform {
-  margin-right: 30px;
 }
 
 .form_checkbox {
   display: flex;
   font-size: 14px;
   font-weight: 400;
-  margin-left: 53px;
-}
-
-.form_checkbox--new {
-  margin-right: 30px;
 }
 
 .form_input {
@@ -101,7 +104,6 @@
   height: 36px;
   width: 377px;
   border: solid;
-  margin-left: 450px;
 }
 
 .form_input--button {
@@ -117,7 +119,7 @@
   display: grid;
   max-width: 100%;
   grid-template: repeat(2, 1fr)/repeat(4, 1fr);
-  margin-left: 135px;
+  justify-items: center;
 }
 
 .game_container {

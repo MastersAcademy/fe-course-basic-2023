@@ -6,13 +6,15 @@
   background: #EF4934;
   height: 80px;
   display: grid;
-  grid-template: 1fr/ 996px 1fr;
+  grid-template: 1fr/ 1fr 1fr;
+  min-width: 1280px;
+  width: 100%;
 }
 
 .login_header--logo {
   width: 55px;
   height: 57px;
-  margin: 11px 1172px 11px 53px;
+  margin: 11px 0 11px 60px;
 }
 
 .login_header--nav {
@@ -26,7 +28,8 @@
   grid-template: 1fr/ 78px 78px 78px;
   list-style-type: none;
   font-family: Roboto, sans-serif;
-  margin: 34px 52px 34px 50px;
+  padding-right: 60px;
+  align-items: center;
 }
 
 .login_li--underline {
