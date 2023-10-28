@@ -2,22 +2,30 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="../GamesProject/styles/reset.css">
-        <link rel="stylesheet" href="../GamesProject/styles/main.css">
+        <link rel="stylesheet" href="../GamesProject/styles/styles.css">
+        <link rel="stylesheet" href="styles.css">
         <title>Basic JS</title>
     </head>
     <body>
-        <h1 class="section__title">Basic math operation</h1>
-        <form class="counter">
-            <label>
-                <input type="number" placeholder="Add the first number" class="counter__input--first" value="">
-            </label>
-            <label>
-                <input type="number" placeholder="Add the second number" class="counter__input--second">
-            </label>
-            <input type="submit" value="Count" class="count__button">
-        </form>
-        <div id="field"></div>
+        <main class="counter__section">
+            <h1 class="section__title">Basic math operation</h1>
+            <form class="counter">
+                <div class="form-group">
+                    <label for="value-first"></label>
+                    <input type="number" id="value-first" placeholder="Add the first number" class="counter__input--first input__field" value="">
+                </div>
+
+                <div class="form-group">
+                    <label for="value-second"></label>
+                    <input type="number" id="value-second" placeholder="Add the second number" class="counter__input--second input__field" value="">
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Count" class="count__button primary__button">
+                </div>
+            </form>
+            <div id="field"></div>
+        </main>
         <script src="./basics.js"></script>
     </body>
 </html>

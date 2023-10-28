@@ -3,10 +3,10 @@ const FORM_SUBMIT = document.querySelector('.count__button');
 
 function updateTemplate(num1, num2) {
     const TEMPLATE = `
-    <ul>
-        <li><b>Additional operation: </b>${num1} + ${num2} = ${num1 + num2};</li>
-        <li><b>Substract operation: </b>${num1} - ${num2} =${num1 - num2};</li>
-        <li><b>Multiplication  operation: </b>${num1} * ${num2} = ${num1 * num2};</li>
+    <ul class="counter__template">
+        <li><b>Additional operation: </b>${num1} + ${num2} = ${Math.round(num1 + num2)};</li>
+        <li><b>Substract operation: </b>${num1} - ${num2} = ${num1 - num2};</li>
+        <li><b>Multiplication  operation: </b>${num1} * ${num2} = ${Math.round(num1 * num2)};</li>
         <li><b>Division  operation: </b>${num1} / ${num2} = ${(num1 / num2).toFixed(2)};</li>
         <li><b>Modulo: </b>${num1} % ${num2} = ${num1 % num2};</li>
         <li><b>Exponentiation operation: </b>${num1} ** ${num2} = ${num1 ** num2};</li>
@@ -22,7 +22,7 @@ FORM_SUBMIT.addEventListener('click', (e) => {
     const num2 = document.querySelector('.counter__input--second').value;
 
     if (num1 === '' || num2 === '') {
-        FIELD.innerHTML = '<p>Fill fields by numbers</p>';
+        FIELD.innerHTML = '<p class="warning">Fill fields by numbers</p>';
         return;
     }
 
