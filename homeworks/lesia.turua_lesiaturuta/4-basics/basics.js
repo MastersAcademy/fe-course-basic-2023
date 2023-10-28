@@ -1,28 +1,28 @@
-const X = 2;
-const Y = 5;
+const x = 2;
+const y = 5;
 
-const addition = X + Y;
-const difference = Y - X;
-const product = X * Y;
-const quotient = Y / X;
-const remainder = X % Y;
-const power = X ** Y;
+const addition = x + y;
+const difference = y - x;
+const product = x * y;
+const quotient = y / x;
+const remainder = x % y;
+const power = x ** y;
 
 // Return elements
-const additionEl = document.querySelector('.addition');
-const differenceEl = document.querySelector('.difference');
-const productEl = document.querySelector('.product');
-const quotientEl = document.querySelector('.quotient');
-const remainderEl = document.querySelector('.remainder');
-const powerEl = document.querySelector('.power');
+const additionEl = document.querySelector('[data-addition]');
+const differenceEl = document.querySelector('[data-difference]');
+const productEl = document.querySelector('[data-product]');
+const quotientEl = document.querySelector('[data-quotient]');
+const remainderEl = document.querySelector('[data-remainder]');
+const powerEl = document.querySelector('[data-power]');
 
 // Create strings
-const stringAddition = `Додавання: ${X} + ${Y} = ${addition}`;
-const stringDifference = `Віднімання: ${Y} - ${X} = ${difference}`;
-const stringProduct = `Множення: ${X} * ${Y} = ${product}`;
-const stringQuotient = `Ділення: ${Y} / ${X} = ${quotient}`;
-const stringRemainder = `Залишок від ділення: ${X} % ${Y} = ${remainder}`;
-const stringPower = `Піднесення до степеня: ${X} ** ${Y} = ${power}`;
+const stringAddition = `${x} + ${y} = ${addition}`;
+const stringDifference = `${y} - ${x} = ${difference}`;
+const stringProduct = `${x} * ${y} = ${product}`;
+const stringQuotient = `${y} / ${x} = ${quotient}`;
+const stringRemainder = `${x} % ${y} = ${remainder}`;
+const stringPower = `${x} ** ${y} = ${power}`;
 
 // Sent text in HTML
 if (additionEl) {
@@ -44,13 +44,21 @@ if (powerEl) {
     powerEl.innerHTML = stringPower;
 }
 
+// names for alert and console.log
+const nameAddition = 'Додавання';
+const nameDifference = 'Віднімання';
+const nameProduct = 'Множення';
+const nameQuotient = 'Ділення';
+const nameRemainder = 'Залишок від ділення';
+const namePower = 'Піднесення до степеня';
+
 // Sent text in alert
-alert(`${stringAddition} \n ${stringDifference} \n ${stringProduct} \n ${stringQuotient} \n ${stringRemainder} \n ${stringPower}`);
+alert(`${nameAddition}: ${stringAddition} \n ${nameDifference}: ${stringDifference} \n ${nameProduct}: ${stringProduct} \n ${nameQuotient}: ${stringQuotient} \n ${nameRemainder}: ${stringRemainder} \n ${namePower}: ${stringPower}`);
 
 // Sent text in log
-console.log(stringAddition);
-console.log(stringDifference);
-console.log(stringProduct);
-console.log(stringQuotient);
-console.log(stringRemainder);
-console.log(stringPower);
+console.log(`${nameAddition}: ${stringAddition}`);
+console.log(`${nameDifference}: ${stringDifference}`);
+console.log(`${nameProduct}: ${stringProduct}`);
+console.log(`${nameQuotient}: ${stringQuotient}`);
+console.log(`${nameRemainder}: ${stringRemainder}`);
+console.log(`${namePower}: ${stringPower}`);
