@@ -130,6 +130,8 @@ body {
 
 .login {
   margin-top: 80px;
+  max-width: 575px;
+  width: 100%;
 }
 
 .login__form {
@@ -142,6 +144,8 @@ body {
   color: #221F1F;
   font-size: 48px;
   font-weight: 700;
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 .login__input-wrapp {
@@ -150,15 +154,74 @@ body {
   gap: 22px;
 }
 
+.login__checkbox-wrapp {
+  display: flex;
+  gap: 12px;
+}
+
 .login__lable {
   color: #221F1F;
   font-size: 22px;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .login__input {
-  height: 70px;
   border-radius: 6px;
   border: .6px solid #A9A9A9;
   background: #FFF;
+  padding: 30px 20px;
+  outline: transparent;
+}
+
+.login__input:focus, .login__input:focus-visible {
+  border-bottom: 5px solid #EF4934;
+  padding-bottom: 26px;
+}
+
+.login__input::placeholder {
+  color: #A9A9A9;
+  user-select: none;
+}
+
+.login__checkbox-wrapp {
+  cursor: pointer;
+}
+
+.login__checkbox-checkmark {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 1px solid #EF4934;
+  background: #FFF;
+}
+
+.login__checkbox-wrapp .login__checkbox-input:checked ~ .login__checkbox-checkmark {
+  background-image: url("./images/checkbox.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.login__checkbox-lable {
+  user-select: none;
+}
+
+.login__checkbox-input {
+  display: none;
+}
+
+.login__submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  height: 70px;
+  border-radius: 6px;
+  background: #EF4934;
+  box-shadow: 0 4px 30px 0 rgba(38, 58, 67, .15);
+  color: #FFF;
+  font-size: 22px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
 }
