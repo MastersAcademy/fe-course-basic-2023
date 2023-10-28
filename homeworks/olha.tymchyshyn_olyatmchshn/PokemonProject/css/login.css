@@ -8,29 +8,27 @@ html {
 .page-header {
   background-color: #333;
   width: 100%;
-  height: 80px;
 }
 
 .page-header-container {
   display: flex;
-  gap: 725px;
+  justify-content: space-between;
   max-width: 1280px;
+  height: 80px;
+  align-items: center;
 }
 
 .logo {
   width: 190px;
-  margin-top: 25px;
   margin-left: 53px;
 }
 
 .nav-menu {
+  width: 260px;
   list-style-type: none;
   display: flex;
-  gap: 50px;
-}
-
-.nav-menu {
-  margin-top: 34px;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .nav-menu-item-link {
