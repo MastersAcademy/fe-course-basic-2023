@@ -5,11 +5,19 @@
   font-family: Roboto;
 }
 
+body {
+  width: 100%;
+}
+
 .header {
   display: grid;
   background-color: #EF4934;
   height: 80px;
+  width: inherit;
   grid-template-columns: 10fr 3fr;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
 }
 
 .logo {
@@ -63,12 +71,17 @@
 }
 
 .games__main {
-  margin-top: 40px;
+  position: relative;
+  top: 180px;
 }
 
 .about__main {
-  margin-top: 60px;
+  position: absolute;
+  top: 140px;
+  left: 50%;
+  transform: translateX(-50%);
   display: inline-grid;
+  margin: 0 auto;
   grid-template-columns: repeat(2, 1fr);
   gap: 63px;
 }
@@ -105,7 +118,11 @@
   padding-right: 50px;
   align-items: center;
   height: 60px;
+  position: fixed;
+  width: inherit;
+  top: 80px;
   color: #FFF;
+  z-index: 9999;
 }
 
 .filter-element-padding {
