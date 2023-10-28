@@ -32,6 +32,51 @@ body {
   font-weight: 500;
 }
 
+/* Form */
+
+.form_games {
+  background-color: #221F1F;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input[type="radio"] {
+  margin-left: 70px;
+  border: #F2F2F2;
+}
+
+label[for="platform"],
+label[for="online"],
+label[for="new"],
+label[for="old"] {
+  color: #FFF;
+}
+
+
+input[type="submit"] {
+  background-color: #EF4934;
+  color: #FFF;
+  margin: 0;
+  padding: 12px 20px;
+  border-radius: 0 6px 6px 0;
+}
+
+.filter_search {
+  display: flex;
+}
+
+input[type="search"] {
+  background-image: url("./icon/search_form.svg");
+  background-position: 11px 7px;
+  background-repeat: no-repeat;
+  padding: 10px 90px 10px 50px;
+  border-radius: 6px;
+  margin-right: -7px;
+}
+/* --------- */
+
 .hero {
   display: flex;
   justify-content: space-between;
@@ -68,7 +113,7 @@ body {
 
 .footer {
   background-color: #221F1F;
-  padding: 20px;
+  padding: 30px;
 }
 
 .social {

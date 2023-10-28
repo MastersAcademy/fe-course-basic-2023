@@ -32,13 +32,46 @@
                         </li>
 
                         <li class="link">
-                            <a class="nav-link" href="#">Login</a>
+                            <a class="nav-link" href="./form.html">Login</a>
                         </li>
 
                     </ul>
                 </div>
             </div>
         </header>
+
+        <form class="form_games" action="#">
+            <div class="filter_select">
+                <label for="Name"></label>
+                <select id="Name" name="select">
+                    <option value="genre" selected disabled>Genre</option>
+                    <option value="sport">Sport</option>
+                    <option value="shooter">Shooter</option>
+                    <option value="racing">Racing</option>
+                    <option value="horror">Horror</option>
+                </select>
+            </div>
+
+            <div class="filter_radio">
+                <input type="radio" id="platform" name="radio" value="Platform">
+                <label for="platform">Platform</label>
+                <input type="radio" id="online" name="radio" value="Online_games">
+                <label for="online">Online games</label>
+            </div>
+
+            <div class="filter_boxes">
+                <input type="checkbox" class="filter_checkbox" id="New" name="New" value="New">
+                <label for="new">New</label>
+                <input type="checkbox" class="filter_checkbox" id="Old" name="Old" value="Old">
+                <label for="old">Old</label>
+            </div>
+
+            <div class="filter_search">
+                <input type="search" id="search" name="search" placeholder="Search">
+                <input type="submit" value="Apply">
+            </div>
+
+        </form>
 
         <h2 class="title_about">Study project "Games"</h2>
 
