@@ -167,3 +167,26 @@ input[type="submit"] {
   margin-bottom: 237px;
   cursor: pointer;
 }
+
+/* SUCCESS LOGIN STYLES */
+
+button[type="submit"] {
+  border-radius: 6px;
+  border-width: 0;
+  background-color: #EF4934;
+  width: 575px;
+  height: 70px;
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.success-page-container {
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 175px;
+}
