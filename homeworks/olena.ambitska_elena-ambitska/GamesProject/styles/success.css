@@ -1,0 +1,19 @@
+.success__page {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 24px;
+}
+
+.success__page .primary__button {
+  width: 100%;
+}
+
+.success__image {
+  position: relative;
+}
+
+.back__link {
+  color: var(--white);
+  text-decoration: none;
+}
