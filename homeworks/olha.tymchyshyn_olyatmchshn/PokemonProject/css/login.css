@@ -121,16 +121,22 @@ label {
   position: relative;
 }
 
+/* input[type="checkbox"] {
+  border-radius: 6px;
+  border: 1px solid #EF4934;
+  background: #221F1F;
+  width: 20px;
+  height: 20px;
+  accent-color: #EF4934;
+} */
+
 input[type="checkbox"] {
-  padding: 3px;
-  margin-bottom: 40px;
-  cursor: pointer;
-  display: none;
+  opacity: 0;
+  position: absolute;
 }
 
 .robotcheck-label::before {
   content: "";
-  background-color: transparent;
   border: 2px solid #EF4934;
   border-radius: 6px;
   padding: 8px;
