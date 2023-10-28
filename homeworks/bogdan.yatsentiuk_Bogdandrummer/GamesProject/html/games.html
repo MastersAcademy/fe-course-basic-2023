@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../styles/games.css">
+        <title>Games</title>
+    </head>
+
+    <body>
+        <!--Wrapper-->
+        <div class="wrapper">
+            <!--Header-->
+            <header class="head">
+                <!--Menu-->
+                <nav class="header__menu">
+                    <a href="https://www.mastersacademy.education/frontend-for-beginners-it" class="header__logo">
+                        <img src="../logo.svg" alt="logo">
+                    </a>
+                    <!--Menu list-->
+                    <ul class="menu__list">
+                        <li>
+                            <a class="menu__link-about" href="games.html">Games</a>
+                        </li>
+                        <li>
+                            <a class="menu__link-about" href="../index.html">About</a>
+                        </li>
+                        <li>
+                            <a class="menu__link-about" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <!--Main-->
+            <main class="main">
+                <!--Меню в Main-->
+                <form action="#" class="main__menu">
+                    <!--Input жанры-->
+                    <select list="genre__datalist" name="ganre__datalist" class="genres__inp" id="genres__inp" placeholder="Genres">
+                        <option class="option__item" value="Sport">Sport</option>
+                        <option class="option__item" value="Shooter">Shooter</option>
+                        <option class="option__item" value="Racing">Racing</option>
+                        <option class="option__item" value="Horror">Horror</option>
+                    </select>
+                    <!--Radio box-->
+                    <div class="radio__main">
+                        <input class="radio__input" type="radio" name="game" id="platform__ch1" value="Platform">
+                        <label class="radio__label" for="platform__ch1">Platform</label>
+                        <input class="radio__input online__ch2" type="radio" name="game" id="online__ch2" value="Online games">
+                        <label class="radio__label" for="online__ch2">Online games</label>
+                    </div>
+                    <!--Check box-->
+                    <div class="main__checkbox">
+                        <label class="check__label" for="date_1">
+                            <input class="check" type="checkbox" id="date_1" name="date" value="Old">
+                            <span class="custom__checkbox"></span>
+                            Old
+                        </label>
+                        <label class="check__label" for="date_2">
+                            <input class="check" type="checkbox" id="date_2" name="date" value="New">
+                            <span class="custom__checkbox"></span>
+                            New
+                        </label>
+                    </div>
+                    <!--Search-->
+                    <label class="main__search" for="search__input">
+                        <input type="search" class="search__input" id="search__input" name="search" placeholder="Search">
+                        <button class="search__button" type="button">Apply</button>
+                    </label>
+                </form>
+                <div class="content">
+                    <h1 class="games__title">Study project "Games"</h1>
+                    <!--Поле с карточками игр-->
+                    <section class="games__row">
+                        <!--Карточка-->
+                        <article class="games__item">
+                            <!--Картинка + title + subtitle-->
+                            <div class="item__top">
+                                <img class="game__logo" src="../games__logos/c1.jpg" alt="img__card">
+                                <div class="top__right">
+                                    <h4 class="game__title">Need For Speed</h4>
+                                    <p class="game__subtitle">Big changes come to the Overwatch formula in this sequel...</p>
+                                </div>
+                            </div>
+                            <!--Описание игры-->
+                            <div class="main__item">
+                                <div class="overview">
+                                    <h5 class="overview__title">Genre:</h5> Racing
+                                </div>
+                                <div class="overview">
+                                    <h5 class="overview__title">Platform:</h5> PC(Windows)
+                                </div>
+                                <div class="overview">
+                                    <h5 class="overview__title">Publisher:</h5> Activision Blizzard King
+                                </div>
+                                <div class="overview">
+                                    <h5 class="overview__title">Developer:</h5> Blizzard Enterteiment
+                                </div>
+                                <div class="overview">
+                                    <h5 class="overview__title">Release_date:</h5> 2022-10-04
+                                </div>
+                            </div>
+                        </article>
+                        <!--Карточка-->
+                        <article class="games__item">
+                            <!--Картинка + title + subtitle-->
+                            <div class="item__top">
+                                <img class="game__logo" src="../games__logos/c2.jpg" alt="img__card">
+                                <div class="top__right">
+                                    <h4 class="game__title">Call Of Duty</h4>
+                                    <p class="game__subtitle">Big changes come to the Overwatch formula in this sequel...</p>
+                                </div>
+                            </div>
+                            <!--Описание игры-->
+                            <div class="main__item">
+                                <div class="overview">
+                                    <h5 class="overview__title">Genre:</h5> Racing
+                                </div>
+                                <div class="overview">
+                                    <h5 class="overview__title">Platform:</h5> PC(Windows)
+                                </div>
+                                <div class="overview">
+                                    <h5 class="overview__title">Publisher:</h5> Activision Blizzard King
+                                </div>
+                                <div class="overview">
+                                    <h5 class="overview__title">Developer:</h5> Blizzard Enterteiment
+                                </div>
+                                <div class="overview">
+                                    <h5 class="overview__title">Release_date:</h5> 2022-10-04
+                                </div>
+                            </div>
+                        </article>
+                        <!--Карточка-->
+                        <article class="games__item">
+                            <!--Картинка + title + subtitle-->
+                            <div class="item__top">
+                                <img class="game__logo" src="../games__logos/c3.jpg" alt="img__card">
+                                <div class="top__right">
+                                    <h4 class="game__title">Battlefield</h4>
+                                    <p class="game__subtitle">Big changes come to the Overwatch formula in this sequel...</p>
+                                </div>
+                            </div>
+                            <!--Описание игры-->
+                            <div class="main__item">
+                                <div class="overview">
+                                    <h5 class="overview__title">Genre:</h5> Racing
+                                </div>
+                                <div class="overview">
+                                    <h5 class="overview__title">Platform:</h5> PC(Windows)
+                                </div>
+                                <div class="overview">
+                                    <h5 class="overview__title">Publisher:</h5> Activision Blizzard King
+                                </div>
+                                <div class="overview">
+                                    <h5 class="overview__title">Developer:</h5> Blizzard Enterteiment
+                                </div>
+                                <div class="overview">
+                                    <h5 class="overview__title">Release_date:</h5> 2022-10-04
+                                </div>
+                            </div>
+                        </article>
+                        <!--Карточка-->
+                        <article class="games__item">
+                            <!--Картинка + title + subtitle-->
+                            <div class="item__top">
+                                <img class="game__logo" src="../games__logos/c4.jpg" alt="img__card">
+                                <div class="top__right">
+                                    <h4 class="game__title">Dead Space</h4>
+                                    <p class="game__subtitle">Big changes come to the Overwatch formula in this sequel...</p>
+                                </div>
+                            </div>
+                            <!--Описание игры-->
+                            <div class="main__item">
+                                <div class="overview">
+                                    <h5 class="overview__title">Genre:</h5> Racing
+                                </div>
+                                <div class="overview">
+                                    <h5 class="overview__title">Platform:</h5> PC(Windows)
+                                </div>
+                                <div class="overview">
+                                    <h5 class="overview__title">Publisher:</h5> Activision Blizzard King
+                                </div>
+                                <div class="overview">
+                                    <h5 class="overview__title">Developer:</h5> Blizzard Enterteiment
+                                </div>
+                                <div class="overview">
+                                    <h5 class="overview__title">Release_date:</h5> 2022-10-04
+                                </div>
+                            </div>
+                        </article>
+                        <!--Карточка-->
+                        <article class="games__item">
+                            <!--Картинка + title + subtitle-->
+                            <div class="item__top">
+                                <img class="game__logo" src="../games__logos/c5.jpg" alt="img__card">
+                                <div class="top__right">
+                                    <h4 class="game__title">RDR 2</h4>
+                                    <p class="game__subtitle">Big changes come to the Overwatch formula in this sequel...</p>
+                                </div>
+                            </div>
+                            <!--Описание игры-->
+                            <div class="main__item">
+                                <div class="overview">
+                                    <h5 class="overview__title">Genre:</h5> Racing
+                                </div>
+                                <div class="overview">
+                                    <h5 class="overview__title">Platform:</h5> PC(Windows)
+                                </div>
+                                <div class="overview">
+                                    <h5 class="overview__title">Publisher:</h5> Activision Blizzard King
+                                </div>
+                                <div class="overview">
+                                    <h5 class="overview__title">Developer:</h5> Blizzard Enterteiment
+                                </div>
+                                <div class="overview">
+                                    <h5 class="overview__title">Release_date:</h5> 2022-10-04
+                                </div>
+                            </div>
+                        </article>
+                        <!--Карточка-->
+                        <article class="games__item">
+                            <!--Картинка + title + subtitle-->
+                            <div class="item__top">
+                                <img class="game__logo" src="../games__logos/c6.jpg" alt="img__card">
+                                <div class="top__right">
+                                    <h4 class="game__title">Mafia</h4>
+                                    <p class="game__subtitle">Big changes come to the Overwatch formula in this sequel...</p>
+                                </div>
+                            </div>
+                            <!--Описание игры-->
+                            <div class="main__item">
+                                <div class="overview">
+                                    <h5 class="overview__title">Genre:</h5> Racing
+                                </div>
+                                <div class="overview">
+                                    <h5 class="overview__title">Platform:</h5> PC(Windows)
+                                </div>
+                                <div class="overview">
+                                    <h5 class="overview__title">Publisher:</h5> Activision Blizzard King
+                                </div>
+                                <div class="overview">
+                                    <h5 class="overview__title">Developer:</h5> Blizzard Enterteiment
+                                </div>
+                                <div class="overview">
+                                    <h5 class="overview__title">Release_date:</h5> 2022-10-04
+                                </div>
+                            </div>
+                        </article>
+                        <!--Карточка-->
+                        <article class="games__item">
+                            <!--Картинка + title + subtitle-->
+                            <div class="item__top">
+                                <img class="game__logo" src="../games__logos/c7.jpg" alt="img__card">
+                                <div class="top__right">
+                                    <h4 class="game__title">GTA</h4>
+                                    <p class="game__subtitle">Big changes come to the Overwatch formula in this sequel...</p>
+                                </div>
+                            </div>
+                            <!--Описание игры-->
+                            <div class="main__item">
+                                <div class="overview">
+                                    <h5 class="overview__title">Genre:</h5> Racing
+                                </div>
+                                <div class="overview">
+                                    <h5 class="overview__title">Platform:</h5> PC(Windows)
+                                </div>
+                                <div class="overview">
+                                    <h5 class="overview__title">Publisher:</h5> Activision Blizzard King
+                                </div>
+                                <div class="overview">
+                                    <h5 class="overview__title">Developer:</h5> Blizzard Enterteiment
+                                </div>
+                                <div class="overview">
+                                    <h5 class="overview__title">Release_date:</h5> 2022-10-04
+                                </div>
+                            </div>
+                        </article>
+                        <!--Карточка-->
+                        <article class="games__item">
+                            <!--Картинка + title + subtitle-->
+                            <div class="item__top">
+                                <img class="game__logo" src="../games__logos/c8.jpg" alt="img__card">
+                                <div class="top__right">
+                                    <h4 class="game__title">Dying Light</h4>
+                                    <p class="game__subtitle">Big changes come to the Overwatch formula in this sequel...</p>
+                                </div>
+                            </div>
+                            <!--Описание игры-->
+                            <div class="main__item">
+                                <div class="overview">
+                                    <h5 class="overview__title">Genre:</h5> Racing
+                                </div>
+                                <div class="overview">
+                                    <h5 class="overview__title">Platform:</h5> PC(Windows)
+                                </div>
+                                <div class="overview">
+                                    <h5 class="overview__title">Publisher:</h5> Activision Blizzard King
+                                </div>
+                                <div class="overview">
+                                    <h5 class="overview__title">Developer:</h5> Blizzard Enterteiment
+                                </div>
+                                <div class="overview">
+                                    <h5 class="overview__title">Release_date:</h5> 2022-10-04
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+                </div>
+            </main>
+            <!--Footer-->
+            <footer class="footer">
+                <ul class="footer__logos-social">
+                    <li class="social__item">
+                        <a href="https://www.facebook.com/">
+                            <img src="../social__logos/facebook.svg"
+                                alt="facebook"></a></li>
+                    <li class="social__item">
+                        <a href="https://www.linkedin.com/">
+                            <img src="../social__logos/linkedin.svg"
+                                alt="linkedin"></a></li>
+                    <li class="social__item">
+                        <a href="https://www.instagram.com/">
+                            <img src="../social__logos/insta.svg"
+                                alt="instagram"></a></li>
+                </ul>
+                <h2 class="footer__title">Made with 💗 on course 'Frontend for beginners' from Masters Academy in 2023, by
+                    Bogdan Yatsentiuk</h2>
+            </footer>
+        </div>
+    </body>
+
+</html>

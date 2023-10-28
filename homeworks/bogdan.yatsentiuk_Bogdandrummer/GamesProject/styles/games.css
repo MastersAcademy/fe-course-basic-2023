@@ -1,0 +1,322 @@
+/*Импорт шрифтов*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap");
+/*Обнуляющие стили*/
+@import url("null.css");
+/*Импорт header & footer*/
+@import url("header.css");
+@import url("footer.css");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.content {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  box-sizing: border-box;
+}
+
+/*Main menu*/
+
+.main__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+  height: 60px;
+  background-color: #221F1F;
+  color: #FFF;
+  padding: 0 52px;
+}
+
+.genres__inp {
+  width: 114px;
+  height: 33px;
+  background-color: #333;
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  padding-left: 12px;
+}
+
+.genres__inp option {
+  height: 33px;
+  background-color: #FFF;
+  color: #221F1F;
+}
+
+.option__item:hover {
+  background-color: #333;
+  color: #FFF;
+}
+
+/*Radio Box Main*/
+
+.radio__main {
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  color: #FFF;
+}
+
+.radio__label {
+  margin-left: 12px;
+}
+
+.online__ch2 {
+  margin-left: 32px;
+}
+
+/*Чекбокс + кастомный чекбокс*/
+
+.main__checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.check__label {
+  display: flex;
+  flex-grow: 0;
+  max-width: fit-content;
+  align-items: center;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.check__label:nth-child(2) {
+  margin-left: 32px;
+}
+
+.check {
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  height: 0;
+}
+
+.custom__checkbox {
+  display: inline-block;
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #FFF;
+  border-radius: 3px;
+  margin-right: 12px;
+  cursor: pointer;
+  transition: all 100ms;
+}
+
+.custom__checkbox::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: all 100ms;
+  transform: translate(-50%, -50%) scale(0);
+  width: 13px;
+  height: 13px;
+  background: url("../check_w.svg") 50% / contain no-repeat;
+}
+
+.check:checked + .custom__checkbox::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.check:hover + .custom__checkbox {
+  box-shadow: 1px 1px 4px #888;
+}
+
+/*Search*/
+
+.main__search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 36px;
+  border-radius: 6px;
+}
+
+.search__input {
+  display: flex;
+  width: 377px;
+  align-items: center;
+  height: 100%;
+  padding-left: 46px;
+  border-radius: 6px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  color: #A9A9A9;
+}
+
+.main__search::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  display: inline-block;
+  background: url("../Search.svg") 50% 50% / contain no-repeat;
+  width: 15px;
+  height: 15px;
+}
+
+.search__input:focus {
+  padding-top: 3px;
+  border-bottom: 3px solid #EF4934;
+}
+
+.search__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75px;
+  height: 100%;
+  background-color: #EF4934;
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  transition: ease-in all 150ms;
+}
+
+.search__button:hover {
+  font-weight: 500;
+  transition: ease-in all 150ms;
+  background-color: #F0614E;
+}
+
+.search__button:active {
+  transition: ease-in all 150ms;
+  background-color: #EF4934;
+}
+
+.games__title {
+  font-family: Roboto;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  margin-top: 20px;
+}
+
+.games__row {
+  display: grid;
+  grid-template-rows: repeat(2, 260px);
+  grid-template-columns: repeat(4, minmax(200px, 275px));
+  gap: 25px;
+  margin-top: 40px;
+  box-sizing: border-box;
+}
+
+.games__item {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 12px 22px;
+  align-items: center;
+  border-radius: 12px;
+  background-color: #ECECEC;
+  transition: all 250ms;
+}
+
+.games__item:hover {
+  transform: translate(0, -5px) scale(1.01);
+  box-shadow: 2px 2px 10px #CCC;
+  transition: all 250ms;
+}
+
+.games__item:active {
+  transform: scale(1);
+  transition: all 250ms;
+  background-color: #FFEDED;
+}
+
+.item__top {
+  display: flex;
+}
+
+.game__logo {
+  min-width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.top__right {
+  display: flex;
+  flex-direction: column;
+  margin-left: 12px;
+}
+
+.game__title {
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #000;
+}
+
+.game__subtitle {
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  color: #221F1F;
+}
+
+.main__item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 12px;
+}
+
+.overview {
+  display: flex;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  margin-top: 10px;
+}
+
+.overview__title {
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  margin-right: 7px;
+}

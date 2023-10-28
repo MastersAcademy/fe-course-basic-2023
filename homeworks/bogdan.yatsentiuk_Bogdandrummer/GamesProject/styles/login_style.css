@@ -1,0 +1,208 @@
+/*Импорт шрифтов*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap");
+/*Обнуляющие стили*/
+@import url("null.css");
+/*Импорт header & footer*/
+@import url("header.css");
+@import url("footer.css");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  height: 100vh;
+}
+
+.content {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/*Main*/
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  box-sizing: border-box;
+  padding: 0 52px;
+  max-width: 100%;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  width: 575px;
+  height: 520px;
+  margin: 80px auto 0;
+}
+
+.form__title {
+  font-family: Roboto;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  color: #221F1F;
+  text-align: center;
+}
+
+.email__label {
+  font-family: Roboto;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: #221F1F;
+  margin-top: 60px;
+}
+
+.email {
+  max-width: 100%;
+  height: 70px;
+  margin-top: 22px;
+  padding-left: 20px;
+  color: #A9A9A9;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  border: 1px solid #A9A9A9;
+  border-radius: 6px;
+  transition: all 100ms;
+}
+
+.email::placeholder {
+  color: #A9A9A9;
+}
+
+.email:focus {
+  border-bottom: 3px solid #EF4934;
+  color: #000;
+  transition: all 100ms;
+}
+
+/*.email value{}*/
+
+.password__label {
+  font-family: Roboto;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: #221F1F;
+  margin-top: 40px;
+}
+
+.password {
+  max-width: 100%;
+  height: 70px;
+  margin-top: 22px;
+  padding-left: 20px;
+  color: #A9A9A9;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  border: 1px solid #A9A9A9;
+  border-radius: 6px;
+  border-radius: 6px;
+  transition: all 100ms;
+}
+
+.password::placeholder {
+  color: #A9A9A9;
+}
+
+.password:focus {
+  border-bottom: 3px solid #EF4934;
+  color: #000;
+  transition: all 100ms;
+}
+
+/*Чекбокс + кастомный чекбокс*/
+
+.check__label {
+  display: flex;
+  flex-grow: 0;
+  max-width: fit-content;
+  align-items: center;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  margin-top: 40px;
+}
+
+.check {
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  height: 0;
+}
+
+.custom__checkbox {
+  display: inline-block;
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #EF4934;
+  border-radius: 3px;
+  margin-right: 12px;
+  cursor: pointer;
+  transition: all 100ms;
+}
+
+.custom__checkbox::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: all 100ms;
+  transform: translate(-50%, -50%) scale(0);
+  width: 13px;
+  height: 13px;
+  background: url("../check.svg") 50% / contain no-repeat;
+}
+
+.check:checked + .custom__checkbox::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.check:hover + .custom__checkbox {
+  box-shadow: 1px 1px 4px #888;
+}
+
+.login__button {
+  display: flex;
+  width: 575px;
+  margin-top: 40px;
+  padding: 27px 258px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  font-family: Roboto;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: #FFF;
+  background-color: #EF4934;
+  box-shadow: 0 4px 30px 0 rgba(38, 58, 67, .15);
+  transition: ease-in all 100ms;
+}
+
+.login__button:hover {
+  background-color: #CA331F;
+  transition: ease-in all 100ms;
+}
