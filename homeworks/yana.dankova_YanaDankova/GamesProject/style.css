@@ -164,12 +164,13 @@
   font-family: Roboto, sans-serif;
   font-weight: 700;
   font-size: 48px;
+  margin-left: 140px;
 }
 
 .login {
   width: 575px;
   height: 520px;
-  margin-top: 160px;
+  margin-top: 100px;
   margin-left: 353px;
 }
 
@@ -189,5 +190,6 @@ button {
 
 .password {
   width: 575px;
-  height: 60px;
+  height: 70px;
+  margin: 20px auto;
 }
