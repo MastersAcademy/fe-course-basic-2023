@@ -18,8 +18,13 @@ function updateTemplate(num1, num2) {
 }
 FORM_SUBMIT.addEventListener('click', (e) => {
     e.preventDefault();
-    const num1 = +document.querySelector('.counter__input--first').value;
-    const num2 = +document.querySelector('.counter__input--second').value;
+    const num1 = document.querySelector('.counter__input--first').value;
+    const num2 = document.querySelector('.counter__input--second').value;
 
-    updateTemplate(num1, num2);
+    if (num1 === '' || num2 === '') {
+        FIELD.innerHTML = '<p>Fill fields by numbers</p>';
+        return;
+    }
+
+    updateTemplate(+num1, +num2);
 });
