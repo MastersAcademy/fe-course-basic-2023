@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Login in</title>
+        <link rel="stylesheet" href="./css/login.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="header">
+            <nav class="header__nav">
+                <a class="nav__logo" href="./index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="190" height="30" viewBox="0 0 190 30" fill="none">
+                        <use href="./images/svg/sprite.svg#header_logo"></use>
+                    </svg>
+                </a>
+                <ul class="nav__list">
+                    <li>
+                        <a class="nav__link" href="./games.html">Pokemons</a>
+                    </li>
+                    <li>
+                        <a class="nav__link" href="./index.html">About</a>
+                    </li>
+                    <li>
+                        <a class="nav__link" href="./login.html">Login</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="container">
+            <div class="container__title">
+                <h1>Login page</h1>
+            </div>
+            <form action="./message.html" target="_self">
+                <div class="container__forms-fields">
+                    <div class="form-fields__email">
+                        <label class="form-label" for="email">Email</label>
+                        <br/>
+                        <input class="form-fields__input" type="email" id="email" name="email"
+                               placeholder="Enter your email address"
+                               pattern="[a-z0-9._%+\-]*@[a-z0-9.\-]*\.[a-z]{2,}$"
+                               required>
+                        <br/>
+                    </div>
+                    <div class="form-fields__password">
+                        <label class="form-label" for="pwd">Password</label>
+                        <br/>
+                        <input class="form-fields__input" type="password" id="pwd" name="pwd"
+                               minlength="8" maxlength="16"
+                               placeholder="Enter your password"
+                               required>
+                        <br/>
+                    </div>
+                    <div class="form-fields__checkbox">
+                        <input class="checkbox" type="checkbox" id="checkbox" name="checkbox"
+                               required>
+                        <label class="form-checkbox" for="checkbox">I’m not a robot</label>
+                    </div>
+                    <div class="form-fields__submit">
+                        <input class="form-fields__submit-button" type="submit" value="Login">
+                    </div>
+                </div>
+            </form>
+        </main>
+    </body>
+</html>
