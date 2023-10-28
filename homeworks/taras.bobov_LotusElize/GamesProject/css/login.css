@@ -45,19 +45,21 @@
   color: #A9A9A9;
 }
 
+/*custom checkbox*/
+
 .verify-container {
   display: block;
   margin-bottom: 15px;
   margin-bottom: 40px;
 }
-/*custom checkbbox*/
+
 
 .verify-container input {
   padding: 0;
   height: initial;
   width: initial;
   margin-bottom: 0;
-  display: none;
+  display: hidden;
   cursor: pointer;
 }
 
@@ -70,11 +72,12 @@
   content: "";
   border-radius: 6px;
   border: 2px solid #EF4934;
+  background-color: #FFF;
   display: inline-block;
+  right: 24px;
   position: relative;
   vertical-align: middle;
   cursor: pointer;
-  margin-right: 5px;
   width: 20px;
   height: 20px;
 }
@@ -84,7 +87,7 @@
   display: block;
   position: absolute;
   top: 2px;
-  left: 9px;
+  left: -15px;
   width: 4px;
   height: 12px;
   border: solid #EF4934;
