@@ -1,0 +1,316 @@
+/* section filters */
+
+.filters {
+  min-height: 40px;
+  display: grid;
+  grid-template-columns: minmax(auto, 850px) repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: minmax(36px, auto);
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.filters__form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: minmax(36px, auto);
+  row-gap: 10px;
+  align-items: center;
+  color: #FFF;
+}
+
+.filters__form-select select {
+  height: 36px;
+  width: 110px;
+  border-radius: 6px;
+  padding-left: 10px;
+  background-color: #333;
+  color: #FFF;
+  border: none;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  appearance: none;
+  cursor: pointer;
+}
+
+.filters__form-select {
+  position: relative;
+}
+
+.filters__form-select::before {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 13px;
+  width: 1px;
+  background-color: #FFF;
+  top: 13px;
+  left: 86px;
+  transform: rotate(-45deg);
+  pointer-events: none;
+}
+
+.filters__form-select::after {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 13px;
+  width: 1px;
+  background-color: #FFF;
+  top: 13px;
+  left: 95px;
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+.filters__form-select select:focus {
+  outline: none;
+}
+
+.filters__form-choice {
+  display: flex;
+  justify-content: space-around;
+}
+
+.filters__form-choice {
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.filters__form-choice input[type="radio"] {
+  position: relative;
+  appearance: none;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  background-color: #221F1F;
+  border: 1px solid #FFF;
+  border-radius: 20px;
+  outline: none;
+}
+
+.filters__form-choice input[type="radio"]::after {
+  content: "";
+  background-color: #EF4934;
+  display: none;
+  height: 14px;
+  width: 14px;
+  border-radius: 20px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+
+.filters__form-choice input[type="radio"]:checked::after {
+  display: block;
+}
+
+.filters__form-choice label {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  cursor: pointer;
+}
+
+.filters__form-size {
+  display: flex;
+  justify-content: space-around;
+  width: 150px;
+}
+
+.filters__form-size {
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.filters__form-size input[type="checkbox"] {
+  appearance: none;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  background-color: #221F1F;
+  border: 1px solid #FFF;
+  border-radius: 6px;
+  outline: none;
+}
+
+.filters__form-size input[type="checkbox"]::after {
+  content: "✓";
+  color: #EF4934;
+  background-color: #FFF;
+  display: none;
+  height: 18px;
+  width: 18px;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.filters__form-size input[type="checkbox"]:checked::after {
+  display: block;
+}
+
+.filters__form-size label {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  cursor: pointer;
+}
+
+.filters__search {
+  position: relative;
+  max-width: 370px;
+  height: 36px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.filters__search-icon {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  cursor: pointer;
+}
+
+.filters__search-input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  padding-left: 35px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.filters__search input:focus {
+  outline: none;
+}
+
+.filters__search--button {
+  position: relative;
+  height: 36px;
+  min-width: 70px;
+  width: 100%;
+  cursor: pointer;
+  color: #FFF;
+  background-color: #EF4934;
+  border: none;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  transition: .5s;
+}
+
+.filters__search--button:hover {
+  background-color: #FF6C58;
+  transition: .5s;
+}
+
+.filters__search--button::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 110%;
+  height: 155%;
+  background: #FF6C58;
+  border-radius: 6px;
+  filter: blur(5px);
+  opacity: 0;
+  transition: .5s;
+}
+
+.filters__search--button:hover::before {
+  opacity: .3;
+}
+
+/* section pokemons */
+
+.pokemons__title {
+  padding-top: 45px;
+}
+
+.pokemons__cards {
+  margin: 10px 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 270px);
+  gap: 10px;
+  justify-content: space-around;
+}
+
+.pokemons__cards-item {
+  background-color: #ECECEC;
+  border-radius: 20px;
+}
+
+.card__pokemon {
+  display: flex;
+  align-items: center;
+}
+
+.card__pokemon-img {
+  background-color: #FDB714;
+  border-radius: 20px;
+  margin: 15px;
+}
+
+.card__pokemon-name {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21px;
+}
+
+.card__characteristics {
+  margin: 15px;
+}
+
+.card__characteristics-type, .card__characteristics-weaknesses {
+  margin-top: 10px;
+}
+
+.card__characteristics strong {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+}
+
+.card__characteristics span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.card__characteristics-type span {
+  display: inline-block;
+  width: 69px;
+  color: #FFF;
+  background-color: #FDB714;
+  text-align: center;
+  border-radius: 5px;
+  padding-top: 2px;
+  padding-bottom: 1px;
+}
+
+.card__characteristics-weaknesses span {
+  display: inline-block;
+  width: 69px;
+  color: #FFF;
+  background-color: #FF87F3;
+  text-align: center;
+  border-radius: 5px;
+  padding-top: 2px;
+  padding-bottom: 1px;
+}
+
+.card__characteristics-type span:nth-child(3) {
+  background-color: #EF4934;
+}
+
+.card__characteristics-weaknesses span:nth-child(3) {
+  background-color: #3447EF;
+}

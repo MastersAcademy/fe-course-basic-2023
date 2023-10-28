@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+
+.about-link {
+  color: #EF4934;
+  text-decoration-line: underline;
+}
+
+
+.about-paragraf {
+  color: #221F1F;
+  line-height: 32px;
+  font-size: 22px;
+}
+
+
+.about {
+  width: 575px;
+  padding-left: 20px;
+  font-size: 22px;
+  gap: 24px;
+}

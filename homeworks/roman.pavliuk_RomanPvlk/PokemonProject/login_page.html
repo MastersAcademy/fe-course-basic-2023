@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>PokemonProject</title>
+        <link rel="stylesheet" type="text/css" href="style/main.css">
+        <link rel="stylesheet" type="text/css" href="style/header.css">
+        <link rel="stylesheet" type="text/css" href="style/login_page.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="header_wrapper centering">
+                <div class="container_logo">
+                    <img src="images/ma_logo.svg" alt="ma_logo">
+                </div>
+                <nav>
+                    <ul class="nav__links">
+                        <li>
+                            <a href="./pokemons.html" title="Pokemons">Pokemons</a>
+                        </li>
+                        <li>
+                            <a href="./index.html" title="About">About</a>
+                        </li>
+                        <li>
+                            <a class="active" href="./login_page.html" title="Login">Login</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="login_title">
+            <h1 class="heading-primary">Login page</h1>
+        </div>
+        <form class="form-login" action="./result.html" target="self">
+            <div class="form-login_item">
+                <label class="labels" for="email">Email</label>
+                <input class="form-login_item__input" type="email" id="email" name="email"
+                    placeholder="Enter your email adress"
+                    pattern="[a-z0-9._%+\-]*@[a-z0-9.\-]*\.[a-z]{2,}$"
+                    required>
+            </div>
+            <div class="form-login_item">
+                <label class="labels" for="password">Password</label>
+                <input class="form-login_item__input" type="password" id="password" name="password"
+                    placeholder="Enter your password"
+                    required>
+            </div>
+            <div class="checkbox_area">
+                <label>
+                    <input type="checkbox" required>
+                    I'm not a robot
+                </label>
+            </div>
+            <input class="button" type="submit" value="Login">
+        </form>
+    </body>
+</html>

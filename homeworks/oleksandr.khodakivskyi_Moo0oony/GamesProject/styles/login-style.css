@@ -1,0 +1,53 @@
+.login_form_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+  padding-bottom: 177px;
+}
+
+.form_itself {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 34px;
+  margin-top: 60px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.form_itself input[type="email"],
+input[type="password"] {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 30px 0 25px 20px ;
+  border: .6px solid #A9A9A9;
+  border-radius: 6px;
+  margin-bottom: 5.4px;
+}
+
+.form_itself input[type="email"]:focus,
+input[type="password"]:focus {
+  margin-bottom: -5.4px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  outline: none;
+  border-bottom: 5px solid #EF4934;
+}
+
+.form_itself input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+}
+
+.login_email, .login_password {
+  margin-top: 22px;
+  width: 553.4px;
+}
+
+.robot_box {
+  accent-color: #EF4934;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}

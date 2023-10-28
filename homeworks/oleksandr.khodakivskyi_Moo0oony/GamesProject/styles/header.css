@@ -1,0 +1,39 @@
+header {
+  display: grid;
+  align-items: center;
+  background-color: #EF4934;
+  width: 100%;
+  height: 80px;
+}
+
+.header_flexbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 53px;
+  margin-right: 52px;
+}
+
+.logo {
+  width: 55px;
+  height: 57.32px;
+}
+
+.nav_items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: normal;
+  column-gap: 50px;
+}
+
+.nav_item > a {
+  text-decoration: none;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 500;
+  color: #FFF;
+}
+
+.nav_item > a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  margin: 0 auto;
+}
+
+.centering {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 0 52px;
+}
+
+.active {
+  border-bottom: 1px solid #FFF;
+}
+
+.heading-primary {
+  font-weight: 700;
+  font-size: 48px;
+  color: #221F1F;
+}
+
+h2 {
+  color: #999;
+}
+
+.button {
+  font-size: 22px;
+  font-weight: 600;
+  padding: 27px 0;
+  width: 575px;
+  color: #FFF;
+  background-color: #EF4934;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color .2s ease-in-out;
+}
+
+.button:hover {
+  box-shadow: 0 12px 60px rgb(0 0 0 / .2);
+}

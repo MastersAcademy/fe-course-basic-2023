@@ -1,0 +1,35 @@
+h1 {
+  width: 575px;
+  height: 46px;
+  font-size: 48px;
+  font-family: Roboto, serif;
+  font-weight: 700;
+}
+
+.text1 {
+  font-family: Roboto, serif;
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.text2 {
+  font-family: Roboto, serif;
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.link {
+  color: #EF4934;
+}
+
+.text3 {
+  font-family: Roboto, serif;
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.text4 {
+  font-family: Roboto, serif;
+  font-weight: 400;
+  font-size: 22px;
+}

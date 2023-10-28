@@ -1,0 +1,70 @@
+.cards .section__title {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-column: 1 / -1;
+}
+
+.card__view {
+  display: flex;
+  column-gap: 12px;
+}
+
+.card__view p {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.card__list {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  gap: 25px;
+  grid-column: span 12;
+}
+
+.card__item {
+  background-color: var(--gray);
+  border-radius: 12px;
+  padding: 12px;
+  grid-column: span 12;
+}
+
+.card__list .card__title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+  padding-bottom: 12px;
+}
+
+.item-descriptions {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  margin-top: 22px;
+}
+
+dt {
+  display: inline;
+  font-weight: 600;
+  line-height: 18px;
+  font-size: 14px;
+}
+
+dd {
+  display: inline;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+dt::after {
+  content: ": ";
+}
+
+@media only screen and (min-width: 768px) {
+
+  .card__item {
+    grid-column: span 3;
+  }
+}
