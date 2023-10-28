@@ -1,35 +1,99 @@
-h1 {
+.wrapper {
+  margin: 0 auto;
+  max-width: 1280px;
+  height: 1017px;
+}
+
+.about {
+  background: #EF4934;
+  height: 80px;
+}
+
+.header-menu {
+  padding: 0 52px 0 53px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo-box {
+  width: 55px;
+  height: 58px;
+  position: relative;
+}
+
+.nav {
+  font-size: 16px;
+  font-family: Roboto, serif;
+  gap: 50px;
+  display: flex;
+}
+
+.nav__link {
+  display: inline-block;
+  color: #FFF;
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  text-decoration: underline;
+}
+
+/*Main*/
+
+.content {
+  display: flex;
+  align-items: center;
+}
+
+.section {
+  padding: 60px 52px 0 53px;
+  display: flex;
+  justify-content: space-between;
+  gap: 68px;
+  width: 1175px;
+  height: 479px;
+}
+
+.image-box {
+  width: 532px;
+  height: 356px;
+  border-radius: 22px;
+}
+
+.story {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
   width: 575px;
+  height: 479px;
+}
+
+.main-title {
   height: 46px;
+  margin: 0;
   font-size: 48px;
   font-family: Roboto, serif;
   font-weight: 700;
+  line-height: 32px;
 }
 
-.text1 {
+.contents {
+  width: 575px;
+  height: 409px;
   font-family: Roboto, serif;
   font-weight: 400;
   font-size: 22px;
+  line-height: 32px;
+  font-style: normal
 }
 
-.text2 {
-  font-family: Roboto, serif;
-  font-weight: 400;
-  font-size: 22px;
+.description {
+  margin: 0;
 }
 
 .link {
   color: #EF4934;
-}
-
-.text3 {
-  font-family: Roboto, serif;
-  font-weight: 400;
-  font-size: 22px;
-}
-
-.text4 {
-  font-family: Roboto, serif;
-  font-weight: 400;
-  font-size: 22px;
 }
