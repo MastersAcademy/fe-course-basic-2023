@@ -187,6 +187,7 @@ button {
   width: 575px;
   padding: 27px 258px;
   justify-content: center;
+  border: 2px solid #EF4934;
   align-items: center;
   border-radius: 6px;
   gap: 10px;
