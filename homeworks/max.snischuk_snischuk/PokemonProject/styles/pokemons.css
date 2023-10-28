@@ -23,6 +23,7 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 15px;
+  border: none;
 }
 
 .filters__select {
