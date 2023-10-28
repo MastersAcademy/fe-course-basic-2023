@@ -27,6 +27,7 @@
   font-weight: 600;
   line-height: normal;
   margin-top: 60px;
+  cursor: pointer;
 }
 
 .main__button:hover {
