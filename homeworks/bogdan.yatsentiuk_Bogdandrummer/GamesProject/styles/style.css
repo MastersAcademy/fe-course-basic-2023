@@ -28,7 +28,9 @@
   justify-content: center;
   margin: 0 auto;
   box-sizing: border-box;
+  margin-bottom: 20px;
   padding: 60px 52px 0;
+  overflow-y: auto;
 }
 
 .left__side-main {

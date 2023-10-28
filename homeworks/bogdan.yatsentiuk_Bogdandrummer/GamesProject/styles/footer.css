@@ -8,6 +8,7 @@
   justify-content: center;
   max-width: 100%;
   height: 160px;
+  max-height: 160px;
   background-color: #221F1F;
 }
 

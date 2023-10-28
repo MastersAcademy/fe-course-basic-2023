@@ -40,16 +40,13 @@
                     <h2 class="form__title">Login page</h2>
                     <!--Поле email-->
                     <label class="email__label" for="e_mail">Email</label>
-                    <input class="email" type="email" id="e_mail" name="e_mail" placeholder="enter your email address" required
-                        oninvalid="setCustomValidity('Шось не то! Погугли')">
+                    <input class="email" type="email" id="e_mail" name="email" placeholder="enter your email address" required>
                     <!--Password-->
                     <label class="password__label" for="pass">Password</label>
-                    <input class="password" type="password" id="pass" name="pass" placeholder="enter your password" required
-                        oninvalid="setCustomValidity('Шось не то! Погугли')">
+                    <input class="password" type="password" id="pass" name="pass" minlength="4" maxlength="50" required placeholder="enter your password">
                     <!--Not a robot-->
                     <label class="check__label" for="check">
-                        <input type="checkbox" class="check" id="check" name="check" value="not a robot" required
-                            oninvalid="setCustomValidity('Шось не то! Погугли')">
+                        <input type="checkbox" class="check" id="check" name="check" value="not a robot" required>
                         <span class="custom__checkbox"></span>
                         I'm not a robot</label>
                     <!--Button-->

@@ -1,6 +1,7 @@
 /*Header*/
 
 .header {
+  position: fixed;
   display: flex;
   width: 100%;
 }
