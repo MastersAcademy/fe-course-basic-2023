@@ -81,7 +81,6 @@ body {
   left: 50%;
   transform: translateX(-50%);
   display: inline-grid;
-  margin: 0 auto;
   grid-template-columns: repeat(2, 1fr);
   gap: 63px;
 }
@@ -229,12 +228,11 @@ body {
   grid-area: text2;
 }
 
-.main--display-flex {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.log-in__main {
+  position: absolute;
+  top: 140px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .log-in {
@@ -262,6 +260,7 @@ body {
   border: 2px solid #D1D1D1;
   font-size: 14px;
   font-weight: 400;
+  padding-left: 10px;
 }
 
 .log-in__checkbox {
@@ -278,7 +277,7 @@ body {
   border: none;
 }
 
-.fieldset__button:hover {
+.log-in__button:hover {
   cursor: pointer;
   background-color: #080;
 }
