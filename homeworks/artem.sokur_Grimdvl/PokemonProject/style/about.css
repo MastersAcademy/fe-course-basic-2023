@@ -1,0 +1,119 @@
+.about {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 530px);
+  grid-auto-rows: minmax(275px, auto);
+  gap: 50px;
+  justify-content: space-around;
+}
+
+.about__text-contact {
+  color: #EF4934;
+  text-decoration: underline;
+}
+
+.about__logo {
+  width: 530px;
+  height: 275px;
+  border-radius: 22px;
+  background-color: #FDB714;
+  transition: .5s all;
+}
+
+.about__logo-pokemon {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding-top: 30px;
+  transform: scale(1);
+  transition: .5s all;
+}
+
+.about__logo:hover .about__logo-pokemon {
+  transform: scale(1.1);
+  transition: .5s all;
+}
+
+.about__logo__pokemon {
+  position: relative;
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: #333;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  transform: rotate(0deg);
+  transition: .5s all;
+}
+
+.about__logo:hover .about__logo__pokemon {
+  transform: rotate(-30deg);
+  transition: .5s all;
+}
+
+.about__logo__pokemon::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 90px;
+  height: 45px;
+  background-color: #FFF;
+  border-bottom-left-radius: 90px;
+  border-bottom-right-radius: 90px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.about__logo__pokemon::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 90px;
+  height: 45px;
+  background-color: #F00;
+  border-top-left-radius: 90px;
+  border-top-right-radius: 90px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+.about__logo__pokemon-ball {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 90px;
+  height: 5px;
+  background-color: #333;
+  z-index: 1;
+  margin-top: 48px;
+}
+
+.about__logo__pokemon-ball::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-color: #FFF;
+  border-radius: 50%;
+  border: #333 solid 5px;
+  top: -14px;
+  left: 27px;
+}
+
+.about__text {
+  max-width: 575px;
+}
+
+.about__text-subscription {
+  line-height: 32px;
+  font-size: 22px;
+  font-weight: 400;
+  margin: 20px auto;
+}

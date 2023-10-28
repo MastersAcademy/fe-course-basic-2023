@@ -1,0 +1,41 @@
+.header {
+  grid-area: header;
+  height: 80px;
+  width: 100%;
+  background-color: var(--red);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.navigation__items {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 50px;
+}
+
+.navigation__item > a {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.navigation__item > a:active {
+  text-decoration: underline;
+}
+
+.logo {
+  width: 55px;
+  height: 57px;
+}
+
+@media only screen and (min-width: 768px) {
+
+  .header {
+    padding: 0 52px 0 53px;
+  }
+}

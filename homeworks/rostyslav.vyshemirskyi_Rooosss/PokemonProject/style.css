@@ -1,0 +1,353 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #221F1F;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/*Header*/
+
+.header__container {
+  background-color: #333;
+}
+
+.header__inner {
+  padding: 25px 52px 25px 53px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation__list {
+  display: flex;
+  list-style: none;
+}
+
+.navigation__item {
+  margin-right: 50px;
+}
+
+.navigation__item:last-child {
+  margin-right: 0;
+}
+
+.navigation__link {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.navigation__link:hover {
+  border-bottom: 1px solid #FFF;
+  padding-bottom: 3px;
+}
+
+.navigation__link:focus {
+  border-bottom: 1px solid #FFF;
+  padding-bottom: 3px;
+}
+
+/*About*/
+
+.about__section {
+  padding-right: 52px;
+  padding-left: 53px;
+  margin-bottom: 298px;
+  display: flex;
+  margin-top: 60px;
+}
+
+.about__inner {
+  margin-left: 68px;
+  max-width: 575px;
+}
+
+.about__title {
+  margin-bottom: 24px;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.about__text {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.about__link-red {
+  color: #EF4934;
+}
+
+/* Pokemon */
+
+.pokemon {
+  padding-right: 52px;
+  padding-left: 53px;
+}
+
+.pokemon__title {
+  margin: 40px 0;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.pokemon__cards-list {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(4, 275px);
+  list-style: none;
+}
+
+.pokemon__card-item {
+  background-color: #ECECEC;
+  padding: 12px 12px 22px;
+  border-radius: 12px;
+}
+
+.pokemon__card-img {
+  display: flex;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.pokemon__image {
+  margin-right: 12px;
+}
+
+.pokemon__name {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.pokemon__special {
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.pokemon__special-list {
+  margin-left: 10px;
+  list-style: none;
+}
+
+.pokemon__special-bold {
+  font-weight: 600;
+  line-height: 130%;
+  margin-right: 6px;
+}
+
+.pokemon__special-type {
+  margin-right: 12px;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.pokemon__special-weaknesses {
+  margin-right: 12px;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.pokemon__special-inner {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.pokemon__special-ls {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.pokemon__fighting {
+  background-color: #FDB714;
+  padding: 2px 9px;
+  border-radius: 3px;
+  margin-right: 6px;
+  color: #FFF;
+  box-sizing: border-box;
+}
+
+.pokemon__dark {
+  background-color: #EF4934;
+  padding: 2px 20px;
+  border-radius: 3px;
+  color: #FFF;
+}
+
+.pokemon__fairy {
+  background-color: #FF87F3;
+  padding: 2px 19px;
+  border-radius: 3px;
+  margin-right: 6px;
+  color: #FFF;
+}
+
+.pokemon__flying {
+  background-color: #3447EF;
+  padding: 2px 16px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  color: #FFF;
+}
+
+/* Login */
+
+.login__inner {
+  margin: 80px 352px 237px 353px;
+  width: 575px;
+}
+
+.login__title {
+  margin-bottom: 60px;
+  text-align: center;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.login__form-label {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.login__form-input {
+  margin: 22px 0 40px;
+  padding: 30px 216px 30px 20px;
+  border: .6px solid #A9A9A9;
+  border-radius: 6px;
+  width: 339px;
+}
+
+.login__form-label_check {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  cursor: pointer;
+}
+
+.login__form-checkbox {
+  opacity: 0;
+  margin-bottom: 40px;
+}
+
+.login__form-checkbox + .login__form-label_check::before {
+  content: "";
+  color: #FFF;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #EF4934;
+  border-radius: 6px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: 12px;
+  margin-left: -17px;
+  cursor: pointer;
+}
+
+.login__form-checkbox:checked + .login__form-label_check::before {
+  background: url("./image/check.svg") no-repeat;
+  background-size: contain;
+}
+
+.login__form-submit {
+  padding: 27px 258px;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: #FFF;
+  background-color: #EF4934;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 4px 30px 0 rgba(38, 58, 67, .15);
+}
+
+.login__form-input::placeholder {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.login__form-submit:active {
+  transform: translate(2px, 1px);
+}
+
+/* Login success */
+
+.login__success-title {
+  margin-bottom: 22px;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: center;
+}
+
+.login__success-subtitle {
+  margin-bottom: 50px;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+}
+
+.login__return-homepage {
+  display: block;
+  padding: 27px 187px;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: #FFF;
+  background-color: #EF4934;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 30px 0 rgba(38, 58, 67, .15);
+}
+
+.main__title {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+}
