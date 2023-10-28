@@ -1,30 +1,31 @@
-let title = "Basic math operations";
+const title = document.getElementById('title');
+title.textContent = 'Basic Math Operations';
 
-let resultsDiv = document.getElementById("results");
+const resultsDiv = document.getElementById('results');
 
-function addResult(title, expression, result) {
-    let resultParagraph = document.createElement("p");
-    resultParagraph.textContent = `${title}: ${expression} = ${result}`;
+function addResult(paragraph, expression, result) {
+    const resultParagraph = document.createElement('p');
+    resultParagraph.textContent = `${paragraph}: ${expression} = ${result}`;
     resultsDiv.appendChild(resultParagraph);
 }
 
-let firstNumber = 20;
-let secondNumber = 30;
+const firstNumber = 20;
+const secondNumber = 30;
 
-let result1 = firstNumber + secondNumber;
-addResult("Operation addition:", `${firstNumber} + ${secondNumber}`, result1);
+const result1 = firstNumber + secondNumber;
+addResult('Operation addition:', `${firstNumber} + ${secondNumber}`, result1);
 
-let result2 = firstNumber - secondNumber;
-addResult("Operation addition:", `${firstNumber} - ${secondNumber}`, result2);
+const result2 = firstNumber - secondNumber;
+addResult('Operation addition:', `${firstNumber} - ${secondNumber}`, result2);
 
-let result3 = firstNumber * secondNumber;
-addResult("Operation addition:", `${firstNumber} * ${secondNumber}`, result3);
+const result3 = firstNumber * secondNumber;
+addResult('Operation addition:', `${firstNumber} * ${secondNumber}`, result3);
 
-let result4 = firstNumber / secondNumber;
-addResult("Operation addition:", `${firstNumber} / ${secondNumber}`, result4);
+const result4 = firstNumber / secondNumber;
+addResult('Operation addition:', `${firstNumber} / ${secondNumber}`, result4);
 
-let result5 = firstNumber % secondNumber;
-addResult("Operation addition:", `${firstNumber} % ${secondNumber}`, result5);
+const result5 = firstNumber % secondNumber;
+addResult('Operation addition:', `${firstNumber} % ${secondNumber}`, result5);
 
-let result6 = firstNumber ** secondNumber;
-addResult("Operation addition:", `${firstNumber} ** ${secondNumber}`, result6);
+const result6 = firstNumber ** secondNumber;
+addResult('Operation addition:', `${firstNumber} ** ${secondNumber}`, result6);
