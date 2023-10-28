@@ -11,18 +11,18 @@
 }
 
 .container__forms-fields {
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
 }
 
 .form_label,
 .form_checkbox {
   font-size: 22px;
   font-weight: 600;
-  padding:0;
+  padding: 0;
   margin: 0;
 }
 
@@ -34,10 +34,10 @@
 
 .form-fields__checkbox {
   width: 575px;
-  display:flex;
+  display: flex;
   flex-direction: row;
   align-items: center;
-  margin:0 0 40px;
+  margin: 0 0 40px;
 }
 
 input[type="email"],
@@ -45,9 +45,9 @@ input[type="email"],
   width: 535px;
   height: 70px;
   border-radius: 6px;
-  border: 0.6px solid #A9A9A9;
+  border: .6px solid #A9A9A9;
   margin: 22px 0 40px;
-  padding: 0 20px 0 20px;
+  padding: 0 20px;
   font-size: 14px;
 }
 
@@ -65,7 +65,7 @@ label[for="checkbox"] {
   font-weight: 400;
 }
 
-.form-fields__checkbox input{
+.form-fields__checkbox input {
   appearance: none;
   width: 20px;
   height: 20px;
