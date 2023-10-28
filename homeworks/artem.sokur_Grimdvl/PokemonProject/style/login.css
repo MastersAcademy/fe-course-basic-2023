@@ -1,0 +1,119 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 100px;
+}
+
+.login__form {
+  margin-top: 30px;
+  max-width: 575px;
+  display: grid;
+  grid-template: 120px 120px 70px 70px/repeat(1, auto);
+  grid-template-columns: minmax(auto, 575px);
+  gap: 20px;
+}
+
+.login__form-input {
+  display: grid;
+  grid-template: 50px 70px/repeat(1, auto);
+  align-items: center;
+}
+
+.login__form-input input {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  padding: 0 20px;
+  height: 70px;
+  border-radius: 6px;
+  border: 1px solid #A9A;
+}
+
+.login__form-input label {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 26px;
+}
+
+.login__form-checkbox {
+  margin-top: 30px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.login__form-checkbox input[type="checkbox"] {
+  appearance: none;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  background-color: #FFF;
+  border: 1px solid #EF4934;
+  border-radius: 6px;
+  outline: none;
+}
+
+.login__form-checkbox input[type="checkbox"]::after {
+  content: "✓";
+  color: #FFF;
+  background-color: #EF4934;
+  display: none;
+  height: 18px;
+  width: 18px;
+  border-radius: 3px;
+  text-align: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.login__form-checkbox input[type="checkbox"]:checked::after {
+  display: block;
+}
+
+.login__form-checkbox label {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.login__form--submit {
+  position: relative;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #FFF;
+  background-color: #EF4934;
+  width: 100%;
+  height: 70px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.login__form--submit:hover {
+  background-color: #FF6C58;
+  transition: .5s;
+}
+
+.login__form--submit::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 104%;
+  height: 130%;
+  background: #FF6C58;
+  border-radius: 6px;
+  filter: blur(5px);
+  opacity: 0;
+  transition: .5s;
+}
+
+.login__form--submit:hover::before {
+  opacity: .3;
+}
