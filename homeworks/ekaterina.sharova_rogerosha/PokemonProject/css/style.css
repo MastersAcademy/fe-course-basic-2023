@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
@@ -84,7 +88,7 @@ body {
   margin-left: 25px;
 }
 
-p {
+.text-about {
   color: #221F1F;
   font-style: normal;
   font-weight: 400;
@@ -101,4 +105,30 @@ p {
   font-weight: 400;
   font-size: 22px;
   line-height: 32px;
+}
+
+footer {
+  background-color: #EF4934;
+  color: #FFF;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+}
+
+.footer-text {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+  color: #FFF;
+}
+
+.footer-link {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.social-networks {
+  margin-block: 30px;
 }

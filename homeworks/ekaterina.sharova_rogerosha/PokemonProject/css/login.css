@@ -71,12 +71,6 @@ body {
   font-size: 48px;
   line-height: 32px;
   margin-top: 80px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.authorization-container {
   text-align: center;
 }
 
@@ -196,4 +190,29 @@ button {
   align-items: center;
   border-radius: 6px;
   gap: 10px;
+}
+
+footer {
+  background-color: #EF4934;
+  color: #FFF;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+}
+
+.footer-text {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+}
+
+.link {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.social-networks {
+  margin-block: 30px;
 }
