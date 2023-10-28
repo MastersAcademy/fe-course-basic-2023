@@ -1,11 +1,11 @@
 [type="radio"]:checked,
 [type="radio"]:not(:checked) {
   position: absolute;
-  width: 0;
-  height: 0;
+  left: -9999px;
 }
 
-.radio-text {
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label {
   position: relative;
   padding-left: 28px;
   cursor: pointer;
@@ -14,37 +14,39 @@
   color: #FFF;
 }
 
-[type="radio"]::before {
+[type="radio"]:checked + label::before,
+[type="radio"]:not(:checked) + label::before {
   content: "";
   position: absolute;
-  left: -30px;
-  top: -4px;
-  width: 18px;
-  height: 18px;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
   border: 1px solid #FFF;
   border-radius: 100%;
   background: #221F1F;
 }
 
-[type="radio"]::after {
+[type="radio"]:checked + label::after,
+[type="radio"]:not(:checked) + label::after {
   content: "";
-  width: 12px;
-  height: 12px;
+  width: 8px;
+  height: 8px;
   background: #FFF;
   position: absolute;
-  top: 0;
-  left: -26px;
+  top: 6px;
+  left: 6px;
   border-radius: 100%;
   -webkit-transition: all 200ms ease;
   transition: all 200ms ease;
 }
 
-[type="radio"]:not(:checked)::after {
+[type="radio"]:not(:checked) + label::after {
   opacity: 0;
   transform: scale(0);
 }
 
-[type="radio"]:checked::after {
+[type="radio"]:checked + label::after {
   opacity: 1;
   transform: scale(1);
 }
