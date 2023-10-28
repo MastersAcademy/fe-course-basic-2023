@@ -1,0 +1,133 @@
+.about-me__header {
+  display: grid;
+  grid-template-columns: 10fr 1fr 1fr 1fr;
+  align-content: center;
+  background-color: #EF4934;
+  height: 80px;
+  font-family: Roboto;
+  text-decoration: none;
+}
+
+.header__link {
+  text-decoration: none;
+  color: #FFF;
+}
+
+.header__link:hover {
+  color: #1C2321;
+  text-decoration: underline;
+}
+
+.about-me__logo {
+  width: 55px;
+  height: 57px;
+  margin-left: 53px;
+}
+
+.about-me__header__menu {
+  margin-top: auto;
+  margin-bottom: auto;
+  list-style: none;
+  color: #FFF;
+  Width: 51px;
+  Height: 11px;
+}
+
+.about-me__header__menu:hover {
+  color: #1C2321;
+  text-decoration: underline;
+}
+
+.login__body {
+  margin: 0;
+}
+
+.login {
+  width: 575px;
+  height: 520px;
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  font-family: Roboto;
+}
+
+.login__h1 {
+  font-size: 48px;
+  text-align: center;
+}
+
+.login__fields {
+  font-size: 22px;
+}
+
+.login__input {
+  width: 575px;
+  height: 70px;
+  border: 1px solid;
+  border-radius: 6px;
+  border-color: #A9A9A9;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.login__button {
+  width: 575px;
+  height: 70px;
+  background-color: #EF4934;
+  border-color: #A9A9A9;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #FFF;
+  font-size: 22px;
+  padding: 0;
+  margin: 0;
+}
+
+.login__button:focus {
+  outline-color: transparent;
+  outline-style: solid;
+  box-shadow: 0 0 0 4px #5A01A7;
+}
+
+button:hover {
+  background: rgba(0, 0, 0, 0);
+  color: #3A7999;
+  box-shadow: inset 0 0 0 3px #3A7999;
+}
+
+.success__h1 {
+  font-size: 48px;
+  text-align: center;
+  margin-top: 10%;
+}
+
+.success__form {
+  width: 575px;
+  height: auto;
+  text-align: center;
+  top: 40%;
+  left: 30%;
+  font-family: Roboto;
+}
+
+.success__button {
+  width: 575px;
+  height: 70px;
+  background-color: #EF4934;
+  border-color: #A9A9A9;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #FFF;
+  font-size: 22px;
+  padding: 0;
+  margin: 0;
+}
+
+.success {
+  position: absolute;
+  max-width: 80%;
+  min-width: 575px;
+  margin-left: 30%;
+  margin-right: auto;
+}
