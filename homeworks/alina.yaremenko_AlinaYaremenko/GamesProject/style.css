@@ -127,3 +127,38 @@ body {
 .card__text:last-child {
   margin-bottom: 0;
 }
+
+.login {
+  margin-top: 80px;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.login__title {
+  color: #221F1F;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.login__input-wrapp {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.login__lable {
+  color: #221F1F;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.login__input {
+  height: 70px;
+  border-radius: 6px;
+  border: .6px solid #A9A9A9;
+  background: #FFF;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:regular,600,700" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <title>Login</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__container container">
+                <div class="header__logo">
+                    <a href="./index.html">
+                        <img width="55" height="57" class="header__logo-img" src="images/logo.svg" alt="logo">
+                    </a>
+                </div>
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item">
+                            <a class="header__nav-link" href="./game.html">Games</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a class="header__nav-link" href="./index.html">About</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a class="header__nav-link" href="./login.html">Login</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main class="login container">
+            <h2 class="login__title">Login page</h2>
+            <form class="login__form">
+                <div class="login__input-wrapp">
+                    <label class="login__lable" for="email">email</label>
+                    <input class="login__input" id="email" type="email">
+                </div>
+
+                <div class="login__input-wrapp">
+                    <label class="login__lable" for="password">password</label>
+                    <input class="login__input" id="password" type="password">
+                </div>
+
+                <div class="login__input-wrapp">
+                    <input id="checkbox" type="checkbox">
+                    <label for="checkbox">I'm not robot</label>
+                </div>
+
+                <button type="submit">Login</button>
+            </form>
+        </main>
+    </body>
+</html>
