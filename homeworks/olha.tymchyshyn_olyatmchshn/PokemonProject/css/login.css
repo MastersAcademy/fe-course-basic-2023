@@ -13,14 +13,16 @@ html {
 .page-header-container {
   display: flex;
   justify-content: space-between;
-  max-width: 1280px;
+  max-width: 100%;
   height: 80px;
   align-items: center;
+  padding-right: 53px;
+  padding-left: 53px;
 }
 
 .logo {
   width: 190px;
-  margin-left: 53px;
+  height: 29.945px;
 }
 
 .nav-menu {
