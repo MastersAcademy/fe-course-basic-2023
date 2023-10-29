@@ -6,28 +6,26 @@ body {
 .header {
   border: none;
   width: 100%;
-  margin: 0;
-  padding: 0;
   background-color: #EF4934;
 }
 
 .header__all {
   display: grid;
-  grid-template-columns: 6fr 1fr; /* grid-template-columns: 3fr 1fr; змітити коли потрібно буде додати кнопку логін  */
+  grid-template-columns: 6fr 1fr;
 }
 
 .header__img {
   margin-top: 8px;
   margin-bottom: 8px;
-  min-width: 55px;
-  min-height: 57.32px;
+  width: 55px;
+  height: 55px;
   justify-content: center;
   margin-left: 61px;
 }
 
 .header__items {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
 }
 
@@ -60,6 +58,97 @@ body {
 
 .header__items_About:active {
   text-decoration: underline;
+}
+
+.header__items_Login {
+  color: #FFF;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18.75px;
+  margin-right: 40px;
+}
+
+.header__items_Login:active {
+  text-decoration: underline;
+}
+
+.Filter {
+  width: 100%;
+  background-color: #221F1F;
+  padding: 15px 0;
+}
+
+.Filter__forms {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 2fr;  /* Погратися з відсотками */
+  justify-content: center;align-items: center;
+  color: #FFF;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.Filter__forms_select {
+  margin-left: 100px;
+}
+
+.Filter__forms_checkbox {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-left: 120px;
+}
+
+.Filter__forms_radio {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-left: 50px;
+  color: #FFF;
+  font-size: 14px;
+}
+
+.Filter__forms_search {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.Filter__forms_search_input {
+  border: none;
+  width: 200px;
+  height: 34px;
+  margin-left: 100px;
+  padding-left: 30px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  background-image: url("../img/Icons.png");
+  background-position: left;background-size: 24px 24px;
+  background-repeat: no-repeat;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.Filter__forms_search_input:focus {
+  box-shadow: 0 0 0 1px #A9A9A9; /* Погратися з фокусом */
+}
+
+.Filter__forms_search_btn {
+  border: none;
+  width: 75px;height: 34px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  background-color: #EF4934;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #FFF;
+}
+
+.Filter__forms_search_btn:active {
+  box-shadow: 0 0 0 1px #A9A9A9;
 }
 
 .Games .Games__title {

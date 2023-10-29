@@ -1,0 +1,85 @@
+ul,
+li,
+h2,
+p {
+  margin: 0;
+}
+
+.content_game-cards {
+  width: 1175px;
+  height: 545px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 25px;
+  margin-bottom: 146px;
+  margin-top: 40px;
+}
+
+.card {
+  width: 275px;
+  height: 260px;
+  background-color: #ECECEC;
+  color: #221F1F;
+  display: grid;
+  padding: 12px 12px 22px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  border-radius: 12px;
+  transition: all .3s ease-out;
+}
+
+.card:hover {
+  box-shadow: 1px 1px 13px 0 #221F1FA6;
+  background-color: #EF343400;
+}
+
+.card__header {
+  width: 251px;
+  height: 90px;
+  display: flex;
+}
+
+.card__image {
+  width: 90px;
+  height: 90px;
+  border-radius: 8px;
+  margin-right: 12px;
+}
+
+.card__header__title {
+  width: 149px;
+  height: 77px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.section_card_title {
+  margin-bottom: 40px;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.content_game-cards {
+  margin-top: 40px;
+}
+
+.card__list {
+  width: 231px;
+  height: 114px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-rows: auto;
+  gap: 16px;
+}
+
+.card_list__title {
+  font-weight: 600;
+  margin-right: 6px;
+}

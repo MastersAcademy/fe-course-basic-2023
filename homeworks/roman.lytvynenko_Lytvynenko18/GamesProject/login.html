@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="Style/login.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <title>Login</title>
+    </head>
+    <body class="login__body">
+        <header class="about-me__header">
+            <img class="about-me__logo" alt="Logo" src="Pictures/logo.png">
+            <div class="about-me__header__menu">
+                <a class="header__link" href="./games.html" title="Games">Games</a>
+            </div>
+            <div class="about-me__header__menu">
+                <a class="header__link" href="./index.html" title="About">About</a>
+            </div>
+            <div class="about-me__header__menu">
+                <a class="header__link" href="./login.html" title="Login">Login</a>
+            </div>
+        </header>
+        <div class="login">
+            <h1 class="login__h1">Login page</h1>
+            <form class="login__form" action="./success.html">
+                <label class="login__fields">Email
+                </label>
+                <input class="login__input" type="email" name="auth_email" placeholder="Enter your email address" required>
+                <label class="login__fields">Password
+                </label>
+                <input class="login__input" type="password" name="auth_pass" placeholder="Enter your email address" required>
+                <label>
+                    <input class="login__checkbox" type="checkbox" name="remember" required> I'm not a robot
+                </label>
+                <button class="login__button" type="submit" name="Login">Login </button>
+            </form>
+        </div>
+    </body>
+</html>
