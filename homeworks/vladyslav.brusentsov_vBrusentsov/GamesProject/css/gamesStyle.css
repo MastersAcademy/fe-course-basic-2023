@@ -31,22 +31,19 @@
 /* Radio-input */
 
 .radio-filter {
-  position: relative;
   display: flex;
-  align-items: center;
-  gap: 64px;
+  gap: 12px;
 }
 
 .radio-games-filter {
   display: flex;
-  align-items: center;
 }
 
 .radio-games-filter input {
   appearance: none;
-  position: absolute;
   z-index: -1;
   opacity: 0;
+  gap: 20px;
 }
 
 .radio-games-filter label {
@@ -56,9 +53,10 @@
   font-style: normal;
   font-weight: 400;
   color: #FFF;
-  position: relative;
   display: flex;
   align-items: center;
+  gap: 12px;
+  position: relative;
 }
 
 .radio-games-filter label::before {
@@ -68,10 +66,19 @@
   height: 20px;
   border-radius: 10px;
   border: 1px solid #FFF;
-  align-items: center;
-  position: absolute;
-  left: -38px;
   transition: background-color 300ms;
+}
+
+.radio-games-filter label::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  opacity: 0;
+  background: #FFF;
+  position: absolute;
+  left: 6px;
 }
 
 .checkbox-games-filter label::before {
@@ -83,29 +90,45 @@
   border: 1px solid #FFF;
   padding: 3px;
   background-color: #221F1F;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  left: -38px;
+  margin-right: 12px;
+  text-align: center;
+  line-height: 16px;
+  font-size: 16px;
   transition: background-color 300ms;
 }
 
+.checkbox-games-filter label::after {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  background: url("../Img/filter-checkbox.svg");
+  opacity: 0;
+  position: absolute;
+  top: 7px;
+  left: 7px;
+}
+
 .radio-games-filter input:checked + label::before {
-  background-color: #EF4934;
+  background-color: #221F1F;
+}
+
+.radio-games-filter input:checked + label::after {
+  opacity: 1;
 }
 
 /* Checkbox-input */
 
 .checkbox-filter {
-  position: relative;
   display: flex;
   align-items: center;
-  gap: 64px;
+  gap: 90px
 }
 
 .checkbox-games-filter {
   display: flex;
   align-items: center;
+  gap: 12px;
 }
 
 .checkbox-games-filter input {
@@ -125,14 +148,19 @@
   font-style: normal;
   font-weight: 400;
   color: #FFF;
-  position: relative;
+  position: absolute;
   display: flex;
   align-items: center;
 }
 
 .checkbox-games-filter input:checked +  label::before {
-  background-color: #EF4934
+  background-color: #221F1F
 }
+
+.checkbox-games-filter input:checked +  label::after {
+  opacity: 1;
+}
+
 /* Search-bar */
 
 .search-bar {
