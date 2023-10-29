@@ -27,15 +27,14 @@
   display: flex;
   flex-direction: column;
   flex: 1 1 auto;
-  box-sizing: border-box;
-  margin-bottom: 20px;
-  overflow-y: auto;
+  margin-bottom: 40px;
 }
 
 /*Main menu*/
 
 .main__menu {
   display: flex;
+  position: sticky;
   align-items: center;
   justify-content: space-between;
   max-width: 100%;

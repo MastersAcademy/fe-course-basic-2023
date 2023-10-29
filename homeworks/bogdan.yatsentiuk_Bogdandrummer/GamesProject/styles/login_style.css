@@ -31,10 +31,9 @@
   flex-direction: column;
   flex: 1 1 auto;
   box-sizing: border-box;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   padding: 0 52px;
   max-width: 100%;
-  overflow-y: auto;
 }
 
 .login__form {

@@ -1,8 +1,9 @@
 /*Header*/
 
-.header {
-  position: fixed;
-  display: flex;
+.head {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   width: 100%;
 }
 
@@ -11,7 +12,7 @@
   grid-template-rows: 1fr;
   grid-template-columns: 50% 1fr;
   align-items: center;
-  max-width: 100%;
+  width: 100%;
   height: 80px;
   background-color: #EF4934;
   font-family: Roboto;
@@ -19,6 +20,7 @@
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  z-index: 1;
 }
 
 .header__logo {
