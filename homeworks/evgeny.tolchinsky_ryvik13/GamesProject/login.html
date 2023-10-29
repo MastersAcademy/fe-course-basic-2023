@@ -39,15 +39,17 @@
                     <h3 class="login-form-title">Login page</h3>
                     <div class="login-form-group">
                         <label class="login-form-label" for="email">Email</label>
-                        <input class="login-form-input" type="email" name="email" id="email" placeholder="Enter your email address" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required>
+                        <input class="login-form-input" type="email" name="email" id="email" placeholder="Enter your email address" required>
                     </div>
                     <div class="login-form-group">
                         <label class="login-form-label" for="password">Password</label>
                         <input class="login-form-input" type="password" name="Пароль" id="password" placeholder="Enter your password" required>
                     </div>
                     <div class="login-form-group">
-                        <input class="login-form-checkbox" id="checkbox" type="checkbox" required>
-                        <label class="login-form-text" for="checkbox">I’m not a robot</label>
+                        <label class="control control__checkbox">
+                            <input type="checkbox" required> I'm not a robot
+                            <div class="control__proxy"></div>
+                        </label>
                     </div>
                     <div class="login-form-group">
                         <button class="login-form-button" type="submit">Login</button>
