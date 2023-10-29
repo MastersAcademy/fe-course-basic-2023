@@ -1,4 +1,10 @@
+/*Импорт шрифтов*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap");
+/*Обнуляющие стили*/
+@import url("null.css");
+/*Импорт header & footer*/
+@import url("header.css");
+@import url("footer.css");
 
 * {
   padding: 0;
@@ -6,78 +12,23 @@
 }
 
 .wrapper {
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
+  height: 100vh;
 }
 
 .content {
   max-width: 1280px;
-  margin: 0 auto;
-}
-
-.header {
-  display: flex;
-  width: 100%;
-}
-
-.header__menu {
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 50% 1fr;
-  align-items: center;
-  max-width: 100%;
-  height: 80px;
-  background-color: #EF4934;
-  font-family: Roboto;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-
-.header__logo {
-  align-items: center;
-  justify-content: center;
-  margin-left: 50px;
-  transition: all 250ms;
-}
-
-.header__logo:active {
-  transform: scale(.99);
-  transition: all 250ms;
-}
-
-.menu__list {
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: auto auto;
-  align-items: center;
-  justify-content: end;
-  max-width: 100%;
-  width: 100%;
-  list-style: none;
-  color: #FFF;
-}
-
-.menu__list li {
-  margin-right: 50px;
-  transition: all 250ms;
-}
-
-.menu__link-about {
-  text-decoration: none;
-  color: #FFF;
-  transition: all 250ms;
-}
-
-.menu__link-about:hover {
-  text-decoration: underline;
-  color: #FBFFC4;
-  text-shadow: 1px 1px 1px #999;
 }
 
 .main {
   display: flex;
+  flex: 1 1 auto;
+  justify-content: center;
+  margin: 0 auto;
   box-sizing: border-box;
+  margin-bottom: 40px;
   padding: 60px 52px 0;
 }
 
@@ -129,4 +80,10 @@
 
 .about__links {
   color: #EF4934;
+  transition: ease-in all 150ms;
+}
+
+.about__links:hover {
+  font-weight: 500;
+  transition: ease-in all 150ms;
 }
