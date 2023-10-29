@@ -91,7 +91,6 @@ body {
   font-size: 16px;
   color: #FFF;
   transition: background-color 300ms;
-  /* position: absolute; */
 }
 
 .login-main-checkbox input:checked + label::before {
@@ -104,7 +103,7 @@ body {
   display: block;
   width: 14px;
   height: 14px;
-  background-color: #EF4934;
+  background: url("../Img/login-checkbox.svg");
   position: absolute;
   top: 4px;
   left: 4px;
