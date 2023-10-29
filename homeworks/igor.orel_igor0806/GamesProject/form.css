@@ -41,7 +41,8 @@ body {
 }
 
 .login_form {
-  padding-left: 450px;
+  margin: 0 auto;
+  max-width: 533px;
 }
 
 .login_input {
@@ -51,15 +52,9 @@ body {
   font-size: 14px;
 }
 
-input[type="email"] {
-  margin: 20px 0 40px;
-  padding: 30px 20px;
-  color: #A9A9A9;
-  font-weight: 400;
-  font-size: 14px;
-}
-
+input[type="email"],
 input[type="password"] {
+  display: block;
   margin: 20px 0 40px;
   padding: 30px 20px;
   color: #A9A9A9;
@@ -72,11 +67,7 @@ input[type="password"]:focus {
   border-bottom: 5px solid #EF4934;
 }
 
-label[for="email"] {
-  font-weight: 600;
-  font-size: 22px;
-}
-
+label[for="email"],
 label[for="password"] {
   font-weight: 600;
   font-size: 22px;
