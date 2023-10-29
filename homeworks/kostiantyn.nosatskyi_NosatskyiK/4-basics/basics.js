@@ -4,7 +4,7 @@ const secondNum = 10;
 // the first action was implemented by assigning a value to a new variable
 const sum = firstNum + secondNum;
 
-// basic task
+// basic task (output in console)
 console.log(sum); // addition
 console.log(firstNum - secondNum); // subtraction
 console.log(firstNum * secondNum); // multiplication
