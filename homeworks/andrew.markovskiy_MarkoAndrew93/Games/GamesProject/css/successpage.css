@@ -14,7 +14,8 @@ body {
 .headder-logo_img {
   text-decoration: none;
   color: #FFF;
-}  
+}
+
 
 .header-line {
   background-color: #EF4934;
@@ -23,7 +24,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}  
+}
 
 .header-logo {
   margin-left: 53px;
@@ -61,7 +62,7 @@ body {
   padding: 10px;
   color: #FFF;
   background-color: #EF4934;
-  cursor: pointer;   
+  cursor: pointer;
 }
 
 .success-btn:hover {
