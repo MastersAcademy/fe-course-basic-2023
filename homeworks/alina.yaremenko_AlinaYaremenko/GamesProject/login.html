@@ -32,24 +32,24 @@
         </header>
         <main class="login container">
             <h2 class="login__title">Login page</h2>
-            <form class="login__form">
+            <form class="login__form" action="./login-success.html">
                 <div class="login__input-wrapp">
                     <label class="login__lable" for="email">Email</label>
-                    <input class="login__input" id="email" type="email" placeholder="Enter your email address">
+                    <input class="login__input" id="email" type="email" placeholder="Enter your email address" required>
                 </div>
 
                 <div class="login__input-wrapp">
                     <label class="login__lable" for="password">Password</label>
-                    <input class="login__input" id="password" type="password" placeholder="Enter your password">
+                    <input class="login__input" id="password" type="password" placeholder="Enter your password" required>
                 </div>
 
                 <label class="login__checkbox-wrapp">
-                    <input class="login__checkbox-input" type="checkbox">
+                    <input class="login__checkbox-input" type="checkbox" required>
                     <span class="login__checkbox-checkmark"></span>
                     <span class="login__checkbox-lable">I'm not robot</span>
                 </label>
 
-                <a href="./login-success.html" class="login__submit">Login</a>
+                <button type="submit" class="login__submit">Login</button>
             </form>
         </main>
     </body>
