@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>JS basics</title>
+        <link
+            href="style.css"
+            rel="stylesheet"
+            type="text/css">
+    </head>
+    <body>
+        <h1 class="headline">Basic math operation</h1>
+        <input class="number1" type="number" id="num1" placeholder="Enter the first number">
+        <input class="number2" type="number" id="num2" placeholder="Enter the second number">
+        <select class="dropdown-math" id="operator">
+            <option value="+" disabled selected>Choose the operation</option>
+            <option value="+">Sum (+)</option>
+            <option value="-">Difference (-)</option>
+            <option value="*">Multiple (*)</option>
+            <option value="/">Division (/)</option>
+            <option value="%">Residue (%)</option>
+            <option value="**">Exponent (**)</option>
+        </select>
+        <button class="button-calculation" type="submit" onclick="calculation()">Calculate</button>
+        <p>
+            Result: <span id="result"></span>
+        </p>
+        <script src="./basics.js"></script>
+    </body>
+</html>
