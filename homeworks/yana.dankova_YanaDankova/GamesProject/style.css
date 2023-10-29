@@ -1,34 +1,30 @@
 .menu {
-  float: right;
+  display: flex;
+  flex-direction: row;
   margin-left: 10px;
   padding-left: 20px;
-  margin-top: 35px;
+  padding-top: 40px;
   color: #ECECEC;
   font-family: Roboto, sans-serif;
   font-weight: 300;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .header {
   color: #ECECEC;
   display: flex;
   flex-direction: row;
-  max-width: 100%;
+  width: 1280px;
+  height: 80px;
   background-color: #EF4934;
 }
 
 .logo {
-  height: 50%;
   display: table;
   float: left;
   margin-right: 900px;
-}
-
-.inside_header {
-  width: 1200px;
-  height: 100%;
-  display: flex;
-  margin: 0 auto;
+  margin-left: 30px;
+  margin-top: 5px;
 }
 
 .name {
@@ -80,7 +76,7 @@
   font-family: Roboto, sans-serif;
   font-weight: 700;
   font-size: 16px;
-  line-height: 12px;
+  line-height: 26px;
   width: 97px;
   height: 10px;
 }
@@ -88,7 +84,7 @@
 .another {
   font-family: Roboto, sans-serif;
   font-size: 16px;
-  line-height: 2px;
+  line-height: 26px;
   width: 97px;
   height: 10px;
 }
@@ -98,7 +94,8 @@
   font-size: 16px;
   line-height: 22px;
   width: 200px;
-  height: 100px
+  height: 100px;
+  margin-left: 5px;
 }
 
 .project2 {
@@ -112,8 +109,10 @@
   background-color: #ECECEC;
   width: 275px;
   height: 260px;
-  padding: 10px auto;
+  padding: 12px auto;
   margin: 10px auto;
+  border-radius: 12px;
+  gap: 22px;
 }
 
 .game2 {
@@ -126,7 +125,7 @@
   font-weight: 700;
   font-size: 48px;
   line-height: 32px;
-  margin-left: 100px;
+  margin-left: 53px;
 }
 
 .part {
@@ -144,6 +143,7 @@
 
 .body {
   margin-top: 10px;
+  gap: 22px;
 }
 
 .picture3 {
@@ -159,7 +159,7 @@
 .picture4 {
   display: flex;
   flex-direction: row;
-  margin: 10px auto;
   padding: 0;
   width: 1175px;
+  margin-left: 52px;
 }
