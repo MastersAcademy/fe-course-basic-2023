@@ -121,15 +121,6 @@ label {
   position: relative;
 }
 
-/* input[type="checkbox"] {
-  border-radius: 6px;
-  border: 1px solid #EF4934;
-  background: #221F1F;
-  width: 20px;
-  height: 20px;
-  accent-color: #EF4934;
-} */
-
 input[type="checkbox"] {
   opacity: 0;
   position: absolute;
