@@ -5,20 +5,14 @@ const x = 4 * 16;
 const y = 4 ** 2;
 const z = 23 % 5;
 
-const add = a + b;
-console.log(`Addition: ${a} + ${b} = ${add}`);
+console.log(`Addition: ${a} + ${b} = ${a + b}`);
 
-const diff = b - c;
-console.log(`Subtraction: ${b} - ${c} = ${diff}`);
+console.log(`Subtraction: ${b} - ${c} = ${b - c}`);
 
-const multiply = y * z;
-console.log(`Multiplication: ${y} * ${z} = ${multiply}`);
+console.log(`Multiplication: ${y} * ${z} = ${y * z}`);
 
-const div = c / z;
-console.log(`Division: ${c} / ${z} = ${+div.toFixed(2)}`);
+console.log(`Division: ${c} / ${z} = ${(c / z).toFixed(2)}`);
 
-const expo = c ** 2;
-console.log(`Exponentiation: ${c} ** ${2} = ${expo}`);
+console.log(`Exponentiation: ${c} ** ${z} = ${c ** z}`);
 
-const remainder = x % b;
-console.log(`Remainder: ${x} % ${b} = ${remainder}`);
+console.log(`Remainder: ${x} % ${b} = ${x % b}`);
