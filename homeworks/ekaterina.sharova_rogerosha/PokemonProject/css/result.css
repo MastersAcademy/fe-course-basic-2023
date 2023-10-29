@@ -33,6 +33,7 @@ button {
   align-items: center;
   border-radius: 6px;
   gap: 10px;
+  border: 1px solid #EF4934;
 }
 
 footer {
