@@ -6,13 +6,37 @@
             content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>PokemonProject</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="style/main.css">
+        <link rel="stylesheet" type="text/css" href="style/header.css">
+        <link rel="stylesheet" type="text/css" href="style/about.css">
     </head>
     <body>
-        <section class="about_section">
-            <div class="about_section__image"></div>
+        <header class="header">
+            <div class="header_wrapper centering">
+                <div class="container_logo">
+                    <img src="images/ma_logo.svg" alt="ma_logo">
+                </div>
+                <nav>
+                    <ul class="nav__links">
+                        <li>
+                            <a href="./pokemons.html" title="Pokemons">Pokemons</a>
+                        </li>
+                        <li>
+                            <a class="active" href="./index.html" title="About">About</a>
+                        </li>
+                        <li>
+                            <a href="./login_page.html" title="Login">Login</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="about_section centering">
+            <div class="about_section__image">
+                <img src="./images/pokemon.jpg" alt="Esh">
+            </div>
             <div class="about_section__text">
-                <h1>About me</h1>
+                <h1 class="heading-primary">About me</h1>
                 <p>Hi! My name is Roman and I'm a Junior Frontend Developer. I am already familiar with main Web Technologies like HTML, CSS, JavaScript and Git version control system.</p>
                 <p>
                     This page was developed during the course

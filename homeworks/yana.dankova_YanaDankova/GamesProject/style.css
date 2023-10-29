@@ -2,11 +2,11 @@
   float: right;
   margin-left: 10px;
   padding-left: 20px;
-  margin-top: 15px;
+  margin-top: 35px;
   color: #ECECEC;
   font-family: Roboto, sans-serif;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .header {
@@ -18,10 +18,10 @@
 }
 
 .logo {
-  height: 70%;
+  height: 50%;
   display: table;
   float: left;
-  margin-right: 980px;
+  margin-right: 900px;
 }
 
 .inside_header {
@@ -43,7 +43,7 @@
   flex-direction: row;
   width: 1175px;
   height: 479px;
-  top: 140 px;
+  top: 140px;
   left: 53px;
 }
 
@@ -112,8 +112,8 @@
   background-color: #ECECEC;
   width: 275px;
   height: 260px;
-  padding: 20px auto;
-  margin: 15px auto;
+  padding: 10px auto;
+  margin: 10px auto;
 }
 
 .game2 {
@@ -151,7 +151,9 @@
   flex-direction: row;
   width: 1175px;
   margin: 0;
-  padding: 10px auto;
+  padding-top: 10px;
+  padding-right: auto;
+  padding-left: auto;
 }
 
 .picture4 {
