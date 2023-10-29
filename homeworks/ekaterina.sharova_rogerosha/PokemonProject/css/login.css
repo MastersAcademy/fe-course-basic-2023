@@ -132,45 +132,7 @@ body {
 .label-checkbox {
   display: flex;
   gap: 12px;
-  align-items: center;
   cursor: pointer;
-}
-
-.real-checkbox {
-  width: 0;
-  height: 0;
-  opacity: 0;
-  position: absolute;
-  z-index: -1;
-}
-
-.custom-checkbox {
-  position: relative;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border-radius: 6px;
-  border: 1px solid #EF4934;
-  background-color: #FFF;
-  cursor: pointer;
-}
-
-.custom-checkbox::before {
-  content: " ";
-  display: inline-block;
-  width: 13px;
-  height: 13px;
-  background-image: url("/homeworks/ekaterina.sharova_rogerosha/PokemonProject/images/checkmark.png");
-  background-size: contain;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  transition: .2s ease-in;
-}
-
-.real-checkbox:checked + .custom-checkbox::before {
-  transform: translate(-50%, -50%) scale(1);
 }
 
 .button-login {
