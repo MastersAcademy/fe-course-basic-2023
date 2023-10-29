@@ -102,8 +102,8 @@ input[type="checkbox"] {
 
 .input-email,
 .input-password {
-    font-size: 14px;
-    font-weight: 400;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .login-btn {
