@@ -1,0 +1,29 @@
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 32px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.section__math-operation {
+  margin: 60px 53px auto 52px;
+}
+
+.title__txt {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.main__txt {
+  font-size: 22px;
+  margin-top: 24px;
+}
+
+.title__list {
+  font-size: 18px;
+}
+
+.list__data {
+  padding-left: 20px;
+}
