@@ -1,23 +1,27 @@
-const myBody = document.querySelector('body');
+const expressionFirstNumber = document.querySelector('[data-number="first"]');
+const expressionSecondNumber = document.querySelector('[data-number="second"]');
+const expressionAdding = document.querySelector('[data-operation="adding"]');
+const expressionSubtraction = document.querySelector('[data-operation="subtraction"]');
+const expressionMultiplication = document.querySelector('[data-operation="multiplication"]');
+const expressionDivision = document.querySelector('[data-operation="division"]');
+const expressionRemainder = document.querySelector('[data-operation="remainder"]');
+const expressionExponentiation = document.querySelector('[data-operation="exponentiation"]');
 
-const firstNumber = Number(prompt('enter first number'));
-const secondNumber = Number(prompt('enter second number'));
+const firstNumber = Number(prompt('enter first number', '11'));
+const secondNumber = Number(prompt('enter second number', '2'));
 
-const addingOperator = firstNumber + secondNumber;
-const subtractionOperator = firstNumber - secondNumber;
-const multiplicationOperator = firstNumber * secondNumber;
-const divisionOperator = firstNumber / secondNumber;
-const remainderOperator = firstNumber % secondNumber;
-const exponentiationOperator = firstNumber ** secondNumber;
+const addingResult = firstNumber + secondNumber;
+const subtractionResult = firstNumber - secondNumber;
+const multiplicationResult = firstNumber * secondNumber;
+const divisionResult = firstNumber / secondNumber;
+const remainderResult = firstNumber % secondNumber;
+const exponentiationResult = firstNumber ** secondNumber;
 
-myBody.innerHTML = `
-    <h1>You entered <span class="accent">${firstNumber}</span> and <span class="accent">${secondNumber}</span></h1>
-    <ul>
-        <li>Adding:    <span class="accent">${firstNumber} + ${secondNumber} = ${addingOperator}</span></li>
-        <li>Subtraction:    <span class="accent">${firstNumber} - ${secondNumber} = ${subtractionOperator}</span></li>
-        <li>Multiplication:    <span class="accent">${firstNumber} * ${secondNumber} = ${multiplicationOperator}</span></li>
-        <li>Division:    <span class="accent">${firstNumber} / ${secondNumber} = ${divisionOperator}</span></li>
-        <li>Remainder:    <span class="accent">${firstNumber} % ${secondNumber} = ${remainderOperator}</span></li>
-        <li>Exponentiation:    <span class="accent">${firstNumber} ** ${secondNumber} = ${exponentiationOperator}</span></li>
-    </ul>
-<a class="btn" href="index.html">refresh</a>`;
+expressionSecondNumber.textContent = `${firstNumber}`;
+expressionFirstNumber.textContent = `${secondNumber}`;
+expressionAdding.textContent = `${firstNumber} + ${secondNumber} = ${addingResult}`;
+expressionSubtraction.textContent = `${firstNumber} - ${secondNumber} = ${subtractionResult}`;
+expressionMultiplication.textContent = `${firstNumber} * ${secondNumber} = ${multiplicationResult}`;
+expressionDivision.textContent = `${firstNumber} / ${secondNumber} = ${divisionResult}`;
+expressionRemainder.textContent = `${firstNumber} % ${secondNumber} = ${remainderResult}`;
+expressionExponentiation.textContent = `${firstNumber} ** ${secondNumber} = ${exponentiationResult}`;
