@@ -4,12 +4,12 @@ const b = 4;
 // Addition
 
 const sum = a + b;
- console.log(`Operation addition: ${a} + ${b} = ${sum}`);
+console.log(`Operation addition: ${a} + ${b} = ${sum}`);
 
 //  Subtraction
 
-const sub   = a - b;
-console.log(`Operation subtraction: ${a} - ${b} = ${sub}`)
+const sub = a - b;
+console.log(`Operation subtraction: ${a} - ${b} = ${sub}`);
 
 //   Multiplication
 
