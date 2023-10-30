@@ -2,7 +2,7 @@
   float: right;
   margin-left: 10px;
   padding-left: 20px;
-  margin-top: 15px;
+  margin-top: 20px;
   color: #ECECEC;
   font-family: Roboto, sans-serif;
   font-weight: 300;
@@ -13,7 +13,7 @@
   color: #ECECEC;
   display: flex;
   flex-direction: row;
-  max-width: 100%;
+  max-width: 1285px;
   background-color: #EF4934;
 }
 
@@ -22,13 +22,7 @@
   display: table;
   float: left;
   margin-right: 900px;
-}
-
-.inside_header {
-  width: 1200px;
-  height: 100%;
-  display: flex;
-  margin: 0 auto;
+  margin-left: 30px;
 }
 
 .name {
@@ -176,16 +170,19 @@
 
 .inside_login {
   font-family: Roboto, sans-serif;
-  font-size: 20px;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 25.78px;
 }
 
 button {
   background-color: #EF4934;
-  width: 575px;
+  width: 580px;
   height: 70px;
   color: #ECECEC;
   font-family: Roboto, sans-serif;
   font-size: 20px;
+  border-radius: 6px;
 }
 
 .password {
@@ -195,7 +192,17 @@ button {
 }
 
 .return {
-  width: 300px;
-  height: 30px;
-  margin: 20px auto;
+  margin-top: 100px;
+  margin-left: 500px;
+}
+
+.success {
+  font-family: Roboto, sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  margin-left: 20px;
+}
+
+.home {
+  width: 250px;
 }
