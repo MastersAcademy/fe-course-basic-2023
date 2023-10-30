@@ -1,0 +1,14 @@
+.name {
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 32px;
+}
+
+.text {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+  width: 575px;
+}
