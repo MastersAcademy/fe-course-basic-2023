@@ -1,28 +1,37 @@
-const firstNumber = +prompt('Enter the first number', '').trim();
-const operator = prompt('Enter mathematics operator (+, -, *, /, %, **,)', '').trim();
-const secondNumber = +prompt('Enter the second number', '').trim();
+const operator = document.querySelector('select');
+const btn = document.querySelector('button');
 
-const count = () => {
-    switch (operator) {
+btn.onclick = function () {
+    const one = Number(document.querySelector('.one').value);
+    const two = Number(document.querySelector('.two').value);
+    const result = document.querySelector('.result');
+
+    switch (operator.value) {
         case '+':
-            return firstNumber + secondNumber;
+            result.innerHTML = one + two;
+            break;
+
         case '-':
-            return firstNumber - secondNumber;
+            result.innerHTML = one - two;
+            break;
+
         case '*':
-            return firstNumber * secondNumber;
+            result.innerHTML = one * two;
+            break;
+
         case '/':
-            return firstNumber / secondNumber;
+            result.innerHTML = one / two;
+            break;
+
         case '%':
-            return firstNumber % secondNumber;
+            result.innerHTML = one % two;
+            break;
+
         case '**':
-            return firstNumber ** secondNumber;
+            result.innerHTML = one ** two;
+            break;
+
         default:
-            alert('You did not enter an operator');
+            break;
     }
-    return count();
 };
-
-const equal = count();
-
-alert(`Your result: ${Number.isNaN(equal) || equal === undefined || equal === '' ? 'Something went wrong...' : equal}`);
-window.location.reload();
