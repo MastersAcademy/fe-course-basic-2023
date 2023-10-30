@@ -23,7 +23,36 @@
                 <li>
                     <a href="./index.html" class="navigation-item about">About</a>
                 </li>
+                <li>
+                    <a href="./login.html" class="navigation-item login">Login</a>
+                </li>
             </ul>
+        </header>
+        <header class="second-header">
+            <select id="dropdown" class="dropdown">
+                <option value="dropdown-type" disabled selected>Type</option>
+                <option value="dropdown-fighting">Fighting</option>
+                <option value="dropdown-dark">Dark</option>
+            </select>
+            <div class="radio-buttons">
+                <label for="favourites">Favourites</label>
+                <input type="radio" id="favourites" name="new-filter">
+                <label for="only-new">Only New</label>
+                <input type="radio" id="only-new" name="new-filter">
+            </div>
+            <div class="checkboxes">
+                <label for="small">Small</label>
+                <input type="checkbox" id="small" name="size">
+                <label for="big">Big</label>
+                <input type="checkbox" id="big" name="size">
+            </div>
+            <div class="search-field">
+                <div class="image-search">
+                    <img src="images/search.svg" alt="search">
+                    <input class="input-search" type="text" id="search" placeholder="Search">
+                </div>
+                <button class="button-apply" type="submit">Apply</button>
+            </div>
         </header>
         <div class="content">
             <h1 class="headline">Study Project "Pokemons"</h1>
@@ -318,5 +347,13 @@
                 </section>
             </div>
         </div>
+        <footer>
+            <div class="social-networks">
+                <img class="networks" src="images/networks.svg" alt="Masters Academy">
+            </div>
+            <p class="footer-text">
+                Made with 🤍 on course <a href="https://www.mastersacademy.education/frontend-for-beginners-it" class="link"> 'Frontend for beginners' from Masters Academy in 2023</a>, by Katya Sharova
+            </p>
+        </footer>
     </body>
 </html>
