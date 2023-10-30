@@ -17,6 +17,7 @@
 }
 
 @media (max-width: 1250px) {
+
   .calculator {
     height: 125px;
     display: grid;
@@ -26,6 +27,7 @@
 }
 
 @media (max-width: 600px) {
+
   .calculator {
     height: 125px;
     display: grid;
@@ -67,7 +69,7 @@
 
 
 .calculator__label {
-  color: #00bd5e;
+  color: #00BD5E;
   font-size: 18px;
 }
 
