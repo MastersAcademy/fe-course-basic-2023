@@ -1,0 +1,15 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
