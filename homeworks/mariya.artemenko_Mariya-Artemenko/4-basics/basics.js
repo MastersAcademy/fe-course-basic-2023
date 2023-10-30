@@ -8,13 +8,6 @@ const resultDivision = firstNumber / secondNumber;
 const resultDivisionWithRemainder = firstNumber % secondNumber;
 const resultExponentiation = firstNumber ** secondNumber;
 
-alert(`Operation addition: ${firstNumber} + ${secondNumber} = ${resultAddition}`);
-alert(`Operation subtraction: ${firstNumber} - ${secondNumber} = ${resultSubtraction}`);
-alert(`Operation multiplication: ${firstNumber} * ${secondNumber} = ${resultMultiplication}`);
-alert(`Operation division: ${firstNumber} + ${secondNumber} = ${resultDivision}`);
-alert(`Operation division with remainder: ${firstNumber} % ${secondNumber} = ${resultDivisionWithRemainder}`);
-alert(`Operation exponentiation: ${firstNumber} ** ${secondNumber} = ${resultExponentiation}`);
-
 function showResult() {
     const resultAdditionEl = document.querySelector('[data-result1]');
     const resultSubtractionEL = document.querySelector('[data-result2]');
