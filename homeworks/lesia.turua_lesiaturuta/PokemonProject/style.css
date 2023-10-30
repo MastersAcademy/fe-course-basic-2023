@@ -76,7 +76,8 @@ body {
   line-height: 32px;
 }
 
-.text {
+.text,
+.title-math {
   font-size: 22px;
   font-weight: 400;
   margin-top: 28px;
@@ -134,7 +135,8 @@ body {
   align-items: center;
 }
 
-.card__header-title {
+.card__header-title,
+.title-math__operation {
   margin-left: 15px;
   font-size: 18px;
   font-weight: 700;
