@@ -33,9 +33,7 @@ function calculation() {
         default:
             result = 'Wrong operator. Please, try again.';
     }
-    document.getElementById('result').textContent = result;
+    document.querySelector('[data-result]').textContent = `Result: ${result}`;
 }
 
-module.exports = {
-    calculation,
-};
+calculation();
