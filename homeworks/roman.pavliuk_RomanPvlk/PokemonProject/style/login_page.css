@@ -1,0 +1,66 @@
+.login_title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 80px 0 60px;
+}
+
+.form-login {
+  display: flex;
+  flex-direction: column;
+  width: 575px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.form-login_item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-login_item__input {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 12px 20px;
+  margin-top: 22px;
+  box-sizing: border-box;
+  border: 1px solid #A9A9A9;
+  -webkit-transition: .1s;
+  transition: .1s;
+  outline: none;
+  border-radius: 5px;
+  height: 70px;
+}
+
+.form-login_item__input::placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  color: #A9A9A9;
+}
+
+.form-login_item__input:focus {
+  border-bottom: 2px solid #EF4934;
+}
+
+.labels {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.checkbox_area {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.checkbox_area input {
+  cursor: pointer;
+}
+
+.checkbox_area label {
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+

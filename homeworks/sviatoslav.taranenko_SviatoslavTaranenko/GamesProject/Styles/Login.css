@@ -40,7 +40,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 19px;
   margin-right: 40px;
 }
 
@@ -53,7 +53,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  line-height: 18.75px;
+  line-height: 19px;
   margin-right: 40px;
 }
 
@@ -66,7 +66,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  line-height: 18.75px;
+  line-height: 19px;
   margin-right: 40px;
 }
 
@@ -98,7 +98,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 22px;
   font-weight: 600;
-  line-height: 25.78px;
+  line-height: 26px;
   padding-top: 10px;
 }
 
@@ -138,52 +138,44 @@ body {
 }
 
 .Login__table_verif {
-  margin: 10px 0;
-}
-
-.Login__table_verif {
   display: flex;
   align-items: center;
+  margin: 10px 0;
   padding-top: 10px;
 }
 
-.Login__table_verif input {
-  padding: 0;
-  height: initial;
-  width: initial;
-  margin-bottom: 0;
-  display: none;
-  cursor: pointer;
-}
-
-.Login__table_verif label {
-  position: relative;
-  cursor: pointer;
-}
-
-.Login__table_verif label::before {
-  content: "";
-  -webkit-appearance: none;
-  background-color: transparent;
-  border: 2px solid #EF4934;
-  border-radius: 6px;
-  padding: 10px;
-  display: inline-block;
-  position: relative;
-  vertical-align: middle;
-  cursor: pointer;margin-right: 5px;
-}
-
-.Login__table_verif input:checked + label::after {
-  content: "";
-  display: block;
+.Login__table_verif_input {
   position: absolute;
-  top: 2px;left: 9px;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 1px solid #EF4934;
+  cursor: pointer;
+}
+
+.Login__table_verif_text {
+  position: relative;
+  cursor: pointer;
+}
+
+.Login__table_verif_input:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 10px;
   width: 6px;
   height: 14px;
   border: solid #EF4934;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
+}
+
+.Login__table_verif_input::before {
+  content: "";
+  color: transparent;
+  display: block;
+  border-color: #FFF;
+  background-size: contain;
 }
 
 .Login__table_verif_text {
@@ -192,27 +184,22 @@ body {
   font-weight: 400;
   line-height: 21px;
   color: #221F1F;
-  padding-left: 10px;
-}
-
-.Login__table .Login__table_verif .Login__table_verif_input {
-  min-height: 20px;
-  min-width: 20px;
+  padding-left: 30px;
 }
 
 .Login__table_btn {
   padding-top: 10px;
 }
 
-
 .Login__table_btn_name {
-  min-width: 580px;min-height: 55px;
+  min-width: 580px;
+  min-height: 55px;
   border-radius: 6px;
   background-color: #EF4934;
   font-family: "Roboto", sans-serif;
   font-size: 22px;
   font-weight: 600;
-  line-height: 25.78px;
+  line-height: 26px;
   color: #FFF;
   border: none;
   cursor: pointer;

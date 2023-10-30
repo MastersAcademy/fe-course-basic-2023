@@ -1,0 +1,53 @@
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 40px 0 40px 53px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 275px);
+  grid-gap: 25px;
+  justify-content: center;
+}
+
+.card {
+  width: 275px;
+  height: 260px;
+  padding: 12px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 12px;
+  color: #221F1F;
+  background: #ECECEC;
+  border-radius: 12px;
+}
+
+.card__img {
+  width: 90px;
+}
+
+.description__title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 6px 0 0;
+}
+
+.description__text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  margin: 0;
+}
+
+.card__actors {
+  grid-column: span 2;
+  list-style: none;
+  font-size: 14px;
+  padding-left: 10px;
+  margin: 0;
+}
+
+.card__actor {
+  line-height: 26px;
+}

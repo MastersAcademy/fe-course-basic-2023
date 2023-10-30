@@ -6,20 +6,24 @@
 }
 
 body {
-  width: 1280px;
+  width: 100%;
 }
 
 .header {
   display: grid;
   background-color: #EF4934;
   height: 80px;
+  width: inherit;
   grid-template-columns: 10fr 3fr;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
 }
 
 .logo {
   width: 55px;
   height: 57px;
-  margin-left: 53px;
+  margin-left: 50px;
 }
 
 .header__logo {
@@ -30,12 +34,12 @@ body {
 .header__navigation {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .navigation {
   display: flex;
   list-style: none;
-  justify-content: flex-start;
 }
 
 .navigation__line {
@@ -67,11 +71,15 @@ body {
 }
 
 .games__main {
-  margin-top: 40px;
+  position: relative;
+  top: 180px;
 }
 
 .about__main {
-  margin-top: 60px;
+  position: absolute;
+  top: 140px;
+  left: 50%;
+  transform: translateX(-50%);
   display: inline-grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 63px;
@@ -101,17 +109,87 @@ body {
   color: #EF4934;
 }
 
+.filter {
+  display: grid;
+  grid-template-columns: 17fr 30fr 25fr 30fr;
+  background-color: #221F1F;
+  padding-left: 50px;
+  padding-right: 50px;
+  align-items: center;
+  height: 60px;
+  position: fixed;
+  width: inherit;
+  top: 80px;
+  color: #FFF;
+  z-index: 9999;
+}
+
+.filter-element-padding {
+  margin-right: 30px;
+}
+
+.filter__select {
+  width: 114px;
+  height: 36px;
+  font-size: 14px;
+}
+
+.filter__search {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search__input-field {
+  background-color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 290px;
+  height: 40px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding-left: 10px;
+}
+
+.search__input {
+  outline: none;
+  border: none;
+}
+
+.search__svg {
+  background-color: #FFF;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.svg--search {
+  width: 24px;
+  height: 24px;
+}
+
+.search__button {
+  height: 40px;
+  width: 70px;
+  background-color: #EF4934;
+  border: none;
+  color: #FFF;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-weight: 400;
+}
+
 .card-container {
   display: grid;
   grid-template: repeat(2, 1fr) / repeat(4, 1fr);
-  gap: 25px;
-  width: 1175px;
-  height: 545px;
+  gap: 20px;
 }
 
 .card {
-  width: 275px;
-  height: 260px;
+  width: 265px;
+  height: 250px;
   padding: 12px 12px 22px;
   display: grid;
   grid-template-columns: 90px 1fr;
@@ -123,6 +201,10 @@ body {
 
 .card__image {
   grid-area: image;
+}
+
+.image {
+  border-radius: 5px;
 }
 
 .card__name {
@@ -142,6 +224,80 @@ body {
   margin-bottom: 6px;
 }
 
-.card__text2 {
+.card__description {
   grid-area: text2;
+}
+
+.log-in__main {
+  position: absolute;
+  top: 140px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.log-in {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 575px;
+  border: none;
+}
+
+.margin-top--40 {
+  margin-top: 40px;
+}
+
+.margin-top--22 {
+  margin-top: 22px;
+}
+
+.log-in__heading {
+  text-align: center;
+}
+
+.log-in__input {
+  height: 70px;
+  border: 2px solid #D1D1D1;
+  font-size: 14px;
+  font-weight: 400;
+  padding-left: 10px;
+}
+
+.log-in__checkbox {
+  margin-right: 10px;
+}
+
+.log-in__button {
+  background-color: #EF4934;
+  color: #FFF;
+  font-weight: 600;
+  font-size: 22px;
+  padding: 35px 0;
+  border-radius: 5px;
+  border: none;
+}
+
+.log-in__button:hover {
+  cursor: pointer;
+  background-color: #080;
+}
+
+@media (min-width: 1500px) {
+
+  .card {
+    width: 350px;
+    height: 330px;
+    gap: 20px;
+  }
+
+  .card__name__heading {
+    font-size: 24px;
+  }
+
+  .card__name--14px {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
 }

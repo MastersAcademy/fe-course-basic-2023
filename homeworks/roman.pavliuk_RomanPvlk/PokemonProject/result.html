@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>PokemonProject</title>
+        <link rel="stylesheet" type="text/css" href="style/main.css">
+        <link rel="stylesheet" type="text/css" href="style/header.css">
+        <link rel="stylesheet" type="text/css" href="style/login_page.css">
+        <link rel="stylesheet" type="text/css" href="style/result.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="header_wrapper centering">
+                <div class="container_logo">
+                    <img src="images/ma_logo.svg" alt="ma_logo">
+                </div>
+                <nav>
+                    <ul class="nav__links">
+                        <li>
+                            <a href="./pokemons.html" title="Pokemons">Pokemons</a>
+                        </li>
+                        <li>
+                            <a href="./index.html" title="About">About</a>
+                        </li>
+                        <li>
+                            <a class="active" href="./login_page.html" title="Login">Login</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="login_successful">
+            <div class="successful_title">
+                <h1 class="heading-primary">Login successful</h1>
+                <p>Thank You!</p>
+            </div>
+            <form class="form-login" action="./index.html" target="_self">
+                <input class="button" type="submit" value="Back to Homepage">
+            </form>
+        </section>
+    </body>
+</html>

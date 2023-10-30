@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="css/login.css">
+        <title>Game Project</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="header">
+                <div class="header__container">
+                    <div class="header__logo">
+                        <img src="img/logo.png" alt="logo" width="55" height="58">
+                    </div>
+                    <div class="header__body">
+                        <nav class="header__menu menu">
+                            <ul class="menu__list">
+                                <li class="menu__item">
+                                    <a href="game.html" class="menu__link">Game</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="index.html" class="menu__link">About</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="login.html" class="menu__link">Login</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- Burger menu -->
+                    <div class="header__burger">
+                        <span></span>
+                    </div>
+                </div>
+            </header>
+            <main class="page">
+                <div class="main__container">
+                    <div class="main__title">
+                        <h1 class="title__login">Login page</h1>
+                    </div>
+                    <div class="page__login">
+                        <form action="successful.html" class="login__form" target="_self">
+                            <div class="form__email">
+                                <label for="email" class="label-email">Email</label>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    class="email"
+                                    placeholder="Enter your email address"
+                                    required
+                                >
+                            </div>
+                            <div class="form__password">
+                                <label for="password" class="label-password">Password</label>
+                                <input
+                                    type="password"
+                                    name="password"
+                                    id="password"
+                                    class="password"
+                                    placeholder="Enter your password"
+                                    required
+                                >
+                            </div>
+                            <div class="form__checkbox">
+                                <input type="checkbox" id="checkbox" class="checkbox" required>
+                                <label for="checkbox">I’m not a robot</label>
+                            </div>
+                            <button type="submit" class="form__button">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <script>
+            document.querySelector('.header__burger').addEventListener('click', function () {
+                this.classList.toggle('active');
+                document.querySelector('.header__menu').classList.toggle('open');
+            })
+        </script>
+    </body>
+</html>

@@ -1,19 +1,93 @@
-h1 {
-  font-size: 48px ;
-  font-family: Roboto, sans-serif ;
-  font-weight: 700 ;
-  line-height: 32px;
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.main_text {
-  font-family: Roboto, serif ;
+/* navigation menu */
+
+.header__page {
+  background-color: #333;
+  color: #FFF;
+}
+
+.logo {
+  margin: 25px auto 25px 53px;
+}
+
+.header__page, .logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.logo__img {
+  width: 190px;
+  height: 30px;
+}
+
+/* navigation settings */
+
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 50px;
+  margin: 34px 52px 28px auto;
+  padding: 0;
+}
+
+.navigation__item {
+  list-style: none;
+}
+
+.navigation__item-link {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  color: #FFF;
+}
+
+/*
+class that defines how the button of the
+page we are on will behave
+*/
+
+.active {
+  text-decoration: underline;
+}
+
+/* main information */
+
+main {
+  display: flex;
+  justify-content: space-between;
+  gap: 68px;
+  margin: 60px 53px auto 52px;
+}
+
+.main__img {
+  width: 532px;
+  height: 297px;
+}
+
+.title__txt {
+  font-size: 48px ;
+  font-weight: 700 ;
+  line-height: 32px;
+  margin: 0;
+}
+
+.main__txt {
   font-size: 22px ;
   font-weight: 400 ;
   line-height: 32px;
+  margin-top: 24px;
 }
 
 .link {
   text-decoration: underline ;
   color: #EF4934 ;
 }
-

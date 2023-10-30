@@ -1,0 +1,30 @@
+.wrapper__about {
+  width: min-content;
+  margin: 60px auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 60px;
+}
+
+.about {
+  width: 575px;
+}
+
+.about__title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 32px;
+  color: #221F1F;
+  margin: 0 0 24px;
+}
+
+.about__text {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #221F1F;
+}
+
+.about__link {
+  color: #EF4934;
+}

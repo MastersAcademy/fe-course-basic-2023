@@ -27,15 +27,12 @@ p {
   font-style: normal;
   font-weight: 400;
   border-radius: 12px;
-  -webkit-border-radius: 12px;
-  -moz-border-radius: 12px;
-  -ms-border-radius: 12px;
-  -o-border-radius: 12px;
   transition: all .3s ease-out;
 }
 
 .card:hover {
-  box-shadow: 1px 1px 10px ;
+  box-shadow: 1px 1px 13px 0 #221F1FA6;
+  background-color: #EF343400;
 }
 
 .card__header {
@@ -48,10 +45,6 @@ p {
   width: 90px;
   height: 90px;
   border-radius: 8px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
   margin-right: 12px;
 }
 
