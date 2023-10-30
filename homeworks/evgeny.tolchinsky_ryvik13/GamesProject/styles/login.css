@@ -203,6 +203,7 @@
   height: 42px;
   width: 42px;
   border-radius: 50%;
+  position: relative;
 }
 
 .icon-fb img {
@@ -211,7 +212,6 @@
   width: 20px;
   left: 11px;
   top: 11px;
-  position: absolute;
 }
 
 .icon-link {
@@ -219,6 +219,7 @@
   height: 42px;
   width: 42px;
   border-radius: 50%;
+  position: relative;
 }
 
 .icon-link img {
@@ -227,7 +228,6 @@
   width: 20px;
   left: 86px;
   top: 11px;
-  position: absolute;
 }
 
 .icon-inst {
@@ -235,6 +235,7 @@
   height: 42px;
   width: 42px;
   border-radius: 50%;
+  position: relative;
 }
 
 .icon-inst img {
@@ -243,7 +244,6 @@
   width: 20px;
   left: 161px;
   top: 11px;
-  position: absolute;
 }
 
 .copyright {
