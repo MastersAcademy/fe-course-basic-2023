@@ -8,14 +8,12 @@ const division = firstNumber / secondNumber;
 const remainder = firstNumber % secondNumber;
 const exponentiation = (firstNumber ** secondNumber);
 
-document.getElementById('output').innerHTML = `
-    Operation addition: ${firstNumber} + ${secondNumber} = ${addition} <br>
-    Operation subtraction: ${firstNumber} - ${secondNumber} = ${subtraction} <br>
-    Operation multiplication: ${firstNumber} * ${secondNumber} = ${multiplication} <br>
-    Operation division: ${firstNumber} / ${secondNumber} = ${division.toFixed(2)} <br>
-    Operation remainder: ${firstNumber} % ${secondNumber} = ${remainder} <br>
-    Operation exponentiation: ${firstNumber} ** ${secondNumber} = ${exponentiation}
-`;
+document.querySelector('[data-output="additional"]').textContent += ` ${firstNumber} + ${secondNumber} = ${addition}`;
+document.querySelector('[data-output="subtraction"]').textContent += `${firstNumber} - ${secondNumber} = ${subtraction}`;
+document.querySelector('[data-output="multiplication"]').textContent += `${firstNumber} * ${secondNumber} = ${multiplication}`;
+document.querySelector('[data-output="division"]').textContent += `${firstNumber} / ${secondNumber} = ${division.toFixed(2)}`;
+document.querySelector('[data-output="remainder"]').textContent += `${firstNumber} % ${secondNumber} = ${remainder}`;
+document.querySelector('[data-output="exponentiation"]').textContent += `${firstNumber} ** ${secondNumber} = ${exponentiation}`;
 
 console.log(`Operation addition: ${firstNumber} + ${secondNumber} = ${addition}`);
 console.log(`Operation subtraction: ${firstNumber} - ${secondNumber} = ${subtraction}`);
