@@ -6,32 +6,35 @@ btn.onclick = function () {
     const two = Number(document.querySelector('.two').value);
     const result = document.querySelector('.result');
 
+    let calc = null;
+
     switch (operator.value) {
         case '+':
-            result.innerHTML = one + two;
+            calc = one + two;
             break;
 
         case '-':
-            result.innerHTML = one - two;
+            calc = one - two;
             break;
 
         case '*':
-            result.innerHTML = one * two;
+            calc = one * two;
             break;
 
         case '/':
-            result.innerHTML = one / two;
+            calc = one / two;
             break;
 
         case '%':
-            result.innerHTML = one % two;
+            calc = one % two;
             break;
 
         case '**':
-            result.innerHTML = one ** two;
+            calc = one ** two;
             break;
 
         default:
             break;
     }
+    result.innerHTML = calc;
 };
