@@ -44,11 +44,6 @@
 /*Main*/
 
 .content {
-  display: flex;
-  align-items: center;
-}
-
-.section {
   padding: 60px 52px 0 53px;
   display: flex;
   justify-content: space-between;
@@ -57,13 +52,13 @@
   height: 479px;
 }
 
-.image-box {
+.content__image-box {
   width: 532px;
   height: 356px;
   border-radius: 22px;
 }
 
-.story {
+.content__story {
   display: flex;
   flex-direction: column;
   gap: 24px;
