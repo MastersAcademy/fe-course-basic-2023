@@ -1,6 +1,7 @@
 /*header*/
 
 .header {
+  font-family: Roboto;
   position: fixed;
   width: 100%;
   top: 0;
@@ -73,107 +74,89 @@
 
 /*main*/
 
-main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.games-contain {
-  width: 90%;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  align-items: center;
-  justify-content: start;
-  margin-top: 140px;
-}
-
-.games-content {
-  width: 100%;
+.login-form {
+  margin: 80px auto 0;
+  max-width: 575px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 100px;
 }
 
-.text-heading {
-  margin-top: 0;
-  color: #221F1F;
-  font-size: 48px;
-  line-height: 32px;
-  font-weight: 700;
+.login-form-title {
+  margin-bottom: 40px;
+  font-size: 40px;
+  text-align: center;
 }
 
-.games-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 25px;
+.login-form-group {
+  margin-bottom: 40px;
 }
 
-.Overwatch2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 275px;
-  width: 260px;
-  background-color: #ECECEC;
-  padding: 12px 12px 22px;
-  border-radius: 12px;
+.login-form-label {
+  font-size: 22px;
+  font-weight: 600;
 }
 
-.ow2-general {
-  display: flex;
-  flex-direction: row;
-  gap: 12px;
+.login-form-input {
+  padding: 30px 216px 30px 20px;
+  width: 339px;
+  margin-top: 22px;
+  border-radius: 6px;
+  border: 1px solid #A9A9A9;
+  background: #FFF;
+  margin-bottom: 22px;
 }
 
-.ow2-general-img img {
-  height: 90px;
-  width: 90px;
-  border-radius: 9px;
-  object-fit: cover;
+.login-form-checkbox {
+  background-color: #FFF;
+  border-color: #EF4934;
 }
 
-.ow2-general-desc {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  height: 52px;
-  width: 149px;
+.login-form-button {
+  border-radius: 6px;
+  background: #EF4934;
+  padding: 27px 258px;
+  border-color: #FFF;
+  border-width: 0;
+  color: #FFF;
+  font-size: 22px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 575px;
+  height: 70px;
 }
 
-.ow2-general-desc h3 {
-  font-size: 18px;
-  margin: 0;
+.login-form-button:hover {
+  opacity: 1;
 }
 
-.ow2-general-desc p {
-  font-size: 14px;
-  margin: 0;
+.login-form-checkbox {
+  width: 20px;
+  height: 20px;
+  color: #FFF;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  outline: 0;
+  flex-grow: 0;
+  border-radius: 6px;
+  border: 1px solid #EF4934;
+  background: #FFF;
+  transition: background 300ms;
+  cursor: pointer;
 }
 
-.ow2-description {
-  font-size: 14px;
-  line-height: 21px;
-  text-align: start;
-  gap: 16px;
-  padding: 0;
-  margin: 0;
+.login-form-checkbox::before {
+  content: "";
+  color: transparent;
+  display: block;
+  width: inherit;
+  height: inherit;
+  border-color: #FFF;
+  background-color: transparent;
+  background-size: contain;
 }
 
-.ow2-description li b {
-  font-weight: 700;
-}
-
-.ow2-description li {
-  font-weight: 400;
-  list-style-type: none;
-  margin-top: 14px;
-  margin-bottom: 14px;
-}
-
-.ow2-description li:last-child {
-  margin-bottom: 0;
+.login-form-checkbox:checked {
+  background-color: currentColor;
 }
 
 /*footer*/
@@ -195,7 +178,7 @@ main {
 }
 
 .footer-box-content {
-  width: 90%;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -211,7 +194,6 @@ main {
   justify-content: flex-start;
   align-items: flex-start;
   gap: 33px;
-  position: relative;
   list-style-type: none;
 }
 
@@ -238,4 +220,5 @@ main {
   line-height: 32px;
   font-size: 22px;
   text-align: center;
+  font-family: Roboto;
 }
