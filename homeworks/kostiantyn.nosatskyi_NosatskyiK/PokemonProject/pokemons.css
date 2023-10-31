@@ -1,0 +1,171 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* navigation menu */
+
+.header__page {
+  background-color: #333;
+  color: #FFF;
+}
+
+.logo {
+  margin: 25px auto 25px 53px;
+}
+
+.header__page, .logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo__img {
+  width: 190px;
+  height: 30px;
+}
+
+/* navigation settings */
+
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 50px;
+  margin: 34px 52px 28px auto;
+  padding: 0;
+}
+
+.navigation__item {
+  list-style: none;
+}
+
+.navigation__item-link {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  color: #FFF;
+}
+
+/*
+class that defines how the button of the
+page we are on will behave
+*/
+
+.active {
+  text-decoration: underline;
+}
+
+/* main information */
+
+.title__txt {
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  margin: 40px auto auto 52px;
+}
+
+/* positioning of cards on the page */
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 25px;
+  border-radius: 12px;
+  margin: 40px 53px auto 52px;
+}
+
+.card__information {
+  background-color: #ECECEC;
+  border-radius: 12px;
+}
+
+/* the image that is on the card */
+
+.card__information-img {
+  background-color: #FDB714;
+  border-radius: 8px;
+}
+
+.card__img, .card__information-img {
+  width: 90px;
+  height: 90px;
+  margin: 0;
+}
+
+.card__information-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.card__information-head {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+
+.card__information {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 12px 12px 22px;
+}
+
+.card__information-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* setting values and properties of the hero */
+
+.property {
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.value {
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.value, .property {
+  font-size: 14px;
+  font-style: normal;
+}
+
+.type, .weaknesses {
+  color: #FFF;
+  border-radius: 3px;
+}
+
+.type {
+  padding: 7px 9px;
+}
+
+.weaknesses {
+  padding: 9px 19px;
+}
+
+.value-yellow {
+  background-color: #FDB714;
+}
+
+.value-red {
+  background-color: #EF4934;
+}
+
+.value-pink {
+  background-color: #FF87F3;
+}
+
+.value-blue {
+  background-color: #3447EF;
+}

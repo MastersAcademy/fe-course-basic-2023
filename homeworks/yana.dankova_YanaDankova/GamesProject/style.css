@@ -3,7 +3,9 @@
   flex-direction: row;
   margin-left: 10px;
   padding-left: 20px;
-  padding-top: 40px;
+  padding-top: 10px;
+  float: right;
+  margin-top: 20px;
   color: #ECECEC;
   font-family: Roboto, sans-serif;
   font-weight: 300;
@@ -16,17 +18,20 @@
   flex-direction: row;
   width: 1280px;
   height: 80px;
+  max-width: 1285px;
   background-color: #EF4934;
 }
 
 .logo {
   display: table;
   float: left;
-  margin-right: 940px;
-  margin-left: 30px;
   margin-top: 5px;
   width: 70px;
   height: 70px;
+  display: table;
+  float: left;
+  margin-right: 940px;
+  margin-left: 40px;
 }
 
 .name {
@@ -39,7 +44,7 @@
 .picture {
   display: flex;
   flex-direction: row;
-  width: 1175px;
+  max-width: 1175px;
   height: 479px;
   top: 140px;
   left: 53px;
@@ -145,6 +150,7 @@
   font-size: 16px;
   line-height: 12px;
   margin-top: 10px;
+  margin-left: 5px;
 }
 
 .body {
@@ -167,4 +173,57 @@
   padding: 0;
   width: 1175px;
   margin-left: 52px;
+}
+
+.title {
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  margin-left: 140px;
+}
+
+.login {
+  width: 575px;
+  height: 520px;
+  margin-top: 100px;
+  margin-left: 353px;
+}
+
+.inside_login {
+  font-family: Roboto, sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 25.78px;
+}
+
+button {
+  background-color: #EF4934;
+  width: 580px;
+  height: 70px;
+  color: #ECECEC;
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+  border-radius: 6px;
+}
+
+.password {
+  width: 575px;
+  height: 70px;
+  margin: 20px auto;
+}
+
+.return {
+  margin-top: 100px;
+  margin-left: 500px;
+}
+
+.success {
+  font-family: Roboto, sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  margin-left: 20px;
+}
+
+.home {
+  width: 250px;
 }
