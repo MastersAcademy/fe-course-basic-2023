@@ -1,0 +1,120 @@
+@import "default.css";
+@import "header.css";
+
+.pokemons-cards__title {
+  width: 100%;
+  font-size: 48px;
+  font-weight: 700;
+  margin: 40px 0 40px 53px;
+}
+
+.pokemons-cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 28px;
+}
+
+.pokemons-cards__single-pokemon {
+  width: 251px;
+  height: 288px;
+  padding: 12px 12px 22px;
+  border-radius: 12px;
+  background-color: #ECECEC;
+  margin: 0 0 25px 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.single-pokemon__overview {
+  margin: 0 0 22px;
+  display: flex;
+  align-items: center;
+}
+
+.single-pokemon__overview img {
+  width: 90px;
+  height: 90px;
+  border-radius: 8px;
+  background-color: #FDB714;
+}
+
+.single-pokemon__overview h2 {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 0;
+  margin: 0 0 0 12px;
+}
+
+.single-pokemon__features {
+  margin: 0 0 0 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.single-pokemon__features p {
+  font-size: 14px;
+  line-height: 18px;
+  padding: 0;
+  margin: 0 0 16px;
+}
+
+.single-pokemon__features p span {
+  margin: 0 6px 0 0;
+  font-weight: 600;
+}
+
+.single-pokemon__type,
+.single-pokemon__weakness {
+  display: flex;
+  align-items: baseline;
+  margin: 0 0 16px;
+  padding: 0;
+}
+
+.single-pokemon__type h3,
+.single-pokemon__weakness h3 {
+  font-size: 14px;
+  line-height: 18px;
+  padding: 0;
+  margin: 0 12px 0 10px;
+}
+
+.type__list {
+  width: 100%;
+  display: flex;
+}
+
+.type__list li {
+  height: 15px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #FFF;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  margin: 0 6px 0 0;
+}
+
+.yellow_type {
+  background-color: #FDB714;
+  padding: 7px 9px;
+}
+
+.red_type {
+  background-color: #EF4934;
+  padding: 7px 20px;
+  margin: 0;
+}
+
+.pink_type {
+  background-color: #FF87F3;
+  padding: 7px 20px;
+  margin: 0 6px 0 0;
+}
+
+.blue_type {
+  background-color: #3447EF;
+  padding: 7px 16px;
+  margin: 0;
+}

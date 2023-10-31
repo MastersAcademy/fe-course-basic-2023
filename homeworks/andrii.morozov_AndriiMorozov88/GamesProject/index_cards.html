@@ -25,15 +25,56 @@
                     <li class="navigation__line">
                         <a class="navigation__link" href="index_about.html">About</a>
                     </li>
+                    <li class="navigation__line">
+                        <a class="navigation__link" href="index_login.html">LogIn</a>
+                    </li>
                 </ul>
             </div>
         </header>
+        <form action="#" method="post" class="filter">
+            <section>
+                <select name="select" class="filter__select">
+                    <option value="Genre" selected>Genre</option>
+                </select>
+            </section>
+            <section>
+                <input type="radio" name="radio" id="new">
+                <label for="new" class="filter-element-padding">
+                    Only new
+                </label>
+                <input type="radio" name="radio" id="favorites">
+                <label for="favorites">
+                    Favorites
+                </label>
+            </section>
+            <section>
+                <input type="checkbox" id="big">
+                <label for="big" class="filter-element-padding">
+                    Big
+                </label>
+                <input type="checkbox" id="Small">
+                <label for="small">
+                    Small
+                </label>
+            </section>
+            <section class="filter__search">
+                <div class="search__svg">
+                    <svg class="svg--search">
+                        <use xlink:href="sprite.svg#search"></use>
+                    </svg>
+                </div>
+                <div class="search__input-field">
+                    <input type="text" class="search__input" placeholder="Search">
+                    <button type="submit" class="search__button">Align</button>
+                </div>
+            </section>
+        </form>
         <main class="main games__main">
             <h1 class="heading--h1">Study project "Games"</h1>
             <article class="card-container">
                 <section class="card">
                     <div class="card__image">
-                        <img src="images/Rectangle 7.png" alt="overwatch">
+                        <img src="images/game_img.png" alt="overwatch">
                     </div>
                     <div class="card__name">
                         <h2 class="card__name__heading">Overwatch 2</h2>
@@ -41,7 +82,7 @@
                             Big changes come to the Overwatch formula in this sequel..
                         </p>
                     </div>
-                    <div class="card__text2">
+                    <div class="card__description">
                         <p class="card__name--14px">
                             <b>Genre:</b> Shoter
                         </p>
@@ -61,7 +102,7 @@
                 </section>
                 <section class="card">
                     <div class="card__image">
-                        <img src="images/Rectangle 7.png" alt="overwatch">
+                        <img src="images/game_img.png" alt="overwatch">
                     </div>
                     <div class="card__name">
                         <h2 class="card__name__heading">Overwatch 2</h2>
@@ -69,7 +110,7 @@
                             Big changes come to the Overwatch formula in this sequel..
                         </p>
                     </div>
-                    <div class="card__text2">
+                    <div class="card__description">
                         <p class="card__name--14px">
                             <b>Genre:</b> Shoter
                         </p>
@@ -89,7 +130,7 @@
                 </section>
                 <section class="card">
                     <div class="card__image">
-                        <img src="images/Rectangle 7.png" alt="overwatch">
+                        <img src="images/game_img.png" alt="overwatch">
                     </div>
                     <div class="card__name">
                         <h2 class="card__name__heading">Overwatch 2</h2>
@@ -97,7 +138,7 @@
                             Big changes come to the Overwatch formula in this sequel..
                         </p>
                     </div>
-                    <div class="card__text2">
+                    <div class="card__description">
                         <p class="card__name--14px">
                             <b>Genre:</b> Shoter
                         </p>
@@ -117,7 +158,7 @@
                 </section>
                 <section class="card">
                     <div class="card__image">
-                        <img src="images/Rectangle 7.png" alt="overwatch">
+                        <img src="images/game_img.png" alt="overwatch" class="image">
                     </div>
                     <div class="card__name">
                         <h2 class="card__name__heading">Overwatch 2</h2>
@@ -125,7 +166,7 @@
                             Big changes come to the Overwatch formula in this sequel..
                         </p>
                     </div>
-                    <div class="card__text2">
+                    <div class="card__description">
                         <p class="card__name--14px">
                             <b>Genre:</b> Shoter
                         </p>
@@ -145,7 +186,7 @@
                 </section>
                 <section class="card">
                     <div class="card__image">
-                        <img src="images/Rectangle 7.png" alt="overwatch">
+                        <img src="images/game_img.png" alt="overwatch">
                     </div>
                     <div class="card__name">
                         <h2 class="card__name__heading">Overwatch 2</h2>
@@ -153,7 +194,7 @@
                             Big changes come to the Overwatch formula in this sequel..
                         </p>
                     </div>
-                    <div class="card__text2">
+                    <div class="card__description">
                         <p class="card__name--14px">
                             <b>Genre:</b> Shoter
                         </p>
@@ -173,7 +214,7 @@
                 </section>
                 <section class="card">
                     <div class="card__image">
-                        <img src="images/Rectangle 7.png" alt="overwatch">
+                        <img src="images/game_img.png" alt="overwatch">
                     </div>
                     <div class="card__name">
                         <h2 class="card__name__heading">Overwatch 2</h2>
@@ -181,7 +222,7 @@
                             Big changes come to the Overwatch formula in this sequel..
                         </p>
                     </div>
-                    <div class="card__text2">
+                    <div class="card__description">
                         <p class="card__name--14px">
                             <b>Genre:</b> Shoter
                         </p>
@@ -201,7 +242,7 @@
                 </section>
                 <section class="card">
                     <div class="card__image">
-                        <img src="images/Rectangle 7.png" alt="overwatch">
+                        <img src="images/game_img.png" alt="overwatch">
                     </div>
                     <div class="card__name">
                         <h2 class="card__name__heading">Overwatch 2</h2>
@@ -209,7 +250,7 @@
                             Big changes come to the Overwatch formula in this sequel..
                         </p>
                     </div>
-                    <div class="card__text2">
+                    <div class="card__description">
                         <p class="card__name--14px">
                             <b>Genre:</b> Shoter
                         </p>
@@ -229,7 +270,7 @@
                 </section>
                 <section class="card">
                     <div class="card__image">
-                        <img src="images/Rectangle 7.png" alt="overwatch">
+                        <img src="images/game_img.png" alt="overwatch">
                     </div>
                     <div class="card__name">
                         <h2 class="card__name__heading">Overwatch 2</h2>
@@ -237,7 +278,7 @@
                             Big changes come to the Overwatch formula in this sequel..
                         </p>
                     </div>
-                    <div class="card__text2">
+                    <div class="card__description">
                         <p class="card__name--14px">
                             <b>Genre:</b> Shoter
                         </p>

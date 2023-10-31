@@ -215,52 +215,20 @@ main {
   list-style-type: none;
 }
 
-.icon-fb {
+.social-icon-item {
   background-color: #FFF;
   height: 42px;
   width: 42px;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.icon-fb img {
+.social-icon-item img {
   background-color: #FFF;
   height: 20px;
   width: 20px;
-  left: 11px;
-  top: 11px;
-  position: absolute;
-}
-
-.icon-link {
-  background-color: #FFF;
-  height: 42px;
-  width: 42px;
-  border-radius: 50%;
-}
-
-.icon-link img {
-  background-color: #FFF;
-  height: 20px;
-  width: 20px;
-  left: 86px;
-  top: 11px;
-  position: absolute;
-}
-
-.icon-inst {
-  background-color: #FFF;
-  height: 42px;
-  width: 42px;
-  border-radius: 50%;
-}
-
-.icon-inst img {
-  background-color: #FFF;
-  height: 20px;
-  width: 20px;
-  left: 161px;
-  top: 11px;
-  position: absolute;
 }
 
 .copyright {

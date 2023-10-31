@@ -1,0 +1,39 @@
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+}
+
+.main__h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.main__button {
+  border-radius: 6px;
+  background-color: #EF4934;
+  width: 575px;
+  height: 70px;
+  border: none;
+  color: #FFF;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 60px;
+  cursor: pointer;
+}
+
+.main__button:hover {
+  background-color: #F7250B;
+}
+
+.main__button:active {
+  font-size: 24px;
+}

@@ -1,0 +1,55 @@
+.login-h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+
+.login-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.checkbox-group {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 14px;
+  gap: 12px;
+}
+
+label[for="email"],
+label[for="password"],
+label[for="checkbox"] {
+  display: flex;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 22px;
+}
+
+input[type="email"],
+input[type="password"],
+.login-checkbox {
+  padding: 30px 450px 30px 20px ;
+  margin-bottom: 40px;
+  font-size: 14px;
+  border: .006rem solid #A9A9A9;
+  border-radius: 6px;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-bottom: 5px solid #EF4934;
+}
+
+.submit-button {
+  display: block;
+  min-width: 100%;
+  padding: 27px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #FFF;
+  background-color: #EF4934;
+  border: none;
+  border-radius: 6px;
+}

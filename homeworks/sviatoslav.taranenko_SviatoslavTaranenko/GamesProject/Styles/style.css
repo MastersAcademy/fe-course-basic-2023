@@ -13,20 +13,21 @@ body {
 
 .header__all {
   display: grid;
-  grid-template-columns: 6fr 1fr;/* grid-template-columns: 3fr 1fr; змітити коли потрібно буде додати кнопку логін  */
+  grid-template-columns: 6fr 1fr;
 }
 
 .header__img {
   margin-top: 8px;
-  margin-bottom: 8px;
-  min-width: 55px;
-  min-height: 57.32px;
+  margin-bottom: 8px;width: 55px;
+  height: 55px;
   justify-content: center;
   margin-left: 61px;
 }
 
 .header__items {
-  display: grid;grid-template-columns: 1fr 1fr;align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
 }
 
 .header__items a {
@@ -60,6 +61,18 @@ body {
   text-decoration: underline;
 }
 
+.header__items_Login {
+  color: #FFF;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18.75px;
+  margin-right: 40px;
+}
+
+.header__items_Login:active {
+  text-decoration: underline;
+}
 
 .about .about__all {
   margin: 60px;

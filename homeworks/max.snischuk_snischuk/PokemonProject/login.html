@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./styles/login.css">
+        <title>Login page</title>
+    </head>
+    <body>
+        <header class="header">
+            <nav class="header__nav">
+                <a href="./index.html">
+                    <img src="./images/logo.svg" alt="logo">
+                </a>
+                <ul class="header__nav-list">
+                    <li>
+                        <a class="header__nav-link" href="./pokemons.html">Pokemons</a>
+                    </li>
+                    <li>
+                        <a class="header__nav-link" href="./index.html">About</a>
+                    </li>
+                    <li>
+                        <a class="header__nav-link--active" href="./login.html">Login</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <form class="login" action="./login-success.html" method="post">
+                <h2 class="login__title">Login page</h2>
+                <label class="login__label">
+                    Email
+                    <input class="login__field" type="email" placeholder="Enter your email address"
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                </label>
+                <label class="login__label">
+                    Password
+                    <input class="login__field" type="password" placeholder="Enter your password" required minlength="8"
+                        maxlength="20">
+                </label>
+                <input class="login__checkbox-input" type="checkbox" id="check" required>
+                <label class="login__checkbox-custom" for="check">I'm not a robot</label>
+                <button class="login__btn" type="submit">Login</button>
+            </form>
+        </main>
+    </body>
+</html>
