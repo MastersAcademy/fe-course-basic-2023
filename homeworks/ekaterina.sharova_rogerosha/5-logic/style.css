@@ -5,6 +5,10 @@
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 .upper-header {
@@ -49,29 +53,8 @@ body {
   margin-right: 50px;
 }
 
-.pokemons, .login, .calculator {
+.pokemons, .about, .login {
   text-decoration: none;
-}
-
-.content {
-  display: flex;
-}
-
-.white-rectangle {
-  height: 479px;
-  background-color: #FFF;
-  margin-left: 53px;
-  margin-top: 60px;
-  display: flex;
-  flex-direction: column;
-}
-
-.pokemon {
-  width: 532px;
-  height: 275px;
-  border-radius: 22px;
-  padding-top: 60px;
-  padding-left: 53px;
 }
 
 .headline {
@@ -80,51 +63,28 @@ body {
   font-weight: 700;
   font-size: 48px;
   line-height: 32px;
-  margin-top: 0;
-  margin-left: 25px;
+  margin-top: 80px;
+  margin-bottom: 60px;
 }
 
-.text-about {
-  color: #221F1F;
+.operation {
+  padding: 12px;
+  border-radius: 6px;
+  background-color: #333;
+  color: #FFF;
   font-style: normal;
   font-weight: 400;
-  font-size: 22px;
-  line-height: 32px;
-  margin-left: 25px;
-  margin-top: auto;
-  height: 409px;
+  font-size: 14px;
+  border: 1px solid #333;
 }
 
-.link {
-  color: #EF4934;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 32px;
-}
-
-footer {
+.button {
   background-color: #EF4934;
   color: #FFF;
-  padding: 20px;
-  text-align: center;
-  width: 100%;
-  bottom: 0;
-  position: fixed;
-}
-
-.footer-text {
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 32px;
-  color: #FFF;
-}
-
-.footer-link {
-  color: #FFF;
-  text-decoration: none;
-}
-
-.social-networks {
-  margin-block: 30px;
+  border-radius: 6px;
+  border: 1px solid #EF4934;
+  display: inline-flex;
+  padding: 13px 20px;
+  justify-content: center;
+  align-items: center;
 }

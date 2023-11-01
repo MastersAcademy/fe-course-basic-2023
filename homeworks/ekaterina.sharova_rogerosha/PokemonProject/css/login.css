@@ -52,11 +52,7 @@ body {
   margin-right: 50px;
 }
 
-.pokemons {
-  text-decoration: none;
-}
-
-.about {
+.pokemons, .about, .calculator {
   text-decoration: none;
 }
 

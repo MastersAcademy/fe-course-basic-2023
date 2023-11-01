@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Basic JS</title>
+        <link
+            href="style.css"
+            rel="stylesheet"
+            type="text/css">
+    </head>
+    <body>
+        <header class="upper-header">
+            <div class="ma-logo">
+                <img class="MAlogo" src="../PokemonProject/images/MA-logo.svg" alt="Masters Academy">
+            </div>
+            <ul class="navigation">
+                <li>
+                    <a href="#" class="navigation-item calculator">Calculator</a>
+                </li>
+                <li>
+                    <a href="../PokemonProject/pokemons.html" class="navigation-item pokemons">Pokemons</a>
+                </li>
+                <li>
+                    <a href="../PokemonProject/index.html" class="navigation-item about">About</a>
+                </li>
+                <li>
+                    <a href="../PokemonProject/login.html" class="navigation-item login">Login</a>
+                </li>
+            </ul>
+        </header>
+        <h1 class="headline">Calculate Pokemons</h1>
+        <div class="field">
+            <label>
+                <input id="firstValue">
+            </label>
+            <label>
+                <select class="operation" name="operation" id="operation">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="/">/</option>
+                    <option value="*">*</option>
+                    <option value="**">**</option>
+                </select>
+            </label>
+            <label>
+                <input id="secondValue">
+            </label>
+            <button class="button" id="calculate" type="button">=</button>
+            <span id="result"></span>
+        </div>
+        <script src="./script.js"></script>
+        <script src="./homework.js"></script>
+    </body>
+</html>
