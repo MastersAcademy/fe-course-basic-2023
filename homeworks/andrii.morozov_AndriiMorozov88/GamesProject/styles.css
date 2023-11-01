@@ -124,7 +124,7 @@ body {
   z-index: 9999;
 }
 
-.filter-element-padding {
+.filter-element {
   margin-right: 30px;
 }
 
@@ -196,7 +196,7 @@ body {
   grid-template-columns: 90px 1fr;
   grid-template-rows: 90px 1fr;
   gap: 12px;
-  grid-template-areas: "image text1" "text2 text2";
+  grid-template-areas: "image card-name" "card-description card-description";
   background-color: #ECECEC;
 }
 
@@ -204,21 +204,17 @@ body {
   grid-area: image;
 }
 
-.image {
-  border-radius: 5px;
-}
-
 .card__name {
-  grid-area: text1;
+  grid-area: card-name;
 }
 
-.card__name__heading {
+.card__heading {
   font-size: 18px;
   font-weight: 700;
   color: #221F1F;
 }
 
-.card__name--14px {
+.card__paragraf {
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
@@ -226,7 +222,7 @@ body {
 }
 
 .card__description {
-  grid-area: text2;
+  grid-area: card-description;
 }
 
 .log-in__main {
@@ -291,11 +287,11 @@ body {
     gap: 20px;
   }
 
-  .card__name__heading {
+  .card__heading {
     font-size: 24px;
   }
 
-  .card__name--14px {
+  .card__paragraf {
     font-size: 20px;
     font-weight: 400;
     line-height: 24px;
