@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+body {
+  font-family: Roboto, sans-serif;
+  color: #221F1F;
+}
+
+.title_number {
+  font-weight: 700;
+  font-size: 48px;
+  margin-top: 70px;
+  margin-bottom: 40px;
+}
+
+.number {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 32px;
+}

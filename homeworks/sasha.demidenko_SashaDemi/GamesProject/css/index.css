@@ -1,18 +1,24 @@
 .about_body {
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 1280px;
+  max-width: 100%;
 }
 
 .about_header--main {
   background: #EF4934;
   height: 80px;
   display: grid;
-  grid-template: 1fr/ 996px 1fr;
+  grid-template: 1fr/ 1fr 1fr;
+  min-width: 1280px;
+  width: 100%;
 }
 
 .about_header--logo {
   width: 55px;
   height: 57px;
-  margin: 11px 1172px 11px 53px;
+  margin: 11px 0 11px 60px;
 }
 
 .about_header--nav {
@@ -23,10 +29,11 @@
 .about_header--ul {
   display: inline-grid;
   justify-items: end;
-  grid-template: 1fr/ 78px 78px;
+  grid-template: 1fr/ 78px 78px 78px;
   list-style-type: none;
   font-family: Roboto, sans-serif;
-  margin: 34px 52px 34px 50px;
+  padding-right: 60px;
+  align-items: center;
 }
 
 .about_li--underline {

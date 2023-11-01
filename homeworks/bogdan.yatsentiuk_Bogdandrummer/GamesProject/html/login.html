@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../styles/login_style.css">
+        <title>Login</title>
+    </head>
+
+    <body>
+        <!--Wrapper-->
+        <div class="wrapper">
+            <!--Header-->
+            <header class="head">
+                <!--Menu-->
+                <nav class="header__menu">
+                    <a href="https://www.mastersacademy.education/frontend-for-beginners-it" class="header__logo">
+                        <img src="../logo.svg" alt="logo">
+                    </a>
+                    <!--Menu list-->
+                    <ul class="menu__list">
+                        <li>
+                            <a class="menu__link-about" href="games.html">Games</a>
+                        </li>
+                        <li>
+                            <a class="menu__link-about" href="../index.html">About</a>
+                        </li>
+                        <li>
+                            <a class="menu__link-about" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <!--Main-->
+            <main class="main content">
+                <!--Форма Login-->
+                <form action="success.html" class="login__form">
+                    <!--Оглавление-->
+                    <h2 class="form__title">Login page</h2>
+                    <!--Поле email-->
+                    <label class="email__label" for="e_mail">Email</label>
+                    <input class="email" type="email" id="e_mail" name="email" placeholder="enter your email address" required>
+                    <!--Password-->
+                    <label class="password__label" for="pass">Password</label>
+                    <input class="password" type="password" id="pass" name="pass" minlength="4" maxlength="50" required placeholder="enter your password">
+                    <!--Not a robot-->
+                    <label class="check__label" for="check">
+                        <input type="checkbox" class="check" id="check" name="check" value="not a robot" required>
+                        <span class="custom__checkbox"></span>
+                        I'm not a robot</label>
+                    <!--Button-->
+                    <button class="login__button" name="login" type="submit">Login</button>
+                </form>
+            </main>
+            <!--Footer-->
+            <footer class="footer">
+                <ul class="footer__logos-social">
+                    <li class="social__item">
+                        <a href="https://www.facebook.com/">
+                            <img src="../social__logos/facebook.svg"
+                                alt="facebook"></a></li>
+                    <li class="social__item">
+                        <a href="https://www.linkedin.com/">
+                            <img src="../social__logos/linkedin.svg"
+                                alt="linkedin"></a></li>
+                    <li class="social__item">
+                        <a href="https://www.instagram.com/">
+                            <img src="../social__logos/insta.svg"
+                                alt="instagram"></a></li>
+                </ul>
+                <h2 class="footer__title">Made with 💗 on course 'Frontend for beginners' from Masters Academy in 2023, by
+                    Bogdan Yatsentiuk</h2>
+            </footer>
+        </div>
+    </body>
+
+</html>

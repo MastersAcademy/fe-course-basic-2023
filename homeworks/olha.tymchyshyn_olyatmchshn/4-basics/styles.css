@@ -1,0 +1,15 @@
+h1 {
+  color: #221F1F;
+  font-family: Roboto;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+p {
+  color: #221F1F;
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 32px;
+}
