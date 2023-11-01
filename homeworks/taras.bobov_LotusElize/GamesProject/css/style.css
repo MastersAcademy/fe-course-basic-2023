@@ -26,12 +26,6 @@ header {
   justify-content: center;
   align-items: center;
 }
-/* .header{
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-
-} */
 
 .logo-menu {
   display: flex;
@@ -99,10 +93,6 @@ main {
   height: 356px;
   box-shadow: 0 0 50px 5px;
   border-radius: 22px;
-  -webkit-border-radius: 22px;
-  -moz-border-radius: 22px;
-  -ms-border-radius: 22px;
-  -o-border-radius: 22px;
 }
 
 .about-me {
@@ -137,8 +127,6 @@ main {
 /* footer */
 
 footer {
-  /* width: 100%; */
-
   height: 160px;
   background-color: #221F1F;
   display: flex;
@@ -151,14 +139,6 @@ footer {
   right: 0;
   padding-top: 30px;
 }
-
-/* .social-media {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	gap: 32px;
-} */
 
 .social-media ul {
   list-style: none;

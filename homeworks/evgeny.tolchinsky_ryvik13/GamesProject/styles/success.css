@@ -1,0 +1,27 @@
+.success-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-title {
+  font-size: 48px;
+  text-align: center;
+}
+
+.success-button {
+  border-radius: 6px;
+  background: #EF4934;
+  padding: 27px 100px;
+  border-color: #FFF;
+  border-width: 0;
+  color: #FFF;
+  font-size: 22px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.success-button:hover {
+  opacity: 1;
+}
+

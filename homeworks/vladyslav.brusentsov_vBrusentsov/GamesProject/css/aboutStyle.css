@@ -1,3 +1,7 @@
+body {
+  gap: 60px;
+}
+
 .main__section {
   display: flex;
   max-width: 1175px;
@@ -37,6 +41,3 @@
   color: #EF4934;
 }
 
-.nav-menu a:hover {
-  color: #1085B7;
-}

@@ -1,0 +1,18 @@
+.main {
+  font-family: Roboto, sans-serif;
+  margin-top: 250px;
+}
+
+.title {
+  display: flex;
+  margin-left: 630px;
+}
+
+.open-console {
+  display: inline-flex;
+  margin-left: 615px;
+  border: solid #EF4934;
+  border-radius: 6px;
+  background-color: #EF4934;
+  color: #FFF;
+}

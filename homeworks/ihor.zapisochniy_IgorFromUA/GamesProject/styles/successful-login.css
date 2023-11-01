@@ -1,0 +1,24 @@
+.success {
+  max-width: 575px;
+  margin: 160px auto 0;
+}
+
+.success__title {
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.success__btn {
+  display: block;
+  width: 100%;
+  color: #FFF;
+  background-color: #EF4934;
+  border-radius: 6px;
+  border: none;
+  font-size: 22px;
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+  padding: 27px 0;
+}

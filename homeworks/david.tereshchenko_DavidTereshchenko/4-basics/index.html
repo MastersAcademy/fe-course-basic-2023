@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>JS</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <main>
+                <div class="number__container">
+                    <div class="title-number">
+                        <h1 class="title">Basic math operation</h1>
+                    </div>
+                    <div class="number-1">
+                        <label for="numb1">First number</label>
+                        <input type="number" id="numb1" class="number__block one" name="number1" required>
+                    </div>
+                    <div class="operator__block">
+                        <label>
+                            <select class="operator">
+                                <option value="+">+</option>
+                                <option value="-">-</option>
+                                <option value="*">*</option>
+                                <option value="/">/</option>
+                                <option value="%">%</option>
+                                <option value="**">**</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="number-2">
+                        <label for="numb2">Second number</label>
+                        <input type="number" id="numb2" class="number__block two" name="number2" required>
+                    </div>
+                    <div class="return">
+                        <button type="button" class="button">Calculation</button>
+                    </div>
+                    <div class="re">
+                        <p class="resul__number result"></p>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <script src="basics.js"></script>
+    </body>
+</html>

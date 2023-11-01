@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  color: #221F1F;
+  background-color: #FFFACD;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 50px;
+}
+
+.math-title {
+  font-size: 48px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+.math-operations {
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 400;
+}

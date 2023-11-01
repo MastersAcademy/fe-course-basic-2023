@@ -26,12 +26,40 @@
                         <li class="nav-menu-item">
                             <a class="nav-menu-item-link" href="./index.html">About</a>
                         </li>
+                        <li class="nav-menu-item">
+                            <a class="nav-menu-item-link" href="./login.html">Login</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
         </header>
 
         <main>
+            <form action="" class="filter">
+                <div class="type-container">
+                    <select name="type">
+                        <option value="option_1" selected disabled>Type</option>
+                        <option value="option_2">Option #1</option>
+                        <option value="option_3">Option #2</option>
+                    </select>
+                </div>
+                <div class="radio-container">
+                    <input type="radio" id="new" name="newOrFav" value="new">
+                    <label class="radio-label" for="new">Only new</label>
+                    <input type="radio" id="fav" name="newOrFav" value="favorites">
+                    <label class="radio-label" for="fav">Favorites</label>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="big" name="size" value="big">
+                    <label for="big"> Big</label>
+                    <input type="checkbox" id="small" name="size" value="small">
+                    <label for="small"> Small</label>
+                </div>
+                <div class="search-container">
+                    <input type="search" placeholder="Search">
+                    <button type="submit">Apply</button>
+                </div>
+            </form>
             <!-- POKEMONS CARDS SECTION -->
             <section class="cards-page">
                 <h1 class="cards-page-header">Study project "Pokemons"</h1>
