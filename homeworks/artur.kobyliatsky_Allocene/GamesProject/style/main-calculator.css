@@ -127,6 +127,7 @@ button:hover {
   line-height: 48px;
   letter-spacing: 0;
   padding-right: 80px;
+  color: #EF4934;
 }
 
 .visualInterpritation h1::first-letter {

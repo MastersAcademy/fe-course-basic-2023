@@ -54,7 +54,7 @@ function calculate(firstValue, secondValue, operation) {
         return 'Result is too big';
     }
 
-    visualInterpritation.innerHTML = `<h1>${num1}</h1> <h1>${operation}</h1> <h1>${num2}</h1> <h1>=</h1> <h1>${result}</h1>`;
+    visualInterpritation.innerHTML = `<h1>${num1}</h1> <h1>${operation}</h1> <h1>${num2}</h1> <h1>=</h1> <h1>${result} games</h1>`;
     return result;
 }
 
