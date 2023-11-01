@@ -17,12 +17,12 @@ function calculate(firstValue, secondValue, operation) {
     const visualInterpritation = document.querySelector('#visualInterpritation');
 
     if (Number.isNaN(num1) || Number.isNaN(num2)) {
-        visualInterpritation.innerHTML = `<h1>${num1}</h1> <h1>${operation}</h1> <h1>${num2}</h1> <h1>=</h1> <h1>Enter a number</h1>`;
+        visualInterpritation.innerHTML = '<h1>Enter a number</h1>';
         return 'Enter a number';
     }
 
     if (firstValue.trim() === '' || secondValue.trim() === '') {
-        visualInterpritation.innerHTML = `<h1>${num1}</h1> <h1>${operation}</h1> <h1>${num2}</h1> <h1>=</h1> <h1>Empty field</h1>`;
+        visualInterpritation.innerHTML = '<h1>Empty field</h1>';
         return 'Empty field';
     }
 
@@ -39,18 +39,18 @@ function calculate(firstValue, secondValue, operation) {
             break;
         case '/':
             if (num2 === 0) {
-                visualInterpritation.innerHTML = `<h1>${num1}</h1> <h1>${operation}</h1> <h1>${num2}</h1> <h1>=</h1> <h1>Division by zero is not allowed</h1>`;
+                visualInterpritation.innerHTML = '<h1>Division by zero is not allowed</h1>';
                 return 'Division by zero is not allowed';
             }
             result = num1 / num2;
             break;
         default:
-            visualInterpritation.innerHTML = `<h1>${num1}</h1> <h1>${operation}</h1> <h1>${num2}</h1> <h1>=</h1> <h1>Choose a valid operation</h1>`;
+            visualInterpritation.innerHTML = '<h1>Choose a valid operation</h1>';
             return 'Choose a valid operation';
     }
 
     if (result > 100) {
-        visualInterpritation.innerHTML = `<h1>${num1}</h1> <h1>${operation}</h1> <h1>${num2}</h1> <h1>=</h1> <h1>Too many games</h1>`;
+        visualInterpritation.innerHTML = '<h1>Too many games</h1>';
         return 'Result is too big';
     }
 
