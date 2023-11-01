@@ -8,7 +8,55 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
+        <style>
+            body {
+                font-family: "Roboto", sans-serif;
+                margin-right: 20px;
+                color: #221F1F;
+                font-weight: 400;
+                line-height: 32px;
+                font-size: 22px;
+            }
+
+            .logic__title {
+                font-size: 48px;
+                font-weight: 700;
+            }
+
+            .field {
+                display: flex;
+                column-gap: 10px;
+                margin: 20px;
+            }
+
+            .field__select,
+            .field__input,
+            .field__button,
+            .field__result {
+                font-size: 22px;
+                font-weight: 400;
+            }
+
+            .field__input,
+            .field__select {
+                border-radius: 6px;
+                border: .6px solid #A9A9A9;
+            }
+
+            .field__select {
+                background-color: #333;
+                color: #FFF;
+            }
+
+            .field__button {
+                border-radius: 6px;
+                background: #EF4934;
+                border-width: 0;
+                color: #FFF;
+                font-weight: 600;
+                cursor: pointer;
+            }
+        </style>
     </head>
     <body>
         <h1 class="logic__title">Calculator v. 1</h1>
