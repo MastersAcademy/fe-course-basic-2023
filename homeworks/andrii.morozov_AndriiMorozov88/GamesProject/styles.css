@@ -190,6 +190,7 @@ body {
 .card {
   width: 265px;
   height: 250px;
+  border-radius: 10px;
   padding: 12px 12px 22px;
   display: grid;
   grid-template-columns: 90px 1fr;
