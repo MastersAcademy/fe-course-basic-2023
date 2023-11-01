@@ -10,8 +10,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="styles/styles.css">
         <link rel="stylesheet" type="text/css" href="styles/header.css">
-        <link rel="stylesheet" type="text/css" href="styles/about.css">
-        <title>GamesProject</title>
+        <link rel="stylesheet" type="text/css" href="styles/calculator.css">
+        <title>Calculator</title>
     </head>
     <body>
         <div class="wrapper">
@@ -20,13 +20,13 @@
                 <nav class="navigation">
                     <ul class="navigation__list">
                         <li class="navigation__item">
-                            <a class="navigation__link" href="./calculator.html">Calculator</a>
+                            <a class="navigation__link navigation__link_active" href="./calculator.html">Calculator</a>
                         </li>
                         <li class="navigation__item">
                             <a class="navigation__link" href="./games.html">Games</a>
                         </li>
                         <li class="navigation__item">
-                            <a class="navigation__link navigation__link_active" href="#">About</a>
+                            <a class="navigation__link" href="#">About</a>
                         </li>
                         <li class="navigation__item">
                             <a class="navigation__link" href="./login.html">Login</a>
@@ -34,26 +34,28 @@
                     </ul>
                 </nav>
             </header>
-            <div class="wrapper__about">
-                <img class="about__image" src="./src/image.png" width="532" height="356" alt="work space">
-                <section class="about">
-                    <h1 class="about__title">About me</h1>
-                    <p class="about__text">Hi! My name is [Text] and I'm a Junior Frontend Developer. I am already familiar with main
-                        Web Technologies like HTML, CSS, JavaScript and Git version control system. </p>
-                    <p class="about__text">
-                        This page was developed during the course <a class="about__link"
-                            href="https://www.mastersacademy.education/frontend-for-beginners-it">'Frontend
-                            for beginners' from Masters Academy in 2023.</a>
-                    </p>
-                    <p class="about__text">
-                        This is a social project from MOCG company where I got an opportunity to work with Frontend mentors and to
-                        create my own small project for the portfolio.</p>
-                    <p class="about__text">
-                        You can contact me via [Links to Socials Nets] and/or check out my GitHub.
-
-                    </p>
-                </section>
+            <h1 class="field__title">Calculator v. 1</h1>
+            <div class="field">
+                <label>
+                    <input id="firstValue" class="field__input">
+                </label>
+                <label>
+                    <select name="operation" id="operation" class="field__select">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="/">/</option>
+                        <option value="*">*</option>
+                        <option value="**">**</option>
+                    </select>
+                </label>
+                <label>
+                    <input id="secondValue" class="field__input">
+                </label>
+                <button id="calculate" type="button" class="field__button">=</button>
+                <span id="result" class="field__result"></span>
             </div>
+            <script src="./scripts/script.js"></script>
+            <script src="./scripts/homework.js"></script>
         </div>
 
     </body>
