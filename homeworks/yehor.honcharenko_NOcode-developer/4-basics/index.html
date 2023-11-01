@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Basic math operation</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="basics.css">
+    </head>
+    <body>
+        <h1 class="body__title">Basic math operation</h1>
+        <p>Open console to see the results</p>
+        <p>
+            Operation addition: <span id="addition"></span>
+        </p>
+        <p>
+            Operation subtraction: <span id="subtraction"></span>
+        </p>
+        <p>
+            Operation multiplication: <span id="multiplication"></span>
+        </p>
+        <p>
+            Operation division: <span id="division"></span>
+        </p>
+        <p>
+            Operation remainder: <span id="remainder"></span>
+        </p>
+        <p>
+            Operation exponentiation: <span id="exponentiation"></span>
+        </p>
+        <script src="basics.js"></script>
+        <script>
+          document.getElementById("addition").textContent = ` ${firstNumber} + ${thirdNumber} = ${firstNumber + thirdNumber}`;
+          document.getElementById("subtraction").textContent = ` ${secondNumber} - ${firstNumber} = ${secondNumber - firstNumber}`;
+          document.getElementById("multiplication").textContent = ` ${firstNumber} * ${secondNumber} = ${firstNumber * secondNumber}`;
+          document.getElementById("division").textContent = ` ${secondNumber} / ${firstNumber} = ${secondNumber / firstNumber}`;
+          document.getElementById("remainder").textContent = ` ${secondNumber} % ${thirdNumber} = ${secondNumber % thirdNumber}`;
+          document.getElementById("exponentiation").textContent = ` ${secondNumber} ** ${thirdNumber} = ${secondNumber ** thirdNumber}`;
+        </script>
+    </body>
+</html>

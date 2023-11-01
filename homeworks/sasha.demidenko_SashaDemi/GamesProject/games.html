@@ -14,9 +14,49 @@
                     <li>
                         <a href="index.html" class="games_header--li">About</a>
                     </li>
+                    <li>
+                        <a href="login.html" class="games_header--li">Login</a>
+                    </li>
                 </ul>
             </nav>
         </header>
+        <section class="section_main">
+            <form action="/#" class="form_section">
+                <label for="select">
+                    <select id="select" name="select" class="select_type">
+                        <option value="arcade">Arcade</option>
+                        <option value="sport">Sport</option>
+                        <option value="shooter">Shooter</option>
+                    </select>
+                </label>
+                <div class="form_radio">
+                    <div class="form_radio--platform">
+                        <input type="radio" id="platform" name="type" value="platform">
+                        <label for="platform">Platform</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="online games" name="type" value="online game">
+                        <label for="online games">Online games</label>
+                    </div>
+                </div>
+                <div class="form_checkbox">
+                    <div class="form_checkbox--new">
+                        <input type="checkbox" id="new" name="new" value="new">
+                        <label for="new">New</label>
+                        <br >
+                    </div>
+                    <div>
+                        <input type="checkbox" id="old" name="old" value="old">
+                        <label for="old">Old</label>
+                        <br >
+                    </div>
+                </div>
+                <label class="label_input">
+                    <input type="text" class="form_input" placeholder="Search">
+                    <button type="reset" class="form_input--button">Apply</button>
+                </label>
+            </form>
+        </section>
         <main class="main">
             <h1 class="games_h1">
                 Study project "Games"

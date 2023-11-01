@@ -11,6 +11,7 @@ main {
   column-gap: 68px;
   align-items: start;
   margin-top: 60px;
+  padding-bottom: 238px;
 }
 
 .workplace_image {
@@ -42,8 +43,9 @@ main {
 .games_list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 25px;
+  padding-bottom: 46px ;
 }
 
 .game_overview {

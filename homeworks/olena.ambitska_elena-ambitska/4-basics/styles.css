@@ -1,0 +1,25 @@
+.counter__section {
+  margin: 0 auto;
+  padding: 60px;
+}
+
+.counter__section .section__title {
+  text-align: center;
+}
+
+.count__button {
+  margin-top: 22px;
+}
+
+.warning {
+  margin-top: 24px;
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+.counter__template {
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
