@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/b3adce1055.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./style.css">
+        <title>JS</title>
+    </head>
+
+    <body>
+        <main class="main">
+            <h1 class="main__heading">Basic math operation</h1>
+            <div class="main__operation">
+                <div class="numbers">
+                    <div class="number1">
+                        <label for="num1" class="label">Enter number 1</label>
+                        <input type="number" name="num1" id="num1" title="num1" min="-100" max="100" class="inp"
+                            required>
+                    </div>
+                    <div class="number2">
+                        <label for="num2" class="label">Enter number 2</label>
+                        <input type="number" name="num2" id="num2" title="num2" min="-100" max="100" class="inp"
+                            required>
+                    </div>
+                </div>
+                <button type="button" class="button" id="calculate">Calculate</button>
+                <div id="result"></div>
+            </div>
+        </main>
+        <script src="./basics.js"></script>
+    </body>
+
+</html>

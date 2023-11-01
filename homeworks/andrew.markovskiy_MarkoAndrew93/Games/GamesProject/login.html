@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/login.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Roboto:wght@400;700&family=Young+Serif&display=swap" rel="stylesheet">
+        <title>Login Page</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <section class="header-conteiner">
+                    <div class="header-line">    
+                        <a class="header-logo_img" href="">
+                            <img class="header-logo" src="./img/logo.png" alt="">
+                        </a>
+                        <nav class="header-menu">
+                            <ul class="header-menu_list">
+                                <li class="header-menu_item">
+                                    <a class="header-menu_link" href="../GamesProject/cards.html">Games</a>
+                                </li>
+                                <li class="header-menu_item">
+                                    <a class="header-menu_link" href="../GamesProject/index.html">About</a>
+                                </li>
+                                <li class="header-menu_item">
+                                    <a class="header-menu_link" href="../GamesProject/login.html">Login</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </section>
+            </header>
+            <main class="main">
+                <div class="login">
+                    <h1 class="login-title">Login page</h1>
+                    <form class="login-form" action="./successpage.html" method="#">
+                        <div class="form-group">
+                            <label class="label-email" for="email">Email</label>
+                            <input class="input-email" type="email" id="email" name="email"
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$"
+                                placeholder="Enter your email address" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="label-password" for="password">Password</label>
+                            <input class="input-password" type="password" id="password" minlength="9" maxlength="47" name="password"
+                                placeholder="Enter your password" required>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input class="" type="checkbox" name="checkbox" required>
+                                <span>I’m not a robot</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="login-btn">Login</button>
+                    </form>
+                </div>
+            </main>
+            <footer class="footer">
+                <div class="img-footer">
+                    <a href="https://www.facebook.com/profile.php?id=100033657771123">
+                        <img src="./img/facebook-link.svg" alt="">
+                    </a>
+                    <a href="https://instagram.com/vladimirovich.andrew?igshid=MXIwYjNwOWs2YTd5cw==">
+                        <img src="./img/instagram-link.svg" alt="">
+                    </a>
+                    <a href="https://www.linkedin.com/in/andrew-markovskiy-5b6743255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+                        <img src="./img/linkedin-link.svg" alt="">
+                    </a>
+                </div>
+                <p class="footer-text">
+                    Made with 💗 on course 'Frontend for beginners' from Masters Academy in 2023, by Markovskiy Andrew
+                </p>
+            </footer>
+        </div>
+    </body>
+</html>

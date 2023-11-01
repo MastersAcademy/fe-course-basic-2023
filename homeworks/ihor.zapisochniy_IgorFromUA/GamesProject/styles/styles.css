@@ -1,0 +1,14 @@
+* {
+  font-family: Roboto, sans-serif;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.semiBold {
+  font-weight: 500;
+  line-height: 18px;
+}

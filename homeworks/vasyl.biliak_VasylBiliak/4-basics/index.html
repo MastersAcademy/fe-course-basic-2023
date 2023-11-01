@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <title>Calculator</title>
+    </head>
+    <body>
+        <main class="wrapper-calculator">
+            <p class="calculator-title">Easy calculator</p>
+            <p class="calculator-description">Open console to see the results</p>
+            <section class="calculator">
+                <label class="calculator__label">
+                    Number 1
+                    <input class="input_number" id="number1" type="number" placeholder="Enter the number 1">
+                </label>
+                <label class="calculator__label">Number 2
+                    <input class="input_number" id="number2" type="number" placeholder="Enter the number 2">
+                </label>
+                <label class="calculator__label">
+                    Operation:
+                    <div class="operators">
+                        <button class="operators__btn" id="add" type="button">+</button>
+                        <button class="operators__btn" id="subtract" type="button">-</button>
+                        <button class="operators__btn" id="multiply" type="button">*</button>
+                        <button class="operators__btn" id="divide" type="button">/</button>
+                        <button class="operators__btn" id="remainder" type="button">%</button>
+                        <button class="operators__btn" id="exponentiation" type="button">**</button>
+                    </div>
+                </label>
+                <label class="calculator__label">
+                    Result:
+                    <h1 class="result" id="result"></h1>
+                </label>
+            </section>
+            <script src="basics.js"></script>
+        </main>
+    </body>
+</html>

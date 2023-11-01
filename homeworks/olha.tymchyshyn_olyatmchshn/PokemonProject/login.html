@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login page</title>
+        <link rel="stylesheet" href="css/login.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+            rel="stylesheet">
+    </head>
+    <body>
+        <!-- PAGE HEADER -->
+        <header class="page-header">
+            <div class="page-header-container">
+                <img class="logo" src="images/logo.svg" alt="Masters Academy logo" width="190" height="29.945">
+                <nav class="nav">
+                    <ul class="nav-menu">
+                        <li class="nav-menu-item">
+                            <a class="nav-menu-item-link" href="./pokemons.html">Pokemons</a>
+                        </li>
+                        <li class="nav-menu-item">
+                            <a class="nav-menu-item-link" href="./index.html">About</a>
+                        </li>
+                        <li class="nav-menu-item">
+                            <a class="nav-menu-item-link" href="./login.html">Login</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="login-container">
+                <h1>Login page</h1> 
+                <form action="./welcome.html" target="_self">
+                    <label for="email">Email</label>
+                    <br>
+                    <input type="email" id="email" name="email" autocomplete="off" placeholder="Enter your email address" required>
+                    <br>
+
+                    <label for="password">Password</label>
+                    <br>
+                    <input type="password" id="password" name="password" autocomplete="off" placeholder="Enter your password" required>
+                    <br>
+                    
+                    <div class="robotcheck">
+                        <input type="checkbox" id="robotcheck" name="robotcheck" value="Not a robot" required>
+                        <label class="robotcheck-label" for="robotcheck"> I'm not a robot</label>
+                        <br>
+                    </div>
+
+                    <input type="submit" value="Login">
+                </form>
+            </div>
+        </main>
+    </body>
+</html>

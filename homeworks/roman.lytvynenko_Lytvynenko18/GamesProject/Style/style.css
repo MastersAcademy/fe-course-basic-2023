@@ -8,7 +8,7 @@
 
 .about-me__section {
   width: 575px;
-  height: 479px;
+  height: auto;
   top: 140px;
   margin-left: 53px;
   gap: 24px;

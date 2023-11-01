@@ -24,3 +24,18 @@ p {
 p > a {
   color: #EF4934;
 }
+
+::placeholder {
+  color: #A9A9A9;
+}
+
+input[type="submit"] {
+  font-size: 22px;
+  font-weight: 600;
+  color: #FFF;
+  background-color: #EF4934;
+  width: 575px;
+  height: 70px;
+  border: #A9A9A9;
+  border-radius: 6px;
+}

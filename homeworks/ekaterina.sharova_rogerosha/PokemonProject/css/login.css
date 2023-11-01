@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upper-header {
+  background-color: #333;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr auto;
+  padding: 10px;
+  color: #333;
+  gap: 50px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.ma-logo {
+  display: flex;
+  align-items: center;
+}
+
+.MAlogo {
+  margin-left: 53px;
+}
+
+.navigation {
+  text-align: right;
+  display: flex;
+  align-items: center;
+}
+
+.navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation-item {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #FFF;
+  line-height: 19px;
+  margin-right: 50px;
+}
+
+.pokemons {
+  text-decoration: none;
+}
+
+.about {
+  text-decoration: none;
+}
+
+.content {
+  max-width: 1280px;
+  padding-inline: 352px;
+}
+
+.headline {
+  color: #221F1F;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 32px;
+  margin-top: 80px;
+  text-align: center;
+}
+
+.enter-content {
+  align-items: center;
+}
+
+.email {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.email-check {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.input-email {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #A9A9A9;
+  padding-block: 30px;
+  padding-inline: 20px;
+}
+
+.password {
+  font-size: 22px;
+}
+
+.password-check {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px;
+  margin-block: 40px;
+  font-weight: 600;
+}
+
+.input-password {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #A9A9A9;
+  padding-block: 30px;
+  padding-inline: 20px;
+}
+
+.robot-check {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  margin-block: 40px;
+}
+
+.label-checkbox {
+  display: flex;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.button-login {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+button {
+  background-color: #EF4934;
+  color: #FFF;
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  width: 575px;
+  padding: 27px 258px;
+  justify-content: center;
+  border: 2px solid #EF4934;
+  align-items: center;
+  border-radius: 6px;
+  gap: 10px;
+}
+
+footer {
+  background-color: #EF4934;
+  color: #FFF;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+}
+
+.footer-text {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+}
+
+.link {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.social-networks {
+  margin-block: 30px;
+}

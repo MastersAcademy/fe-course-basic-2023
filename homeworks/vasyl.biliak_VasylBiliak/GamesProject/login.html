@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="style/login.css" rel="stylesheet" type="text/css">
+        <meta charset="UTF-8">
+        <title>Login</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__box">
+                <img class="header__logo" src="img/logo.png" alt="logo" width="55px" height="57px">
+                <nav class="header__links">
+                    <a class="header__link" href="./games.html">Games</a>
+                    <a class="header__link" href="./index.html">About</a>
+                    <a class="header__link" href="./login.html">Login</a>
+                </nav>
+            </div>
+        </header>
+        <main class="wrapper">
+            <form class="login-form" action="result.html">
+                <h2 class="login-form__title"> Login Page</h2>
+
+                <label class="login-form__label" for="login">Email</label>
+                <input class="login-form__input" type="email" id="login" name="login" placeholder="Enter your email address" pattern=".{3,320}" required title="Please enter a valid email address" maxlength="">
+
+                <label class="login-form__label login-form__label--pwd" for="pwd">Password:</label>
+                <input class="login-form__input" type="password" name="pwd" id="pwd" placeholder="Enter your password" pattern=".{8,320}" required title="Your password must be at least 8 characters long">
+
+                <div class="login-form__checkbox">
+                    <input class="checkbox__input" type="checkbox" id="not-robot" name="fav_language" value="not-robot" required>
+                    <label class="checkbox__text" for="not-robot">I’m not a robot</label>
+                </div>
+
+                <input class="login-form__submit-btn" type="submit" value="Login">
+            </form>
+        </main>
+    </body>
+</html>
