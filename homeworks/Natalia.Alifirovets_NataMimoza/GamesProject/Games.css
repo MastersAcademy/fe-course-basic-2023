@@ -114,17 +114,19 @@
 }
 
 .actors {
-  margin: 0;
-  padding: 0;
-  width: 231px;
   height: 114px;
-  left: 22px;
-  bottom: 12px;
+  left: 2px;
+  bottom: 20px;
   position: absolute;
   font-family: Roboto, serif;
   font-size: 14px;
-  list-style: none;
   line-height: 21px;
+}
+
+.list {
+  padding: 0;
+  margin: 5px 22px;
+  list-style: none;
 }
 
 .font {

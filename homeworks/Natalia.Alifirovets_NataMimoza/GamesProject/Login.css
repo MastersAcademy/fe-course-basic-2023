@@ -1,7 +1,7 @@
 .wrapper {
   margin: 0 auto;
   max-width: 1280px;
-  height: 1017px;
+  min-height: 1017px;
 }
 
 .login-page {
@@ -19,8 +19,8 @@
 }
 
 .logo-box {
-  width: 55px;
-  height: 58px;
+  min-width: 55px;
+  min-height: 58px;
   position: relative;
 }
 
@@ -40,13 +40,12 @@
 .nav__link:hover {
   text-decoration: underline;
 }
+
 /*Main*/
 
 .container {
   max-width: 575px;
   height: 520px;
-  /*border: 1px solid black;*/
-
   margin: 80px 352px 337px 353px;
 }
 
@@ -60,8 +59,8 @@
 }
 
 .login-box {
-  width: 575px;
-  height: 426px;
+  min-width: 575px;
+  min-height: 426px;
   display: flex;
   flex-direction: column;
   top: 62px;
@@ -71,7 +70,7 @@
 
 .form-box {
   display: flex;
-  height: 108px;
+  min-height: 108px;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -90,8 +89,8 @@
 }
 
 .input-box {
-  height: 70px;
-  width: 568px;
+  min-height: 70px;
+  min-width: 568px;
   border-radius: 6px;
   border: .6px solid #A9A9A9;
   background: #FFF;
@@ -120,7 +119,7 @@
 
 .form-box .button-login {
   min-width: 575px;
-  height: 70px;
+  min-height: 70px;
   border-radius: 6px;
   background: #EF4934;
   box-shadow: 0 4px 30px 0 rgba(38, 58, 67, .15);
