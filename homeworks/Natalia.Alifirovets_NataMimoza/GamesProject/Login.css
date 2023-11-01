@@ -85,7 +85,7 @@
   font-weight: 600;
 }
 
-input[type="email"]:invalid + .invalid-feedback::after {
+.invalid-feedback::after {
   content: "Необходимо указать значок @";
 }
 
@@ -119,7 +119,7 @@ input[type="email"]:invalid + .invalid-feedback::after {
 }
 
 .form-box .button-login {
-  width: 575px;
+  min-width: 575px;
   height: 70px;
   border-radius: 6px;
   background: #EF4934;
