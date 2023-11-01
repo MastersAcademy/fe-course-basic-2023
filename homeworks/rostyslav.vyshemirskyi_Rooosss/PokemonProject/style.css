@@ -351,3 +351,46 @@ body {
   font-weight: 700;
   line-height: 32px;
 }
+
+/* Calculator */
+
+.field {
+  display: flex;
+  column-gap: 10px;
+  margin: 20px;
+  align-items: center;
+}
+
+.calc__title {
+  margin: 40px 0 0 20px;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.field__number {
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: .6px solid #A9A9A9;
+}
+
+.field__operation {
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: .6px solid #A9A9A9;
+}
+
+.field__button {
+  padding: 12px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  color: #FFF;
+  background-color: #EF4934;
+}
+
+.field__button:active {
+  transform: translate(1px, 1px);
+}

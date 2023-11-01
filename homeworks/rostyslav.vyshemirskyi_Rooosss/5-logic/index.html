@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../PokemonProject/style.css">
+        <title>Basic JS</title>
+    </head>
+    <body>
+        <h1 class="calc__title">Calculator v. 1</h1>
+        <div class="field">
+            <label>
+                <input class="field__number" id="firstValue" placeholder="enter a number">
+            </label>
+            <label>
+                <select class="field__operation" name="operation" id="operation">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="/">/</option>
+                    <option value="*">*</option>
+                    <option value="**">**</option>
+                </select>
+            </label>
+            <label>
+                <input class="field__number" id="secondValue" placeholder="enter a number">
+            </label>
+            <button class="field__button" id="calculate" type="button">=</button>
+            <span class="field__result" id="result"></span>
+        </div>
+        <script src="./script.js"></script>
+        <script src="./homework.js"></script>
+    </body>
+</html>
