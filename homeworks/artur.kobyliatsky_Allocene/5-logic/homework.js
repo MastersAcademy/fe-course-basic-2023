@@ -19,6 +19,10 @@ function calculate(firstValue, secondValue, operation) {
         return 'Enter a number';
     }
 
+    if (firstValue.trim() === '' || secondValue.trim() === '') {
+        return 'Enter a number';
+    }
+
     let result;
     switch (operation) {
         case '+':
