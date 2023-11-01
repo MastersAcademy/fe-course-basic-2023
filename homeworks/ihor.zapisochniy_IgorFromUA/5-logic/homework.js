@@ -10,9 +10,31 @@
  * - else return number of result: 1 '+' 2 returns 3
  *
  */
-function calculate(/* firstValue, secondValue, operation */) {
+function calculate(firstValue, secondValue, operation) {
     // TODO: write your code here, remove the line below and uncomment the lines above
-    return Math.random() > 0.5 ? 'Error' : 42;
+    const firstNumber = Number(firstValue);
+    const secondNumber = Number(secondValue);
+    let result;
+    if (!firstNumber || !secondNumber) return 'Enter a number';
+    if (operation === '**') return 'Choose a valid operation';
+    switch (operation) {
+        case '+':
+            result = firstNumber + secondNumber;
+            break;
+        case '-':
+            result = firstNumber - secondNumber;
+            break;
+        case '*':
+            result = firstNumber * secondNumber;
+            break;
+        case '/':
+            result = firstNumber / secondNumber;
+            break;
+        default:
+            return 'Choose a valid operation';
+    }
+    if (result > 100) return 'Result is too big';
+    return result;
 }
 
 window.calculate = calculate;
