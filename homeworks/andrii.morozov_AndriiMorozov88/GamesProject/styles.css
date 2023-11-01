@@ -240,12 +240,8 @@ body {
   border: none;
 }
 
-.margin-top--40 {
+.log-in__label {
   margin-top: 40px;
-}
-
-.margin-top--22 {
-  margin-top: 22px;
 }
 
 .log-in__heading {
@@ -258,6 +254,7 @@ body {
   font-size: 14px;
   font-weight: 400;
   padding-left: 10px;
+  margin-top: 22px;
 }
 
 .log-in__checkbox {
@@ -271,6 +268,7 @@ body {
   font-size: 22px;
   padding: 35px 0;
   border-radius: 5px;
+  margin-top: 40px;
   border: none;
 }
 
