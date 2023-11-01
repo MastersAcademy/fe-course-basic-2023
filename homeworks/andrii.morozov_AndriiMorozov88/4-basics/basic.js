@@ -5,8 +5,8 @@ const button = document.querySelector('[data-button]');
 const resultEl = document.querySelector('[data-result]');
 resultEl.innerText = 'Result';
 button.addEventListener('click', () => {
-    const firstNumber = Number(firstNumberInput.value);
-    const secondNumber = Number(secondNumberInput.value);
+    const firstNumber = firstNumberInput.value;
+    const secondNumber = secondNumberInput.value;
     resultEl.classList.add('main__result--calc');
     switch (operation.value) {
         case '1':

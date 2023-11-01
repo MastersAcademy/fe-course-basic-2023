@@ -35,7 +35,7 @@ body {
 .main__result {
   display: flex;
   margin-top: 50px;
-  width: 200px;
+  min-width: 200px;
   height: 80px;
   border: 2px #000 solid;
   justify-content: center;
