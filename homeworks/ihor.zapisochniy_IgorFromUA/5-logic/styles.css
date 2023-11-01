@@ -57,5 +57,9 @@ button {
 
 .result {
   width: 250px;
+  min-height: 27px;
   font-size: 22px;
+  padding: 27px 0 27px 10px;
+  border: 1px solid #A9A9A9;
+  border-radius: 6px;
 }
