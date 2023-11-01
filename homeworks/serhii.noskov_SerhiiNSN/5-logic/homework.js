@@ -14,12 +14,8 @@
 function calculate(firstValue, secondValue, operation) {
     const num1 = Number(firstValue);
     const num2 = Number(secondValue);
-    const addition = num1 + num2;
-    const subtraction = num1 - num2;
-    const product = num1 * num2;
-    const division = num1 / num2;
 
-    if (Number.isNaN(num1) || Number.isNaN(num2)) {
+    if (!num1 || !num2) {
         return 'Enter a number';
     }
 
@@ -29,16 +25,16 @@ function calculate(firstValue, secondValue, operation) {
 
     switch (operation) {
         case '+':
-            return addition > 100 ? 'Result is too big' : addition;
+            return num1 + num2 > 100 ? 'Result is too big' : num1 + num2;
         case '-':
-            return subtraction;
+            return num1 - num2;
         case '*':
-            return product > 100 ? 'Result is too big' : product;
+            return num1 * num2 > 100 ? 'Result is too big' : num1 * num2;
         case '/':
             if (num2 === 0) {
                 return 'Division by zero is not allowed';
             }
-            return division > 100 ? 'Result is too big' : division;
+            return num1 / num2 > 100 ? 'Result is too big' : num1 / num2;
         default:
             return 'Choose a valid operation';
     }
