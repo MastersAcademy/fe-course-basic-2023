@@ -59,7 +59,7 @@ body {
   text-decoration: none;
 }
 
-.heading--h1 {
+.main__heading {
   font-size: 48px;
   font-weight: 700;
   line-height: 32px;
@@ -75,7 +75,7 @@ body {
   top: 180px;
 }
 
-.about__main {
+.aboutMe-block {
   position: absolute;
   top: 140px;
   left: 50%;
@@ -85,20 +85,20 @@ body {
   gap: 63px;
 }
 
-.about__main__image {
+.aboutMe-block__image {
   width: 535px;
   height: 356px;
   border-radius: 5%;
 }
 
-.about__main__article {
+.aboutMe-block__article {
   display: block;
   width: 575px;
   height: 410px;
   padding-right: 53px;
 }
 
-.about__main__paragraf {
+.aboutMe-block__paragraf {
   margin-bottom: 20px;
   font-size: 22px;
   font-weight: 400;
