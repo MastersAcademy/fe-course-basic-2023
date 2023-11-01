@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="css/successful.css">
+        <title>Game Project</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="header">
+                <div class="header__container">
+                    <div class="header__logo">
+                        <img src="img/logo.png" alt="logo" width="55" height="58">
+                    </div>
+                    <div class="header__body">
+                        <nav class="header__menu menu">
+                            <ul class="menu__list">
+                                <li class="menu__item">
+                                    <a href="game.html" class="menu__link">Game</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="index.html" class="menu__link">About</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="login.html" class="menu__link">Login</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="header__burger">
+                        <span></span>
+                    </div>
+                </div>
+            </header>
+            <main class="page">
+                <div class="main__container">
+                    <div class="success-block">
+                        <div class="success-checkmark">
+                            <div class="check-icon">
+                                <span class="icon-line line-tip"></span>
+                                <span class="icon-line line-long"></span>
+                                <div class="icon-circle"></div>
+                                <div class="icon-fix"></div>
+                            </div>
+                        </div>
+                        <div class="success">
+                            <h1 class="success__title">Successful</h1>
+                            <p class="success__info">You can continue watching your favorite games</p>
+                        </div>
+                        <form action="game.html" class="success__form">
+                            <div class="success__back-home">
+                                <button type="submit" class="button">Continue</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <script>
+            document.querySelector('.header__burger').addEventListener('click', function () {
+                this.classList.toggle('active');
+                document.querySelector('.header__menu').classList.toggle('open');
+            })
+        </script>
+    </body>
+</html>

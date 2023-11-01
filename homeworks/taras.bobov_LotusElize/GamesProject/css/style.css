@@ -1,0 +1,170 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  color: #221F1F;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1280px;
+  margin: 0 auto;
+}
+/* header */
+
+header {
+  background-color: #EF4A34;
+  height: 80px;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 55px;
+  height: 57px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.menu {
+  width: 238px;
+  height: 18px;
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  height: 20px;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.social-media li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.menu li:hover {
+  margin-right: 20px;
+  border-bottom: 1px solid #FFF;
+}
+
+.menu a {
+  font-size: 16px;
+  color: #FFF;
+  font-size: 16px;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* main */
+
+main {
+  padding-top: 100px;
+}
+
+.content_game-place {
+  display: flex;
+  flex-direction: row;
+  gap: 68px;
+  margin-top: 60px;
+  margin-bottom: 238px;
+}
+
+.my-place img {
+  width: 532px;
+  height: 356px;
+  box-shadow: 0 0 50px 5px;
+  border-radius: 22px;
+}
+
+.about-me {
+  width: 576px;
+  height: 479px;
+}
+
+.about-me a {
+  color: #F04934;
+}
+
+.title-about-me {
+  width: 100%;
+  height: 46px;
+}
+
+.title-about-me h1 {
+  color: #221F1F;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  margin: 0 0 24px;
+}
+
+.about-me p {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+/* footer */
+
+footer {
+  height: 160px;
+  background-color: #221F1F;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 30px;
+}
+
+.social-media ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-media img {
+  width: 42px;
+  height: 42px;
+}
+
+.links p {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 32px;
+  margin-top: 20px;
+  color: #FFF;
+}
+
+.links a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}

@@ -1,8 +1,44 @@
+.menu {
+  float: right;
+  margin-left: 10px;
+  padding-left: 20px;
+  margin-top: 20px;
+  color: #ECECEC;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.header {
+  color: #ECECEC;
+  display: flex;
+  flex-direction: row;
+  max-width: 1285px;
+  background-color: #EF4934;
+}
+
+.logo {
+  height: 90%;
+  display: table;
+  float: left;
+  margin-right: 900px;
+  margin-left: 30px;
+}
+
 .name {
   font-family: Roboto, sans-serif;
   font-weight: 700;
   font-size: 48px;
   line-height: 32px;
+}
+
+.picture {
+  display: flex;
+  flex-direction: row;
+  max-width: 1175px;
+  height: 479px;
+  top: 140 px;
+  left: 53px;
 }
 
 .text {
@@ -11,8 +47,162 @@
   font-size: 22px;
   line-height: 32px;
   width: 575px;
+  height: 90px;
 }
 
 .link {
   color: #EF4934;
+}
+
+.game {
+  width: 532px;
+  height: 356px;
+  margin-top: 80px;
+  margin-left: 53px;
+  margin-right: 22px;
+}
+
+.project {
+  width: 575px;
+  height: 479px;
+  margin-top: 50px;
+  margin-left: 20px;
+  gap: 24px;
+}
+
+.black {
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 12px;
+  width: 97px;
+  height: 10px;
+}
+
+.another {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 2px;
+  width: 97px;
+  height: 10px;
+}
+
+.text2 {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  width: 200px;
+  height: 100px
+}
+
+.project2 {
+  display: flex;
+  flex-direction: row;
+}
+
+.picture2 {
+  display: flex;
+  flex-direction: column;
+  width: 275px;
+  height: 260px;
+  padding: 20px;
+}
+
+.game2 {
+  width: 90px;
+  height: 90px;
+}
+
+.name2 {
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 32px;
+}
+
+.part {
+  width: 149px;
+  height: 77px;
+}
+
+.name3 {
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 12px;
+  margin-top: 10px;
+}
+
+.body {
+  margin-top: 10px;
+}
+
+.picture3 {
+  display: flex;
+  flex-direction: row;
+  width: 1175px;
+  margin: 0;
+  background-color: #789;
+  padding: 0;
+}
+
+.picture4 {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  width: 1175px;
+}
+
+.title {
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  margin-left: 140px;
+}
+
+.login {
+  width: 575px;
+  height: 520px;
+  margin-top: 100px;
+  margin-left: 353px;
+}
+
+.inside_login {
+  font-family: Roboto, sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 25.78px;
+}
+
+button {
+  background-color: #EF4934;
+  width: 580px;
+  height: 70px;
+  color: #ECECEC;
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+  border-radius: 6px;
+}
+
+.password {
+  width: 575px;
+  height: 70px;
+  margin: 20px auto;
+}
+
+.return {
+  margin-top: 100px;
+  margin-left: 500px;
+}
+
+.success {
+  font-family: Roboto, sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  margin-left: 20px;
+}
+
+.home {
+  width: 250px;
 }

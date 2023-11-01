@@ -1,0 +1,102 @@
+.filter {
+  background-color: #221F1F;
+  padding: 12px 53px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #FFF;
+}
+
+.filter-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filter-search {
+  display: flex;
+}
+
+.search-input {
+  margin-right: 0;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  padding: 12px 100px 12px 45px;
+  background-image: url("../images/search_logo.svg");
+  background-repeat: no-repeat;
+  background-position: 10px 9px;
+  border: #FFF;
+}
+
+.search-button {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  margin-left: 0;
+  color: #FFF;
+  background-color: #EF4934;
+  border: none;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.select-name {
+  border-radius: 6px;
+  padding: 13px;
+  background-color: #333;
+  color: #FFF;
+}
+
+.cards-h1 {
+  color: #221F1F;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 32px;
+  margin-top: 40px;
+  margin-left: 53px;
+  margin-bottom: 40px;
+}
+
+.cards {
+  margin: 50px 53px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.game-card {
+  width: 275px;
+  background-color: #ECECEC;
+  padding: 12px 12px 22px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.game-title {
+  margin-left: 12px;
+}
+
+.game-name {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.text-game {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  margin-top: 0;
+}
+
+.upper-card {
+  display: flex;
+  align-items: flex-start;
+}
+
+.lower-card {
+  font-size: 14px;
+  line-height: 18px;
+  margin-left: 10px;
+}

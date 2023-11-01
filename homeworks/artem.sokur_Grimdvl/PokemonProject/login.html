@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.google.com/share?selection.family=Roboto:wght@100;300;700">
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="style/login.css">
+        <title>PokemonProject</title>
+    </head>
+    <body>
+        <header>
+            <div class="container" style="background-color: #333;">
+                <section class="head">
+                    <a class="head__logo" href="https://www.mastersacademy.education/" target="_blank">
+                        <img class="head__logo-img" src="img/icons/logo-ma.svg" alt="masters-academy">
+                        <span class="head__logo-title">MASTERS ACADEMY</span>
+                    </a>
+    
+                    <nav class="head__navigation">
+                        <a class="head__navigation-item" href="pokemons.html">Pokemons</a>
+                        <a class="head__navigation-item" href="index.html">About</a>
+                        <a class="head__navigation-item active" href="#">Login</a>
+                    </nav>
+                </section>
+            </div>
+        </header>
+
+        <main>
+            <section class="login">
+                <h1 class="login__title">Login page</h1>
+                <form class="login__form" action="success.html">
+                    <div class="login__form-input">
+                        <label for="email">Email</label>
+                        <input id="email" placeholder="Enter your email address" name="email" type="email" required>
+                    </div>
+                    <div class="login__form-input">
+                        <label for="password">Password</label>
+                        <input id="password" placeholder="Enter your password" name="password" type="password" required minlength="4">
+                    </div>
+                    <div class="login__form-checkbox">
+                        <input id="checkbox" name="checkbox" type="checkbox" required>
+                        <label for="checkbox">I'm not a robot</label>
+                    </div>
+                    <button type="submit" class="login__form--submit">Login</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <section class="foot">
+                <div class="foot__social">
+                    <a class="foot__social-media" href="https://www.facebook.com/cherkasy.masters" target="_blank">
+                        <img src="img/icons/logo-facebook.svg" alt="facebook" class="social__media-facebook">
+                    </a>
+                    <a class="foot__social-media" href="https://www.linkedin.com/company/masters-academy-educational-project" target="_blank">
+                        <img src="img/icons/logo-linkedin.svg" alt="linkedin" class="social__media-linkedin">
+                    </a>
+                    <a class="foot__social-media" href="https://www.instagram.com/masters_academy__/" target="_blank">
+                        <img src="img/icons/logo-instagram.svg" alt="instagram" class="social__media-instagram">
+                    </a>
+                </div>
+      
+                <div class="foot__subscription">Made with 🤍 on course
+                    <a class="foot__subscription-link" href="https://www.mastersacademy.education/frontend-for-beginners-it" target="_blank"> 'Frontend for beginners' from Masters Academy in 2023</a>, by
+                    <a class="foot__subscription-link" href="https://www.instagram.com/artemsokur69">Artem Sokur</a>
+                </div>    
+            </section>
+        </footer>
+    </body>
+</html>

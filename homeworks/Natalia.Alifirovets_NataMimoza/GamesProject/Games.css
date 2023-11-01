@@ -1,0 +1,134 @@
+.wrapper {
+  margin: 0 auto;
+  max-width: 1280px;
+  height: 1017px;
+}
+
+.project {
+  background: #EF4934;
+  height: 80px;
+}
+
+.header-menu {
+  padding: 0 52px 0 53px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo-box {
+  width: 55px;
+  height: 58px;
+  position: relative;
+}
+
+.nav {
+  font-size: 16px;
+  font-family: Roboto, serif;
+  gap: 50px;
+  display: flex;
+}
+
+.nav__link {
+  display: inline-block;
+  color: #FFF;
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  text-decoration: underline;
+}
+
+.title {
+  margin: 100px 652px 0 53px;
+  font-family: Roboto, serif;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+/*Main*/
+
+.container {
+  display: flex;
+  width: 1175px;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin: 40px 53px 0 52px;
+  position: relative;
+}
+
+.card {
+  background: #ECECEC;
+  width: 251px;
+  height: 226px;
+  padding: 12px;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 12px;
+}
+
+.image-header {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+  position: relative;
+  gap: 12px;
+  align-items: flex-start;
+  top: 0;
+}
+
+.header {
+  width: 149px;
+  height: 70px;
+  line-height: 150%;
+  font-family: Roboto, serif;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.header__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.header__info {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.image {
+  display: flex;
+  width: 90px;
+  height: 90px;
+  border-radius: 8px;
+}
+
+.actors {
+  height: 114px;
+  left: 2px;
+  bottom: 20px;
+  position: absolute;
+  font-family: Roboto, serif;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.list {
+  padding: 0;
+  margin: 5px 22px;
+  list-style: none;
+}
+
+.font {
+  font-weight: 600;
+}

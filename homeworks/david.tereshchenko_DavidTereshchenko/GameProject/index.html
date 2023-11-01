@@ -24,18 +24,21 @@
                                     <a href="index.html" class="menu__link">About</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="#" class="menu__link">Login</a>
+                                    <a href="login.html" class="menu__link">Login</a>
                                 </li>
                             </ul>
                         </nav>
+                    </div>
+                    <div class="header__burger">
+                        <span></span>
                     </div>
                 </div>
             </header>
             <main class="page">
                 <section class="main-section">
-                    <div class="main-contend">
+                    <div class="main-contend__container">
                         <span class="image">
-                            <img src="img/image.png" alt="workspace ">
+                            <img src="img/image.png" alt="workspace" class="main-contend__container__img">
                         </span>
                         <div class="about-text">
                             <h1 class="about-me">About me</h1>
@@ -46,12 +49,21 @@
                                     <a href="https://www.mastersacademy.education/frontend-for-beginners-it" class="about-me__text-information-link"> 'Frontend for beginners' from Masters Academy in 2023.</a>
                                 </p>
                                 <p>This is a social project from MOCG company where I got an opportunity to work with Frontend mentors and to create my own small project for the portfolio. </p>
-                                <p>You can contact me via https://github.com/DavidTereshchenko and/or check out my GitHub.</p>
+                                <p>
+                                    You can contact me via <a href="https://t.me/davidka_T">Telegram</a>
+                                    and/or check out my <a href="https://github.com/DavidTereshchenko">GitHub</a>.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </section>
             </main>
         </div>
+        <script>
+            document.querySelector('.header__burger').addEventListener('click', function () {
+                this.classList.toggle('active');
+                document.querySelector('.header__menu').classList.toggle('open');
+            })
+        </script>
     </body>
 </html>

@@ -1,0 +1,15 @@
+.h1 {
+  font-size: 48px;
+}
+
+.body {
+  font-family: Roboto;
+}
+
+.paragraph {
+  font-size: 22px;
+  min-width: auto;
+  max-width: 600px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

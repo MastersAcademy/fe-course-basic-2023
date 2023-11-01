@@ -1,0 +1,125 @@
+body {
+  gap: 80px;
+}
+
+.login-main-section {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  min-width: 25%;
+}
+
+.login-header {
+  font-family: Roboto;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 66%;
+  margin: 0;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 40px;
+}
+
+.login-email-container, .login-password-container {
+  display: flex;
+  flex-direction: column;
+  gap: 22px
+}
+
+.email, .password {
+  align-items: flex-start;
+  padding-left: 20px;
+  min-height: 70px;
+  border-radius: 6px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.label-email, .label-password {
+  font-family: Roboto;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.login-main-checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.login-main-checkbox input[type="checkbox"] {
+  appearance: none;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #FFF;
+}
+
+.label-main-checkbox {
+  cursor: pointer;
+  display: flex;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  position: absolute;
+  align-items: center;
+}
+
+.login-main-checkbox label::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 1px solid #EF4934;
+  border-radius: 6px;
+  background-color: #FFF;
+  margin-right: 12px;
+  text-align: center;
+  line-height: 16px;
+  font-size: 16px;
+  color: #FFF;
+  transition: background-color 300ms;
+}
+
+.login-main-checkbox input:checked + label::before {
+  cursor: pointer;
+  background-color: #FFF;
+}
+
+.login-main-checkbox input:checked + label::after {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  background: url("../Img/login-checkbox.svg");
+  position: absolute;
+  top: 4px;
+  left: 4px;
+}
+
+.login-main-submit-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70px;
+  border-radius: 6px;
+  background-color: #EF4934;
+  font-family: Roboto;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: #FFF;
+}
