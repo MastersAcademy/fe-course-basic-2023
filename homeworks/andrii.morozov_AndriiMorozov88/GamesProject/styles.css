@@ -59,7 +59,7 @@ body {
   text-decoration: none;
 }
 
-.heading--h1 {
+.main__heading {
   font-size: 48px;
   font-weight: 700;
   line-height: 32px;
@@ -75,7 +75,7 @@ body {
   top: 180px;
 }
 
-.about__main {
+.aboutMe-block {
   position: absolute;
   top: 140px;
   left: 50%;
@@ -85,20 +85,20 @@ body {
   gap: 63px;
 }
 
-.about__main__image {
+.aboutMe-block__image {
   width: 535px;
   height: 356px;
   border-radius: 5%;
 }
 
-.about__main__article {
+.aboutMe-block__article {
   display: block;
   width: 575px;
   height: 410px;
   padding-right: 53px;
 }
 
-.about__main__paragraf {
+.aboutMe-block__paragraf {
   margin-bottom: 20px;
   font-size: 22px;
   font-weight: 400;
@@ -124,7 +124,7 @@ body {
   z-index: 9999;
 }
 
-.filter-element-padding {
+.filter-element {
   margin-right: 30px;
 }
 
@@ -190,12 +190,13 @@ body {
 .card {
   width: 265px;
   height: 250px;
+  border-radius: 10px;
   padding: 12px 12px 22px;
   display: grid;
   grid-template-columns: 90px 1fr;
   grid-template-rows: 90px 1fr;
   gap: 12px;
-  grid-template-areas: "image text1" "text2 text2";
+  grid-template-areas: "image card-name" "card-description card-description";
   background-color: #ECECEC;
 }
 
@@ -203,21 +204,17 @@ body {
   grid-area: image;
 }
 
-.image {
-  border-radius: 5px;
-}
-
 .card__name {
-  grid-area: text1;
+  grid-area: card-name;
 }
 
-.card__name__heading {
+.card__heading {
   font-size: 18px;
   font-weight: 700;
   color: #221F1F;
 }
 
-.card__name--14px {
+.card__paragraf {
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
@@ -225,7 +222,7 @@ body {
 }
 
 .card__description {
-  grid-area: text2;
+  grid-area: card-description;
 }
 
 .log-in__main {
@@ -243,12 +240,8 @@ body {
   border: none;
 }
 
-.margin-top--40 {
+.log-in__label {
   margin-top: 40px;
-}
-
-.margin-top--22 {
-  margin-top: 22px;
 }
 
 .log-in__heading {
@@ -261,6 +254,7 @@ body {
   font-size: 14px;
   font-weight: 400;
   padding-left: 10px;
+  margin-top: 22px;
 }
 
 .log-in__checkbox {
@@ -274,6 +268,7 @@ body {
   font-size: 22px;
   padding: 35px 0;
   border-radius: 5px;
+  margin-top: 40px;
   border: none;
 }
 
@@ -290,11 +285,11 @@ body {
     gap: 20px;
   }
 
-  .card__name__heading {
+  .card__heading {
     font-size: 24px;
   }
 
-  .card__name--14px {
+  .card__paragraf {
     font-size: 20px;
     font-weight: 400;
     line-height: 24px;
