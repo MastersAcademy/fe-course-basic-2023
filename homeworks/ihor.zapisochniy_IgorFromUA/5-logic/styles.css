@@ -1,6 +1,7 @@
 .field {
-  max-width: 600px;
+  max-width: 900px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   column-gap: 10px;
   margin: 20px auto;
@@ -52,4 +53,9 @@ button {
   font-size: 22px;
   font-weight: 500;
   padding: 27px 0;
+}
+
+.result {
+  width: 250px;
+  font-size: 22px;
 }
