@@ -1,0 +1,66 @@
+.title {
+  display: flex;
+  justify-content: center;
+  color: #221F1F;
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.field {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+  margin: 20px;
+}
+
+input {
+  border: solid 1px #A9A9A9;
+  border-radius: 6px;
+  min-width: 6px;
+  min-height: 40px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+select {
+  border: solid 1px #A9A9A9;
+  border-radius: 6px;
+  min-width: 6px;
+  min-height: 45px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+button {
+  min-width: 60px;
+  min-height: 40px;
+  border-radius: 6px;
+  background-color: #EF4934;
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #FFF;
+  border: none;
+  cursor: pointer;
+}
+
+button:active {
+  box-shadow: 0 0 0 1px #A9A9A9;
+}
+span {
+  border: solid 1px #A9A9A9;
+  border-radius: 6px;
+  min-width: 155px;
+  min-height: 40px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 42px;
+}
