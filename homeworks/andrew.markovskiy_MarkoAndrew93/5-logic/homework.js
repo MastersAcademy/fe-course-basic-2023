@@ -11,36 +11,36 @@
  *
  */
 function calculate(firstValue, secondValue, operation) {
-        if (Number.isNaN(Number(firstValue)) || Number.isNaN(Number(secondValue))) {
-            return 'Enter a number';
-        }
-        
-        if (operation !== '+' && operation !== '-' && operation !== '*' && operation !== '/') {
-        return 'Choose a valid operation';
-        }
+    if (Number.isNaN(Number(firstValue)) || Number.isNaN(Number(secondValue))) {
+        return 'Enter a number';
+    }
 
-        let result;
-        switch (operation) {
-            case '+':
+    if (operation !== '+' && operation !== '-' && operation !== '*' && operation !== '/') {
+    return 'Choose a valid operation';
+    }
+
+    let result;
+    switch (operation) {
+        case '+':
             result = parseFloat(firstValue) + parseFloat(secondValue);
             break;
-            case '-':
+        case '-':
             result = parseFloat(firstValue) - parseFloat(secondValue);
             break;
-            case '*':
+        case '*':
             result = parseFloat(firstValue) * parseFloat(secondValue);
             break;
-            case '/':
+        case '/':
             result = parseFloat(firstValue) / parseFloat(secondValue);
             break;
-            default: ; 
-        }
+        default: ; 
+    }
 
-        if (result > 100) {
-            return 'Result is too big';
-        }
-        
+    if (result > 100) {
+        return 'Result is too big';
+    }
+
         return result;
-        }
+}
 
 window.calculate = calculate;
