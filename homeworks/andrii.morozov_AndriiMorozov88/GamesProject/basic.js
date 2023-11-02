@@ -2,14 +2,19 @@ const firstNumberInput = document.querySelector('[data-first-number]');
 const secondNumberInput = document.querySelector('[data-second-number]');
 const operation = document.querySelector('[data-operation]');
 const button = document.querySelector('[data-button]');
-const resultEl = document.querySelector('[data-result]');
-const errorEl = document.querySelector('[data-error]');
-resultEl.innerText = 'Result';
+const resultContainer = document.querySelector('[data-result]');
+const errorContainer = document.querySelector('[data-error]');
+const cardContainer = document.querySelector('[data-card-container]');
+resultContainer.innerText = 'Result';
 function getResultObject() {
     const firstNumber = Number(firstNumberInput.value);
     const secondNumber = Number(secondNumberInput.value);
     let result;
     const resultObject = {};
+    resultObject.firstNumber = firstNumber;
+    resultObject.secondNumber = secondNumber;
+    resultObject.totalInputColumns = Math.ceil(firstNumber / 10);
+    resultObject.lastInputColumn = firstNumber - Math.floor(firstNumber / 10) * 10;
     switch (operation.value) {
         case '1':
             result = firstNumber + secondNumber;
@@ -41,33 +46,46 @@ function getResultObject() {
         resultObject.error = 4;
     }
     resultObject.operationResult = result;
-    resultObject.totalColumns = Math.ceil(result / 10);
-    resultObject.lastColumn = result - Math.floor(result / 10) * 10;
+    resultObject.totalResultColumns = Math.ceil(result / 10);
+    resultObject.lastResultColumn = result - Math.floor(result / 10) * 10;
     return resultObject;
 }
+function showCardColumn(number) {
+    let cardStep = 0;
+    for (let item = 0; item < number; item++) {
+        const card = document.createElement('div');
+        cardContainer.append(card);
+        card.classList.add('card');
+        card.style.top = `${cardStep}px`;
+        cardStep += 15;
+    }
+}
 function showResult() {
-    errorEl.classList.add('error--hidden');
-    resultEl.classList.remove('calculator__result--error');
+    errorContainer.classList.add('error--hidden');
+    resultContainer.classList.remove('calculator__result--error');
     const resultObject = getResultObject();
     if (resultObject.error) {
-        errorEl.classList.remove('error--hidden');
-        resultEl.classList.add('calculator__result--error');
+        errorContainer.classList.remove('error--hidden');
+        resultContainer.classList.add('calculator__result--error');
         switch (resultObject.error) {
             case 1:
-                errorEl.innerText = 'operation is not supported';
+                errorContainer.innerText = 'operation is not supported';
                 break;
             case 2:
-                errorEl.innerText = 'first operand is not a number';
+                errorContainer.innerText = 'first operand is not a number';
                 break;
             case 3:
-                errorEl.innerText = 'second operand is not a number';
+                errorContainer.innerText = 'second operand is not a number';
                 break;
             default:
-                errorEl.innerText = 'number is too big';
+                errorContainer.innerText = 'number is too big';
                 break;
         }
+    } else {
+        showCardColumn(resultObject.lastInputColumn);
     }
-    resultEl.innerText = `${resultObject.operationResult}`;
-    resultEl.classList.add('calculator__result--calc');
+    resultContainer.innerText = `${resultObject.operationResult}`;
+    resultContainer.classList.add('calculator__result--calc');
+    console.log(resultObject);
 }
 button.addEventListener('click', showResult);

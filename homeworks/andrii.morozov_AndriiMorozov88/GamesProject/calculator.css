@@ -88,3 +88,18 @@ body {
 .error--hidden {
   display: none;
 }
+
+.card__container {
+  background-color: #F72C2C;
+  position: relative;
+  display: flex;
+}
+
+.card {
+  width: 150px;
+  height: 150px;
+  background-image: url("images/game_img.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 10px;
+}
