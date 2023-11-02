@@ -25,6 +25,9 @@ function calculate(firstValue, secondValue, operation) {
             result = numOne * numTwo;
             break;
         case '/':
+            if (numTwo === 0) {
+                return 'Error. Division by zero!';
+            }
             result = numOne / numTwo;
             break;
         default:
