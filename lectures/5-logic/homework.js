@@ -1,8 +1,8 @@
 /**
- *
- * @param firstValue string with first number
- * @param secondValue string with second number
- * @param operation string with operation symbol
+ * Perform a mathematical operation on two numbers. Return result or error.
+ * @param firstValue {string} with first number
+ * @param secondValue {string} with second number
+ * @param operation {string} with operation symbol
  * @returns {string|number} result of calculation or error message:
  * - if firstValue or secondValue is not a number, return 'Enter a number'
  * - if operation is not '+', '-', '*', '/', return 'Choose a valid operation'
