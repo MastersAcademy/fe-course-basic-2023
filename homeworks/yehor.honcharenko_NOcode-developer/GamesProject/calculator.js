@@ -131,7 +131,6 @@ function calculate() {
 
     resultImagesContainerWrapper.appendChild(resultImagesContainer);
 
-
     if (resultFraction > 0) {
         const img = document.createElement('img');
         img.src = './images/overwatch.png';
