@@ -33,7 +33,7 @@ function calculate(firstValue, secondValue, operation) {
         case '/':
             result = parseFloat(firstValue) / parseFloat(secondValue);
             break;
-        default: error;
+        default: result;
     }
 
     if (result > 100) {
