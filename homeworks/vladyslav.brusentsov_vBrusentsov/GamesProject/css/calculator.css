@@ -1,0 +1,17 @@
+body {
+  gap: 60px;
+}
+
+.main__section {
+  display: flex;
+  max-width: 1175px;
+  max-height: 479px;
+}
+
+.calculate-opertaion {
+  font-family: Roboto;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+}
