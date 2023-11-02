@@ -54,8 +54,4 @@ function calculate(firstValue, secondValue, operation) {
     return result;
 }
 
-result.style.textAlign = 'center';
-firstValue.style.textAlign = 'center';
-secondValue.style.textAlign = 'center';
-
 window.calculate = calculate;
