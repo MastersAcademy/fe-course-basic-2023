@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../5-logic/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Roboto:wght@400;700&family=Young+Serif&display=swap" rel="stylesheet">
+        <title>Basic JS</title>
+    </head>
+    <body>
+        <h1 class="calculate-title">Calculator</h1>
+        <div class="field">
+            <label>
+                <input class="calc-label" id="firstValue">
+            </label>
+            <label>
+                <select name="operation" id="operation" class="calc-label">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="/">/</option>
+                    <option value="*">*</option>
+                    <option value="**">**</option>
+                </select>
+            </label>
+            <label>
+                <input class="calc-label" id="secondValue">
+            </label>
+            <button id="calculate" type="button" class="calc-btn">=</button>
+            <span class="calc-span" id="result"></span>
+        </div>
+        <script src="./script.js"></script>
+        <script src="./homework.js"></script>
+    </body>
+</html>
