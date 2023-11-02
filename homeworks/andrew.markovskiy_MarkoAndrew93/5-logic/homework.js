@@ -16,7 +16,7 @@ function calculate(firstValue, secondValue, operation) {
     }
 
     if (operation !== '+' && operation !== '-' && operation !== '*' && operation !== '/') {
-    return 'Choose a valid operation';
+        return 'Choose a valid operation';
     }
 
     let result;
@@ -33,14 +33,14 @@ function calculate(firstValue, secondValue, operation) {
         case '/':
             result = parseFloat(firstValue) / parseFloat(secondValue);
             break;
-        default: ; 
+        default: error;
     }
 
     if (result > 100) {
         return 'Result is too big';
     }
 
-        return result;
+    return result;
 }
 
 window.calculate = calculate;
