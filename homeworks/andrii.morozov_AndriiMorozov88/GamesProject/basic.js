@@ -45,6 +45,10 @@ function getResultObject() {
         resultObject.result = 'Error';
         resultObject.error = 4;
     }
+    if (Number.isNaN(firstNumber) && Number.isNaN(secondNumber)) {
+        resultObject.result = 'Error';
+        resultObject.error = 5;
+    }
     return resultObject;
 }
 function showResult() {
@@ -63,6 +67,9 @@ function showResult() {
                 break;
             case 3:
                 commentContainer.innerText = 'second operand is not a number';
+                break;
+            case 5:
+                commentContainer.innerText = 'first and second operand are not a number';
                 break;
             default:
                 commentContainer.innerText = 'number is too big';
