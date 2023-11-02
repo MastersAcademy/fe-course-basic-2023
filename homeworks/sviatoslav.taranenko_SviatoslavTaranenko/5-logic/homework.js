@@ -41,7 +41,7 @@ function calculate(firstValue, secondValue, operation) {
 
         case "/":
             if (secondNumber === 0) {
-                return "You cannot divide by zero"
+                return "You cannot divide by zero";
             }
             result = firstNumber / secondNumber;
             break;
