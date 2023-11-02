@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="./Login.css">
+        <title>"Games Project"</title>
+    </head>
+    <body>
+
+        <div class="wrapper">
+            <div class="login-page">
+                <header class="header-menu">
+                    <div class="logo-box">
+                        <img src="Images/logo.png" alt="logoMA" width="55" height="58">
+                    </div>
+                    <nav class="nav">
+                        <a class="nav__link" href="Cards.html">Games</a>
+                        <a class="nav__link" href="About.html">About</a>
+                        <a class="nav__link" href="Login.html">Login</a>
+                    </nav>
+                </header>
+                <main class="container">
+                    <h1 class="login-title">Login page</h1>
+                    <form action="result.html" class="login-box" target="_blank">
+                        <div class="form-box">
+                            <label for="email" class="title">Email</label>
+                            <input type="email" id="email" name="email" class="input-box" placeholder="Enter your email address" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,6}$">
+                        </div>
+                        <div class="form-box">
+                            <label for="password" class="title">Password</label>
+                            <input type="password" id="password" name="password" class="input-box" placeholder="Enter your password" required minlength="7">
+                        </div>
+                        <div class="checkbox-field">
+                            <label for="verification" class="checkbox-view">I’m not a robot</label>
+                            <input type="checkbox" id="verification" name="checkbox" required>
+                        </div>
+                        <div class="form-box">
+                            <button type="submit" class="button-login" value="Login">
+                                Login
+                            </button>
+                        </div>
+                    </form>
+                </main>
+            </div>
+        </div>
+    </body>
+</html>
