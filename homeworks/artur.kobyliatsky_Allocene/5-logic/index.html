@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Basic JS</title>
+        <style>
+            body {
+                height: 100%;
+                font-family: "Roboto", sans-serif;
+                margin: 0;
+            }
+
+            .field {
+                display: flex;
+                align-items: center;
+                column-gap: 10px;
+                margin: 20px;
+            }
+
+            .main__heading {
+                margin-top: 25px;
+                margin-left: 17px;
+                color: #221F1F;
+                font-size: 48px;
+                line-height: 32px;
+                font-weight: 700;
+            }
+
+            .inp {
+                height: 40px;
+                width: 150px;
+                font-size: 24px;
+                border-radius: 6px;
+                outline: 0;
+                border: solid .6px #A9A9A9;
+                padding-left: 19px;
+            }
+
+            .inp:focus {
+                border-bottom: solid 6px #EF4934;
+            }
+
+            .inp__select {
+                height: 44px;
+                width: 75px;
+                font-size: 24px;
+                border-radius: 6px;
+                outline: 0;
+                border: solid .6px #A9A9A9;
+                padding-left: 19px;
+            }
+
+            button {
+                height: 44px;
+                font-size: 24px;
+                border-radius: 6px;
+                outline: 0;
+                border: 0;
+                color: #FFF;
+                background-color: #EF4934;
+                transition: background-color .2s ease-in-out;
+            }
+
+            button:hover {
+                background-color: #CD412F;
+            }
+
+            .result {
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 21px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1 class="main__heading">Calculator v. 1</h1>
+        <div class="field">
+            <label for="firstValue">
+                <input name="firstValue" id="firstValue" class="inp" title="firstValue">
+            </label>
+            <label for="operation">
+                <select name="operation" title="operation" id="operation" class="inp__select">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="/">/</option>
+                    <option value="*">*</option>
+                    <option value="**">**</option>
+                </select>
+            </label>
+            <label for="secondValue">
+                <input name="secondValue" id="secondValue" class="inp" title="secondValue">
+            </label>
+            <button id="calculate" type="button" class="button">=</button>
+            <span id="result" class="result"></span>
+        </div>
+        <script src="./script.js"></script>
+        <script src="./homework.js"></script>
+    </body>
+
+</html>

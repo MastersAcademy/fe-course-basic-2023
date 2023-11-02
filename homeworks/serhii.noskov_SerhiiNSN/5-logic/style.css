@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  text-align: center;
+  font-size: 22px;
+}
+
+select {
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.field {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+  padding: 0 53px;
+  font-size: 22px;
+}
+
+.tittle {
+  color: #221F1F;
+  font-family: Roboto;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.custom__item {
+  width: 122px;
+  height: 36px;
+  border-radius: 6px;
+  border: 1px solid #221F1F;
+  outline: none;
+}
+
+.btn {
+  border-radius: 6px;
+  background: #EF4934;
+  font-size: 22px;
+  color: #FFF;
+  border: none;
+  cursor: pointer;
+}

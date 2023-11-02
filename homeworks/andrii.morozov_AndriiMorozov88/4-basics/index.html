@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>calculator</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main class="main">
+            <h1 class="main__heading">
+                Basic math operation
+            </h1>
+            <section>
+                <label for="first-number">
+                    <input type="number" class="main__input" id="first-number" placeholder="first number" data-first-number>
+                </label>
+                <select name="operation" class="main__operation" data-operation>
+                    <option value="1" selected>+</option>
+                    <option value="2">-</option>
+                    <option value="3">*</option>
+                    <option value="4">/</option>
+                    <option value="5">POW</option>
+                    <option value="6">%</option>
+                </select>
+                <label for="second-number">
+                    <input type="number" class="main__input" id="second-number" placeholder="second number" data-second-number>
+                </label>
+                <button type="button" class="main__button" data-button>Result</button>
+            </section>
+            <section data-result class="main__result"></section>
+        </main>
+        <script src="basic.js"></script>
+    </body>
+</html>
