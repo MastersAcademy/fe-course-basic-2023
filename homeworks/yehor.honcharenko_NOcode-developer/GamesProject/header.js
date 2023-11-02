@@ -1,4 +1,4 @@
-window.onload = function () {
+document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.nav__link');
     const currentPage = window.location.pathname.split('/').pop();
 
@@ -9,4 +9,4 @@ window.onload = function () {
             link.classList.remove('nav__link-active');
         }
     });
-};
+});

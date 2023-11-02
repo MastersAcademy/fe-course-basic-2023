@@ -70,6 +70,8 @@ function calculate() {
     // Створюємо контейнери для зображень / Creating containers for images
     let firstImagesContainer = document.createElement('div');
     firstImagesContainer.className = 'first-images-container';
+    const resultImagesContainerWrapper = document.createElement('div');
+    resultImagesContainerWrapper.className = 'result-images-container-wrapper';
     let resultImagesContainer = document.createElement('div');
     resultImagesContainer.className = 'result-images-container';
 
@@ -93,26 +95,6 @@ function calculate() {
         firstImagesContainer.appendChild(img);
     }
 
-    // Додаємо зображення в resultImagesContainer відповідно до result
-    const resultValue = Math.floor(result);
-    const resultFraction = result - resultValue;
-    for (let i = 0; i < resultValue; i++) {
-        if (i % 10 === 0 && i !== 0) {
-            visualization.appendChild(resultImagesContainer);
-            resultImagesContainer = document.createElement('div');
-            resultImagesContainer.className = 'result-images-container';
-        }
-        const img = document.createElement('img');
-        img.src = './images/overwatch.png';
-        resultImagesContainer.appendChild(img);
-    }
-    if (resultFraction > 0) {
-        const img = document.createElement('img');
-        img.src = './images/overwatch.png';
-        img.style.clipPath = `inset(${100 - resultFraction * 100}% 0 0 0)`;
-        resultImagesContainer.appendChild(img);
-    }
-
     // Clearing the block and adding the containers with images
     visualization.textContent = '';
     visualization.appendChild(firstImagesContainer);
@@ -132,7 +114,32 @@ function calculate() {
     equalsSymbolElement.textContent = '=';
     visualization.appendChild(equalsSymbolElement);
 
-    visualization.appendChild(resultImagesContainer);
+    // Додаємо зображення в resultImagesContainer відповідно до result
+    const resultValue = Math.floor(result);
+    const resultFraction = result - resultValue;
+
+    for (let i = 0; i < resultValue; i++) {
+        if (i % 10 === 0 && i !== 0) {
+            resultImagesContainerWrapper.appendChild(resultImagesContainer);
+            resultImagesContainer = document.createElement('div');
+            resultImagesContainer.className = 'result-images-container';
+        }
+        const img = document.createElement('img');
+        img.src = './images/overwatch.png';
+        resultImagesContainer.appendChild(img);
+    }
+
+    resultImagesContainerWrapper.appendChild(resultImagesContainer);
+
+
+    if (resultFraction > 0) {
+        const img = document.createElement('img');
+        img.src = './images/overwatch.png';
+        img.style.clipPath = `inset(${100 - resultFraction * 100}% 0 0 0)`;
+        resultImagesContainer.appendChild(img);
+    }
+
+    visualization.appendChild(resultImagesContainerWrapper);
 }
 
 // Adding a function to handle the click event on the button
