@@ -11,35 +11,36 @@
  *
  */
 function calculate(firstValue, secondValue, operation) {
-  if (isNaN(firstValue) || isNaN(secondValue)) {
-    return 'Enter a number';
-  }
+    if (Number.isNaN(Number(firstValue)) || Number.isNaN(Number(secondValue))) {
+        return 'Enter a number';
+      }
+      
 
-  if (operation !== '+' && operation !== '-' && operation !== '*' && operation !== '/') {
-    return 'Choose a valid operation';
-  }
+    if (operation !== '+' && operation !== '-' && operation !== '*' && operation !== '/') {
+      return 'Choose a valid operation';
+    }
 
-  let result;
-    switch (operation) {
-      case '+':
-        result = parseFloat(firstValue) + parseFloat(secondValue);
-        break;
-      case '-':
-        result = parseFloat(firstValue) - parseFloat(secondValue);
-        break;
-      case '*':
-        result = parseFloat(firstValue) * parseFloat(secondValue);
-        break;
-      case '/':
-        result = parseFloat(firstValue) / parseFloat(secondValue);
-        break;
-    }
+    let result;
+      switch (operation) {
+        case '+':
+          result = parseFloat(firstValue) + parseFloat(secondValue);
+          break;
+        case '-':
+          result = parseFloat(firstValue) - parseFloat(secondValue);
+          break;
+        case '*':
+          result = parseFloat(firstValue) * parseFloat(secondValue);
+          break;
+        case '/':
+          result = parseFloat(firstValue) / parseFloat(secondValue);
+          break;
+      }
     
-    if (result > 100) {
-      return 'Result is too big';
-    }
+      if (result > 100) {
+        return 'Result is too big';
+      }
     
-    return result;
-  }
+      return result;
+    }
   
 window.calculate = calculate;
