@@ -12,52 +12,50 @@
  */
 function calculate(firstValue, secondValue, operation) {
     const firstNumber = Number(firstValue);
-    const  secondNumber = Number(secondValue);
-    const LocalOperation = operation;
+    const secondNumber = Number(secondValue);
 
     let result = 0;
 
     if (Number.isNaN(firstNumber) || Number.isNaN(secondNumber)) {
-        return "Enter a number";
+        return 'Enter a number';
     }
 
-    if (firstValue === "" || secondValue === "") {
-        return "Enter a number";
+    if (firstValue === '' || secondValue === '') {
+        return 'Enter a number';
     }
 
     if (result > 100) {
-        return "Result is too big";
+        return 'Result is too big';
     }
 
-
     switch (operation) {
-        case "+":
+        case '+':
             result = firstNumber + secondNumber;
             break;
 
-        case "-":
+        case '-':
             result = firstNumber - secondNumber;
             break;
 
-        case "/":
+        case '/':
             if (secondNumber === 0) {
-                return "You cannot divide by zero";
+                return 'You cannot divide by zero';
             }
             result = firstNumber / secondNumber;
             break;
 
-        case "*":
+        case '*':
             result = firstNumber * secondNumber;
             break;
 
         default:
-            return "Choose a valid operation";
+            return 'Choose a valid operation';
     }
-    return result
+    return result;
 }
 
-result.style.textAlign = "center"
-firstValue.style.textAlign = "center"
-secondValue.style.textAlign = "center"
+result.style.textAlign = 'center';
+firstValue.style.textAlign = 'center';
+secondValue.style.textAlign = 'center';
 
 window.calculate = calculate;
