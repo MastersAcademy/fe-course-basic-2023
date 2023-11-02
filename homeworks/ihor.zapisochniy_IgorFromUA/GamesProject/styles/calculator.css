@@ -1,10 +1,10 @@
 .field {
   max-width: 900px;
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
-  column-gap: 10px;
-  margin: 20px auto;
+  gap: 10px;
+  margin: 0 0 60px 53px;
 }
 
 .field__title {
@@ -12,12 +12,29 @@
   font-weight: 700;
   line-height: 32px;
   text-align: center;
-  margin-bottom: 60px;
+  margin: 80px 0 60px;
+}
+
+.limit {
+  margin: 0 0 8px 53px;
+}
+
+.limit__first-number,
+.limit__second-number {
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26px;
+  margin: 0;
+}
+
+.limit__second-number {
+  margin-left: 470px;
 }
 
 .field__input {
-  max-width: 250px;
-  padding: 30px 20px;
+  max-width: 122px;
+  padding: 7px 4px;
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
@@ -28,38 +45,31 @@
 
 .field__input:focus {
   border-bottom: 5px solid #EF4934;
-  padding-bottom: 26px;
+  padding-bottom: 2px;
 }
 
 .field__select {
-  width: 60px;
+  width: 114px;
   font-size: 14px;
   line-height: 21px;
-  color: #FFF;
-  background: #333;
-  border: none;
   border-radius: 6px;
-  padding: 12px 18px 12px 12px;
+  padding: 7px 4px;
+  background-color: #FFF;
   outline: none;
 }
 
 .field__button {
-  display: block;
-  width: 60px;
+  width: 122px;
   color: #FFF;
   background-color: #EF4934;
   border-radius: 6px;
   border: none;
-  font-size: 22px;
+  font-size: 14px;
   font-weight: 500;
-  padding: 27px 0;
+  padding: 13px 0;
 }
 
 .field__result {
-  width: 250px;
-  min-height: 27px;
   font-size: 22px;
-  padding: 27px 0 27px 10px;
-  border: 1px solid #A9A9A9;
-  border-radius: 6px;
+  line-height: 32px;
 }
