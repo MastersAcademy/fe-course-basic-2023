@@ -1,3 +1,7 @@
+.body {
+  font-family: Roboto, serif;
+}
+
 .wrapper {
   margin: 0 auto;
   max-width: 1280px;
@@ -10,7 +14,7 @@
 }
 
 .header-menu {
-  padding: 0 52px 0 53px;
+  padding: 0 52px;
   height: 80px;
   display: flex;
   align-items: center;
@@ -26,7 +30,6 @@
 
 .nav {
   font-size: 16px;
-  font-family: Roboto, serif;
   gap: 50px;
   display: flex;
 }
@@ -50,7 +53,6 @@
 }
 
 .login-title {
-  font-family: Roboto, serif;
   font-size: 48px;
   font-weight: 700;
   line-height: 32px;
@@ -79,13 +81,8 @@
 
 .title {
   margin: 0;
-  font-family: Roboto, serif;
   font-size: 22px;
   font-weight: 600;
-}
-
-.invalid-feedback::after {
-  content: "Необходимо указать значок @";
 }
 
 .input-box {
@@ -103,7 +100,6 @@
 }
 
 .checkbox-view {
-  font-family: Roboto, serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 150%;
@@ -111,7 +107,6 @@
 
 .button-login {
   color: #FFF;
-  font-family: Roboto, serif;
   font-size: 22px;
   font-weight: 600;
   line-height: normal;

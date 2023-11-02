@@ -1,3 +1,7 @@
+.body {
+  font-family: Roboto, serif;
+}
+
 .wrapper {
   margin: 0 auto;
   max-width: 1280px;
@@ -26,7 +30,6 @@
 
 .nav {
   font-size: 16px;
-  font-family: Roboto, serif;
   gap: 50px;
   display: flex;
 }
@@ -70,7 +73,6 @@
   height: 46px;
   margin: 0;
   font-size: 48px;
-  font-family: Roboto, serif;
   font-weight: 700;
   line-height: 32px;
 }
@@ -78,7 +80,6 @@
 .contents {
   width: 575px;
   height: 409px;
-  font-family: Roboto, serif;
   font-weight: 400;
   font-size: 22px;
   line-height: 32px;
@@ -91,16 +92,4 @@
 
 .link {
   color: #EF4934;
-}
-
-.text3 {
-  font-family: Roboto, serif;
-  font-weight: 400;
-  font-size: 22px;
-}
-
-.text4 {
-  font-family: Roboto, serif;
-  font-weight: 400;
-  font-size: 22px;
 }
