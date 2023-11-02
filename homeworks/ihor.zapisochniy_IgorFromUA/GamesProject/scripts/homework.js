@@ -10,6 +10,7 @@
  * - else return number of result: 1 '+' 2 returns 3
  *
  */
+
 function calculate(firstValue, secondValue, operation) {
     // TODO: write your code here, remove the line below and uncomment the lines above
     const firstNumber = Number(firstValue);
