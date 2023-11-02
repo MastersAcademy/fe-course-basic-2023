@@ -113,7 +113,7 @@ function calculate() {
         resultImagesContainer.appendChild(img);
     }
 
-    // Очищаємо блок і додаємо в нього контейнери з зображеннями / Clearing the block and adding the containers with images
+    // Clearing the block and adding the containers with images
     visualization.textContent = '';
     visualization.appendChild(firstImagesContainer);
 
@@ -135,8 +135,8 @@ function calculate() {
     visualization.appendChild(resultImagesContainer);
 }
 
-// Додаємо функцію для обробки події кліку на кнопку / Adding a function to handle the click event on the button
-document.addEventListener('DOMContentLoaded', function() {
+// Adding a function to handle the click event on the button
+document.addEventListener('DOMContentLoaded', () => {
     const calculateButton = document.getElementById('submit');
     calculateButton.addEventListener('click', calculate);
 });
