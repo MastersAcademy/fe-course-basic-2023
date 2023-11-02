@@ -6,11 +6,10 @@ const resultEl = document.querySelector('[data-result]');
 const errorEl = document.querySelector('[data-error]');
 resultEl.innerText = 'Result';
 function getResultObject() {
-    errorEl.classList.add('error--hidden');
-    resultEl.classList.remove('calculator__result--error');
     const firstNumber = Number(firstNumberInput.value);
     const secondNumber = Number(secondNumberInput.value);
     let result;
+    const resultObject = {};
     switch (operation.value) {
         case '1':
             result = firstNumber + secondNumber;
@@ -26,40 +25,49 @@ function getResultObject() {
             break;
         default:
             result = 'Error';
-            errorEl.classList.remove('error--hidden');
-            errorEl.innerText = 'operation is not supported';
+            resultObject.error = 1;
             break;
     }
     if (Number.isNaN(firstNumber)) {
         result = 'Error';
-        errorEl.classList.remove('error--hidden');
-        errorEl.innerText = 'first operand is not a number';
+        resultObject.error = 2;
     }
     if (Number.isNaN(secondNumber)) {
         result = 'Error';
-        errorEl.classList.remove('error--hidden');
-        errorEl.innerText = 'second operand is not a number';
+        resultObject.error = 3;
     }
     if (result > 100) {
         result = 'Error';
-        errorEl.classList.remove('error--hidden');
-        errorEl.innerText = 'number is too big';
+        resultObject.error = 4;
     }
-    const resultObject = {
-        operationResult: result,
-        totalColumns: Math.ceil(result / 10),
-        lastColumn: result - Math.floor(result / 10) * 10,
-    };
-    firstNumberInput.value = '';
-    secondNumberInput.value = '';
+    resultObject.operationResult = result;
+    resultObject.totalColumns = Math.ceil(result / 10);
+    resultObject.lastColumn = result - Math.floor(result / 10) * 10;
     return resultObject;
 }
 function showResult() {
+    errorEl.classList.add('error--hidden');
+    resultEl.classList.remove('calculator__result--error');
     const resultObject = getResultObject();
-    resultEl.innerText = `${resultObject.operationResult}`;
-    if (resultObject.operationResult === 'Error') {
+    if (resultObject.error) {
+        errorEl.classList.remove('error--hidden');
         resultEl.classList.add('calculator__result--error');
+        switch (resultObject.error) {
+            case 1:
+                errorEl.innerText = 'operation is not supported';
+                break;
+            case 2:
+                errorEl.innerText = 'first operand is not a number';
+                break;
+            case 3:
+                errorEl.innerText = 'second operand is not a number';
+                break;
+            default:
+                errorEl.innerText = 'number is too big';
+                break;
+        }
     }
+    resultEl.innerText = `${resultObject.operationResult}`;
     resultEl.classList.add('calculator__result--calc');
 }
 button.addEventListener('click', showResult);
