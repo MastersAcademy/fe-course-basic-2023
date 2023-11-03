@@ -33,10 +33,10 @@
                 <h1 class="calculator__title">Calculate pokemons</h1>
                 <div class="calculator__field">
                     <label>
-                        <input class="calculator__input" id="firstValue" placeholder="Enter first value...">
+                        <input class="calculator__input" data-math-value="first" placeholder="Enter first value...">
                     </label>
                     <label>
-                        <select class="calculator__select-math-sign" name="operation" id="operation">
+                        <select class="calculator__select-math-sign" name="operation" data-math-operation>
                             <option value="+">+</option>
                             <option value="-">-</option>
                             <option value="/">/</option>
@@ -45,14 +45,12 @@
                         </select>
                     </label>
                     <label>
-                        <input class="calculator__input" id="secondValue" placeholder="Enter second value...">
+                        <input class="calculator__input" data-math-value="second" placeholder="Enter second value...">
                     </label>
-                    <button class="calculator__btn" id="calculate" type="button">=</button>
-                    <span class="calculator__math-output" id="result"></span>
+                    <button class="calculator__btn" data-math-calculate type="button">=</button>
+                    <span class="calculator__math-output" data-math-output></span>
                 </div>
-                <div class="calculator__math-output-with-pokemons" id="resultWithPokemons">
-                    <!-- <span>1</span><span>sighn</span><span>3</span><span>=</span><span>10</span> -->
-                </div>
+                <div class="calculator__math-output-with-pokemons" data-math-output-pokemons></div>
             </div>
         </main>
         <script src="./js/script.js"></script>

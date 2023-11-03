@@ -41,7 +41,7 @@ function calculate(firstValue, secondValue, operation) {
             break;
     }
 
-    if (result > 100) return 'Result is too big';
+    if (result > 100) return 'Too many pokemons';
 
     return result;
 }
