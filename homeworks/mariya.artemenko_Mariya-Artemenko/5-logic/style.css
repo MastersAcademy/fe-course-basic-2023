@@ -1,0 +1,67 @@
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 32px;
+  color: #221F1F;
+  margin: 0;
+}
+
+.calculator-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.calculator-block__title {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 40px 20px 0;
+  padding: 0;
+}
+
+.calculator-block__field {
+  margin:20px;
+  padding: 0;
+}
+
+::placeholder {
+  color: #A9A9A9;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+:focus {
+  outline: none;
+}
+
+input:focus {
+  border: 2px solid #EF4934;
+}
+
+.field__input {
+  font-weight: 700;
+  width: 150px;
+  height: 50px;
+}
+
+.field__input,
+.field__select,
+.field__button {
+  border-radius: 6px;
+  border: .6px solid #A9A9A9;
+  margin: 20px 5px;
+  padding: 0 20px;
+  font-size: 18px;
+}
+
+.field__select,
+.field__button {
+  width: 52px;
+  height: 52px;
+  font-size: 20px;
+  background-color: #EF4934;
+  color: #fff;
+}
+
+.field__select,
+.field__button:hover {
+  cursor: pointer;
+}
