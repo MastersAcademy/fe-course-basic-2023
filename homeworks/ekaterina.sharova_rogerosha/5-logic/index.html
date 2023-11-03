@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Basic JS</title>
+        <title>JS Logic</title>
         <link
             href="style.css"
             rel="stylesheet"
@@ -31,7 +31,7 @@
         <h1 class="headline">Calculate Pokemons</h1>
         <div class="field">
             <label>
-                <input id="firstValue">
+                <input class="firstValue" id="firstValue">
             </label>
             <label>
                 <select class="operation" name="operation" id="operation">
@@ -39,16 +39,25 @@
                     <option value="-">-</option>
                     <option value="/">/</option>
                     <option value="*">*</option>
+                    <option value="%">%</option>
                     <option value="**">**</option>
                 </select>
             </label>
             <label>
-                <input id="secondValue">
+                <input class="secondValue" id="secondValue">
             </label>
             <button class="button" id="calculate" type="button">=</button>
-            <span id="result"></span>
+            <span class="result" id="result"></span>
         </div>
         <script src="./script.js"></script>
         <script src="./homework.js"></script>
+        <footer>
+            <div class="social-networks">
+                <img class="networks" src="../PokemonProject/images/networks.svg" alt="Masters Academy">
+            </div>
+            <p class="footer-text">
+                Made with 🤍 on course <a href="https://www.mastersacademy.education/frontend-for-beginners-it" class="link"> 'Frontend for beginners' from Masters Academy in 2023</a>, by Katya Sharova
+            </p>
+        </footer>
     </body>
 </html>

@@ -67,15 +67,28 @@ body {
   margin-bottom: 60px;
 }
 
-.operation {
-  padding: 12px;
+.field {
+  display: flex;
+  gap: 16px;
+}
+
+.firstValue, .secondValue {
+  padding: 13px;
   border-radius: 6px;
-  background-color: #333;
-  color: #FFF;
+  display: flex;
+  text-align: center;
+}
+
+.operation {
+  border-radius: 6px;
+  background-color: #FFF;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   border: 1px solid #333;
+  padding-block: 13px;
+  padding-left: 12px;
+  padding-right: 95px;
 }
 
 .button {
@@ -84,7 +97,41 @@ body {
   border-radius: 6px;
   border: 1px solid #EF4934;
   display: inline-flex;
-  padding: 13px 20px;
+  padding: 13px 57px;
   justify-content: center;
   align-items: center;
+}
+
+.result {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+footer {
+  background-color: #EF4934;
+  color: #FFF;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+}
+
+.footer-text {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+}
+
+.link {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.social-networks {
+  margin-block: 30px;
 }
