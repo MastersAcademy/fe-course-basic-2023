@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Basic JS</title>
+        <style>
+            .field {
+                display: flex;
+                column-gap: 20px;
+                margin-left: 60px;
+            }
+        </style>
+        <link rel="stylesheet" href="calculator.css">
+    </head>
+    <body class="body-main">
+        <header class="calculator_header--main">
+            <img src="../GamesProject/Images/about_logo.png" alt="no img" class="calculator_header--logo">
+            <nav class="calculator_header--nav">
+                <ul class="calculator_header--ul">
+                    <li class="calculator_header--li calculator_li--underline">Calculator</li>
+                    <li>
+                        <a href="/#" class="calculator_header--li">Games</a>
+                    </li>
+                    <li>
+                        <a href="/#" class="calculator_header--li">About</a>
+                    </li>
+                    <li>
+                        <a href="/#" class="calculator_header--li">Login</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <h1 class="name-title">Calculate Games</h1>
+        <div class="field">
+            <label>
+                <input id="firstValue" class="input-value">
+            </label>
+            <label>
+                <select name="operation" id="operation" class="select-operation">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="/">/</option>
+                    <option value="*">*</option>
+                    <option value="**">**</option>
+                </select>
+            </label>
+            <label>
+                <input id="secondValue" class="input-value">
+            </label>
+            <button id="calculate" type="button" class="button-result">=</button>
+            <span id="result" class="result"></span>
+        </div>
+        <script src="./script.js"></script>
+        <script src="./homework.js"></script>
+    </body>
+</html>
