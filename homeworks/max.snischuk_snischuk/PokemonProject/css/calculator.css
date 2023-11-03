@@ -30,6 +30,7 @@ body {
 }
 
 .calculator__field {
+  margin-bottom: 50px;
   display: flex;
   column-gap: 10px;
   align-items: center;
@@ -105,4 +106,12 @@ body {
   font-size: 22px;
   line-height: 32px;
   font-weight: 400;
+}
+
+.calculator__math-output-with-pokemons span {
+  margin-right: 100px;
+  color: #F00;
+  font-size: 48px;
+  line-height: 32px;
+  font-weight: 700;
 }
