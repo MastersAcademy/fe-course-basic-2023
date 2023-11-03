@@ -132,7 +132,6 @@ h6 {
   line-height: 150%;
   border: 1px solid #A9A9A9;
   border-radius: 6px;
-  border-radius: 6px;
   transition: all 100ms;
 }
 
@@ -159,7 +158,6 @@ h6 {
   line-height: 150%;
   color: #444;
   border: 1px solid #A9A9A9;
-  border-radius: 6px;
   border-radius: 6px;
   transition: all 100ms;
 }
@@ -201,9 +199,10 @@ h6 {
   display: flex;
   align-items: center;
   width: 500px;
-  height: 70px;
+  min-height: 70px;
+  max-height: 140px;
   margin: 0 auto;
-  padding-left: 20px;
+  padding: 5px 0 5px 20px;
   color: #444;
   font-family: Roboto;
   font-size: 30px;
@@ -211,7 +210,6 @@ h6 {
   font-weight: 400;
   line-height: 150%;
   border: 1px solid #A9A9A9;
-  border-radius: 6px;
   border-radius: 6px;
   transition: all 100ms;
 }

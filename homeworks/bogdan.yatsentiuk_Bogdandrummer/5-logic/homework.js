@@ -16,11 +16,17 @@ function calculate(firstValue, secondValue, operation) {
     // Проверка на число
     const first = +firstValue;
     const second = +secondValue;
-    console.log(typeof (first), first);
+    if (Number.isNaN(first) && Number.isNaN(second)) {
+        result = 'Both of values are not a number. Enter a number!';
+        return result;
+    }
     if (Number.isNaN(first)) {
-        alert('1 value! Enter a number');
-    } else if (Number.isNaN(second)) {
-        alert('2 value! Enter a number');
+        result = '1 value! Enter a number';
+        return result;
+    }
+    if (Number.isNaN(second)) {
+        result = '2 value! Enter a number';
+        return result;
     }
 
     // Проверка на математическую операцию
