@@ -14,9 +14,9 @@ console.log(firstNum % secondNum); // remainder
 console.log(firstNum ** secondNum); // elevation to the module
 
 // advanced task
-document.getElementById('addition').textContent = sum;
-document.getElementById('subtraction').textContent = firstNum - secondNum;
-document.getElementById('multiplication').textContent = firstNum * secondNum;
-document.getElementById('division').textContent = firstNum / secondNum;
-document.getElementById('remainder').textContent = firstNum % secondNum;
-document.getElementById('elevation-to-the-module').textContent = firstNum ** secondNum;
+document.querySelector('[data-addition]').textContent = sum;
+document.querySelector('[data-subtraction]').textContent = firstNum - secondNum;
+document.querySelector('[data-multiplication]').textContent = firstNum * secondNum;
+document.querySelector('[data-division]').textContent = firstNum / secondNum;
+document.querySelector('[data-remainder]').textContent = firstNum % secondNum;
+document.querySelector('[data-elevationToTheModule]').textContent = firstNum ** secondNum;
