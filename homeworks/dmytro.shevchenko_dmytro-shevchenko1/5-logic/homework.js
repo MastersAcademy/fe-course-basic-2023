@@ -19,32 +19,32 @@ function calculate(firstValue, secondValue, operation) {
         return 'Enter a number';
     }
 
-    if (isNaN(firstNum) || isNaN(secondNum)) {
+    if (Number.isNaN(firstNum) || Number.isNaN(secondNum)) {
         return 'Enter a number';
     }
 
     switch (operation) {
         case '+':
-            result = firstNum + secondNum
+            result = firstNum + secondNum;
             break;
         case '-':
-            result = firstNum - secondNum
+            result = firstNum - secondNum;
             break;
         case '*':
-            result = firstNum * secondNum
+            result = firstNum * secondNum;
             break;
         case '/':
             if (secondNum === 0) {
-                return 'Division by zero'
+                return 'Division by zero';
             }
-            result = firstNum / secondNum
+            result = firstNum / secondNum;
             break;
         default:
             return 'Choose a valid operation';
     }
 
     if (result > 100) {
-        return 'Result is too big'
+        return 'Result is too big';
     }
 
     return result;
