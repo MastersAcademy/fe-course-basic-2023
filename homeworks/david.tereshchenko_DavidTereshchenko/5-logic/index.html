@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>JS</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <main>
+                <div class="number__container">
+                    <div class="number-1">
+                        <label for="firstNumber">First number</label>
+                        <input id="firstNumber" class="number__block one" name="number1" required>
+                    </div>
+                    <div class="operator__block">
+                        <label>
+                            <select class="operator">
+                                <option value="+">+</option>
+                                <option value="-">-</option>
+                                <option value="*">*</option>
+                                <option value="/">/</option>
+                                <option value="%">%</option>
+                                <option value="**">**</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="number-2">
+                        <label for="secondNumber">Second number</label>
+                        <input id="secondNumber" class="number__block two" name="number2" required>
+                    </div>
+                    <div class="return">
+                        <button type="button" class="button">Calculation</button>
+                    </div>
+                    <div class="re">
+                        <p class="resul__number result"></p>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <script src="homework.js"></script>
+    </body>
+</html>
