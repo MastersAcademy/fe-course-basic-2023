@@ -1,0 +1,44 @@
+.main__heading {
+  font-size: 48px;
+  font-weight: 600;
+  margin-left: 20px;
+}
+
+.main__input {
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 400;
+  border: 2px #080 solid;
+  padding-left: 10px;
+}
+
+.main__select {
+  width: 50px;
+  height: 40px;
+  margin-top: 10px;
+  font-size: 20px;
+  border: 1px #080 solid;
+}
+
+.button {
+  padding: 15px 50px;
+  font-size: 20px;
+  font-weight: 600;
+  border: 2px #DAFDAF solid;
+}
+
+.main__button {
+  background-color: #F00;
+  color: #FFF;
+}
+
+.main__result {
+  min-width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  font-weight: 600;
+}
+
