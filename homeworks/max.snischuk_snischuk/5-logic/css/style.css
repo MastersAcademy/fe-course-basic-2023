@@ -44,12 +44,12 @@ input::placeholder {
 
 input:focus {
   outline: none;
-  border-bottom: 5px solid #EF4934;
+  border-bottom: 1px solid #EF4934;
 }
 
 select {
   height: 100%;
-  padding: 30px 20px;
+  padding: 27px 20px;
   border-radius: 6px;
   border: .6px solid #A9A9A9;
   background: #FFF;
@@ -61,9 +61,10 @@ select {
   transition: all .3s ease-in-out;
 }
 
+select:hover,
 select:focus {
   outline: none;
-  border-bottom: 5px solid #EF4934;
+  border-bottom: 1px solid #EF4934;
 }
 
 button {

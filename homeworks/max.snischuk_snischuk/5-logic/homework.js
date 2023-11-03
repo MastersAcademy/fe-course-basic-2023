@@ -11,12 +11,37 @@
  *
  */
 function calculate(firstValue, secondValue, operation) {
-    let result = 0;
-    // your code add here
-    // e.g.:
-    if (operation === '+') {
-        result = firstValue + secondValue;
+    let result;
+    const firstNumber = Number(firstValue);
+    const secondNumber = Number(secondValue);
+
+    if (firstValue.trim() === '' || secondValue === '') return 'Enter a number';
+    if (Number.isNaN(firstNumber) || Number.isNaN(secondNumber)) return 'Enter a number';
+
+    switch (operation) {
+        case '+':
+            result = firstNumber + secondNumber;
+            break;
+        case '-':
+            result = firstNumber - secondNumber;
+            break;
+        case '*':
+            result = firstNumber * secondNumber;
+            break;
+        case '/':
+            if (secondNumber === 0) {
+                result = 'You can\'t divide by zero';
+                break;
+            }
+
+            result = (firstNumber / secondNumber).toFixed(2);
+            break;
+        default:
+            result = 'Choose a valid operation';
+            break;
     }
+
+    if (result > 100) return 'Result is too big';
 
     return result;
 }
