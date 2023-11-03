@@ -15,30 +15,24 @@ function calculate(firstValue, secondValue, operation) {
     const secondNum = Number(secondValue);
     let result;
 
-    if (operation === '+') {
-        result = firstNum + secondNum;
-    }
-
-    if (operation === '-') {
-        result = firstNum - secondNum;
-    }
-
-    if (operation === '/') {
-        result = firstNum / secondNum;
-    }
-
-    if (operation === '*') {
-        result = firstNum * secondNum;
-    } else {
-        return 'Choose a valid operation';
-    }
-
     if (firstValue.length === 0 || secondValue.length === 0) {
         return 'Enter a number';
     }
 
     if (Number.isNaN(firstNum) || Number.isNaN(secondNum)) {
         return 'Enter a number';
+    }
+
+    if (operation === '+') {
+        result = firstNum + secondNum;
+    } else if (operation === '-') {
+        result = firstNum - secondNum;
+    } else if (operation === '/') {
+        result = firstNum / secondNum;
+    } else if (operation === '*') {
+        result = firstNum * secondNum;
+    } else {
+        return 'Choose a valid operation';
     }
 
     if (result > 100) {
