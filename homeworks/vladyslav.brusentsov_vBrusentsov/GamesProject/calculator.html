@@ -2,9 +2,9 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Basic JS</title>
+        <link rel="stylesheet" type="text/css" href="./css/calculator.css">
         <link rel="stylesheet" type="text/css" href="./css/main.css">
-        <link rel="stylesheet" type="text/css" src="./css/calculator.css">
+        <title>Basic JS</title>
     </head>
     <body>
         <header class="header">
@@ -29,10 +29,10 @@
         <main class="main">
             <h1>Calculator v. 1</h1>
             <div class="field">
-                <label>
+                <label class="firstValue">
                     <input id="firstValue">
                 </label>
-                <label>
+                <label class="operation">
                     <select name="operation" id="operation">
                         <option value="+">+</option>
                         <option value="-">-</option>
@@ -41,11 +41,13 @@
                         <option value="**">**</option>
                     </select>
                 </label>
-                <label>
+                <label class="secondValue">
                     <input id="secondValue">
                 </label>
-                <button id="calculate" type="button">=</button>
+                <button class="calculate" id="calculate" type="button">=</button>
                 <span id="result"></span>
+            </div>
+            <div class="result-operation">
                 <h2 id="calculate-opertaion" class="calculate-opertaion"></h2>
             </div>
         </main>

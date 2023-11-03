@@ -2,10 +2,55 @@ body {
   gap: 60px;
 }
 
-.main__section {
+.main {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   max-width: 1175px;
   max-height: 479px;
+}
+
+.main h1 {
+  display: flex;
+  justify-content: center;
+  font-family: Roboto;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.field {
+  display: flex;
+  gap: 16px;
+}
+
+.firstValue input {
+  display: flex;
+  min-height: 36px;
+  min-width: 122px;
+  border: 1px solid #000;
+  border-radius: 6px;
+  background-color: #FFF;
+}
+
+.operation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.operation select {
+  display: flex;
+  background: none;
+  border: none;
+  border: 1px solid #000;
+  border-radius: 6px;
+  background-color: #FFF;
+  appearance: none;
+  min-height: 36px;
+  width: auto;
+  min-width: 122px;
 }
 
 .calculate-opertaion {
