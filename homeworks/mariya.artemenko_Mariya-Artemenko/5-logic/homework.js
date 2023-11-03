@@ -13,11 +13,11 @@
 
 function calculate(firstValue, secondValue, operation) {
     const firstNumber = Number(firstValue);
-    const secondNumber = Number (secondValue);
+    const secondNumber = Number(secondValue);
 
     let result = 0;
 
-    if (isNaN(firstNumber) || isNaN(secondNumber) ) {
+    if (Number.isNaN(firstNumber) || Number.isNaN(secondNumber)) {
         return 'Enter a number';
     }
 

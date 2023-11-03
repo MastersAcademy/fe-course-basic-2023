@@ -18,7 +18,7 @@ body {
 }
 
 .calculator-block__field {
-  margin:20px;
+  margin: 20px;
   padding: 0;
 }
 
@@ -58,7 +58,7 @@ input:focus {
   height: 52px;
   font-size: 20px;
   background-color: #EF4934;
-  color: #fff;
+  color: #FFF;
 }
 
 .field__select,
