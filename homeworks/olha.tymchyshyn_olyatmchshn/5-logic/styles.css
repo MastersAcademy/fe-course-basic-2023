@@ -53,6 +53,7 @@ button {
 }
 
 span {
+  width: 250px;
   color: #221F1F;
   font-family: Roboto;
   font-size: 22px;

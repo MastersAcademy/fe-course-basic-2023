@@ -21,6 +21,9 @@ function calculate(firstValue, secondValue, operation) {
     if (Number.isNaN(number1) || Number.isNaN(number2)) {
         return 'Enter a number';
     }
+    if (firstValue === '' || secondValue === '') {
+        return 'Enter a number';
+    }
 
     switch (operation) {
         case '+':
