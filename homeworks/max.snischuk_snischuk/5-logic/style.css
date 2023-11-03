@@ -87,6 +87,7 @@ button:hover {
 }
 
 span {
+  width: 300px;
   font-size: 22px;
   line-height: 32px;
   font-weight: 400;
