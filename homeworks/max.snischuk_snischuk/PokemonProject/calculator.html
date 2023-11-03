@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./css/calculator.css">
+        <title>Calculator</title>
+    </head>
+    <body>
+        <header class="header">
+            <nav class="header__nav">
+                <a href="./index.html">
+                    <img src="./images/logo.svg" alt="logo">
+                </a>
+                <ul class="header__nav-list">
+                    <li>
+                        <a class="header__nav-link" href="./calculator.html">Calculator</a>
+                    </li>
+                    <li>
+                        <a class="header__nav-link" href="./pokemons.html">Pokemons</a>
+                    </li>
+                    <li>
+                        <a class="header__nav-link--active" href="./index.html">About</a>
+                    </li>
+                    <li>
+                        <a class="header__nav-link" href="./login.html">Login</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="calculator">
+            <div class="calculator__container">
+                <h1 class="calculator__title">Calculate pokemons</h1>
+                <div class="calculator__field">
+                    <label>
+                        <input class="calculator__input" id="firstValue" placeholder="Enter first value...">
+                    </label>
+                    <label>
+                        <select class="calculator__select-math-sign" name="operation" id="operation">
+                            <option value="+">+</option>
+                            <option value="-">-</option>
+                            <option value="/">/</option>
+                            <option value="*">*</option>
+                            <option value="**">**</option>
+                        </select>
+                    </label>
+                    <label>
+                        <input class="calculator__input" id="secondValue" placeholder="Enter second value...">
+                    </label>
+                    <button class="calculator__btn" id="calculate" type="button">=</button>
+                    <span class="calculator__math-output" id="result"></span>
+                </div>
+            </div>
+        </main>
+        <script src="./js/script.js"></script>
+        <script src="./js/calculate.js"></script>
+    </body>
+</html>
