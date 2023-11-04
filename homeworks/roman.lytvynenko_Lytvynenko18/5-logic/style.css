@@ -1,0 +1,55 @@
+.body {
+  font-family: Roboto;
+}
+
+.h1 {
+  font-size: 48px;
+}
+
+.input {
+  width: 150px;
+  height: 30px;
+  border-radius: 6px;
+  border-color: #A9A9A9;
+}
+
+.field {
+  display: flex;
+  column-gap: 15px;
+  margin: 20px;
+}
+
+.Value {
+  width: 140px;
+  height: 25px;
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.input__operation {
+  width: 50px;
+  height: 30px;
+  border-radius: 6px;
+  border-color: #A9A9A9;
+}
+
+.operation {
+  width: 47px;
+  height: 30px;
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.calculate {
+  width: 45px;
+  height: 30px;
+  border-radius: 6px;
+  border-color: #A9A9A9;
+  background-color: #EF4934;
+}
+
+.result {
+  width: 50px;
+  height: 30px;
+  padding-top: 5px;
+}
