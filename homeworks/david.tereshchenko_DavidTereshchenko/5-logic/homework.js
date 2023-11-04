@@ -43,6 +43,12 @@ btn.onclick = function () {
             result.innerHTML = 'Choose a valid operation';
             return result;
     }
+
+    if (calc > 100) {
+        result.innerHTML = 'Result is too big';
+        return result;
+    }
+
     result.innerHTML = calc;
 
     return result;
