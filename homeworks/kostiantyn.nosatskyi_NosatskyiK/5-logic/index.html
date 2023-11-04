@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Basic JS</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header class="header__page">
+            <div class="logo">
+                <img class="logo__img" src="img/logo.png" alt="logo">
+            </div>
+            <nav>
+                <ul class="navigation">
+                    <li class="navigation__item active">
+                        <a class="navigation__item-link" href="#">Calculator</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__item-link" href="#">Pokemons</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__item-link" href="#">About</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__item-link" href="#">Login</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <h1 class="title__txt">Calculator v. 1</h1>
+        <div class="field">
+            <!-- Provided classes to the inputs to use them in the css file.
+                When I used the id, the linter did not pass because they increase the significance-->
+            <label>
+                <input id="firstValue" class="input__form">
+            </label>
+            <label>
+                <select name="operation" id="operation" class="input__form">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="/">/</option>
+                    <option value="*">*</option>
+                    <option value="**">**</option>
+                </select>
+            </label>
+            <label>
+                <input id="secondValue" class="input__form">
+            </label>
+            <button id="calculate" type="button" class="input__form calculate">=</button>
+            <span id="result" class="result"></span>
+        </div>
+        <script src="js/script.js"></script>
+        <script src="js/homework.js"></script>
+    </body>
+</html>
