@@ -51,7 +51,9 @@ CALCULATE_BUTTON_ELEMENT.addEventListener('click', () => {
     const resultMath = window.calculate(firstValue, secondValue, operation);
     window.cleanElement(resultImagesEl);
     if (typeof resultMath === 'string') {
-        resultImagesEl.innerHTML = 'Too many <br />pokemons';
+        resultImagesEl.innerHTML = resultMath === 'Result is too big' ? 'Too many <br />pokemons' : resultMath;
+    } else if (resultMath < 0) {
+        resultImagesEl.innerHTML = resultMath;
     } else {
         const images = window.createImages(resultMath);
         resultImagesEl.appendChild(images);
