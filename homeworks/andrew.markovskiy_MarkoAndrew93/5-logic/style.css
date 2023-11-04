@@ -15,7 +15,7 @@ body {
   gap: 50px;
 }
 
-.calculate-title {
+.title {
   font-size: 48px;
   font-weight: 700;
   line-height: 32px;
@@ -28,21 +28,15 @@ body {
   margin: 20px;
 }
 
-.calculate-label {
-  font-size: 22px;
-  font-weight: 600;
-  display: block;
-  margin-bottom: 5px;
-}
 
-.calc-span {
+.calculator-content {
   font-size: 22px;
   display: flex;
   align-items: center;
 }
 
-.calc-span,
-.calc-label {
+.calculator-content,
+.calculator {
   height: 70px;
   padding: 10px;
   border: 1px solid #CCC;
@@ -51,7 +45,7 @@ body {
   font-size: 22px;
 }
 
-.calc-btn {
+.calculator-btn {
   height: 70px;
   font-size: 22px;
   font-weight: 600;
