@@ -5,35 +5,23 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./style.css">
         <title>Basic JS</title>
-        <style>
-            .field {
-                display: flex;
-                column-gap: 10px;
-                margin: 20px;
-                align-items: center;
-            }
-        </style>
     </head>
     <body>
-        <h1>Calculator v. 1</h1>
-        <div class="field">
-            <label>
-                <input data-math-value="first" placeholder="Enter first value...">
-            </label>
-            <label>
-                <select name="operation" data-math-operation>
+        <div class="calculator">
+            <h1 class="calculator__title">Calculator v. 1</h1>
+            <div class="calculator__field">
+                <input class="calculator__input" data-math-value="first" placeholder="Enter first value...">
+                <select class="calculator__select-math-sign" name="operation" data-math-operation>
                     <option value="+">+</option>
                     <option value="-">-</option>
                     <option value="/">/</option>
                     <option value="*">*</option>
                     <option value="**">**</option>
                 </select>
-            </label>
-            <label>
-                <input data-math-value="second" placeholder="Enter second value...">
-            </label>
-            <button data-math-calculate type="button">=</button>
-            <span data-math-output></span>
+                <input class="calculator__input" data-math-value="second" placeholder="Enter second value...">
+                <button class="calculator__btn" data-math-calculate type="button">=</button>
+                <span class="calculator__math-output" data-math-output></span>
+            </div>
         </div>
         <script src="./script.js"></script>
         <script src="./homework.js"></script>

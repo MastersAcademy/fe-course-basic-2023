@@ -4,25 +4,33 @@
 
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.calculator {
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: Roboto, sans-serif;
 }
 
-h1 {
-  margin: 0;
+.calculator__title {
+  margin: 0 0 60px;
   color: #221F1F;
   font-size: 48px;
   line-height: 32px;
   font-weight: 700;
 }
 
-input {
+.calculator__field {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.calculator__input {
   padding: 30px 20px;
-  width: 100%;
   border-radius: 6px;
   border: .6px solid #A9A9A9;
   background: #FFF;
@@ -34,7 +42,7 @@ input {
   transition: all .3s ease-in-out;
 }
 
-input::placeholder {
+.calculator__input::placeholder {
   color: #A9A9A9;
   font-family: Roboto;
   font-size: 14px;
@@ -42,12 +50,12 @@ input::placeholder {
   font-weight: 400;
 }
 
-input:focus {
+.calculator__input:focus {
   outline: none;
   border-bottom: 1px solid #EF4934;
 }
 
-select {
+.calculator__select-math-sign {
   height: 100%;
   padding: 27px 20px;
   border-radius: 6px;
@@ -61,13 +69,13 @@ select {
   transition: all .3s ease-in-out;
 }
 
-select:hover,
-select:focus {
+.calculator__select-math-sign:hover,
+.calculator__select-math-sign:focus {
   outline: none;
   border-bottom: 1px solid #EF4934;
 }
 
-button {
+.calculator__btn {
   cursor: pointer;
   padding: 30px;
   border: none;
@@ -82,11 +90,11 @@ button {
   transition: filter .3s ease-in-out;
 }
 
-button:hover {
+.calculator__btn:hover {
   filter: brightness(.9);
 }
 
-span {
+.calculator__math-output {
   width: 300px;
   font-size: 22px;
   line-height: 32px;
