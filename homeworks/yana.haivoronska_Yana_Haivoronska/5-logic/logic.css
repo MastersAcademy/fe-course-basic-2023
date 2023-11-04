@@ -1,0 +1,27 @@
+.h1 {
+  text-align: center;
+  font-family: Roboto, sans-serif;
+  color: #221F1F;
+  font-size: 48px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+.field {
+  display: flex;
+  column-gap: 20px;
+  margin: 40px;
+  font-family: Roboto, sans-serif;
+  color: #221F1F;
+  font-size: 22px;
+}
+
+.header {
+  max-width: 100%;
+  background-color: #EF4934;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 53px;
+}
