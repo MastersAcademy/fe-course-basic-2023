@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Basic JS</title>
+    </head>
+    <body>
+        <h1>Calculator v. 1</h1>
+        <div class="field">
+            <label>
+                <input id="firstValue">
+            </label>
+            <label>
+                <select class="select-operations" name="operation" id="operation">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="/">/</option>
+                    <option value="*">*</option>
+                    <option value="**">**</option>
+                </select>
+            </label>
+            <label>
+                <input id="secondValue">
+            </label>
+            <button class="result-button" id="calculate" type="button">=</button>
+            <span class="result-text" id="result"></span>
+        </div>
+        <script src="./script.js"></script>
+        <script src="./homework.js"></script>
+    </body>
+</html>
