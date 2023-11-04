@@ -1,0 +1,79 @@
+.calculator {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.calculator__inputs {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.calculator__inputs > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.calculator__inputs-number input {
+  height: 30px;
+  width: 100px;
+  line-height: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.calculator__inputs-sign select {
+  width: 60px;
+  height: 34px;
+  line-height: 20px;
+  font-size: 20px;
+  text-align: center;
+  align-items: center;
+}
+
+.calculator__inputs--button button {
+  height: 34px;
+  width: 50px;
+  line-height: 20px;
+  font-size: 20px;
+}
+
+.calculator__inputs-result div {
+  height: 34px;
+  line-height: 20px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator__outputs {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  color: #EF4934;
+}
+
+.calculator__outputs-numbers {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.calculator__outputs-cards {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  line-height: 50px;
+  font-size: 50px;
+  /* gap: 10px; */
+}
+
+.calculator__outputs-cards img {
+  background-color: #FDB714;
+  border-radius: 20px;
+}
