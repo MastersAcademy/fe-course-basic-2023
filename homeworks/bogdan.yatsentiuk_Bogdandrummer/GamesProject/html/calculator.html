@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../styles/calculator.css">
+        <title>Games calculator</title>
+    </head>
+
+    <body>
+        <!--Wrapper-->
+        <div class="wrapper">
+            <!--Header-->
+            <header class="head">
+                <!--Menu-->
+                <nav class="header__menu">
+                    <a href="https://www.mastersacademy.education/frontend-for-beginners-it" class="header__logo">
+                        <img src="../logo.svg" alt="logo">
+                    </a>
+                    <!--Menu list-->
+                    <ul class="menu__list">
+                        <li>
+                            <a class="menu__link-about" href="games.html">Games</a>
+                        </li>
+                        <li>
+                            <a class="menu__link-about" href="../index.html">About</a>
+                        </li>
+                        <li>
+                            <a class="menu__link-about" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <!--Main-->
+            <main class="main content">
+                <!--Блок Калькулятор-->
+                <div class="calculator">
+                    <h1 class="title">Calculator v. 1</h1>
+                    <div class="field">
+                        <div class="task">
+                            <label>
+                                <input class="input" id="firstValue">
+                            </label>
+                            <label>
+                                <select class="operation" name="operation" id="operation">
+                                    <option class="option" value="+">+</option>
+                                    <option class="option" value="-">-</option>
+                                    <option class="option" value="/">/</option>
+                                    <option class="option" value="*">*</option>
+                                    <option class="option" value="**">**</option>
+                                    <option class="option" value="%">%</option>
+                                </select>
+                            </label>
+                            <label>
+                                <input class="input" id="secondValue">
+                            </label>
+                        </div>
+                        <button class="calculate" id="calculate" type="button">=</button>
+                        <span class="result" id="result">0</span>
+                    </div>
+                </div>
+                <!--Блок Визуализация результата-->
+                <section class="visual__result">
+                    <div class="result__field">
+                        <!--Поля для вывода примера-->
+                        <h2 class="symbol" id="first__numb"></h2>
+                        <h2 class="symbol" id="oper"></h2>
+                        <h2 class="symbol" id="second__numb"></h2>
+                        <h2 class="symbol" id="symb"></h2>
+                        <h2 class="symbol" id="rlt"></h2>
+                    </div>
+                </section>
+                <!--Вывод в карточках-->
+                <section class="cards__field">
+                    <div class="result__field">
+                        <!--Поля для вывода примера-->
+                        <div class="card1 first__card">
+
+                        </div>
+                        <h2 class="symbol" id="oper__card"></h2>
+                        <h2 class="symbol" id="second__card"></h2>
+                        <h2 class="symbol" id="symb__card"></h2>
+                        <div class="symbol" id="rlt__card"></div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <script src="../js/script.js"></script>
+    </body>
+
+</html>

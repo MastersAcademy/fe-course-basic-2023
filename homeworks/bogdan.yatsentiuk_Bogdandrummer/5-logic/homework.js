@@ -45,13 +45,14 @@ function calculate(firstValue, secondValue, operation) {
     if (operation === '**') {
         result = first ** second;
     } else {
-        alert('Выберите корректную математическую операцию!');
+        result = 'Выберите корректную математическую операцию!';
     }
     console.log(result);
 
     // Проверка величины результата
     if (result > 100) {
-        alert('Result is too big');
+        result = 'Result is too big';
+        return result;
     }
 
     return result;
