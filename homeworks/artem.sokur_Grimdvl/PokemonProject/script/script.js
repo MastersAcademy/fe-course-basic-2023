@@ -12,7 +12,6 @@ window.addEventListener('DOMContentLoaded', () => {
     };
 
     let result;
-    
     const calculate = (firstNum, operator, secondNum) => {
         switch (operator) {
             case '+':
@@ -94,7 +93,10 @@ window.addEventListener('DOMContentLoaded', () => {
                             if (buttonOutput) {
                                 if (i === 0) {
                                     state[prop] = item.textContent;
-                                    result = calculate(+numbers[0].value, signs[0].value, +numbers[1].value);
+                                    result = calculate(
+                                        +numbers[0].value,
+                                        signs[0].value,
+                                        +numbers[1].value);
                                     resultInput.textContent = result;
                                 }
                             }
