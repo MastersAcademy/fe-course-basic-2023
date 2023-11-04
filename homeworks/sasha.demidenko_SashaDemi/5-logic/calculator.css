@@ -2,6 +2,12 @@
   margin: 0;
 }
 
+.calculator_wrapper {
+  display: flex;
+  column-gap: 20px;
+  margin-left: 60px;
+}
+
 .calculator_header--main {
   background: #EF4934;
   height: 80px;
@@ -25,7 +31,7 @@
 .calculator_header--ul {
   display: inline-grid;
   justify-items: end;
-  grid-template: 1fr/ 78px 78px 78px 78px;
+  grid-template: 1fr/ 78px;
   list-style-type: none;
   font-family: Roboto, sans-serif;
   padding-right: 60px;
