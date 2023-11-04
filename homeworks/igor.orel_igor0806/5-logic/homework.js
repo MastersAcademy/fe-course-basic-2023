@@ -28,6 +28,9 @@ function calculate(firstValue, secondValue, operation) {
     } else if (operation === '-') {
         result = firstNum - secondNum;
     } else if (operation === '/') {
+        if (secondNum === 0) {
+            return 'error';
+        }
         result = firstNum / secondNum;
     } else if (operation === '*') {
         result = firstNum * secondNum;
