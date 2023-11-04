@@ -6,6 +6,7 @@ const IMAGE_ELEMENT = document.getElementById('images__value');
 const OPERATOR = document.querySelector('.operator');
 const SECOND_OPERAND = document.querySelector('.second__operand');
 const RESULT = document.querySelector('.result');
+const EQUALS = document.querySelector('.equals');
 
 function displayImages(value, element) {
     element.innerHTML = '';
@@ -31,6 +32,12 @@ function displayImages(value, element) {
 
 FIRST_VALUE_ELEMENT.addEventListener('change', () => {
     const firstValue = +FIRST_VALUE_ELEMENT.value;
+
+    if (firstValue > 10) {
+        IMAGE_ELEMENT.innerText = 'Max 10';
+        return;
+    }
+
     displayImages(firstValue, IMAGE_ELEMENT);
 });
 
@@ -41,6 +48,7 @@ CALCULATE_BUTTON_ELEMENT.addEventListener('click', () => {
 
     OPERATOR.innerText = operation;
     SECOND_OPERAND.innerText = secondValue;
+    EQUALS.innerText = '=';
 
     const res = window.calculate(firstValue, secondValue, operation);
 

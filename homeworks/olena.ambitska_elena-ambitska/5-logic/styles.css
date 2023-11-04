@@ -1,3 +1,4 @@
+
 .counter__section {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -5,7 +6,22 @@
   padding: 60px;
 }
 
+.calc__title {
+  color: #221F1F;
+  text-align: center;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px;
+}
+
 .images__list {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(90px, 1fr));
+  align-content: baseline;
+}
+
+.result {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
   align-content: baseline;
@@ -13,9 +29,46 @@
 
 .image {
   margin-bottom: -50px;
+  box-shadow: 15px -11px 21px -4px rgba(0,0,0, .64);
+  -webkit-box-shadow: 15px -11px 21px -4px rgba(0,0,0, .64);
+  -moz-box-shadow: 15px -11px 21px -4px rgba(0,0,0, .64);
 }
 
 
 .operator, .equals, .second__operand {
-  color: var(--red);
+  color: #EF4934;
+}
+
+
+.calc__input, .calc__button, .calc__dropdown {
+  width: 122px;
+  height: 36px;
+  border-radius: 6px;
+  border: .6px solid #221F1F;
+  background: #FFF;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #221F1F;
+}
+
+.calc__button {
+  background-color: #EF4934;
+  color: #FFF;
+}
+
+.operator, .second__operand, .equals, .result {
+  font-family: Roboto, "Roboto", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px;
+  color: #EF4934;
+}
+
+.calc-validation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

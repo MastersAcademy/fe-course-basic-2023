@@ -15,13 +15,13 @@
         </style>
     </head>
     <body>
-        <h1>Calculator v. 1</h1>
+        <h1 class="calc__title">Calculator v. 1</h1>
         <div class="field">
             <label>
-                <input id="firstValue" type="number" min="0" step="1">
+                <input id="firstValue" type="number" min="0" step="1" class="calc__input">
             </label>
             <label>
-                <select name="operation" id="operation">
+                <select name="operation" id="operation" class="calc__dropdown">
                     <option value="+">+</option>
                     <option value="-">-</option>
                     <option value="/">/</option>
@@ -30,17 +30,16 @@
                 </select>
             </label>
             <label>
-                <input id="secondValue" type="number" min="0" step="1">
+                <input id="secondValue" type="number" min="0" step="1" class="calc__input">
             </label>
-            <button id="calculate" type="button">=</button>
+            <button id="calculate" type="button" class="calc__button">=</button>
         </div>
         <section class="counter__section">
             <div class="images__list" id="images__value"></div>
             <div class="operator"></div>
             <div class="second__operand"></div>
-            <div class="equals"> = </div>
+            <div class="equals"></div>
             <div class="result"></div>
-
         </section>
         <script src="./script.js"></script>
         <script src="./homework.js"></script>
