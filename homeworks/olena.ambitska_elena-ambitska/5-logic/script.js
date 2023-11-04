@@ -30,6 +30,13 @@ function displayImages(value, element) {
     }
 }
 
+function resetCalculator() {
+    OPERATOR.innerText = ' ';
+    SECOND_OPERAND.innerText = '';
+    EQUALS.innerText = '';
+    RESULT.innerText = '';
+}
+
 FIRST_VALUE_ELEMENT.addEventListener('change', () => {
     const firstValue = +FIRST_VALUE_ELEMENT.value;
 
@@ -45,6 +52,12 @@ CALCULATE_BUTTON_ELEMENT.addEventListener('click', () => {
     const secondValue = +SECOND_VALUE_ELEMENT.value;
     const operation = OPERATION_ELEMENT.value;
     const firstValue = +FIRST_VALUE_ELEMENT.value;
+
+    if (firstValue === 0 || secondValue === 0) {
+        resetCalculator();
+        IMAGE_ELEMENT.innerText = 'Enter a number';
+        return;
+    }
 
     OPERATOR.innerText = operation;
     SECOND_OPERAND.innerText = secondValue;
