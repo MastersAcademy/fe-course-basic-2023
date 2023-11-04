@@ -14,7 +14,7 @@ function calculate(firstValue, secondValue, operation) {
     if (firstValue.trim() === '' || secondValue.trim() === '') {
         return 'Please enter both numbers';
     }
-    
+
     if (Number.isNaN(Number(firstValue)) || Number.isNaN(Number(secondValue))) {
         return 'Enter a number';
     }
@@ -37,6 +37,7 @@ function calculate(firstValue, secondValue, operation) {
         case '/':
             result = parseFloat(firstValue) / parseFloat(secondValue);
             break;
+        default:
     }
 
     if (result > 100) {
