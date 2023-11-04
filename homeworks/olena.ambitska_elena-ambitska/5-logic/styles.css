@@ -3,7 +3,13 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   column-gap: 80px;
-  padding: 60px;
+  padding: 0 53px;
+}
+
+.field {
+  display: flex;
+  column-gap: 10px;
+  padding: 60px 53px;
 }
 
 .calc__title {
@@ -19,6 +25,7 @@
   display: grid;
   grid-template-columns: repeat(1, minmax(90px, 1fr));
   align-content: baseline;
+  color: #EF4934;
 }
 
 .result {
