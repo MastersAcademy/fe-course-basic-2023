@@ -96,7 +96,8 @@ window.addEventListener('DOMContentLoaded', () => {
                                     result = calculate(
                                         +numbers[0].value,
                                         signs[0].value,
-                                        +numbers[1].value);
+                                        +numbers[1].value
+                                        );
                                     resultInput.textContent = result;
                                 }
                             }
