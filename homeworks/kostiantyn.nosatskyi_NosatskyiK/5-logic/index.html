@@ -29,13 +29,11 @@
         </header>
         <h1 class="title__txt">Calculator v. 1</h1>
         <div class="field">
-            <!-- Provided classes to the inputs to use them in the css file.
-                When I used the id, the linter did not pass because they increase the significance-->
             <label>
-                <input id="firstValue" class="input__form">
+                <input data-firstValue class="input__form">
             </label>
             <label>
-                <select name="operation" id="operation" class="input__form">
+                <select name="operation" data-operation class="input__form">
                     <option value="+">+</option>
                     <option value="-">-</option>
                     <option value="/">/</option>
@@ -44,10 +42,10 @@
                 </select>
             </label>
             <label>
-                <input id="secondValue" class="input__form">
+                <input data-secondValue class="input__form">
             </label>
-            <button id="calculate" type="button" class="input__form calculate">=</button>
-            <span id="result" class="result"></span>
+            <button data-calculate type="button" class="input__form calculate">=</button>
+            <span data-result class="result"></span>
         </div>
         <script src="js/script.js"></script>
         <script src="js/homework.js"></script>
