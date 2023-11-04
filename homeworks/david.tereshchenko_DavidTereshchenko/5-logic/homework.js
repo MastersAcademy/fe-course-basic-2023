@@ -13,11 +13,6 @@ btn.onclick = function () {
         return result;
     }
 
-    if (one === 0 || two === 0) {
-        result.innerHTML = 'Enter a number';
-        return result;
-    }
-
     switch (operator.value) {
         case '+':
             calc = one + two;
