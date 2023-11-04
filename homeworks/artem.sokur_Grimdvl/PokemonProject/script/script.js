@@ -97,7 +97,7 @@ window.addEventListener('DOMContentLoaded', () => {
                                         +numbers[0].value,
                                         signs[0].value,
                                         +numbers[1].value,
-                                            );
+                                    );
                                     resultInput.textContent = result;
                                 }
                             }
