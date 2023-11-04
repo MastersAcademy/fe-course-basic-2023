@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Game Project</title>
+        <link rel="stylesheet" href="./style/calculator.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <section class="wrapper">
+            <header class="header">
+                <nav class="nav">
+                    <img src="./images/logo-ma.svg" alt="logotype master of code academy" style="width: 64px; height: 64px;">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a class="nav__link" href="calculator.html">Calculator</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="cards.html">Games</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <main class="main content">
+                <section class="content__container">
+                    <section class="content__header">
+                        <h1 class="content__title">Calculate Games</h1>
+                    </section>
+                    <section class="calculator">
+                        <article class="calculator__container">
+                            <article class="calculator__item">
+                                <h2>max 10</h2>
+                                <input class="calculator__number" type="text" id="number__first" min="0" max="10" step="0.01" maxlength="10">
+                            </article>
+                            <article class="calculator__item">
+                                <select class="calculator__operation" id="operation">
+                                    <option value="addition">+</option>
+                                    <option value="subtraction">-</option>
+                                    <option value="multiplication">*</option>
+                                    <option value="division">/</option>
+                                    <option value="remainder">%</option>
+                                    <option value="exponentiation">**</option>
+                                </select>
+                            </article>
+                            <article class="calculator__item">
+                                <input class="calculator__number" type="text" id="number__second" maxlength="10">
+                            </article>
+                            <article class="calculator__item">
+                                <button type="button" class="submit" id="submit">=</button>
+                            </article>
+                            <article class="calculator__item">
+                                <h2>max 100</h2>
+                                <section class="result" id="result" max="10"></section>
+                            </article>
+                        </article>
+                        <section class="result__visualization" id="visualization"></section>
+                    </section>
+                </section>
+            </main>
+            <footer class="footer">
+                <section class="footer__container">
+                    <article class="footer__socials">
+                        <a href="https://www.facebook.com/profile.php?id=100014476686798" target="_blank">
+                            <div class="footer__icon">
+                                <img src="./images/facebook.svg" alt="facebook icon" style="width: 24px; height: 24px;">
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/yehor-honcharenko/" target="_blank">
+                            <div class="footer__icon">
+                                <img src="./images/linkedin.svg" alt="linkedin icon" style="width: 24px; height: 24px;">
+                            </div>
+                        </a>
+                        <a href="https://www.instagram.com/yehor.design/" target="_blank">
+                            <div class="footer__icon">
+                                <img src="./images/instagram.svg" alt="instagram icon" style="width: 24px; height: 24px;">
+                            </div>
+                        </a>
+                    </article>
+                    <article class="footer__text">
+                        <p class="footer__paragraph">
+                            Made with 💗 on 
+                            <a class="footer__link" href="https://www.mastersacademy.education/frontend-for-beginners-it" target="_blank">
+                                course 'Frontend for beginners' from Masters Academy
+                            </a> 
+                            in 2023, by Yehor
+                        </p>
+                    </article>
+                </section>
+            </footer>
+        </section>
+        <script src="header.js"></script>
+        <script src="calculator.js"></script>
+    </body>
+</html>

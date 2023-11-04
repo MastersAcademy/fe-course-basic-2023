@@ -1,0 +1,20 @@
+.wrapper {
+  top: 100px;
+  left: 100px;
+  position: relative;
+}
+
+.title {
+  color: #EF4934;
+  font-family: Roboto, serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.remark {
+  font-family: Roboto, serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: normal;
+}
