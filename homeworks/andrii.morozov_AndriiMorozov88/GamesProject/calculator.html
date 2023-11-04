@@ -41,7 +41,7 @@
             </h1>
             <section class="calculator">
                 <label for="first-number">
-                    <input type="text" class="calculator__input" id="first-number" placeholder="first number" data-first-number>
+                    <input type="text" class="calculator__operand" id="first-number" placeholder="first number" data-first-number>
                 </label>
                 <select name="operation" class="calculator__operation" data-operation>
                     <option value="1" selected>+</option>
@@ -51,13 +51,13 @@
                     <option value="5">POW</option>
                 </select>
                 <label for="second-number">
-                    <input type="text" class="calculator__input" id="second-number" placeholder="second number" data-second-number>
+                    <input type="text" class="calculator__operand" id="second-number" placeholder="second number" data-second-number>
                 </label>
                 <button type="button" class="calculator__button" data-button>=</button>
                 <div data-result class="calculator__result"></div>
             </section>
-            <section class="comment" data-comment></section>
+            <section class="comment-container" data-comment></section>
         </main>
-        <script src="basic.js"></script>
+        <script src="logic.js"></script>
     </body>
 </html>

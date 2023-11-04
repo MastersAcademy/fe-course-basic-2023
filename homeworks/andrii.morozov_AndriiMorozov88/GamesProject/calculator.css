@@ -22,7 +22,7 @@ body {
   justify-content: center;
 }
 
-.calculator__input {
+.calculator__operand {
   height: 50px;
   padding-left: 10px;
   width: 200px;
@@ -54,10 +54,6 @@ body {
   color: #000;
 }
 
-.calculator__result--error {
-  color: #F72C2C;
-}
-
 .calculator__button {
   height: 50px;
   width: 100px;
@@ -68,13 +64,14 @@ body {
   margin-right: 10px;
 }
 
-.comment {
+.comment-container {
   display: flex;
   min-width: 300px;
   height: 50px;
   justify-content: center;
   align-items: center;
-  font-size: 20px;
+  font-size: 48px;
+  font-weight: 600;
   color: #E35734;
   margin: 0 auto;
 }
