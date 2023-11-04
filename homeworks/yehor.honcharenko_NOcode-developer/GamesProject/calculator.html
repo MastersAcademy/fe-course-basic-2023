@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Game Project</title>
-        <link rel="stylesheet" href="./style/about.css">
+        <link rel="stylesheet" href="./style/calculator.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -22,7 +22,7 @@
                             <a class="nav__link" href="cards.html">Games</a>
                         </li>
                         <li class="nav__item">
-                            <a class="nav__link" href="index.html">About</a>
+                            <a class="nav__link" href="#">About</a>
                         </li>
                         <li class="nav__item">
                             <a class="nav__link" href="login.html">Login</a>
@@ -30,41 +30,40 @@
                     </ul>
                 </nav>
             </header>
-            <main class="about">
-                <section class="about__container">
-                    <article class="about__img">
-                        <img src="./images/image-about1.svg" alt="image about us" style="width: 100%;">
-                    </article>
-                    <article class="about__info">
-                        <article class="about__header">
-                            <h1 class="about__title">About me</h1>
+            <main class="main content">
+                <section class="content__container">
+                    <section class="content__header">
+                        <h1 class="content__title">Calculate Games</h1>
+                    </section>
+                    <section class="calculator">
+                        <article class="calculator__container">
+                            <article class="calculator__item">
+                                <h2>max 10</h2>
+                                <input class="calculator__number" type="text" id="number__first" min="0" max="10" step="0.01" maxlength="10">
+                            </article>
+                            <article class="calculator__item">
+                                <select class="calculator__operation" id="operation">
+                                    <option value="addition">+</option>
+                                    <option value="subtraction">-</option>
+                                    <option value="multiplication">*</option>
+                                    <option value="division">/</option>
+                                    <option value="remainder">%</option>
+                                    <option value="exponentiation">**</option>
+                                </select>
+                            </article>
+                            <article class="calculator__item">
+                                <input class="calculator__number" type="text" id="number__second" maxlength="10">
+                            </article>
+                            <article class="calculator__item">
+                                <button type="button" class="submit" id="submit">=</button>
+                            </article>
+                            <article class="calculator__item">
+                                <h2>max 100</h2>
+                                <section class="result" id="result" max="10"></section>
+                            </article>
                         </article>
-                        <article class="about__text">
-                            <p class="about__paragraph">
-                                Hi! My name is Yehor and I'm a Junior Frontend
-                                Developer. I am already familiar with main Web
-                                Technologies like HTML, CSS, JavaScript and Git version
-                                control system.
-                            </p>
-                            <p class="about__paragraph">
-                                This page was developed during the course
-                                <a class="about__link" href="https://www.mastersacademy.education/frontend-for-beginners-it"
-                                    target="_blank">'Frontend for beginners' from Masters Academy in
-                                    2023</a>.
-                            </p>
-                            <p class="about__paragraph">
-                                This is a social project from MOCG company where I got
-                                an opportunity to work with Frontend mentors and to
-                                create my own small project for the portfolio.
-                            </p>
-                            <p class="about__paragraph">
-                                You can contact me via <a class="link__paragraph-black" href="https://www.linkedin.com/in/yehor-honcharenko/"
-                                    target="_blank">linkedin</a> and/or
-                                check out my <a class="about__link" href="https://github.com/NOcode-developer"
-                                    target="_blank">GitHub</a>.
-                            </p>
-                        </article>
-                    </article>
+                        <section class="result__visualization" id="visualization"></section>
+                    </section>
                 </section>
             </main>
             <footer class="footer">
@@ -99,5 +98,6 @@
             </footer>
         </section>
         <script src="header.js"></script>
+        <script src="calculator.js"></script>
     </body>
 </html>
