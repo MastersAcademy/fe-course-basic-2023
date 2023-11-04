@@ -44,6 +44,14 @@ function calculate(firstValue, secondValue, operation) {
     return result > 100 ? 'Result is too big' : result;
 }
 
+function interpolateToPercentage(value) {
+    const value1 = 0; // Начальное значение
+    const percent1 = 100; // Процент для начального значения
+    const value2 = 100; // Конечное значение
+    const percent2 = 0; // Процент для конечного значения
+    return ((value - value1) * (percent2 - percent1)) / (value2 - value1) + percent1;
+}
+
 function createImages(number) {
     console.log('number', number);
     const div = document.createElement('div');
@@ -55,10 +63,11 @@ function createImages(number) {
         height: 90,
     };
     const top = 15;
+    const remainder = number % 1;
     for (let i = 0; i < number; i++) {
         const img = document.createElement('img');
         divTemp.setAttribute('style', `display:flex;position:relative; width: ${imgSetting.width}px; height: ${imgSetting.width + top * 10}px;`);
-        img.setAttribute('style', `top: ${marginTop * top}px; position:absolute;`);
+        img.setAttribute('style', `box-shadow: 0px 0px 6px 0px #00000040;clip-path: inset(0% 0% 0% 0%);top: ${marginTop * top}px; position:absolute;`);
         img.setAttribute('src', './assets/card.png');
         img.setAttribute('width', imgSetting.width);
         img.setAttribute('height', imgSetting.height);
@@ -73,6 +82,10 @@ function createImages(number) {
     }
     if (divTemp.hasChildNodes()) {
         divTemp.setAttribute('style', `display:flex;position:relative; width: ${imgSetting.width}px; height: ${imgSetting.width + top * marginTop}px;`);
+        const lastImg = divTemp.querySelector('img:last-child');
+        if (lastImg && remainder) {
+            lastImg.style.clipPath = `inset(0% 0% ${interpolateToPercentage(remainder * 100)}% 0%)`;
+        }
         div.appendChild(divTemp);
     }
     return div;
