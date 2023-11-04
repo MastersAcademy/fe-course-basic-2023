@@ -13,7 +13,7 @@
 function calculate(firstValue, secondValue, operation) {
     let result = 0;
     if (Number.isNaN(firstValue) || Number.isNaN(secondValue)) {
-        return 'Enter a number';
+        return 'Enter a number!';
     }
 
     switch (operation) {
@@ -27,16 +27,21 @@ function calculate(firstValue, secondValue, operation) {
             result = parseFloat(firstValue) * parseFloat(secondValue);
             break;
         case '/':
+            if (parseFloat(secondValue) === 0) {
+                return 'Cannot divide by zero!';
+            }
             result = parseFloat(firstValue) / parseFloat(secondValue);
             break;
         default:
-            return 'Choose a valid operation';
+            return 'Choose a valid operation!';
     }
 
     if (result > 100) {
         return 'Result is too big';
     }
-
+    if (firstValue.length === 0 || secondValue.length === 0) {
+        return 'Enter a number!';
+    }
     return result;
 }
 
