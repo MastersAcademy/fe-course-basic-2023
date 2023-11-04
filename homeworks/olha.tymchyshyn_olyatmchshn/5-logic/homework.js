@@ -14,8 +14,36 @@ function calculate(firstValue, secondValue, operation) {
     let result = 0;
     // your code add here
     // e.g.:
-    if (operation === '+') {
-        result = firstValue + secondValue;
+
+    const number1 = +firstValue;
+    const number2 = +secondValue;
+
+    if (Number.isNaN(number1) || Number.isNaN(number2)) {
+        return 'Enter a number';
+    }
+    if (firstValue === '' || secondValue === '') {
+        return 'Enter a number';
+    }
+
+    switch (operation) {
+        case '+':
+            result = number1 + number2;
+            break;
+        case '-':
+            result = number1 - number2;
+            break;
+        case '*':
+            result = number1 * number2;
+            break;
+        case '/':
+            result = number1 / number2;
+            break;
+        default:
+            return 'Choose a valid operation';
+    }
+
+    if (result > 100) {
+        return 'Result is too big';
     }
 
     return result;
