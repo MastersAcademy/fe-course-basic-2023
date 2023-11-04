@@ -1,0 +1,21 @@
+.counter__section {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 80px;
+  padding: 60px;
+}
+
+.images__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  align-content: baseline;
+}
+
+.image {
+  margin-bottom: -50px;
+}
+
+
+.operator, .equals, .second__operand {
+  color: var(--red);
+}

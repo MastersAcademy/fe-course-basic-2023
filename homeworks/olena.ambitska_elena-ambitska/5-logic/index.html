@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Basic JS</title>
+        <link rel="stylesheet" href="../GamesProject/styles/styles.css">
+        <link rel="stylesheet" href="styles.css">
+
+        <style>
+            .field {
+                display: flex;
+                column-gap: 10px;
+                margin: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Calculator v. 1</h1>
+        <div class="field">
+            <label>
+                <input id="firstValue" type="number" min="0" step="1">
+            </label>
+            <label>
+                <select name="operation" id="operation">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="/">/</option>
+                    <option value="*">*</option>
+                    <option value="**">**</option>
+                </select>
+            </label>
+            <label>
+                <input id="secondValue" type="number" min="0" step="1">
+            </label>
+            <button id="calculate" type="button">=</button>
+        </div>
+        <section class="counter__section">
+            <div class="images__list" id="images__value"></div>
+            <div class="operator"></div>
+            <div class="second__operand"></div>
+            <div class="equals"> = </div>
+            <div class="result"></div>
+
+        </section>
+        <script src="./script.js"></script>
+        <script src="./homework.js"></script>
+    </body>
+</html>
