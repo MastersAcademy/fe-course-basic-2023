@@ -14,10 +14,6 @@
 function calculate(firstValue, secondValue, operation) {
     let result;
 
-    if (Number.isNaN(firstValue) || Number.isNaN(secondValue)) {
-        return 'Enter a number';
-    }
-
     switch (operation) {
         case '+':
             result = firstValue + secondValue;

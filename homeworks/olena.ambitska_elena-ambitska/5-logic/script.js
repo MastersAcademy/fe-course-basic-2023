@@ -7,6 +7,7 @@ const OPERATOR = document.querySelector('.operator');
 const SECOND_OPERAND = document.querySelector('.second__operand');
 const RESULT = document.querySelector('.result');
 const EQUALS = document.querySelector('.equals');
+const RESULT_COLUMN = document.querySelector('.result__column');
 
 function displayImages(value, element) {
     element.innerHTML = '';
@@ -35,6 +36,7 @@ function resetCalculator() {
     SECOND_OPERAND.innerText = '';
     EQUALS.innerText = '';
     RESULT.innerText = '';
+    RESULT_COLUMN.innerText = '';
 }
 
 FIRST_VALUE_ELEMENT.addEventListener('change', () => {
@@ -67,7 +69,9 @@ CALCULATE_BUTTON_ELEMENT.addEventListener('click', () => {
 
     if (res < 100) {
         displayImages(res, RESULT);
+        RESULT_COLUMN.innerText = res;
     } else {
+        RESULT_COLUMN.innerText = '';
         RESULT.innerText = res;
     }
 });
