@@ -18,10 +18,10 @@
         <h1>Calculator v. 1</h1>
         <div class="field">
             <label>
-                <input id="firstValue" placeholder="Enter first value...">
+                <input data-math-value="first" placeholder="Enter first value...">
             </label>
             <label>
-                <select name="operation" id="operation">
+                <select name="operation" data-math-operation>
                     <option value="+">+</option>
                     <option value="-">-</option>
                     <option value="/">/</option>
@@ -30,10 +30,10 @@
                 </select>
             </label>
             <label>
-                <input id="secondValue" placeholder="Enter second value...">
+                <input data-math-value="second" placeholder="Enter second value...">
             </label>
-            <button id="calculate" type="button">=</button>
-            <span id="result"></span>
+            <button data-math-calculate type="button">=</button>
+            <span data-math-output></span>
         </div>
         <script src="./script.js"></script>
         <script src="./homework.js"></script>
