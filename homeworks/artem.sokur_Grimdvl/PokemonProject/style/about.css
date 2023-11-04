@@ -33,7 +33,7 @@
   transition: .5s all;
 }
 
-.about__logo__pokemon {
+.about__logo-pokemon-ball {
   position: relative;
   content: "";
   display: block;
@@ -48,12 +48,12 @@
   transition: .5s all;
 }
 
-.about__logo:hover .about__logo__pokemon {
+.about__logo:hover .about__logo-pokemon-ball {
   transform: rotate(-30deg);
   transition: .5s all;
 }
 
-.about__logo__pokemon::before {
+.about__logo-pokemon-ball::before {
   position: absolute;
   content: "";
   display: block;
@@ -68,7 +68,7 @@
   margin-top: 50px;
 }
 
-.about__logo__pokemon::after {
+.about__logo-pokemon-ball::after {
   position: absolute;
   content: "";
   display: block;
@@ -83,7 +83,7 @@
   margin-top: 5px;
 }
 
-.about__logo__pokemon-ball {
+.about__logo-pokemon-ball-item {
   position: absolute;
   content: "";
   display: block;
@@ -94,7 +94,7 @@
   margin-top: 48px;
 }
 
-.about__logo__pokemon-ball::after {
+.about__logo-pokemon-ball-item::after {
   position: absolute;
   content: "";
   display: block;

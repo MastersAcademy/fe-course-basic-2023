@@ -65,7 +65,8 @@ header {
 }
 
 .head__navigation {
-  width: 220px;
+  min-width: 220px;
+  gap: 20px;
   line-height: 19px;
   font-size: 16px;
   font-weight: 500;
