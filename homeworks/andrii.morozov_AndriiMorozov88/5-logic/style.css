@@ -4,7 +4,7 @@
   margin-left: 20px;
 }
 
-.main__input {
+.main__operand {
   width: 200px;
   height: 50px;
   font-size: 20px;
@@ -13,7 +13,7 @@
   padding-left: 10px;
 }
 
-.main__select {
+.main__operation {
   width: 50px;
   height: 40px;
   margin-top: 10px;
@@ -38,7 +38,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 600;
 }
 
