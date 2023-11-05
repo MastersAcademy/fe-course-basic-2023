@@ -48,12 +48,16 @@ input:focus {
   border-radius: 6px;
   border: .6px solid #A9A9A9;
   margin: 20px 5px;
+  font-size: 16px;
+}
+
+.field__input {
   padding: 0 20px;
-  font-size: 18px;
 }
 
 .field__select,
 .field__button {
+  text-align: center;
   width: 52px;
   height: 52px;
   font-size: 20px;

@@ -11,22 +11,22 @@
             <h1 class="calculator-block__title">Calculator v. 1</h1>
             <div class="calculator-block__field">
                 <label>
-                    <input class="field__input" id="firstValue" placeholder="Enter first number">
+                    <input class="field__input" data-firstValue placeholder="Enter first number">
                 </label>
                 <label>
-                    <select class="field__select" name="operation" id="operation">
-                        <option class="select__option" value="+">+</option>
-                        <option class="select__option" value="-">-</option>
-                        <option class="select__option" value="/">/</option>
-                        <option class="select__option" value="*">*</option>
-                        <option class="select__option" value="**">**</option>
+                    <select class="field__select" name="operation" data-operation>
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="/">/</option>
+                        <option value="*">*</option>
+                        <option value="**">**</option>
                     </select>
                 </label>
                 <label>
-                    <input class="field__input" id="secondValue" placeholder="Enter second number">
+                    <input class="field__input" data-secondValue placeholder="Enter second number">
                 </label>
-                <button class="field__button" id="calculate" type="button">=</button>
-                <span id="result"></span>
+                <button class="field__button" data-calculate type="button">=</button>
+                <span data-result></span>
             </div>
         </main>
         <script src="./script.js"></script>

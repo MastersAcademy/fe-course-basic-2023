@@ -17,6 +17,10 @@ function calculate(firstValue, secondValue, operation) {
 
     let result = 0;
 
+    if (firstValue === '' || secondValue === '') {
+        return 'Please enter data ';
+    }
+
     if (Number.isNaN(firstNumber) || Number.isNaN(secondNumber)) {
         return 'Enter a number';
     }
@@ -28,6 +32,9 @@ function calculate(firstValue, secondValue, operation) {
     } else if (operation === '*') {
         result = firstNumber * secondNumber;
     } else if (operation === '/') {
+        if (secondNumber === 0) {
+            return 'Division by 0 is not possible';
+        }
         result = firstNumber / secondNumber;
     } else {
         result = 'Choose a valid operation';
