@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Basic JS</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body class="body">
+        <h1 class="h1">Calculator v. 1</h1>
+        <div class="field">
+            <label class="input">
+                <input class="Value" id="firstValue">
+            </label>
+            <label class="input__operation">
+                <select class="operation" name="operation" id="operation">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="/">/</option>
+                    <option value="*">*</option>
+                    <option value="**">**</option>
+                </select>
+            </label>
+            <label class="input">
+                <input class="Value" id="secondValue">
+            </label>
+            <button class="calculate" id="calculate" type="button">=</button>
+            <span class="result" id="result"></span>
+        </div>
+        <script src="./script.js"></script>
+        <script src="./homework.js"></script>
+    </body>
+</html>
