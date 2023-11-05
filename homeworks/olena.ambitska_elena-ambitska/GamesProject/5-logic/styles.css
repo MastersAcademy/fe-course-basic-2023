@@ -2,7 +2,7 @@
 .counter__section, .field {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  padding: 60px 53px;
+  padding: 60px 53px 0;
 }
 
 .field {
