@@ -173,7 +173,7 @@
   transform: translate(-50%, -50%) scale(0);
   width: 13px;
   height: 13px;
-  background: url("../check.svg") 50% / contain no-repeat;
+  background: url("../images/other_logos/check.svg") 50% / contain no-repeat;
 }
 
 .check:checked + .custom__checkbox::before {

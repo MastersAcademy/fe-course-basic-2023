@@ -140,7 +140,7 @@
   transform: translate(-50%, -50%) scale(0);
   width: 13px;
   height: 13px;
-  background: url("../check_w.svg") 50% / contain no-repeat;
+  background: url("../images/other_logos/check_w.svg") 50% / contain no-repeat;
 }
 
 .check:checked + .custom__checkbox::before {
@@ -183,7 +183,7 @@
   position: absolute;
   left: 12px;
   display: inline-block;
-  background: url("../Search.svg") 50% 50% / contain no-repeat;
+  background: url("../images/other_logos/Search.svg") 50% 50% / contain no-repeat;
   width: 15px;
   height: 15px;
 }
