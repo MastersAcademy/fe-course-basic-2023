@@ -4,7 +4,6 @@ const OPERATION_ELEMENT = document.querySelector('[data-operation]');
 const CALCULATE_BUTTON_ELEMENT = document.querySelector('[data-calculate]');
 const RESULT_ELEMENT = document.querySelector('[data-result]');
 
-console.log(FIRST_VALUE_ELEMENT)
 CALCULATE_BUTTON_ELEMENT.addEventListener('click', () => {
     const firstValue = FIRST_VALUE_ELEMENT.value;
     const secondValue = SECOND_VALUE_ELEMENT.value;
