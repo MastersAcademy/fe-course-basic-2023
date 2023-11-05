@@ -94,7 +94,7 @@ h6 {
 
 /*--------------------*/
 
-.field {
+.calc__row {
   display: flex;
   flex-direction: column;
   max-width: 80%;
@@ -120,7 +120,7 @@ h6 {
   margin-top: 40px;
 }
 
-.input {
+.input__field {
   max-width: 200px;
   height: 70px;
   padding-left: 20px;
@@ -135,11 +135,11 @@ h6 {
   transition: all 100ms;
 }
 
-.input::placeholder {
+.input__field::placeholder {
   color: #A9A9A9;
 }
 
-.input:focus {
+.input__field:focus {
   border-bottom: 3px solid #EF4934;
   color: #000;
   transition: all 100ms;
@@ -168,7 +168,7 @@ h6 {
   transition: all 100ms;
 }
 
-.option {
+.option__field {
   text-align: center;
 }
 

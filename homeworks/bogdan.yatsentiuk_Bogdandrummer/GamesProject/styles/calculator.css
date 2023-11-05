@@ -10,9 +10,8 @@
   flex-direction: column;
   flex: 1 1 auto;
   justify-content: center;
-  margin: 0 auto;
+  margin: 0 auto 40px;
   box-sizing: border-box;
-  margin-bottom: 40px;
   padding: 60px 52px 0;
 }
 
@@ -26,7 +25,7 @@
   max-width: 100%;
 }
 
-.field {
+.calc__row {
   display: flex;
   flex-direction: column;
   max-width: 80%;
@@ -52,7 +51,7 @@
   margin-top: 40px;
 }
 
-.input {
+.input__field {
   max-width: 200px;
   height: 70px;
   padding-left: 20px;
@@ -67,11 +66,11 @@
   transition: all 100ms;
 }
 
-.input::placeholder {
+.input__field::placeholder {
   color: #A9A9A9;
 }
 
-.input:focus {
+.input__field:focus {
   border-bottom: 3px solid #EF4934;
   color: #000;
   transition: all 100ms;
@@ -100,7 +99,7 @@
   transition: all 100ms;
 }
 
-.option {
+.option__field {
   text-align: center;
 }
 
@@ -191,7 +190,7 @@
 .card__img {
   width: 90px;
   height: 90px;
-  background: url("../games__logos/overwatch.png") 0 0 / contain no-repeat;
+  background: url("../images/games__logos/overwatch.png") 0 0 / contain no-repeat;
   border-radius: 8px;
   box-shadow: 2px 2px 5px #444;
   border: 1px solid #000;

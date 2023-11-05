@@ -31,8 +31,17 @@ CALCULATE_BUTTON_ELEMENT.addEventListener('click', () => {
 function calculate(firstValue, secondValue, operation) {
     let result = document.getElementById('result').innerText;
     // Проверка на число
+    if (firstValue === '' || !firstValue.trim()) {
+        result = '1 value! Enter a number';
+        return result;
+    }
+    if (secondValue === '' || !secondValue.trim()) {
+        result = '2 value! Enter a number';
+        return result;
+    }
     const first = +firstValue;
     const second = +secondValue;
+
     if (Number.isNaN(first) && Number.isNaN(second)) {
         result = 'Both of values are not a number. Enter a number!';
         rlt.innerText = result;
@@ -51,7 +60,7 @@ function calculate(firstValue, secondValue, operation) {
 
     // Проверка на математическую операцию
     if (operation === '+') {
-        result = first + second;
+        result = Number(first) + Number(second);
     } else
     if (operation === '-') {
         result = first - second;
