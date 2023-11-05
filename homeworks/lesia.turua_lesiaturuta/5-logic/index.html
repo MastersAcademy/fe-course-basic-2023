@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>PokemonProject</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../PokemonProject/style.css">
+        <style>
+        .field {
+            display: flex;
+            column-gap: 10px;
+            margin: 20px;
+        }
+        </style>
+    </head>
+
+    <body>
+        <header class="header">
+            <nav class="nav justify__content--center">
+                <div class="container justify__content--between">
+                    <div class="nav__logo">
+                        <img class="logo__icon" src="../PokemonProject/assets/logo-icon.svg" alt="logo">
+                        <img class="logo__title" src="../PokemonProject/assets/name-icon.svg" alt="name">
+                    </div>
+                    <ul class="nav__menu">
+                        <li>
+                            <a class="menu__link menu__link--active " href="./index.html">Calculator</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="../PokemonProject/cards.html">Pokemons</a>
+                        </li>
+                        <li>
+                            <a class="menu__link " href="../PokemonProject/about.html">About</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="../PokemonProject/login.html">Login</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main class="main calculate justify__content--center">
+            <div class="container justify__content--center flex-direction-column">
+                <h1 class="calculate__title">Calculate Pokemons</h1>
+                <div class="field">
+                    <label class="field__label flex-direction-column">
+                        max 10
+                        <input class="calculate__first-value gap-top12" id="firstValue">
+                    </label>
+                    <label class="flex-direction-column justify__content--between">
+                &nbsp;
+                        <select class="calculate__operation gap-top12" name="operation" id="operation">
+                            <option value="+">+</option>
+                            <option value="-">-</option>
+                            <option value="/">/</option>
+                            <option value="*">*</option>
+                            <option value="**">**</option>
+                        </select>
+                    </label>
+                    <label class="flex-direction-column justify__content--between">
+                &nbsp;
+                        <input class="calculate__second-value gap-top12" id="secondValue">
+                    </label>
+                    <div class="flex-direction-column justify__content--between">
+                &nbsp;
+                        <button class="calculate__button gap-top12" id="calculate" type="button">=</button>
+                    </div>
+                    <div class="flex-direction-column justify__content--between">
+                        <span class="field__label">max 100</span>
+                        <span class="calculate__result" id="result"></span>
+                    </div>
+                </div>
+                <div class="calculate__show">
+                    <div class="calculate__show-first" data-firstValue></div>
+                    <div class="calculate__show-operation" data-operation></div>
+                    <div class="calculate__show-second" data-secondValue></div>
+                    <div class="calculate__show-equals" data-equals></div>
+                    <div class="calculate__show-result" data-showImages></div>
+                </div>
+
+            </div>
+        </main>
+        <script src="./homework.js"></script>
+        <script src="./script.js"></script>
+
+    </body>
+
+</html>
