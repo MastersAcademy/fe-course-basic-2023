@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Basic JS</title>
+        <link rel="stylesheet" href="../styles/styles.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header class="header">
+            <img src="../images/logo-min.svg" class="logo" alt="logo">
+            <nav>
+                <ul class="navigation__items">
+                    <li class="navigation__item">
+                        <a href="../cards.html">Games</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="../index.html">About</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="../login.html">Login</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="calc.html">Calculator</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <h1 class="calc__title">Calculate Games</h1>
+        <div class="field">
+            <label>
+                <input id="firstValue" type="number" min="0" step="1" class="calc__input">
+            </label>
+            <label>
+                <select name="operation" id="operation" class="calc__dropdown">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="/">/</option>
+                    <option value="*">*</option>
+                    <option value="**">**</option>
+                </select>
+            </label>
+            <label>
+                <input id="secondValue" type="number" min="0" step="1" class="calc__input">
+            </label>
+            <button id="calculate" type="button" class="calc__button">=</button>
+            <div class="result__column"></div>
+        </div>
+        <section class="counter__section">
+            <div class="images__list" id="images__value"></div>
+            <div class="operator"></div>
+            <div class="second__operand"></div>
+            <div class="equals"></div>
+            <div class="result"></div>
+        </section>
+        <script src="script.js"></script>
+        <script src="homework.js"></script>
+    </body>
+</html>
