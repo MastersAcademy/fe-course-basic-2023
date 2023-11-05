@@ -9,6 +9,15 @@ function showResult() {
     let result;
     const firstNumber = Number(firstNumberInput.value);
     const secondNumber = Number(secondNumberInput.value);
+    if (firstNumberInput.value.trim() === '' || secondNumberInput.value.trim() === '') {
+        resultContainer.innerText = 'Error';
+        commentContainer.innerText = 'Enter a number';
+        return;
+    }
+    if (Number.isNaN(firstNumber) || Number.isNaN(secondNumber)) {
+        resultContainer.innerText = 'Error';
+        commentContainer.innerText = 'Enter a number';
+    }
     switch (operation.value) {
         case '1':
             result = firstNumber + secondNumber;
@@ -32,15 +41,6 @@ function showResult() {
             break;
     }
     resultContainer.innerText = `${result}`;
-    if (Number.isNaN(firstNumber) || Number.isNaN(secondNumber)) {
-        resultContainer.innerText = 'Error';
-        commentContainer.innerText = 'Enter a number';
-    }
-
-    if (firstNumberInput.value.trim() === '' || secondNumberInput.value.trim() === '') {
-        resultContainer.innerText = 'Error';
-        commentContainer.innerText = 'Enter a number';
-    }
 
     if (result > 100) {
         resultContainer.innerText = 'Error';
