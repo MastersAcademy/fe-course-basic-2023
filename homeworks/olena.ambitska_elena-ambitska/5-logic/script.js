@@ -47,6 +47,7 @@ FIRST_VALUE_ELEMENT.addEventListener('change', () => {
         return;
     }
 
+    resetCalculator();
     displayImages(firstValue, IMAGE_ELEMENT);
 });
 
@@ -61,6 +62,7 @@ CALCULATE_BUTTON_ELEMENT.addEventListener('click', () => {
         return;
     }
 
+    displayImages(firstValue, IMAGE_ELEMENT);
     OPERATOR.innerText = operation;
     SECOND_OPERAND.innerText = secondValue;
     EQUALS.innerText = '=';

@@ -35,6 +35,10 @@ function calculate(firstValue, secondValue, operation) {
         result = 'Result is too big';
     }
 
+    if (result < 0) {
+        result = 'Negative number of games';
+    }
+
     return result;
 }
 

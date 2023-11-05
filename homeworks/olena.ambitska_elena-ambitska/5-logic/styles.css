@@ -1,39 +1,42 @@
 
-.counter__section {
+.counter__section, .field {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  column-gap: 80px;
-  padding: 0 53px;
+  padding: 60px 53px;
 }
 
 .field {
-  display: flex;
-  column-gap: 10px;
-  padding: 60px 53px;
-  align-items: center;
+  column-gap: 16px;
+  width: 557px;
+}
+
+.counter__section {
+  column-gap: 80px;
+  width: 791px;
 }
 
 .calc__title {
+  font-family: Roboto, sans-serif;
   color: #221F1F;
   text-align: center;
   font-size: 48px;
-  font-style: normal;
   font-weight: 700;
   line-height: 48px;
-  padding-top: 53px;
+  padding-top: 80px;
 }
 
 .images__list {
   display: grid;
-  grid-template-columns: repeat(1, minmax(90px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
   align-content: baseline;
   color: #EF4934;
 }
 
 .result {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  grid-template-columns: repeat(2, minmax(90px, 1fr));
   align-content: baseline;
+  column-gap: 20px;
 }
 
 .image {
