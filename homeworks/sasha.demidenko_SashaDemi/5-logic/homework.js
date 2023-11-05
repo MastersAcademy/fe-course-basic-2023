@@ -14,6 +14,8 @@ function calculate(firstValue, secondValue, operation) {
         return ('Enter a number');
     } if (!Number.isFinite(secondNumber)) {
         return ('Enter a number');
+    } if (firstNumber || secondNumber === 0) {
+        return ('Error');
     }
 
     let result;
