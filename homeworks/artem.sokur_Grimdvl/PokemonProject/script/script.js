@@ -3,6 +3,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const signs = document.querySelectorAll('.sign');
     const buttons = document.querySelectorAll('.button');
     const resultOutput = document.querySelector('.output-result');
+    const resultOutputCards = document.querySelector('.output__result');
     const resultInput = document.querySelector('.input-result');
     const equel = document.querySelectorAll('.output-equal');
 
@@ -51,6 +52,9 @@ window.addEventListener('DOMContentLoaded', () => {
                 containerSelector,
             ).render();
         }
+        if (inputValue > 100) {
+            resultOutputCards.textContent = 'To many pokemons';
+        }
         return isNegative ? -numberOfPokemons : numberOfPokemons;
     };
 
@@ -79,7 +83,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 result = 'Invalid operator';
         }
         if (result > 100) {
-            result = 'Too much';
+            result = 'Too many';
         } else {
             result = Math.round(result * 100) / 100;
         }
@@ -92,7 +96,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 item.textContent = '';
             });
         } else {
-            result = `${result} Pokemons`;
+            result = `${result} pokemons`;
         }
         return result;
     };
@@ -153,7 +157,7 @@ window.addEventListener('DOMContentLoaded', () => {
                                     const sign = inputSign.value;
                                     signs[1].textContent = sign;
                                     signs[2].textContent = sign;
-                                    if (numbers[0].value === '' || sign === '' || numbers[1].value === '') {
+                                    if (numbers[0].value === '' || numbers[1].value === '') {
                                         resultOutput.textContent = 'Please enter all numbers';
                                     } else {
                                         result = calculate(
