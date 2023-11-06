@@ -3,22 +3,16 @@
     <head>
         <meta charset="UTF-8">
         <title>Basic JS</title>
-        <style>
-            .field {
-                display: flex;
-                column-gap: 10px;
-                margin: 20px;
-            }
-        </style>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <h1>Calculator v. 1</h1>
         <div class="field">
             <label>
-                <input id="firstValue">
+                <input class="input-first" id="firstValue">
             </label>
             <label>
-                <select name="operation" id="operation">
+                <select class="input-operation" name="operation" id="operation">
                     <option value="+">+</option>
                     <option value="-">-</option>
                     <option value="/">/</option>
@@ -27,10 +21,10 @@
                 </select>
             </label>
             <label>
-                <input id="secondValue">
+                <input class="input-second" id="secondValue">
             </label>
-            <button id="calculate" type="button">=</button>
-            <span id="result"></span>
+            <button id="calculate" class="button" type="button">=</button>
+            <span class="result" id="result"></span>
         </div>
         <script src="./script.js"></script>
         <script src="./homework.js"></script>
