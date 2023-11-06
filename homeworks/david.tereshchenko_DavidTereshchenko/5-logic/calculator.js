@@ -16,6 +16,10 @@ btn.onclick = function () {
 
     if (Number.isNaN(one) || Number.isNaN(two)) {
         result.innerHTML = 'Enter a number';
+        visualOperator.innerHTML = '';
+        visualNumberOne.innerHTML = '';
+        visualNumberTwo.innerHTML = '';
+        equals.innerHTML = '';
         return result;
     }
 
@@ -35,6 +39,10 @@ btn.onclick = function () {
         case '/':
             if (two === 0) {
                 result.innerHTML = 'Number must not be zero';
+                visualOperator.innerHTML = '';
+                visualNumberOne.innerHTML = '';
+                visualNumberTwo.innerHTML = '';
+                equals.innerHTML = '';
                 return result;
             }
             calc = one / two;
@@ -42,11 +50,19 @@ btn.onclick = function () {
 
         default:
             result.innerHTML = 'Choose a valid operation';
+            visualOperator.innerHTML = '';
+            visualNumberOne.innerHTML = '';
+            visualNumberTwo.innerHTML = '';
+            equals.innerHTML = '';
             return result;
     }
 
     if (calc > 100) {
         result.innerHTML = 'Result is too big';
+        visualOperator.innerHTML = '';
+        visualNumberOne.innerHTML = '';
+        visualNumberTwo.innerHTML = '';
+        equals.innerHTML = '';
         return result;
     }
 
