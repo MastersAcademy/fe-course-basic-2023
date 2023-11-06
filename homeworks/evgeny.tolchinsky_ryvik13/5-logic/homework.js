@@ -14,7 +14,7 @@ function calculate(firstValue, secondValue, operation) {
     const Number1 = Number(firstValue);
     const Number2 = Number(secondValue);
 
-    if (!Number1 || !Number2) {
+    if (Number.isNaN(Number1) || Number.isNaN(Number2)) {
         return 'Enter a number';
     }
     switch (operation) {
