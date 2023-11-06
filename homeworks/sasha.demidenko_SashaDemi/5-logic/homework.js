@@ -10,10 +10,10 @@ function calculate(firstValue, secondValue, operation) {
     const firstNumber = +(firstValue);
     const secondNumber = +(secondValue);
 
-    if (!Number.isFinite(firstNumber)) {
+    if (!Number.isFinite(firstNumber) || !Number.isFinite(secondNumber)) {
         return ('Enter a number');
-    } if (!Number.isFinite(secondNumber)) {
-        return ('Enter a number');
+    } if (firstValue.trim() === '' || secondValue.trim() === '') {
+        return ('Error');
     }
 
     let result;
@@ -29,6 +29,9 @@ function calculate(firstValue, secondValue, operation) {
             break;
         case '/':
             result = firstNumber / secondNumber;
+            if (secondNumber === 0) {
+                return ('Error');
+            }
             break;
         case '**':
             result = 'Choose a valid operation';
