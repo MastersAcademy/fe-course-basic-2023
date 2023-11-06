@@ -9,6 +9,11 @@ function calculate() {
         return;
     }
 
+    if (secondValue === 0 && operation === '/') {
+        document.getElementById('result').textContent = 'Error';
+        return;
+    }
+
     switch (operation) {
         case '+':
             result = firstValue + secondValue;
