@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="style/calculator.css">
+        <title>PokemonProject</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="container" style="background-color: #333;">
+                <section class="head">
+                    <a class="head__logo" href="https://www.mastersacademy.education/" target="_blank">
+                        <img class="head__logo-img" src="img/icons/logo-ma.svg" alt="masters-academy">
+                        <span class="head__logo-title">MASTERS ACADEMY</span>
+                    </a>
+
+                    <nav class="head__navigation">
+                        <a class="head__navigation-item active" href="#">Calculator</a>
+                        <a class="head__navigation-item" href="pokemons.html">Pokemons</a>
+                        <a class="head__navigation-item" href="index.html">About</a>
+                        <a class="head__navigation-item" href="login.html">Login</a>
+                    </nav>
+                </section>
+            </div>
+        </header>
+
+        <main>
+            <section class="calculator">
+                <div class="calculator__inputs">
+                    <div class="calculator__inputs-number">
+                        <label for="first-number">Number 1</label>
+                        <input class="number" data-type="number" id="first-number" type="text" maxlength="4">
+                    </div>
+
+                    <div class="calculator__inputs-sign">
+                        <label for="sign">Math</label>
+                        <select class="sign" data-type="sign" name="sign" id="sign">
+                            <option value="sign" selected hidden>sign</option>
+                            <option value="+">+</option>
+                            <option value="-">-</option>
+                            <option value="*">*</option>
+                            <option value="/">/</option>
+                            <option value="%">%</option>
+                            <option value="**">**</option>
+                        </select>
+                    </div>
+
+                    <div class="calculator__inputs-number">
+                        <label for="second-number">Number 2</label>
+                        <input class="number" data-type="number" id="second-number" type="text" maxlength="4">
+                    </div>
+
+                    <div class="calculator__inputs--button">
+                        <label for="button">Button</label>
+                        <button class="button" id="button" type="button">=</button>
+                    </div>
+                    <div class="calculator__inputs-result">
+                        <span class="equal">Result</span>
+                        <div class="input-result" data-type="result" id="result"></div>
+                    </div>
+                </div>
+
+                <div class="calculator__outputs">
+                    <h1 class="calculator__outputs-numbers">
+                        <div class="number" data-type="number"></div>
+                        <div class="sign" data-type="sign"></div>
+                        <div class="number" data-type="number"></div>
+                        <div class="output-equal"></div>
+                        <div class="output-result" data-type="result"></div>
+                    </h1>
+
+                    <div class="calculator__outputs-cards">
+                        <div class="output__first">
+                            <!-- <img class="output__first-card" src="img/pokemon.png" alt="pokemon"> -->
+                        </div>
+                        <div class="sign" data-type="sign"></div>
+                        <div class="output__second">
+                            <!-- <img src="img/pokemon.png" alt="pokemon"> -->
+                        </div>
+                        <div class="output-equal"></div>
+                        <div class="output__result">
+                            <!-- <img src="img/pokemon.png" alt="pokemon"> -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <section class="foot">
+                <div class="foot__social">
+                    <a class="foot__social-media" href="https://www.facebook.com/cherkasy.masters" target="_blank">
+                        <img src="img/icons/logo-facebook.svg" alt="facebook" class="social__media-facebook">
+                    </a>
+                    <a class="foot__social-media" href="https://www.linkedin.com/company/masters-academy-educational-project" target="_blank">
+                        <img src="img/icons/logo-linkedin.svg" alt="linkedin" class="social__media-linkedin">
+                    </a>
+                    <a class="foot__social-media" href="https://www.instagram.com/masters_academy__/" target="_blank">
+                        <img src="img/icons/logo-instagram.svg" alt="instagram" class="social__media-instagram">
+                    </a>
+                </div>
+  
+                <div class="foot__subscription">Made with 🤍 on course
+                    <a class="foot__subscription-link" href="https://www.mastersacademy.education/frontend-for-beginners-it" target="_blank"> 'Frontend for beginners' from Masters Academy in 2023</a>, by
+                    <a class="foot__subscription-link" href="https://www.instagram.com/artemsokur69">Artem Sokur</a>
+                </div>    
+            </section>
+        </footer>
+
+        <script src="script/script.js"></script>
+    </body>
+</html>
