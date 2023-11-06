@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>About</title>
-        <link href="./styles/style.css" rel="stylesheet" type="text/css">
+        <title>Basic JS</title>
+
+        <link rel="stylesheet" href="./styles/style.css">
     </head>
+
     <body>
         <header class="header">
             <div class="header_flexbox">
@@ -29,26 +32,29 @@
             </div>
         </header>
         <main>
-            <section class="about_container">
-                <div class="section_image">
-                    <img src="./images/about-workplace.svg" class="workplace_image" alt="workplace">
-                </div>
-                <article class="section_text">
-                    <h1>About me</h1>
-                    <p>
-                        Hi! My name is Oleksandr and I'm a Junior Frontend Developer. I am already familiar with main Web Technologies like HTML, CSS, JavaScript and Git version control system.
-                    </p>
-                    <p>
-                        This page was developed during the course <a href="https://www.mastersacademy.education/frontend-for-beginners-it">'Frontend for beginners' from Masters Academy in 2023</a>.
-                    </p>
-                    <p>
-                        This is a social project from MOCG company where I got an opportunity to work with Frontend mentors and to create my own small project for the portfolio.
-                    </p>
-                    <p>
-                        You can contact me via @m0oooony and/or check out my <a href="https://github.com/Moo0oony">GitHub</a>.
-                    </p>
-                </article>                
-            </section>
+            <h1 class="calculator_main_header">Calculate Games</h1>
+            <div class="calculator_field">
+                <label>
+                    <input class="values_input" id="firstValue">
+                </label>
+                <label>
+                    <select name="operation" class="operations_list" id="operation">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="/">/</option>
+                        <option value="*">*</option>
+                        <option value="**">**</option>
+                    </select>
+                </label>
+                <label>
+                    <input class="values_input" id="secondValue">
+                </label>
+                <button class="calculate_button" id="calculate" type="button">=</button>
+                <span class="result_text" id="result"></span>
+            </div>
+            <div class="result_grid">
+                <div class="result_headers" id="result_headers"></div>
+            </div>
         </main>
         <footer class="footer">
             <div class="footer_items">
@@ -76,5 +82,9 @@
                 </h3>
             </div>
         </footer>
+
+        <script src="./js/script.js"></script>
+        <script src="./js/homework.js"></script>
     </body>
+
 </html>
