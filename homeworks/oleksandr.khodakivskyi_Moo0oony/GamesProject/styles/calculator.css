@@ -58,3 +58,20 @@
   align-items: center;
   gap: 80px;
 }
+
+.result_grid {
+  display: grid;
+  margin-top: 60px;
+  margin-bottom: 200px;
+}
+
+.result_headers {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  margin-left: 52px;
+}
+
+.result_headers>h1 {
+  color: #EF4934;
+}

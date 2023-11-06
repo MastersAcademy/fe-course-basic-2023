@@ -1,58 +1,48 @@
-function addition(firstValue, secondValue) {
-    return firstValue + secondValue;
-}
-
-function subtraction(firstValue, secondValue) {
-    return firstValue - secondValue;
-}
-
-function multiplication(firstValue, secondValue) {
-    return firstValue * secondValue;
-}
-
-function division(firstValue, secondValue) {
-    return firstValue / secondValue;
-}
-
-function remainder(firstValue, secondValue) {
-    return firstValue % secondValue;
-}
-
-/* function exponentiation(firstValue, secondValue) {
-    return firstValue ** secondValue;
-} */
-
 function calculate(firstValue, secondValue, operation) {
     let result = 0;
     const first = Number(firstValue);
     const second = Number(secondValue);
-    if (first.isNaN || second.isNaN) {
-        alert('Enter a number');
+    const resultHeaders = document.getElementById('result_headers');
+
+    if (Number.isNaN(first) || Number.isNaN(second)) {
+        resultHeaders.innerHTML = '<h1>Enter a number</h1>';
+        return 'Enter a number';
     }
+
+    if (first === '' || second === '') {
+        resultHeaders.innerHTML = '<h1>The field is empty</h1>';
+        return 'The field is empty';
+    }
+
     switch (operation) {
         case '+':
-            result = addition(first, second);
+            result = first + second;
             break;
         case '-':
-            result = subtraction(first, second);
+            result = first - second;
             break;
         case '*':
-            result = multiplication(first, second);
+            result = first * second;
             break;
         case '/':
-            result = division(first, second);
+            result = first / second;
             break;
         case '%':
-            result = remainder(first, second);
+            result = first % second;
             break;
         case '**':
-            result = 'Choose a valid operation';
-            // result = exponentiation(first, second);
-            break;
+            resultHeaders.innerHTML = '<h1>Choose a valid operation</h1>';
+            return 'Choose a valid operation';
         default:
             break;
     }
-    return (result > 100) ? 'Result is too big' : result;
+    if (result > 100) {
+        resultHeaders.innerHTML = '<h1>Result is too big</h1>';
+        return 'Result is too big';
+    }
+
+    resultHeaders.innerHTML = `<h1>${first}</h1><h1>${operation}</h1><h1>${second}</h1><h1>=</h1><h1>${result}</h1>`;
+    return result;
 }
 
 window.calculate = calculate;
