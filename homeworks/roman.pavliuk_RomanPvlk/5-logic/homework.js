@@ -1,25 +1,27 @@
 function calculate(x, y, operation) {
     let result = 0;
+    const numberX = parseFloat(x);
+    const numberY = parseFloat(y);
     switch (operation) {
         case '+':
-            result = x + y;
+            result = numberX + numberY;
             break;
         case '-':
-            result = x - y;
+            result = numberX - numberY;
             break;
         case '*':
-            result = x * y;
+            result = numberX * numberY;
             break;
         case '/':
-            if (y === 0) {
+            if (numberY === 0) {
                 return 'you can not divide by zero =(';
             }
-            result = x / y;
+            result = numberX / numberY;
             break;
         default:
             return 'Choose a valid operation';
     }
-    if (Number.isNaN(x) || Number.isNaN(y)) {
+    if (Number.isNaN(numberX) || Number.isNaN(numberY) || !x.length || !y.length) {
         return 'Enter a number';
     }
     if (result > 100) {

@@ -15,14 +15,16 @@
   margin-bottom: 25px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: start;
+  margin-left: 300px;
 }
 
 .field {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: start;
   gap: 16px;
+  margin-left: 200px;
 }
 
 .calculator__input {

@@ -5,8 +5,8 @@ const CALCULATE_BUTTON_ELEMENT = document.getElementById('calculate');
 const RESULT_ELEMENT = document.getElementById('result');
 
 CALCULATE_BUTTON_ELEMENT.addEventListener('click', () => {
-    const firstValue = Number(FIRST_VALUE_ELEMENT.value);
-    const secondValue = Number(SECOND_VALUE_ELEMENT.value);
+    const firstValue = FIRST_VALUE_ELEMENT.value;
+    const secondValue = SECOND_VALUE_ELEMENT.value;
     const operation = OPERATION_ELEMENT.value;
 
     RESULT_ELEMENT.innerText = window.calculate(firstValue, secondValue, operation);
