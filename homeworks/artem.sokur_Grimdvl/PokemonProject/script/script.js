@@ -116,7 +116,7 @@ window.addEventListener('DOMContentLoaded', () => {
                                     const num1 = +inputNumber.value;
                                     numbers[2].textContent = num1;
                                     drawPokemons(num1, '.calculator .output__first');
-                                    if (num1 === '' || signs[0].selectedIndex === -1 || numbers[1].value === '') {
+                                    if (num1 === '' || numbers[1].value === '') {
                                         resultOutput.textContent = 'Please enter all numbers';
                                     } else {
                                         result = calculate(
@@ -132,7 +132,7 @@ window.addEventListener('DOMContentLoaded', () => {
                                     const num2 = +inputNumber.value;
                                     numbers[3].textContent = num2;
                                     drawPokemons(num2, '.calculator .output__second');
-                                    if (numbers[0].value === '' || signs[0].selectedIndex === -1 || num2 === '') {
+                                    if (numbers[0].value === '' || num2 === '') {
                                         resultOutput.textContent = 'Please enter all numbers';
                                     } else {
                                         result = calculate(
