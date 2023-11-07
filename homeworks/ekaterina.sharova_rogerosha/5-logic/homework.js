@@ -61,7 +61,8 @@ function calculate() {
         result = 'Too many pokemons';
         resultCalculator = 'Result is too big';
     } else if (result < 0) {
-        result = 'Please, try again';
+        result = 'Negative quantity of pokemons';
+        resultCalculator = 'Please, try again';
     }
 
     inputHistory.textContent = inputText;
