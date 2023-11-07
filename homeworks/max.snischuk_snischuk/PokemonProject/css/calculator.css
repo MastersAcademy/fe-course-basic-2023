@@ -18,11 +18,13 @@ body {
   max-width: 1280px;
   padding: 0 50px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
 }
 
 .calculator__title {
   text-align: center;
-  margin-bottom: 60px;
   color: #221F1F;
   font-size: 48px;
   line-height: 32px;
@@ -30,7 +32,6 @@ body {
 }
 
 .calculator__field {
-  margin-bottom: 50px;
   display: flex;
   column-gap: 10px;
   align-items: center;
@@ -38,7 +39,6 @@ body {
 
 .calculator__input {
   padding: 30px 20px;
-  width: 100%;
   border-radius: 6px;
   border: .6px solid #A9A9A9;
   background: #FFF;
@@ -108,10 +108,46 @@ body {
   font-weight: 400;
 }
 
-.calculator__math-output-with-pokemons span {
-  margin-right: 100px;
+.calculator__math-output-list {
+  list-style: none;
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+
+.calculator__column {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.calculator__math-output-item {
   color: #F00;
   font-size: 48px;
   line-height: 32px;
   font-weight: 700;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+
+.calculator__math-output-cards {
+  list-style: none;
+}
+
+.calculator__math-output-card {
+  color: #F00;
+  font-size: 48px;
+  line-height: 32px;
+  font-weight: 700;
+  margin-top: -50px;
+}
+
+.calculator__math-output-card-img {
+  display: block;
+  width: 90px;
+  height: 90px;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, .25);
 }
