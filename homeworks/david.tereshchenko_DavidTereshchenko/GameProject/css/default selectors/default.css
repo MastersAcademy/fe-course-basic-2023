@@ -22,6 +22,10 @@ a {
   text-decoration: none;
 }
 
+/*main {*/
+/*  min-height: 100%;*/
+/*}*/
+
 .open {
   display: flex !important;
 }

@@ -2,6 +2,7 @@
 
 @import "header/header.css";
 @import "default selectors/default.css";
+@import "Footer/footer.css";
 
 /* Filter */
 
@@ -353,3 +354,4 @@
     max-width: 360px;
   }
 }
+
