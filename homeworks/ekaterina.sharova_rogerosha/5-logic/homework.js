@@ -58,7 +58,8 @@ function calculate() {
             result = 'Please, try again';
     }
     if (result > 100) {
-        result = 'Result is too big';
+        result = 'Too many pokemons';
+        resultCalculator = 'Result is too big';
     } else if (result < 0) {
         result = 'Please, try again';
     }
