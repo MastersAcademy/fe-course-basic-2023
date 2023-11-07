@@ -18,18 +18,16 @@ function calculate() {
     const outputHistory = document.querySelector('.output-history');
 
     let operationText;
-    if (operation !== '+') {
-        if (operation === '-') {
-            operationText = '-';
-        } else if (operation === '*') {
-            operationText = '*';
-        } else if (operation === '/') {
-            operationText = '/';
-        } else {
-            operationText = '?';
-        }
-    } else {
+    if (operation === '+') {
         operationText = '+';
+    } else if (operation === '-') {
+        operationText = '-';
+    } else if (operation === '*') {
+        operationText = '*';
+    } else if (operation === '/') {
+        operationText = '/';
+    } else {
+        operationText = '?';
     }
 
     const inputText = `${firstValue} ${operationText} ${secondValue}`;
