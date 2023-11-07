@@ -42,7 +42,7 @@ btn.onclick = function () {
         case '/':
             if (two === 0) {
                 result.innerHTML = 'Number must not be zero';
-                visualResult.innerHTML = 'Entar a number';
+                visualResult.innerHTML = 'ENumber must not be zero';
                 visualOperator.innerHTML = '';
                 visualNumberOne.innerHTML = '';
                 visualNumberTwo.innerHTML = '';
@@ -54,7 +54,7 @@ btn.onclick = function () {
 
         default:
             result.innerHTML = 'Choose a valid operation';
-            visualResult.innerHTML = 'Entar a number';
+            visualResult.innerHTML = 'Choose a valid operation';
             visualOperator.innerHTML = '';
             visualNumberOne.innerHTML = '';
             visualNumberTwo.innerHTML = '';
@@ -64,7 +64,7 @@ btn.onclick = function () {
 
     if (calc > 100) {
         result.innerHTML = 'Result is too big';
-        visualResult.innerHTML = 'Entar a number';
+        visualResult.innerHTML = 'Result is too big';
         visualOperator.innerHTML = '';
         visualNumberOne.innerHTML = '';
         visualNumberTwo.innerHTML = '';
