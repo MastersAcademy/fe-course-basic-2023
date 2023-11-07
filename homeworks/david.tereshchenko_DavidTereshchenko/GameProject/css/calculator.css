@@ -1,23 +1,36 @@
-@import "../GameProject/css/default/default.css";
+@import "header/header.css";
+@import "default/default.css";
+@import "Footer/footer.css";
+
+.page {
+  min-height: 75%;
+}
 
 .wrapper {
+  height: 100%;
+}
+
+.title__calculator {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-  max-width: 575px;
-  margin: 0 auto;
+  margin-top: 80px;
+  font-size: 48px;
+  font-weight: 700;
 }
 
 .number__container {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  padding: 30px;
+  justify-content: start;
+  align-items: flex-end;
   max-width: 100%;
-  gap: 30px;
+  gap: 16px;
+  margin-top: 60px;
   border-radius: 6px;
+}
+
+.number__container input {
+  height: 36px;
+  text-align: center;
 }
 
 .number__block {
@@ -29,8 +42,12 @@
   border: 1px solid #A9A9A9;
 }
 
-.operator__block {
+.operator__block select {
   display: flex;
+  justify-content: flex-end;
+  text-align: center;
+  min-width: 114px;
+  height: 36px;
   padding: 12px 10px;
   border-radius: 6px;
   border: 1px solid #A9A9A9;
@@ -43,11 +60,11 @@
 }
 
 .button {
-  padding: 14px;
+  padding: 10px;
   border-radius: 6px;
   border: 1px solid #A9A9A9;
-  max-width: 350px;
-  font-size: 18px;
+  min-width: 114px;
+  font-size: 14px;
   background-color: #000;
   color: #FFF;
 }
@@ -57,16 +74,21 @@
 }
 
 .result {
-  display: none;
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #A9A9A9;
+  display: flex;
   align-items: center;
+  padding-bottom: 5px;
+}
+
+.result p {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
 }
 
 .count-block {
-  display: flex;
+  display: none;
   flex-direction: row;
+  margin-top: 40px;
   gap: 20px;
   align-items: center;
 }
@@ -88,14 +110,7 @@
   justify-content: center;
 }
 
-h2 {
-  font-size: 60px;
-}
-
-.result__block p {
-  font-size: 60px;
-}
-
-.equals {
-  font-size: 60px;
+span {
+  font-size: 48px;
+  color: #EF4934;
 }
