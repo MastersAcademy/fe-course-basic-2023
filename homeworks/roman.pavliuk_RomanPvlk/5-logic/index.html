@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Basic JS</title>
+        <link rel="stylesheet" href="../5-logic/style.css">
+    </head>
+    <body>
+        <div class="title">
+            <h1 class="heading-primary">Calculator v. 1</h1>
+        </div>
+        <div class="field">
+            <label class="numbers">
+                <input class="calculator__input" id="firstValue">
+            </label>
+            <label>
+                <select class="operations" name="operation" id="operation">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="/">/</option>
+                    <option value="*">*</option>
+                    <option value="**">**</option>
+                </select>
+            </label>
+            <label>
+                <input class="calculator__input" id="secondValue">
+            </label>
+            <button class="button" id="calculate" type="button">=</button>
+            <span class="result" id="result"></span>
+        </div>
+        <script src="./script.js"></script>
+        <script src="./homework.js"></script>
+    </body>
+</html>
