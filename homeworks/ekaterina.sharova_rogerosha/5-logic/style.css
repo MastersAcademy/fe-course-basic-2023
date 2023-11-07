@@ -120,6 +120,7 @@ body {
   font-weight: 700;
   font-size: 48px;
   line-height: 32px;
+  gap: 16px;
 }
 
 footer {

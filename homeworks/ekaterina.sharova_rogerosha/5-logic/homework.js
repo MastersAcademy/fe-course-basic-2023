@@ -1,21 +1,17 @@
+const inputHistory = document.querySelector('.input-history');
+const outputHistory = document.querySelector('.output-history');
+
 function calculate() {
     const firstValue = parseFloat(document.getElementById('firstValue').value);
     const secondValue = parseFloat(document.getElementById('secondValue').value);
     const operation = document.getElementById('operation').value;
     let result;
+    let resultCalculator;
 
     if (Number.isNaN(firstValue) || Number.isNaN(secondValue)) {
         document.getElementById('result').textContent = 'Please, enter the number';
         return;
     }
-
-    if (secondValue === 0 && operation === '/') {
-        document.getElementById('result').textContent = 'Error';
-        return;
-    }
-
-    const inputHistory = document.querySelector('.input-history');
-    const outputHistory = document.querySelector('.output-history');
 
     let operationText;
     if (operation === '+') {
@@ -31,6 +27,13 @@ function calculate() {
     }
 
     const inputText = `${firstValue} ${operationText} ${secondValue}`;
+
+    if (secondValue === 0 && operation === '/') {
+        document.getElementById('result').textContent = 'Error';
+        inputHistory.textContent = inputText;
+        outputHistory.textContent = '= Error';
+        return;
+    }
 
     switch (operation) {
         case '+':
@@ -61,9 +64,9 @@ function calculate() {
     }
 
     inputHistory.textContent = inputText;
-    outputHistory.textContent = `= ${result}`;
+    outputHistory.textContent = typeof result === 'number' ? `= ${result} pokemons` : `= ${result}`;
 
-    document.getElementById('result').textContent = `${result}`;
+    document.getElementById('result').textContent = `${resultCalculator || result}`;
 }
 
 document.getElementById('calculate').addEventListener('click', calculate);
