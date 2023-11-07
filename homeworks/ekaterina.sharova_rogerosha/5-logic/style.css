@@ -111,6 +111,17 @@ body {
   line-height: 32px;
 }
 
+.result-display {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  color: #EF4934;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 32px;
+}
+
 footer {
   background-color: #EF4934;
   color: #FFF;

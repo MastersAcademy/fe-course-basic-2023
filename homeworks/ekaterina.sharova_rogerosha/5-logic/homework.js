@@ -14,6 +14,26 @@ function calculate() {
         return;
     }
 
+    const inputHistory = document.querySelector('.input-history');
+    const outputHistory = document.querySelector('.output-history');
+
+    let operationText;
+    if (operation !== '+') {
+        if (operation === '-') {
+            operationText = '-';
+        } else if (operation === '*') {
+            operationText = '*';
+        } else if (operation === '/') {
+            operationText = '/';
+        } else {
+            operationText = '?';
+        }
+    } else {
+        operationText = '+';
+    }
+
+    const inputText = `${firstValue} ${operationText} ${secondValue}`;
+
     switch (operation) {
         case '+':
             result = firstValue + secondValue;
@@ -41,6 +61,9 @@ function calculate() {
     } else if (result < 0) {
         result = 'Please, try again';
     }
+
+    inputHistory.textContent = inputText;
+    outputHistory.textContent = `= ${result}`;
 
     document.getElementById('result').textContent = `${result}`;
 }
