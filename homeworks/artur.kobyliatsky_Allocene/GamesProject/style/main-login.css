@@ -156,3 +156,17 @@ button {
 button:hover {
   background-color: #CD412F;
 }
+
+
+/*error*/
+
+.error {
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  border: solid 1px #EF4934;
+  border-radius: 6px;
+  background-color: #EF4A342D;
+}
