@@ -8,6 +8,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
 }
 
 .upper-header {
@@ -52,103 +53,74 @@ body {
   margin-right: 50px;
 }
 
-.pokemons, .about, .calculator {
+.pokemons, .about, .login {
   text-decoration: none;
-}
-
-.content {
-  max-width: 1280px;
-  padding-inline: 352px;
 }
 
 .headline {
   color: #221F1F;
+  font-style: normal;
   font-weight: 700;
   font-size: 48px;
   line-height: 32px;
   margin-top: 80px;
+  margin-bottom: 60px;
+}
+
+.field {
+  display: flex;
+  gap: 16px;
+}
+
+.firstValue, .secondValue {
+  padding: 13px;
+  border-radius: 6px;
+  display: flex;
   text-align: center;
 }
 
-.enter-content {
-  align-items: center;
-}
-
-.email {
-  font-size: 22px;
-  font-weight: 600;
-}
-
-.email-check {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 22px;
-  margin-top: 60px;
-  margin-bottom: 40px;
-  font-weight: 600;
-}
-
-.input-email {
-  width: 100%;
+.operation {
   border-radius: 6px;
-  border: 1px solid #A9A9A9;
-  padding-block: 30px;
-  padding-inline: 20px;
+  background-color: #FFF;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  border: 1px solid #333;
+  padding-block: 13px;
+  padding-left: 12px;
+  padding-right: 95px;
 }
 
-.password {
-  font-size: 22px;
-}
-
-.password-check {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 22px;
-  margin-block: 40px;
-  font-weight: 600;
-}
-
-.input-password {
-  width: 100%;
-  border-radius: 6px;
-  border: 1px solid #A9A9A9;
-  padding-block: 30px;
-  padding-inline: 20px;
-}
-
-.robot-check {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
-  margin-block: 40px;
-}
-
-.label-checkbox {
-  display: flex;
-  gap: 12px;
-  cursor: pointer;
-}
-
-.button-login {
-  font-size: 22px;
-  font-weight: 600;
-}
-
-button {
+.button {
   background-color: #EF4934;
   color: #FFF;
-  text-decoration: none;
-  cursor: pointer;
-  display: flex;
-  width: 575px;
-  padding: 27px 258px;
-  justify-content: center;
-  border: 2px solid #EF4934;
-  align-items: center;
   border-radius: 6px;
-  gap: 10px;
+  border: 1px solid #EF4934;
+  display: inline-flex;
+  padding: 13px 57px;
+  justify-content: center;
+  align-items: center;
+}
+
+.result {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.result-display {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  color: #EF4934;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 32px;
+  gap: 16px;
 }
 
 footer {
