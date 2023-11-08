@@ -227,6 +227,15 @@ body {
   background-color: #080;
 }
 
+.error {
+  border: 2px #F00 solid;
+  font-size: 20px;
+  background-color: #000;
+  color: #F00;
+  padding: 10px;
+  margin-top: 20px;
+}
+
 @media (min-width: 1500px) {
 
   .card {
