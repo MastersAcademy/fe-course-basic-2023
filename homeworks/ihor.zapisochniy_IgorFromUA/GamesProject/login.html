@@ -40,19 +40,20 @@
                     <h1 class="login__title">Login page</h1>
                     <form action="./successful-login.html">
                         <label class="label-input">Email
-                            <input type="email" class="login__input" placeholder="Enter your email address" required>
+                            <input id="email-input" type="text" class="login__input" placeholder="Enter your email address">
                         </label>
                         <label class="label-input">Password
-                            <input type="password" class="login__input" placeholder="Enter your password" required>
+                            <input id="password-input" type="password" class="login__input" placeholder="Enter your password">
                         </label>
                         <label class="label-checkbox">
-                            <input type="checkbox" class="login__checkbox" required>I am not a robot
+                            <input id="checkbox-input" type="checkbox" class="login__checkbox">I am not a robot
                         </label>
-                        <button type="submit" class="login__button">Login</button>
+                        <div id="errors-container"></div>
+                        <button id="submit-button" type="button" class="login__button">Login</button>
                     </form>
                 </section>
             </main>
         </div>
-
+        <script src="./scripts/script-login.js"></script>
     </body>
 </html>
