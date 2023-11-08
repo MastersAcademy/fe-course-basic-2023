@@ -4,8 +4,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" type="text/css" href="css/login.css">
-        <title>Game Project</title>
+        <link rel="stylesheet" type="text/css" href="css/calculator.css">
+        <link rel="stylesheet" type="text/css" href="css/default/default.css">
+        <link rel="stylesheet" type="text/css" href="css/Footer/footer.css">
+        <link rel="stylesheet" type="text/css" href="css/header/header.css">
+        <title>Calculator</title>
     </head>
     <body>
         <div class="wrapper">
@@ -32,7 +35,6 @@
                             </ul>
                         </nav>
                     </div>
-                    <!-- Burger menu -->
                     <div class="header__burger">
                         <span></span>
                     </div>
@@ -40,39 +42,53 @@
             </header>
             <main class="page">
                 <div class="main__container">
-                    <div class="main__title">
-                        <h1 class="title__login">Login page</h1>
+                    <div class="title__calculator">
+                        <h1>Calculate Games</h1>
                     </div>
-                    <div class="page__login">
-                        <form action="successful.html" class="login__form" target="_self">
-                            <div class="form__email">
-                                <label for="email" class="label-email">Email</label>
-                                <input
-                                    type="email"
-                                    name="email"
-                                    id="email"
-                                    class="email"
-                                    placeholder="Enter your email address"
-                                    required
-                                >
+                    <div class="calculator__container">
+                        <div class="number__container">
+                            <div class="number-1">
+                                <label for="firstNumber">First number</label>
+                                <input id="firstNumber" class="number__block one" name="number1" required>
                             </div>
-                            <div class="form__password">
-                                <label for="password" class="label-password">Password</label>
-                                <input
-                                    type="password"
-                                    name="password"
-                                    id="password"
-                                    class="password"
-                                    placeholder="Enter your password"
-                                    required
-                                >
+                            <div class="operator__block">
+                                <label>
+                                    <select class="operator">
+                                        <option value="+">+</option>
+                                        <option value="-">-</option>
+                                        <option value="×">×</option>
+                                        <option value="/">/</option>
+                                        <option value="%">%</option>
+                                        <option value="**">**</option>
+                                    </select>
+                                </label>
                             </div>
-                            <div class="form__checkbox">
-                                <input type="checkbox" id="checkbox" class="checkbox" required>
-                                <label for="checkbox">I’m not a robot</label>
+                            <div class="number-2">
+                                <label for="secondNumber">Second number</label>
+                                <input id="secondNumber" class="number__block two" name="number2" required>
                             </div>
-                            <button type="submit" class="form__button">Login</button>
-                        </form>
+                            <div class="return">
+                                <button type="button" class="button">=</button>
+                            </div>
+                            <div class="result__block">
+                                <p class="resul__number result"></p>
+                            </div>
+                        </div>
+                        <div class="count-block">
+                            <div class="visual-counting">
+                                <div class="number__one">
+                                    <span class="number__1"></span>
+                                </div>
+                                <div class="operator__visual">
+                                    <span class="oper"></span>
+                                </div>
+                                <div class="number__two">
+                                    <span class="number__2"></span>
+                                </div>
+                                <span class="equals"></span>
+                                <span class="visual-result"></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </main>
@@ -95,11 +111,6 @@
                 </div>
             </footer>
         </div>
-        <script>
-            document.querySelector('.header__burger').addEventListener('click', function () {
-                this.classList.toggle('active');
-                document.querySelector('.header__menu').classList.toggle('open');
-            })
-        </script>
+        <script src="js/calculator.js"></script>
     </body>
 </html>
