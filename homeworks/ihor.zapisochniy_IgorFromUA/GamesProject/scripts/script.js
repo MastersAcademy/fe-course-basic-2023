@@ -34,6 +34,12 @@ CALCULATE_BUTTON_ELEMENT.addEventListener('click', () => {
         result = 'Too many games';
     }
     if (result === +result) {
+        if (+firstValue === 0) {
+            FIRST_NUMBER_BIG_ELEMENT.style.top = '28px';
+            FIRST_NUMBER_BIG_ELEMENT.innerText = '0';
+        } else {
+            FIRST_NUMBER_BIG_ELEMENT.style.top = '55px';
+        }
         for (let i = 0; i < +firstValue; i++) {
             const img = document.createElement('img');
             img.src = './src/img-card.png';
@@ -44,6 +50,10 @@ CALCULATE_BUTTON_ELEMENT.addEventListener('click', () => {
         SECOND_NUMBER_BIG_ELEMENT.innerText = secondValue;
         EQUAL_BIG_ELEMENT.innerText = '=';
         RESULT_BIG_ELEMENT.style.top = '55px';
+        if (result === 0) {
+            RESULT_BIG_ELEMENT.style.top = '28px';
+            RESULT_BIG_ELEMENT.innerText = '0';
+        }
         for (let i = 0; i < result; i++) {
             const img = document.createElement('img');
             img.src = './src/img-card.png';
