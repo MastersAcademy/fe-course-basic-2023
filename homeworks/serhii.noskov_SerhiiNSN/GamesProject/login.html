@@ -37,14 +37,13 @@
                 <div class="login__container">
                     <div class="form__inner">
                         <div class="login__tittle">Login page</div>
-                        <form action="success-login.html" class="email-form">
+                        <form class="email-form">
                             <div class="form__area">
                                 <label for="email" class="email__text"
                                 >Email</label
                                 >
                                 <input
                                     type="email"
-                                    required
                                     placeholder="Enter your email address"
                                     class="email__input"
                                     id="email"
@@ -56,7 +55,6 @@
                                 >
                                 <input
                                     type="password"
-                                    required
                                     placeholder="Enter your password"
                                     class="password__input"
                                     id="password"
@@ -73,7 +71,8 @@
                                 >I’m not a robot</label
                                 >
                             </div>
-                            <button class="login__btn" type="submit">
+                            <div id="errors-container" class="errors-box"></div>
+                            <button class="login__btn" id="button-login" type="button">
                                 Login
                             </button>
                         </form>
@@ -81,5 +80,6 @@
                 </div>
             </section>
         </main>
+        <script src="./scripts/script.js"></script>
     </body>
 </html>
