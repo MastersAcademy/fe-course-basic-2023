@@ -2,7 +2,6 @@ const EMAIL_INPUT_ID = 'email-input';
 const PASSWORD_INPUT_ID = 'password-input';
 const NOT_A_ROBOT_CHECKBOX_ID = 'checkbox-input';
 const SUBMIT_BUTTON_ID = 'submit-button';
-const ERRORS_CONTAINER_ID = 'errors-container';
 const RESULT_PAGE_PATH = './successful-login.html';
 
 const submitButton = document.getElementById(SUBMIT_BUTTON_ID);
@@ -23,12 +22,11 @@ function getValueById(elementId) {
  * @param {Object} inputData in format like: { [input_id]: error_text, ... }
  */
 function setErrors(inputData) {
-    const errorContainerElement = document.getElementById(ERRORS_CONTAINER_ID);
-    Object.values(inputData).forEach((error) => {
+    Object.keys(inputData).forEach((key) => {
         const errorElement = document.createElement('p');
         errorElement.classList.add('error');
-        errorElement.textContent = error;
-        errorContainerElement.appendChild(errorElement);
+        errorElement.textContent = inputData[key];
+        document.getElementById(key).parentElement.after(errorElement);
     });
 }
 
@@ -36,8 +34,8 @@ function setErrors(inputData) {
  * Delete all errors from errors container.
  */
 function deleteErrors() {
-    const errorContainerElement = document.getElementById(ERRORS_CONTAINER_ID);
-    errorContainerElement.replaceChildren();
+    const errorContainerElements = document.querySelectorAll('.error');
+    errorContainerElements.forEach((el) => el.remove());
 }
 
 /**
@@ -64,8 +62,8 @@ function validateForm() {
     const passwordValue = getValueById(PASSWORD_INPUT_ID);
     const checkboxValue = getValueById(NOT_A_ROBOT_CHECKBOX_ID);
     const trimEmail = cutSpaces(emailValue);
-    if (!isEmail(trimEmail)) setErrors({ [EMAIL_INPUT_ID]: 'error email' });
-    if (!isLengthPassword(passwordValue)) setErrors({ [PASSWORD_INPUT_ID]: 'error password' });
+    if (!isEmail(trimEmail)) setErrors({ [EMAIL_INPUT_ID]: 'you entered an incorrect email' });
+    if (!isLengthPassword(passwordValue)) setErrors({ [PASSWORD_INPUT_ID]: 'error password: password length should be 8 - 12 characters' });
     if (!checkboxValue) setErrors({ [NOT_A_ROBOT_CHECKBOX_ID]: 'check this checkbox' });
     if (isEmail(trimEmail) && isLengthPassword(passwordValue) && checkboxValue) {
         navigateToResultPage();

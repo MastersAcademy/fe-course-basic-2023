@@ -62,5 +62,7 @@
 }
 
 .error {
-  color: #EF4A34;
+  font-size: 14px;
+  color: #F00;
+  margin: -36px 0 20px;
 }
