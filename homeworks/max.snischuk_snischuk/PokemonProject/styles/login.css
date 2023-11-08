@@ -114,3 +114,10 @@ body {
 .login__btn:hover {
   filter: brightness(.9);
 }
+
+.error {
+  margin-bottom: 10px;
+  color: #F00;
+  font-size: 14px;
+  line-height: 21px;
+}
