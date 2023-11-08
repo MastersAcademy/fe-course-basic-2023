@@ -42,17 +42,19 @@
                     <label for="email" class="log-in__label">
                         <b>Email</b>
                     </label>
-                    <input type="email" id="email" class="log-in__input" placeholder="Enter your email adres" required>
+                    <input type="email" id="email" class="log-in__input" placeholder="Enter your email adres">
                     <label for="password" class="log-in__label">
                         <b>Password</b>
                     </label>
-                    <input type="password" id="password" class="log-in__input" placeholder="Enter your password" required>
+                    <input type="password" id="password" class="log-in__input" placeholder="Enter your password">
                     <label for="checkbox" class="log-in__label">
-                        <input type="checkbox" class="log-in__checkbox" id="checkbox" required>I am not a robot
+                        <input type="checkbox" class="log-in__checkbox" id="checkbox">I am not a robot
                     </label>
-                    <button type="submit" class="log-in__button">Login</button>
+                    <div id="errors-container"></div>
+                    <button type="button" class="log-in__button" id="submit_button">Login</button>
                 </fieldset>
             </form>
         </main>
+        <script src="scripts/script.js"></script>
     </body>
 </html>
