@@ -82,8 +82,6 @@ FIRST_VALUE_ELEMENT.addEventListener('input', () => {
         pokemonCard.style.clipPath = `inset(0 0 ${100 - partialCard * 100}% 0)`;
 
         MATH_FIRST_OPERAND_ELEMENT.outerHTML = pokemonCard.outerHTML;
-
-        return;
     }
 
     if (pokemonsCardsCount >= 1 && pokemonsCardsCount <= 10) {
@@ -94,7 +92,7 @@ FIRST_VALUE_ELEMENT.addEventListener('input', () => {
         pokemonsCardsList.classList.add('calculator__column');
 
         for (let i = 1; i <= pokemonsCardsCount; i++) {
-            const pokemonsCards = createCard(pokemonsCardsCount);
+            const pokemonsCards = createCard();
             pokemonsCardsList.appendChild(pokemonsCards);
         }
 
@@ -102,9 +100,9 @@ FIRST_VALUE_ELEMENT.addEventListener('input', () => {
     }
 
     const MATH_LAST_OPERAND_ELEMENT = document.querySelector('[data-math-operand="last"]');
-    let pokemonsCardsCountResult = RESULT_VALUE_ELEMENT.innerText;
+    let pokemonsCountResult = RESULT_VALUE_ELEMENT.innerText;
 
-    if (pokemonsCardsCountResult <= 0) {
+    if (pokemonsCountResult <= 0) {
         const MATH_EXPRESSION_ELEMENT = CALCULATOR_CONTAINER.querySelector('[data-math-output-list]');
         if (MATH_EXPRESSION_ELEMENT) {
             MATH_EXPRESSION_ELEMENT.remove();
@@ -112,11 +110,11 @@ FIRST_VALUE_ELEMENT.addEventListener('input', () => {
         return;
     }
 
-    if (pokemonsCardsCountResult < 1) {
+    if (pokemonsCountResult < 1) {
         if (!MATH_LAST_OPERAND_ELEMENT) return;
         MATH_LAST_OPERAND_ELEMENT.innerHTML = '';
 
-        const partialCard = pokemonsCardsCountResult;
+        const partialCard = pokemonsCountResult;
         const pokemonCard = createCard();
         pokemonCard.style.clipPath = `inset(0 0 ${100 - partialCard * 100}% 0)`;
 
@@ -124,28 +122,32 @@ FIRST_VALUE_ELEMENT.addEventListener('input', () => {
         return;
     }
 
-    if (pokemonsCardsCountResult <= 100) {
+    if (pokemonsCountResult <= 100) {
         if (!MATH_LAST_OPERAND_ELEMENT) return;
         MATH_LAST_OPERAND_ELEMENT.innerHTML = '';
 
         const MAX_CARDS_IN_COLUMN = 10;
-        const columnCount = Math.ceil(pokemonsCardsCountResult / MAX_CARDS_IN_COLUMN);
+
+        const columnCount = Math.ceil(pokemonsCountResult / MAX_CARDS_IN_COLUMN);
 
         for (let i = 1; i <= columnCount; i++) {
-            const cardsInCurrentColumn = Math.min(MAX_CARDS_IN_COLUMN, pokemonsCardsCountResult);
+            const cardsInCurrentColumn = Math.min(MAX_CARDS_IN_COLUMN, pokemonsCountResult);
             const column = createColumn();
 
             for (let j = 1; j <= cardsInCurrentColumn; j++) {
-                const partialCard = pokemonsCardsCountResult - Math.floor(pokemonsCardsCountResult);
                 const pokemonCard = createCard();
                 column.appendChild(pokemonCard);
-
-                if (partialCard > 0) {
-                    pokemonCard.style.clipPath = `inset(0 0 ${partialCard * 100}% 0)`;
-                    column.appendChild(pokemonCard);
+                if (pokemonsCountResult >= 1) {
+                    pokemonsCountResult--;
                 }
+            }
 
-                pokemonsCardsCountResult--;
+            const partialCard = pokemonsCountResult - Math.floor(pokemonsCountResult);
+
+            if (partialCard === pokemonsCountResult || partialCard < (1 / MAX_CARDS_IN_COLUMN)) {
+                const pokemonCard = createCard();
+                pokemonCard.style.clipPath = `inset(0 0 ${100 - partialCard * 100}% 0)`;
+                column.appendChild(pokemonCard);
             }
 
             MATH_LAST_OPERAND_ELEMENT.appendChild(column);
