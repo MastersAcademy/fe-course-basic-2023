@@ -17,22 +17,24 @@
             </div>
         </header>
         <main class="wrapper">
-            <form class="login-form" action="result.html">
+            <form class="login-form">
                 <h2 class="login-form__title"> Login Page</h2>
-
-                <label class="login-form__label" for="login">Email</label>
-                <input class="login-form__input" type="email" id="login" name="login" placeholder="Enter your email address" pattern=".{3,320}" required title="Please enter a valid email address" maxlength="">
-
-                <label class="login-form__label login-form__label--pwd" for="pwd">Password:</label>
-                <input class="login-form__input" type="password" name="pwd" id="pwd" placeholder="Enter your password" pattern=".{8,320}" required title="Your password must be at least 8 characters long">
-
+                <label class="login-form__label" for="email">Email
+                    <input class="login-form__input" type="text" id="email" placeholder="Enter your email address">
+                    <div id="errors-container-email"></div>
+                </label>
+                <label class="login-form__label login-form__label--pwd" for="password">Password:
+                    <input class="login-form__input" type="password" id="password" placeholder="Enter your password">
+                    <div id="errors-container-password"></div>
+                </label>
                 <div class="login-form__checkbox">
-                    <input class="checkbox__input" type="checkbox" id="not-robot" name="fav_language" value="not-robot" required>
-                    <label class="checkbox__text" for="not-robot">I’m not a robot</label>
+                    <input class="checkbox__input" type="checkbox" id="checkbox">
+                    <label class="checkbox__text" for="checkbox">I’m not a robot</label>
+                    <div id="errors-container-checkbox"></div>
                 </div>
-
-                <input class="login-form__submit-btn" type="submit" value="Login">
+                <button class="login-form__submit-btn" type="button" id="submit_btn">Login</button>
             </form>
         </main>
+        <script src="./scripts/script.js"></script>
     </body>
 </html>
