@@ -59,7 +59,6 @@ main {
   align-items: center;
   margin-top: 40px;
   margin-right: 12px;
-  margin-bottom: 40px;
   margin-left: 0;
 }
 
@@ -115,6 +114,7 @@ main {
   border: solid 1px #EF4934;
   border-radius: 6px;
   margin-right: 12px;
+  margin-bottom: 0;
   vertical-align: sub;
   z-index: -1;
 }
@@ -146,6 +146,7 @@ button {
   height: 70px;
   font-size: 24px;
   border-radius: 6px;
+  margin-top: 40px;
   outline: 0;
   border: 0;
   color: #FFF;

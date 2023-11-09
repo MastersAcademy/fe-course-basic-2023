@@ -76,25 +76,36 @@ function validateForm() {
     let email = getValueById(EMAIL_INPUT_ID);
     const password = getValueById(PASSWORD_INPUT_ID);
     const isChecked = getValueById(NOT_A_ROBOT_CHECKBOX_ID);
-    const newEmail = removeSpaces(email);
 
-    if (email.includes(' ')) {
+    let isValid = true;
+
+    if (email) {
         email = removeSpaces(email);
-        replaceEmailText(document.getElementById(EMAIL_INPUT_ID), newEmail);
+        replaceEmailText(document.getElementById(EMAIL_INPUT_ID), removeSpaces(email));
     }
 
-    if (!isEmail(email)) {
+    if (!email) {
         setErrors(ERRORS_CONTAINER_EMAIL_ID, inputData[EMAIL_INPUT_ID]);
-        return;
+        isValid = false;
+    } else if (!isEmail(email)) {
+        setErrors(ERRORS_CONTAINER_EMAIL_ID, inputData[EMAIL_INPUT_ID]);
+        isValid = false;
     }
 
-    if (password.length < 8 || password.length > 12) {
+    if (!password) {
         setErrors(ERRORS_CONTAINER_PASSWORD_ID, inputData[PASSWORD_INPUT_ID]);
-        return;
+        isValid = false;
+    } else if (password.length < 8 || password.length > 12) {
+        setErrors(ERRORS_CONTAINER_PASSWORD_ID, inputData[PASSWORD_INPUT_ID]);
+        isValid = false;
     }
 
     if (!isChecked) {
         setErrors(ERRORS_CONTAINER_CHECKBOX_ID, inputData[NOT_A_ROBOT_CHECKBOX_ID]);
+        isValid = false;
+    }
+
+    if (!isValid) {
         return;
     }
 
