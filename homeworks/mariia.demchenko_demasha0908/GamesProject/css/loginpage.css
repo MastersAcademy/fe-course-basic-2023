@@ -94,6 +94,9 @@ a {
   }
 }
 
+.error {
+  color: #EF4934;
+}
 
 .login__form {
   margin: 80px auto 0;

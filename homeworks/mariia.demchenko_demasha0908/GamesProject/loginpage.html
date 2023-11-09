@@ -41,23 +41,27 @@
                             <h3 class="login__form-title">Login page</h3>
                             <div class="login__form-group">
                                 <label class="login__form-label" for="email">Email</label>
-                                <input class="login__form-item" type="email" name="email" id="email" placeholder="Enter your email address" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required>
+                                <input class="login__form-item" type="text" name="email" id="email" placeholder="Enter your email address">
                             </div>
+                            <span class="error" id="email__error"></span>
                             <div class="login__form-group">
                                 <label class="login__form-label" for="password">Password</label>
-                                <input class="login__form-item" type="password" name="Пароль" id="password" placeholder="Enter your password" required>
+                                <input class="login__form-item" type="password" name="Пароль" id="password" placeholder="Enter your password">
                             </div>
+                            <span class="error" id="password__error"></span>
                             <div class="login__form-group">
-                                <input class="login__form-checkbox" id="checkbox" type="checkbox" required>
+                                <input class="login__form-checkbox" id="checkbox" type="checkbox">
                                 <label class="login__form-text" for="checkbox">I’m not a robot</label>
                             </div>
+                            <span id="checkbox__error"></span>
                             <div class="login__form-group">
-                                <button class="login__form-btn" type="submit">Login</button>
+                                <button class="login__form-btn" id="button" type="button">Login</button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
         </main>
+        <script src="scripts/script.js"></script>
     </body>
 </html>
