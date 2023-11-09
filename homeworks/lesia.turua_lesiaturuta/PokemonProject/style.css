@@ -494,6 +494,20 @@ body {
   margin: 0 100px;
 }
 
+/*ERRORS*/
+
+.error-text {
+  color: #FA0A0A;
+}
+
+.border-error {
+  border: 4px solid #FA0A0A !important;
+}
+
+.border-ok {
+  border: 4px solid #66EA11 !important;
+}
+
 /*HELPER*/
 
 .height100vh {

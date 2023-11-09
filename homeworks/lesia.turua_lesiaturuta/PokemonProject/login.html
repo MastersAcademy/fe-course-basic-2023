@@ -41,21 +41,28 @@
             <form class="login__form" action="./get-result.html">
                 <h1 class="login__form-title">Login page</h1>
                 <div class="login__form-email">
-                    <label class="login__form-email-label" for="email">Email</label>
-                    <input class="login__form-email-input" required id="email" placeholder="Enter your email address" type="email" value="">
+                    <label class="login__form-email-label" for="email">
+                        Email <span class="error-text" data-mailInfo></span>
+                    </label>
+                    <input class="login__form-email-input" id="email" placeholder="Enter your email address" type="email" value="">
                 </div>
                 <div class="login__form-password">
-                    <label class="login__form-password-label" for="password">Password</label>
-                    <input class="login__form-password-input" required id="password" placeholder="Enter your password" type="password" value="">
+                    <label class="login__form-password-label" for="password">
+                        Password <span class="error-text" data-passInfo></span>
+                    </label>
+                    <input class="login__form-password-input" id="password" placeholder="Enter your password" type="password" value="">
                 </div>
                 <div class="login__form-checkbox">
-                    <input class="login__form-checkbox-input gap-right6" id="checkbox" type="checkbox" required>
-                    <label class="login__form-checkbox-name" for="checkbox">I’m not a robot</label>
+                    <input class="login__form-checkbox-input gap-right6" id="checkbox" type="checkbox">
+                    <label class="login__form-checkbox-name" for="checkbox">
+                        I’m not a robot &nbsp;<span class="error-text" data-checkboxInfo></span>
+                    </label>
                 </div>
-                <button class="login__form-button" type="submit">Login</button>
+                <div id="errors-container"></div>
+                <button class="login__form-button" id="button" type="button">Login</button>
             </form>
         </main>
-
+        <script src="./scripts/script.js"></script>
     </body>
 
 </html>
