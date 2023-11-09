@@ -42,15 +42,14 @@
                     <label for="email" class="log-in__label">
                         <b>Email</b>
                     </label>
-                    <input type="text" id="email" class="log-in__input" placeholder="Enter your email adres">
+                    <input type="text" id="email" class="log-in__input" data-error placeholder="Enter your email adres">
                     <label for="password" class="log-in__label">
                         <b>Password</b>
                     </label>
-                    <input type="password" id="password" class="log-in__input" placeholder="Enter your password">
-                    <label for="checkbox" class="log-in__label">
-                        <input type="checkbox" class="log-in__checkbox" id="checkbox">I am not a robot
+                    <input type="password" id="password" class="log-in__input" data-error placeholder="Enter your password">
+                    <label for="checkbox" class="log-in__label" id="label_checkbox">
+                        <input type="checkbox" class="log-in__checkbox" data-error id="checkbox">I am not a robot
                     </label>
-                    <div id="errors-container" class="error"></div>
                     <button type="button" class="log-in__button" id="submit_button">Login</button>
                 </fieldset>
             </form>

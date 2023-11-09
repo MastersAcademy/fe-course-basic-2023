@@ -1,11 +1,4 @@
-const EMAIL_INPUT_ID = 'email';
-const PASSWORD_INPUT_ID = 'password';
-const NOT_A_ROBOT_CHECKBOX_ID = 'checkbox';
-const SUBMIT_BUTTON_ID = 'submit_button';
-const ERRORS_CONTAINER_ID = 'errors-container';
-const RESULT_PAGE_PATH = './index.success';
-
-const submitButton = document.getElementById(SUBMIT_BUTTON_ID);
+const submitButton = document.getElementById('submit_button');
 
 function getValueById(elementId) {
     const element = document.getElementById(elementId);
@@ -13,23 +6,23 @@ function getValueById(elementId) {
     return type === 'checkbox' ? element.checked : element.value;
 }
 
-function setErrors(inputData) {
-    const errorContainerElement = document.getElementById(ERRORS_CONTAINER_ID);
-    errorContainerElement.classList.add('error');
-    Object.values(inputData).forEach((error) => {
-        const errorElement = document.createElement('p');
-        errorElement.textContent = error;
-        errorContainerElement.appendChild(errorElement);
-    });
+function setErrors(inputData, elementId) {
+    const elementError = document.getElementById(elementId);
+    const errorParagraf = document.createElement('p');
+    errorParagraf.innerHTML = inputData[elementId];
+    errorParagraf.classList.add('error');
+    elementError.insertAdjacentElement('afterend', errorParagraf);
 }
 
 function deleteErrors() {
-    const errorContainerElement = document.getElementById(ERRORS_CONTAINER_ID);
-    errorContainerElement.replaceChildren();
+    const arrorParagrafArray = document.querySelectorAll('.error');
+    arrorParagrafArray.forEach((element) => {
+        element.remove();
+    });
 }
 
 function navigateToResultPage() {
-    window.location.href = RESULT_PAGE_PATH;
+    window.location.href = './index.success';
 }
 
 function deleteWhiteSpaces(text) {
@@ -50,19 +43,20 @@ function validateForm() {
     const password = getValueById('password');
     const checkbox = getValueById('checkbox');
     if (!isEmail(email)) {
-        errorObject[EMAIL_INPUT_ID] = 'error email';
+        errorObject.email = 'It is not an e-mail adres';
+        setErrors(errorObject, 'email');
         error = true;
     }
     if (password.length < 3 || password.length > 8) {
-        errorObject[PASSWORD_INPUT_ID] = 'password have to be not less 3 and not more 8 symbols';
+        errorObject.password = 'Password have to be not less 3 and not more 8 symbols';
+        setErrors(errorObject, 'password');
         error = true;
     }
     if (!checkbox) {
-        errorObject[NOT_A_ROBOT_CHECKBOX_ID] = 'confirm "I am not a robot"';
+        errorObject.label_checkbox = 'Confirm "I am not a robot"';
+        setErrors(errorObject, 'label_checkbox');
         error = true;
     }
-    if (error) {
-        setErrors(errorObject);
-    } else { navigateToResultPage(); }
+    if (!error) navigateToResultPage();
 }
 submitButton.onclick = validateForm;
