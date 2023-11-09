@@ -187,6 +187,13 @@ body {
   padding-left: 30px;
 }
 
+.errors-container {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  margin-top: 10px;
+  color: #ff2e2eba;
+}
+
 .Login__table_btn {
   padding-top: 10px;
 }
