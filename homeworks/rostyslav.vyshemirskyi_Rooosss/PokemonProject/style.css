@@ -307,6 +307,18 @@ body {
   transform: translate(2px, 1px);
 }
 
+.login__error {
+  margin-bottom: 10px;
+  display: block;
+  width: 50%;
+  background-color: #EF4934;
+}
+
+.error {
+  padding: 5px;
+  color: #FFF;
+}
+
 /* Login success */
 
 .login__success-title {
