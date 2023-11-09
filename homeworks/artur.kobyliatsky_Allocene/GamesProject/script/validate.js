@@ -24,35 +24,20 @@ function getValueById(elementId) {
  * Add errors to errors container.
  * @param {Object} inputData in format like: { [input_id]: error_text, ... }
  */
-function setErrorsCheckbox(inputData) {
-    const errorContainerElement = document.getElementById(ERRORS_CONTAINER_CHECKBOX_ID);
-    Object.values(inputData).forEach((error) => {
-        const errorElement = document.createElement('p');
-        errorElement.classList.add('error');
-        errorElement.textContent = error;
-        errorContainerElement.appendChild(errorElement);
-    });
+
+function setErrors(errorContainerId, error) {
+    const errorContainerElement = document.getElementById(errorContainerId);
+    const errorElement = document.createElement('p');
+    errorElement.classList.add('error');
+    errorElement.textContent = error;
+    errorContainerElement.appendChild(errorElement);
 }
 
-function setErrorsPassword(inputData) {
-    const errorContainerElement = document.getElementById(ERRORS_CONTAINER_PASSWORD_ID);
-    Object.values(inputData).forEach((error) => {
-        const errorElement = document.createElement('p');
-        errorElement.classList.add('error');
-        errorElement.textContent = error;
-        errorContainerElement.appendChild(errorElement);
-    });
-}
-
-function setErrorsEmail(inputData) {
-    const errorContainerElement = document.getElementById(ERRORS_CONTAINER_EMAIL_ID);
-    Object.values(inputData).forEach((error) => {
-        const errorElement = document.createElement('p');
-        errorElement.classList.add('error');
-        errorElement.textContent = error;
-        errorContainerElement.appendChild(errorElement);
-    });
-}
+const inputData = {
+    [EMAIL_INPUT_ID]: 'Email must be in format email@localDomen.domen',
+    [PASSWORD_INPUT_ID]: 'Password must be from 8 to 12 characters',
+    [NOT_A_ROBOT_CHECKBOX_ID]: 'Please check the checkbox',
+};
 
 /**
  * Delete all errors from errors container.
@@ -95,28 +80,21 @@ function validateForm() {
 
     if (email.includes(' ')) {
         email = removeSpaces(email);
-        // replace the password with the correct one
         replaceEmailText(document.getElementById(EMAIL_INPUT_ID), newEmail);
     }
 
     if (!isEmail(email)) {
-        setErrorsEmail({
-            [EMAIL_INPUT_ID]: 'Email must be in format email@localDomen.domen',
-        });
+        setErrors(ERRORS_CONTAINER_EMAIL_ID, inputData[EMAIL_INPUT_ID]);
         return;
     }
 
     if (password.length < 8 || password.length > 12) {
-        setErrorsPassword({
-            [PASSWORD_INPUT_ID]: 'Password must be from 8 to 12 characters',
-        });
+        setErrors(ERRORS_CONTAINER_PASSWORD_ID, inputData[PASSWORD_INPUT_ID]);
         return;
     }
 
     if (!isChecked) {
-        setErrorsCheckbox({
-            [NOT_A_ROBOT_CHECKBOX_ID]: 'Please check the checkbox',
-        });
+        setErrors(ERRORS_CONTAINER_CHECKBOX_ID, inputData[NOT_A_ROBOT_CHECKBOX_ID]);
         return;
     }
 
