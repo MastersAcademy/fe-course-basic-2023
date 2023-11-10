@@ -14,6 +14,7 @@
   display: flex;
   justify-content: center;
   margin-top: 80px;
+  margin-bottom: 60px;
   font-size: 48px;
   font-weight: 700;
 }
@@ -110,7 +111,7 @@
   justify-content: center;
 }
 
-span {
+.visual-counting span {
   font-size: 48px;
   color: #EF4934;
 }

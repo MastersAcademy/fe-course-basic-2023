@@ -51,10 +51,10 @@
                                     type="email"
                                     name="email"
                                     id="email"
-                                    class="email"
+                                    class="form__input"
                                     placeholder="Enter your email address"
-                                    required
                                 >
+                                <div id="errors-container__email"></div>
                             </div>
                             <div class="form__password">
                                 <label for="password" class="label-password">Password</label>
@@ -62,16 +62,19 @@
                                     type="password"
                                     name="password"
                                     id="password"
-                                    class="password"
+                                    class="form__input"
                                     placeholder="Enter your password"
-                                    required
                                 >
+                                <div id="errors-container__password"></div>
                             </div>
-                            <div class="form__checkbox">
-                                <input type="checkbox" id="checkbox" class="checkbox" required>
-                                <label for="checkbox">I’m not a robot</label>
+                            <div>
+                                <div class="form__checkbox">
+                                    <input type="checkbox" id="checkbox" class="checkbox">
+                                    <label for="checkbox">I’m not a robot</label>
+                                </div>
+                                <div id="errors-container__robot"></div>
                             </div>
-                            <button type="submit" class="form__button">Login</button>
+                            <button type="button" id="button" class="form__button">Login</button>
                         </form>
                     </div>
                 </div>
@@ -101,5 +104,6 @@
                 document.querySelector('.header__menu').classList.toggle('open');
             })
         </script>
+        <script src="script/script.js"></script>
     </body>
 </html>

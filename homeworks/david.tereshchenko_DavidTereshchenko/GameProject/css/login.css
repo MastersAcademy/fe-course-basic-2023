@@ -30,26 +30,25 @@
 .login__form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   row-gap: 40px;
   font-weight: 500;
 }
 
-/* Style fot email */
+/* Style for email */
 
 .form__email {
   display: flex;
   flex-direction: column;
-  row-gap: 22px;
 }
 
-.email {
+.form__input {
   width: 100%;
   font-size: 14px;
   font-weight: 400;
   border: 1px solid #A9A9A9;
   border-radius: 6px;
   padding: 26px 0 26px 20px;
+  margin-top: 22px;
 }
 
 /* Style fot password */
@@ -57,27 +56,17 @@
 .form__password {
   display: flex;
   flex-direction: column;
-  row-gap: 22px;
-}
-
-.password {
-  width: 100%;
-  font-size: 18px;
-  font-weight: 400;
-  border: 1px solid #A9A9A9;
-  border-radius: 6px;
-  padding: 24px 0 23px 20px;
-  letter-spacing: 2px;
 }
 
 /* Style fot checkbox */
 
 .form__checkbox {
   display: flex;
+  flex-direction: row;
   font-size: 14px;
   font-weight: 400;
-  gap: 12px;
   align-items: center;
+  gap: 12px;
   cursor: pointer;
 }
 
@@ -112,4 +101,12 @@
   justify-content: center;
   color: #FFF;
   font-weight: 600;
+}
+
+/* Error style */
+
+.error {
+  font-size: 14px;
+  color: #EF4934;
+  margin-top: 10px;
 }
