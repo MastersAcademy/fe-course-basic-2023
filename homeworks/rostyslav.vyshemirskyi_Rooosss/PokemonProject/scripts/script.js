@@ -61,26 +61,24 @@ function validateForm() {
     deleteErrors();
 
     if (!email) {
-        setErrors({ [EMAIL_INPUT_ID]: 'the email field must be filled' });
-        return false;
-    } if (!isEmail(email)) {
-        setErrors({ [EMAIL_INPUT_ID]: 'email is not valid' });
-        return false;
+        setErrors({ [EMAIL_INPUT_ID]: 'The email field must be filled' });
+    } else if (!isEmail(email)) {
+        setErrors({ [EMAIL_INPUT_ID]: 'Email is not valid' });
     }
 
     if (!password) {
-        setErrors({ [PASSWORD_INPUT_ID]: 'the password field must be filled' });
-        return false;
-    } if (password.length < 8 || password.length > 12) {
-        setErrors({ [PASSWORD_INPUT_ID]: 'password is very short or long' });
-        return false;
+        setErrors({ [PASSWORD_INPUT_ID]: 'The password field must be filled' });
+    } else if (password.length < 8 || password.length > 12) {
+        setErrors({ [PASSWORD_INPUT_ID]: 'Password must be between 8 and 12 characters' });
     }
 
     if (!check) {
-        setErrors({ [NOT_A_ROBOT_CHECKBOX_ID]: 'please check this element' });
-        return false;
+        setErrors({ [NOT_A_ROBOT_CHECKBOX_ID]: 'Please check not a robot checkbox' });
     }
-    return navigateToResultPage();
+
+    if (isEmail(email) && password && check) {
+        navigateToResultPage();
+    }
 }
 
 submitButton.onclick = validateForm;
