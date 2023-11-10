@@ -10,8 +10,8 @@
 .field {
   display: flex;
   column-gap: 20px;
-  margin: 70px;
-  padding-left: 200px;
+  margin: 10px;
+  padding-left: 33%;
   font-family: Roboto, sans-serif;
   color: #221F1F;
   font-size: 22px;
