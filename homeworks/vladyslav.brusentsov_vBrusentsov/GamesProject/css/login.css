@@ -123,3 +123,14 @@ body {
   line-height: normal;
   color: #FFF;
 }
+
+.error {
+  width: 100%;
+  display: flex;
+  gap: none;
+  margin: 0;
+  color: rgb(243, 32, 32);
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 16px;
+}
