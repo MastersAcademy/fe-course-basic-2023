@@ -73,29 +73,20 @@ function replaceEmailText(inputEmailElement, newEmailText) {
 function validateForm() {
     deleteErrors();
 
-    let email = getValueById(EMAIL_INPUT_ID);
+    const email = getValueById(EMAIL_INPUT_ID);
     const password = getValueById(PASSWORD_INPUT_ID);
     const isChecked = getValueById(NOT_A_ROBOT_CHECKBOX_ID);
 
     let isValid = true;
 
-    if (email) {
-        email = removeSpaces(email);
-        replaceEmailText(document.getElementById(EMAIL_INPUT_ID), removeSpaces(email));
-    }
+    replaceEmailText(document.getElementById(EMAIL_INPUT_ID), removeSpaces(email));
 
-    if (!email) {
-        setErrors(ERRORS_CONTAINER_EMAIL_ID, inputData[EMAIL_INPUT_ID]);
-        isValid = false;
-    } else if (!isEmail(email)) {
+    if (!email.length || !isEmail(email)) {
         setErrors(ERRORS_CONTAINER_EMAIL_ID, inputData[EMAIL_INPUT_ID]);
         isValid = false;
     }
 
-    if (!password) {
-        setErrors(ERRORS_CONTAINER_PASSWORD_ID, inputData[PASSWORD_INPUT_ID]);
-        isValid = false;
-    } else if (password.length < 8 || password.length > 12) {
+    if (!password.length || password.length < 8 || password.length > 12) {
         setErrors(ERRORS_CONTAINER_PASSWORD_ID, inputData[PASSWORD_INPUT_ID]);
         isValid = false;
     }
