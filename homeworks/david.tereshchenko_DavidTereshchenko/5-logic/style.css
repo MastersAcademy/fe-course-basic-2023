@@ -1,0 +1,101 @@
+@import "../GameProject/css/default/default.css";
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  max-width: 575px;
+  margin: 0 auto;
+}
+
+.number__container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  max-width: 100%;
+  gap: 30px;
+  border-radius: 6px;
+}
+
+.number__block {
+  display: flex;
+  margin-top: 15px;
+  max-width: 350px;
+  padding: 12px 10px;
+  border-radius: 6px;
+  border: 1px solid #A9A9A9;
+}
+
+.operator__block {
+  display: flex;
+  padding: 12px 10px;
+  border-radius: 6px;
+  border: 1px solid #A9A9A9;
+}
+
+.operator {
+  max-width: 50px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.button {
+  padding: 14px;
+  border-radius: 6px;
+  border: 1px solid #A9A9A9;
+  max-width: 350px;
+  font-size: 18px;
+  background-color: #000;
+  color: #FFF;
+}
+
+.title {
+  font-size: 48px;
+}
+
+.result {
+  display: none;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #A9A9A9;
+  align-items: center;
+}
+
+.count-block {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+
+.visual-counting {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  letter-spacing: .4rem;
+}
+
+.error {
+  border: 1px solid #EF4934;
+}
+
+.oper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 60px;
+}
+
+.result__block p {
+  font-size: 60px;
+}
+
+.equals {
+  font-size: 60px;
+}

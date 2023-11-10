@@ -38,7 +38,7 @@
 .menu__list {
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(4, auto);
   align-items: center;
   justify-content: end;
   max-width: 100%;

@@ -1,7 +1,8 @@
-/* add header and default selectors */
+/* add header and default */
 
 @import "header/header.css";
-@import "default selectors/default.css";
+@import "default/default.css";
+@import "Footer/footer.css";
 
 .success-block {
   height: 70%;

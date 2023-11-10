@@ -1,0 +1,32 @@
+/*Footer*/
+
+.footer {
+  display: flex;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #221F1F;
+  margin-top: 46px;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.container__image {
+  display: flex;
+  flex-direction: row;
+  gap: 33px;
+  margin-top: 30px;
+}
+
+.container__text {
+  color: #FFF;
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 40px;
+}

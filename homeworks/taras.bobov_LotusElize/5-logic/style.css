@@ -1,0 +1,109 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  color: #221F1F;
+  margin: 0;
+  padding: 0;
+}
+
+.cal-game__header {
+  background-color: #EF4A34;
+  height: 80px;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cal-game-main {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 160px;
+  margin-left: 53px;
+}
+/* */
+
+.cal-game-main__title .cal-main__heading {
+  color: #221F1F;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px;
+  margin-bottom: 60px;
+}
+/* */
+
+.cal-game-main__field {
+  display: flex;
+  column-gap: 10px;
+  margin: 20px;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.calculator__input-number,.calculator__btn {
+  outline: none;
+  border: 1px solid #221F1F;
+  width: 122px;
+  height: 36px;
+  text-align: center;
+  border-radius: 6px;
+  background-color: #FFFF;
+  cursor: pointer;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.calculator__btn {
+  background-color: #EF4A34;
+  color: #FFF;
+  border: none;
+}
+
+.custom__select {
+  width: 114px;
+  position: relative;
+}
+
+.calculator__select {
+  appearance: none;
+  width: 100%;
+  height: 36px;
+  border-radius: 6px;
+  border: 1px solid #221F1F;
+  background-color: #FFF;
+  padding: 0 12px;
+}
+
+.custom__select::before {
+  content: url("./img/arrow.svg");
+  width: 20px;
+  height: 10px;
+  position: absolute;
+  right: 10px;
+  pointer-events: none;
+  top: 13px;
+}
+
+.calculator__result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

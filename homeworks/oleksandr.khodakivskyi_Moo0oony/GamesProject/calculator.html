@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Basic JS</title>
+
+        <link rel="stylesheet" href="./styles/style.css">
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="header_flexbox">
+                <img src="./images/logo.svg" class="logo" alt="logo">
+                <nav>
+                    <ul class="nav_items">
+                        <li class="nav_item">
+                            <a href="./calculator.html">Calculator</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="./games.html">Games</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="./index.html">About</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="./login-page.html">Login</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <h1 class="calculator_main_header">Calculate Games</h1>
+            <div class="calculator_field">
+                <label>
+                    <input class="values_input" id="firstValue">
+                </label>
+                <label>
+                    <select name="operation" class="operations_list" id="operation">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="/">/</option>
+                        <option value="*">*</option>
+                        <option value="**">**</option>
+                    </select>
+                </label>
+                <label>
+                    <input class="values_input" id="secondValue">
+                </label>
+                <button class="calculate_button" id="calculate" type="button">=</button>
+                <span class="result_text" id="result"></span>
+            </div>
+            <div class="result_grid">
+                <div class="result_headers" id="result_headers"></div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer_items">
+                <ul class="social_icons">
+                    <li class="facebook">
+                        <a href="https://www.facebook.com/oleksandr.khodakivskyi">
+                            <img src="./images/fb.svg" alt="facebook_icon">
+                        </a>
+                    </li>
+                    <li class="linkedin">
+                        <a href="https://www.linkedin.com/in/oleksandrkhodakivskyi/">
+                            <img src="./images/linkedin.svg" alt="linkedin_icon">
+                        </a>
+                    </li>
+                    <li class="instagram">
+                        <a href="https://www.instagram.com/m00oony/">
+                            <img src="./images/insta.svg" alt="instagram_icon">
+                        </a>
+                    </li>
+                </ul>
+                <h3 class="copyright">
+                    Made with 💗 on course <a
+                        href="https://www.mastersacademy.education/frontend-for-beginners-it">'Frontend for
+                        beginners'</a> from Masters Academy in 2023, by Oleksandr Khodakivskyi
+                </h3>
+            </div>
+        </footer>
+
+        <script src="./js/script.js"></script>
+        <script src="./js/homework.js"></script>
+    </body>
+
+</html>
