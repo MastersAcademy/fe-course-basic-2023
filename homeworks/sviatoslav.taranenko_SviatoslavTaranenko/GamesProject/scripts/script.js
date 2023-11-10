@@ -1,9 +1,9 @@
-const EMAIL_INPUT_ID = "email-input-id";
-const PASSWORD_INPUT_ID = "password-input-id";
-const NOT_A_ROBOT_CHECKBOX_ID = "not-a-robot-checkbox-id";
-const SUBMIT_BUTTON_ID = "submit-button-id";
-const ERRORS_CONTAINER_ID = "errors-container";
-const RESULT_PAGE_PATH = "LoginDone.html";
+const EMAIL_INPUT_ID = 'email-input-id';
+const PASSWORD_INPUT_ID = 'password-input-id';
+const NOT_A_ROBOT_CHECKBOX_ID = 'not-a-robot-checkbox-id';
+const SUBMIT_BUTTON_ID = 'submit-button-id';
+const ERRORS_CONTAINER_ID = 'errors-container';
+const RESULT_PAGE_PATH = 'LoginDone.html';
 
 const submitButton = document.getElementById(SUBMIT_BUTTON_ID);
 /**
@@ -13,8 +13,8 @@ const submitButton = document.getElementById(SUBMIT_BUTTON_ID);
  */
 function getValueById(elementId) {
     const element = document.getElementById(elementId);
-    const type = element.getAttribute("type");
-    return type === "checkbox" ? element.checked : element.value;
+    const type = element.getAttribute('type');
+    return type === 'checkbox' ? element.checked : element.value;
 }
 
 /**
@@ -25,7 +25,7 @@ function setErrors(inputData) {
     const errorContainerElement = document.getElementById(ERRORS_CONTAINER_ID);
     Object.values(inputData).forEach((error) => {
         const errorElement = document.createElement("p");
-        errorElement.classList.add("error");
+        errorElement.classList.add('error');
         errorElement.textContent = error;
         errorContainerElement.appendChild(errorElement);
     });
@@ -59,13 +59,13 @@ function validateForm() {
     const checkbox = getValueById(NOT_A_ROBOT_CHECKBOX_ID);
 
     if (!isEmail(email)) {
-        errors [EMAIL_INPUT_ID] = "Enter correct e-mail";
+        errors [EMAIL_INPUT_ID] = 'Enter correct e-mail';
     }
     if (password.length < 8 || password.length > 12) {
-        errors [PASSWORD_INPUT_ID] = "Password must be from 8 to 12 symbols";
+        errors [PASSWORD_INPUT_ID] = 'Password must be from 8 to 12 symbols';
     }
     if (!checkbox) {
-        errors [NOT_A_ROBOT_CHECKBOX_ID] = "Are you a robot?";
+        errors [NOT_A_ROBOT_CHECKBOX_ID] = 'Are you a robot?';
     }
     if (Object.keys(errors).length > 0) {
         setErrors(errors);
