@@ -24,7 +24,7 @@ function getValueById(elementId) {
 function setErrors(inputData) {
     const errorContainerElement = document.getElementById(ERRORS_CONTAINER_ID);
     Object.values(inputData).forEach((error) => {
-        const errorElement = document.createElement("p");
+        const errorElement = document.createElement('p');
         errorElement.classList.add('error');
         errorElement.textContent = error;
         errorContainerElement.appendChild(errorElement);
@@ -59,13 +59,13 @@ function validateForm() {
     const checkbox = getValueById(NOT_A_ROBOT_CHECKBOX_ID);
 
     if (!isEmail(email)) {
-        errors [EMAIL_INPUT_ID] = 'Enter correct e-mail';
+        errors[EMAIL_INPUT_ID] = 'Enter correct e-mail';
     }
     if (password.length < 8 || password.length > 12) {
-        errors [PASSWORD_INPUT_ID] = 'Password must be from 8 to 12 symbols';
+        errors[PASSWORD_INPUT_ID] = 'Password must be from 8 to 12 symbols';
     }
     if (!checkbox) {
-        errors [NOT_A_ROBOT_CHECKBOX_ID] = 'Are you a robot?';
+        errors[NOT_A_ROBOT_CHECKBOX_ID] = 'Are you a robot?';
     }
     if (Object.keys(errors).length > 0) {
         setErrors(errors);
