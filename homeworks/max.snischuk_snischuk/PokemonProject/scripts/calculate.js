@@ -15,7 +15,7 @@ function calculate(firstValue, secondValue, operation) {
     const firstNumber = Number(firstValue);
     const secondNumber = Number(secondValue);
 
-    if (firstValue.trim() === '' || secondValue === '') return 'Enter a number';
+    if (firstValue === '' || secondValue === '') return 'Enter a number';
     if (Number.isNaN(firstNumber) || Number.isNaN(secondNumber)) return 'Enter a number';
 
     switch (operation) {
@@ -34,7 +34,7 @@ function calculate(firstValue, secondValue, operation) {
                 break;
             }
 
-            result = (firstNumber / secondNumber).toFixed(2);
+            result = Number.parseFloat((firstNumber / secondNumber).toFixed(2));
             break;
         default:
             result = 'Choose a valid operation';
