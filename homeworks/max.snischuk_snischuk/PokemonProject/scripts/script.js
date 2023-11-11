@@ -60,13 +60,40 @@ function createCard() {
     const card = document.createElement('li');
     card.classList.add('calculator__math-output-card');
 
-    const img = document.createElement('img');
-    img.classList.add('calculator__math-output-card-img');
-    img.src = './images/urshifu.png';
-    img.alt = 'urshifu';
+    const cardTemplate = `
+        <article class="card-pokemon">
+            <div class="card-pokemon__header">
+                <img class="card-pokemon__image" src="./images/urshifu.png" alt="urshifu">
+                <h3 class="card-pokemon__title">Urshifu</h3>
+            </div>
+            <ul class="card-pokemon__body">
+                <li class="card-pokemon__text">
+                    <span class="card-pokemon__text--bold">Height: </span>6' 03"
+                </li>
+                <li class="card-pokemon__text">
+                    <span class="card-pokemon__text--bold">Weight: </span>231.5 lbs
+                </li>
+                <li class="card-pokemon__text">
+                    <span class="card-pokemon__text--bold">Number: </span>0002
+                </li>
+                <li class="card-pokemon__text">
+                    <span class="card-pokemon__text--bold">Type: </span>
+                    <button class="card-pokemon__btn card-pokemon__btn--yellow"
+                        type="button">Fighting</button>
+                    <button class="card-pokemon__btn card-pokemon__btn--red" type="button">Dark</button>
+                </li>
+                <li class="card-pokemon__text">
+                    <span class="card-pokemon__text--bold">Weaknesses: </span>
+                    <button class="card-pokemon__btn card-pokemon__btn--pink"
+                        type="button">Fairy</button>
+                    <button class="card-pokemon__btn card-pokemon__btn--purple"
+                        type="button">Flying</button>
+                </li>
+            </ul>
+        </article>
+    `;
 
-    card.appendChild(img);
-
+    card.innerHTML = cardTemplate;
     return card;
 }
 
@@ -74,12 +101,6 @@ function createPartialCard(size) {
     const pokemonCard = createCard();
     pokemonCard.style.clipPath = `inset(0 0 ${100 - size * 100}% 0)`;
     return pokemonCard;
-}
-
-function createColumn() {
-    const column = document.createElement('ul');
-    column.classList.add('calculator__column');
-    return column;
 }
 
 function addCardsToList(count) {
@@ -98,6 +119,12 @@ function addCardsToList(count) {
     }
 
     return pokemonsCardsList;
+}
+
+function overlapStyle(cardsCount, gridContainer) {
+    const fullCountRow = Math.ceil(Number(cardsCount));
+    if (!(gridContainer instanceof Element) || fullCountRow < 0) return;
+    gridContainer.style.gridTemplateRows = `repeat(${fullCountRow + 1}, 80px)`;
 }
 
 function firstOutputOperandHandler() {
@@ -122,21 +149,10 @@ function firstOutputOperandHandler() {
     if (pokemonsCardsCount <= MAX_CARDS_IN_COLUMN) {
         clearElement(MATH_FIRST_OPERAND_ELEMENT);
 
-        const pokemonsCardsList = document.createElement('ul');
-        pokemonsCardsList.classList.add('calculator__column');
+        const cardsList = addCardsToList(pokemonsCardsCount);
+        overlapStyle(pokemonsCardsCount, cardsList);
 
-        for (let i = 1; i <= pokemonsCardsCount; i++) {
-            const pokemonCard = createCard();
-            pokemonsCardsList.appendChild(pokemonCard);
-        }
-
-        const partialCardSize = pokemonsCardsCount - Math.floor(pokemonsCardsCount);
-        if (partialCardSize > 0) {
-            const partialCard = createPartialCard(partialCardSize);
-            pokemonsCardsList.appendChild(partialCard);
-        }
-
-        addElement(MATH_FIRST_OPERAND_ELEMENT, pokemonsCardsList);
+        addElement(MATH_FIRST_OPERAND_ELEMENT, cardsList);
     }
 }
 
@@ -166,14 +182,14 @@ function lastOutputOperandHandler() {
 
         const columnCount = Math.ceil(pokemonsCountResult / MAX_CARDS_IN_COLUMN);
         let remainingCards = pokemonsCountResult;
+
         for (let i = 1; i <= columnCount; i++) {
-            const column = createColumn();
             const cardsInCurrentColumn = Math.min(MAX_CARDS_IN_COLUMN, remainingCards);
 
             const cardsList = addCardsToList(cardsInCurrentColumn);
-            column.appendChild(cardsList);
-            addElement(MATH_LAST_OPERAND_ELEMENT, column);
+            overlapStyle(cardsInCurrentColumn, cardsList);
 
+            addElement(MATH_LAST_OPERAND_ELEMENT, cardsList);
             remainingCards -= cardsInCurrentColumn;
         }
     }
