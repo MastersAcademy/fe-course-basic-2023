@@ -60,13 +60,40 @@ function createCard() {
     const card = document.createElement('li');
     card.classList.add('calculator__math-output-card');
 
-    const img = document.createElement('img');
-    img.classList.add('calculator__math-output-card-img');
-    img.src = './images/urshifu.png';
-    img.alt = 'urshifu';
+    const cardTemplate = `
+        <article class="card-pokemon">
+            <div class="card-pokemon__header">
+                <img class="card-pokemon__image" src="./images/urshifu.png" alt="urshifu">
+                <h3 class="card-pokemon__title">Urshifu</h3>
+            </div>
+            <ul class="card-pokemon__body">
+                <li class="card-pokemon__text">
+                    <span class="card-pokemon__text--bold">Height: </span>6' 03"
+                </li>
+                <li class="card-pokemon__text">
+                    <span class="card-pokemon__text--bold">Weight: </span>231.5 lbs
+                </li>
+                <li class="card-pokemon__text">
+                    <span class="card-pokemon__text--bold">Number: </span>0002
+                </li>
+                <li class="card-pokemon__text">
+                    <span class="card-pokemon__text--bold">Type: </span>
+                    <button class="card-pokemon__btn card-pokemon__btn--yellow"
+                        type="button">Fighting</button>
+                    <button class="card-pokemon__btn card-pokemon__btn--red" type="button">Dark</button>
+                </li>
+                <li class="card-pokemon__text">
+                    <span class="card-pokemon__text--bold">Weaknesses: </span>
+                    <button class="card-pokemon__btn card-pokemon__btn--pink"
+                        type="button">Fairy</button>
+                    <button class="card-pokemon__btn card-pokemon__btn--purple"
+                        type="button">Flying</button>
+                </li>
+            </ul>
+        </article>
+    `;
 
-    card.appendChild(img);
-
+    card.innerHTML = cardTemplate;
     return card;
 }
 
@@ -97,7 +124,7 @@ function addCardsToList(count) {
 function overlapStyle(cardsCount, gridContainer) {
     const fullCountRow = Math.ceil(Number(cardsCount));
     if (!(gridContainer instanceof Element) || fullCountRow < 0) return;
-    gridContainer.style.gridTemplateRows = `repeat(${fullCountRow + 1}, 45px)`;
+    gridContainer.style.gridTemplateRows = `repeat(${fullCountRow + 1}, 80px)`;
 }
 
 function firstOutputOperandHandler() {

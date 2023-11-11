@@ -1,4 +1,5 @@
 @import "./header.css";
+@import "./card.css";
 
 * {
   margin: 0;
@@ -127,12 +128,10 @@ body {
   font-size: 48px;
   line-height: 32px;
   font-weight: 700;
-  display: grid;
-  column-gap: 15px;
-  row-gap: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(0, 90px));
-  justify-items: center;
-  align-items: start;
+  column-gap: 20px;
+  row-gap: 250px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .calculator__math-output-cards {
@@ -144,14 +143,6 @@ body {
   font-size: 48px;
   line-height: 32px;
   font-weight: 700;
-  width: 90px;
-  height: 90px;
-}
-
-.calculator__math-output-card-img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  border-radius: 8px;
-  box-shadow: 0 0 6px rgba(0, 0, 0, .25);
+  width: 255px;
+  height: 355px;
 }
