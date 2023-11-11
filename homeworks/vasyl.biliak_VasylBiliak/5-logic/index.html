@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <title>Calculate dr. Strange</title>
+    </head>
+    <body>
+        <main class="wrapper-calculator">
+            <p class="calculator-title">Calculate dr. Strange</p>
+            <p class="calculator-description__text">Open console to see the results</p>
+            <div class="calculator-description">
+                <p class="calculator-description__text">max 10</p>
+                <p class="calculator-description__text">max 100</p>
+            </div>
+
+            <section class="calculator">
+                <label class="calculator__label">
+                    Number 1
+                    <input class="input_number" id="number1" type="number" placeholder="Enter the number 1" maxlength="1" max="10" min="-10">
+                </label>
+                <label class="calculator__label">
+                    Operation:
+                    <select class="select-option" id="operatorSelect">
+                        <option class="selected-option" value="+">+</option>
+                        <option class="selected-option" value="-">-</option>
+                        <option class="selected-option" value="*">*</option>
+                        <option class="selected-option" value="/">/</option>
+                        <option class="selected-option" value="%">%</option>
+                        <option class="selected-option" value="**">**</option>
+                    </select>
+                </label>
+                <label class="calculator__label">Number 2
+                    <input class="input_number" id="number2" type="number" placeholder="Enter the number 2" max="100" min="-100">
+                </label>
+                <label class="calculator__label"> Equals
+                    <button class="select-option" id="equals" type="button">=</button>
+                </label>
+                <label class="calculator__label">
+                    Result:
+                    <h1 class="result" id="result"></h1>
+                </label>
+                <!--quantity foto -->
+                <div class="calculator__input-foto result">
+                    <div class="img" id="input-quantity-img">
+                    </div>
+                </div>
+                <!--quantity foto -->
+
+                <!--selected Operator value 2 and =-->
+                <div class="calculator__label-foto calculator__label" id="selectedOperator">
+                </div>
+
+                <div class="calculator__label-foto calculator__label" id="valueNumber2">
+                </div>
+                <div class="calculator__label-foto calculator__label">
+                    =
+                </div>
+                <div class="calculator__input-foto result">
+                    <div class="img" id="photo-container">
+                        <!--                           -->
+                    </div>
+                </div>
+            </section>
+            <script src="basics.js"></script>
+        </main>
+    </body>
+</html>

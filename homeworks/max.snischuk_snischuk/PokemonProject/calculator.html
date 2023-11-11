@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./css/calculator.css">
+        <link rel="stylesheet" href="./styles/calculator.css">
         <title>Calculator</title>
     </head>
     <body>
@@ -29,31 +29,24 @@
             </nav>
         </header>
         <main class="calculator">
-            <div class="calculator__container">
+            <div class="calculator__container" data-math-container>
                 <h1 class="calculator__title">Calculate pokemons</h1>
                 <div class="calculator__field">
-                    <label>
-                        <input class="calculator__input" data-math-value="first" placeholder="Enter first value...">
-                    </label>
-                    <label>
-                        <select class="calculator__select-math-sign" name="operation" data-math-operation>
-                            <option value="+">+</option>
-                            <option value="-">-</option>
-                            <option value="/">/</option>
-                            <option value="*">*</option>
-                            <option value="**">**</option>
-                        </select>
-                    </label>
-                    <label>
-                        <input class="calculator__input" data-math-value="second" placeholder="Enter second value...">
-                    </label>
-                    <button class="calculator__btn" data-math-calculate type="button">=</button>
-                    <span class="calculator__math-output" data-math-output></span>
+                    <input class="calculator__input" data-math-value="first" placeholder="Enter first value...">
+                    <select class="calculator__select-math-sign" name="operation" data-math-operation>
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="/">/</option>
+                        <option value="*">*</option>
+                        <option value="**">**</option>
+                    </select>
+                    <input class="calculator__input" data-math-value="second" placeholder="Enter second value...">
+                    <button class="calculator__btn" data-math-calculate-btn type="button">=</button>
+                    <span class="calculator__math-output" data-math-output-value></span>
                 </div>
-                <div class="calculator__math-output-with-pokemons" data-math-output-pokemons></div>
             </div>
         </main>
-        <script src="./js/script.js"></script>
-        <script src="./js/calculate.js"></script>
+        <script src="./scripts/script.js"></script>
+        <script src="./scripts/calculate.js"></script>
     </body>
 </html>
