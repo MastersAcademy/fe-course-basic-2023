@@ -76,12 +76,6 @@ function createPartialCard(size) {
     return pokemonCard;
 }
 
-function createColumn() {
-    const column = document.createElement('ul');
-    column.classList.add('calculator__column');
-    return column;
-}
-
 function addCardsToList(count) {
     const pokemonsCardsList = document.createElement('ul');
     pokemonsCardsList.classList.add('calculator__column');
@@ -98,6 +92,12 @@ function addCardsToList(count) {
     }
 
     return pokemonsCardsList;
+}
+
+function overlapStyle(cardsCount, gridContainer) {
+    const fullCountRow = Math.ceil(Number(cardsCount));
+    if (!(gridContainer instanceof Element) || fullCountRow < 0) return;
+    gridContainer.style.gridTemplateRows = `repeat(${fullCountRow + 1}, 45px)`;
 }
 
 function firstOutputOperandHandler() {
@@ -122,21 +122,10 @@ function firstOutputOperandHandler() {
     if (pokemonsCardsCount <= MAX_CARDS_IN_COLUMN) {
         clearElement(MATH_FIRST_OPERAND_ELEMENT);
 
-        const pokemonsCardsList = document.createElement('ul');
-        pokemonsCardsList.classList.add('calculator__column');
+        const cardsList = addCardsToList(pokemonsCardsCount);
+        overlapStyle(pokemonsCardsCount, cardsList);
 
-        for (let i = 1; i <= pokemonsCardsCount; i++) {
-            const pokemonCard = createCard();
-            pokemonsCardsList.appendChild(pokemonCard);
-        }
-
-        const partialCardSize = pokemonsCardsCount - Math.floor(pokemonsCardsCount);
-        if (partialCardSize > 0) {
-            const partialCard = createPartialCard(partialCardSize);
-            pokemonsCardsList.appendChild(partialCard);
-        }
-
-        addElement(MATH_FIRST_OPERAND_ELEMENT, pokemonsCardsList);
+        addElement(MATH_FIRST_OPERAND_ELEMENT, cardsList);
     }
 }
 
@@ -166,14 +155,14 @@ function lastOutputOperandHandler() {
 
         const columnCount = Math.ceil(pokemonsCountResult / MAX_CARDS_IN_COLUMN);
         let remainingCards = pokemonsCountResult;
+
         for (let i = 1; i <= columnCount; i++) {
-            const column = createColumn();
             const cardsInCurrentColumn = Math.min(MAX_CARDS_IN_COLUMN, remainingCards);
 
             const cardsList = addCardsToList(cardsInCurrentColumn);
-            column.appendChild(cardsList);
-            addElement(MATH_LAST_OPERAND_ELEMENT, column);
+            overlapStyle(cardsInCurrentColumn, cardsList);
 
+            addElement(MATH_LAST_OPERAND_ELEMENT, cardsList);
             remainingCards -= cardsInCurrentColumn;
         }
     }

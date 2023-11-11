@@ -110,15 +110,16 @@ body {
 
 .calculator__math-output-list {
   list-style: none;
-  display: flex;
-  gap: 80px;
+  display: grid;
+  grid-template-columns: repeat(4, auto) 1fr;
   align-items: center;
+  gap: 30px;
 }
 
 .calculator__column {
   list-style: none;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .calculator__math-output-item {
@@ -126,11 +127,13 @@ body {
   font-size: 48px;
   line-height: 32px;
   font-weight: 700;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 60px;
+  display: grid;
+  column-gap: 15px;
+  row-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(0, 90px));
+  justify-items: center;
+  align-items: start;
 }
-
 
 .calculator__math-output-cards {
   list-style: none;
@@ -141,13 +144,14 @@ body {
   font-size: 48px;
   line-height: 32px;
   font-weight: 700;
-  margin-top: -50px;
+  width: 90px;
+  height: 90px;
 }
 
 .calculator__math-output-card-img {
   display: block;
-  width: 90px;
-  height: 90px;
+  width: 100%;
+  height: 100%;
   border-radius: 8px;
   box-shadow: 0 0 6px rgba(0, 0, 0, .25);
 }
