@@ -37,21 +37,22 @@
                 <section class="login">
                     <div class="login__inner">
                         <h1 class="login__title">Login page</h1>
-                        <form class="login__form" action="success.html">
+                        <form class="login__form">
                             <label class="login__form-label" for="email">Email</label>
-                            <input class="login__form-input" type="email" id="email" placeholder="Enter your email address" required>
+                            <input id="email" class="login__form-input" type="email" placeholder="Enter your email address">
 
                             <label class="login__form-label" for="password">Password</label>
-                            <input class="login__form-input" type="password" id="password" placeholder="Enter your password" required>
+                            <input id="password" class="login__form-input" type="password" placeholder="Enter your password">
 
-                            <input class="login__form-checkbox" type="checkbox" id="check" required>
+                            <input id="check" class="login__form-checkbox" type="checkbox">
                             <label class="login__form-label_check" for="check">I’m not a robot</label>
-
-                            <input class="login__form-submit" type="submit" value="Login">
+                            <div id="errors-container" class="login__error"></div>
+                            <button id="submit-button" class="login__form-submit" type="button">Login</button>
                         </form>
                     </div>
                 </section>
             </div>
         </main>
+        <script src="./scripts/script.js"></script>
     </body>
 </html>
