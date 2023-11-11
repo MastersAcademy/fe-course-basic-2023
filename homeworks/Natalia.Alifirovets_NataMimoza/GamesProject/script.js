@@ -54,7 +54,7 @@ function isEmail(email) {
 function validateForm() {
     deleteErrors();
 
-    const email = getValueById(EMAIL_INPUT_ID).replace(/\s/g, '', ' ');
+    const email = getValueById(EMAIL_INPUT_ID).replace(/\s/g, '');
     const password = getValueById(PASSWORD_INPUT_ID);
     const checkboxChecked = getValueById(NOT_A_ROBOT_CHECKBOX_ID);
 
@@ -77,8 +77,6 @@ function validateForm() {
     } else {
         navigateToResultPage();
     }
-
-    // console.info("Підготовка успішна");
 }
 
 submitButton.onclick = validateForm;
