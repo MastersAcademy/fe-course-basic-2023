@@ -22,7 +22,7 @@ function deleteErrors() {
 }
 
 function navigateToResultPage() {
-    window.location.href = './index.success';
+    window.location.href = 'success.html';
 }
 
 function deleteWhiteSpaces(text) {

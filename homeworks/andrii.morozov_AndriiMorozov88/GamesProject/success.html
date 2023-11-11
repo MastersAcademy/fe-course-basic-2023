@@ -3,9 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Login</title>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="header.css">
+        <title>Success</title>
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="styles/header.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Roboto:wght@500&display=swap" rel="stylesheet">
@@ -21,10 +21,10 @@
             <div class="header__navigation">
                 <ul class="navigation">
                     <li class="navigation__line">
-                        <a class="navigation__link" href="index_cards.html">Games</a>
+                        <a class="navigation__link" href="cards.html">Games</a>
                     </li>
                     <li class="navigation__line">
-                        <a class="navigation__link" href="index_about.html">About</a>
+                        <a class="navigation__link" href="about.html">About</a>
                     </li>
                     <li class="navigation__line">
                         <a class="navigation__link" href="calculator.html">Calculator</a>
@@ -36,24 +36,12 @@
             </div>
         </header>
         <main class="log-in__main">
-            <h1 class="log-in__heading main__heading">Login page</h1>
-            <form action="index.success.html" target="_self" method="post">
+            <h1 class="log-in__heading">Logged</h1>
+            <form action="about.html" target="_self" method="post">
                 <fieldset class="log-in">
-                    <label for="email" class="log-in__label">
-                        <b>Email</b>
-                    </label>
-                    <input type="text" id="email" class="log-in__input" data-error placeholder="Enter your email adres">
-                    <label for="password" class="log-in__label">
-                        <b>Password</b>
-                    </label>
-                    <input type="password" id="password" class="log-in__input" data-error placeholder="Enter your password">
-                    <label for="checkbox" class="log-in__label" id="label_checkbox">
-                        <input type="checkbox" class="log-in__checkbox" data-error id="checkbox">I am not a robot
-                    </label>
-                    <button type="button" class="log-in__button" id="submit_button">Login</button>
+                    <button type="submit" class="margin-top--40 log-in__button">Return to homepage</button>
                 </fieldset>
             </form>
         </main>
-        <script src="scripts/script.js"></script>
     </body>
 </html>
