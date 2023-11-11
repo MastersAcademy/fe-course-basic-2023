@@ -60,3 +60,9 @@
   padding: 27px 0;
   margin-bottom: 40px;
 }
+
+.error {
+  font-size: 14px;
+  color: #F00;
+  margin: -36px 0 20px;
+}
