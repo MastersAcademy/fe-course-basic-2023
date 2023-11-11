@@ -77,21 +77,21 @@ function validateForm() {
     inputPassEl.classList.remove('border-error');
     inputMailEl.addEventListener('input', () => {
         inputMailEl.classList.remove('border-error');
-        mailInfoEl.innerHTML = '';
+        mailInfoEl.textContent = '';
     });
 
     inputPassEl.addEventListener('input', () => {
         inputPassEl.classList.remove('border-error');
-        passInfoEl.innerHTML = '';
+        passInfoEl.textContent = '';
     });
 
     inputCheckboxEl.addEventListener('change', () => {
-        checkboxInfoEl.innerHTML = '';
+        checkboxInfoEl.textContent = '';
     });
 
     if (!isEmail(emailValueWithoutSpase)) {
         inputMailEl.classList.add('border-error');
-        mailInfoEl.innerHTML = 'Error mail';
+        mailInfoEl.textContent = 'Error mail';
         inputData.EMAIL_INPUT_ID = 'Error mail';
         isErrors = true;
     } else {
@@ -100,7 +100,7 @@ function validateForm() {
 
     if (!(passwordValueWithoutSpase.length >= 8 && passwordValueWithoutSpase.length <= 12)) {
         inputPassEl.classList.add('border-error');
-        passInfoEl.innerHTML = 'Error password';
+        passInfoEl.textContent = 'Error password';
         inputData.PASSWORD_INPUT_ID = 'Error password';
         isErrors = true;
     } else {
@@ -109,7 +109,7 @@ function validateForm() {
 
     if (!checkboxValue) {
         inputData.NOT_A_ROBOT_CHECKBOX_ID = 'Error push checkbox';
-        checkboxInfoEl.innerHTML = 'Error push checkbox';
+        checkboxInfoEl.textContent = 'Error push checkbox';
         isErrors = true;
     }
 
