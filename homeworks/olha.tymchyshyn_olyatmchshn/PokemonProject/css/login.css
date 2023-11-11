@@ -71,7 +71,7 @@ input[type="email"] {
   height: 70px;
   display: flex;
   flex-direction: column;
-  color: #A9A9A9;
+  color: #221F1F;
   font-family: Roboto;
   font-size: 14px;
   font-weight: 400;
@@ -88,7 +88,7 @@ input[type="password"] {
   height: 70px;
   display: flex;
   flex-direction: column;
-  color: #A9A9A9;
+  color: #221F1F;
   font-family: Roboto;
   font-size: 14px;
   font-weight: 400;

@@ -3,7 +3,7 @@ const PASSWORD_INPUT_ID = 'password';
 const NOT_A_ROBOT_CHECKBOX_ID = 'robotcheck';
 const SUBMIT_BUTTON_ID = 'submit-button';
 const ERRORS_CONTAINER_ID = 'errors-container';
-const RESULT_PAGE_PATH = '../welcome.html';
+const RESULT_PAGE_PATH = './welcome.html';
 
 const submitButton = document.getElementById(SUBMIT_BUTTON_ID);
 
