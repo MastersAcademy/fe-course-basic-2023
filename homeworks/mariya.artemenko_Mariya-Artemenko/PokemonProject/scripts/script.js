@@ -1,4 +1,4 @@
-const EMAIL_INPUT_ID ='email';
+const EMAIL_INPUT_ID = 'email';
 const PASSWORD_INPUT_ID = 'pwd';
 const NOT_A_ROBOT_CHECKBOX_ID = 'checkbox';
 const SUBMIT_BUTTON_ID = 'submit-button';
