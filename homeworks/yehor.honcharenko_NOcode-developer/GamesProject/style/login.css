@@ -206,7 +206,7 @@ form {
   display: block; /* Show check */
 }
 
-/* Errors */
+/* Errors container - id="errors-container"  */
 
 #errors {
   font-size: 14px;
