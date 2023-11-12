@@ -40,8 +40,7 @@
   margin: 0 0 40px;
 }
 
-input[type="email"],
-[type="password"] {
+input[type="text"] {
   width: 535px;
   height: 70px;
   border-radius: 6px;
@@ -97,4 +96,8 @@ input[type="checkbox"]:checked {
 .form-fields__submit-button:hover {
   cursor: pointer;
   background-color: #333;
+}
+
+.errors-container {
+  margin: 15px;
 }
