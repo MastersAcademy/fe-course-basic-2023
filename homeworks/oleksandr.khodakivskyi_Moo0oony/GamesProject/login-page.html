@@ -36,19 +36,21 @@
                     <div class="email_box">
                         <label for="email_address">Email</label>
                         <br>
-                        <input type="email" class="login_email" id="email_address" name="email_address" placeholder="Enter your email address" required>
-                        <br>
+                        <input type="text" class="login_email" id="email_address" name="email_address" placeholder="Enter your email address">
+                        <div id="email-error-container" class="email_errors"></div>
                     </div>
                     <div class="password_box">
                         <label for="pswrd">Password</label>
-                        <br >
-                        <input type="password" class="login_password" id="pswrd" name="pswrd" placeholder="Enter your password" required>
+                        <br>
+                        <input type="password" class="login_password" id="pswrd" name="pswrd" placeholder="Enter your password">
+                        <div id="password-error-container" class="password_errors"></div>
                     </div>
                     <div class="robot_box">
-                        <input type="checkbox" id="login_robot" name="login_robot" required>
+                        <input type="checkbox" id="login_robot" name="login_robot">
                         <label for="login_robot">I'm not a robot</label>
+                        <div id="checkbox-error-container" class="checkbox_errors"></div>
                     </div>
-                    <input type="submit" value="Login">
+                    <button type="button" id="submit_button" class="login_button">Login</button>
                 </form>
             </div>
         </main>
@@ -78,5 +80,6 @@
                 </h3>
             </div>
         </footer>
+        <script src="./scripts/login-validator.js"></script>
     </body>
 </html>

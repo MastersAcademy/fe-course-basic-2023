@@ -40,8 +40,12 @@ function calculate(firstValue, secondValue, operation) {
         resultHeaders.innerHTML = '<h1>Result is too big</h1>';
         return 'Result is too big';
     }
+    let gamesNumber = 'games';
+    if (result === 1) {
+        gamesNumber = 'game';
+    }
 
-    resultHeaders.innerHTML = `<h1>${first}</h1><h1>${operation}</h1><h1>${second}</h1><h1>=</h1><h1>${result}</h1>`;
+    resultHeaders.innerHTML = `<h1>${first}</h1><h1>${operation}</h1><h1>${second}</h1><h1>=</h1><h1>${result} ${gamesNumber}</h1>`;
     return result;
 }
 
