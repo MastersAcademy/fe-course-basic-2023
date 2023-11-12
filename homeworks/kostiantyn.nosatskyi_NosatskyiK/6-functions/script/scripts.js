@@ -22,6 +22,8 @@ function getValueById(elementId) {
  * Add errors to errors container.
  * @param {Object} inputData in format like: { [input_id]: error_text, ... }
  */
+// commented out the features because I didn't use them
+
 // function setErrors(inputData) {
 //     const errorContainerElement = document.getElementById(ERRORS_CONTAINER_ID);
 //     Object.values(inputData).forEach((error) => {
@@ -45,19 +47,21 @@ function getValueById(elementId) {
  */
 function navigateToResultPage() {
     window.location.href = RESULT_PAGE_PATH;
-    console.log('navigateToResultPage called');
 }
 
 function isEmail(email) {
     return /\S+@\S+\.\S+/.test(email);
 }
 
+// a function that checks email
 function validateEmail(emailTest) {
+    // regular expression and method to remove spaces from mail
     const clearEmail = emailTest.replace(/\s/g, '');
     const emailRegex = isEmail(clearEmail);
 
     if (emailRegex) {
         document.getElementById('output-email').textContent = ('Email вийшов чудовий!');
+        // a line that will allow you to check whether spaces have been removed
         console.log(clearEmail);
         return true;
     }
@@ -65,7 +69,9 @@ function validateEmail(emailTest) {
     return false;
 }
 
+// a function that checks password
 function validatePassword(passwordTest) {
+    // a regular expression that sets the required length for a password
     const passwordRegex = /^.{8,12}$/;
 
     if (passwordRegex.test(passwordTest)) {
@@ -76,6 +82,7 @@ function validatePassword(passwordTest) {
     return false;
 }
 
+// a function that checks checkbox
 function validateCheckbox(checkboxTest) {
     if (checkboxTest) {
         document.getElementById('output-checkbox').textContent = ('Ви не робот і це чудово!');
