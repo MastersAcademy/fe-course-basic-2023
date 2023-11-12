@@ -62,28 +62,26 @@ function validateForm() {
     const password = getValueById(PASSWORD_INPUT_ID);
     const isNotARobot = getValueById(NOT_A_ROBOT_CHECKBOX_ID);
 
+    let inputData = {}
+
     if (!email) {
-        setErrors({ [EMAIL_INPUT_ID]: 'Email is required' });
-        return;
+        inputData[EMAIL_INPUT_ID] = 'Email is required';
+    } else if (!isEmail(email)) {
+        inputData[EMAIL_INPUT_ID] = 'Invalid email address';
     }
 
     if (!password) {
-        setErrors({ [PASSWORD_INPUT_ID]: 'Password is required' });
-        return;
-    }
-
-    if (!isEmail(email)) {
-        setErrors({ [EMAIL_INPUT_ID]: 'Invalid email address' });
-        return;
-    }
-
-    if (password.length < 8 || password.length > 12) {
-        setErrors({ [PASSWORD_INPUT_ID]: 'Password must be between 8 and 12 characters' });
-        return;
+        inputData[PASSWORD_INPUT_ID] = 'Password is required';
+    } else if (password.length < 8 || password.length > 12) {
+        inputData[PASSWORD_INPUT_ID] = 'Password must be between 8 and 12 characters';
     }
 
     if (!isNotARobot) {
-        setErrors({ [NOT_A_ROBOT_CHECKBOX_ID]: 'Confirm that you are not a robot' });
+        inputData[NOT_A_ROBOT_CHECKBOX_ID] = 'Confirm that you are not a robot' ;
+    }
+
+    if (Object.keys(inputData).length > 0) {
+        setErrors(inputData);
         return;
     }
 
