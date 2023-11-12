@@ -1,9 +1,9 @@
-const EMAIL_INPUT_ID = "email";
-const PASSWORD_INPUT_ID = "pwd";
-const NOT_A_ROBOT_CHECKBOX_ID = "checkbox";
-const SUBMIT_BUTTON_ID = "submit-button";
-const ERRORS_CONTAINER_ID = "errors-container";
-const RESULT_PAGE_PATH = "./message.html";
+const EMAIL_INPUT_ID ='email';
+const PASSWORD_INPUT_ID = 'pwd';
+const NOT_A_ROBOT_CHECKBOX_ID = 'checkbox';
+const SUBMIT_BUTTON_ID = 'submit-button';
+const ERRORS_CONTAINER_ID = 'errors-container';
+const RESULT_PAGE_PATH = './message.html';
 
 const submitButton = document.getElementById(SUBMIT_BUTTON_ID);
 
@@ -14,8 +14,8 @@ const submitButton = document.getElementById(SUBMIT_BUTTON_ID);
  */
 function getValueById(elementId) {
     const element = document.getElementById(elementId);
-    const type = element.getAttribute("type");
-    return type === "checkbox" ? element.checked : element.value;
+    const type = element.getAttribute('type');
+    return type === 'checkbox' ? element.checked : element.value;
 }
 
 /**
@@ -25,8 +25,8 @@ function getValueById(elementId) {
 function setErrors(inputData) {
     const errorContainerElement = document.getElementById(ERRORS_CONTAINER_ID);
     Object.values(inputData).forEach((error) => {
-        const errorElement = document.createElement("p");
-        errorElement.classList.add("error");
+        const errorElement = document.createElement('p');
+        errorElement.classList.add('error');
         errorElement.textContent = error;
         errorContainerElement.appendChild(errorElement);
     });
@@ -54,7 +54,7 @@ function isEmail(email) {
 function validateForm() {
     deleteErrors();
     const password = getValueById(PASSWORD_INPUT_ID);
-    const email = getValueById(EMAIL_INPUT_ID).replace(/\s/g, "");
+    const email = getValueById(EMAIL_INPUT_ID).replace(/\s/g, '');
     const emailWithoutSpaces = document.getElementById(EMAIL_INPUT_ID);
     const checkbox = getValueById(NOT_A_ROBOT_CHECKBOX_ID);
 
@@ -65,29 +65,28 @@ function validateForm() {
     if (password.length !== 0) {
         if (password.length >= 8 && password.length <= 12) {
             isPasswordValid = true;
-        }  else {
-            setErrors({PASSWORD_INPUT_ID : 'Password length should be from 8 to 12 characters'});
+        } else {
+            setErrors({ PASSWORD_INPUT_ID: 'Password length should be from 8 to 12 characters' });
         }
     } else {
-        setErrors({PASSWORD_INPUT_ID : 'Please, fill the field'})
+        setErrors({ PASSWORD_INPUT_ID: 'Please, fill the field' });
     }
 
     if (checkbox) {
         isCheckboxValid = true;
     } else {
-        setErrors({NOT_A_ROBOT_CHECKBOX_ID: 'Confirm that you are not a robot. Please, check the box.'});
-        }
+        setErrors({ NOT_A_ROBOT_CHECKBOX_ID: 'Confirm that you are not a robot. Please, check the box.' });
+    }
 
     if (email.length !== 0) {
         emailWithoutSpaces.value = email;
         if (isEmail(email)) {
             isEmailValid = true;
         } else {
-            setErrors({EMAIL_INPUT_ID : 'Please, fill the field in format "Text@LocalDomen.Domen"'});
+            setErrors({ EMAIL_INPUT_ID: 'Please, fill the field in format Text@LocalDomen.Domen' });
         }
-
     } else {
-        setErrors({EMAIL_INPUT_ID : 'Please, fill the field'});
+        setErrors({ EMAIL_INPUT_ID: 'Please, fill the field' });
     }
 
     if (isEmailValid && isPasswordValid && isCheckboxValid) {
