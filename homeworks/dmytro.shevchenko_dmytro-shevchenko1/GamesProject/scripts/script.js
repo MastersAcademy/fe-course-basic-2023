@@ -62,7 +62,7 @@ function validateForm() {
     const password = getValueById(PASSWORD_INPUT_ID);
     const isNotARobot = getValueById(NOT_A_ROBOT_CHECKBOX_ID);
 
-    let inputData = {}
+    const inputData = {};
 
     if (!email) {
         inputData[EMAIL_INPUT_ID] = 'Email is required';
@@ -77,7 +77,7 @@ function validateForm() {
     }
 
     if (!isNotARobot) {
-        inputData[NOT_A_ROBOT_CHECKBOX_ID] = 'Confirm that you are not a robot' ;
+        inputData[NOT_A_ROBOT_CHECKBOX_ID] = 'Confirm that you are not a robot';
     }
 
     if (Object.keys(inputData).length > 0) {
