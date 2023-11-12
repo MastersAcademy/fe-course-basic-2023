@@ -41,13 +41,14 @@
 
         <h1 class="login_title">Login page</h1>
         <form class="login_form" action="./succes.html">
-            <label for="email">Email</label>
-            <input type="email" class="login_input" id="email" name="email" placeholder="Enter your email address" required>
-            <label for="password">Password</label>
-            <input type="password" class="login_input" id="password" name="password" placeholder="Enter your password" required="">
-            <input type="checkbox" id="robot" name="not_a_robot" required="">
-            <label for="robot">I’m not a robot</label>
-            <input type="submit" value="Login">
+            <label for="email_input">Email</label>
+            <input type="email" class="login_input" id="email_input" name="email" placeholder="Enter your email address">
+            <label for="password_input">Password</label>
+            <input type="password" class="login_input" id="password_input" name="password" placeholder="Enter your password">
+            <input type="checkbox" id="not_a_robot_checkbox" name="not_a_robot">
+            <label for="not_a_robot_checkbox">I’m not a robot</label>
+            <div id="errors-container"></div>
+            <button type="button" id="submit_button" value="Login">Login</button>
         </form>
 
         <footer class="footer">
@@ -70,5 +71,6 @@
                        for-beginners-it">'Frontend for beginners' from Masters Academy in 2023,</a> by Igor</p>
 
         </footer>
+        <script src="./scripts/script.js"></script>
     </body>
 </html>
