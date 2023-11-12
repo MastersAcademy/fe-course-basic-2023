@@ -81,7 +81,8 @@ input[type="checkbox"] {
   color: #221F1F;
 }
 
-button[type="button"] {
+button[type="button"],
+input[type="submit"] {
   width: 575px;
   font-weight: 600;
   font-size: 22px;
