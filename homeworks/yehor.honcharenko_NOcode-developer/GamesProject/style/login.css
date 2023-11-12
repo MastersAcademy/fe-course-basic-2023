@@ -94,11 +94,6 @@ form {
   width: 100%;
 }
 
-input[required]:invalid {
-  border-color: #EF4934;
-  box-sizing: border-box;
-}
-
 .textfield {
   height: 70px;
   font-size: 14px;
@@ -209,6 +204,15 @@ input[required]:invalid {
 
 .control input:checked ~ .control__proxy::after {
   display: block; /* Show check */
+}
+
+/* Errors container - id="errors-container"  */
+
+.validation__messages {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #EF4934;
 }
 
 /*button*/
