@@ -46,7 +46,7 @@ function navigateToResultPage() {
 }
 
 function isEmail(email) {
-    const showEmail = email.trim();
+    const showEmail = email.replace(/\s/g, '');
     const emailText = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return emailText.test(showEmail);
 }
@@ -61,6 +61,7 @@ function validateForm() {
     if (!isEmail(email)) {
         errors[EMAIL_INPUT_ID] = 'Enter correct e-mail';
     }
+
     if (password.length < 8 || password.length > 12) {
         errors[PASSWORD_INPUT_ID] = 'Password must be from 8 to 12 symbols';
     }
