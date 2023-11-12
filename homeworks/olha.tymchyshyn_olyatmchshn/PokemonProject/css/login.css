@@ -71,7 +71,7 @@ input[type="email"] {
   height: 70px;
   display: flex;
   flex-direction: column;
-  color: #A9A9A9;
+  color: #221F1F;
   font-family: Roboto;
   font-size: 14px;
   font-weight: 400;
@@ -88,7 +88,7 @@ input[type="password"] {
   height: 70px;
   display: flex;
   flex-direction: column;
-  color: #A9A9A9;
+  color: #221F1F;
   font-family: Roboto;
   font-size: 14px;
   font-weight: 400;
@@ -151,11 +151,11 @@ input[type="checkbox"]:checked + label::after {
   transform: rotate(45deg);
 }
 
-input[type="submit"] {
+button[type="button"] {
   border-radius: 6px;
   border-width: 0;
   background-color: #EF4934;
-  width: 575px;
+  width: 100%;
   color: #FFF;
   font-family: Roboto;
   font-size: 22px;
@@ -163,6 +163,14 @@ input[type="submit"] {
   padding: 27px 258px;
   margin-bottom: 237px;
   cursor: pointer;
+}
+
+.error {
+  color: #221F1F;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
 }
 
 /* SUCCESS LOGIN STYLES */

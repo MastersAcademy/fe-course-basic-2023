@@ -15,13 +15,14 @@ function calculate(firstValue, secondValue, operation) {
     // your code add here
     // e.g.:
 
+    if (!firstValue || !secondValue) {
+        return 'Enter a number';
+    }
+
     const number1 = +firstValue;
     const number2 = +secondValue;
 
     if (Number.isNaN(number1) || Number.isNaN(number2)) {
-        return 'Enter a number';
-    }
-    if (firstValue === '' || secondValue === '') {
         return 'Enter a number';
     }
 
