@@ -35,6 +35,10 @@ function showCalcResult() {
             commentContainer.innerHTML = `${firstNumber}<sup>${secondNumber}</sup> = ${result}`;
             break;
     }
+    if (firstNumber > 100) {
+        result = 'Error';
+        commentContainer.innerText = 'Enter a first number less then 100';
+    }
     if (firstNumberInput.value.trim() === '' || secondNumberInput.value.trim() === '') {
         result = 'Error';
         commentContainer.innerText = 'Enter a number';
@@ -88,38 +92,42 @@ function get10ImagesColumn() {
 function showCards() {
     inputCardContainer.innerHTML = '';
     resultCardContainer.innerHTML = '';
+    operatorContainer.innerHTML = '';
+    secondOperandContainer.innerHTML = '';
     resultCardContainer.classList.remove('card-container__cards--error');
     const dataObject = getDataObject();
-    for (let count = 0; count < dataObject.fullInputColumns; count++) {
-        inputCardContainer.append(get10ImagesColumn());
-    }
-    inputCardContainer.append(getImageColumn(dataObject.lastInputColumn));
-    if (dataObject.result < 100) {
-        for (let count = 0; count < dataObject.fullResultColumns; count++) {
-            resultCardContainer.append(get10ImagesColumn());
+    if (dataObject.result !== 'Error') {
+        for (let count = 0; count < dataObject.fullInputColumns; count++) {
+            inputCardContainer.append(get10ImagesColumn());
         }
-        resultCardContainer.append(getImageColumn(dataObject.lastResultColumn));
-    } else {
-        resultCardContainer.innerText = 'Too many games';
-        resultCardContainer.classList.add('card-container__cards--error');
-    }
-    secondOperandContainer.innerText = `${dataObject.secondNumber} = `;
-    switch (dataObject.operationType) {
-        case '1':
-            operatorContainer.innerText = '+';
-            break;
-        case '2':
-            operatorContainer.innerText = '-';
-            break;
-        case '3':
-            operatorContainer.innerText = '*';
-            break;
-        case '4':
-            operatorContainer.innerText = '/';
-            break;
-        default:
-            operatorContainer.innerText = '^';
-            break;
+        inputCardContainer.append(getImageColumn(dataObject.lastInputColumn));
+        if (dataObject.result < 100) {
+            for (let count = 0; count < dataObject.fullResultColumns; count++) {
+                resultCardContainer.append(get10ImagesColumn());
+            }
+            resultCardContainer.append(getImageColumn(dataObject.lastResultColumn));
+        } else {
+            resultCardContainer.innerText = 'Too many games';
+            resultCardContainer.classList.add('card-container__cards--error');
+        }
+        secondOperandContainer.innerText = `${dataObject.secondNumber} = `;
+        switch (dataObject.operationType) {
+            case '1':
+                operatorContainer.innerText = '+';
+                break;
+            case '2':
+                operatorContainer.innerText = '-';
+                break;
+            case '3':
+                operatorContainer.innerText = '*';
+                break;
+            case '4':
+                operatorContainer.innerText = '/';
+                break;
+            default:
+                operatorContainer.innerText = '^';
+                break;
+        }
     }
 }
 button.addEventListener('click', showCards);
