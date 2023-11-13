@@ -38,18 +38,22 @@
                     <div class="email-check">
                         <label for="email">Email</label>
                         <input class="input-email" type="email" id="email" name="email" placeholder="Enter your email address" required>
+                        <div class="error-container" id="email-error"></div>
                     </div>
                     <div class="password-check">
                         <label for="password">Password</label>
                         <input class="input-password" type="password" id="password" name="password" placeholder="Enter your password" required>
+                        <div class="error-container" id="password-error"></div>
                     </div>
                     <div class="robot-check">
                         <label class="label-checkbox">
                             <input type="checkbox" id="checkbox" name="robot-check" value="checkbox" required>
                             <label for="checkbox">I'm not a robot</label>
                         </label>
+                        <div class="error-container" id="checkbox-error"></div>
                     </div>
-                    <button class="button-login" type="submit">Login</button>
+                    <div id="errors-container"></div>
+                    <button type="button" class="button-login" id="button-login">Login</button>
                 </form>
             </section>
         </div>
@@ -61,5 +65,6 @@
                 Made with 🤍 on course <a href="https://www.mastersacademy.education/frontend-for-beginners-it" class="link"> 'Frontend for beginners' from Masters Academy in 2023</a>, by Katya Sharova
             </p>
         </footer>
+        <script src="./scripts/script.js"></script>
     </body>
 </html>
