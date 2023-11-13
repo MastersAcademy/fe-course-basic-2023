@@ -66,9 +66,9 @@ function getDataObject() {
         secondNumber,
         operationType,
         fullInputColumns: Math.floor(firstNumber / 10),
-        lastInputColumn: (firstNumber % 10),
+        lastInputColumn: Math.floor((firstNumber % 10)),
         fullResultColumns: Math.floor(result / 10),
-        lastResultColumn: (result % 10),
+        lastResultColumn: Math.floor((result % 10)),
     };
     return dataObject;
 }
@@ -85,9 +85,13 @@ function getImageColumn(amount) {
     }
     return imageContainer;
 }
-
 function get10ImagesColumn() {
     return getImageColumn(10);
+}
+function showHalfCard() {
+    const halfCard = document.createElement('div');
+    halfCard.classList.add('card-container__card--half');
+    return halfCard;
 }
 function showCards() {
     inputCardContainer.innerHTML = '';
@@ -101,11 +105,17 @@ function showCards() {
             inputCardContainer.append(get10ImagesColumn());
         }
         inputCardContainer.append(getImageColumn(dataObject.lastInputColumn));
+        if (!Number.isInteger(dataObject.firstNumber)) {
+            inputCardContainer.append(showHalfCard());
+        }
         if (dataObject.result < 100) {
             for (let count = 0; count < dataObject.fullResultColumns; count++) {
                 resultCardContainer.append(get10ImagesColumn());
             }
             resultCardContainer.append(getImageColumn(dataObject.lastResultColumn));
+            if (!Number.isInteger(dataObject.result) && dataObject.result > 0) {
+                resultCardContainer.append(showHalfCard());
+            }
         } else {
             resultCardContainer.innerText = 'Too many games';
             resultCardContainer.classList.add('card-container__cards--error');

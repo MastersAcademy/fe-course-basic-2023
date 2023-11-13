@@ -95,7 +95,13 @@
   position: absolute;
   background-image: url("/images/game_img.png");
   width: 70px;
-  height: 70px;
+  height: 80px;
+}
+
+.card-container__card--half {
+  background-image: url("/images/game_img.png");
+  background-repeat: no-repeat;
+  height: 40px;
 }
 
 .card-container__operation {
