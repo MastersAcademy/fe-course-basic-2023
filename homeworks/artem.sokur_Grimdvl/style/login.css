@@ -92,6 +92,7 @@
   border: none;
   cursor: pointer;
   transition: .5s;
+  margin-top: 10px;
 }
 
 .login__form--submit:hover {
@@ -115,4 +116,9 @@
 
 .login__form--submit:hover::before {
   opacity: .3;
+}
+
+.errors-container {
+  margin-top: 5px;
+  color: #EF4934;
 }
