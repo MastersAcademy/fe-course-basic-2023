@@ -44,3 +44,14 @@ h2 {
 .button:hover {
   box-shadow: 0 12px 60px rgb(0 0 0 / .2);
 }
+
+.error_container {
+  padding: 10px 0 0 10px;
+}
+
+.error {
+  font-size: 14px;
+  font-weight: 400;
+  color: #F7250B;
+}
+
