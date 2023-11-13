@@ -6,6 +6,7 @@ const ERRORS_CONTAINER_ID = 'errors-container';
 const RESULT_PAGE_PATH = './success.html';
 
 const submitButton = document.getElementById(SUBMIT_BUTTON_ID);
+const passwordHide = document.getElementById(PASSWORD_INPUT_ID);
 
 /**
  * Return input value by id.
@@ -51,7 +52,14 @@ function isEmail(email) {
     return /\S+@\S+\.\S+/.test(email);
 }
 
+passwordHide.addEventListener('input', function () {
+    this.setCustomValidity('');
+    this.value = '*'.repeat(this.value.length);
+});
+
 function validateForm() {
+    deleteErrors();
+
     const email = getValueById(EMAIL_INPUT_ID).replace(/\s+/g, '');
     const password = getValueById(PASSWORD_INPUT_ID);
     const checkId = getValueById(NOT_A_ROBOT_CHECKBOX_ID);
@@ -70,10 +78,10 @@ function validateForm() {
     }
 
     if (Object.keys(error).length > 0) {
-        deleteErrors();
-        return setErrors(error);
+        setErrors(error);
+    } else {
+        navigateToResultPage();
     }
-    return navigateToResultPage();
 }
 
 submitButton.onclick = validateForm;
