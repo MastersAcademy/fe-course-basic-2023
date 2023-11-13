@@ -5,9 +5,12 @@ const SUBMIT_BUTTON_ID = 'button';
 const RESULT_PAGE_PATH = './result.html';
 
 const submitButton = document.getElementById(SUBMIT_BUTTON_ID);
-const emailErrorContainer = document.getElementById('email_error');
-const passwordErrorContainer = document.getElementById('password_error');
-const checkboxErrorContainer = document.getElementById('checkbox_error');
+
+const errorContainers = {
+    email: document.getElementById('email_error'),
+    password: document.getElementById('password_error'),
+    checkbox: document.getElementById('checkbox_error'),
+};
 
 const errorMessages = {
     email: 'Valid email format is email@localDomen.domen',
@@ -20,14 +23,17 @@ function getValueById(elementId) {
     const type = element.getAttribute('type');
     return type === 'checkbox' ? element.checked : element.value;
 }
-function setErrors(errorMessage, errorContainer) {
-    errorContainer.innerHTML = `<p class="error">${errorMessage}</p>`;
+
+function setErrors(errors) {
+    Object.entries(errors).forEach(([field, errorMessage]) => {
+        errorContainers[field].innerHTML = `<p class="error">${errorMessage}</p>`;
+    });
 }
 
 function deleteErrors() {
-    emailErrorContainer.innerHTML = '';
-    passwordErrorContainer.innerHTML = '';
-    checkboxErrorContainer.innerHTML = '';
+    Object.values(errorContainers).forEach((container) => {
+        container.innerHTML = '';
+    });
 }
 
 function navigateToResultPage() {
@@ -45,12 +51,22 @@ function validateForm() {
     const password = getValueById(PASSWORD_INPUT_ID);
     const checkboxChecked = getValueById(NOT_A_ROBOT_CHECKBOX_ID);
 
+    const errors = {};
+
     if (!isEmail(email)) {
-        setErrors(errorMessages.email, emailErrorContainer);
-    } else if (password.length < 8 || password.length > 12) {
-        setErrors(errorMessages.password, passwordErrorContainer);
-    } else if (!checkboxChecked) {
-        setErrors(errorMessages.checkbox, checkboxErrorContainer);
+        errors.email = errorMessages.email;
+    }
+
+    if (password.length < 8 || password.length > 12) {
+        errors.password = errorMessages.password;
+    }
+
+    if (!checkboxChecked) {
+        errors.checkbox = errorMessages.checkbox;
+    }
+
+    if (Object.keys(errors).length > 0) {
+        setErrors(errors);
     } else {
         navigateToResultPage();
     }
