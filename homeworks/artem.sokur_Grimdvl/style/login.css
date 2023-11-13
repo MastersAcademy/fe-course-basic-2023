@@ -9,9 +9,8 @@
   margin-top: 30px;
   max-width: 575px;
   display: grid;
-  grid-template: 120px 120px 70px 70px/repeat(1, auto);
+  grid-template: 120px 20px 120px 20px 70px 20px 70px/repeat(1, auto);
   grid-template-columns: minmax(auto, 575px);
-  gap: 20px;
 }
 
 .login__form-input {
