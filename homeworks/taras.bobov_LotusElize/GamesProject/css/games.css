@@ -4,6 +4,147 @@ h2,
 p {
   margin: 0;
 }
+/**/
+
+.games-filter {
+  position: absolute;
+  top: 80px;
+  width: 100%;
+  height: 60px;
+  background-color: #221F1F;
+  color: #FFF;
+}
+
+.games-filter__box {
+  padding: 12px 52px 12px 53px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 4000;
+}
+
+/*select*/
+
+.filter-select {
+  width: 114px;
+  height: 36px;
+  display: flex;
+  align-items: flex-start;
+  gap: 33px;
+  justify-content: center;
+  padding: 0 12px;
+  background-color: #333;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  color: #FFF;
+  margin-right: 86px;
+  appearance: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.filter-select select::before {
+  content: url("../images/icons/arrow.svg");
+  position: absolute;
+  width: 20px;
+  top: 5px}
+
+
+.select-item__option {
+  background-color: #FFF;
+  color: #333;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/*radio*/
+
+.filter-group__radio {
+  width: 237px;
+  height: 20px;
+  margin-right: 63px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.radio__input-games[type="radio"] {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #FFF;
+  border-radius: 100%;
+}
+
+/*checkbox*/
+
+.filter-group__checkbox {
+  width: 145px;
+  height: 20px;
+  margin-right: 153px;
+}
+
+/*search*/
+
+.filter-game__search {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 6px;
+  width: 377px;
+  height: 36px;
+  background-color: #FFF;
+  position: relative;
+}
+
+.filter-game__search input[placeholder] {
+  color: #A9A9A9;
+}
+
+.filter-game__search input[type="search"] {
+  outline: none;
+  border: none;
+  width: 200px;
+  color: #333;
+}
+
+
+.game-search__label {
+  width: 24px;
+  height: 24px;
+}
+
+.game-search__label::before {
+  content: url("../images/ico/icons/search.svg");
+  width: 19px;
+  height: 19px;
+  position: relative;
+  top: 8px;
+  left: 10px;
+}
+
+.apply-btn {
+  width: 75px;
+  height: 36px;
+  border-radius: 0 6px 6px 0;
+  background-color: #EF4934;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  color: #FFF;
+}
+/**/
+
+
+.section_title {
+  color: #221F1F;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 48px;
+  text-align: left;
+  margin: 0;
+}
 
 .content_game-cards {
   width: 1175px;
@@ -83,3 +224,6 @@ p {
   font-weight: 600;
   margin-right: 6px;
 }
+
+/**/
+
