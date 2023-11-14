@@ -9,9 +9,8 @@
   margin-top: 30px;
   max-width: 575px;
   display: grid;
-  grid-template: 120px 120px 70px 70px/repeat(1, auto);
+  grid-template: 120px 20px 120px 20px 70px 20px 70px/repeat(1, auto);
   grid-template-columns: minmax(auto, 575px);
-  gap: 20px;
 }
 
 .login__form-input {
@@ -93,6 +92,7 @@
   border: none;
   cursor: pointer;
   transition: .5s;
+  margin-top: 10px;
 }
 
 .login__form--submit:hover {
@@ -116,4 +116,9 @@
 
 .login__form--submit:hover::before {
   opacity: .3;
+}
+
+.errors-container {
+  margin-top: 5px;
+  color: #EF4934;
 }

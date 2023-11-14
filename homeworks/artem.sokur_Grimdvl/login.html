@@ -33,17 +33,20 @@
                 <form class="login__form" action="success.html">
                     <div class="login__form-input">
                         <label for="email">Email</label>
-                        <input id="email" placeholder="Enter your email address" name="email" type="email" required>
+                        <input id="email" placeholder="Enter your email address" name="email">
                     </div>
+                    <div class="errors-container" id="errors-email"></div>
                     <div class="login__form-input">
                         <label for="password">Password</label>
-                        <input id="password" placeholder="Enter your password" name="password" type="password" required minlength="4">
+                        <input id="password" placeholder="Enter your password" name="password">
                     </div>
+                    <div class="errors-container" id="errors-password"></div>
                     <div class="login__form-checkbox">
-                        <input id="checkbox" name="checkbox" type="checkbox" required>
+                        <input id="checkbox" name="checkbox" type="checkbox">
                         <label for="checkbox">I'm not a robot</label>
                     </div>
-                    <button type="submit" class="login__form--submit">Login</button>
+                    <div class="errors-container" id="errors-checkbox"></div>
+                    <button id="submit-button" type="button" class="login__form--submit">Login</button>
                 </form>
             </section>
         </main>
@@ -68,5 +71,6 @@
                 </div>    
             </section>
         </footer>
+        <script src="scripts/login.js"></script>
     </body>
 </html>
