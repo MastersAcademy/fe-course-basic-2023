@@ -2,14 +2,16 @@ const EMAIL_INPUT_ID = 'email';
 const PASSWORD_INPUT_ID = 'password';
 const NOT_A_ROBOT_CHECKBOX_ID = 'checkbox';
 const SUBMIT_BUTTON_ID = 'submit-button';
-const ERRORS_CHECKBOX_ID = 'errors-checkbox';
-const ERRORS_PASSWORD_ID = 'errors-password';
-const ERRORS_EMAIL_ID = 'errors-email';
 const RESULT_PAGE_PATH = './success.html';
 
 const submitButton = document.getElementById(SUBMIT_BUTTON_ID);
-const passwordInput = document.getElementById(PASSWORD_INPUT_ID);
-const emailInput = document.getElementById(EMAIL_INPUT_ID);
+const errorsContainer = document.querySelectorAll('.errors-container');
+
+const errors = {
+    email: { text: 'Invalid email format', hasError: false },
+    password: { text: 'Password length should be between 8 and 12 characters', hasError: false },
+    checkbox: { text: 'Checkbox is not checked', hasError: false },
+};
 
 function getValueById(elementId) {
     const element = document.getElementById(elementId);
@@ -17,27 +19,28 @@ function getValueById(elementId) {
     return type === 'checkbox' ? element.checked : element.value;
 }
 
-function setErrors(inputData) {
-    Object.entries(inputData).forEach(([inputId, error]) => {
+function setErrors(error) {
+    errorsContainer.forEach((container, i) => {
         const errorElement = document.createElement('p');
         errorElement.classList.add('error');
-        errorElement.textContent = error;
 
-        const containerId = `errors-${inputId}`;
-        const containerElement = document.getElementById(containerId);
+        const errorKey = Object.keys(error)[i];
+        const item = error[errorKey];
 
-        if (containerElement) {
-            containerElement.appendChild(errorElement);
+        if (item.hasError) {
+            errorElement.textContent = item.text;
+            container.appendChild(errorElement);
         }
     });
 }
 
-function deleteErrors(containerId) {
-    const errorContainerElement = document.getElementById(containerId);
-
-    if (errorContainerElement) {
-        errorContainerElement.replaceChildren();
-    }
+function deleteErrors(classes) {
+    classes.forEach((item) => {
+        const error = item.querySelector('.error');
+        if (error) {
+            error.remove();
+        }
+    });
 }
 
 function navigateToResultPage() {
@@ -53,34 +56,25 @@ function passwordLength(password) {
 }
 
 function validateForm() {
-    const inputData = {};
+    deleteErrors(errorsContainer);
+    Object.keys(errors).forEach((key) => {
+        errors[key].hasError = false;
+    });
 
+    if (!isEmail(getValueById(EMAIL_INPUT_ID))) {
+        errors.email.hasError = true;
+    }
+    if (!passwordLength(getValueById(PASSWORD_INPUT_ID))) {
+        errors.password.hasError = true;
+    }
     if (!getValueById(NOT_A_ROBOT_CHECKBOX_ID)) {
-        deleteErrors(ERRORS_CHECKBOX_ID);
-        deleteErrors(ERRORS_EMAIL_ID);
-        deleteErrors(ERRORS_PASSWORD_ID);
-        inputData[NOT_A_ROBOT_CHECKBOX_ID] = 'Checkbox is not checked';
-    }
-    if (!isEmail(emailInput.value)) {
-        deleteErrors(ERRORS_CHECKBOX_ID);
-        deleteErrors(ERRORS_EMAIL_ID);
-        deleteErrors(ERRORS_PASSWORD_ID);
-        inputData[EMAIL_INPUT_ID] = 'Invalid email format';
-    }
-    if (!passwordLength(passwordInput.value)) {
-        deleteErrors(ERRORS_CHECKBOX_ID);
-        deleteErrors(ERRORS_EMAIL_ID);
-        deleteErrors(ERRORS_PASSWORD_ID);
-        inputData[PASSWORD_INPUT_ID] = 'Password length should be between 8 and 12 characters';
+        errors.checkbox.hasError = true;
     }
 
-    setErrors(inputData);
-    if (Object.keys(inputData).length === 0) {
-        deleteErrors(ERRORS_CHECKBOX_ID);
-        deleteErrors(ERRORS_EMAIL_ID);
-        deleteErrors(ERRORS_PASSWORD_ID);
+    setErrors(errors);
+
+    if (!Object.values(errors).some((error) => error.hasError)) {
         navigateToResultPage();
-        console.info('Підготовка успішна');
     }
 }
 
