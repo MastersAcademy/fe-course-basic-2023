@@ -26,15 +26,18 @@
             <form class="login__form" action="./success.html">
                 <label for="email" class="login__fields">Email
                 </label>
-                <input id="email" class="login__input" type="email" name="auth_email" placeholder="Enter your email address" required>
+                <input id="email" class="login__input" type="text" name="auth_email" placeholder="Enter your email address">
                 <label for="password" class="login__fields">Password
                 </label>
-                <input id="password" class="login__input" type="password" name="auth_pass" placeholder="Enter your email address" required>
+                <input id="password" class="login__input" type="password" name="auth_pass" placeholder="Enter your email address">
                 <label>
-                    <input class="login__checkbox" type="checkbox" name="remember" required> I'm not a robot
+                    <input id="checkbox" class="login__checkbox" type="checkbox" name="remember"> I'm not a robot
                 </label>
-                <button class="login__button" type="submit" name="Login">Login </button>
+                <div class="errors" id="errors-container">
+                </div>
+                <button id="submitButton" class="login__button" type="button" name="Login">Login </button>
             </form>
         </div>
+        <script src="./Scripts/script.js"></script>
     </body>
 </html>

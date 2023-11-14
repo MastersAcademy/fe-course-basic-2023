@@ -146,3 +146,8 @@ button:hover {
   margin-left: 30%;
   margin-right: auto;
 }
+
+.errors {
+  font-size: 22px;
+  color: #FFF;
+}
