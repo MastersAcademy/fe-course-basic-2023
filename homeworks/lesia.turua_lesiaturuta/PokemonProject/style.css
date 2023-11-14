@@ -343,6 +343,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 }
 
 .login__form-email-input,
@@ -372,6 +373,7 @@ body {
 
 .login__form-checkbox {
   width: 100%;
+  position: relative;
 }
 
 .block-select {
@@ -492,6 +494,23 @@ body {
 .calculate__show-operation,
 .calculate__show-equals {
   margin: 0 100px;
+}
+
+/*ERRORS*/
+
+.error-text {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  color: #FA0A0A;
+}
+
+.border-error {
+  border: 4px solid #FA0A0A !important;
+}
+
+.border-ok {
+  border: 4px solid #66EA11 !important;
 }
 
 /*HELPER*/
