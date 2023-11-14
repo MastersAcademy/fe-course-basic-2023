@@ -4,11 +4,16 @@ const arrayThree = [1, 7, 3];
 const arrayFour = [1, undefined, 3, 5, -3];
 const arrayFive = [1, NaN, 3, 5, -3];
 
+function getFilterArray(array) {
+    return array.filter((element) => typeof element === 'number' && !Number.isNaN(element));
+}
+
 function maxNumberOfArr(array) {
-    let maxNumber = array[0];
-    for (let count = 1; count < array.length; count++) {
-        if (array[count] > maxNumber) {
-            maxNumber = array[count];
+    const filterArray = getFilterArray(array);
+    let maxNumber = filterArray[0];
+    for (let count = 1; count < filterArray.length; count++) {
+        if (filterArray[count] > maxNumber) {
+            maxNumber = filterArray[count];
         }
     }
     return maxNumber;
@@ -21,10 +26,11 @@ console.log(`Max number of arrayFour = ${maxNumberOfArr(arrayFour)}`); // 5
 console.log(`Max number of arrayFive = ${maxNumberOfArr(arrayFive)}`); // 5
 
 function minNumberOfArr(array) {
-    let minNumber = array[0];
-    for (let count = 1; count < array.length; count++) {
-        if (array[count] < minNumber) {
-            minNumber = array[count];
+    const filterArray = getFilterArray(array);
+    let minNumber = filterArray[0];
+    for (let count = 1; count < filterArray.length; count++) {
+        if (filterArray[count] < minNumber) {
+            minNumber = filterArray[count];
         }
     }
     return minNumber;
@@ -37,11 +43,10 @@ console.log(`Min number of arrayFour = ${minNumberOfArr(arrayFour)}`);
 console.log(`Min number of arrayFive = ${minNumberOfArr(arrayFive)}`);
 
 function sumNumbersOfArr(array) {
+    const filterArray = getFilterArray(array);
     let sum = 0;
-    for (let count = 0; count < array.length; count++) {
-        if (typeof array[count] === 'number' && !Number.isNaN(array[count])) {
-            sum += array[count];
-        }
+    for (let count = 0; count < filterArray.length; count++) {
+        sum += filterArray[count];
     }
     return sum;
 }
@@ -53,7 +58,8 @@ console.log(`Sum of arrayFour = ${sumNumbersOfArr(arrayFour)}`);
 console.log(`Sum of arrayFive = ${sumNumbersOfArr(arrayFive)}`);
 
 function onlyNegativeNumbers(array) {
-    return array.filter((element) => element < 0);
+    const filterArray = getFilterArray(array);
+    return filterArray.filter((element) => element < 0);
 }
 console.log('Only negative numbers');
 console.log('arrayOne negative numbers:', onlyNegativeNumbers(arrayOne));
@@ -63,7 +69,8 @@ console.log('arrayFour negative numbers:', onlyNegativeNumbers(arrayFour));
 console.log('arrayFive negative numbers:', onlyNegativeNumbers(arrayFive));
 
 function onlyPositiveNumbers(array) {
-    return array.filter((element) => element > 0);
+    const filterArray = getFilterArray(array);
+    return filterArray.filter((element) => element > 0);
 }
 console.log('Only positive numbers');
 console.log('arrayOne positive numbers:', onlyPositiveNumbers(arrayOne));
