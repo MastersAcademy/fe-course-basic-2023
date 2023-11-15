@@ -40,7 +40,7 @@
   margin: 0 0 40px;
 }
 
-input[type="text"] {
+.form-fields__input {
   width: 535px;
   height: 70px;
   border-radius: 6px;
