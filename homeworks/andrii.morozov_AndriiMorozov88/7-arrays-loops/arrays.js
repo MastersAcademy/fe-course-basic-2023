@@ -5,7 +5,15 @@ const arrayFour = [1, undefined, 3, 5, -3];
 const arrayFive = [1, NaN, 3, 5, -3];
 
 function getFilterArray(array) {
-    return array.filter((element) => typeof element === 'number' && !Number.isNaN(element));
+    const filterArray = [];
+    let filterArrayIndex = 0;
+    for (let count = 0; count < array.length; count++) {
+        if (typeof array[count] === 'number' && !Number.isNaN(array[count])) {
+            filterArray[filterArrayIndex] = array[count];
+            filterArrayIndex++;
+        }
+    }
+    return filterArray;
 }
 
 function maxNumberOfArr(array) {
@@ -78,3 +86,40 @@ console.log('arrayTwo positive numbers:', onlyPositiveNumbers(arrayTwo));
 console.log('arrayThree positive numbers:', onlyPositiveNumbers(arrayThree));
 console.log('arrayFour positive numbers:', onlyPositiveNumbers(arrayFour));
 console.log('arrayFive positive numbers:', onlyPositiveNumbers(arrayFive));
+
+const testArray = [5, -6, 7, 10, 15, -7];
+function customReduce(array, reducer, initialValue) {
+    let reducedArray = initialValue;
+    for (let count = 0; count < array.length; count++) {
+        reducedArray = reducer(array[count], reducedArray);
+    }
+    return reducedArray;
+}
+
+function getPow2Sum(element, acc) {
+    return acc + element ** 2;
+}
+
+function getDifference(element, acc) {
+    return acc - element;
+}
+
+console.log(customReduce(testArray, getPow2Sum, 0));
+console.log(customReduce(testArray, getDifference, 0));
+
+function customMap(array, mapper) {
+    for (let count = 0; count < array.length; count++) {
+        array[count] = mapper(array[count]);
+    }
+    return array;
+}
+
+function add10(element) {
+    return element + 10;
+}
+
+function getString(element) {
+    return String(element);
+}
+console.log(customMap(testArray, add10));
+console.log(customMap(testArray, getString));
