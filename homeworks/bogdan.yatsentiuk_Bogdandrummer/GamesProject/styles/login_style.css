@@ -40,7 +40,7 @@
   display: flex;
   flex-direction: column;
   width: 575px;
-  height: 520px;
+  min-height: 520px;
   margin: 60px auto 0;
 }
 
@@ -206,4 +206,20 @@
 .login__button:hover {
   background-color: #CA331F;
   transition: ease-in all 100ms;
+}
+
+.error__input {
+  border: 2px solid #F00;
+}
+
+.errors-row {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.error {
+  font-size: 14px;
+  color: #FD0000;
+  margin-top: 15px;
 }
