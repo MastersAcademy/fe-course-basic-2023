@@ -9,6 +9,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 17px;
 }
 
 .checkbox-group {
@@ -52,4 +53,9 @@ input[type="password"]:focus {
   background-color: #EF4934;
   border: none;
   border-radius: 6px;
+}
+
+.error-container {
+  color: #EF4934;
+  font-weight: 500;
 }

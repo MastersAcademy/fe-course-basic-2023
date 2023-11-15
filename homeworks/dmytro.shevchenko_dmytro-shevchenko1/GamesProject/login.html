@@ -33,15 +33,17 @@
             </h1>
             <form class="login-form" action="success-page.html">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                <input type="email" id="email" name="email" placeholder="Enter your email address">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password" required>
-                <div class="checkbox-group">
-                    <input type="checkbox" id="check" name="robot" class="login-checkbox" required>
+                <input type="password" id="password" name="password" placeholder="Enter your password">
+                <div id="checkbox-group" class="checkbox-group">
+                    <input type="checkbox" id="check" name="robot" class="login-checkbox">
                     <label for="check">I'm not a robot</label>
                 </div>
-                <input type="submit" value="Login" class="submit-button">
+                <div class ="error-container" id="errors-container"></div>
+                <button type="button" id="submit-button" class="submit-button">Login</button>
             </form>
         </main>
+        <script src="scripts/script.js"></script>
     </body>
 </html>
