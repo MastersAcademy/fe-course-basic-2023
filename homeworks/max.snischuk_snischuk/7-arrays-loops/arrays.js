@@ -93,3 +93,45 @@ console.log(onlyPositiveNumbers(arrayTwo)); // [];
 console.log(onlyPositiveNumbers(arrayThree)); // [1, 7, 3];
 console.log(onlyPositiveNumbers(arrayFour)); // [1, 3, 5];
 console.log(onlyPositiveNumbers(arrayFive)); // [1, 3, 5];
+
+function customReduce(array, reducer, initialValue) {
+    let reducedValue = initialValue;
+
+    for (let index = 0; index < array.length; index++) {
+        if (!Number.isNaN(array[index]) && array[index] !== undefined) {
+            reducedValue = reducer(reducedValue, array[index], index, array);
+        }
+    }
+
+    return reducedValue;
+}
+
+function sumReducer(accumulator, currentValue) {
+    return accumulator + currentValue;
+}
+
+console.log(customReduce(arrayOne, sumReducer, 0)); // 32
+console.log(customReduce(arrayTwo, sumReducer, 0)); // -11
+console.log(customReduce(arrayThree, sumReducer, 0)); // 11
+console.log(customReduce(arrayFour, sumReducer, 0)); // 6
+console.log(customReduce(arrayFive, sumReducer, 0)); // 6
+
+function customMap(array, mapper) {
+    const mappedArray = [...array];
+
+    for (let index = 0; index < mappedArray.length; index++) {
+        mappedArray[index] = mapper(array[index], index, mappedArray);
+    }
+
+    return mappedArray;
+}
+
+function multiplyByTenMapper(value) {
+    return value * 10;
+}
+
+console.log(customMap(arrayOne, multiplyByTenMapper)); // 30, 0, -50, 10, 440, ...
+console.log(customMap(arrayTwo, multiplyByTenMapper)); // -10, -80, -20
+console.log(customMap(arrayThree, multiplyByTenMapper)); // 10, 70, 30
+console.log(customMap(arrayFour, multiplyByTenMapper)); // 10, NaN, 30, 50, -30
+console.log(customMap(arrayFive, multiplyByTenMapper)); // 10, NaN, 30, 50, -30
