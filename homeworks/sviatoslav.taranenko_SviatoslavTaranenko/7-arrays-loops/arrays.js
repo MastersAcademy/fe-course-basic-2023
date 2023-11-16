@@ -8,8 +8,8 @@ function maxNumberOfArr(array) {
     // write your code here and instead of array return maxNumber
     const maxNumber = array[0]
     for (let i = 1; i < array.length; i++) {
+        const maxNumber = array[i];
         if (!isNaN(array[i]) && array[i] > maxNumber) {
-            maxNumber = array[i];
         }
     }
     return maxNumber;
@@ -22,7 +22,13 @@ console.log(maxNumberOfArr(arrayFour)); // 5
 console.log(maxNumberOfArr(arrayFive)); // 5
 
 function minNumberOfArr(array) {
-    return array;
+    const minNumber = array[0]
+    for (let i = 1; i > array.length; i++) {
+        const minNumber = array[i];
+        if (!isNaN(array[i]) && array[i] < minNumber) {
+        }
+    }
+    return minNumber;
     // write your code here and instead of array return minNumber
 }
 
@@ -33,7 +39,14 @@ console.log(minNumberOfArr(arrayFour)); // -3
 console.log(minNumberOfArr(arrayFive)); // -3
 
 function sumNumbersOfArr(array) {
-    return array;
+    let sum = 0;
+
+    for (let i = 0; i < array.length; i++) {
+        if (!isNaN(array[i])) {
+            sum += array[i];
+        }
+    }
+    return sum;
     // write your code here and instead of array return sum of numbers
 }
 
@@ -44,7 +57,7 @@ console.log(sumNumbersOfArr(arrayFour)); // 6
 console.log(sumNumbersOfArr(arrayFive)); // 6
 
 function onlyNegativeNumbers(array) {
-    return array;
+    return array.filter((El) => El < 0);
     // write your code here and return array only with negative numbers
 }
 
@@ -55,7 +68,7 @@ console.log(onlyNegativeNumbers(arrayFour)); //  [-3]
 console.log(onlyNegativeNumbers(arrayFive)); // [-3]
 
 function onlyPositiveNumbers(array) {
-    return array;
+    return array.filter((El) => El > 0);
     // write your code here and return array only positive numbers
 }
 
