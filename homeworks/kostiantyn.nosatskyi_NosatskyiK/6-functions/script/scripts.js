@@ -50,7 +50,7 @@ function navigateToResultPage() {
 }
 
 function isEmail(email) {
-    return /\S+@\S+\.\S+/.test(email);
+    return /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email);
 }
 
 // a function that checks email
@@ -105,8 +105,6 @@ function validateForm(e) {
 
     if (emailError && passwordError && checkboxError) {
         navigateToResultPage();
-    } else {
-        alert('You have a problem, please fix');
     }
 
     console.info('Підготовка успішна');
