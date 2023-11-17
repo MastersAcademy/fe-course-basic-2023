@@ -6,10 +6,10 @@ const arrayFive = [1, NaN, 3, 5, -3];
 
 function maxNumberOfArr(array) {
     // write your code here and instead of array return maxNumber
-    const maxNumber = array[0]
+    let maxNumber = array[0]
     for (let i = 1; i < array.length; i++) {
-        const maxNumber = array[i];
         if (!isNaN(array[i]) && array[i] > maxNumber) {
+            maxNumber = array[i];
         }
     }
     return maxNumber;
@@ -22,10 +22,10 @@ console.log(maxNumberOfArr(arrayFour)); // 5
 console.log(maxNumberOfArr(arrayFive)); // 5
 
 function minNumberOfArr(array) {
-    const minNumber = array[0]
-    for (let i = 1; i > array.length; i++) {
-        const minNumber = array[i];
+    let minNumber = array[0]
+    for (let i = 1; i < array.length; i++) {
         if (!isNaN(array[i]) && array[i] < minNumber) {
+            minNumber = array[i];
         }
     }
     return minNumber;
@@ -77,3 +77,32 @@ console.log(onlyPositiveNumbers(arrayTwo)); // [];
 console.log(onlyPositiveNumbers(arrayThree)); // [1, 7, 3];
 console.log(onlyPositiveNumbers(arrayFour)); // [1, 3, 5];
 console.log(onlyPositiveNumbers(arrayFive)); // [1, 3, 5];
+
+function customReduce(array, reducer, initialValue) {
+    let accumulator = initialValue !== undefined ? initialValue : array[0];
+    const startIndex = initialValue !== undefined ? 0 : 1;
+
+    for (let i = startIndex; i < array.length; i++) {
+        accumulator = reducer(accumulator, array[i], i, array);
+    }
+
+    return accumulator;
+}
+
+function customMap(array, mapper) {
+    const result = [];
+
+    for (let i = 0; i < array.length; i++) {
+        result.push(mapper(array[i], i, array));
+    }
+
+    return result;
+}
+
+const numbers = [1, 2, 3, 4, 5];
+
+const sum = customReduce(numbers, (acc, curr) => acc + curr, 0);
+console.log(sum);
+
+const squaredNumbers = customMap(numbers, (num) => num ** 2);
+console.log(squaredNumbers)
