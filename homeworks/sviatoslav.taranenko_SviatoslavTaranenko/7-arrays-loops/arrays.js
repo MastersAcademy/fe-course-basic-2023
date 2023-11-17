@@ -6,9 +6,9 @@ const arrayFive = [1, NaN, 3, 5, -3];
 
 function maxNumberOfArr(array) {
     // write your code here and instead of array return maxNumber
-    let maxNumber = array[0]
+    let maxNumber = array[0];
     for (let i = 1; i < array.length; i++) {
-        if (!isNaN(array[i]) && array[i] > maxNumber) {
+        if (!Number.isNaN(array[i]) && array[i] > maxNumber) {
             maxNumber = array[i];
         }
     }
@@ -22,9 +22,9 @@ console.log(maxNumberOfArr(arrayFour)); // 5
 console.log(maxNumberOfArr(arrayFive)); // 5
 
 function minNumberOfArr(array) {
-    let minNumber = array[0]
+    let minNumber = array[0];
     for (let i = 1; i < array.length; i++) {
-        if (!isNaN(array[i]) && array[i] < minNumber) {
+        if (!Number.isNaN(array[i]) && array[i] < minNumber) {
             minNumber = array[i];
         }
     }
@@ -42,7 +42,7 @@ function sumNumbersOfArr(array) {
     let sum = 0;
 
     for (let i = 0; i < array.length; i++) {
-        if (!isNaN(array[i])) {
+        if (!Number.isNaN(array[i])) {
             sum += array[i];
         }
     }
@@ -105,4 +105,5 @@ const sum = customReduce(numbers, (acc, curr) => acc + curr, 0);
 console.log(sum);
 
 const squaredNumbers = customMap(numbers, (num) => num ** 2);
-console.log(squaredNumbers)
+
+console.log(squaredNumbers);
