@@ -71,3 +71,27 @@ console.log(onlyPositiveNumbers(arrayTwo)); // [];
 console.log(onlyPositiveNumbers(arrayThree)); // [1, 7, 3];
 console.log(onlyPositiveNumbers(arrayFour)); // [1, 3, 5];
 console.log(onlyPositiveNumbers(arrayFive)); // [1, 3, 5];
+
+const customReduce = (array, reducer, initialValue) => {
+    let accumulator = !initialValue ? initialValue : array[0];
+    const startIndex = Number(initialValue);
+    for (let i = startIndex; i < array.length; i++) {
+        accumulator = reducer(accumulator, array[i], i, array);
+    }
+    return accumulator;
+};
+
+const customMap = (array, mapper) => {
+    const result = [];
+    for (let i = 0; i < array.length; i++) {
+        result.push(mapper(array[i], i, array));
+    }
+    return result;
+};
+
+const numbers = [1, 2, 3, 4];
+const sum = customReduce(numbers, (acc, curr) => acc + curr, 0);
+console.log(sum);
+
+const resMap = customMap(numbers, (num) => num ** 2);
+console.log(resMap);
