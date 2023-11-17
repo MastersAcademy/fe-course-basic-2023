@@ -83,9 +83,7 @@ console.log(sumNumbersOfArr(arrayThree)); // 11
 console.log(sumNumbersOfArr(arrayFour)); // 6
 console.log(sumNumbersOfArr(arrayFive)); // 6
 
-function onlyNegativeNumbers(array) {
-    return array.filter((element) => element < 0);
-}
+const onlyNegativeNumbers = (array) => array.filter((element) => element < 0);
 
 console.log(onlyNegativeNumbers(arrayOne)); // [-5, -12, -3, -3, -2, -3, -1]
 console.log(onlyNegativeNumbers(arrayTwo)); // [-1, -8, -2]
@@ -93,9 +91,7 @@ console.log(onlyNegativeNumbers(arrayThree)); // []
 console.log(onlyNegativeNumbers(arrayFour)); //  [-3]
 console.log(onlyNegativeNumbers(arrayFive)); // [-3]
 
-function onlyPositiveNumbers(array) {
-    return array.filter((element) => element > 0);
-}
+const onlyPositiveNumbers = (array) => array.filter((element) => element > 0);
 
 console.log(onlyPositiveNumbers(arrayOne));// [3, 1, 44, 3, 1, 2, 2, 1, 4]
 console.log(onlyPositiveNumbers(arrayTwo)); // [];
@@ -120,9 +116,7 @@ function customReduce(array, reducer, initialValue) {
     return reducedValue;
 }
 
-function sumReducer(accumulator, currentValue) {
-    return accumulator + currentValue;
-}
+const sumReducer = (accumulator, currentValue) => accumulator + currentValue;
 
 console.log(customReduce(arrayOne, sumReducer, 0)); // 32
 console.log(customReduce(arrayTwo, sumReducer, 0)); // -11
@@ -147,9 +141,7 @@ function customMap(array, mapper) {
     return mappedArray;
 }
 
-function multiplyByTenMapper(value) {
-    return value * 10;
-}
+const multiplyByTenMapper = (value) => value * 10;
 
 console.log(customMap(arrayOne, multiplyByTenMapper)); // 30, 0, -50, 10, 440, ...
 console.log(customMap(arrayTwo, multiplyByTenMapper)); // -10, -80, -20
