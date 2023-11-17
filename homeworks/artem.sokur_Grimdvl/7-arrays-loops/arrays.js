@@ -23,16 +23,15 @@ console.log(maxNumberOfArr(arrayFour)); // 5
 console.log(maxNumberOfArr(arrayFive)); // 5
 
 function minNumberOfArr(array) {
-    // let minNumber = array[0];
+    let minNumber = array[0];
 
-    // for (const item of array) {
-    //     if (minNumber > item) {
-    //         minNumber = item;
-    //     }
-    // }
-    // return minNumber;
+    for (let i = 1; i < array.length; i++) {
+        if (minNumber > array[i]) {
+            minNumber = array[i];
+        }
+    }
 
-    return array.reduce((minNumber, item) => (minNumber > item ? item : minNumber), array[0]);
+    return minNumber;
 }
 
 console.log(minNumberOfArr(arrayOne)); // -12
@@ -123,4 +122,18 @@ const sumAllNumbers = customReduce(numbers, (result, number) => {
 
 console.log(sumAllNumbers);
 
-// customMap(array, mapper)
+const numbersSeconds = [1, 2, 3, 4, 5];
+
+function customMap(array, mapper) {
+    const result = [];
+
+    for (let i = 0; i < array.length; i++) {
+        result.push(mapper(array[i]));
+    }
+
+    return result;
+}
+
+const multyNumbers = customMap(numbersSeconds, (mapper) => mapper * 2);
+
+console.log(multyNumbers);
