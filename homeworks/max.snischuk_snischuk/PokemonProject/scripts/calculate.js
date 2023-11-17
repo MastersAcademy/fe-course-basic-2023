@@ -45,7 +45,9 @@ function calculate(firstValue, secondValue, operation) {
 
     if (result > 100) return 'Too many pokemons';
 
-    return result;
+    if (result > 1) return `${result} pokemons`;
+
+    return `${result} pokemon`;
 }
 
 window.calculate = calculate;
