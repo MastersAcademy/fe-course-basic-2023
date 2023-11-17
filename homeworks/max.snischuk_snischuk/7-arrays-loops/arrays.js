@@ -12,13 +12,16 @@ function maxNumberOfArr(array) {
     for (let i = 1; i < array.length; i++) {
         const currentElement = array[i];
 
-        if (!Number.isNaN(currentElement) && currentElement !== undefined) {
+        if (
+            currentElement !== undefined
+            && currentElement !== null
+            && !Number.isNaN(currentElement)
+        ) {
             if (currentElement > maxNumber) {
                 maxNumber = currentElement;
             }
         }
     }
-
     return maxNumber;
 }
 
@@ -36,13 +39,16 @@ function minNumberOfArr(array) {
     for (let i = 1; i < array.length; i++) {
         const currentElement = array[i];
 
-        if (!Number.isNaN(currentElement) && currentElement !== undefined) {
+        if (
+            currentElement !== undefined
+            && currentElement !== null
+            && !Number.isNaN(currentElement)
+        ) {
             if (currentElement < minNumber) {
                 minNumber = currentElement;
             }
         }
     }
-
     return minNumber;
 }
 
@@ -60,11 +66,14 @@ function sumNumbersOfArr(array) {
     for (let i = 1; i < array.length; i++) {
         const currentElement = array[i];
 
-        if (!Number.isNaN(currentElement) && currentElement !== undefined) {
+        if (
+            currentElement !== undefined
+            && currentElement !== null
+            && !Number.isNaN(currentElement)
+        ) {
             sum += array[i];
         }
     }
-
     return sum;
 }
 
@@ -98,11 +107,16 @@ function customReduce(array, reducer, initialValue) {
     let reducedValue = initialValue;
 
     for (let index = 0; index < array.length; index++) {
-        if (!Number.isNaN(array[index]) && array[index] !== undefined) {
-            reducedValue = reducer(reducedValue, array[index], index, array);
+        const currentElement = array[index];
+
+        if (
+            currentElement !== undefined
+            && currentElement !== null
+            && !Number.isNaN(currentElement)
+        ) {
+            reducedValue = reducer(reducedValue, currentElement, index, array);
         }
     }
-
     return reducedValue;
 }
 
@@ -120,9 +134,16 @@ function customMap(array, mapper) {
     const mappedArray = [...array];
 
     for (let index = 0; index < mappedArray.length; index++) {
-        mappedArray[index] = mapper(array[index], index, mappedArray);
-    }
+        const currentElement = array[index];
 
+        if (
+            currentElement !== undefined
+            && currentElement !== null
+            && !Number.isNaN(currentElement)
+        ) {
+            mappedArray[index] = mapper(currentElement, index, mappedArray);
+        }
+    }
     return mappedArray;
 }
 
