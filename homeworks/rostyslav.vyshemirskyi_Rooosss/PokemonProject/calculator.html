@@ -19,7 +19,7 @@
                     <nav class="navigation">
                         <ul class="navigation__list">
                             <li class="navigation__item">
-                                <a class="navigation__link" href="calculator.html">Calculator</a>
+                                <a class="navigation__link" href="#">Calculator</a>
                             </li>
                             <li class="navigation__item">
                                 <a class="navigation__link" href="pokemons.html">Pokemons</a>
@@ -28,7 +28,7 @@
                                 <a class="navigation__link" href="index.html">About</a>
                             </li>
                             <li class="navigation__item">
-                                <a class="navigation__link" href="#">Login</a>
+                                <a class="navigation__link" href="login.html">Login</a>
                             </li>
                         </ul>
                     </nav>
@@ -37,25 +37,32 @@
         </header>
         <main class="main">
             <div class="container">
-                <section class="login">
-                    <div class="login__inner">
-                        <h1 class="login__title">Login page</h1>
-                        <form class="login__form">
-                            <label class="login__form-label" for="email">Email</label>
-                            <input id="email" class="login__form-input" type="email" placeholder="Enter your email address">
-
-                            <label class="login__form-label" for="password">Password</label>
-                            <input id="password" class="login__form-input" type="password" placeholder="Enter your password">
-
-                            <input id="check" class="login__form-checkbox" type="checkbox">
-                            <label class="login__form-label_check" for="check">I’m not a robot</label>
-                            <div id="errors-container" class="login__error"></div>
-                            <button id="submit-button" class="login__form-submit" type="button">Login</button>
-                        </form>
+                <section class="calculator">
+                    <h1 class="calc__title">Calculator v. 1</h1>
+                    <div class="field">
+                        <label>
+                            <input class="field__number" id="firstValue" placeholder="enter a number">
+                        </label>
+                        <label>
+                            <select class="field__operation" name="operation" id="operation">
+                                <option value="+">+</option>
+                                <option value="-">-</option>
+                                <option value="/">/</option>
+                                <option value="*">*</option>
+                                <option value="**">**</option>
+                            </select>
+                        </label>
+                        <label>
+                            <input class="field__number" id="secondValue" placeholder="enter a number">
+                        </label>
+                        <button class="field__button" id="calculate" type="button">=</button>
+                        <span class="field__result" id="result"></span>
                     </div>
                 </section>
             </div>
         </main>
         <script src="./scripts/script.js"></script>
+        <script src="./scripts/default.js"></script>
+        <script src="./scripts/calculator.js"></script>
     </body>
 </html>
