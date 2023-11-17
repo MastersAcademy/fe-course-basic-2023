@@ -15,6 +15,8 @@ function calculate(firstValue, secondValue, operation) {
     const num1 = Number(firstValue);
     const num2 = Number(secondValue);
     const visualInterpritation = document.querySelector('#visualInterpritation');
+    const visualTimeDurationExecution = document.querySelector('#visualTimeDurationExecution');
+    const startTime = new Date();
 
     if (Number.isNaN(num1) || Number.isNaN(num2)) {
         visualInterpritation.innerHTML = '<h1>Enter a number</h1>';
@@ -54,7 +56,27 @@ function calculate(firstValue, secondValue, operation) {
         return 'Result is too big';
     }
 
-    visualInterpritation.innerHTML = `<h1>${num1}</h1> <h1>${operation}</h1> <h1>${num2}</h1> <h1>=</h1> <h1>${result} games</h1>`;
+    if (result > 1 || result < -1 || result % 2 === 0) {
+        result = `${result} games`;
+        visualInterpritation.innerHTML = `<h1>${num1}</h1> <h1>${operation}</h1> <h1>${num2}</h1> <h1>=</h1> <h1>${result}</h1>`;
+    } else {
+        result = `${result} game`;
+        visualInterpritation.innerHTML = `<h1>${num1}</h1> <h1>${operation}</h1> <h1>${num2}</h1> <h1>=</h1> <h1>${result}</h1>`;
+    }
+
+    const endTime = new Date();
+    const executionTime = endTime - startTime;
+
+    const timeFormatOptions = { hour: '2-digit', minute: '2-digit' };
+    const formattedTime = new Intl.DateTimeFormat('uk-UA', timeFormatOptions).format(startTime);
+
+    const day = startTime.getDate();
+    const month = new Intl.DateTimeFormat('en-US', { month: 'short' }).format(startTime);
+    const year = startTime.getFullYear();
+
+    const timestampString = `Date of calculation: ${day}-${month}-${year}, ${formattedTime}. Time of function execution: ${executionTime}ms`;
+    visualTimeDurationExecution.innerHTML = timestampString;
+
     return result;
 }
 
