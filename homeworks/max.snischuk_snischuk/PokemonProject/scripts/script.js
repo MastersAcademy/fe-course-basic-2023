@@ -4,9 +4,36 @@ const OPERATION_ELEMENT = document.querySelector('[data-math-operation]');
 const CALCULATE_BUTTON_ELEMENT = document.querySelector('[data-math-calculate-btn]');
 const RESULT_VALUE_ELEMENT = document.querySelector('[data-math-output-value]');
 const CALCULATOR_CONTAINER = document.querySelector('[data-math-container]');
+const CALCULATOR_TIME = document.querySelector('[data-math-time]');
 
 const MIN_CARDS_IN_COLUMN = 1;
 const MAX_CARDS_IN_COLUMN = 10;
+
+function measureTimeFn(fn) {
+    const start = Date.now();
+    for (let i = 0; i < 100; i++) {
+        fn();
+    }
+    const finish = Date.now();
+    const duration = finish - start;
+
+    return `Time of function execution: ${duration}ms`;
+}
+
+function formatCustomDate(date) {
+    const year = date.getFullYear();
+    const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const month = monthNames[date.getMonth()];
+    let dayOfMonth = date.getDate();
+    let hour = date.getHours();
+    let minutes = date.getMinutes();
+
+    dayOfMonth = dayOfMonth < 10 ? `0${dayOfMonth}` : dayOfMonth;
+    hour = hour < 10 ? `0${hour}` : hour;
+    minutes = minutes < 10 ? `0${minutes}` : minutes;
+
+    return `Date of calculation: ${dayOfMonth}-${month}-${year}, ${hour}:${minutes}.`;
+}
 
 function deleteMathExpression() {
     const MATH_EXPRESSION_ELEMENT = CALCULATOR_CONTAINER.querySelector('[data-math-output-list]');
@@ -203,12 +230,16 @@ function lastOutputOperandHandler() {
 }
 
 CALCULATE_BUTTON_ELEMENT.addEventListener('click', () => {
-    renderMathExpressionElement();
+    const measuredTime = measureTimeFn(renderMathExpressionElement);
+    const dateCalculation = formatCustomDate(new Date());
+    CALCULATOR_TIME.innerHTML = `${dateCalculation} ${measuredTime}`;
 });
 
 FIRST_VALUE_ELEMENT.addEventListener('input', () => {
     renderMathExpressionElement();
-
     firstOutputOperandHandler();
-    lastOutputOperandHandler();
+
+    const measuredTime = measureTimeFn(lastOutputOperandHandler);
+    const dateCalculation = formatCustomDate(new Date());
+    CALCULATOR_TIME.innerHTML = `${dateCalculation} ${measuredTime}`;
 });
