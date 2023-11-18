@@ -20,6 +20,12 @@ function getAbsoluteTime() {
     const date = new Date();
     return date.getTime();
 }
+function getAddition(number) {
+    if (number <= 1) {
+        return 'game';
+    }
+    return 'games';
+}
 function showResult() {
     const timeStart = getAbsoluteTime();
     let result;
@@ -56,11 +62,17 @@ function showResult() {
             result = firstNumber ** secondNumber;
             break;
     }
-    resultContainer.innerText = `${result}`;
+    resultContainer.innerText = `${result} ${getAddition(result)}`;
 
     if (result > 100) {
         resultContainer.innerText = 'Error';
         commentContainer.innerText = 'Too many games';
+        commentContainer.classList.add('comment-container--error');
+        return;
+    }
+    if (result < 0) {
+        resultContainer.innerText = 'Error';
+        commentContainer.innerText = 'Negative count of games is not possible';
         commentContainer.classList.add('comment-container--error');
         return;
     }
