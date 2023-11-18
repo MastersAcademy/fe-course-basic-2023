@@ -81,4 +81,4 @@ function showResult() {
     const timeFinish = getAbsoluteTime();
     commentContainer.innerText = `Date of calculation: ${getDate()}. Time of function execution: ${timeFinish - timeStart} ms`;
 }
-button.addEventListener('click', showCards);
+button.addEventListener('click', showResult);
