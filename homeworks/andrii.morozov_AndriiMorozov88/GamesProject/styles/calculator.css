@@ -60,9 +60,13 @@
   height: 50px;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.comment-container--error {
   font-size: 48px;
   font-weight: 600;
   color: #E35734;
-  margin: 0 auto;
 }
-
