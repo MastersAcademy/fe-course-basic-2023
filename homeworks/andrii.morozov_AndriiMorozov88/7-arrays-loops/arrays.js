@@ -4,24 +4,13 @@ const arrayThree = [1, 7, 3];
 const arrayFour = [1, undefined, 3, 5, -3];
 const arrayFive = [1, NaN, 3, 5, -3];
 
-function getFilterArray(array) {
-    const filterArray = [];
-    let filterArrayIndex = 0;
+function maxNumberOfArr(array) {
+    let maxNumber = -Infinity;
     for (let count = 0; count < array.length; count++) {
         if (typeof array[count] === 'number' && !Number.isNaN(array[count])) {
-            filterArray[filterArrayIndex] = array[count];
-            filterArrayIndex++;
-        }
-    }
-    return filterArray;
-}
-
-function maxNumberOfArr(array) {
-    const filterArray = getFilterArray(array);
-    let maxNumber = filterArray[0];
-    for (let count = 1; count < filterArray.length; count++) {
-        if (filterArray[count] > maxNumber) {
-            maxNumber = filterArray[count];
+            if (array[count] > maxNumber) {
+                maxNumber = array[count];
+            }
         }
     }
     return maxNumber;
@@ -34,11 +23,12 @@ console.log(`Max number of arrayFour = ${maxNumberOfArr(arrayFour)}`); // 5
 console.log(`Max number of arrayFive = ${maxNumberOfArr(arrayFive)}`); // 5
 
 function minNumberOfArr(array) {
-    const filterArray = getFilterArray(array);
-    let minNumber = filterArray[0];
-    for (let count = 1; count < filterArray.length; count++) {
-        if (filterArray[count] < minNumber) {
-            minNumber = filterArray[count];
+    let minNumber = Infinity;
+    for (let count = 0; count < array.length; count++) {
+        if (typeof array[count] === 'number' && !Number.isNaN(array[count])) {
+            if (array[count] < minNumber) {
+                minNumber = array[count];
+            }
         }
     }
     return minNumber;
@@ -51,10 +41,11 @@ console.log(`Min number of arrayFour = ${minNumberOfArr(arrayFour)}`);
 console.log(`Min number of arrayFive = ${minNumberOfArr(arrayFive)}`);
 
 function sumNumbersOfArr(array) {
-    const filterArray = getFilterArray(array);
     let sum = 0;
-    for (let count = 0; count < filterArray.length; count++) {
-        sum += filterArray[count];
+    for (let count = 0; count < array.length; count++) {
+        if (typeof array[count] === 'number' && !Number.isNaN(array[count])) {
+            sum += array[count];
+        }
     }
     return sum;
 }
@@ -66,8 +57,7 @@ console.log(`Sum of arrayFour = ${sumNumbersOfArr(arrayFour)}`);
 console.log(`Sum of arrayFive = ${sumNumbersOfArr(arrayFive)}`);
 
 function onlyNegativeNumbers(array) {
-    const filterArray = getFilterArray(array);
-    return filterArray.filter((element) => element < 0);
+    return array.filter((element) => element < 0);
 }
 console.log('Only negative numbers');
 console.log('arrayOne negative numbers:', onlyNegativeNumbers(arrayOne));
@@ -77,8 +67,7 @@ console.log('arrayFour negative numbers:', onlyNegativeNumbers(arrayFour));
 console.log('arrayFive negative numbers:', onlyNegativeNumbers(arrayFive));
 
 function onlyPositiveNumbers(array) {
-    const filterArray = getFilterArray(array);
-    return filterArray.filter((element) => element > 0);
+    return array.filter((element) => element > 0);
 }
 console.log('Only positive numbers');
 console.log('arrayOne positive numbers:', onlyPositiveNumbers(arrayOne));
@@ -89,8 +78,9 @@ console.log('arrayFive positive numbers:', onlyPositiveNumbers(arrayFive));
 
 const testArray = [5, -6, 7, 10, 15, -7];
 function customReduce(array, reducer, initialValue) {
-    let reducedArray = initialValue;
-    for (let count = 0; count < array.length; count++) {
+    let reducedArray = initialValue || array[0];
+    const startCount = initialValue ? 0 : 1;
+    for (let count = startCount; count < array.length; count++) {
         reducedArray = reducer(array[count], reducedArray);
     }
     return reducedArray;
