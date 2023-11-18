@@ -21,7 +21,7 @@ function getAbsoluteTime() {
     return date.getTime();
 }
 function showResult() {
-    console.log(getAbsoluteTime());
+    const timeStart = getAbsoluteTime();
     let result;
     commentContainer.innerText = '';
     commentContainer.classList.remove('comment-container--error');
@@ -65,7 +65,9 @@ function showResult() {
         return;
     }
     resultContainer.classList.add('calculator__result--calc');
-    commentContainer.innerText = `Date of calculation: ${getDate()}`;
+    for (let count = 0; count < 10000000; count++);
+    const timeFinish = getAbsoluteTime();
+    commentContainer.innerText = `Date of calculation: ${getDate()}. Time of function execution: ${timeFinish - timeStart} ms`;
     console.log(getAbsoluteTime());
 }
 button.addEventListener('click', showResult);
