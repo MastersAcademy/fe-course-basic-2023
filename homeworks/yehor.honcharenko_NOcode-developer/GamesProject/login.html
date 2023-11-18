@@ -36,29 +36,29 @@
                         <article class="login__header">
                             <h1 class="login__h1">Login page</h1>
                         </article>
-                        <form action="./success.html" method="#">
+                        <form id="result-page-path" action="./success.html" method="#">
                             <section class="form__container">
                                 <article class="form__input">
                                     <label class="label" for="email">Email
-                                        <input class="textfield" type="email" name="email"
-                                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$"
-                                            placeholder="Enter your email address" required>
+                                        <input id="input__email" class="textfield" type="email" name="email"
+                                            placeholder="Enter your email address">
                                     </label>
                                 </article>
                                 <article class="form__input">
                                     <label class="label" for="password">Password
-                                        <input class="textfield" type="password" minlength="9" maxlength="47" name="password"
-                                            placeholder="Enter your password" required>
+                                        <input id="input__password" class="textfield" type="password" name="password"
+                                            placeholder="Enter your password">
                                     </label>
                                 </article>
                                 <article class="form__control">
                                     <label class="control control__checkbox">First checkbox
-                                        <input type="checkbox" required>
+                                        <input id="input__checkbox" type="checkbox">
                                         <div class="control__proxy"></div>
                                     </label>
                                 </article>
+                                <div id="errors-container" class="validation__messages"></div>
                                 <article class="form__button">
-                                    <button class="submit" type="submit">Login</button>
+                                    <button id="button__submit" class="submit" type="button">Login</button>
                                 </article>
                             </section>
                         </form>
@@ -96,6 +96,7 @@
                 </section>
             </footer>
         </section>
-        <script src="header.js"></script>
+        <script src="./scripts/header.js"></script>
+        <script src="./scripts/script.js"></script>
     </body>
 </html>

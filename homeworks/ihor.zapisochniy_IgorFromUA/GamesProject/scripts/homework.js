@@ -16,7 +16,7 @@ function calculate(firstValue, secondValue, operation) {
     const firstNumber = Number(firstValue);
     const secondNumber = Number(secondValue);
     let result;
-    if (!firstNumber || !secondNumber) return 'Enter a number';
+    if ((!firstNumber || !secondNumber) && firstNumber !== 0 && secondNumber !== 0) return 'Enter a number';
     if (operation === '**') return 'Choose a valid operation';
     switch (operation) {
         case '+':
@@ -29,6 +29,10 @@ function calculate(firstValue, secondValue, operation) {
             result = firstNumber * secondNumber;
             break;
         case '/':
+            if (secondNumber === 0) {
+                result = 'Division by zero is not allowed';
+                break;
+            }
             result = firstNumber / secondNumber;
             break;
         default:

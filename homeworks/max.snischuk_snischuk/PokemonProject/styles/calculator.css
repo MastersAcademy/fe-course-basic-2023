@@ -1,0 +1,148 @@
+@import "./header.css";
+@import "./card.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+.calculator {
+  padding: 60px 0;
+}
+
+.calculator__container {
+  max-width: 1280px;
+  padding: 0 50px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.calculator__title {
+  text-align: center;
+  color: #221F1F;
+  font-size: 48px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+.calculator__field {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.calculator__input {
+  padding: 30px 20px;
+  border-radius: 6px;
+  border: .6px solid #A9A9A9;
+  background: #FFF;
+  color: #221F1F;
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  transition: all .3s ease-in-out;
+}
+
+.calculator__input::placeholder {
+  color: #A9A9A9;
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.calculator__input:focus {
+  outline: none;
+  border-bottom: 1px solid #EF4934;
+}
+
+.calculator__select-math-sign {
+  height: 100%;
+  padding: 27px 20px;
+  border-radius: 6px;
+  border: .6px solid #A9A9A9;
+  background: #FFF;
+  font-family: Roboto;
+  color: #221F1F;
+  font-size: 22px;
+  line-height: normal;
+  font-weight: 600;
+  transition: all .3s ease-in-out;
+}
+
+.calculator__select-math-sign:hover,
+.calculator__select-math-sign:focus {
+  outline: none;
+  border-bottom: 1px solid #EF4934;
+}
+
+.calculator__btn {
+  cursor: pointer;
+  padding: 30px;
+  border: none;
+  border-radius: 6px;
+  background: #EF4934;
+  box-shadow: 0 4px 30px 0 rgba(38, 58, 67, .15);
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 22px;
+  line-height: normal;
+  font-weight: 600;
+  transition: filter .3s ease-in-out;
+}
+
+.calculator__btn:hover {
+  filter: brightness(.9);
+}
+
+.calculator__math-output {
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 400;
+}
+
+.calculator__math-output-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, auto) 1fr;
+  align-items: center;
+  gap: 30px;
+}
+
+.calculator__column {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.calculator__math-output-item {
+  color: #F00;
+  font-size: 48px;
+  line-height: 32px;
+  font-weight: 700;
+  column-gap: 20px;
+  row-gap: 250px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.calculator__math-output-cards {
+  list-style: none;
+}
+
+.calculator__math-output-card {
+  color: #F00;
+  font-size: 48px;
+  line-height: 32px;
+  font-weight: 700;
+  width: 255px;
+  height: 355px;
+}

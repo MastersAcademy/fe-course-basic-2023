@@ -28,7 +28,7 @@ body {
 
 .login__label {
   display: block;
-  margin-bottom: 40px;
+  margin-top: 40px;
   color: #221F1F;
   font-family: Roboto;
   font-size: 22px;
@@ -71,7 +71,7 @@ body {
 .login__checkbox-custom {
   display: flex;
   align-items: center;
-  margin-bottom: 40px;
+  margin-top: 40px;
   color: #221F1F;
   font-size: 14px;
   line-height: 21px;
@@ -96,6 +96,7 @@ body {
 }
 
 .login__btn {
+  margin-top: 40px;
   cursor: pointer;
   width: 100%;
   padding: 27px;
@@ -113,4 +114,11 @@ body {
 
 .login__btn:hover {
   filter: brightness(.9);
+}
+
+.error {
+  margin: 5px;
+  color: #F00;
+  font-size: 14px;
+  line-height: 21px;
 }

@@ -22,29 +22,31 @@
         </header>
         <main class="form">
             <h1 class="form_h1">Login page</h1>
-            <form action="success.html" class="form_content">
+            <form class="form_content">
                 <p class="form_p">
-                    <label for="email" class="form_email">Email</label>
+                    <label for="email-input" class="form_email">Email</label>
                     <br >
-                    <input type="email" id="email" name="email" required="required"
+                    <input id="email-input" name="email" required="required"
                         placeholder="Enter your email address" class="form_email--input">
                 </p>
                 <p class="form_p">
-                    <label for="pwd" class="form_pass">Password</label>
+                    <label for="password-input" class="form_pass">Password</label>
                     <br >
-                    <input type="password" id="pwd" name="pwd" required="required"
+                    <input id="password-input" name="pwd" required="required"
                         placeholder="Enter your password" class="form_pass--input">
                 </p>
-                <label for="robot" class="checkbox-main">
-                    <input type="checkbox" id="robot" name="robot"
+                <label for="not-a-robot" class="checkbox-main">
+                    <input type="checkbox" id="not-a-robot" name="robot"
                         value="check" class="form_checkbox" required="required">
                     <span class="custom-checkbox"></span>
                     I'm not a robot
                 </label>
+                <div id="errors-container"></div>
                 <p>
-                    <button type="submit" id="button" class="submit_button">Login</button>
+                    <button type="button" id="submit-button" class="submit_button">Login</button>
                 </p>
             </form>
         </main>
+        <script src="scripts/script.js"></script>
     </body>
 </html>

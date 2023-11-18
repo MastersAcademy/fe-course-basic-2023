@@ -94,6 +94,9 @@ a {
   }
 }
 
+.error {
+  color: #EF4934;
+}
 
 .login__form {
   margin: 80px auto 0;
@@ -127,10 +130,41 @@ a {
 }
 
 .login__form-checkbox {
-  background-color: #FFF;
-  border-color: #EF4934;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  position: absolute;
 }
 
+.login__checkbox-custom {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-color: #FFF;
+  border: solid 1px #EF4934;
+  border-radius: 6px;
+  margin-right: 12px;
+  vertical-align: sub;
+}
+
+.login__checkbox-custom::before {
+  content: " ";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-image: url("../images/check.png");
+  background-size: contain;
+  transform: translate(-50%, -50%) scale(0);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transition: .2s ease-in-out;
+}
+
+.login__form-checkbox:checked+.login__checkbox-custom::before {
+  transform: translate(-50%, -50%) scale(1);
+}
 
 .login__form-btn {
   border-radius: 6px;
@@ -147,39 +181,3 @@ a {
 .login__form-btn:hover {
   opacity: 1;
 }
-
-.login__form-checkbox {
-  width: 20px;
-  height: 20px;
-  color: #FFF;
-  vertical-align: middle;
-  -webkit-appearance: none;
-  outline: 0;
-  flex-grow: 0;
-  border-radius: 6px;
-  border: 1px solid #EF4934;
-  background: #FFF;
-  transition: background 300ms;
-  cursor: pointer;
-}
-
-
-.login__form-checkbox::before {
-  content: "";
-  color: transparent;
-  display: block;
-  width: inherit;
-  height: inherit;
-  border-color: #FFF;
-  background-color: transparent;
-  background-size: contain;
-}
-
-.login__form-checkbox:checked {
-  background-color: currentColor;
-}
-
-.login__form-checkbox:checked::before {
-  background-image: url("../images/check.svg");
-}
-

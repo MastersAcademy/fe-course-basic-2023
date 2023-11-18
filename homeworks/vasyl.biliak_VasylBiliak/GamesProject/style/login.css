@@ -62,6 +62,8 @@
 
 .login-form {
   display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr;
   width: 575px;
   height: 520px;
   border-radius: 5px;
@@ -94,14 +96,10 @@
   height: 70px;
   background-color: transparent;
   border-radius: 6px;
-  border: .6px #A9A9A9 solid;
+  border: 1px #A9A9A9 solid;
   margin-top: 22px;
   padding-left: 20px;
   box-sizing: border-box;
-}
-
-.login-form__input:valid {
-  border-color: #00BD5E;
 }
 
 .login-form__input::placeholder {
@@ -167,3 +165,7 @@
   border: none;
 }
 
+.error {
+  color: #C03A24;
+  padding: 5px;
+}

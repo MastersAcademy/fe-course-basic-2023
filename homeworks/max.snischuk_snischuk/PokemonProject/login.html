@@ -16,6 +16,9 @@
                 </a>
                 <ul class="header__nav-list">
                     <li>
+                        <a class="header__nav-link" href="./calculator.html">Calculator</a>
+                    </li>
+                    <li>
                         <a class="header__nav-link" href="./pokemons.html">Pokemons</a>
                     </li>
                     <li>
@@ -28,22 +31,22 @@
             </nav>
         </header>
         <main>
-            <form class="login" action="./login-success.html" method="post">
+            <form class="login">
                 <h2 class="login__title">Login page</h2>
                 <label class="login__label">
                     Email
-                    <input class="login__field" type="email" placeholder="Enter your email address"
-                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                    <input class="login__field" id="email" type="text" placeholder="Enter your email address">
                 </label>
                 <label class="login__label">
                     Password
-                    <input class="login__field" type="password" placeholder="Enter your password" required minlength="8"
-                        maxlength="20">
+                    <input class="login__field" id="password" type="password" placeholder="Enter your password">
                 </label>
-                <input class="login__checkbox-input" type="checkbox" id="check" required>
-                <label class="login__checkbox-custom" for="check">I'm not a robot</label>
-                <button class="login__btn" type="submit">Login</button>
+                <input class="login__checkbox-input" id="checkbox" type="checkbox">
+                <label class="login__checkbox-custom" for="checkbox">I'm not a robot</label>
+                <div class="login__errors-container" id="erros-container"></div>
+                <button class="login__btn" id="submit" type="button">Login</button>
             </form>
         </main>
+        <script src="./scripts/validateForm.js"></script>
     </body>
 </html>

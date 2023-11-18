@@ -483,3 +483,21 @@ a {
   justify-content: center;
   align-items: center;
 }
+
+/* ================== ERRORS-BOX ============================ */
+
+.errors-box {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.error:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.error::before {
+  content: "✕";
+  font-size: 18px;
+  color: #F00;
+  margin-right: 10px;
+}

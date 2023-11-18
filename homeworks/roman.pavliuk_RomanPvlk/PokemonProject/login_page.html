@@ -34,24 +34,25 @@
         <form class="form-login" action="./result.html" target="self">
             <div class="form-login_item">
                 <label class="labels" for="email">Email</label>
-                <input class="form-login_item__input" type="email" id="email" name="email"
-                    placeholder="Enter your email adress"
-                    pattern="[a-z0-9._%+\-]*@[a-z0-9.\-]*\.[a-z]{2,}$"
-                    required>
+                <input type="text" class="form-login_item__input" id="email" name="email"
+                    placeholder="Enter your email address">
+                <div class="error_container" id="email_error"></div>
             </div>
             <div class="form-login_item">
                 <label class="labels" for="password">Password</label>
-                <input class="form-login_item__input" type="password" id="password" name="password"
-                    placeholder="Enter your password"
-                    required>
+                <input type="password" class="form-login_item__input" id="password" name="password"
+                    placeholder="Enter your password">
+                <div class="error_container" id="password_error"></div>
             </div>
             <div class="checkbox_area">
                 <label>
-                    <input type="checkbox" required>
+                    <input type="checkbox" id="checkbox">
                     I'm not a robot
                 </label>
+                <div id="checkbox_error"></div>
             </div>
-            <input class="button" type="submit" value="Login">
+            <button type="button" class="button" id="button">Login</button>
         </form>
+        <script src="./scripts/script.js"></script>
     </body>
 </html>

@@ -49,22 +49,24 @@
                         <div class="form__login">
                             <div class="item">
                                 <label class="label" for="email">Email</label>
-                                <input class="inp" type="email" name="email"
-                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$"
-                                    placeholder="Enter your email address" required>
+                                <input class="inp" id="email" type="email" name="email"
+                                    placeholder="Enter your email address">
                             </div>
+                            <div id="errors-container-email" class="errors-container-email"></div>
                             <div class="item">
                                 <label class="label" for="password">Password</label>
-                                <input class="inp" type="password" minlength="9" maxlength="47" name="password"
-                                    placeholder="Enter your password" required>
+                                <input class="inp" id="password" type="password" name="password"
+                                    placeholder="Enter your password">
                             </div>
+                            <div id="errors-container-password" class="errors-container-password"></div>
                             <label class="item__check">
-                                <input class="inp__check" type="checkbox" name="checkbox" required>
+                                <input class="inp__check" id="checkbox" type="checkbox" name="checkbox">
                                 <span class="custom__check"></span>
                                 I’m not a robot
                             </label>
+                            <div id="errors-container-checkbox" class="errors-container-checkbox"></div>
                             <div class="item__button">
-                                <button type="submit">Login</button>
+                                <button type="button" id="button">Login</button>
                             </div>
                         </div>
                     </form>
@@ -98,6 +100,7 @@
                 </div>
             </div>
         </footer>
+        <script src="./script/validate.js"></script>
     </body>
 
 </html>

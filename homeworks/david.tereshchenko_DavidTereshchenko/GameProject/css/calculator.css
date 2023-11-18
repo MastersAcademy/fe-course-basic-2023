@@ -1,0 +1,117 @@
+@import "header/header.css";
+@import "default/default.css";
+@import "Footer/footer.css";
+
+.page {
+  min-height: 75%;
+}
+
+.wrapper {
+  height: 100%;
+}
+
+.title__calculator {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  margin-bottom: 60px;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.number__container {
+  display: flex;
+  justify-content: start;
+  align-items: flex-end;
+  max-width: 100%;
+  gap: 16px;
+  margin-top: 60px;
+  border-radius: 6px;
+}
+
+.number__container input {
+  height: 36px;
+  text-align: center;
+}
+
+.number__block {
+  display: flex;
+  margin-top: 15px;
+  max-width: 350px;
+  padding: 12px 10px;
+  border-radius: 6px;
+  border: 1px solid #A9A9A9;
+}
+
+.operator__block select {
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+  min-width: 114px;
+  height: 36px;
+  padding: 12px 10px;
+  border-radius: 6px;
+  border: 1px solid #A9A9A9;
+}
+
+.operator {
+  max-width: 50px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.button {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #A9A9A9;
+  min-width: 114px;
+  font-size: 14px;
+  background-color: #000;
+  color: #FFF;
+}
+
+.title {
+  font-size: 48px;
+}
+
+.result {
+  display: flex;
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+.result p {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.count-block {
+  display: none;
+  flex-direction: row;
+  margin-top: 40px;
+  gap: 20px;
+  align-items: center;
+}
+
+.visual-counting {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  letter-spacing: .4rem;
+}
+
+.error {
+  border: 1px solid #EF4934;
+}
+
+.oper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.visual-counting span {
+  font-size: 48px;
+  color: #EF4934;
+}

@@ -123,3 +123,8 @@
   align-items: center;
   gap: 10px;
 }
+
+.errors-view {
+  color: #C33523;
+  margin: 0 auto;
+}

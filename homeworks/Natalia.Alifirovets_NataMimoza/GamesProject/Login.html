@@ -27,18 +27,20 @@
                     <form action="result.html" class="login-box" target="_blank">
                         <div class="form-box">
                             <label for="email" class="title">Email</label>
-                            <input type="email" id="email" name="email" class="input-box" placeholder="Enter your email address" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,6}$">
+                            <input type="email" id="email" name="email" class="input-box" placeholder="Enter your email address">
                         </div>
                         <div class="form-box">
                             <label for="password" class="title">Password</label>
-                            <input type="password" id="password" name="password" class="input-box" placeholder="Enter your password" required minlength="7">
+                            <input type="password" id="password" name="password" class="input-box" placeholder="Enter your password">
                         </div>
                         <div class="checkbox-field">
                             <label for="verification" class="checkbox-view">I’m not a robot</label>
-                            <input type="checkbox" id="verification" name="checkbox" required>
+                            <input type="checkbox" id="verification" name="checkbox">
+                        </div>
+                        <div id="errors-container" class="errors-view">
                         </div>
                         <div class="form-box">
-                            <button type="submit" class="button-login" value="Login">
+                            <button id="submit_button" type="button" class="button-login" value="Login">
                                 Login
                             </button>
                         </div>
@@ -46,5 +48,6 @@
                 </main>
             </div>
         </div>
+        <script src="./script.js"></script>
     </body>
 </html>

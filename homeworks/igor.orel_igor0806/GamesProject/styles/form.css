@@ -52,7 +52,7 @@ body {
   font-size: 14px;
 }
 
-input[type="email"],
+input[type="text"],
 input[type="password"] {
   display: block;
   margin: 20px 0 40px;
@@ -62,7 +62,7 @@ input[type="password"] {
   font-size: 14px;
 }
 
-input[type="email"]:focus,
+input[type="text"]:focus,
 input[type="password"]:focus {
   border-bottom: 5px solid #EF4934;
 }
@@ -81,6 +81,7 @@ input[type="checkbox"] {
   color: #221F1F;
 }
 
+button[type="button"],
 input[type="submit"] {
   width: 575px;
   font-weight: 600;

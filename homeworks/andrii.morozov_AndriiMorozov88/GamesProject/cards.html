@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cards</title>
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/common_styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Roboto:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__logo">
+                <svg class="logo">
+                    <use xlink:href="sprite.svg#logo"></use>
+                </svg>
+            </div>
+            <div class="header__navigation">
+                <ul class="navigation">
+                    <li class="navigation__line navigation__line--underline">
+                        Games
+                    </li>
+                    <li class="navigation__line">
+                        <a class="navigation__link" href="about.html">About</a>
+                    </li>
+                    <li class="navigation__line">
+                        <a class="navigation__link" href="calculator.html">Calculator</a>
+                    </li>
+                    <li class="navigation__line">
+                        <a class="navigation__link" href="login.html">LogIn</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <form action="#" method="post" class="filter">
+            <section>
+                <select name="select" class="filter__select">
+                    <option value="Genre" selected>Genre</option>
+                </select>
+            </section>
+            <section>
+                <input type="radio" name="radio" id="new">
+                <label for="new" class="filter-element">
+                    Only new
+                </label>
+                <input type="radio" name="radio" id="favorites">
+                <label for="favorites">
+                    Favorites
+                </label>
+            </section>
+            <section>
+                <input type="checkbox" id="big">
+                <label for="big" class="filter-element">
+                    Big
+                </label>
+                <input type="checkbox" id="Small">
+                <label for="small">
+                    Small
+                </label>
+            </section>
+            <section class="filter__search">
+                <div class="search__svg">
+                    <svg class="svg--search">
+                        <use xlink:href="sprite.svg#search"></use>
+                    </svg>
+                </div>
+                <div class="search__input-field">
+                    <input type="text" class="search__input" placeholder="Search">
+                    <button type="submit" class="search__button">Apply</button>
+                </div>
+            </section>
+        </form>
+        <main class="main games__main">
+            <h1 class="main__heading">Study project "Games"</h1>
+            <article class="card-container">
+                <section class="card">
+                    <div class="card__image">
+                        <img src="images/game_img.png" alt="overwatch">
+                    </div>
+                    <div class="card__name">
+                        <h2 class="card__heading">Overwatch 2</h2>
+                        <p class="card__paragraf">
+                            Big changes come to the Overwatch formula in this sequel..
+                        </p>
+                    </div>
+                    <div class="card__description">
+                        <p class="card__paragraf">
+                            <b>Genre:</b> Shoter
+                        </p>
+                        <p class="card__paragraf">
+                            <b>Platform:</b> PC (Windows)
+                        </p>
+                        <p class="card__paragraf">
+                            <b>Publisher:</b> Activision Bizzard King
+                        </p>
+                        <p class="card__paragraf">
+                            <b>Developer:</b> Bizzard Entertaiment
+                        </p>
+                        <p class="card__paragraf">
+                            <b>Release Date:</b> 22/10/2022
+                        </p>
+                    </div>
+                </section>
+                <section class="card">
+                    <div class="card__image">
+                        <img src="images/game_img.png" alt="overwatch">
+                    </div>
+                    <div class="card__name">
+                        <h2 class="card__heading">Overwatch 2</h2>
+                        <p class="card__paragraf">
+                            Big changes come to the Overwatch formula in this sequel..
+                        </p>
+                    </div>
+                    <div class="card__description">
+                        <p class="card__paragraf">
+                            <b>Genre:</b> Shoter
+                        </p>
+                        <p class="card__paragraf">
+                            <b>Platform:</b> PC (Windows)
+                        </p>
+                        <p class="card__paragraf">
+                            <b>Publisher:</b> Activision Bizzard King
+                        </p>
+                        <p class="card__paragraf">
+                            <b>Developer:</b> Bizzard Entertaiment
+                        </p>
+                        <p class="card__paragraf">
+                            <b>Release Date:</b> 22/10/2022
+                        </p>
+                    </div>
+                </section>
+                <section class="card">
+                    <div class="card__image">
+                        <img src="images/game_img.png" alt="overwatch">
+                    </div>
+                    <div class="card__name">
+                        <h2 class="card__heading">Overwatch 2</h2>
+                        <p class="card__paragraf">
+                            Big changes come to the Overwatch formula in this sequel..
+                        </p>
+                    </div>
+                    <div class="card__description">
+                        <p class="card__paragraf">
+                            <b>Genre:</b> Shoter
+                        </p>
+                        <p class="card__paragraf">
+                            <b>Platform:</b> PC (Windows)
+                        </p>
+                        <p class="card__paragraf">
+                            <b>Publisher:</b> Activision Bizzard King
+                        </p>
+                        <p class="card__paragraf">
+                            <b>Developer:</b> Bizzard Entertaiment
+                        </p>
+                        <p class="card__paragraf">
+                            <b>Release Date:</b> 22/10/2022
+                        </p>
+                    </div>
+                </section>
+                <section class="card">
+                    <div class="card__image">
+                        <img src="images/game_img.png" alt="overwatch" class="image">
+                    </div>
+                    <div class="card__name">
+                        <h2 class="card__heading">Overwatch 2</h2>
+                        <p class="card__paragraf">
+                            Big changes come to the Overwatch formula in this sequel..
+                        </p>
+                    </div>
+                    <div class="card__description">
+                        <p class="card__paragraf">
+                            <b>Genre:</b> Shoter
+                        </p>
+                        <p class="card__paragraf">
+                            <b>Platform:</b> PC (Windows)
+                        </p>
+                        <p class="card__paragraf">
+                            <b>Publisher:</b> Activision Bizzard King
+                        </p>
+                        <p class="card__paragraf">
+                            <b>Developer:</b> Bizzard Entertaiment
+                        </p>
+                        <p class="card__paragraf">
+                            <b>Release Date:</b> 22/10/2022
+                        </p>
+                    </div>
+                </section>
+                <section class="card">
+                    <div class="card__image">
+                        <img src="images/game_img.png" alt="overwatch">
+                    </div>
+                    <div class="card__name">
+                        <h2 class="card__heading">Overwatch 2</h2>
+                        <p class="card__paragraf">
+                            Big changes come to the Overwatch formula in this sequel..
+                        </p>
+                    </div>
+                    <div class="card__description">
+                        <p class="card__paragraf">
+                            <b>Genre:</b> Shoter
+                        </p>
+                        <p class="card__paragraf">
+                            <b>Platform:</b> PC (Windows)
+                        </p>
+                        <p class="card__paragraf">
+                            <b>Publisher:</b> Activision Bizzard King
+                        </p>
+                        <p class="card__paragraf">
+                            <b>Developer:</b> Bizzard Entertaiment
+                        </p>
+                        <p class="card__paragraf">
+                            <b>Release Date:</b> 22/10/2022
+                        </p>
+                    </div>
+                </section>
+                <section class="card">
+                    <div class="card__image">
+                        <img src="images/game_img.png" alt="overwatch">
+                    </div>
+                    <div class="card__name">
+                        <h2 class="card__heading">Overwatch 2</h2>
+                        <p class="card__paragraf">
+                            Big changes come to the Overwatch formula in this sequel..
+                        </p>
+                    </div>
+                    <div class="card__description">
+                        <p class="card__paragraf">
+                            <b>Genre:</b> Shoter
+                        </p>
+                        <p class="card__paragraf">
+                            <b>Platform:</b> PC (Windows)
+                        </p>
+                        <p class="card__paragraf">
+                            <b>Publisher:</b> Activision Bizzard King
+                        </p>
+                        <p class="card__paragraf">
+                            <b>Developer:</b> Bizzard Entertaiment
+                        </p>
+                        <p class="card__paragraf">
+                            <b>Release Date:</b> 22/10/2022
+                        </p>
+                    </div>
+                </section>
+                <section class="card">
+                    <div class="card__image">
+                        <img src="images/game_img.png" alt="overwatch">
+                    </div>
+                    <div class="card__name">
+                        <h2 class="card__heading">Overwatch 2</h2>
+                        <p class="card__paragraf">
+                            Big changes come to the Overwatch formula in this sequel..
+                        </p>
+                    </div>
+                    <div class="card__description">
+                        <p class="card__paragraf">
+                            <b>Genre:</b> Shoter
+                        </p>
+                        <p class="card__paragraf">
+                            <b>Platform:</b> PC (Windows)
+                        </p>
+                        <p class="card__paragraf">
+                            <b>Publisher:</b> Activision Bizzard King
+                        </p>
+                        <p class="card__paragraf">
+                            <b>Developer:</b> Bizzard Entertaiment
+                        </p>
+                        <p class="card__paragraf">
+                            <b>Release Date:</b> 22/10/2022
+                        </p>
+                    </div>
+                </section>
+                <section class="card">
+                    <div class="card__image">
+                        <img src="images/game_img.png" alt="overwatch">
+                    </div>
+                    <div class="card__name">
+                        <h2 class="card__heading">Overwatch 2</h2>
+                        <p class="card__paragraf">
+                            Big changes come to the Overwatch formula in this sequel..
+                        </p>
+                    </div>
+                    <div class="card__description">
+                        <p class="card__paragraf">
+                            <b>Genre:</b> Shoter
+                        </p>
+                        <p class="card__paragraf">
+                            <b>Platform:</b> PC (Windows)
+                        </p>
+                        <p class="card__paragraf">
+                            <b>Publisher:</b> Activision Bizzard King
+                        </p>
+                        <p class="card__paragraf">
+                            <b>Developer:</b> Bizzard Entertaiment
+                        </p>
+                        <p class="card__paragraf">
+                            <b>Release Date:</b> 22/10/2022
+                        </p>
+                    </div>
+                </section>
+            </article>
+        </main>
+    </body>
+</html>
