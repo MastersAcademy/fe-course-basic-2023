@@ -80,6 +80,5 @@ function showResult() {
     for (let count = 0; count < 10000000; count++);
     const timeFinish = getAbsoluteTime();
     commentContainer.innerText = `Date of calculation: ${getDate()}. Time of function execution: ${timeFinish - timeStart} ms`;
-    console.log(getAbsoluteTime());
 }
-button.addEventListener('click', showResult);
+button.addEventListener('click', showCards);
