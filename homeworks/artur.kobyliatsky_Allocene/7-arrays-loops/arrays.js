@@ -81,10 +81,14 @@ console.log(onlyPositiveNumbers(arrayFive)); // [1, 3, 5];
 
 // customReduce
 function customReduce(array, reducer, initialValue) {
-    let accumulator = initialValue;
-    for (let i = 0; i < array.length; i++) {
+    const isInitialValue = initialValue !== undefined;
+    const startIndex = isInitialValue ? 0 : 1;
+    let accumulator = isInitialValue ? initialValue : array[0];
+
+    for (let i = startIndex; i < array.length; i++) {
         accumulator = reducer(accumulator, array[i]);
     }
+
     return accumulator;
 }
 
