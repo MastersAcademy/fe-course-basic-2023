@@ -58,11 +58,10 @@ function calculate(firstValue, secondValue, operation) {
 
     if (result > 1 || result < -1 || result % 2 === 0) {
         result = `${result} games`;
-        visualInterpritation.innerHTML = `<h1>${num1}</h1> <h1>${operation}</h1> <h1>${num2}</h1> <h1>=</h1> <h1>${result}</h1>`;
     } else {
         result = `${result} game`;
-        visualInterpritation.innerHTML = `<h1>${num1}</h1> <h1>${operation}</h1> <h1>${num2}</h1> <h1>=</h1> <h1>${result}</h1>`;
     }
+    visualInterpritation.innerHTML = `<h1>${num1}</h1> <h1>${operation}</h1> <h1>${num2}</h1> <h1>=</h1> <h1>${result}</h1>`;
 
     const endTime = new Date();
     const executionTime = endTime - startTime;
