@@ -53,14 +53,7 @@ console.log(sumNumbersOfArr(arrayFour)); // 6
 console.log(sumNumbersOfArr(arrayFive)); // 6
 
 function onlyNegativeNumbers(array) {
-    const negativeArray = [];
-    let negativeIndex = 0;
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] < 0) {
-            negativeArray[negativeIndex] = array[i];
-            negativeIndex++;
-        }
-    }
+    const negativeArray = array.filter((number) => number < 0);
     return negativeArray;
 }
 
@@ -71,14 +64,7 @@ console.log(onlyNegativeNumbers(arrayFour)); //  [-3]
 console.log(onlyNegativeNumbers(arrayFive)); // [-3]
 
 function onlyPositiveNumbers(array) {
-    const positiveArray = [];
-    let positiveIndex = 0;
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] > 0) {
-            positiveArray[positiveIndex] = array[i];
-            positiveIndex++;
-        }
-    }
+    const positiveArray = array.filter((number) => number > 0);
     return positiveArray;
 }
 
@@ -108,7 +94,8 @@ console.log(customMap(arrayOne, exampleFunction));
 
 function customReduce(array, chosenFunction, initialValue) {
     let accumulator = initialValue !== undefined ? initialValue : array[0];
-    for (let i = 0; i < array.length; i++) {
+    const startingIndex = initialValue !== undefined ? 0 : 1;
+    for (let i = startingIndex; i < array.length; i++) {
         accumulator = chosenFunction(accumulator, array[i], i, array);
     }
 
@@ -118,3 +105,5 @@ function customReduce(array, chosenFunction, initialValue) {
 const chosenFunction = (x, y) => x + y;
 
 console.log(customReduce(arrayThree, chosenFunction, 0));
+console.log('Custom reduce: ', customReduce(arrayThree, chosenFunction));
+console.log('Native reduce: ', arrayThree.reduce(chosenFunction));
