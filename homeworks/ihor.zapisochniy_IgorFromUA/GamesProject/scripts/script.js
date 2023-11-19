@@ -19,7 +19,7 @@ CALCULATE_BUTTON_ELEMENT.addEventListener('click', () => {
     EQUAL_BIG_ELEMENT.innerText = '';
     let result = window.calculate(firstValue, secondValue, operation);
     if (firstValue > 10) result = 'enter first number 1 - 10';
-    RESULT_ELEMENT.innerText = result;
+    RESULT_ELEMENT.innerText = result + (result > 1 ? ' games' : ' game');
     if (result === 'Result is too big') {
         for (let i = 0; i < +firstValue; i++) {
             const img = document.createElement('img');
