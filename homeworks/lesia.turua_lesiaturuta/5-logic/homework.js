@@ -100,6 +100,20 @@ const cleanElement = (el) => {
         el.removeChild(el.firstChild);
     }
 };
+const getDateFormat = (date, locales = 'en-US') => {
+    const currentDate = date || new Date();
+
+    const day = currentDate.getDate();
+    const month = currentDate.toLocaleString(locales, { month: 'short' });
+    const year = currentDate.getFullYear();
+
+    const hours = currentDate.getHours();
+    const minutes = currentDate.getMinutes();
+
+    return `${day}-${month}-${year}, ${hours}:${minutes}`;
+};
+
 window.calculate = calculate;
 window.createImages = createImages;
 window.cleanElement = cleanElement;
+window.getDateFormat = getDateFormat;
