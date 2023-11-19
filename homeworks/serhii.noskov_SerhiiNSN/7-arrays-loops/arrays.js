@@ -5,13 +5,13 @@ const arrayFour = [1, undefined, 3, 5, -3];
 const arrayFive = [1, NaN, 3, 5, -3];
 
 function maxNumberOfArr(array) {
-    let sum = array[0];
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] > sum) {
-            sum = array[i];
+    let maxNumber = array[0];
+    for (let i = 1; i < array.length; i++) {
+        if (array[i] > maxNumber) {
+            maxNumber = array[i];
         }
     }
-    return sum;
+    return maxNumber;
 }
 
 console.log(maxNumberOfArr(arrayOne)); // 44
@@ -21,13 +21,13 @@ console.log(maxNumberOfArr(arrayFour)); // 5
 console.log(maxNumberOfArr(arrayFive)); // 5
 
 function minNumberOfArr(array) {
-    let sum = array[0];
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] < sum) {
-            sum = array[i];
+    let minNumber = array[0];
+    for (let i = 1; i < array.length; i++) {
+        if (array[i] < minNumber) {
+            minNumber = array[i];
         }
     }
-    return sum;
+    return minNumber;
 }
 
 console.log(minNumberOfArr(arrayOne)); // -12
@@ -53,10 +53,7 @@ console.log(sumNumbersOfArr(arrayThree)); // 11
 console.log(sumNumbersOfArr(arrayFour)); // 6
 console.log(sumNumbersOfArr(arrayFive)); // 6
 
-function onlyNegativeNumbers(array) {
-    const negativeNumbers = array.filter((number) => number < 0);
-    return negativeNumbers;
-}
+const onlyNegativeNumbers = (array) => array.filter((number) => number < 0);
 
 console.log(onlyNegativeNumbers(arrayOne)); // [-5, -12, -3, -3, -2, -3, -1]
 console.log(onlyNegativeNumbers(arrayTwo)); // [-1, -8, -2]
@@ -64,10 +61,7 @@ console.log(onlyNegativeNumbers(arrayThree)); // []
 console.log(onlyNegativeNumbers(arrayFour)); //  [-3]
 console.log(onlyNegativeNumbers(arrayFive)); // [-3]
 
-function onlyPositiveNumbers(array) {
-    const positiveNumbers = array.filter((number) => number > 0);
-    return positiveNumbers;
-}
+const onlyPositiveNumbers = (array) => array.filter((number) => number > 0);
 
 console.log(onlyPositiveNumbers(arrayOne));// [3, 1, 44, 3, 1, 2, 2, 1, 4]
 console.log(onlyPositiveNumbers(arrayTwo)); // [];
