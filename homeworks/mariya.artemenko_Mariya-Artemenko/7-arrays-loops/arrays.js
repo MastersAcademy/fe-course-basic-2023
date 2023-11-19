@@ -12,7 +12,6 @@ function maxNumberOfArr(array) {
             maxNumber = array[i];
         }
     } return maxNumber;
-
 }
 
 console.log(maxNumberOfArr(arrayOne)); // 44
@@ -41,7 +40,7 @@ function sumNumbersOfArr(array) {
     let sumNumbers = array[0];
 
     for (let i = 1; i < array.length; i++) {
-        if (isNaN(array[i]) === false) {
+        if (Number.isNaN(array[i]) === false) {
             sumNumbers += array[i];
         }
     } return sumNumbers;
@@ -54,7 +53,7 @@ console.log(sumNumbersOfArr(arrayFour)); // 6
 console.log(sumNumbersOfArr(arrayFive)); // 6
 
 function onlyNegativeNumbers(array) {
-    return array.filter((e) => e < 0)
+    return array.filter((e) => e < 0);
 }
 
 console.log(onlyNegativeNumbers(arrayOne)); // [-5, -12, -3, -3, -2, -3, -1]
@@ -64,7 +63,7 @@ console.log(onlyNegativeNumbers(arrayFour)); //  [-3]
 console.log(onlyNegativeNumbers(arrayFive)); // [-3]
 
 function onlyPositiveNumbers(array) {
-    return array.filter((e) => e > 0)
+    return array.filter((e) => e > 0);
 }
 
 console.log(onlyPositiveNumbers(arrayOne));// [3, 1, 44, 3, 1, 2, 2, 1, 4]
