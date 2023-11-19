@@ -7,10 +7,8 @@ const arrayFive = [1, NaN, 3, 5, -3];
 function maxNumberOfArr(array) {
     let result = array[0];
     for (let i = 0; i <= array.length; i++) {
-        if (typeof (array[i]) === 'number') {
-            if (array[i] > result) {
-                result = array[i];
-            }
+        if (typeof Number.isNaN(array[i]) && array[i] > result) {
+            result = array[i];
         }
     }
     result = `Max Number is : ${result}`;
@@ -27,10 +25,8 @@ console.log(maxNumberOfArr(arrayFive)); // 5
 function minNumberOfArr(array) {
     let result = array[0];
     for (let i = 0; i <= array.length; i++) {
-        if (typeof (array[i]) === 'number') {
-            if (result > array[i]) {
-                result = array[i];
-            }
+        if (typeof Number.isNaN(array[i]) && result > array[i]) {
+            result = array[i];
         }
     }
     result = `Min Number is : ${result}`;
@@ -47,10 +43,7 @@ console.log(minNumberOfArr(arrayFive)); // -3
 function sumNumbersOfArr(array) {
     let result = 0;
     for (let i = 0; i <= array.length; i++) {
-        if (Number.isNaN(array[i])) {
-            i += 1;
-        }
-        if (typeof (array[i]) === 'number') {
+        if (!Number.isNaN(array[i]) && array[i] !== undefined) {
             result += array[i];
         }
     }
@@ -86,12 +79,13 @@ console.log(onlyPositiveNumbers(arrayFour)); // [1, 3, 5];
 console.log(onlyPositiveNumbers(arrayFive)); // [1, 3, 5];
 
 function customReduce(array, reducer, initValue) {
-    let resultValue = initValue;
-    for (let i = 0; i <= array.length; i++) {
-        const currentItem = array[i];
-        if (currentItem !== undefined && currentItem !== null && !Number.isNaN(currentItem)) {
-            resultValue = reducer(resultValue, currentItem, i, array);
+    let resultValue = initValue === undefined ? array[0] : initValue;
+    for (let i = 0; i < array.length; i++) {
+        if (initValue === undefined) {
+            i = 1;
         }
+        const currentItem = array[i];
+        resultValue = reducer(resultValue, currentItem, i, array);
     }
     return resultValue;
 }
@@ -107,11 +101,9 @@ console.log(customReduce(arrayFive, divSum, 0));
 
 function customMap(array, mapper) {
     const mapArray = [...array];
-    for (let i = 0; i <= array.length; i++) {
+    for (let i = 0; i < array.length; i++) {
         const current = array[i];
-        if (current !== undefined && current !== null && !Number.isNaN(current)) {
-            mapArray[i] = mapper(current, i, mapArray);
-        }
+        mapArray[i] = mapper(current, i, mapArray);
     }
     return mapArray;
 }
