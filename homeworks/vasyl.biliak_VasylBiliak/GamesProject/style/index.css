@@ -57,7 +57,7 @@ body {
 .about {
   display: flex;
   padding: 53px;
-  justify-content: space-evenly;
+  /*justify-content: space-evenly;*/
 }
 
 .about__img {
