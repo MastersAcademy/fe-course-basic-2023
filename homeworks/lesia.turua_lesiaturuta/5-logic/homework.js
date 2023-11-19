@@ -16,7 +16,11 @@ function calculate(firstValue, secondValue, operation) {
     const firstNumber = Number(firstValue);
     const secondNumber = Number(secondValue);
 
-    if (!firstNumber || !secondNumber) {
+    if (Number.isNaN(firstNumber)) {
+        return 'Enter a number';
+    }
+
+    if (Number.isNaN(secondNumber) || (secondNumber === 0 && operation === '/')) {
         return 'Enter a number';
     }
 

@@ -59,5 +59,5 @@ CALCULATE_BUTTON_ELEMENT.addEventListener('click', () => {
         resultImagesEl.appendChild(images);
     }
     resultEqualsEl.innerHTML = '=';
-    RESULT_ELEMENT.innerText = resultMath;
+    RESULT_ELEMENT.innerText = resultMath <= 1 ? `${resultMath} pokemon` : `${resultMath} pokemons`;
 });
