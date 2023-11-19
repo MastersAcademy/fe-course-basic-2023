@@ -89,5 +89,5 @@ function customMap(array, mapper) {
     return result;
 }
 
-const incrementedArray = customMap(arrayOne, value => value + 1);
+const incrementedArray = customMap(arrayOne, (value) => value + 1);
 console.log(incrementedArray);
