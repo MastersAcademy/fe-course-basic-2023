@@ -205,10 +205,6 @@ main {
 }
 
 .contain {
-  display: grid;
-  grid-template-rows: 1fr;
-  align-items: center;
-  justify-content: start;
   margin-top: 180px;
 }
 

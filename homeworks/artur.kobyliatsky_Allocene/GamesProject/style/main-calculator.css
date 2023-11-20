@@ -41,7 +41,6 @@ main {
 
 .field {
   display: flex;
-  margin-bottom: 60px;
 }
 
 .item {
@@ -115,10 +114,17 @@ button:hover {
   line-height: 21px;
 }
 
+.visualTimeDurationExecution {
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: 0;
+}
+
 .visualInterpritation {
   display: flex;
   align-items: center;
   flex-direction: row;
+  margin-top: 60px;
 }
 
 .visualInterpritation h1 {
