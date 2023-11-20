@@ -79,7 +79,7 @@ console.log(onlyPositiveNumbers(arrayFour)); // [1, 3, 5];
 console.log(onlyPositiveNumbers(arrayFive)); // [1, 3, 5];
 
 function customReduce(array, reducer, initValue) {
-    let resultValue = initValue === undefined || NaN ? array[0] : initValue;
+    let resultValue = initValue === undefined ? array[0] : initValue;
     const begin = initValue === undefined ? 1 : 0;
     for (let i = begin; i < array.length; i++) {
         resultValue = reducer(resultValue, array[i], i);
