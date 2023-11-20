@@ -79,22 +79,22 @@ console.log(onlyPositiveNumbers(arrayFour)); // [1, 3, 5];
 console.log(onlyPositiveNumbers(arrayFive)); // [1, 3, 5];
 
 function customReduce(array, reducer, initValue) {
-    let resultValue = initValue === undefined ? array[0] : initValue;
+    let resultValue = initValue === undefined || NaN ? array[0] : initValue;
     for (let i = 0; i < array.length; i++) {
-        resultValue = reducer(resultValue, array[i], i, array);
+        resultValue = reducer(resultValue, array[i], i);
     }
     return resultValue;
 }
 
 // Множить суму 2-х доданків на 2
-const divSum = (value, current) => (value + current) / 2;
+const Sum = (value, current) => (value + current);
 
 console.log('Custom Reduce');
-console.log(customReduce(arrayOne, divSum, 0));
-console.log(customReduce(arrayTwo, divSum, 0));
-console.log(customReduce(arrayThree, divSum, 0));
-console.log(customReduce(arrayFour, divSum, 0));
-console.log(customReduce(arrayFive, divSum, 0));
+console.log(customReduce(arrayOne, Sum, 0));
+console.log(customReduce(arrayTwo, Sum, 0)); //
+console.log(customReduce(arrayThree, Sum, 0));
+console.log(customReduce(arrayFour, Sum, 0));
+console.log(customReduce(arrayFive, Sum, 0));
 
 function customMap(array, mapper) {
     const mapArray = [];
@@ -104,7 +104,7 @@ function customMap(array, mapper) {
     return mapArray;
 }
 
-const sub = (val) => val - 2;
+const sub = (val) => (val - 2);
 
 console.log('Custom Map');
 console.log(customMap(arrayOne, sub));
