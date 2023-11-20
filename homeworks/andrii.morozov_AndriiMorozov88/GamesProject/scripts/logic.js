@@ -14,7 +14,7 @@ function getDate() {
         hour: '2-digit',
         minute: '2-digit',
     };
-    return currentDate.toLocaleString('ua-UA', options).replace(/\./g, '-');
+    return currentDate.toLocaleString('en-EN', options).replace(/\//g, '-');
 }
 function getAbsoluteTime() {
     const date = new Date();
