@@ -7,7 +7,7 @@ const arrayFive = [1, NaN, 3, 5, -3];
 function maxNumberOfArr(array) {
     let maxNumber = array[0];
 
-    for (let i = 0; i <= array.length; i++) {
+    for (let i = 1; i <= array.length; i++) {
         if (array[i] > maxNumber) {
             maxNumber = array[i];
         }
@@ -78,8 +78,8 @@ console.log(onlyPositiveNumbers(arrayFive)); // [1, 3, 5];
 const customMap = (array, mapper) => {
     const arr = [];
 
-    // eslint-disable-next-line no-restricted-syntax
-    for (const element of array) {
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
         if (typeof element === 'number' && !Number.isNaN(element)) {
             arr.push(mapper(element));
         }
