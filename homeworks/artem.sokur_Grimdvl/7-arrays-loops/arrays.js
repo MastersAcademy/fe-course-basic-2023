@@ -43,9 +43,11 @@ console.log(minNumberOfArr(arrayFive)); // -3
 function sumNumbersOfArr(array) {
     let sumNumbers = 0;
 
-    array.forEach((number) => {
-        if (!Number.isNaN(number) && number !== undefined) {
-            sumNumbers += number;
+    array.forEach((item) => {
+        if (typeof item === 'number' && !Number.isNaN(item)) {
+            sumNumbers += item;
+        } else if (Array.isArray(item)) {
+            sumNumbers += sumNumbersOfArr(item);
         }
     });
 
@@ -59,7 +61,7 @@ console.log(sumNumbersOfArr(arrayFour)); // 6
 console.log(sumNumbersOfArr(arrayFive)); // 6
 
 function onlyNegativeNumbers(array) {
-    return array.map((number) => (number < 0 ? number : null)).filter(Boolean);
+    return array.filter((number) => number < 0);
 }
 
 console.log(onlyNegativeNumbers(arrayOne)); // [-5, -12, -3, -3, -2, -3, -1]
@@ -69,13 +71,7 @@ console.log(onlyNegativeNumbers(arrayFour)); //  [-3]
 console.log(onlyNegativeNumbers(arrayFive)); // [-3]
 
 function onlyPositiveNumbers(array) {
-    return array.reduce((result, number) => {
-        if (number > 0) {
-            result.push(number);
-        }
-
-        return result;
-    }, []);
+    return array.filter((number) => number > 0);
 }
 
 console.log(onlyPositiveNumbers(arrayOne));// [3, 1, 44, 3, 1, 2, 2, 1, 4]
@@ -89,9 +85,11 @@ console.log(onlyPositiveNumbers(arrayFive)); // [1, 3, 5];
 const numbers = [2, -20, '-10', undefined, '5', 3, 40, NaN, 0, -5, 'One', '', null];
 
 function customReduce(array, reducer, value) {
-    let nums = value;
+    let nums = value !== undefined ? value : array[0];
 
-    for (let i = 0; i < array.length; i++) {
+    const startIndex = value !== undefined ? 0 : 1;
+
+    for (let i = startIndex; i < array.length; i++) {
         nums = reducer(nums, array[i]);
     }
     return nums;
