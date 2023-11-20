@@ -86,7 +86,7 @@ function myMap(array, mapper) {
 
 const numbers = [1, 2, 3, 4, 5];
 
-const divNumbers = myMap(numbers, (item) => `<div>${item}</div>; `);
+const divNumbers = myMap(numbers, (item) => `<div>${item}</div>;`);
 console.log(`Div numbers: ${divNumbers}`); // Div numbers: <div>1</div>,<div>2</div>,<div>3</div>,<div>4</div>,<div>5</div>
 
 // myReduce method (custom)
