@@ -1,4 +1,6 @@
-const arrayOne = [3, 0, -5, 1, 44, -12, 3, 0, 0, 1, 2, -3, -3, 2, 1, 4, -2, -3, -1];
+const arrayOne = [
+    3, 0, -5, 1, 44, -12, 3, 0, 0, 1, 2, -3, -3, 2, 1, 4, -2, -3, -1,
+];
 const arrayTwo = [-1, -8, -2];
 const arrayThree = [1, 7, 3];
 const arrayFour = [1, undefined, 3, 5, -3];
@@ -8,8 +10,7 @@ function maxNumberOfArr(array) {
     let maxNumber = Number.NEGATIVE_INFINITY;
 
     for (let i = 0; i < array.length; i++) {
-
-        if (!isNaN(array[i]) && array[i] !== undefined && array[i] > maxNumber) {
+        if (array[i] !== undefined && array[i] > maxNumber) {
             maxNumber = array[i];
         }
     }
@@ -34,7 +35,6 @@ function minNumberOfArr(array) {
     }
 
     return minNumber;
-
 }
 // write your code here and instead of array return minNumber
 console.log(minNumberOfArr(arrayOne)); // -12
@@ -44,17 +44,15 @@ console.log(minNumberOfArr(arrayFour)); // -3
 console.log(minNumberOfArr(arrayFive)); // -3
 
 function sumNumbersOfArr(array) {
-  let sum = 0;
+    let sum = 0;
 
-  for (let i = 0; i < array.length; i++) {
-    if (typeof array[i] !== "number") {
-      continue;
+    for (let i = 0; i < array.length; i++) {
+        if (!Number.isNaN(array[i]) && typeof array[i] === 'number') {
+            sum += array[i];
+        }
     }
 
-    sum += array[i];
-  }
-
-  return sum;
+    return sum;
 }
 
 console.log(sumNumbersOfArr(arrayOne)); // 32
@@ -64,15 +62,7 @@ console.log(sumNumbersOfArr(arrayFour)); // 6
 console.log(sumNumbersOfArr(arrayFive)); // 6
 
 function onlyNegativeNumbers(array) {
-  const filteredArray = [];
-
-  for (const element of array) {
-    if (element < 0) {
-      filteredArray.push(element);
-    }
-  }
-
-  return filteredArray;
+    return array.filter((element) => element < 0);
 }
 
 console.log(onlyNegativeNumbers(arrayOne)); // [-5, -12, -3, -3, -2, -3, -1]
@@ -82,18 +72,10 @@ console.log(onlyNegativeNumbers(arrayFour)); //  [-3]
 console.log(onlyNegativeNumbers(arrayFive)); // [-3]
 
 function onlyPositiveNumbers(array) {
-    const filteredArray = [];
-
-    for (const element of array) {
-        if (element > 0) {
-            filteredArray.push(element);
-        }
-    }
-
-    return filteredArray;
+    return array.filter((element) => element > 0);
 }
- // write your code here and return array only positive numbers
-console.log(onlyPositiveNumbers(arrayOne));// [3, 1, 44, 3, 1, 2, 2, 1, 4]
+// write your code here and return array only positive numbers
+console.log(onlyPositiveNumbers(arrayOne)); // [3, 1, 44, 3, 1, 2, 2, 1, 4]
 console.log(onlyPositiveNumbers(arrayTwo)); // [];
 console.log(onlyPositiveNumbers(arrayThree)); // [1, 7, 3];
 console.log(onlyPositiveNumbers(arrayFour)); // [1, 3, 5];
