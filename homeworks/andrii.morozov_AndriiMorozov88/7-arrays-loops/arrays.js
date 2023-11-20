@@ -76,11 +76,13 @@ console.log('arrayThree positive numbers:', onlyPositiveNumbers(arrayThree));
 console.log('arrayFour positive numbers:', onlyPositiveNumbers(arrayFour));
 console.log('arrayFive positive numbers:', onlyPositiveNumbers(arrayFive));
 
-const testArray = [5, -6, 7, 10, 15, -7];
+const testArray = [3, -6, undefined, 10, 15, -7];
 function customReduce(array, reducer, initialValue) {
+    if (array[0] === undefined) return 'error, underfined in array';
     let reducedArray = initialValue || array[0];
     const startCount = initialValue ? 0 : 1;
     for (let count = startCount; count < array.length; count++) {
+        if (array[count] === undefined) return 'error, underfined in array';
         reducedArray = reducer(array[count], reducedArray);
     }
     return reducedArray;
