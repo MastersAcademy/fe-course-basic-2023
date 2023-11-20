@@ -29,7 +29,7 @@ function displayErrorMessage(field, message) {
     formGroup.appendChild(errorContainer);
 }
 
-function validateField(field) {
+function getFieldValidity(field) {
     const value = document.getElementById(field).value.trim();
     const rule = VALIDATE_RULES[field];
     const isChecked = document.getElementById(field).checked;
@@ -38,8 +38,13 @@ function validateField(field) {
     const isCheckboxInvalid = field === 'checkbox' && !rule.rule(isChecked);
     const isValueInvalid = rule.rule && !rule.rule(value);
 
-    // eslint-disable-next-line object-curly-newline
-    return { value, rule, isChecked, isFieldEmpty, isCheckboxInvalid, isValueInvalid };
+    return {
+        rule,
+        isChecked,
+        isFieldEmpty,
+        isCheckboxInvalid,
+        isValueInvalid,
+    };
 }
 
 function clearErrorMessages(field) {
@@ -56,11 +61,15 @@ function clearErrorMessages(field) {
     }
 }
 
-function validateInputField(field) {
+function validateAndDisplayField(field) {
     clearErrorMessages(field);
 
-    // eslint-disable-next-line object-curly-newline
-    const { rule, isFieldEmpty, isCheckboxInvalid, isValueInvalid } = validateField(field);
+    const {
+        rule,
+        isFieldEmpty,
+        isCheckboxInvalid,
+        isValueInvalid,
+    } = getFieldValidity(field);
 
     if ((isFieldEmpty || isCheckboxInvalid || isValueInvalid) && !ERROR_STATE[field]) {
         displayErrorMessage(field, isFieldEmpty ? 'This field is required' : rule.message);
@@ -81,9 +90,13 @@ function validateFormHandler(event) {
     let isValid = true;
 
     Object.keys(VALIDATE_RULES).forEach((field) => {
-        const { isFieldEmpty, isCheckboxInvalid, isValueInvalid } = validateField(field);
+        const {
+            isFieldEmpty,
+            isCheckboxInvalid,
+            isValueInvalid,
+        } = getFieldValidity(field);
 
-        validateInputField(field);
+        validateAndDisplayField(field);
 
         if (isFieldEmpty || isCheckboxInvalid || isValueInvalid) {
             isValid = false;
@@ -100,7 +113,7 @@ function validateFormHandler(event) {
 Object.keys(VALIDATE_RULES).forEach((field) => {
     const inputField = document.getElementById(field);
     inputField.addEventListener('input', () => {
-        validateInputField(field);
+        validateAndDisplayField(field);
     });
 });
 
