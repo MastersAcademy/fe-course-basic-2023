@@ -18,8 +18,16 @@
 
 .form-group {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   row-gap: 22px;
+  position: relative;
+}
+
+.error-message {
+  position: absolute;
+  bottom: -20px;
+  color: var(--red);
+  font-size: 12px;
 }
 
 .label__content {
@@ -55,6 +63,11 @@
   font-weight: 600;
   line-height: normal;
   cursor: pointer;
+}
+
+.primary__button:disabled, .primary__button[disabled] {
+  background-color: rgb(239 73 52 / 38%);
+  cursor: not-allowed;
 }
 
 .login .checkbox__label {

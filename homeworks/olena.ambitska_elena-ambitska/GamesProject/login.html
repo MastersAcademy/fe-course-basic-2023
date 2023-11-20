@@ -25,30 +25,31 @@
                         <a href="login.html">Login</a>
                     </li>
                     <li class="navigation__item">
-                        <a href="5-logic/calc.html">Calculator</a>
+                        <a href="calc.html">Calculator</a>
                     </li>
                 </ul>
             </nav>
         </header>
         <h2 class="section__title login__title">Login page</h2>
         <main class="main login">
-            <form method="post" class="login__form" action="success.html">
+            <form method="post" class="login__form" id="loginForm">
                 <div class="form-group">
+                    <input type="text" id="email" name="email" class="input__field" placeholder="Enter your email address">
                     <label for="email" class="label__content">Email</label>
-                    <input type="email" id="email" name="email" class="input__field" placeholder="Enter your email address" required>
                 </div>
                 <div class="form-group">
+                    <input type="password" id="password" name="password" class="input__field" placeholder="Enter your password">
                     <label for="password" class="label__content">Password</label>
-                    <input type="password" id="password" name="password" class="input__field" placeholder="Enter your password" minlength="5" required>
                 </div>
                 <div class="checkbox form-group">
-                    <input id="confirmation" name="checkbox" type="checkbox" class="checkbox__input" required>
-                    <label class="checkbox__label" for="confirmation">I’m not a robot</label>
+                    <input id="checkbox" name="checkbox" type="checkbox" class="checkbox__input">
+                    <label class="checkbox__label" for="checkbox">I’m not a robot</label>
                 </div>
                 <div class="form-group">
-                    <input type="submit" class="primary__button" value="Login">
+                    <button type="submit" class="primary__button" id="submit-button">Login</button>
                 </div>
             </form>
         </main>
+        <script src="./scripts/login.js" type="application/javascript"></script>
     </body>
 </html>

@@ -17,7 +17,7 @@ function displayImages(value, element) {
 
     for (let i = 0; i < value; i++) {
         const img = document.createElement('img');
-        img.setAttribute('src', '../images/game_picture.jpg');
+        img.setAttribute('src', './images/game_picture.jpg');
         img.setAttribute('alt', 'game picture');
         img.setAttribute('width', '90px');
         img.setAttribute('height', '90px');
