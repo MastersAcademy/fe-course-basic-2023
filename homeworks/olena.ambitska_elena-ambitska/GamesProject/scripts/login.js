@@ -90,15 +90,9 @@ function validateFormHandler(event) {
     let isValid = true;
 
     Object.keys(VALIDATE_RULES).forEach((field) => {
-        const {
-            isFieldEmpty,
-            isCheckboxInvalid,
-            isValueInvalid,
-        } = getFieldValidity(field);
-
         validateAndDisplayField(field);
 
-        if (isFieldEmpty || isCheckboxInvalid || isValueInvalid) {
+        if (ERROR_STATE[field]) {
             isValid = false;
         }
     });
