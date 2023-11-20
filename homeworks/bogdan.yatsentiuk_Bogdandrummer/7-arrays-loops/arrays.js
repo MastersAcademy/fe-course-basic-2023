@@ -7,7 +7,7 @@ const arrayFive = [1, NaN, 3, 5, -3];
 function maxNumberOfArr(array) {
     let result = array[0];
     for (let i = 0; i <= array.length; i++) {
-        if (typeof Number.isNaN(array[i]) && array[i] > result) {
+        if (!Number.isNaN(array[i]) && typeof (array[i]) === 'number' && result < array[i]) {
             result = array[i];
         }
     }
@@ -25,7 +25,7 @@ console.log(maxNumberOfArr(arrayFive)); // 5
 function minNumberOfArr(array) {
     let result = array[0];
     for (let i = 0; i <= array.length; i++) {
-        if (typeof Number.isNaN(array[i]) && result > array[i]) {
+        if (!Number.isNaN(array[i]) && typeof (array[i]) === 'number' && result > array[i]) {
             result = array[i];
         }
     }
@@ -42,8 +42,8 @@ console.log(minNumberOfArr(arrayFive)); // -3
 
 function sumNumbersOfArr(array) {
     let result = 0;
-    for (let i = 0; i <= array.length; i++) {
-        if (!Number.isNaN(array[i]) && array[i] !== undefined) {
+    for (let i = 0; i < array.length; i++) {
+        if (!Number.isNaN(array[i]) && typeof (array[i]) === 'number') {
             result += array[i];
         }
     }
@@ -81,11 +81,7 @@ console.log(onlyPositiveNumbers(arrayFive)); // [1, 3, 5];
 function customReduce(array, reducer, initValue) {
     let resultValue = initValue === undefined ? array[0] : initValue;
     for (let i = 0; i < array.length; i++) {
-        if (initValue === undefined) {
-            i = 1;
-        }
-        const currentItem = array[i];
-        resultValue = reducer(resultValue, currentItem, i, array);
+        resultValue = reducer(resultValue, array[i], i, array);
     }
     return resultValue;
 }
@@ -100,10 +96,9 @@ console.log(customReduce(arrayFour, divSum, 0));
 console.log(customReduce(arrayFive, divSum, 0));
 
 function customMap(array, mapper) {
-    const mapArray = [...array];
+    const mapArray = [];
     for (let i = 0; i < array.length; i++) {
-        const current = array[i];
-        mapArray[i] = mapper(current, i, mapArray);
+        mapArray[i] = mapper(array[i], i, mapArray);
     }
     return mapArray;
 }
