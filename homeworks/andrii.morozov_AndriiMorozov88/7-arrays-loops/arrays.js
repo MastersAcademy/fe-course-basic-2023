@@ -7,10 +7,11 @@ const arrayFive = [1, NaN, 3, 5, -3];
 function maxNumberOfArr(array) {
     let maxNumber = -Infinity;
     for (let count = 0; count < array.length; count++) {
-        if (typeof array[count] === 'number' && !Number.isNaN(array[count])) {
-            if (array[count] > maxNumber) {
-                maxNumber = array[count];
-            }
+        const isNumber = typeof array[count] === 'number';
+        const isNan = !Number.isNaN(array[count]);
+        const isMaxNumber = array[count] > maxNumber;
+        if (isNumber && isNan && isMaxNumber) {
+            maxNumber = array[count];
         }
     }
     return maxNumber;
@@ -25,10 +26,11 @@ console.log(`Max number of arrayFive = ${maxNumberOfArr(arrayFive)}`); // 5
 function minNumberOfArr(array) {
     let minNumber = Infinity;
     for (let count = 0; count < array.length; count++) {
-        if (typeof array[count] === 'number' && !Number.isNaN(array[count])) {
-            if (array[count] < minNumber) {
-                minNumber = array[count];
-            }
+        const isNumber = typeof array[count] === 'number';
+        const isNan = !Number.isNaN(array[count]);
+        const isMinNumber = array[count] < minNumber;
+        if (isNumber && isNan && isMinNumber) {
+            minNumber = array[count];
         }
     }
     return minNumber;
