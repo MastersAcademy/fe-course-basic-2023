@@ -76,13 +76,11 @@ console.log('arrayThree positive numbers:', onlyPositiveNumbers(arrayThree));
 console.log('arrayFour positive numbers:', onlyPositiveNumbers(arrayFour));
 console.log('arrayFive positive numbers:', onlyPositiveNumbers(arrayFive));
 
-const testArray = [3, -6, undefined, 10, 15, -7];
+const testArray = [1, 2, 3, 4, 5];
 function customReduce(array, reducer, initialValue) {
-    if (array[0] === undefined) return 'error, underfined in array';
-    let reducedArray = initialValue || array[0];
-    const startCount = initialValue ? 0 : 1;
+    let reducedArray = initialValue === undefined ? array[0] : initialValue;
+    const startCount = initialValue === undefined ? 1 : 0;
     for (let count = startCount; count < array.length; count++) {
-        if (array[count] === undefined) return 'error, underfined in array';
         reducedArray = reducer(array[count], reducedArray);
     }
     return reducedArray;
@@ -96,8 +94,8 @@ function getDifference(element, acc) {
     return acc - element;
 }
 
-console.log(customReduce(testArray, getPow2Sum, 0));
-console.log(customReduce(testArray, getDifference, 0));
+console.log(customReduce(testArray, getPow2Sum));
+console.log(customReduce(testArray, getDifference));
 
 function customMap(array, mapper) {
     for (let count = 0; count < array.length; count++) {
