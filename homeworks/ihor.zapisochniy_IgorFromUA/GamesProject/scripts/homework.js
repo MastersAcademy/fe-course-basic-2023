@@ -11,6 +11,12 @@
  *
  */
 
+function randomDelay() {
+    const start = new Date().getTime();
+    const delay = Math.floor(Math.random() * (2000 - 200) + 200);
+    while (new Date().getTime() - start < delay);
+}
+
 function calculate(firstValue, secondValue, operation) {
     // TODO: write your code here, remove the line below and uncomment the lines above
     const firstNumber = Number(firstValue);
@@ -39,6 +45,7 @@ function calculate(firstValue, secondValue, operation) {
             return 'Choose a valid operation';
     }
     if (result > 100) return 'Result is too big';
+    randomDelay();
     return result;
 }
 

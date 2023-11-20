@@ -8,6 +8,19 @@ const OPERATION_BIG_ELEMENT = document.querySelector('[data-big-result="operatio
 const SECOND_NUMBER_BIG_ELEMENT = document.querySelector('[data-big-result="second-number"]');
 const RESULT_BIG_ELEMENT = document.querySelector('[data-big-result="result"]');
 const EQUAL_BIG_ELEMENT = document.querySelector('[data-big-result="equal"]');
+const DATE_TEXT_ELEMENT = document.querySelector('[data-date-text]');
+function formatDate(date) {
+    const allMonth = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const dateNow = date.getDate();
+    const monthNow = allMonth[date.getMonth()];
+    const year = date.getFullYear();
+    const hours = (date.getHours() < 10 ? '0' : '') + date.getHours();
+    const minutes = (date.getMinutes() < 10 ? '0' : '') + date.getMinutes();
+    return `${dateNow}-${monthNow} ${year}, ${hours}:${minutes}`;
+}
+function creatDateString(date, executionTime) {
+    return `Data of calculation: ${date}. Time of function execution: ${executionTime}ms`;
+}
 CALCULATE_BUTTON_ELEMENT.addEventListener('click', () => {
     const firstValue = FIRST_VALUE_ELEMENT.value;
     const secondValue = SECOND_VALUE_ELEMENT.value;
@@ -17,7 +30,9 @@ CALCULATE_BUTTON_ELEMENT.addEventListener('click', () => {
     SECOND_NUMBER_BIG_ELEMENT.innerText = '';
     RESULT_BIG_ELEMENT.innerText = '';
     EQUAL_BIG_ELEMENT.innerText = '';
+    const startTime = Date.now();
     let result = window.calculate(firstValue, secondValue, operation);
+    const calculationTime = Date.now() - startTime;
     if (firstValue > 10) result = 'enter first number 1 - 10';
     RESULT_ELEMENT.innerText = result + (result > 1 ? ' games' : ' game');
     if (result === 'Result is too big') {
@@ -68,4 +83,5 @@ CALCULATE_BUTTON_ELEMENT.addEventListener('click', () => {
         const trim = (100 - remainder * 100) / 2;
         RESULT_BIG_ELEMENT.lastElementChild.style.clipPath = `polygon(0% ${trim}%, 100% ${trim}%, 100% calc(100% - ${trim}%), 0% calc(100% - ${trim}%))`;
     }
+    DATE_TEXT_ELEMENT.innerText = creatDateString(formatDate(new Date()), calculationTime);
 });
