@@ -12,8 +12,9 @@
  */
 function calculate(firstValue, secondValue, operation) {
     const startTime = new Date();
+    const monthAbbreviations = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     const padZero = (num) => (num < 10 ? `0${num}` : num);
-    const formattedStartTime = `${padZero(startTime.getDate())}-${padZero(startTime.getMonth() + 1)}-${startTime.getFullYear()}, ${padZero(startTime.getHours())}:${padZero(startTime.getMinutes())}`;
+    const formattedStartTime = `${padZero(startTime.getDate())}-${monthAbbreviations[startTime.getMonth()]}-${startTime.getFullYear()}, ${padZero(startTime.getHours())}:${padZero(startTime.getMinutes())}`;
     console.log(formattedStartTime);
     console.log(startTime);
     let resultOperation = 0;
@@ -61,6 +62,4 @@ function calculate(firstValue, secondValue, operation) {
     };
 }
 
-console.log(calculate(1, 2, '+'));
-
-// window.calculate = calculate;
+window.calculate = calculate;
