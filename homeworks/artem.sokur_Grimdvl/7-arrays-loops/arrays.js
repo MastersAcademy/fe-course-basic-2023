@@ -43,11 +43,12 @@ console.log(minNumberOfArr(arrayFive)); // -3
 function sumNumbersOfArr(array) {
     let sumNumbers = 0;
 
-    array.forEach((number) => {
-        if (typeof number === 'number' && !Number.isNaN(number) && number !== undefined) {
+    for (let i = 0; i < array.length; i++) {
+        const number = array[i];
+        if (typeof number === 'number' && !Number.isNaN(number)) {
             sumNumbers += number;
         }
-    });
+    }
 
     return sumNumbers;
 }
