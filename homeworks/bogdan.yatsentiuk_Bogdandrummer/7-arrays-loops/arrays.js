@@ -89,6 +89,7 @@ function customReduce(array, reducer, initValue) {
 // Множить суму 2-х доданків на 2
 const divSum = (value, current) => (value + current) / 2;
 
+console.log('Custom Reduce');
 console.log(customReduce(arrayOne, divSum, 0));
 console.log(customReduce(arrayTwo, divSum, 0));
 console.log(customReduce(arrayThree, divSum, 0));
@@ -105,6 +106,7 @@ function customMap(array, mapper) {
 
 const sub = (val) => val - 2;
 
+console.log('Custom Map');
 console.log(customMap(arrayOne, sub));
 console.log(customMap(arrayTwo, sub));
 console.log(customMap(arrayThree, sub));
