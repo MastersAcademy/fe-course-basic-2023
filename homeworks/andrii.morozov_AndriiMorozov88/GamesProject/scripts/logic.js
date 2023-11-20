@@ -7,14 +7,20 @@ const commentContainer = document.querySelector('[data-comment]');
 resultContainer.innerText = 'Result';
 function getDate() {
     const currentDate = new Date();
-    const options = {
+    const dateOptions = {
         day: 'numeric',
-        month: 'numeric',
+        month: 'short',
         year: 'numeric',
+    };
+    return currentDate.toLocaleString('en-GB', dateOptions).replace(/ /g, '-');
+}
+function getTime() {
+    const currentDate = new Date();
+    const timeOptions = {
         hour: '2-digit',
         minute: '2-digit',
     };
-    return currentDate.toLocaleString('en-EN', options).replace(/\//g, '-');
+    return currentDate.toLocaleString('en-GB', timeOptions);
 }
 function getAbsoluteTime() {
     const date = new Date();
@@ -79,6 +85,6 @@ function showResult() {
     resultContainer.classList.add('calculator__result--calc');
     for (let count = 0; count < 10000000; count++);
     const timeFinish = getAbsoluteTime();
-    commentContainer.innerText = `Date of calculation: ${getDate()}. Time of function execution: ${timeFinish - timeStart} ms`;
+    commentContainer.innerText = `Date of calculation: ${getDate()}, ${getTime()}. Time of function execution: ${timeFinish - timeStart} ms`;
 }
 button.addEventListener('click', showResult);
