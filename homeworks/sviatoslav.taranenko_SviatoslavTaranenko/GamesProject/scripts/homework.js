@@ -1,5 +1,24 @@
+const dateInfoContainer = document.createElement('div');
+dateInfoContainer.style.textAlign = 'center';
+dateInfoContainer.style.marginTop = '20px';
+dateInfoContainer.style.fontFamily = '"Roboto", sans-serif';
+dateInfoContainer.style.fontWeight = '500';
+dateInfoContainer.style.fontSize = '16px';
+document.body.appendChild(dateInfoContainer);
+
 /**
- *
+ * Функція для виведення результату та дати
+ * @param {string} result Результат обчислення
+ */
+function showResult(result) {
+    const timestamp = new Date().toLocaleString();
+
+    dateInfoContainer.textContent = `Date of calculation: ${timestamp}`;
+
+    return result;
+}
+
+/**
  * @param firstValue string with the first number
  * @param secondValue string with the second number
  * @param operation string with the operation symbol
@@ -8,7 +27,6 @@
  * - if operation is not '+', '-', '*', '/', return 'Choose a valid operation'
  * - if the result is more than 100, return 'Result is too big'
  * - else return number of result: 1 '+' 2 returns 3
- *
  */
 function calculate(firstValue, secondValue, operation) {
     const firstNumber = Number(firstValue);
@@ -49,10 +67,10 @@ function calculate(firstValue, secondValue, operation) {
     }
 
     if (result > 1) {
-        return `${result} games`;
+        return showResult(`${result} games`);
     }
 
-    return `${result} game`;
+    return showResult(`${result} game`);
 }
 
 window.calculate = calculate;
