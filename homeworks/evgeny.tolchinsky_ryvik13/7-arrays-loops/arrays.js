@@ -37,15 +37,15 @@ console.log(minNumberOfArr(arrayFour)); // -3
 console.log(minNumberOfArr(arrayFive)); // -3
 
 function sumNumbersOfArr(array) {
-    let sum = 0;
+    let sumNumbers = 0;
     for (let i = 0; i < array.length; i++) {
         if (typeof array[i] === 'number') {
             if (!Number.isNaN(array[i])) {
-                sum += array[i];
+                sumNumbers += array[i];
             }
         }
     }
-    return sum;
+    return sumNumbers;
 }
 
 console.log(sumNumbersOfArr(arrayOne)); // 32
