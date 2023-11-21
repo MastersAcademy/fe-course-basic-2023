@@ -39,7 +39,7 @@ console.log(minNumberOfArr(arrayFive)); // -3
 function sumNumbersOfArr(array) {
     let sumNumbers = 0;
     for (let i = 0; i < array.length; i++) {
-        if (array[i]) {
+        if (array[i] !== undefined && array[i] !== null && !Number.isNaN(array[i])) {
             sumNumbers += array[i];
         }
     }
@@ -74,8 +74,7 @@ console.log(onlyPositiveNumbers(arrayFive)); // [1, 3, 5];
 
 const customReduce = (array, reducer, initialValue) => {
     let accumulator = !initialValue ? initialValue : array[0];
-    const startIndex = Number(initialValue);
-    for (let i = startIndex; i < array.length; i++) {
+    for (let i = 0; i < array.length; i++) {
         accumulator = reducer(accumulator, array[i], i, array);
     }
     return accumulator;
