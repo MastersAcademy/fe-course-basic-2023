@@ -89,4 +89,10 @@
   font-size: 22px;
   font-weight: 400;
   line-height: 32px;
+  width: max-content;
+}
+
+.datetime__container {
+  padding-left: 53px;
+  padding-top: 24px;
 }
