@@ -35,11 +35,11 @@ console.log(minNumberOfArr(arrayTwo)); // -8
 console.log(minNumberOfArr(arrayThree)); // 1
 console.log(minNumberOfArr(arrayFour)); // -3
 console.log(minNumberOfArr(arrayFive)); // -3
-//
+
 function sumNumbersOfArr(array) {
     let sum = 0;
     for (let i = 0; i < array.length; i++) {
-        if (Number.isNaN(array[i])) {
+        if ((array[i])) {
             sum += array[i];
         }
     }
@@ -90,7 +90,7 @@ console.log(sum); // 103
 
 function customMap(array, mapper) {
     const result = [];
-    for (let i = 1; i < array.length; i++) {
+    for (let i = 0; i < array.length; i++) {
         result[i] = mapper(array[i]);
     }
     return result;
