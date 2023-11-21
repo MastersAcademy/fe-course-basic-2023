@@ -10,6 +10,9 @@ const resultImagesEl = document.querySelector('[data-showImages]');
 const resultOperationEl = document.querySelector('[data-operation]');
 const resultEqualsEl = document.querySelector('[data-equals]');
 
+const dateEl = document.querySelector('[data-date]');
+const dateMsEl = document.querySelector('[data-timeMs]');
+
 FIRST_VALUE_ELEMENT.addEventListener('change', () => {
     const firstNumber = Number(FIRST_VALUE_ELEMENT.value);
     if (!firstNumber) {
@@ -44,6 +47,7 @@ SECOND_VALUE_ELEMENT.addEventListener('change', () => {
 });
 
 CALCULATE_BUTTON_ELEMENT.addEventListener('click', () => {
+    const start = Date.now();
     const firstValue = FIRST_VALUE_ELEMENT.value;
     const secondValue = SECOND_VALUE_ELEMENT.value;
     const operation = OPERATION_ELEMENT.value;
@@ -59,5 +63,8 @@ CALCULATE_BUTTON_ELEMENT.addEventListener('click', () => {
         resultImagesEl.appendChild(images);
     }
     resultEqualsEl.innerHTML = '=';
-    RESULT_ELEMENT.innerText = resultMath;
+    RESULT_ELEMENT.innerText = resultMath <= 1 ? `${resultMath} pokemon` : `${resultMath} pokemons`;
+
+    dateEl.textContent = `Date of calculation: ${window.getDateFormat()}. `;
+    dateMsEl.textContent = `Time of function execution: ${(Date.now() - start).toString()}`;
 });
