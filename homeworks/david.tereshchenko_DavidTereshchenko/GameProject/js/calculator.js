@@ -6,11 +6,16 @@ const visualNumberOne = document.querySelector('.number__1');
 const equals = document.querySelector('.equals');
 const visualResult = document.querySelector('.visual-result');
 const countBlock = document.querySelector('.count-block');
+const countGame = document.querySelector('.count-games');
+const countGamesVisual = document.querySelector('.count-games__visual');
+const date = document.querySelector('.date');
 
 btn.onclick = function () {
     const one = Number(document.getElementById('firstNumber').value);
     const two = Number(document.getElementById('secondNumber').value);
     const result = document.querySelector('.result');
+
+    const nowDate = new Date();
 
     countBlock.style.display = 'flex';
 
@@ -69,15 +74,51 @@ btn.onclick = function () {
         visualNumberOne.innerHTML = '';
         visualNumberTwo.innerHTML = '';
         equals.innerHTML = '';
+        countGame.innerHTML = '';
+        countGamesVisual.innerHTML = '';
         return result;
+    }
+
+    const endTime = new Date();
+    function executionTime() {
+        return endTime - nowDate;
+    }
+
+    function dateNow() {
+        const year = nowDate.getFullYear();
+        const month = new Intl.DateTimeFormat('en-US', { month: 'short' }).format(nowDate);
+        const day = nowDate.getDay();
+
+        return `${day}-${month}-${year}`;
+    }
+    function hourNow() {
+        const hour = nowDate.getHours();
+        let minute = nowDate.getMinutes();
+
+        if (minute < 10) {
+            minute = `0${minute}`;
+            return minute;
+        }
+        return `${hour}:${minute}`;
+    }
+
+    let game = 'Game';
+
+    if (calc > 1) {
+        game = 'Games';
     }
 
     visualNumberOne.innerHTML = one;
     visualOperator.innerHTML = operator.value;
     visualNumberTwo.innerHTML = two;
     equals.innerHTML = '=';
-    result.innerHTML = calc;
     visualResult.innerHTML = calc;
+    countGamesVisual.innerHTML = game;
+
+    result.innerHTML = calc;
+    countGame.innerHTML = game;
+
+    date.innerHTML = `Date of calculation: ${dateNow()}, ${hourNow()}. Time of function execution: ${executionTime()} ms`;
 
     return result;
 };
