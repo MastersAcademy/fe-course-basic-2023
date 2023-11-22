@@ -146,7 +146,7 @@ function createGameCardStr(game) {
 
                         <div class="card__description">
                             <h2 class="description__title" data-description-title>${title}</h2>
-                            <p class="description__text" data-description-text>${shortDescription}</p>
+                            <p class="description__text" data-description-text>${shortDescription.slice(0, 60)}...</p>
                         </div>
                         <ul class="card__actors">
                             <li class="card__actor" data-genre>
@@ -168,15 +168,15 @@ function createGameCardStr(game) {
                    `;
 }
 function createCardElement(game) {
-    return createGameCardStr(game);
+    const cardElement = document.createElement('li');
+    cardElement.classList.add('card');
+    cardElement.innerHTML = createGameCardStr(game);
+    return cardElement;
 }
 function renderCards(container, arrGames) {
     const fragment = new DocumentFragment();
     for (let i = 0; i < arrGames.length; i++) {
-        const cardElement = document.createElement('li');
-        cardElement.classList.add('card');
-        cardElement.innerHTML = createCardElement(arrGames[i]);
-        fragment.append(cardElement);
+        fragment.append(createCardElement(arrGames[i]));
     }
     container.append(fragment);
 }
