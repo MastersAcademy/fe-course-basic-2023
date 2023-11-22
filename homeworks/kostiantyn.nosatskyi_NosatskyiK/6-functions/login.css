@@ -109,7 +109,7 @@ body {
   color: #221F1F;
 }
 
-.button-submit {
+.btn__submit {
   font-size: 22px;
   font-weight: 600;
   line-height: 26px;
@@ -122,11 +122,11 @@ body {
   box-shadow: 0 4px 30px 0;
 }
 
-input[type="checkbox"] {
+.form__checkbox[type="checkbox"] {
   margin: 0;
 }
 
-input[type="email"], [type="password"], [type="text"] {
+.form__input[type="text"], [type="password"] {
   width: 575px;
   height: 70px;
   border: 1px solid #A9A9A9;
@@ -134,7 +134,7 @@ input[type="email"], [type="password"], [type="text"] {
   padding-left: 20px;
 }
 
-input[type="email"]::placeholder, [type="password"]::placeholder {
+.form__input[type="text"]::placeholder, [type="password"]::placeholder {
   color: #A9A9A9;
 }
 

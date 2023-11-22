@@ -61,11 +61,13 @@ function validateEmail(emailTest) {
 
     if (emailRegex) {
         document.getElementById('output-email').textContent = ('Email вийшов чудовий!');
+        document.getElementById('output-email').style.color = '#00ba37';
         // a line that will allow you to check whether spaces have been removed
         console.log(clearEmail);
         return true;
     }
     document.getElementById('output-email').textContent = ('З вашим email поле якась біда...');
+    document.getElementById('output-email').style.color = '#EF4934';
     return false;
 }
 
@@ -76,9 +78,11 @@ function validatePassword(passwordTest) {
 
     if (passwordRegex.test(passwordTest)) {
         document.getElementById('output-password').textContent = ('Password вийшов чудовий!');
+        document.getElementById('output-password').style.color = '#00ba37';
         return true;
     }
     document.getElementById('output-password').textContent = ('З вашим password поле якась біда...');
+    document.getElementById('output-password').style.color = '#EF4934';
     return false;
 }
 
@@ -86,9 +90,11 @@ function validatePassword(passwordTest) {
 function validateCheckbox(checkboxTest) {
     if (checkboxTest) {
         document.getElementById('output-checkbox').textContent = ('Ви не робот і це чудово!');
+        document.getElementById('output-checkbox').style.color = '#00ba37';
         return true;
     }
     document.getElementById('output-checkbox').textContent = ('Встановіть чекбокс щоб переконатись що ви не робот');
+    document.getElementById('output-checkbox').style.color = '#EF4934';
     return false;
 }
 
