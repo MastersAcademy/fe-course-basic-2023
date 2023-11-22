@@ -131,3 +131,17 @@ const games = [
     },
 ];
 console.log(games);
+const cardTemplate = document.querySelector('[data-card-template]');
+const cardContainer = document.querySelector('[data-card-container]');
+function createCardTemplate() {
+    const cardContent = cardTemplate.content.cloneNode(true);
+    return cardContent;
+}
+function renderCards(container, cardAmount) {
+    const fragment = new DocumentFragment();
+    for (let count = 0; count < cardAmount; count++) {
+        fragment.append(createCardTemplate());
+    }
+    container.append(fragment);
+}
+renderCards(cardContainer, 10);

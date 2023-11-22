@@ -139,8 +139,14 @@
   background-color: #ECECEC;
 }
 
-.card__image {
+.card__image-container {
   grid-area: image;
+}
+
+.card__image {
+  width: 90px;
+  height: 85px;
+  border-radius: 5px;
 }
 
 .card__name {
