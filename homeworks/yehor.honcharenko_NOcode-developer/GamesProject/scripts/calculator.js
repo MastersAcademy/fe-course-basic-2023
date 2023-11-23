@@ -5,14 +5,21 @@ const operation = document.querySelector('#operation');
 const submitButton = document.querySelector('.submit');
 const resultField = document.querySelector('#result');
 const visualization = document.querySelector('.result__visualization');
+const executionTimeField = document.getElementById('execution-time');
 
 // Функція для перевірки, чи є введення числом / Function to check if the input is a number
 function isNumber(value) {
     return !Number.isNaN(parseFloat(value));
 }
 
-// Функція для виконання розрахунків / Function to perform calculations
+/**
+ * Функція для виконання розрахунків / Function to perform calculations
+ * @returns {string}
+ */
 function calculate() {
+    // Start measuring time
+    const startTime = performance.now();
+
     // Перевіряємо, чи є введення числами / Checking if the inputs are numbers
     if (!isNumber(inputOne.value) || !isNumber(inputTwo.value)) {
         resultField.textContent = 'Enter a number';
@@ -61,7 +68,13 @@ function calculate() {
     }
 
     // Відображаємо результат / Displaying the result
-    resultField.textContent = result;
+    let resultText = result;
+    if (result === 1) {
+        resultText += ' game';
+    } else if (result > 1) {
+        resultText += ' games';
+    }
+    resultField.textContent = resultText;
 
     // Відображаємо візуалізацію / Displaying the visualization
     const visualizationText = `${inputOne.value} ${operationSymbol} ${inputTwo.value} = ${result}`;
@@ -139,6 +152,18 @@ function calculate() {
     }
 
     visualization.appendChild(resultImagesContainerWrapper);
+
+    // Stop measuring time and calculate the elapsed time
+    const endTime = performance.now();
+    const executionTime = endTime - startTime;
+
+    // Get the current date and time
+    const currentDate = new Date();
+    const formattedDate = currentDate.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
+    const formattedTime = currentDate.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+
+    // Display the date, time, and execution time
+    executionTimeField.textContent = `Date of calculation: ${formattedDate}, ${formattedTime}. Time of function execution: ${executionTime.toFixed(2)}ms`;
 }
 
 // Adding a function to handle the click event on the button
