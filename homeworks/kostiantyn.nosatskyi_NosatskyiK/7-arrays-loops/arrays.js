@@ -4,45 +4,47 @@ const arrayThree = [1, 7, 3];
 const arrayFour = [1, undefined, 3, 5, -3];
 const arrayFive = [1, NaN, 3, 5, -3];
 
-function maxNumberOfArr(array) {
-    let maxNumber = array[0];
-    for (let i = 1; i < array.length; i++) {
-        if (array[i] > maxNumber) {
-            maxNumber = array[i];
+function searchNumber(array, condition) {
+    let arrayNum = array[0];
+
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] !== undefined) {
+            if (condition(array[i], arrayNum)) {
+                arrayNum = array[i];
+            }
         }
     }
-    return maxNumber;
+    return arrayNum;
 }
 
-console.log(maxNumberOfArr(arrayOne)); // 44
-console.log(maxNumberOfArr(arrayTwo)); // -1
-console.log(maxNumberOfArr(arrayThree)); // 7
-console.log(maxNumberOfArr(arrayFour)); // 5
-console.log(maxNumberOfArr(arrayFive)); // 5
-
-function minNumberOfArr(array) {
-    let minNumber = array[0];
-
-    for (let i = 1; i < array.length; i++) {
-        if (array[i] < minNumber) {
-            minNumber = array[i];
-        }
-    }
-    return minNumber;
+function minNumber(num1, num2) {
+    return num1 < num2;
 }
 
-console.log(minNumberOfArr(arrayOne)); // -12
-console.log(minNumberOfArr(arrayTwo)); // -8
-console.log(minNumberOfArr(arrayThree)); // 1
-console.log(minNumberOfArr(arrayFour)); // -3
-console.log(minNumberOfArr(arrayFive)); // -3
+function maxNumber(num1, num2) {
+    return num1 > num2;
+}
+
+console.log(searchNumber(arrayOne, minNumber));
+console.log(searchNumber(arrayTwo, minNumber));
+console.log(searchNumber(arrayThree, minNumber));
+console.log(searchNumber(arrayFour, minNumber));
+console.log(searchNumber(arrayFive, minNumber));
+
+console.log(searchNumber(arrayOne, maxNumber));
+console.log(searchNumber(arrayTwo, maxNumber));
+console.log(searchNumber(arrayThree, maxNumber));
+console.log(searchNumber(arrayFour, maxNumber));
+console.log(searchNumber(arrayFive, maxNumber));
 
 function sumNumbersOfArr(array) {
     let sumNumbers = array[0];
 
     for (let i = 1; i < array.length; i++) {
-        if (typeof array[i] === 'number' && !Number.isNaN(array[i])) {
-            sumNumbers += array[i];
+        if (array[i] !== undefined) {
+            if (typeof array[i] === 'number' && Number.isFinite(array[i])) {
+                sumNumbers += array[i];
+            }
         }
     }
     return sumNumbers;
@@ -76,22 +78,20 @@ console.log(onlyPositiveNumbers(arrayThree)); // [1, 7, 3];
 console.log(onlyPositiveNumbers(arrayFour)); // [1, 3, 5];
 console.log(onlyPositiveNumbers(arrayFive)); // [1, 3, 5];
 
-// =====================================================
-
-// tasks with an asterisk
-//
-// a function that returns the length of an array element
+// // =====================================================
+// // tasks with an asterisk
+// //
+// // a function that returns the length of an array element
 
 const arrayTest = ['I', 'am', 'learning', 'front end', 'with', 'Masters of code'];
 
 function customMap(array) {
-    const stringLength = array.map((current) => current.length);
-    return stringLength;
+    return array.map((current) => current.length);
 }
 
 console.log(customMap(arrayTest));
 
-// a function that returns only even numbers from an array
+// // a function that returns only even numbers from an array
 
 function evenNumber(array) {
     return array.reduce((acc, current) => {
