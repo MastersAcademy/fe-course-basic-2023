@@ -38,28 +38,34 @@
         </header>
         <form action="#" method="post" class="filter">
             <section>
-                <select name="select" class="filter__select">
-                    <option value="Genre" selected>Genre</option>
+                <select name="select" class="filter__select" data-select-genre>
+                    <option value="0" selected></option>
+                    <option value="1">Shooter</option>
+                    <option value="2">ARPG</option>
+                    <option value="3">Batle Royale</option>
+                    <option value="4">Strategy</option>
+                    <option value="5">MMORPG</option>
+                    <option value="6">Fighting</option>
                 </select>
             </section>
             <section>
-                <input type="radio" name="radio" id="new">
+                <input type="radio" name="radio" id="only-new" disabled>
                 <label for="new" class="filter-element">
                     Only new
                 </label>
-                <input type="radio" name="radio" id="favorites">
+                <input type="radio" name="radio" id="favorites" disabled>
                 <label for="favorites">
                     Favorites
                 </label>
             </section>
             <section>
-                <input type="checkbox" id="big">
+                <input type="checkbox" id="new">
                 <label for="big" class="filter-element">
-                    Big
+                    New
                 </label>
-                <input type="checkbox" id="Small">
+                <input type="checkbox" id="old">
                 <label for="small">
-                    Small
+                    Old
                 </label>
             </section>
             <section class="filter__search">
@@ -74,48 +80,30 @@
                 </div>
             </section>
         </form>
+        <template data-card-template>
+            <section class="card">
+                <div class="card__image-container">
+                    <img class="card__image" data-game-image src="https://www.mmobomb.com/g/1136/thumbnail.jpg" alt="overwatch">
+                </div>
+                <div class="card__name">
+                    <h2 class="card__heading" data-game-title></h2>
+                    <p class="card__paragraf" data-game-id></p>
+                    <p class="card__paragraf card__paragraf--short" data-game-description></p>
+                </div>
+                <div class="card__description">
+                    <p class="card__paragraf" data-game-genre></p>
+                    <p class="card__paragraf" data-game-url></p>
+                    <p class="card__paragraf" data-game-platform></p>
+                    <p class="card__paragraf" data-game-publisher></p>
+                    <p class="card__paragraf" data-game-developer></p>
+                    <p class="card__paragraf" data-game-release></p>
+                    <p class="card__paragraf" data-game-profile-url></p>
+                </div>
+            </section>
+        </template>  
         <main class="main games__main">
             <h1 class="main__heading">Study project "Games"</h1>
             <article class="card-container" data-card-container>
-                <template data-card-template>
-                    <section class="card">
-                        <div class="card__image-container">
-                            <img class="card__image" data-game-image src="https://www.mmobomb.com/g/1136/thumbnail.jpg" alt="overwatch">
-                        </div>
-                        <div class="card__name">
-                            <h2 class="card__heading" data-game-title>Overwatch 2</h2>
-                            <p class="card__paragraf" data-game-id>
-                                <b>ID:</b>1136
-                            </p>
-                            <p class="card__paragraf card__paragraf--short" data-game-description>
-                                Big changes come to the Overwatch formula in this sequel..
-                            </p>
-                        </div>
-                        <div class="card__description">
-                            <p class="card__paragraf" data-game-genre>
-                                <b>Genre:</b> Shoter
-                            </p>
-                            <p class="card__paragraf" data-game-url>
-                                <b>Game-URL:</b> 'https://www.mmobomb.com/open/overwatch-2'
-                            </p>
-                            <p class="card__paragraf" data-game-platform>
-                                <b>Platform:</b> PC (Windows)
-                            </p>
-                            <p class="card__paragraf" data-game-publisher>
-                                <b>Publisher:</b> Activision Bizzard King
-                            </p>
-                            <p class="card__paragraf" data-game-developer>
-                                <b>Developer:</b> Bizzard Entertaiment
-                            </p>
-                            <p class="card__paragraf" data-game-release>
-                                <b>Release Date:</b> 22/10/2022
-                            </p>
-                            <p class="card__paragraf" data-game-profile-url>
-                                <b>Profile-URL:</b> 'https://www.mmobomb.com/overwatch-2'
-                            </p>
-                        </div>
-                    </section>
-                </template>  
             </article>
         </main>
         <script src="scripts/games.js"></script>

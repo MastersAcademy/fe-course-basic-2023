@@ -131,6 +131,7 @@ const games = [
     },
 ];
 const cardContainer = document.querySelector('[data-card-container]');
+const genreSelect = document.querySelector('[data-select-genre]');
 function createCardElement(game) {
     const cardTemplate = document.querySelector('[data-card-template]');
     const cardID = cardTemplate.content.querySelector('[data-game-id]');
@@ -142,6 +143,8 @@ function createCardElement(game) {
     const cardPublisher = cardTemplate.content.querySelector('[data-game-publisher]');
     const cardReleaseDate = cardTemplate.content.querySelector('[data-game-release]');
     const cardProfileUrl = cardTemplate.content.querySelector('[data-game-profile-url]');
+    const cardGenre = cardTemplate.content.querySelector('[data-game-genre]');
+    const cardDeveloper = cardTemplate.content.querySelector('[data-game-developer]');
     cardID.innerHTML = `<b>ID: </b>${games[game].id}`;
     cardImage.src = games[game].thumbnail;
     cardDescription.innerText = games[game].short_description;
@@ -151,14 +154,35 @@ function createCardElement(game) {
     cardPublisher.innerHTML = `<b>Publisher: </b>${games[game].publisher}`;
     cardReleaseDate.innerHTML = `<b>Release Date: </b>${games[game].release_date}`;
     cardProfileUrl.innerHTML = `<b>Profile URL: </b>${games[game].profile_url}`;
+    cardGenre.innerHTML = `<b>Genre: </b>${games[game].genre}`;
+    cardDeveloper.innerHTML = `<b>Developer: </b>${games[game].developer}`;
     const cardContent = cardTemplate.content.cloneNode(true);
     return cardContent;
 }
 function renderCards(container, gamesArray) {
+    container.innerHTML = '';
     const fragment = new DocumentFragment();
     for (let count = 0; count < gamesArray.length; count++) {
         fragment.append(createCardElement(count));
     }
     container.append(fragment);
 }
-renderCards(cardContainer, games);
+function getGenreSelectArray() {
+    let genreSelectArray = [];
+    switch (genreSelect.value) {
+        case '1':
+            genreSelectArray = games.filter((element) => element.genre === 'Shooter');
+            renderCards(cardContainer, genreSelectArray);
+            break;
+        default:
+            return games;
+    }
+    console.log(genreSelectArray);
+    renderCards(cardContainer, genreSelectArray);
+    return genreSelectArray;
+}
+function init() {
+    renderCards(cardContainer, games);
+    genreSelect.addEventListener('change', getGenreSelectArray);
+}
+window.addEventListener('load', init);
