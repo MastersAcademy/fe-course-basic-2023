@@ -197,6 +197,10 @@ body {
 .pokemons__cards {
   list-style-type: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
   gap: 25px;
+}
+
+.pokemons__card-item {
+  max-width: 275px;
 }
