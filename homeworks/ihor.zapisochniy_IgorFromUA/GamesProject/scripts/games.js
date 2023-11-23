@@ -189,13 +189,13 @@ function filterGames(gamesArr) {
             title,
             short_description: description,
         } = game;
+        const releaseYear = Number.parseInt(releaseDate, 10);
         if (selectedGenre !== 'genre' && selectedGenre !== genre.toLowerCase()) return false;
         if (isPlatformGame && platform !== 'PC (Windows)') return false;
         if (isOnlineGame && platform !== 'Web Browser') return false;
-        if (isNewGame && !isOldGame && Number.parseInt(releaseDate, 10) < 2020) return false;
-        if (isOldGame && !isNewGame && Number.parseInt(releaseDate, 10) > 2010) return false;
-        if (isOldGame && isNewGame && Number.parseInt(releaseDate, 10) < 2020
-            && Number.parseInt(releaseDate, 10) > 2010) return false;
+        if (isNewGame && !isOldGame && releaseYear < 2020) return false;
+        if (isOldGame && !isNewGame && releaseYear > 2010) return false;
+        if (isOldGame && isNewGame && releaseYear < 2020 && releaseYear > 2010) return false;
         return !(searchTerm !== '' && !title.toLowerCase().includes(searchTerm.toLowerCase())
             && !description.toLowerCase().includes(searchTerm.toLowerCase()));
     });
