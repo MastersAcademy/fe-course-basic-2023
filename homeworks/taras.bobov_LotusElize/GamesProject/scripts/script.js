@@ -4,7 +4,7 @@ const NOT_A_ROBOT_CHECKBOX_ID = 'not_a_robot';
 const SUBMIT_BUTTON_ID = 'login_button';
 const ERRORS_CONTAINER_ID = 'errors-container';
 const RESULT_PAGE_PATH = 'success.html';
-
+// start
 function deleteErrors() {
     const errorContainerElement = document.getElementById(ERRORS_CONTAINER_ID);
     errorContainerElement.innerHTML = '';
