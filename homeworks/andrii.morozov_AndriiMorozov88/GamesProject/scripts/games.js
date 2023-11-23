@@ -134,6 +134,8 @@ const cardContainer = document.querySelector('[data-card-container]');
 const genreSelect = document.querySelector('[data-select-genre]');
 const newGameCheck = document.querySelector('[data-new-games]');
 const oldGameCheck = document.querySelector('[data-old-games]');
+const searchButton = document.querySelector('[data-search-button]');
+const searchInput = document.querySelector('[data-search-input]');
 function createCardElement(game, array) {
     const cardTemplate = document.querySelector('[data-card-template]');
     const cardID = cardTemplate.content.querySelector('[data-game-id]');
@@ -169,29 +171,29 @@ function renderCards(container, gamesArray) {
     }
     container.append(fragment);
 }
-function getGenreSelectArray() {
+function getGenreSelectArray(array) {
     let genreSelectArray = [];
     switch (genreSelect.value) {
         case '1':
-            genreSelectArray = games.filter((element) => element.genre === 'Shooter');
+            genreSelectArray = array.filter((element) => element.genre === 'Shooter');
             break;
         case '2':
-            genreSelectArray = games.filter((element) => element.genre === 'ARPG');
+            genreSelectArray = array.filter((element) => element.genre === 'ARPG');
             break;
         case '3':
-            genreSelectArray = games.filter((element) => element.genre === 'Battle Royale');
+            genreSelectArray = array.filter((element) => element.genre === 'Battle Royale');
             break;
         case '4':
-            genreSelectArray = games.filter((element) => element.genre === 'Strategy');
+            genreSelectArray = array.filter((element) => element.genre === 'Strategy');
             break;
         case '5':
-            genreSelectArray = games.filter((element) => element.genre === 'MMORPG');
+            genreSelectArray = array.filter((element) => element.genre === 'MMORPG');
             break;
         case '6':
-            genreSelectArray = games.filter((element) => element.genre === 'Fighting');
+            genreSelectArray = array.filter((element) => element.genre === 'Fighting');
             break;
         default:
-            return games;
+            return array;
     }
     return genreSelectArray;
 }
@@ -211,14 +213,33 @@ function getNewAndOldGamesArray(arr) {
     }
     return arr;
 }
+function getSearchArray(array) {
+    const searchArray = [];
+    array.forEach((element) => {
+        const searchInputValue = searchInput.value.toLowerCase();
+        const isElTitleInc = element.title.toLowerCase().includes(searchInputValue);
+        const isElDescInc = element.short_description.toLowerCase().includes(searchInputValue);
+        if (isElTitleInc || isElDescInc) searchArray.push(element);
+    });
+    console.log(searchArray);
+    return searchArray;
+}
 function showFilterArray() {
-    const firstLevelFilter = getGenreSelectArray();
-    renderCards(cardContainer, getNewAndOldGamesArray(firstLevelFilter));
+    const firstLevelFilter = getSearchArray(games);
+    const secondLevelFilter = getGenreSelectArray(firstLevelFilter);
+    const thirdLevelFilter = getNewAndOldGamesArray(secondLevelFilter);
+    renderCards(cardContainer, thirdLevelFilter);
 }
 function init() {
     renderCards(cardContainer, games);
     genreSelect.addEventListener('change', showFilterArray);
     newGameCheck.addEventListener('change', showFilterArray);
     oldGameCheck.addEventListener('change', showFilterArray);
+    searchInput.addEventListener('keyup', () => {
+        if (searchInput.value.trim() === '') showFilterArray();
+    });
+    searchButton.addEventListener('click', () => {
+        if (searchInput.value.trim() !== '') showFilterArray();
+    });
 }
 window.addEventListener('load', init);
