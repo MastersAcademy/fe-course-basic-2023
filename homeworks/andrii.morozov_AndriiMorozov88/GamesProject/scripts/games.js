@@ -130,18 +130,35 @@ const games = [
         profile_url: 'https://www.mmobomb.com/crossout',
     },
 ];
-console.log(games);
-const cardTemplate = document.querySelector('[data-card-template]');
 const cardContainer = document.querySelector('[data-card-container]');
-function createCardTemplate() {
+function createCardElement(game) {
+    const cardTemplate = document.querySelector('[data-card-template]');
+    const cardID = cardTemplate.content.querySelector('[data-game-id]');
+    const cardImage = cardTemplate.content.querySelector('[data-game-image]');
+    const cardDescription = cardTemplate.content.querySelector('[data-game-description]');
+    const cardTitle = cardTemplate.content.querySelector('[data-game-title]');
+    const cardGameUrl = cardTemplate.content.querySelector('[data-game-url]');
+    const cardPlatform = cardTemplate.content.querySelector('[data-game-platform]');
+    const cardPublisher = cardTemplate.content.querySelector('[data-game-publisher]');
+    const cardReleaseDate = cardTemplate.content.querySelector('[data-game-release]');
+    const cardProfileUrl = cardTemplate.content.querySelector('[data-game-profile-url]');
+    cardID.innerHTML = `<b>ID: </b>${games[game].id}`;
+    cardImage.src = games[game].thumbnail;
+    cardDescription.innerText = games[game].short_description;
+    cardTitle.innerText = games[game].title;
+    cardGameUrl.innerHTML = `<b>Game URL: </b>${games[game].game_url}`;
+    cardPlatform.innerHTML = `<b>Platform: </b>${games[game].platform}`;
+    cardPublisher.innerHTML = `<b>Publisher: </b>${games[game].publisher}`;
+    cardReleaseDate.innerHTML = `<b>Release Date: </b>${games[game].release_date}`;
+    cardProfileUrl.innerHTML = `<b>Profile URL: </b>${games[game].profile_url}`;
     const cardContent = cardTemplate.content.cloneNode(true);
     return cardContent;
 }
-function renderCards(container, cardAmount) {
+function renderCards(container, gamesArray) {
     const fragment = new DocumentFragment();
-    for (let count = 0; count < cardAmount; count++) {
-        fragment.append(createCardTemplate());
+    for (let count = 0; count < gamesArray.length; count++) {
+        fragment.append(createCardElement(count));
     }
     container.append(fragment);
 }
-renderCards(cardContainer, 10);
+renderCards(cardContainer, games);

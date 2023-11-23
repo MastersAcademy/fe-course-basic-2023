@@ -127,8 +127,8 @@
 }
 
 .card {
-  width: 265px;
-  height: 250px;
+  width: 300px;
+  height: max-content;
   border-radius: 10px;
   padding: 12px 12px 22px;
   display: grid;
@@ -157,13 +157,23 @@
   font-size: 18px;
   font-weight: 700;
   color: #221F1F;
+  width: 180px;
+  height: min-content;
 }
 
 .card__paragraf {
   font-size: 14px;
+  width: 250px;
   font-weight: 400;
   line-height: 21px;
   margin-bottom: 6px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.card__paragraf--short {
+  width: 180px;
 }
 
 .card__description {
