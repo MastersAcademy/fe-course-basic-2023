@@ -261,57 +261,70 @@ function initPokemons() {
     function createCardElement(pokemon) {
         const { name, ThumbnailImage, height } = pokemon;
 
-        const CARD_TEMPLATE_ELEMENT = document.querySelector('[data-type="card-template"]');
-        if (!CARD_TEMPLATE_ELEMENT) return null;
-        const CARD_TEMPLATE_CONTENT = CARD_TEMPLATE_ELEMENT.content;
-
-        const CARD_TITLE_ELEMENT = CARD_TEMPLATE_CONTENT.querySelector('[data-card-title]');
-        const CARD_IMAGE_ELEMENT = CARD_TEMPLATE_CONTENT.querySelector('[data-card-img]');
-        const CARD_HEIGHT_ELEMENT = CARD_TEMPLATE_CONTENT.querySelector('[data-card-height]');
-
         const heightNumber = height;
         const integerPart = Math.floor(heightNumber);
         const decimalPart = String(heightNumber).includes('.') ? String(heightNumber).split('.')[1] : '0';
         const heightStr = decimalPart !== '0' ? `${integerPart}' ${decimalPart}"` : `${integerPart}'`;
 
-        CARD_HEIGHT_ELEMENT.childNodes[2].textContent = heightStr;
-        CARD_TITLE_ELEMENT.textContent = name;
-        CARD_IMAGE_ELEMENT.src = ThumbnailImage;
+        const cardTemplateStr = `
+            <li class="pokemons__card-item card-pokemon">
+                <div class="card-pokemon__header">
+                    <img class="card-pokemon__image" src="${ThumbnailImage}" alt="urshifu">
+                    <h3 class="card-pokemon__title">${name}</h3>
+                </div>
+                <ul class="card-pokemon__body">
+                    <li class="card-pokemon__text">
+                        <span class="card-pokemon__text--bold">Height: </span>${heightStr}
+                    </li>
+                    <li class="card-pokemon__text">
+                        <span class="card-pokemon__text--bold">Weight: </span>231.5 lbs
+                    </li>
+                    <li class="card-pokemon__text">
+                        <span class="card-pokemon__text--bold">Number: </span>0002
+                    </li>
+                    <li class="card-pokemon__text">
+                        <span class="card-pokemon__text--bold">Type: </span>
+                        <button class="card-pokemon__btn card-pokemon__btn--yellow"
+                            type="button">Fighting</button>
+                        <button class="card-pokemon__btn card-pokemon__btn--red"
+                            type="button">Dark</button>
+                    </li>
+                    <li class="card-pokemon__text">
+                        <span class="card-pokemon__text--bold">Weaknesses: </span>
+                        <button class="card-pokemon__btn card-pokemon__btn--pink"
+                            type="button">Fairy</button>
+                        <button class="card-pokemon__btn card-pokemon__btn--purple"
+                            type="button">Flying</button>
+                    </li>
+                </ul>
+            </li>
+        `;
 
-        return CARD_TEMPLATE_ELEMENT.content.cloneNode(true);
+        return cardTemplateStr;
     }
 
     function clearContainer(container) {
-        const TEMPLATE_ELEMENT = container.querySelector('[data-type="card-template"]');
-        let currentElement = TEMPLATE_ELEMENT.nextElementSibling;
-
-        while (currentElement) {
-            const nextElement = currentElement.nextElementSibling;
-            container.removeChild(currentElement);
-            currentElement = nextElement;
-        }
+        if (!container) return;
+        container.innerHTML = '';
     }
 
     function renderCards(container, cards) {
         clearContainer(container);
 
-        const FRAGMENT_NODE = new DocumentFragment();
-
         const renderedCards = cards.map((card) => {
             const pokemonCard = createCardElement(card);
-            FRAGMENT_NODE.append(pokemonCard);
+            container.innerHTML += pokemonCard;
             return pokemonCard;
         });
 
-        container.append(FRAGMENT_NODE);
         return renderedCards;
     }
 
-    function filterCards(cards) {
+    function filterByHeight(cards) {
         const isSmallChecked = FORM_FILTERS_ELEMENT.elements.small.checked;
         const isBigChecked = FORM_FILTERS_ELEMENT.elements.big.checked;
 
-        const filteredCards = cards.filter((card) => {
+        const filteredByHeight = cards.filter((card) => {
             switch (true) {
                 case isSmallChecked && isBigChecked:
                     return card.height <= 50 || card.height >= 100;
@@ -323,24 +336,22 @@ function initPokemons() {
                     return true;
             }
         });
-        return filteredCards;
+        return filteredByHeight;
     }
 
-    function checkPokemonsHeightHandler() {
-        FORM_FILTERS_ELEMENT.addEventListener('change', (event) => {
-            const { target } = event;
+    function onChangePokemonsHeightHandler(event) {
+        const { target } = event;
 
-            if (target.type === 'checkbox') {
-                if ((target.value === 'small' || target.value === 'big')) {
-                    const filteredCards = filterCards(pokemons);
-                    renderCards(CARDS_CONTAINER_ELEMENT, filteredCards);
-                }
+        if (target.type === 'checkbox') {
+            if ((target.value === 'small' || target.value === 'big')) {
+                const filteredCards = filterByHeight(pokemons);
+                renderCards(CARDS_CONTAINER_ELEMENT, filteredCards);
             }
-        });
+        }
     }
 
     renderCards(CARDS_CONTAINER_ELEMENT, pokemons);
-    checkPokemonsHeightHandler();
+    FORM_FILTERS_ELEMENT.addEventListener('change', onChangePokemonsHeightHandler);
 }
 
 document.addEventListener('DOMContentLoaded', initPokemons);
