@@ -73,6 +73,7 @@ main {
 }
 
 .inp {
+  box-sizing: border-box;
   height: 70px;
   width: 575px;
   font-size: 24px;
