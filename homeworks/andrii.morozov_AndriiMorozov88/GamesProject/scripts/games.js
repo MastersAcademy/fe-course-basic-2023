@@ -132,7 +132,9 @@ const games = [
 ];
 const cardContainer = document.querySelector('[data-card-container]');
 const genreSelect = document.querySelector('[data-select-genre]');
-function createCardElement(game) {
+const newGameCheck = document.querySelector('[data-new-games]');
+const oldGameCheck = document.querySelector('[data-old-games]');
+function createCardElement(game, array) {
     const cardTemplate = document.querySelector('[data-card-template]');
     const cardID = cardTemplate.content.querySelector('[data-game-id]');
     const cardImage = cardTemplate.content.querySelector('[data-game-image]');
@@ -145,17 +147,17 @@ function createCardElement(game) {
     const cardProfileUrl = cardTemplate.content.querySelector('[data-game-profile-url]');
     const cardGenre = cardTemplate.content.querySelector('[data-game-genre]');
     const cardDeveloper = cardTemplate.content.querySelector('[data-game-developer]');
-    cardID.innerHTML = `<b>ID: </b>${games[game].id}`;
-    cardImage.src = games[game].thumbnail;
-    cardDescription.innerText = games[game].short_description;
-    cardTitle.innerText = games[game].title;
-    cardGameUrl.innerHTML = `<b>Game URL: </b>${games[game].game_url}`;
-    cardPlatform.innerHTML = `<b>Platform: </b>${games[game].platform}`;
-    cardPublisher.innerHTML = `<b>Publisher: </b>${games[game].publisher}`;
-    cardReleaseDate.innerHTML = `<b>Release Date: </b>${games[game].release_date}`;
-    cardProfileUrl.innerHTML = `<b>Profile URL: </b>${games[game].profile_url}`;
-    cardGenre.innerHTML = `<b>Genre: </b>${games[game].genre}`;
-    cardDeveloper.innerHTML = `<b>Developer: </b>${games[game].developer}`;
+    cardID.innerHTML = `<b>ID: </b>${array[game].id}`;
+    cardImage.src = array[game].thumbnail;
+    cardDescription.innerText = array[game].short_description;
+    cardTitle.innerText = array[game].title;
+    cardGameUrl.innerHTML = `<b>Game URL: </b>${array[game].game_url}`;
+    cardPlatform.innerHTML = `<b>Platform: </b>${array[game].platform}`;
+    cardPublisher.innerHTML = `<b>Publisher: </b>${array[game].publisher}`;
+    cardReleaseDate.innerHTML = `<b>Release Date: </b>${array[game].release_date}`;
+    cardProfileUrl.innerHTML = `<b>Profile URL: </b>${array[game].profile_url}`;
+    cardGenre.innerHTML = `<b>Genre: </b>${array[game].genre}`;
+    cardDeveloper.innerHTML = `<b>Developer: </b>${array[game].developer}`;
     const cardContent = cardTemplate.content.cloneNode(true);
     return cardContent;
 }
@@ -163,7 +165,7 @@ function renderCards(container, gamesArray) {
     container.innerHTML = '';
     const fragment = new DocumentFragment();
     for (let count = 0; count < gamesArray.length; count++) {
-        fragment.append(createCardElement(count));
+        fragment.append(createCardElement(count, gamesArray));
     }
     container.append(fragment);
 }
@@ -172,17 +174,51 @@ function getGenreSelectArray() {
     switch (genreSelect.value) {
         case '1':
             genreSelectArray = games.filter((element) => element.genre === 'Shooter');
-            renderCards(cardContainer, genreSelectArray);
+            break;
+        case '2':
+            genreSelectArray = games.filter((element) => element.genre === 'ARPG');
+            break;
+        case '3':
+            genreSelectArray = games.filter((element) => element.genre === 'Battle Royale');
+            break;
+        case '4':
+            genreSelectArray = games.filter((element) => element.genre === 'Strategy');
+            break;
+        case '5':
+            genreSelectArray = games.filter((element) => element.genre === 'MMORPG');
+            break;
+        case '6':
+            genreSelectArray = games.filter((element) => element.genre === 'Fighting');
             break;
         default:
             return games;
     }
-    console.log(genreSelectArray);
-    renderCards(cardContainer, genreSelectArray);
     return genreSelectArray;
+}
+function getYear(string) {
+    const dateArray = string.split('-');
+    return Number(dateArray[0]);
+}
+function getNewAndOldGamesArray(arr) {
+    if (newGameCheck.checked && !oldGameCheck.checked) {
+        return arr.filter((element) => getYear(element.release_date) > 2020);
+    }
+    if (oldGameCheck.checked && !newGameCheck.checked) {
+        return arr.filter((element) => getYear(element.release_date) < 2010);
+    }
+    if (oldGameCheck.checked && newGameCheck.checked) {
+        return arr.filter((e) => getYear(e.release_date) < 2010 || getYear(e.release_date) > 2020);
+    }
+    return arr;
+}
+function showFilterArray() {
+    const firstLevelFilter = getGenreSelectArray();
+    renderCards(cardContainer, getNewAndOldGamesArray(firstLevelFilter));
 }
 function init() {
     renderCards(cardContainer, games);
-    genreSelect.addEventListener('change', getGenreSelectArray);
+    genreSelect.addEventListener('change', showFilterArray);
+    newGameCheck.addEventListener('change', showFilterArray);
+    oldGameCheck.addEventListener('change', showFilterArray);
 }
 window.addEventListener('load', init);
