@@ -1,7 +1,20 @@
 const games = [
     {
+        id: 666,
+        title: 'COD Modern Warfare III',
+        thumbnail: './img/jpt-hero-desktop.jpg',
+        short_description: 'THE WAR HAS CHANGED In the direct sequel to the record-breaking Call of Duty: Modern Warfare II, Captain Price and Task Force 141 face off against the ultimate threat. The ultranationalist war criminal Vladimir Makarov is extending his grasp across the world causing Task Force 141 to fight like never before.',
+        game_url: 'https://www.mmobomb.com/open/crossout',
+        genre: 'Shooter',
+        platform: 'PC (Windows)',
+        publisher: 'Activision Blizzard',
+        developer: 'Infinity Ward',
+        release_date: '2023-10-21',
+        profile_url: 'https://www.mmobomb.com/crossout',
+    },
+    {
         id: 14,
-        title: 'COD MW II',
+        title: 'COD Modern Warfare II',
         thumbnail: './img/Call_of_Duty-_Modern_Warfare_II.jpeg',
         short_description: 'Call of Duty: Modern Warfare 2 is a first person shooter, and its gameplay revolves around fast-paced gunfights against enemy combatants. The player controls a soldier who can perform several actions, including jump, sprint, crouch, lay prone, and aim down their gun\'s iron sights.',
         game_url: 'https://www.mmobomb.com/open/crossout',

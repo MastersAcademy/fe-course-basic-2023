@@ -134,10 +134,10 @@ const gameCardElements = document.body.querySelectorAll('.game__cod2');
 const noResultsElement = document.querySelector('[data-type="text-h2"]');
 
 valueSearch.addEventListener('input', () => {
-    const searchTerm = valueSearch.value.toLowerCase();
+    const searchField = valueSearch.value.toLowerCase();
     let hasResults = false;
 
-    if (!searchTerm) {
+    if (!searchField) {
         gameCardElements.forEach((cardElement) => {
             cardElement.style.display = 'block';
         });
@@ -149,7 +149,7 @@ valueSearch.addEventListener('input', () => {
         const titleText = cardElement.querySelector('[data-type="title"]').innerText.toLowerCase();
         const descrText = cardElement.querySelector('[data-type="description"]').innerText.toLowerCase();
 
-        if (titleText.includes(searchTerm) || descrText.includes(searchTerm)) {
+        if (titleText.includes(searchField) || descrText.includes(searchField)) {
             cardElement.style.display = 'block';
             hasResults = true;
         } else {
