@@ -92,13 +92,17 @@ btn.onclick = function () {
         return `${day}-${month}-${year}`;
     }
     function hourNow() {
-        const hour = nowDate.getHours();
+        let hour = nowDate.getHours();
         let minute = nowDate.getMinutes();
 
-        if (minute < 10) {
-            minute = `0${minute}`;
-            return minute;
+        if (hour < 10) {
+            hour = `0${hour}`;
         }
+
+        if (minute < 10) {
+            minute = `0 ${minute}`;
+        }
+
         return `${hour}:${minute}`;
     }
 
