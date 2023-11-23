@@ -40,7 +40,7 @@
             <main>
                 <form action="" class="filter">
                     <label for="filter__select">
-                        <select id="filter__select" name="genre" class="filter__select">
+                        <select id="filter__select" name="genre" data-filter-select class="filter__select">
                             <option class="select__option" selected value="genre">Genre</option>
                             <option class="select__option" value="sport">Sport</option>
                             <option class="select__option" value="shooter">Shooter</option>
@@ -48,28 +48,28 @@
                             <option class="select__option" value="horror">Horror</option>
                         </select>
                     </label>
-                    <input type="radio" name="type-games" class="radio-input" id="type-games-1">
+                    <input type="radio" name="type-games" data-type-games="platform" class="radio-input" id="type-games-1">
                     <label for="type-games-1" class="radio-text">
                         Platform
                     </label>
 
-                    <input type="radio" name="type-games" class="radio-input" id="type-games-2">
+                    <input type="radio" name="type-games" data-type-games="online" class="radio-input" id="type-games-2">
                     <label for="type-games-2" class="radio-text">
                         Online games
                     </label>
                     <label for="age-1" class="checkbox-text">
-                        <input type="checkbox" class="checkbox-input" id="age-1">
+                        <input type="checkbox" data-age-games="new" class="checkbox-input" name="age" id="age-1">
                         New
                     </label>
                     <label for="age-2" class="checkbox-text">
-                        <input type="checkbox" class="checkbox-input" id="age-2">
+                        <input type="checkbox" data-age-games="old" class="checkbox-input" name="age" id="age-2">
                         Old
                     </label>
                     <div>
                         <label for="filter__search">
-                            <input type="text" id="filter__search" class="filter__search" placeholder="Search">
+                            <input type="text" data-filter-search id="filter__search" class="filter__search" placeholder="Search">
                         </label>
-                        <button type="submit" class="filter__btn">Apply</button>
+                        <button type="button" class="filter__btn" data-filter-button>Apply</button>
                     </div>
                 </form>
                 <h1 class="title">Study project "Games"</h1>

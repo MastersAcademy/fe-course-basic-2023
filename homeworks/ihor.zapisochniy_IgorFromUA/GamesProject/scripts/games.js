@@ -131,6 +131,7 @@ const games = [
     },
 ];
 const CARDS_LIST = document.querySelector('[data-cards]');
+const FORM_BUTTON = document.querySelector('[data-filter-button]');
 function createGameCardStr(game) {
     const {
         title,
@@ -173,12 +174,43 @@ function createCardElement(game) {
     cardElement.innerHTML = createGameCardStr(game);
     return cardElement;
 }
+function filterGames(gamesArr) {
+    const selectedGenre = document.querySelector('[data-filter-select]').value;
+    const isPlatformGame = document.querySelector('[data-type-games="platform"]').checked;
+    const isOnlineGame = document.querySelector('[data-type-games="online"]').checked;
+    const isNewGame = document.querySelector('[data-age-games="new"]').checked;
+    const isOldGame = document.querySelector('[data-age-games="old"]').checked;
+    const searchTerm = document.querySelector('[data-filter-search]').value;
+    return gamesArr.filter((game) => {
+        const {
+            genre,
+            platform,
+            release_date: releaseDate,
+            title,
+            short_description: description,
+        } = game;
+        if (selectedGenre !== 'genre' && selectedGenre !== genre.toLowerCase()) return false;
+        if (isPlatformGame && platform !== 'PC (Windows)') return false;
+        if (isOnlineGame && platform !== 'Web Browser') return false;
+        if (isNewGame && !isOldGame && Number.parseInt(releaseDate, 10) < 2020) return false;
+        if (isOldGame && !isNewGame && Number.parseInt(releaseDate, 10) > 2010) return false;
+        if (isOldGame && isNewGame && Number.parseInt(releaseDate, 10) < 2020
+            && Number.parseInt(releaseDate, 10) > 2010) return false;
+        return !(searchTerm !== '' && !title.toLowerCase().includes(searchTerm.toLowerCase())
+            && !description.toLowerCase().includes(searchTerm.toLowerCase()));
+    });
+}
 function renderCards(container, arrGames) {
+    container.innerHTML = '';
     const fragment = new DocumentFragment();
     for (let i = 0; i < arrGames.length; i++) {
         fragment.append(createCardElement(arrGames[i]));
     }
     container.append(fragment);
 }
-
+function reRenderCards() {
+    const filterArrGames = filterGames(games);
+    renderCards(CARDS_LIST, filterArrGames);
+}
 renderCards(CARDS_LIST, games);
+FORM_BUTTON.addEventListener('click', reRenderCards);
