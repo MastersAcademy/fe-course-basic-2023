@@ -96,6 +96,7 @@ body {
 .pokemon {
   padding-right: 52px;
   padding-left: 53px;
+  margin-bottom: 50px;
 }
 
 .pokemon__title {
