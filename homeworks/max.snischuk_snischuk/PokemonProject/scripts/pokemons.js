@@ -255,7 +255,7 @@ function initPokemons() {
         },
     ];
 
-    let filteredCards = [];
+    let filteredCards = [...pokemons];
 
     const FORM_FILTERS_ELEMENT = document.querySelector('[data-form-filters]');
     const TEXT_INPUT_ELEMENT = FORM_FILTERS_ELEMENT.elements['search-query'];
@@ -386,17 +386,23 @@ function initPokemons() {
         if (FORM_FILTERS_ELEMENT.elements['search-query'].value) {
             filteredCards = filterBySearchQuery(filteredCards);
         }
+        return filteredCards;
     }
 
     function onChangeFiltersHandler() {
-        updateFilteredCards();
-        renderCards(CARDS_CONTAINER_ELEMENT, filteredCards);
+        const updatedFilteredCards = updateFilteredCards();
+        renderCards(CARDS_CONTAINER_ELEMENT, updatedFilteredCards);
     }
 
     function onInputSearchHandler(event) {
+        let updatedFilteredCards = updateFilteredCards();
         const inputValue = event.target.value.toLowerCase();
-        filteredCards = pokemons.filter((card) => card.name.toLowerCase().includes(inputValue));
-        renderCards(CARDS_CONTAINER_ELEMENT, filteredCards);
+
+        updatedFilteredCards = pokemons.filter((pokemon) => pokemon.name
+            .toLowerCase()
+            .includes(inputValue));
+
+        renderCards(CARDS_CONTAINER_ELEMENT, updatedFilteredCards);
     }
 
     function onSubmitFiltersHandler(event) {
