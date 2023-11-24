@@ -136,34 +136,35 @@ function debounce(func, timeout = 300) {
     let timer;
     return (...args) => {
         clearTimeout(timer);
-        timer = setTimeout(() => { func.apply(this, args); }, timeout);
+        timer = setTimeout(() => {
+            func.apply(this, args);
+        }, timeout);
     };
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    const checkboxes = document.querySelectorAll('.checkbox__input');
-    const containerCards = document.querySelector('.main.cards');
-    const genreDropdown = document.getElementById('genre');
-    const textInput = document.querySelector('.search__input');
-    const radioButtons = document.querySelectorAll('.radio__input');
+const checkboxes = document.querySelectorAll('.checkbox__input');
+const containerCards = document.querySelector('.main.cards');
+const genreDropdown = document.getElementById('genre');
+const textInput = document.querySelector('.search__input');
+const radioButtons = document.querySelectorAll('.radio__input');
 
-    const filtersState = {
-        checkboxes: [],
-        selectedGenre: 'all',
-        textValue: '',
-        selectedRadio: '',
-    };
+const filtersState = {
+    checkboxes: [],
+    selectedGenre: 'all',
+    textValue: '',
+    selectedRadio: '',
+};
 
-    function setCardItemVisibility(cardItem, isVisible) {
-        if (isVisible) {
-            cardItem.classList.remove('hidden');
-        } else {
-            cardItem.classList.add('hidden');
-        }
+function setCardItemVisibility(cardItem, isVisible) {
+    if (isVisible) {
+        cardItem.classList.remove('hidden');
+    } else {
+        cardItem.classList.add('hidden');
     }
+}
 
-    function createCardTemplate(game) {
-        return `<li class="card__item" data-release-date="${game.release_date}" data-genre="${game.genre}" data-platform="${game.platform}">
+function createCardTemplate(game) {
+    return `<li class="card__item" data-release-date="${game.release_date}" data-genre="${game.genre}" data-platform="${game.platform}">
                         <div class="card__view">
                             <img src="${game.thumbnail}" alt="game picture" width="90" height="90">
                             <div>
@@ -198,80 +199,82 @@ document.addEventListener('DOMContentLoaded', () => {
                             </div>
                         </dl>
                     </li>`;
-    }
+}
 
-    function renderCards(container) {
-        const cardsHTML = games.map(createCardTemplate).join('');
-        container.querySelector('.section__title').insertAdjacentHTML('afterend', `<ul class="card__list">${cardsHTML}</ul>`);
-    }
+function renderCards(container, data) {
+    const cardsHTML = data.map(createCardTemplate).join('');
+    container.querySelector('.section__title').insertAdjacentHTML('afterend', `<ul class="card__list">${cardsHTML}</ul>`);
+}
 
-    function updateState() {
-        filtersState.checkboxes = [...checkboxes].filter((checkbox) => checkbox.checked);
-        filtersState.selectedGenre = genreDropdown.options[genreDropdown.selectedIndex].value;
-        filtersState.textValue = textInput.value.toLowerCase();
-        filtersState.selectedRadio = [...radioButtons].find((radio) => radio.checked).value;
-    }
+function updateState() {
+    filtersState.checkboxes = [...checkboxes].filter((checkbox) => checkbox.checked);
+    filtersState.selectedGenre = genreDropdown.options[genreDropdown.selectedIndex].value;
+    filtersState.textValue = textInput.value.toLowerCase();
+    filtersState.selectedRadio = [...radioButtons].find((radio) => radio.checked).value;
+}
 
-    function applyRadioFilter(cardItem) {
-        const textContent = cardItem.textContent.toLowerCase();
-        const platform = (cardItem.dataset.platform).toLowerCase();
+function getPlatformVisibility(cardItem) {
+    const textContent = cardItem.textContent.toLowerCase();
+    const platform = (cardItem.dataset.platform).toLowerCase();
 
-        const isPlatformVisible = filtersState.selectedRadio === 'platform' && platform.includes('pc (windows)');
-        const isOnlineVisible = filtersState.selectedRadio === 'online' && textContent.includes('web browser');
-        const isAllVisible = filtersState.selectedRadio === 'all';
+    const isPlatformVisible = filtersState.selectedRadio === 'platform' && platform.includes('pc (windows)');
+    const isOnlineVisible = filtersState.selectedRadio === 'online' && textContent.includes('web browser');
+    const isAllVisible = filtersState.selectedRadio === 'all';
 
-        return isPlatformVisible || isOnlineVisible || isAllVisible;
-    }
+    return isPlatformVisible || isOnlineVisible || isAllVisible;
+}
 
-    function applyCheckboxFilter(cardItem) {
-        const releaseDate = new Date(cardItem.dataset.releaseDate).getFullYear();
-        const isOld = releaseDate < 2010;
-        const isNew = releaseDate > 2020;
+function getDateVisibility(cardItem) {
+    const releaseDate = new Date(cardItem.dataset.releaseDate).getFullYear();
+    const isOld = releaseDate < 2010;
+    const isNew = releaseDate > 2020;
 
-        return (filtersState.checkboxes.length === 0
-            || filtersState.checkboxes.some(({ value }) => (value === 'new' && isNew)
-                || (value === 'old' && isOld)));
-    }
+    return (filtersState.checkboxes.length === 0
+        || filtersState.checkboxes.some(({ value }) => (value === 'new' && isNew)
+            || (value === 'old' && isOld)));
+}
 
-    function applyTextSearchFilter(cardItem) {
-        const textContent = cardItem.textContent.toLowerCase();
+function getGamesVisibleByText(cardItem) {
+    const textContent = cardItem.textContent.toLowerCase();
 
-        return textContent.includes(filtersState.textValue);
-    }
+    return textContent.includes(filtersState.textValue);
+}
 
-    function applyDropdownFilter(cardItem) {
-        const genre = (cardItem.dataset.genre).toLowerCase();
+function getGenreVisibility(cardItem) {
+    const genre = (cardItem.dataset.genre).toLowerCase();
 
-        return (filtersState.selectedGenre === 'all' || genre === filtersState.selectedGenre);
-    }
+    return (filtersState.selectedGenre === 'all' || genre === filtersState.selectedGenre);
+}
 
-    function updateVisibility(cardItem) {
-        const visibleRadioFilter = applyRadioFilter(cardItem);
-        const checkboxFilter = applyCheckboxFilter(cardItem);
-        const textSearch = applyTextSearchFilter(cardItem);
-        const dropdownFilter = applyDropdownFilter(cardItem);
+function updateVisibility(cardItem) {
+    const isVisibleByPlatform = getPlatformVisibility(cardItem);
+    const isVisibleByDate = getDateVisibility(cardItem);
+    const gamesVisibleByText = getGamesVisibleByText(cardItem);
+    const genreVisible = getGenreVisibility(cardItem);
 
-        const isVisible = checkboxFilter && dropdownFilter && textSearch && visibleRadioFilter;
+    const isVisible = isVisibleByDate && genreVisible
+        && gamesVisibleByText && isVisibleByPlatform;
 
-        setCardItemVisibility(cardItem, isVisible);
-    }
-    function updateFilter() {
-        const cardItems = document.querySelectorAll('.card__item');
-        cardItems.forEach(updateVisibility);
-    }
+    setCardItemVisibility(cardItem, isVisible);
+}
 
+function applyCardItemFilters() {
+    const cardItems = document.querySelectorAll('.card__item');
+    updateState();
+    cardItems.forEach(updateVisibility);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
     function init() {
-        renderCards(containerCards);
-
-        const updateAndFilter = () => {
-            updateState();
-            updateFilter();
+        renderCards(containerCards, games);
+        const applyFilters = () => {
+            applyCardItemFilters();
         };
 
-        checkboxes.forEach((checkbox) => checkbox.addEventListener('change', updateAndFilter));
-        genreDropdown.addEventListener('change', updateAndFilter);
-        textInput.addEventListener('input', debounce(updateAndFilter, 300));
-        radioButtons.forEach((radio) => radio.addEventListener('change', updateAndFilter));
+        checkboxes.forEach((checkbox) => checkbox.addEventListener('change', applyFilters));
+        genreDropdown.addEventListener('change', applyFilters);
+        textInput.addEventListener('input', debounce(applyFilters, 300));
+        radioButtons.forEach((radio) => radio.addEventListener('change', applyFilters));
     }
 
     init();
