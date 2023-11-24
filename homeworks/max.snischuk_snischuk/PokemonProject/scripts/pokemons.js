@@ -365,8 +365,6 @@ function initPokemons() {
     }
 
     function onChangeFiltersHandler(event) {
-        event.preventDefault();
-
         const { name, value } = event.target;
 
         if (name === 'size') {
@@ -403,8 +401,14 @@ function initPokemons() {
         }
     }
 
+    function onSubmitFiltersHandler(event) {
+        event.preventDefault();
+        onChangeFiltersHandler(event);
+    }
+
     renderCards(CARDS_CONTAINER_ELEMENT, pokemons);
     FORM_FILTERS_ELEMENT.addEventListener('change', onChangeFiltersHandler);
+    FORM_FILTERS_ELEMENT.addEventListener('submit', onSubmitFiltersHandler);
 }
 
 document.addEventListener('DOMContentLoaded', initPokemons);
