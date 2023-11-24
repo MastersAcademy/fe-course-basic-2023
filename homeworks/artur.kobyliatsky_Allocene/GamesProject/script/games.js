@@ -68,16 +68,16 @@ function init() {
         return releaseDate.getFullYear();
     });
 
-    let checkedNew = false;
-    let checkedOld = false;
+    let isNewChecked = false;
+    let isOldChecked = false;
 
     const updateCardsDisplay = () => {
         gameDatesArray.forEach((year, index) => {
             const gameCard = gameDates[index].closest('.game__cod2');
 
-            if ((year >= 2020 && checkedNew) || (year <= 2010 && checkedOld)) {
+            if ((year >= 2020 && isNewChecked) || (year <= 2010 && isOldChecked)) {
                 gameCard.style.display = 'block';
-            } else if (!checkedNew && !checkedOld) {
+            } else if (!isNewChecked && !isOldChecked) {
                 gameCard.style.display = 'block';
             } else {
                 gameCard.style.display = 'none';
@@ -86,12 +86,12 @@ function init() {
     };
 
     checkNew.addEventListener('click', () => {
-        checkedNew = !checkedNew;
+        isNewChecked = !isNewChecked;
         updateCardsDisplay();
     });
 
     checkOld.addEventListener('click', () => {
-        checkedOld = !checkedOld;
+        isOldChecked = !isOldChecked;
         updateCardsDisplay();
     });
 }
@@ -157,10 +157,6 @@ valueSearch.addEventListener('input', () => {
         }
     });
 
-    if (hasResults) {
-        noResultsElement.style.display = 'none';
-    } else {
-        noResultsElement.style.display = 'block';
-        noResultsElement.innerText = 'No results!';
-    }
+    noResultsElement.style.display = hasResults ? 'none' : 'block';
+    noResultsElement.innerText = hasResults ? '' : 'No results!';
 });
