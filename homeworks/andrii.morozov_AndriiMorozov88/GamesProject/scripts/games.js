@@ -221,7 +221,6 @@ function getSearchArray(array) {
         const isElDescInc = element.short_description.toLowerCase().includes(searchInputValue);
         if (isElTitleInc || isElDescInc) searchArray.push(element);
     });
-    console.log(searchArray);
     return searchArray;
 }
 function showFilterArray() {
