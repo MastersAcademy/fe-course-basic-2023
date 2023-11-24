@@ -359,7 +359,14 @@ function initPokemons() {
         return cards.filter((card) => card.type.includes(selectedPokemonTypeValue));
     }
 
+    function filterBySearchQuery(cards) {
+        const inputValue = FORM_FILTERS_ELEMENT.elements['search-query'].value.toLowerCase();
+        return cards.filter((card) => card.name.toLowerCase().includes(inputValue));
+    }
+
     function onChangeFiltersHandler(event) {
+        event.preventDefault();
+
         const { name, value } = event.target;
 
         if (name === 'size') {
@@ -387,6 +394,12 @@ function initPokemons() {
                 const filteredCards = filterByPokemonsType(pokemons);
                 renderCards(CARDS_CONTAINER_ELEMENT, filteredCards);
             }
+        }
+
+        if (name === 'search-query') {
+            const filteredCards = filterBySearchQuery(pokemons);
+            renderCards(CARDS_CONTAINER_ELEMENT, filteredCards);
+            event.target.value = '';
         }
     }
 
