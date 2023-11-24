@@ -255,7 +255,10 @@ function initPokemons() {
         },
     ];
 
+    let filteredCards = [];
+
     const FORM_FILTERS_ELEMENT = document.querySelector('[data-form-filters]');
+    const TEXT_INPUT_ELEMENT = FORM_FILTERS_ELEMENT.elements['search-query'];
     const CARDS_CONTAINER_ELEMENT = document.querySelector('[data-cards-container]');
 
     function createCardElement(pokemon) {
@@ -364,49 +367,45 @@ function initPokemons() {
         return cards.filter((card) => card.name.toLowerCase().includes(inputValue));
     }
 
-    function onChangeFiltersHandler(event) {
-        const { name, value } = event.target;
+    function updateFilteredCards() {
+        filteredCards = [...pokemons];
 
-        if (name === 'size') {
-            if ((value === 'small' || value === 'big')) {
-                const filteredCards = filterByHeight(pokemons);
-                renderCards(CARDS_CONTAINER_ELEMENT, filteredCards);
-            }
+        if (FORM_FILTERS_ELEMENT.elements.small.checked
+            || FORM_FILTERS_ELEMENT.elements.big.checked) {
+            filteredCards = filterByHeight(filteredCards);
         }
 
-        if (name === 'radio-options') {
-            if ((value === 'favorites')) {
-                const filteredCards = filterByFavorites(pokemons);
-                renderCards(CARDS_CONTAINER_ELEMENT, filteredCards);
-            } else {
-                renderCards(CARDS_CONTAINER_ELEMENT, pokemons);
-            }
+        if (FORM_FILTERS_ELEMENT.elements.favorites.checked) {
+            filteredCards = filterByFavorites(filteredCards);
         }
 
-        if (name === 'pokemons-types') {
-            if ((value === 'Fire'
-                || value === 'Dragon'
-                || value === 'Poison'
-                || value === 'Flying'
-                || value === 'Ground')) {
-                const filteredCards = filterByPokemonsType(pokemons);
-                renderCards(CARDS_CONTAINER_ELEMENT, filteredCards);
-            }
+        if (FORM_FILTERS_ELEMENT.elements['pokemons-types'].value) {
+            filteredCards = filterByPokemonsType(filteredCards);
         }
 
-        if (name === 'search-query') {
-            const filteredCards = filterBySearchQuery(pokemons);
-            renderCards(CARDS_CONTAINER_ELEMENT, filteredCards);
-            event.target.value = '';
+        if (FORM_FILTERS_ELEMENT.elements['search-query'].value) {
+            filteredCards = filterBySearchQuery(filteredCards);
         }
+    }
+
+    function onChangeFiltersHandler() {
+        updateFilteredCards();
+        renderCards(CARDS_CONTAINER_ELEMENT, filteredCards);
+    }
+
+    function onInputSearchHandler(event) {
+        const inputValue = event.target.value.toLowerCase();
+        filteredCards = pokemons.filter((card) => card.name.toLowerCase().includes(inputValue));
+        renderCards(CARDS_CONTAINER_ELEMENT, filteredCards);
     }
 
     function onSubmitFiltersHandler(event) {
         event.preventDefault();
-        onChangeFiltersHandler(event);
+        onChangeFiltersHandler();
     }
 
     renderCards(CARDS_CONTAINER_ELEMENT, pokemons);
+    TEXT_INPUT_ELEMENT.addEventListener('input', onInputSearchHandler);
     FORM_FILTERS_ELEMENT.addEventListener('change', onChangeFiltersHandler);
     FORM_FILTERS_ELEMENT.addEventListener('submit', onSubmitFiltersHandler);
 }
