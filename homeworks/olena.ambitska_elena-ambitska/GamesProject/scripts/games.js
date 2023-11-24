@@ -163,39 +163,48 @@ function setCardItemVisibility(cardItem, isVisible) {
     }
 }
 
-function createCardTemplate(game) {
-    return `<li class="card__item" data-release-date="${game.release_date}" data-genre="${game.genre}" data-platform="${game.platform}">
+function createCardTemplate({
+    release_date: releaseDate,
+    genre,
+    platform,
+    thumbnail,
+    title,
+    short_description: shortDescription,
+    publisher,
+    developer,
+}) {
+    return `<li class="card__item" data-release-date="${releaseDate}" data-genre="${genre}" data-platform="${platform}">
                         <div class="card__view">
-                            <img src="${game.thumbnail}" alt="game picture" width="90" height="90">
+                            <img src="${thumbnail}" alt="game picture" width="90" height="90">
                             <div>
-                                <h3 class="card__title">${game.title}</h3>
-                                <p>${game.short_description}</p>
+                                <h3 class="card__title">${title}</h3>
+                                <p>${shortDescription}</p>
                             </div>
                         </div>
                         <dl class="item-descriptions">
                             <div>
                                 <dt>Platform</dt>
-                                <dd>${game.platform}</dd>
+                                <dd>${platform}</dd>
                             </div>
 
                             <div>
                                 <dt>Publisher</dt>
-                                <dd>${game.publisher}</dd>
+                                <dd>${publisher}</dd>
                             </div>
 
                             <div>
                                 <dt>Developer</dt>
-                                <dd>${game.developer}</dd>
+                                <dd>${developer}</dd>
                             </div>
 
                             <div>
                                 <dt>Genre</dt>
-                                <dd>${game.genre}</dd>
+                                <dd>${genre}</dd>
                             </div>
 
                             <div>
                                 <dt>Release_date</dt>
-                                <dd >${game.release_date}</dd>
+                                <dd >${releaseDate}</dd>
                             </div>
                         </dl>
                     </li>`;
