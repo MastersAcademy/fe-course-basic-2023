@@ -15,15 +15,15 @@ function initPokemons() {
             number: '0001',
             height: 28.4,
             collectibles_slug: 'bulbasaur',
-            featured: 'true',
+            featured: 'false',
             slug: 'bulbasaur',
             name: 'Bulbasaur',
             ThumbnailAltText: 'Bulbasaur',
             ThumbnailImage: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png',
             id: 1,
             type: [
-                'grass',
-                'poison',
+                'Ground',
+                'Poison',
             ],
         },
         {
@@ -41,15 +41,15 @@ function initPokemons() {
             number: '0002',
             height: 39.9,
             collectibles_slug: 'ivysaur',
-            featured: 'true',
+            featured: 'false',
             slug: 'ivysaur',
             name: 'Ivysaur',
             ThumbnailAltText: 'Ivysaur',
             ThumbnailImage: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/002.png',
             id: 2,
             type: [
-                'grass',
-                'poison',
+                'Ground',
+                'Poison',
             ],
         },
         {
@@ -67,15 +67,15 @@ function initPokemons() {
             number: '0003',
             height: 945.0,
             collectibles_slug: 'venusaur',
-            featured: 'true',
+            featured: 'false',
             slug: 'venusaur',
             name: 'Venusaur',
             ThumbnailAltText: 'Venusaur',
             ThumbnailImage: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/003.png',
             id: 3,
             type: [
-                'grass',
-                'poison',
+                'Ground',
+                'Poison',
             ],
         },
         {
@@ -93,15 +93,15 @@ function initPokemons() {
             number: '0003',
             height: 94.8,
             collectibles_slug: 'venusaur',
-            featured: 'true',
+            featured: 'false',
             slug: 'venusaur',
             name: 'Venusaur',
             ThumbnailAltText: 'Venusaur',
             ThumbnailImage: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/003.png',
             id: 3,
             type: [
-                'grass',
-                'poison',
+                'Ground',
+                'Poison',
             ],
         },
         {
@@ -119,15 +119,15 @@ function initPokemons() {
             number: '0003',
             height: 79.2,
             collectibles_slug: 'venusaur',
-            featured: 'true',
+            featured: 'false',
             slug: 'venusaur',
             name: 'Venusaur',
             ThumbnailAltText: 'Venusaur',
             ThumbnailImage: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/003.png',
             id: 3,
             type: [
-                'grass',
-                'poison',
+                'Ground',
+                'Poison',
             ],
         },
         {
@@ -151,7 +151,7 @@ function initPokemons() {
             ThumbnailImage: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/004.png',
             id: 4,
             type: [
-                'fire',
+                'Fire',
             ],
         },
         {
@@ -175,7 +175,7 @@ function initPokemons() {
             ThumbnailImage: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/005.png',
             id: 5,
             type: [
-                'fire',
+                'Fire',
             ],
         },
         {
@@ -192,15 +192,15 @@ function initPokemons() {
             number: '0006',
             height: 1102.6,
             collectibles_slug: 'charizard',
-            featured: 'true',
+            featured: 'false',
             slug: 'charizard',
             name: 'Charizard',
             ThumbnailAltText: 'Charizard',
             ThumbnailImage: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/006.png',
             id: 6,
             type: [
-                'fire',
-                'flying',
+                'Fire',
+                'Flying',
             ],
         },
         {
@@ -224,8 +224,8 @@ function initPokemons() {
             ThumbnailImage: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/006.png',
             id: 6,
             type: [
-                'fire',
-                'flying',
+                'Fire',
+                'Flying',
             ],
         },
         {
@@ -242,15 +242,15 @@ function initPokemons() {
             number: '0006',
             height: 67.4,
             collectibles_slug: 'charizard',
-            featured: 'true',
+            featured: 'false',
             slug: 'charizard',
             name: 'Charizard',
             ThumbnailAltText: 'Charizard',
             ThumbnailImage: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/006.png',
             id: 6,
             type: [
-                'fire',
-                'dragon',
+                'Fire',
+                'Dragon',
             ],
         },
     ];
@@ -259,17 +259,34 @@ function initPokemons() {
     const CARDS_CONTAINER_ELEMENT = document.querySelector('[data-cards-container]');
 
     function createCardElement(pokemon) {
-        const { name, ThumbnailImage, height } = pokemon;
+        const {
+            name,
+            ThumbnailImage,
+            ThumbnailAltText,
+            height,
+            weight,
+            number,
+            type,
+            weakness,
+        } = pokemon;
 
         const heightNumber = height;
         const integerPart = Math.floor(heightNumber);
         const decimalPart = String(heightNumber).includes('.') ? String(heightNumber).split('.')[1] : '0';
         const heightStr = decimalPart !== '0' ? `${integerPart}' ${decimalPart}"` : `${integerPart}'`;
 
+        const typesButtons = type
+            .map((subtype) => `<button class="card-pokemon__btn card-pokemon__btn--${subtype.toLowerCase()}" type="button">${subtype}</button>`)
+            .join('');
+
+        const weaknessesButtons = weakness
+            .map((subtype) => `<button class="card-pokemon__btn card-pokemon__btn--${subtype.toLowerCase()}" type="button">${subtype}</button>`)
+            .join('');
+
         const cardTemplateStr = `
             <li class="pokemons__card-item card-pokemon">
                 <div class="card-pokemon__header">
-                    <img class="card-pokemon__image" src="${ThumbnailImage}" alt="urshifu">
+                    <img class="card-pokemon__image" src="${ThumbnailImage}" alt="${ThumbnailAltText}">
                     <h3 class="card-pokemon__title">${name}</h3>
                 </div>
                 <ul class="card-pokemon__body">
@@ -277,24 +294,18 @@ function initPokemons() {
                         <span class="card-pokemon__text--bold">Height: </span>${heightStr}
                     </li>
                     <li class="card-pokemon__text">
-                        <span class="card-pokemon__text--bold">Weight: </span>231.5 lbs
+                        <span class="card-pokemon__text--bold">Weight: </span>${weight} lbs
                     </li>
                     <li class="card-pokemon__text">
-                        <span class="card-pokemon__text--bold">Number: </span>0002
+                        <span class="card-pokemon__text--bold">Number: </span>${number}
                     </li>
                     <li class="card-pokemon__text">
                         <span class="card-pokemon__text--bold">Type: </span>
-                        <button class="card-pokemon__btn card-pokemon__btn--yellow"
-                            type="button">Fighting</button>
-                        <button class="card-pokemon__btn card-pokemon__btn--red"
-                            type="button">Dark</button>
+                        ${typesButtons}
                     </li>
                     <li class="card-pokemon__text">
                         <span class="card-pokemon__text--bold">Weaknesses: </span>
-                        <button class="card-pokemon__btn card-pokemon__btn--pink"
-                            type="button">Fairy</button>
-                        <button class="card-pokemon__btn card-pokemon__btn--purple"
-                            type="button">Flying</button>
+                        ${weaknessesButtons}
                     </li>
                 </ul>
             </li>
@@ -339,19 +350,36 @@ function initPokemons() {
         return filteredByHeight;
     }
 
-    function onChangePokemonsHeightHandler(event) {
+    function filterByFavorites(cards) {
+        const isFavoritesChecked = FORM_FILTERS_ELEMENT.elements.favorites.checked;
+
+        const filteredByFavorites = cards.filter((card) => (isFavoritesChecked ? card.featured === 'true' : false));
+
+        return filteredByFavorites;
+    }
+
+    function onChangeFiltersHandler(event) {
         const { target } = event;
 
-        if (target.type === 'checkbox') {
+        if (target.name === 'size') {
             if ((target.value === 'small' || target.value === 'big')) {
                 const filteredCards = filterByHeight(pokemons);
                 renderCards(CARDS_CONTAINER_ELEMENT, filteredCards);
             }
         }
+
+        if (target.name === 'radio-options') {
+            if ((target.value === 'favorites')) {
+                const filteredCards = filterByFavorites(pokemons);
+                renderCards(CARDS_CONTAINER_ELEMENT, filteredCards);
+            } else {
+                renderCards(CARDS_CONTAINER_ELEMENT, pokemons);
+            }
+        }
     }
 
     renderCards(CARDS_CONTAINER_ELEMENT, pokemons);
-    FORM_FILTERS_ELEMENT.addEventListener('change', onChangePokemonsHeightHandler);
+    FORM_FILTERS_ELEMENT.addEventListener('change', onChangeFiltersHandler);
 }
 
 document.addEventListener('DOMContentLoaded', initPokemons);
