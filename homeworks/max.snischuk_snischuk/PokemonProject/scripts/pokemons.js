@@ -335,7 +335,7 @@ function initPokemons() {
         const isSmallChecked = FORM_FILTERS_ELEMENT.elements.small.checked;
         const isBigChecked = FORM_FILTERS_ELEMENT.elements.big.checked;
 
-        const filteredByHeight = cards.filter((card) => {
+        return cards.filter((card) => {
             switch (true) {
                 case isSmallChecked && isBigChecked:
                     return card.height <= 50 || card.height >= 100;
@@ -347,33 +347,45 @@ function initPokemons() {
                     return true;
             }
         });
-        return filteredByHeight;
     }
 
     function filterByFavorites(cards) {
         const isFavoritesChecked = FORM_FILTERS_ELEMENT.elements.favorites.checked;
+        return cards.filter((card) => (isFavoritesChecked ? card.featured === 'true' : false));
+    }
 
-        const filteredByFavorites = cards.filter((card) => (isFavoritesChecked ? card.featured === 'true' : false));
-
-        return filteredByFavorites;
+    function filterByPokemonsType(cards) {
+        const selectedPokemonTypeValue = FORM_FILTERS_ELEMENT.elements['pokemons-types'].value;
+        return cards.filter((card) => card.type.includes(selectedPokemonTypeValue));
     }
 
     function onChangeFiltersHandler(event) {
-        const { target } = event;
+        const { name, value } = event.target;
 
-        if (target.name === 'size') {
-            if ((target.value === 'small' || target.value === 'big')) {
+        if (name === 'size') {
+            if ((value === 'small' || value === 'big')) {
                 const filteredCards = filterByHeight(pokemons);
                 renderCards(CARDS_CONTAINER_ELEMENT, filteredCards);
             }
         }
 
-        if (target.name === 'radio-options') {
-            if ((target.value === 'favorites')) {
+        if (name === 'radio-options') {
+            if ((value === 'favorites')) {
                 const filteredCards = filterByFavorites(pokemons);
                 renderCards(CARDS_CONTAINER_ELEMENT, filteredCards);
             } else {
                 renderCards(CARDS_CONTAINER_ELEMENT, pokemons);
+            }
+        }
+
+        if (name === 'pokemons-types') {
+            if ((value === 'Fire'
+                || value === 'Dragon'
+                || value === 'Poison'
+                || value === 'Flying'
+                || value === 'Ground')) {
+                const filteredCards = filterByPokemonsType(pokemons);
+                renderCards(CARDS_CONTAINER_ELEMENT, filteredCards);
             }
         }
     }
