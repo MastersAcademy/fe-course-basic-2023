@@ -76,24 +76,3 @@ console.log(onlyPositiveNumbers(arrayTwo)); // [];
 console.log(onlyPositiveNumbers(arrayThree)); // [1, 7, 3];
 console.log(onlyPositiveNumbers(arrayFour)); // [1, 3, 5];
 console.log(onlyPositiveNumbers(arrayFive)); // [1, 3, 5];
-
-// function customReduce(array, reducer, initialValue) {
-//     let acc = initialValue;
-//     const previosValue = initialValue !== undefined ? 0 : 1;
-//     for (let i = previosValue; i < array.length; i++) {
-//         acc = reducer(acc, array[i], i, array);
-//     }
-//
-//     return acc;
-// }
-// не работает map;
-// function customMap(array, map) {
-//     let result = [];
-//     for (let i = 0; i < array.length; i++) {
-//         result = map(array[i], i, array);
-//     }
-//     return result;
-// }
-//
-// console.log(customMap());
-// console.log(customReduce());
