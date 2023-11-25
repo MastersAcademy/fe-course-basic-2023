@@ -20,32 +20,52 @@ function nowDate(dataAttribute) {
     };
     const localDate = date.toLocaleDateString('uk-UA', options);
     const element = document.querySelector(`[${dataAttribute}]`);
-
+    const outputDate = `Date of calculation: ${localDate}`;
     if (element) {
-        element.textContent = localDate;
+        element.textContent = outputDate;
     }
+
     return element;
+}
+
+// benchmarks
+function executionTime(start, end) {
+    const timeParcing = end - start;
+    const roundedTime = timeParcing.toFixed(1);
+    const outputTimeParcing = `Time of function execution: ${roundedTime}ms.`;
+    document.querySelector('[data-timeBenchmark]').textContent = outputTimeParcing;
 }
 
 function calculate(firstValue, secondValue, operation) {
     const dateStart = performance.now();
 
     let result = 0;
-    // checking user data to make sure it's a number
+
     if (/^-?\d+(\.\d+)?$/.test(firstValue) && /^-?\d+(\.\d+)?$/.test(secondValue)) {
         // performing mathematical operations
-        if (operation === '+') {
-            result = +firstValue + +secondValue;
-        } else if (operation === '-') {
-            result = firstValue - secondValue;
-        } else if (operation === '*') {
-            result = firstValue * secondValue;
-        } else if (operation === '/') {
-            result = firstValue / secondValue;
-        } else if (operation === '**') {
-            result = 'Choose a valid operation';
-        } else {
-            result = 'Error';
+        switch (operation) {
+            case '+':
+                result = +firstValue + +secondValue;
+                break;
+            case '-':
+                result = firstValue - secondValue;
+                break;
+            case '*':
+                result = firstValue * secondValue;
+                break;
+            case '/':
+                if (secondValue === '0') {
+                    result = 'enter the correct second number';
+                } else {
+                    result = firstValue / secondValue;
+                }
+                break;
+            case '**':
+                result = 'Choose a valid operation';
+                break;
+            default:
+                result = 'Error';
+                break;
         }
     } else {
         result = 'Enter a number';
@@ -62,14 +82,13 @@ function calculate(firstValue, secondValue, operation) {
         result = `${result} pokemons`;
     }
 
-    // benchmarks
     const dateEnd = performance.now();
-    const timeParcing = dateEnd - dateStart;
-    document.querySelector('[data-timeBenchmark]').textContent = timeParcing;
 
-    nowDate('data-now');
+    executionTime(dateStart, dateEnd);
 
     return result;
 }
+
+nowDate('data-now');
 
 window.calculate = calculate;
