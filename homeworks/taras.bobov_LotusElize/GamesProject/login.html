@@ -16,6 +16,9 @@
                 <nav>
                     <ul class="menu">
                         <li>
+                            <a href="calculator.html">Calculator</a>
+                        </li>
+                        <li>
                             <a href="games.html">Games</a>
                         </li>
                         <li>
@@ -29,51 +32,75 @@
             </div>
         </header>
         <!-- end header -->
-        <main>
+        <main class="site-main container">
             <section class="login_form_box">
-                <form action="success.html" method="post" name="autorization" target="_self" class="login_form">
+                <form action="success.html" method="post" name="autorization" target="_self" class="login_form" id="login_form">
+
                     <div class="login_title">
                         <h1>Login page</h1>
                     </div>
-                    <label class="input_name" for="mail">Email</label>
-                    <input class="add__info_place" type="email" name="email" id="mail" placeholder="Enter your email address" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$" required>
-                    <label class="input_name" for="pass">Password</label>
-                    <input class="add__info_place" type="password" name="password" id="pass" placeholder="Enter your password" required>
-                    <div class="verify-container">
-                        <input class="verify-container__input" type="checkbox" value="robot" id="verify" name="verify" required>
-                        <label for="verify" class="verify-container__label">I’m not a robot</label>
+                    <div class="form_input__info">
+                        <!-- email -->
+                        <div class="email">
+                            <label class="input_name" for="email">Email</label>
+                            <input type="email" name="email" id="email" placeholder="Enter your email address" class="add__info_place" autocomplete="email">
+                            <span class="errors_info" id="email_container"></span>
+                        </div>
+
+                        <!-- password -->
+                        <div class="password">
+                            <label for="password" class="input_name">Password</label>
+                            <input type="password" name="password" id="password" placeholder="Enter your password" class="add__info_place">
+                            <div class="errors_info" id="password_container"></div>
+                        </div>
+                        <!-- checkbox -->
+                        <div class="not_a_robot_-container">
+                            <div class="verify-container">
+                                <input type="checkbox" value="verify" id="not_a_robot" name="verify" class="verify-container__input">
+                                <label for="not_a_robot" class="verify-container__label">I’m not a robot</label>
+                            </div>
+                            <div class="errors_info" id="not_a_robot_container"></div>
+                        </div>
+
+                        <div id="errors-container" class="errors-container"></div>
+                        <!-- button -->
+                        <button type="button" value="login" class="btn__success" id="login_button">Login</button>
                     </div>
-                    <input type="submit" value="Login" class="btn__success">
+
                 </form>
             </section>
         </main>
         <!-- footer  -->
         <footer>
-            <div class="social-media">
-                <ul>
-                    <li>
-                        <a href="#">
-                            <img src="./images/fb-soc-ico.svg" alt="Facebook">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="./images/link-soc-ico.svg" alt="LinkedIn">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="./images/insta-soc-ico.png" alt="Instagram">
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="links">
-                <p>
-                    Made with 💗 on course<a href="https://www.mastersacademy.education/frontend-for-beginners-it" target="_blank">'Frontend for beginners' from Masters Academy in
-                        2023,</a>from Masters Academy in 2023, by Taras
-                </p>
+            <div class="container footer-social__info">
+                <div class="social-media">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="./images/fb-soc-ico.svg" alt="Facebook">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./images/link-soc-ico.svg" alt="LinkedIn">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./images/insta-soc-ico.png" alt="Instagram">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="links">
+                    <p>
+                        Made with 💗 on course<a href="https://www.mastersacademy.education/frontend-for-beginners-it" target="_blank">'Frontend for beginners' from Masters Academy in
+                            2023,</a>from Masters Academy in 2023, by Taras
+                    </p>
+                </div>
             </div>
         </footer>
+        <script src="./scripts/script.js"></script>
+        <!-- <script src="./scripts/scrips-test.js"></script> -->
     </body>
 </html>
