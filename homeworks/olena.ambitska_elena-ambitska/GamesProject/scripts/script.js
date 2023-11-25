@@ -8,6 +8,17 @@ const SECOND_OPERAND = document.querySelector('.second__operand');
 const RESULT = document.querySelector('.result');
 const EQUALS = document.querySelector('.equals');
 const RESULT_COLUMN = document.querySelector('.result__column');
+const DATA_CONTAINER = document.querySelector('.datetime__container');
+const NUM_RUNS = 100000;
+
+function bench(f) {
+    const firstValue = Math.random() * 100;
+    const secondValue = Math.random() * 100;
+    const operation = ['+', '-', '*', '/'][Math.floor(Math.random() * 4)];
+    const start = Date.now();
+    for (let i = 0; i < NUM_RUNS; i++) f(firstValue, secondValue, operation);
+    return Date.now() - start;
+}
 
 function displayImages(value, element) {
     element.innerHTML = '';
@@ -67,13 +78,23 @@ CALCULATE_BUTTON_ELEMENT.addEventListener('click', () => {
     SECOND_OPERAND.innerText = secondValue;
     EQUALS.innerText = '=';
 
-    const res = window.calculate(firstValue, secondValue, operation);
+    const [resCount, str] = window.calculate(firstValue, secondValue, operation);
 
-    if (res < 100) {
-        displayImages(res, RESULT);
-        RESULT_COLUMN.innerText = res;
+    if (resCount < 100) {
+        displayImages(resCount, RESULT);
+        RESULT_COLUMN.innerText = `${resCount} ${str}`;
     } else {
         RESULT_COLUMN.innerText = '';
-        RESULT.innerText = res;
+        RESULT.innerText = resCount;
     }
+
+    const formattedDate = new Date().toLocaleString('en-GB', {
+        day: 'numeric',
+        month: 'short',
+        year: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+    });
+    const performance = bench(window.calculate);
+    DATA_CONTAINER.innerText = `Date of calculation: ${formattedDate}. Time of function execution: ${performance} ms`;
 });
