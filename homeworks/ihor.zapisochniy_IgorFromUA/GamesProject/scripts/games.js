@@ -203,9 +203,9 @@ function filterGames(gamesArr) {
 function renderCards(container, arrGames) {
     container.innerHTML = '';
     const fragment = new DocumentFragment();
-    for (let i = 0; i < arrGames.length; i++) {
-        fragment.append(createCardElement(arrGames[i]));
-    }
+    arrGames.forEach((game) => {
+        fragment.append(createCardElement(game));
+    });
     container.append(fragment);
 }
 function reRenderCards() {
