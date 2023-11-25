@@ -85,11 +85,11 @@ console.log(onlyPositiveNumbers(arrayFive)); // [1, 3, 5];
 
 const arrayTest = ['I', 'am', 'learning', 'front end', 'with', 'Masters of code'];
 
-function customMap(array) {
-    return array.map((current) => current.length);
+function customMap(array, i) {
+    return array[i].length;
 }
 
-console.log(customMap(arrayTest));
+console.log(customMap(arrayTest, 2));
 
 // // a function that returns only even numbers from an array
 
