@@ -88,10 +88,12 @@ console.log('only positive numbers of the fifth array:', onlyPositiveNumbers(arr
 
 function customReduce(array, reducer, initialValue) {
     let accumulator = initialValue !== undefined ? initialValue : array[0];
-    const startIndex = initialValue !== undefined ? 0 : 1;
+    const value = initialValue !== undefined ? 0 : 1;
 
-    for (let i = startIndex; i < array.length; i++) {
-        accumulator = reducer(accumulator, array[i]);
+    for (let i = value; i < array.length; i++) {
+        if (typeof array[i] === 'number' && !Number.isNaN(array[i]) && array[i] !== undefined) {
+            accumulator = reducer(accumulator, array[i]);
+        }
     }
 
     return accumulator;
