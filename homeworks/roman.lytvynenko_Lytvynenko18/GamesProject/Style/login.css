@@ -132,7 +132,7 @@ button:hover {
   border-color: #A9A9A9;
   border-radius: 6px;
   text-decoration: none;
-  color: #FFF;
+  color: #EF4934;
   font-size: 22px;
   padding: 0;
   margin: 0;
@@ -149,5 +149,5 @@ button:hover {
 
 .errors {
   font-size: 22px;
-  color: #FFF;
+  color: #EF4934;
 }

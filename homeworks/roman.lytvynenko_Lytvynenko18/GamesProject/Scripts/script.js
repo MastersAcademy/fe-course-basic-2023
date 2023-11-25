@@ -67,7 +67,7 @@ function validateForm() {
     const validEmail = deleteSpaces(email);
 
     if (!isEmail(validEmail)) {
-        setErrors({ ERRORS_CONTAINER_ID: 'Email invalid!' });
+        setErrors({ ERRORS_CONTAINER_ID: 'Please enter valid e-mail, e.g. example@google.com!' });
     }
 
     if (!passwordLength(password)) {
