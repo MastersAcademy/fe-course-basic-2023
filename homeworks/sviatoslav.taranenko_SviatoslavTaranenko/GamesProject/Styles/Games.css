@@ -280,12 +280,34 @@ body {
   box-shadow: 0 0 0 1px #A9A9A9;
 }
 
+.card__container {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: 275px 275px 275px 275px;
+  column-gap: 25px;
+  grid-template-rows: 260px;
+  row-gap: 60px;
+  justify-content: center;
+  min-height: auto;
+}
+
 .Games .Games__title {
   margin: 60px 0 0 85px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 48px;
   line-height: 32px;
+}
+
+.card__container {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: 275px 275px 275px 275px;
+  column-gap: 25px;
+  grid-template-rows: 260px;
+  row-gap: 60px;
+  justify-content: center;
+  min-height: auto;
 }
 
 .Games .Games__cards {
@@ -358,5 +380,9 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 14px;
-  line-height: 18.2px;
+  line-height: 18px;
+}
+
+[data-filter]:checked {
+  background-color: lightblue;
 }

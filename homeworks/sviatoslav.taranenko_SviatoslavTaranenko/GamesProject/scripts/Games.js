@@ -131,3 +131,119 @@ const games = [
         profile_url: 'https://www.mmobomb.com/crossout',
     },
 ];
+
+const gamesData = games.map(game => ({ ...game, isNew: game.release_date.includes('2022') }));
+
+function createCardElement(game) {
+    const template = document.querySelector('[data-type="card-template"]');
+
+    if (!template) {
+        console.error('Template not found');
+        return null;
+    }
+
+    const clone = document.importNode(template.content, true);
+
+    const gameTitleElement = clone.querySelector('.Games__cards_top_text_title');
+    if (gameTitleElement) {
+        gameTitleElement.textContent = game.title;
+    } else {
+        console.error('Element with class .Games__cards_top_text_title not found');
+    }
+
+    const gameDescriptionElement = clone.querySelector('.Games__cards_top_text_p');
+    if (gameDescriptionElement) {
+        gameDescriptionElement.textContent = `Description: ${game.short_description}`;
+    } else {
+        console.error('Element with class .Games__cards_top_text_p not found');
+    }
+
+    const genreElement = clone.querySelector('.Games__cards_btm_name:nth-child(1)');
+    if (genreElement) {
+        genreElement.textContent = `Genre: ${game.genre}`;
+    }
+
+    const platformElement = clone.querySelector('.Games__cards_btm_name:nth-child(2)');
+    if (platformElement) {
+        platformElement.textContent = `Platform: ${game.platform}`;
+    }
+
+    const publisherElement = clone.querySelector('.Games__cards_btm_name:nth-child(3)');
+    if (publisherElement) {
+        publisherElement.textContent = `Publisher: ${game.publisher}`;
+    }
+
+    const developerElement = clone.querySelector('.Games__cards_btm_name:nth-child(4)');
+    if (developerElement) {
+        developerElement.textContent = `Developer: ${game.developer}`;
+    }
+
+    const releaseDateElement = clone.querySelector('.Games__cards_btm_name:nth-child(5)');
+    if (releaseDateElement) {
+        releaseDateElement.textContent = `Release Date: ${game.release_date}`;
+    }
+
+    return clone;
+}
+
+function renderGames(games) {
+    const cardContainer = document.querySelector('[data-type="card-container"]');
+
+    if (!cardContainer) {
+        console.error('Card container not found');
+        return;
+    }
+
+    cardContainer.innerHTML = '';
+
+    games.forEach(game => {
+        const cardElement = createCardElement(game);
+        if (cardElement) {
+            cardContainer.appendChild(cardElement);
+        }
+    });
+}
+
+function filterGames() {
+    const filterForm = document.getElementById('filterForm');
+    filterForm.addEventListener('change', () => {
+        const isNewChecked = document.getElementById('new_games').checked;
+        const isOldChecked = document.getElementById('old_games').checked;
+
+        const filteredGames = gamesData.filter(game => {
+            return (isNewChecked && game.isNew) || (isOldChecked && !game.isNew);
+        });
+
+        renderGames(filteredGames);
+    });
+}
+
+function init() {
+    renderGames(gamesData);
+    filterGames();
+
+    // Додавання обробників подій для інших фільтрів
+    const gamePropertiesSelect = document.getElementById('game_properties');
+    const platformRadio = document.getElementById('platform');
+    const onlineGamesRadio = document.getElementById('online-games');
+
+    gamePropertiesSelect.addEventListener('change', () => {
+        // Опрацювання події для фільтру "Genre"
+        const selectedGenre = gamePropertiesSelect.value;
+        filterByGenre(selectedGenre);
+    });
+
+    platformRadio.addEventListener('change', () => {
+        // Опрацювання події для фільтру "Platform"
+        const selectedPlatform = platformRadio.value;
+        filterByPlatform(selectedPlatform);
+    });
+
+    onlineGamesRadio.addEventListener('change', () => {
+        // Опрацювання події для фільтру "Online games"
+        const isOnlineChecked = onlineGamesRadio.checked;
+        filterByOnlineGames(isOnlineChecked);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', init);
