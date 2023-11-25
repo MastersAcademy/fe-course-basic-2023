@@ -67,15 +67,15 @@ function validateForm() {
     const validEmail = deleteSpaces(email);
 
     if (!isEmail(validEmail)) {
-        setErrors({ ERRORS_CONTAINER_ID: 'Please enter valid e-mail, e.g. example@google.com!' });
+        setErrors({ EMAIL_INPUT_ID: 'Please enter valid e-mail, e.g. example@google.com!' });
     }
 
     if (!passwordLength(password)) {
-        setErrors({ ERRORS_CONTAINER_ID: 'Password should from 8 to 12 chars!' });
+        setErrors({ EPASSWORD_INPUT_ID: 'Password should from 8 to 12 chars!' });
     }
 
     if (!checkbox) {
-        setErrors({ ERRORS_CONTAINER_ID: 'Check the box that you are not a robot!' });
+        setErrors({ NOT_A_ROBOT_CHECKBOX_ID: 'Check the box that you are not a robot!' });
     }
 
     if (isEmail(validEmail) && passwordLength(password) && checkbox) {
