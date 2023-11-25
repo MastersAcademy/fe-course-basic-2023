@@ -12,25 +12,28 @@
  */
 function calculate(firstValue, secondValue, operation) {
     let result = 0;
-    if (Number.isNaN(firstValue) || Number.isNaN(secondValue)) {
+    const firstNum = parseFloat(firstValue);
+    const secondNum = parseFloat(secondValue);
+
+    if (Number.isNaN(firstNum) || Number.isNaN(secondNum)) {
         return 'Enter a number!';
     }
 
     switch (operation) {
         case '+':
-            result = parseFloat(firstValue) + parseFloat(secondValue);
+            result = firstNum + secondNum;
             break;
         case '-':
-            result = parseFloat(firstValue) - parseFloat(secondValue);
+            result = firstNum - secondNum;
             break;
         case '*':
-            result = parseFloat(firstValue) * parseFloat(secondValue);
+            result = firstNum * secondNum;
             break;
         case '/':
-            if (parseFloat(secondValue) === 0) {
+            if (secondNum === 0) {
                 return 'Cannot divide by zero!';
             }
-            result = parseFloat(firstValue) / parseFloat(secondValue);
+            result = firstNum / secondNum;
             break;
         default:
             return 'Choose a valid operation!';
@@ -42,7 +45,7 @@ function calculate(firstValue, secondValue, operation) {
     if (firstValue.length === 0 || secondValue.length === 0) {
         return 'Enter a number!';
     }
-    const word = result > 1 || result < -1 ? 'games' : 'game';
+    const word = result === 1 || result === -1 ? 'game' : 'games';
 
     return `${result} ${word}`;
 }
