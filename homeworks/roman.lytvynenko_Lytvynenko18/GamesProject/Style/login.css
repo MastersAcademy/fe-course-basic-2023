@@ -132,11 +132,12 @@ button:hover {
   border-color: #A9A9A9;
   border-radius: 6px;
   text-decoration: none;
-  color: #EF4934;
+  color: #221F1F;
   font-size: 22px;
   padding: 0;
   margin: 0;
   border-width: 1px;
+  font-family: Roboto;
 }
 
 .success {

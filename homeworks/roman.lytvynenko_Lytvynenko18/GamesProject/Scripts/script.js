@@ -71,7 +71,7 @@ function validateForm() {
     }
 
     if (!passwordLength(password)) {
-        setErrors({ EPASSWORD_INPUT_ID: 'Password should from 8 to 12 chars!' });
+        setErrors({ PASSWORD_INPUT_ID: 'Password should from 8 to 12 chars!' });
     }
 
     if (!checkbox) {
