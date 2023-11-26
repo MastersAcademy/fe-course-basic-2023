@@ -270,7 +270,6 @@ function highlightText(element, searchText) {
     const lowerCaseInnerHTML = innerHTML.toLowerCase();
     const lowerCaseSearchText = searchText.toLowerCase();
 
-    // Видаляємо попереднє маркування перед додаванням нового
     element.innerHTML = innerHTML.replace(/<\/mark>/g, '').replace(/<mark>/g, '');
 
     let index = lowerCaseInnerHTML.indexOf(lowerCaseSearchText);
@@ -280,10 +279,8 @@ function highlightText(element, searchText) {
         const match = innerHTML.substring(index, index + searchText.length);
         const end = innerHTML.substring(index + searchText.length);
 
-        // Додаємо <mark> для виділення тексту
         element.innerHTML = `${start}<mark>${match}</mark>${end}`;
 
-        // Шукаємо наступне співпадіння
         index = lowerCaseInnerHTML.indexOf(lowerCaseSearchText, index + 1);
     }
 }
