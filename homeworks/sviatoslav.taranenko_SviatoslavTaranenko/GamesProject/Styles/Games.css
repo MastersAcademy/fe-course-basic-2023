@@ -280,17 +280,6 @@ body {
   box-shadow: 0 0 0 1px #A9A9A9;
 }
 
-.card__container {
-  margin-top: 60px;
-  display: grid;
-  grid-template-columns: 275px 275px 275px 275px;
-  column-gap: 25px;
-  grid-template-rows: 260px;
-  row-gap: 60px;
-  justify-content: center;
-  min-height: auto;
-}
-
 .Games .Games__title {
   margin: 60px 0 0 85px;
   font-family: "Roboto", sans-serif;
@@ -310,7 +299,7 @@ body {
   min-height: auto;
 }
 
-.Games .Games__cards {
+.Games__cards {
   margin-top: 60px;
   display: grid;
   grid-template-columns: 275px 275px 275px 275px;
@@ -321,7 +310,7 @@ body {
   min-height: auto;
 }
 
-.Games .Games__cards .Games__cards_desc {
+.Games__cards_desc {
   margin-bottom: 15px;
   border-radius: 12px;
   padding: 12px 12px 22px;
@@ -329,7 +318,7 @@ body {
   height: 260px;
 }
 
-.Games .Games__cards .Games__cards_desc .Games__cards_top {
+.Games__cards_top {
   display: grid;
   grid-template-columns: 1fr 2fr;
   column-gap: 12px;
@@ -338,18 +327,19 @@ body {
   justify-content: center;
 }
 
-.Games .Games__cards .Games__cards_desc .Games__cards_top .Games__cards_top_img {
+.Games__cards_top_img {
   width: 90px;
   height: 90px;
   justify-content: center;
+  border-radius: 8px;
 }
 
-.Games .Games__cards .Games__cards_desc .Games__cards_top .Games__cards_top_text {
+.Games__cards_top_text {
   padding-top: 0;
   margin-top: 0;
 }
 
-.Games .Games__cards .Games__cards_desc .Games__cards_top .Games__cards_top_text_title {
+.Games__cards_top_text_title {
   padding-top: 0;
   margin-top: 0;
   margin-bottom: 0;
@@ -357,31 +347,32 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 18px;
-  line-height: 21.09px;
+  line-height: 21px;
 }
 
-.Games .Games__cards .Games__cards_desc .Games__cards_top .Games__cards_top_text_p {
+.Games__cards_top_text_p {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
   margin-top: 0;
-  padding-top: 10px;
+  padding-top: 5px;
 }
 
-.Games .Games__cards .Games__cards_desc .Games__cards_btm {
+.Games__cards_btm {
+  padding-top: 10px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
 }
 
-.Games .Games__cards .Games__cards_desc .Games__cards_btm .Games__cards_btm_bold {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 18px;
-}
+/*.Games__cards_btm .Games__cards_btm_bold {*/
+/*  font-family: "Roboto", sans-serif;*/
+/*  font-weight: 700;*/
+/*  font-size: 14px;*/
+/*  line-height: 18px;*/
+/*}*/
 
 [data-filter]:checked {
   background-color: lightblue;

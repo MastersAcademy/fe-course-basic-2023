@@ -56,7 +56,7 @@
             </form>
             <form class="search__bar" action="#">
                 <input type="text" id="search" class="search__input" placeholder="Search">
-                <button type="submit">Apply</button>
+                <button id="apply" type="submit">Apply</button>
             </form>
         </div>
         <section class="Games">
@@ -64,30 +64,30 @@
             <ul class="card__container" data-type="card-container"></ul>
         </section>
 
-        <template data-type="card-template">
-            <div class="Games__cards_desc">
+        <template class="card-template">
+            <div class="Games__cards_desc" data-type="Games__cards_desc">
                 <div class="Games__cards_top">
-                    <img src="img/Rectangle%207.png" class="Games__cards_top_img" alt="Games logo">
-                    <div class="Games__cards_top_text">
-                        <h2 class="Games__cards_top_text_title"></h2>
-                        <p class="Games__cards_top_text_p"></p>
+                    <img src="img/Rectangle%207.png" class="Games__cards_top_img" data-type="Games__cards_top_img" data-card-img alt="Games logo">
+                    <div class="Games__cards_top_text" data-type="Games__cards_top_text">
+                        <h2 class="Games__cards_top_text_title" data-type="Games__cards_top_text_title" data-card-title></h2>
+                        <p class="Games__cards_top_text_p" data-type="Games__cards_top_text_p"></p>
                     </div>
                 </div>
-                <div class="Games__cards_btm">
-                    <p class="Games__cards_btm_name">
-                        <span class="Games__cards_btm_bold">Genre: </span>
+                <div class="Games__cards_btm" data-type="Games__cards_btm">
+                    <p class="Games__cards_btm_name" data-type="data-card-genre">
+                        <span class="Games__cards_btm_bold" data-type="Games__cards_btm_bold" data-card-genre>Genre: </span>
                     </p>
-                    <p class="Games__cards_btm_name">
-                        <span class="Games__cards_btm_bold">Platform: </span>
+                    <p class="Games__cards_btm_name" data-type="data-card-platform">
+                        <span class="Games__cards_btm_bold" data-type="Games__cards_btm_bold" data-card-platform>Platform: </span>
                     </p>
-                    <p class="Games__cards_btm_name">
-                        <span class="Games__cards_btm_bold">Publisher: </span>
+                    <p class="Games__cards_btm_name" data-type="data-card-publisher">
+                        <span class="Games__cards_btm_bold" data-type="Games__cards_btm_bold" data-card-publisher>Publisher: </span>
                     </p>
-                    <p class="Games__cards_btm_name">
-                        <span class="Games__cards_btm_bold">Developer: </span>
+                    <p class="Games__cards_btm_name" data-type="data-card-developer">
+                        <span class="Games__cards_btm_bold" data-type="Games__cards_btm_bold" data-card-developer>Developer: </span>
                     </p>
-                    <p class="Games__cards_btm_name">
-                        <span class="Games__cards_btm_bold">Release_date: </span>
+                    <p class="Games__cards_btm_name" data-type="data-card-release-date">
+                        <span class="Games__cards_btm_bold" data-type="Games__cards_btm_bold" data-card-release-date>Release_date: </span>
                     </p>
                 </div>
             </div>

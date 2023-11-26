@@ -135,7 +135,7 @@ const games = [
 const gamesData = games.map(game => ({ ...game, isNew: game.release_date.includes('2022') }));
 
 function createCardElement(game) {
-    const template = document.querySelector('[data-type="card-template"]');
+    const template = document.querySelector('.card-template');
 
     if (!template) {
         console.error('Template not found');
@@ -144,44 +144,53 @@ function createCardElement(game) {
 
     const clone = document.importNode(template.content, true);
 
-    const gameTitleElement = clone.querySelector('.Games__cards_top_text_title');
+    const gameTopImgElement = clone.querySelector('[data-type="Games__cards_top_img"]');
+    if (gameTopImgElement) {
+        gameTopImgElement.src = game.thumbnail;
+        gameTopImgElement.alt = `Thumbnail for ${game.title}`;
+    } else {
+        console.error('Element with data-type "Games__cards_top_img" not found');
+    }
+
+    const gameTitleElement = clone.querySelector('[data-type="Games__cards_top_text_title"]');
     if (gameTitleElement) {
         gameTitleElement.textContent = game.title;
     } else {
-        console.error('Element with class .Games__cards_top_text_title not found');
+        console.error('Element with data-type "Games__cards_top_text_title" not found');
     }
 
-    const gameDescriptionElement = clone.querySelector('.Games__cards_top_text_p');
+    const gameDescriptionElement = clone.querySelector('[data-type="Games__cards_top_text_p"]');
     if (gameDescriptionElement) {
-        gameDescriptionElement.textContent = `Description: ${game.short_description}`;
+        gameDescriptionElement.textContent = `Description: ${game.short_description.substring(0, 40)}...`;
     } else {
-        console.error('Element with class .Games__cards_top_text_p not found');
+        console.error('Element with data-type "Games__cards_top_text_p" not found');
     }
 
-    const genreElement = clone.querySelector('.Games__cards_btm_name:nth-child(1)');
+    const genreElement = clone.querySelector('[data-card-genre]');
     if (genreElement) {
         genreElement.textContent = `Genre: ${game.genre}`;
     }
 
-    const platformElement = clone.querySelector('.Games__cards_btm_name:nth-child(2)');
+    const platformElement = clone.querySelector('[data-card-platform]');
     if (platformElement) {
         platformElement.textContent = `Platform: ${game.platform}`;
     }
 
-    const publisherElement = clone.querySelector('.Games__cards_btm_name:nth-child(3)');
+    const publisherElement = clone.querySelector('[data-card-publisher]');
     if (publisherElement) {
         publisherElement.textContent = `Publisher: ${game.publisher}`;
     }
 
-    const developerElement = clone.querySelector('.Games__cards_btm_name:nth-child(4)');
+    const developerElement = clone.querySelector('[data-card-developer]');
     if (developerElement) {
         developerElement.textContent = `Developer: ${game.developer}`;
     }
 
-    const releaseDateElement = clone.querySelector('.Games__cards_btm_name:nth-child(5)');
+    const releaseDateElement = clone.querySelector('[data-card-release-date]');
     if (releaseDateElement) {
         releaseDateElement.textContent = `Release Date: ${game.release_date}`;
     }
+
 
     return clone;
 }
@@ -194,55 +203,118 @@ function renderGames(games) {
         return;
     }
 
+    const searchText = document.getElementById('search').value.toLowerCase();
+
     cardContainer.innerHTML = '';
 
     games.forEach(game => {
         const cardElement = createCardElement(game);
         if (cardElement) {
             cardContainer.appendChild(cardElement);
+
+            const elementsToHighlight = cardElement.querySelectorAll('[data-card-genre], [data-type="Games__cards_top_text_title"], [data-type="Games__cards_top_text_p"]');
+
+            elementsToHighlight.forEach(element => {
+                highlightText(element, searchText);
+            });
         }
     });
 }
 
 function filterGames() {
     const filterForm = document.getElementById('filterForm');
+    const searchTextElement = document.getElementById('search');
+
     filterForm.addEventListener('change', () => {
         const isNewChecked = document.getElementById('new_games').checked;
         const isOldChecked = document.getElementById('old_games').checked;
+        const selectedGenre = document.getElementById('game_properties').value;
+
+        const searchText = searchTextElement.value.toLowerCase();
 
         const filteredGames = gamesData.filter(game => {
-            return (isNewChecked && game.isNew) || (isOldChecked && !game.isNew);
+            const isNewMatch = isNewChecked && game.isNew;
+            const isOldMatch = isOldChecked && !game.isNew;
+            const genreMatch = selectedGenre === 'Genre' || game.genre === selectedGenre;
+            const titleMatch = game.title.toLowerCase().includes(searchText);
+            const descriptionMatch = game.short_description.toLowerCase().includes(searchText);
+
+            return (isNewMatch || isOldMatch) && genreMatch && (titleMatch || descriptionMatch);
         });
 
         renderGames(filteredGames);
+
+        const cardElements = document.querySelectorAll('.card-template');
+        cardElements.forEach(cardElement => {
+            const elementsToHighlight = cardElement.querySelectorAll('[data-card-genre], [data-type="Games__cards_top_text_title"], [data-type="Games__cards_top_text_p"]');
+            elementsToHighlight.forEach(element => {
+                highlightText(element, searchText);
+            });
+        });
     });
+
+    searchTextElement.addEventListener('input', () => {
+        const searchText = searchTextElement.value.toLowerCase();
+
+        const cardElements = document.querySelectorAll('[data-type="card-template"]');
+        cardElements.forEach(cardElement => {
+            const elementsToHighlight = cardElement.querySelectorAll('[data-card-genre], [data-type="Games__cards_top_text_title"], [data-type="Games__cards_top_text_p"]');
+            elementsToHighlight.forEach(element => {
+                highlightText(element, searchText);
+            });
+        });
+    });
+}
+
+function highlightText(element, searchText) {
+    const innerHTML = element.innerHTML;
+    const lowerCaseInnerHTML = innerHTML.toLowerCase();
+    const lowerCaseSearchText = searchText.toLowerCase();
+
+    // Видаляємо попереднє маркування перед додаванням нового
+    element.innerHTML = innerHTML.replace(/<\/mark>/g, '').replace(/<mark>/g, '');
+
+    let index = lowerCaseInnerHTML.indexOf(lowerCaseSearchText);
+
+    while (index !== -1) {
+        const start = innerHTML.substring(0, index);
+        const match = innerHTML.substring(index, index + searchText.length);
+        const end = innerHTML.substring(index + searchText.length);
+
+        // Додаємо <mark> для виділення тексту
+        element.innerHTML = `${start}<mark>${match}</mark>${end}`;
+
+        // Шукаємо наступне співпадіння
+        index = lowerCaseInnerHTML.indexOf(lowerCaseSearchText, index + 1);
+    }
 }
 
 function init() {
     renderGames(gamesData);
     filterGames();
 
-    // Додавання обробників подій для інших фільтрів
     const gamePropertiesSelect = document.getElementById('game_properties');
     const platformRadio = document.getElementById('platform');
     const onlineGamesRadio = document.getElementById('online-games');
+    const applyButton = document.getElementById('apply');
 
     gamePropertiesSelect.addEventListener('change', () => {
-        // Опрацювання події для фільтру "Genre"
         const selectedGenre = gamePropertiesSelect.value;
         filterByGenre(selectedGenre);
     });
 
     platformRadio.addEventListener('change', () => {
-        // Опрацювання події для фільтру "Platform"
         const selectedPlatform = platformRadio.value;
         filterByPlatform(selectedPlatform);
     });
 
     onlineGamesRadio.addEventListener('change', () => {
-        // Опрацювання події для фільтру "Online games"
         const isOnlineChecked = onlineGamesRadio.checked;
         filterByOnlineGames(isOnlineChecked);
+    });
+
+    applyButton.addEventListener('click', () => {
+        filterGames();
     });
 }
 
