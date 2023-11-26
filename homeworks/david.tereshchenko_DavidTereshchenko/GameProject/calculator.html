@@ -53,7 +53,7 @@
                             </div>
                             <div class="operator__block">
                                 <label>
-                                    <select class="operator">
+                                    <select class="operator" data-operation="operator">
                                         <option value="+">+</option>
                                         <option value="-">-</option>
                                         <option value="×">×</option>
@@ -68,21 +68,24 @@
                                 <input id="secondNumber" class="number__block two" name="number2" required>
                             </div>
                             <div class="return">
-                                <button type="button" class="button">=</button>
+                                <button type="button" class="button" data-button="button-result">=</button>
                             </div>
                             <div class="result__block">
                                 <p class="resul__number result"></p>
+                                <span class="count-games" data-count-game></span>
                             </div>
                         </div>
-                        <div class="count-block">
+                        <div class="count-block" data-count-block="count-block">
                             <div class="visual-counting">
-                                <span class="number__1"></span>
-                                <span class="oper"></span>
-                                <span class="number__2"></span>
-                                <span class="equals"></span>
-                                <span class="visual-result"></span>
+                                <span class="number__1" data-number-one="number-one"></span>
+                                <span class="oper" data-operation-visual="operation-visual"></span>
+                                <span class="number__2" data-number-two="number-two"></span>
+                                <span class="equals" data-equals="equals"></span>
+                                <span class="visual-result" data-result-visual="visual-result"></span>
+                                <span class="count-games__visual" data-count-game-visual="count-game"></span>
                             </div>
                         </div>
+                        <span class="date" data-date="data"></span>
                     </div>
                 </div>
             </main>
@@ -105,6 +108,7 @@
                 </div>
             </footer>
         </div>
-        <script src="js/calculator.js"></script>
+        <script src="script/calculator.js"></script>
+        <script src="script/burger.js"></script>
     </body>
 </html>
