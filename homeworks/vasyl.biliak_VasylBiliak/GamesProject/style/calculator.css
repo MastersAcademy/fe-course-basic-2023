@@ -117,12 +117,6 @@
   line-height: 48px;
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  font-family: "Roboto", sans-serif;
-}
-
 .wrapper-calculator {
   margin: 5px;
 }
@@ -261,14 +255,6 @@
   position: relative;
   justify-content: center;
 }
-
-
-/*.result-timestamp {*/
-/*  width: 100%;*/
-/*  font-weight: 600;*/
-/*  line-height: 48px;*/
-/*  letter-spacing: 0;*/
-/*}*/
 
 .img-container {
   margin-top: 80px;
