@@ -57,10 +57,19 @@ const ulContainer = document.querySelector('[data-type="cards-container"]');
 
 renderCards(ulContainer, games);
 
-// checkbox
-function init() {
+// filtration function
+function handleFilters() {
     const checkNew = document.querySelector('[data-type="check-new"]');
     const checkOld = document.querySelector('[data-type="check-old"]');
+    const selectElement = document.getElementById('genre');
+    const valueSearch = document.querySelector('[data-type="search"]');
+    const gameCardElements = document.body.querySelectorAll('.game__cod2');
+    const noResultsElement = document.querySelector('[data-type="text-h2"]');
+
+    let isNewChecked = false;
+    let isOldChecked = false;
+    let selectedGenreNow = selectElement.value;
+
     const gameDates = document.body.querySelectorAll('[data-type="release_date"]');
     const gameDatesArray = Array.from(gameDates).map((dateElement) => {
         const releaseDateText = dateElement.innerText.replace('Release date:', '').trim();
@@ -68,21 +77,36 @@ function init() {
         return releaseDate.getFullYear();
     });
 
-    let isNewChecked = false;
-    let isOldChecked = false;
+    let updateTimeout;
 
     const updateCardsDisplay = () => {
-        gameDatesArray.forEach((year, index) => {
-            const gameCard = gameDates[index].closest('.game__cod2');
+        clearTimeout(updateTimeout);
 
-            if ((year >= 2020 && isNewChecked) || (year <= 2010 && isOldChecked)) {
-                gameCard.style.display = 'block';
-            } else if (!isNewChecked && !isOldChecked) {
-                gameCard.style.display = 'block';
-            } else {
-                gameCard.style.display = 'none';
-            }
-        });
+        updateTimeout = setTimeout(() => {
+            gameCardElements.forEach((gameCard, index) => {
+                const gameGenreElement = gameCard.querySelector('[data-type="genre"]');
+                const gameGenre = gameGenreElement.textContent.replace('Genre:', ' ').trim().toLowerCase();
+                const year = gameDatesArray[index];
+
+                const isGenreVisible = gameCard.style.display !== 'none';
+                const isNewCondition = year >= 2020 && isNewChecked;
+                const isOldCondition = year <= 2010 && isOldChecked;
+                const isGenreCondition = selectedGenreNow === 'genre' || selectedGenreNow === 'allgames' || gameGenre === selectedGenreNow;
+                const isSearchCondition = valueSearch.value.toLowerCase() === '' || (gameCard.querySelector('[data-type="title"]').innerText.toLowerCase().includes(valueSearch.value.toLowerCase())
+                    || gameCard.querySelector('[data-type="description"]').innerText.toLowerCase().includes(valueSearch.value.toLowerCase()));
+
+                const isNoFilterSelected = !isNewChecked && !isOldChecked && selectedGenreNow === 'genre' && valueSearch.value.trim() === '';
+
+                const shouldDisplay = (isNewCondition || isOldCondition
+                    || !isGenreVisible || isNoFilterSelected)
+                    && isGenreCondition && isSearchCondition;
+                gameCard.style.display = shouldDisplay ? 'block' : 'none';
+            });
+
+            const hasResults = Array.from(gameCardElements).some((cardElement) => cardElement.style.display === 'block');
+            noResultsElement.style.display = hasResults ? 'none' : 'block';
+            noResultsElement.innerText = hasResults ? '' : 'No results!';
+        }, 200);
     };
 
     checkNew.addEventListener('click', () => {
@@ -94,69 +118,17 @@ function init() {
         isOldChecked = !isOldChecked;
         updateCardsDisplay();
     });
-}
-
-init();
-
-// drop down list
-function selection() {
-    const selectElement = document.getElementById('genre');
-    let selectedGenreNow = selectElement.value;
-
-    const gameCardElements = document.body.querySelectorAll('.game__cod2');
-
-    const updateCardsDisplay = () => {
-        gameCardElements.forEach((gameCard) => {
-            const gameGenreElement = gameCard.querySelector('[data-type="genre"]');
-            const gameGenre = gameGenreElement.textContent.replace('Genre:', ' ').trim().toLowerCase();
-
-            if (selectedGenreNow === 'genre' || selectedGenreNow === 'allgames' || gameGenre === selectedGenreNow) {
-                gameCard.style.display = 'block';
-            } else {
-                gameCard.style.display = 'none';
-            }
-        });
-    };
 
     selectElement.addEventListener('change', () => {
         selectedGenreNow = selectElement.value;
         updateCardsDisplay();
     });
 
+    valueSearch.addEventListener('input', () => {
+        updateCardsDisplay();
+    });
+
     updateCardsDisplay();
 }
 
-selection();
-
-// search filed
-const valueSearch = document.querySelector('[data-type="search"]');
-const gameCardElements = document.body.querySelectorAll('.game__cod2');
-const noResultsElement = document.querySelector('[data-type="text-h2"]');
-
-valueSearch.addEventListener('input', () => {
-    const searchField = valueSearch.value.toLowerCase();
-    let hasResults = false;
-
-    if (!searchField) {
-        gameCardElements.forEach((cardElement) => {
-            cardElement.style.display = 'block';
-        });
-
-        return;
-    }
-
-    gameCardElements.forEach((cardElement) => {
-        const titleText = cardElement.querySelector('[data-type="title"]').innerText.toLowerCase();
-        const descrText = cardElement.querySelector('[data-type="description"]').innerText.toLowerCase();
-
-        if (titleText.includes(searchField) || descrText.includes(searchField)) {
-            cardElement.style.display = 'block';
-            hasResults = true;
-        } else {
-            cardElement.style.display = 'none';
-        }
-    });
-
-    noResultsElement.style.display = hasResults ? 'none' : 'block';
-    noResultsElement.innerText = hasResults ? '' : 'No results!';
-});
+handleFilters();
