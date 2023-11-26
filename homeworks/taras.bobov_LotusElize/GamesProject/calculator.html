@@ -6,6 +6,7 @@
         <meta name="description" content="this page about games">
         <meta name="keywords" content="game,gamer,news">
         <link rel="stylesheet" type="text/css" href="./css/style.css">
+        <link rel="stylesheet" type="text/css" href="./css/calculator.css">
         <title>Games project</title>
     </head>
 
@@ -33,43 +34,43 @@
                 </nav>
             </div>
         </header>
-        <main class="site-main container">
-            <section class="content_game-place">
-                <div class="my-place">
-                    <img src="./images/my-game-place.jpg" alt="about me">
+        <main class="site-main calculator-game-main container">
+            <section class="calculator-mini">
+                <div class="calculator-game-main__title">
+                    <h1 class="cal-main__heading">Calculate Games</h1>
                 </div>
-                <div class="about-me">
-                    <div class="title-about-me">
-                        <h1>About Me</h1>
+                <div class="calculator-game-main__field">
+                    <div class="calc-max">
+                        <div class="max">max 10</div>
+                        <div class="min">max 100</div>
                     </div>
-                    <p>
-                        Hi! My name is Taras and I'm a Junior Frontend
-                        Developer. I am already familiar with main Web
-                        Technologies like HTML, CSS, JavaScript and Git
-                        version control system.
-                    </p>
-                    <p>
-                        This page was developed during the course
-                        <a href="https://www.mastersacademy.education/frontend-for-beginners-it"
-                            target="_blank">'Frontend for beginners' from Masters Academy
-                            in 2023.</a>
-                    </p>
-                    <p>
-                        This is a social project from MOCG company where I
-                        got an opportunity to work with Frontend mentors and
-                        to create my own small project for the portfolio.
-                    </p>
-                    <p>
-                        You can contact me via
-                        <a href="#">Telegram</a>
-                        and/or check out my
-                        <a href="https://github.com/LotusElize" target="_blank">GitHub</a>.
-
-                    </p>
+                    <div class="calculator">
+                        <label class="calculator__label">
+                            <input class="calculator__input-number" id="firstValue" type="text">
+                        </label>
+                        <label>
+                            <div class="calculator-drop__down">
+                                <select class="calculator__select" name="operation" id="operation">
+                                    <option value="+">+</option>
+                                    <option value="-">-</option>
+                                    <option value="/">/</option>
+                                    <option value="*">*</option>
+                                    <option value="**">**</option>
+                                </select>
+                            </div>
+                        </label>
+                        <label class="calculator__label">
+                            <input class="calculator__input-number" id="secondValue" type="text">
+                        </label>
+                        <button class="calculator__btn" id="calculate" type="button">=</button>
+                        <span class="calculator__result" id="result"></span>
+                    </div>
                 </div>
             </section>
-        </main>
-        <!-- footer -->
+            <section class="calculator-large">
+            
+            </section>
+        </main> 
         <footer>
             <div class="container footer-social__info">
                 <div class="social-media">
@@ -93,13 +94,14 @@
                 </div>
                 <div class="links">
                     <p>
-                        Made with 💗 on course<a href="https://www.mastersacademy.education/frontend-for-beginners-it"
-                            target="_blank">'Frontend for beginners' from Masters Academy in
+                        Made with 💗 on course<a href="https://www.mastersacademy.education/frontend-for-beginners-it" target="_blank">'Frontend for beginners' from Masters Academy in
                             2023,</a>from Masters Academy in 2023, by Taras
                     </p>
                 </div>
             </div>
         </footer>
+        <script src="./js/script.js"></script>
+        <script src="./js/main.js"></script>
     </body>
 
 </html>
