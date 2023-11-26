@@ -271,7 +271,7 @@ function createCardElement(pokemon) {
 
 const mainElement = document.querySelector('[data-type="main"]');
 function renderCards(container, cardsAmount) {
-    for (let i= 0; i < cardsAmount.length; i++) {
+    for (let i = 0; i < cardsAmount.length; i++) {
         const content = createCardElement(cardsAmount[i]);
         container.appendChild(content);
     }
@@ -286,7 +286,7 @@ function resetfiletrs() {
 function showBigPokemons() {
     resetfiletrs();
     const bigPokemons = [];
-    for ( let i = 0; i < pokemons.length; i++) {
+    for (let i = 0; i < pokemons.length; i++) {
         if (pokemons[i].height > 100) {
             bigPokemons.push(pokemons[i]);
         }
@@ -301,7 +301,7 @@ function showBigPokemons() {
 function showSmallPokemons() {
     resetfiletrs();
     const smallPokemons = [];
-    for ( let i = 0; i < pokemons.length; i++) {
+    for (let i = 0; i < pokemons.length; i++) {
         if (pokemons[i].height < 50) {
             smallPokemons.push(pokemons[i]);
         }
@@ -333,7 +333,7 @@ showMixedPokemons();
 
 function init() {
     sizePokemonBig.setAttribute('onchange', 'showMixedPokemons()');
-    sizePokemonSmall.setAttribute('onchange','showMixedPokemons()');
+    sizePokemonSmall.setAttribute('onchange', 'showMixedPokemons()');
     renderCards(mainElement, pokemons);
 }
 
