@@ -20,7 +20,6 @@
   background-image: url("../Img/arrow.svg");
   background-repeat: no-repeat;
   background-position: calc(100% - 12px);
-  font-family: Roboto;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -47,7 +46,6 @@
 
 .radio-games-filter label {
   cursor: pointer;
-  font-family: Roboto;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -142,7 +140,6 @@
 
 .checkbox-games-filter label {
   cursor: pointer;
-  font-family: Roboto;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -179,7 +176,6 @@
   border: 0;
   outline: none;
   padding-left: 12px;
-  font-family: Roboto;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -201,7 +197,6 @@
   align-items: center;
   justify-content: center;
   background-color: #EF4934;
-  font-family: Roboto;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -216,7 +211,6 @@
 }
 
 .main-header {
-  font-family: Roboto;
   font-size: 48px;
   font-style: normal;
   font-weight: 700;
@@ -231,12 +225,13 @@
 }
 
 .card-list {
-  display: inline-flex;
+  display: grid;
   flex-wrap: wrap;
   list-style: none;
   padding: 0;
   margin: 0;
   gap: 25px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .card {
@@ -246,12 +241,11 @@
   gap: 22px;
   border-radius: 12px;
   background-color: #ECECEC;
+  overflow: hidden;
 }
 
 .main-card-header {
   display: flex;
-  width: 251px;
-  height: 90px;
   gap: 12px;
 }
 
@@ -259,33 +253,44 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 149px;
-  height: 77px;
   gap: 12px;
+  flex-grow: 1;
+  overflow: hidden;
 }
 
-.card-header h3 {
-  font-family: Roboto;
+.card-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 8px;
+}
+
+.card-title {
   font-size: 18px;
   font-weight: 700;
-  width: 134px;
-  height: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   margin: 0;
+  max-width: 100%;
 }
 
-.card-header p {
-  font-family: Roboto;
+.short-description {
   font-size: 14px;
   font-weight: 400;
-  width: 149px;
-  height: 52px;
+  max-height: 52px;
   margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  /* stylelint-disable value-no-vendor-prefix */
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  /* stylelint-enable value-no-vendor-prefix */
 }
 
 .card-actors {
   display: flex;
-  width: 231px;
-  height: 114px;
   flex-direction: column;
   align-items: flex-start;
   padding: 0;
@@ -301,14 +306,12 @@
 }
 
 .card-actors .key {
-  font-family: Roboto;
   font-size: 14px;
   font-weight: 600;
   line-height: 18.2px;
 }
 
 .card-actors .value {
-  font-family: Roboto;
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
