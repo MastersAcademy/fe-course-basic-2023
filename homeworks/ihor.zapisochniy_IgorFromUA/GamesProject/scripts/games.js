@@ -147,7 +147,7 @@ function createGameCardStr(game) {
 
                         <div class="card__description">
                             <h2 class="description__title" data-description-title>${title}</h2>
-                            <p class="description__text" data-description-text>${shortDescription.slice(0, 60)}...</p>
+                            <p class="description__text" data-description-text>${shortDescription}</p>
                         </div>
                         <ul class="card__actors">
                             <li class="card__actor" data-genre>
@@ -200,6 +200,11 @@ function filterGames(gamesArr) {
             && !description.toLowerCase().includes(searchTerm.toLowerCase()));
     });
 }
+function markedSearchText(search, originString) {
+    if (search === '') return originString;
+    const regex = new RegExp(search, 'ig');
+    return originString.replaceAll(regex, (match) => `<span class="filter-matched-text">${match}</span>`);
+}
 function renderCards(container, arrGames) {
     container.innerHTML = '';
     const fragment = new DocumentFragment();
@@ -209,8 +214,16 @@ function renderCards(container, arrGames) {
     container.append(fragment);
 }
 function reRenderCards() {
+    const searchTerm = document.querySelector('[data-filter-search]').value;
     const filterArrGames = filterGames(games);
-    renderCards(CARDS_LIST, filterArrGames);
+    const markedTextFilterArrGames = filterArrGames.map((game) => {
+        const copyGame = { ...game };
+        copyGame.title = markedSearchText(searchTerm, game.title);
+        copyGame.short_description = `
+        ${markedSearchText(searchTerm, game.short_description.slice(0, 60))}...`;
+        return copyGame;
+    });
+    renderCards(CARDS_LIST, markedTextFilterArrGames);
 }
 renderCards(CARDS_LIST, games);
 FORM_BUTTON.addEventListener('click', reRenderCards);
