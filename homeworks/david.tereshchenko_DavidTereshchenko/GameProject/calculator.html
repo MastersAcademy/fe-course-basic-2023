@@ -72,20 +72,20 @@
                             </div>
                             <div class="result__block">
                                 <p class="resul__number result"></p>
-                                <span class="count-games"></span>
+                                <span class="count-games" data-count-game></span>
                             </div>
                         </div>
-                        <div class="count-block">
+                        <div class="count-block" data-count-block="count-block">
                             <div class="visual-counting">
-                                <span class="number__1"></span>
-                                <span class="oper"></span>
-                                <span class="number__2"></span>
-                                <span class="equals"></span>
-                                <span class="visual-result"></span>
-                                <span class="count-games__visual"></span>
+                                <span class="number__1" data-number-one="number-one"></span>
+                                <span class="oper" data-operation-visual="operation-visual"></span>
+                                <span class="number__2" data-number-two="number-two"></span>
+                                <span class="equals" data-equals="equals"></span>
+                                <span class="visual-result" data-result-visual="visual-result"></span>
+                                <span class="count-games__visual" data-count-game-visual="count-game"></span>
                             </div>
                         </div>
-                        <span class="date"></span>
+                        <span class="date" data-date="data"></span>
                     </div>
                 </div>
             </main>
@@ -108,16 +108,7 @@
                 </div>
             </footer>
         </div>
-        <script src="js/calculator.js"></script>
-        <script>
-            document.querySelector('.header__burger').addEventListener('click', function () {
-                this.classList.toggle('active');
-                document.querySelector('.header__menu').classList.toggle('open');
-            })
-            document.querySelector('.filter__icon').addEventListener('click', function () {
-                this.classList.toggle('active');
-                document.querySelector('.filter__checkbox').classList.toggle('open');
-            })
-        </script>
+        <script src="script/calculator.js"></script>
+        <script src="script/burger.js"></script>
     </body>
 </html>
