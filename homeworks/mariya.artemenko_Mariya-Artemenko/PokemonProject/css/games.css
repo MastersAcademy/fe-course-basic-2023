@@ -8,9 +8,14 @@
   margin: 40px 0 40px 53px;
 }
 
+.container,
 .pokemons-cards {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
+}
+
+.container {
   margin: 0 28px;
 }
 
@@ -56,11 +61,16 @@
   line-height: 18px;
   padding: 0;
   margin: 0 0 16px;
+  font-weight: 600;
 }
 
-.single-pokemon__features p span {
+.features__name,
+.features__parameters {
   margin: 0 6px 0 0;
-  font-weight: 600;
+}
+
+.features__parameters {
+  font-weight: 400;
 }
 
 .single-pokemon__type,
@@ -77,6 +87,7 @@
   line-height: 18px;
   padding: 0;
   margin: 0 12px 0 10px;
+  font-weight: 600;
 }
 
 .type__list {
@@ -117,4 +128,21 @@
   background-color: #3447EF;
   padding: 7px 16px;
   margin: 0;
+}
+
+.filer-bar {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  color: #FFF;
+  background-color: #221F1F;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+
+.filter_bar_select {
+
 }
