@@ -191,7 +191,6 @@ function createCardElement(game) {
         releaseDateElement.textContent = `Release Date: ${game.release_date}`;
     }
 
-
     return clone;
 }
 

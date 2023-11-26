@@ -380,13 +380,6 @@ body {
   line-height: 21px;
 }
 
-/*.Games__cards_btm .Games__cards_btm_bold {*/
-/*  font-family: "Roboto", sans-serif;*/
-/*  font-weight: 700;*/
-/*  font-size: 14px;*/
-/*  line-height: 18px;*/
-/*}*/
-
 [data-filter]:checked {
   background-color: lightblue;
 }
