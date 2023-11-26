@@ -271,35 +271,23 @@ function createCardElement(pokemon) {
 
 const mainElement = document.querySelector('[data-type="main"]');
 function renderCards(container, cardsAmount) {
-    for (let i= 0; i < cardsAmount.length; i++)
-    {
+    for (let i= 0; i < cardsAmount.length; i++) {
         const content = createCardElement(cardsAmount[i]);
         container.appendChild(content);
     }
 }
 
-function showMixedPokemons() {
-    if(sizePokemonBig.checked && sizePokemonSmall.checked) {
-        resetfiletrs();
-        const filteredPokemons = [];
-        for(let i = 0; i <pokemons.length; i++) {
-            if(pokemons[i].height > 100 || pokemons[i].height < 50) {
-                filteredPokemons.push(pokemons[i]);
-            }
-        }
-        renderCards(mainElement, filteredPokemons);
-    } else if(sizePokemonBig.checked) {
-        showBigPokemons();
-    } else {
-        showSmallPokemons();
+function resetfiletrs() {
+    while (mainElement.firstChild) {
+        mainElement.removeChild(mainElement.firstChild);
     }
 }
 
 function showBigPokemons() {
     resetfiletrs();
     const bigPokemons = [];
-    for( let i = 0; i <pokemons.length; i++) {
-        if(pokemons[i].height > 100) {
+    for ( let i = 0; i < pokemons.length; i++) {
+        if (pokemons[i].height > 100) {
             bigPokemons.push(pokemons[i]);
         }
     }
@@ -310,17 +298,11 @@ function showBigPokemons() {
     }
 }
 
-function resetfiletrs() {
-    while (mainElement.firstChild) {
-        mainElement.removeChild(mainElement.firstChild);
-    }
-}
-
 function showSmallPokemons() {
     resetfiletrs();
     const smallPokemons = [];
-    for( let i = 0; i <pokemons.length; i++) {
-        if(pokemons[i].height < 50) {
+    for ( let i = 0; i < pokemons.length; i++) {
+        if (pokemons[i].height < 50) {
             smallPokemons.push(pokemons[i]);
         }
     }
@@ -330,6 +312,24 @@ function showSmallPokemons() {
         renderCards(mainElement, pokemons);
     }
 }
+
+function showMixedPokemons() {
+    if (sizePokemonBig.checked && sizePokemonSmall.checked) {
+        resetfiletrs();
+        const filteredPokemons = [];
+        for (let i = 0; i < pokemons.length; i++) {
+            if (pokemons[i].height > 100 || pokemons[i].height < 50) {
+                filteredPokemons.push(pokemons[i]);
+            }
+        }
+        renderCards(mainElement, filteredPokemons);
+    } else if (sizePokemonBig.checked) {
+        showBigPokemons();
+    } else {
+        showSmallPokemons();
+    }
+}
+showMixedPokemons();
 
 function init() {
     sizePokemonBig.setAttribute('onchange', 'showMixedPokemons()');
