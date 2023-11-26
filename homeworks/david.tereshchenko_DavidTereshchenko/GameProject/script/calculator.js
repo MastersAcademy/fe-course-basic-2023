@@ -1,5 +1,5 @@
-const operator = document.querySelector('.operator');
-const btn = document.querySelector('.button');
+const operator = document.querySelector('[data-operation]');
+const btn = document.querySelector('[data-button]');
 const visualNumberTwo = document.querySelector('[data-number-two]');
 const visualOperator = document.querySelector('[data-operation-visual]');
 const visualNumberOne = document.querySelector('[data-number-one]');
