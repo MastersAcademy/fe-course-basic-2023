@@ -1,4 +1,4 @@
-const games = [
+const mocGames = [
     {
         id: 1136,
         title: 'Overwatch 2',
@@ -130,13 +130,18 @@ const games = [
         profile_url: 'https://www.mmobomb.com/crossout',
     },
 ];
+const games = mocGames.map((game) => {
+    const copyGame = { ...game };
+    copyGame.small_description = `${game.short_description.slice(0, 60)}...`;
+    return copyGame;
+});
 const CARDS_LIST = document.querySelector('[data-cards]');
 const FORM_BUTTON = document.querySelector('[data-filter-button]');
 function createGameCardStr(game) {
     const {
         title,
         thumbnail,
-        short_description: shortDescription,
+        small_description: smallDescription,
         genre,
         platform,
         publisher,
@@ -147,7 +152,7 @@ function createGameCardStr(game) {
 
                         <div class="card__description">
                             <h2 class="description__title" data-description-title>${title}</h2>
-                            <p class="description__text" data-description-text>${shortDescription}</p>
+                            <p class="description__text" data-description-text>${smallDescription}</p>
                         </div>
                         <ul class="card__actors">
                             <li class="card__actor" data-genre>
@@ -219,8 +224,7 @@ function reRenderCards() {
     const markedTextFilterArrGames = filterArrGames.map((game) => {
         const copyGame = { ...game };
         copyGame.title = markedSearchText(searchTerm, game.title);
-        copyGame.short_description = `
-        ${markedSearchText(searchTerm, game.short_description.slice(0, 60))}...`;
+        copyGame.small_description = markedSearchText(searchTerm, game.small_description);
         return copyGame;
     });
     renderCards(CARDS_LIST, markedTextFilterArrGames);
