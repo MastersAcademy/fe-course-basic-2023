@@ -37,3 +37,9 @@
   text-underline-offset: 7px;
   text-decoration-thickness: 1px;
 }
+
+.calculator-page .nav-items .calc-link {
+  text-decoration: underline;
+  text-underline-offset: 7px;
+  text-decoration-thickness: 1px;
+}

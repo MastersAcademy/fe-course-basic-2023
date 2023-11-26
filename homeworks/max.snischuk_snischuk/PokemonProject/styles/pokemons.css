@@ -1,3 +1,4 @@
+@import "./variables.css";
 @import "./header.css";
 @import "./card.css";
 
@@ -12,7 +13,7 @@ body {
 }
 
 .filters {
-  background-color: #221F1F;
+  background-color: var(--color-dark);
   padding: 12px 0;
 }
 
@@ -37,17 +38,20 @@ body {
   background-repeat: no-repeat;
   background-position: 90% 50%;
   font-family: Roboto;
-  color: #FFF;
+  color: var(--color-light);
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
   transition: all .3s ease-in-out;
 }
 
+.filters__select:hover,
 .filters__select:focus {
+  cursor: pointer;
   outline: none;
-  border: 1px solid #FFF;
-  transition: border .3s ease-in-out;
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  transition: all .3s ease-in-out;
 }
 
 .filters__group {
@@ -64,12 +68,18 @@ body {
 .filters__custom {
   display: flex;
   align-items: center;
-  color: #FFF;
+  color: var(--color-light);
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
   position: relative;
   padding-left: 40px;
+  transition: all .3s ease-in-out;
+}
+
+.filters__custom:hover {
+  cursor: pointer;
+  color: var(--color-accent);
 }
 
 .filters__custom::before,
@@ -79,12 +89,18 @@ body {
   display: inline-block;
   width: 20px;
   height: 20px;
-  border: 1px solid #FFF;
-  background-color: #221F1F;
+  border: 1px solid var(--color-light);
+  background-color: var(--color-dark);
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   left: 0;
+  transition: all .3s ease-in-out;
+}
+
+.filters__custom:hover::before,
+.filters__custom:hover::after {
+  border: 1px solid var(--color-accent);
 }
 
 .filters__custom--radio::before {
@@ -128,21 +144,27 @@ body {
 
 .filters__search-input {
   padding-left: 46px;
-  background-color: #FFF;
+  background-color: var(--color-light);
   background-image: url("../images/icon-search.svg");
   background-repeat: no-repeat;
   background-position: 10px;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   border-radius: 6px 0 0 6px;
   font-family: Roboto;
-  color: #221F1F;
+  color: var(--color-dark);
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
+  transition: all .3s ease-in-out;
+}
+
+.filters__search-input:hover {
+  border: 2px solid var(--color-accent);
 }
 
 .filters__search-input::placeholder {
-  background-color: #FFF;
+  padding-right: 100px;
+  background-color: var(--color-light);
   font-family: Roboto;
   color: #A9A9A9;
   font-size: 14px;
@@ -152,7 +174,7 @@ body {
 
 .filters__search-input:focus {
   outline: none;
-  border: 1px solid #EF4934;
+  border: 1px solid var(--color-accent);
   transition: border .3s ease-in-out;
 }
 
@@ -161,8 +183,8 @@ body {
   padding: 13px 20px;
   border: none;
   border-radius: 0 6px 6px 0;
-  background: #EF4934;
-  color: #FFF;
+  background: var(--color-accent);
+  color: var(--color-light);
   font-family: Roboto;
   font-size: 14px;
   line-height: 21px;
@@ -188,7 +210,7 @@ body {
 }
 
 .pokemons__title {
-  color: #221F1F;
+  color: var(--color-dark);
   font-size: 48px;
   line-height: normal;
   font-weight: 700;
@@ -197,6 +219,10 @@ body {
 .pokemons__cards {
   list-style-type: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
   gap: 25px;
+}
+
+.pokemons__card-item {
+  max-width: 275px;
 }
