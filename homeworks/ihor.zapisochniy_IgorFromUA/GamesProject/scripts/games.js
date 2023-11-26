@@ -189,7 +189,7 @@ function filterGames(gamesArr) {
             title,
             short_description: description,
         } = game;
-        const releaseYear = Number.parseInt(releaseDate, 10);
+        const releaseYear = new Date(releaseDate).getFullYear();
         if (selectedGenre !== 'genre' && selectedGenre !== genre.toLowerCase()) return false;
         if (isPlatformGame && platform !== 'PC (Windows)') return false;
         if (isOnlineGame && platform !== 'Web Browser') return false;
