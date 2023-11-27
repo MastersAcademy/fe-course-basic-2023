@@ -379,7 +379,3 @@ body {
   font-size: 14px;
   line-height: 21px;
 }
-
-[data-filter]:checked {
-  background-color: lightblue;
-}
