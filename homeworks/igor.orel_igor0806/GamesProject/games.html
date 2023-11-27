@@ -24,6 +24,10 @@
                     <ul class="link_list">
 
                         <li class="link">
+                            <a class="nav-link" href="./calculator.html">Calculator</a>
+                        </li>
+
+                        <li class="link">
                             <a class="nav-link" href="./games.html">Games</a>
                         </li>
 
@@ -40,7 +44,7 @@
             </div>
         </header>
 
-        <form class="form_games" action="#">
+        <form class="form_games" action="#" data-type="filter-form">
             <div class="filter_select">
                 <label for="Name"></label>
                 <select id="Name" name="select">
@@ -60,9 +64,9 @@
             </div>
 
             <div class="filter_boxes">
-                <input type="checkbox" class="filter_checkbox" id="New" name="New" value="New">
+                <input type="checkbox" class="filter_checkbox" id="New" name="New" value="New" data-type-filter="new">
                 <label for="new">New</label>
-                <input type="checkbox" class="filter_checkbox" id="Old" name="Old" value="Old">
+                <input type="checkbox" class="filter_checkbox" id="Old" name="Old" value="Old" data-type-filter="old">
                 <label for="old">Old</label>
             </div>
 
@@ -76,278 +80,29 @@
         <h2 class="title_about">Study project "Games"</h2>
 
         <div class="card_cards">
-            <article class="card">
-
+            <ul class="card_cards" data-type="games-list"></ul>
+            <template data-type="card-template">
                 <div class="card_games">
-                    <div>
-                        <img src="./img/img_about.jpeg" alt="img">
-                    </div>
-
+                    <img data-card-img alt="img">
                     <div class="card_title">
-                        <h3 class="name_game">Overwatch 2</h3>
-                        <p class="info_game">
-                            Big changes come to the Overwatch formula in this sequel...
-                        </p>
+                        <h3 class="name_game" data-card-title></h3>
+                        <p class="info_game" data-card-description></p>
                     </div>
                 </div>
                 <div class="card_text">
                     <ul class="info_game">
-                        <li class="list_card">
-                            <b class="bolt">Genre:</b> Shooter
-                        </li>
-                        <li class="list_card">
-                            <b class="bolt">Platform:</b> PC(Windows)
-                        </li>
-                        <li class="list_card">
-                            <b class="bolt">Publisher:</b> Activision Blizzard King
-                        </li>
-                        <li class="list_card">
-                            <b class="bolt">Developer:</b> Blizzard Entertainment
-                        </li>
-                        <li class="list_card">
-                            <b class="bolt">Release_date:</b> 2022-10-04
-                        </li>
+                        <li data-card-genre></li>
+
+                        <li data-card-platform></li>
+
+                        <li data-card-publisher></li>
+
+                        <li data-card-developer></li>
+
+                        <li data-card-release-data></li>
                     </ul>
                 </div>
-            </article>
-
-            <article class="card">
-                <div class="card_games">
-                    <div>
-                        <img src="./img/img_about.jpeg" alt="img">
-                    </div>
-
-                    <div class="card_title">
-                        <h3 class="name_game">Overwatch 2</h3>
-                        <p class="info_game">
-                            Big changes come to the Overwatch formula in this sequel...
-                        </p>
-                    </div>
-                </div>
-                <div class="card_text">
-                    <ul class="info_game">
-                        <li class="list_card">
-                            <b class="bolt">Genre:</b> Shooter
-                        </li>
-                        <li class="list_card">
-                            <b class="bolt">Platform:</b> PC(Windows)
-                        </li>
-                        <li class="list_card">
-                            <b class="bolt">Publisher:</b> Activision Blizzard King
-                        </li>
-                        <li class="list_card">
-                            <b class="bolt">Developer:</b> Blizzard Entertainment
-                        </li>
-                        <li class="list_card">
-                            <b class="bolt">Release_date:</b> 2022-10-04
-                        </li>
-                    </ul>
-                </div>
-            </article>
-
-            <article class="card">
-                <div class="card_games">
-                    <div>
-                        <img src="./img/img_about.jpeg" alt="img">
-                    </div>
-
-                    <div class="card_title">
-                        <h3 class="name_game">Overwatch 2</h3>
-                        <p class="info_game">
-                            Big changes come to the Overwatch formula in this sequel...
-                        </p>
-                    </div>
-                </div>
-                <div class="card_text">
-                    <ul class="info_game">
-                        <li class="list_card">
-                            <b class="bolt">Genre:</b> Shooter
-                        </li>
-                        <li class="list_card">
-                            <b class="bolt">Platform:</b> PC(Windows)
-                        </li>
-                        <li class="list_card">
-                            <b class="bolt">Publisher:</b> Activision Blizzard King
-                        </li>
-                        <li class="list_card">
-                            <b class="bolt">Developer:</b> Blizzard Entertainment
-                        </li>
-                        <li class="list_card">
-                            <b class="bolt">Release_date:</b> 2022-10-04
-                        </li>
-                    </ul>
-                </div>
-            </article>
-
-            <article class="card">
-                <div class="card_games">
-                    <div>
-                        <img src="./img/img_about.jpeg" alt="img">
-                    </div>
-
-                    <div class="card_title">
-                        <h3 class="name_game">Overwatch 2</h3>
-                        <p class="info_game">
-                            Big changes come to the Overwatch formula in this sequel...
-                        </p>
-                    </div>
-                </div>
-                <div class="card_text">
-                    <ul class="info_game">
-                        <li class="list_card">
-                            <b class="bolt">Genre:</b> Shooter
-                        </li>
-                        <li class="list_card">
-                            <b class="bolt">Platform:</b> PC(Windows)
-                        </li>
-                        <li class="list_card">
-                            <b class="bolt">Publisher:</b> Activision Blizzard King
-                        </li>
-                        <li class="list_card">
-                            <b class="bolt">Developer:</b> Blizzard Entertainment
-                        </li>
-                        <li class="list_card">
-                            <b class="bolt">Release_date:</b> 2022-10-04
-                        </li>
-                    </ul>
-                </div>
-            </article>
-
-            <article class="card">
-                <div class="card_games">
-                    <div>
-                        <img src="./img/img_about.jpeg" alt="img">
-                    </div>
-
-                    <div class="card_title">
-                        <h3 class="name_game">Overwatch 2</h3>
-                        <p class="info_game">
-                            Big changes come to the Overwatch formula in this sequel...
-                        </p>
-                    </div>
-                </div>
-                <div class="card_text">
-                    <ul class="info_game">
-                        <li class="list_card">
-                            <b class="bolt">Genre:</b> Shooter
-                        </li>
-                        <li class="list_card">
-                            <b class="bolt">Platform:</b> PC(Windows)
-                        </li>
-                        <li class="list_card">
-                            <b class="bolt">Publisher:</b> Activision Blizzard King
-                        </li>
-                        <li class="list_card">
-                            <b class="bolt">Developer:</b> Blizzard Entertainment
-                        </li>
-                        <li class="list_card">
-                            <b class="bolt">Release_date:</b> 2022-10-04
-                        </li>
-                    </ul>
-                </div>
-            </article>
-
-            <article class="card">
-                <div class="card_games">
-                    <div>
-                        <img src="./img/img_about.jpeg" alt="img">
-                    </div>
-
-                    <div class="card_title">
-                        <h3 class="name_game">Overwatch 2</h3>
-                        <p class="info_game">
-                            Big changes come to the Overwatch formula in this sequel...
-                        </p>
-                    </div>
-                </div>
-                <div class="card_text">
-                    <ul class="info_game">
-                        <li class="list_card">
-                            <b class="bolt">Genre:</b> Shooter
-                        </li>
-                        <li class="list_card">
-                            <b class="bolt">Platform:</b> PC(Windows)
-                        </li>
-                        <li class="list_card">
-                            <b class="bolt">Publisher:</b> Activision Blizzard King
-                        </li>
-                        <li class="list_card">
-                            <b class="bolt">Developer:</b> Blizzard Entertainment
-                        </li>
-                        <li class="list_card">
-                            <b class="bolt">Release_date:</b> 2022-10-04
-                        </li>
-                    </ul>
-                </div>
-            </article>
-
-            <article class="card">
-                <div class="card_games">
-                    <div>
-                        <img src="./img/img_about.jpeg" alt="img">
-                    </div>
-
-                    <div class="card_title">
-                        <h3 class="name_game">Overwatch 2</h3>
-                        <p class="info_game">
-                            Big changes come to the Overwatch formula in this sequel...
-                        </p>
-                    </div>
-                </div>
-                <div class="card_text">
-                    <ul class="info_game">
-                        <li class="list_card">
-                            <b class="bolt">Genre:</b> Shooter
-                        </li>
-                        <li class="list_card">
-                            <b class="bolt">Platform:</b> PC(Windows)
-                        </li>
-                        <li class="list_card">
-                            <b class="bolt">Publisher:</b> Activision Blizzard King
-                        </li>
-                        <li class="list_card">
-                            <b class="bolt">Developer:</b> Blizzard Entertainment
-                        </li>
-                        <li class="list_card">
-                            <b class="bolt">Release_date:</b> 2022-10-04
-                        </li>
-                    </ul>
-                </div>
-            </article>
-
-            <article class="card">
-                <div class="card_games">
-                    <div>
-                        <img src="./img/img_about.jpeg" alt="img">
-                    </div>
-
-                    <div class="card_title">
-                        <h3 class="name_game">Overwatch 2</h3>
-                        <p class="info_game">
-                            Big changes come to the Overwatch formula in this sequel...
-                        </p>
-                    </div>
-                </div>
-                <div class="card_text">
-                    <ul class="info_game">
-                        <li class="list_card">
-                            <b class="bolt">Genre:</b> Shooter
-                        </li>
-                        <li class="list_card">
-                            <b class="bolt">Platform:</b> PC(Windows)
-                        </li>
-                        <li class="list_card">
-                            <b class="bolt">Publisher:</b> Activision Blizzard King
-                        </li>
-                        <li class="list_card">
-                            <b class="bolt">Developer:</b> Blizzard Entertainment
-                        </li>
-                        <li class="list_card">
-                            <b class="bolt">Release_date:</b> 2022-10-04
-                        </li>
-                    </ul>
-                </div>
-            </article>
+            </template>
         </div>
 
         <footer class="footer">
@@ -370,6 +125,7 @@
                    for-beginners-it">'Frontend for beginners' from Masters Academy in 2023,</a> by Igor</p>
 
         </footer>
+        <script src="./scripts/games.js"></script>
 
     </body>
 </html>
