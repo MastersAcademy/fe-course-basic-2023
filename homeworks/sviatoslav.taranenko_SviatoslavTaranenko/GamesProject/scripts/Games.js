@@ -195,7 +195,7 @@ function createCardElement(game) {
 }
 
 function highlightText(element, searchText) {
-    const innerHTML = element.innerHTML;
+    const { innerHTML } = element;
     const lowerCaseInnerHTML = innerHTML.toLowerCase();
     const lowerCaseSearchText = searchText.toLowerCase();
 
@@ -226,7 +226,7 @@ function renderGames(games) {
 
     cardContainer.innerHTML = '';
 
-    games.forEach(game => {
+    games.forEach((game) => {
         const cardElement = createCardElement(game);
         if (cardElement) {
             cardContainer.appendChild(cardElement);
@@ -251,7 +251,7 @@ function filterGames() {
 
         const searchText = searchTextElement.value.toLowerCase();
 
-        const filteredGames = gamesData.filter(game => {
+        const filteredGames = gamesData.filter((game) => {
             const isNewMatch = isNewChecked && game.isNew;
             const isOldMatch = isOldChecked && !game.isNew;
             const genreMatch = selectedGenre === 'Genre' || game.genre === selectedGenre;
@@ -264,9 +264,9 @@ function filterGames() {
         renderGames(filteredGames);
 
         const cardElements = document.querySelectorAll('.card-template');
-        cardElements.forEach(cardElement => {
+        cardElements.forEach((cardElement) => {
             const elementsToHighlight = cardElement.querySelectorAll('[data-card-genre], [data-type="Games__cards_top_text_title"], [data-type="Games__cards_top_text_p"]');
-            elementsToHighlight.forEach(element => {
+            elementsToHighlight.forEach((element) => {
                 highlightText(element, searchText);
             });
         });
@@ -276,9 +276,9 @@ function filterGames() {
         const searchText = searchTextElement.value.toLowerCase();
 
         const cardElements = document.querySelectorAll('[data-type="card-template"]');
-        cardElements.forEach(cardElement => {
+        cardElements.forEach((cardElement) => {
             const elementsToHighlight = cardElement.querySelectorAll('[data-card-genre], [data-type="Games__cards_top_text_title"], [data-type="Games__cards_top_text_p"]');
-            elementsToHighlight.forEach(element => {
+            elementsToHighlight.forEach((element) => {
                 highlightText(element, searchText);
             });
         });
@@ -289,25 +289,25 @@ function init() {
     renderGames(gamesData);
     filterGames();
 
-    const gamePropertiesSelect = document.getElementById('game_properties');
-    const platformRadio = document.getElementById('platform');
-    const onlineGamesRadio = document.getElementById('online-games');
+    // const gamePropertiesSelect = document.getElementById('game_properties');
+    // const platformRadio = document.getElementById('platform');
+    // const onlineGamesRadio = document.getElementById('online-games');
     const applyButton = document.getElementById('apply');
 
-    gamePropertiesSelect.addEventListener('change', () => {
-        const selectedGenre = gamePropertiesSelect.value;
-        filterByGenre(selectedGenre);
-    });
-
-    platformRadio.addEventListener('change', () => {
-        const selectedPlatform = platformRadio.value;
-        filterByPlatform(selectedPlatform);
-    });
-
-    onlineGamesRadio.addEventListener('change', () => {
-        const isOnlineChecked = onlineGamesRadio.checked;
-        filterByOnlineGames(isOnlineChecked);
-    });
+    // gamePropertiesSelect.addEventListener('change', () => {
+    //     const selectedGenre = gamePropertiesSelect.value;
+    //     filterByGenre(selectedGenre);
+    // });
+    //
+    // platformRadio.addEventListener('change', () => {
+    //     const selectedPlatform = platformRadio.value;
+    //     filterByPlatform(selectedPlatform);
+    // });
+    //
+    // onlineGamesRadio.addEventListener('change', () => {
+    //     const isOnlineChecked = onlineGamesRadio.checked;
+    //     filterByOnlineGames(isOnlineChecked);
+    // });
 
     applyButton.addEventListener('click', () => {
         filterGames();
