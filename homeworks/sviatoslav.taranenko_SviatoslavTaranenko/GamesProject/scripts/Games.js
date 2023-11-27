@@ -214,7 +214,7 @@ function highlightText(element, searchText) {
     }
 }
 
-function renderGames(game) {
+function renderGames(gamess) {
     const cardContainer = document.querySelector('[data-type="card-container"]');
 
     if (!cardContainer) {
@@ -226,7 +226,7 @@ function renderGames(game) {
 
     cardContainer.innerHTML = '';
 
-    game.forEach((game) => {
+    gamess.forEach((game) => {
         const cardElement = createCardElement(game);
         if (cardElement) {
             cardContainer.appendChild(cardElement);
