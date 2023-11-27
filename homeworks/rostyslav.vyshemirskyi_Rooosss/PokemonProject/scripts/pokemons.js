@@ -268,9 +268,9 @@ function createCardElement(pokemonsList) {
     cardImage.src = pokemonsList.ThumbnailImage;
     cardName.textContent = pokemonsList.name;
     cardHeight.textContent = pokemonsList.height;
-    cardWeight.innerHTML = pokemonsList.weight;
-    cardNumber.innerHTML = pokemonsList.number;
-    return cardItem.content.cloneNode(true);
+    cardWeight.textContent = pokemonsList.weight;
+    cardNumber.textContent = pokemonsList.number;
+    return cardContent.cloneNode(true);
 }
 
 function renderCards(container, pokemonsList) {
