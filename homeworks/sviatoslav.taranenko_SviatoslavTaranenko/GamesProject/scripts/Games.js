@@ -132,7 +132,7 @@ const games = [
     },
 ];
 
-const gamesData = games.map(game => ({ ...game, isNew: game.release_date.includes('2022') }));
+const gamesData = games.map((game) => ({ ...game, isNew: game.release_date.includes('2022') }));
 
 function createCardElement(game) {
     const template = document.querySelector('.card-template');
