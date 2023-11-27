@@ -57,7 +57,45 @@ const ulContainer = document.querySelector('[data-type="cards-container"]');
 
 renderCards(ulContainer, games);
 
-// filtration function
+// filtration functions
+function extractReleaseYears() {
+    const gameDates = document.body.querySelectorAll('[data-type="release_date"]');
+    return Array.from(gameDates).map((dateElement) => {
+        const releaseDateText = dateElement.innerText.replace('Release date:', '').trim();
+        const releaseDate = new Date(releaseDateText);
+        return releaseDate.getFullYear();
+    });
+}
+
+function isCardWithinYearRange(year, checkNew = false, checkOld = false) {
+    const isNewCondition = year >= 2020 && checkNew;
+    const isOldCondition = year <= 2010 && checkOld;
+    return isNewCondition || isOldCondition;
+}
+
+function isGenreMatching(gameCard, selectedGenreNow) {
+    const gameGenreElement = gameCard.querySelector('[data-type="genre"]');
+    const gameGenre = gameGenreElement.textContent.replace('Genre:', ' ').trim().toLowerCase();
+    return selectedGenreNow === 'genre' || selectedGenreNow === 'allgames' || gameGenre === selectedGenreNow;
+}
+
+function isSearchMatching(gameCard, valueSearch) {
+    const cardTitle = gameCard.querySelector('[data-type="title"]').innerText.toLowerCase();
+    const cardDescription = gameCard.querySelector('[data-type="description"]').innerText.toLowerCase();
+    const searchTerm = valueSearch.toLowerCase().trim();
+    return valueSearch === '' || cardTitle.includes(searchTerm) || cardDescription.includes(searchTerm);
+}
+
+function updateCardVisibility(gameCard, shouldDisplay) {
+    gameCard.style.display = shouldDisplay ? 'block' : 'none';
+}
+
+function updateNoResultsDisplay(gameCardElements, noResultsElement) {
+    const hasResults = Array.from(gameCardElements).some((cardElement) => cardElement.style.display === 'block');
+    noResultsElement.style.display = hasResults ? 'none' : 'block';
+    noResultsElement.innerText = hasResults ? '' : 'No results!';
+}
+
 function handleFilters() {
     const checkNew = document.querySelector('[data-type="check-new"]');
     const checkOld = document.querySelector('[data-type="check-old"]');
@@ -66,69 +104,36 @@ function handleFilters() {
     const gameCardElements = document.body.querySelectorAll('.game__cod2');
     const noResultsElement = document.querySelector('[data-type="text-h2"]');
 
-    let isNewChecked = false;
-    let isOldChecked = false;
     let selectedGenreNow = selectElement.value;
-
-    const gameDates = document.body.querySelectorAll('[data-type="release_date"]');
-    const gameDatesArray = Array.from(gameDates).map((dateElement) => {
-        const releaseDateText = dateElement.innerText.replace('Release date:', '').trim();
-        const releaseDate = new Date(releaseDateText);
-        return releaseDate.getFullYear();
-    });
-
-    let updateTimeout;
+    const gameDatesArray = extractReleaseYears();
 
     const updateCardsDisplay = () => {
-        clearTimeout(updateTimeout);
+        gameCardElements.forEach((gameCard, index) => {
+            const year = gameDatesArray[index];
 
-        updateTimeout = setTimeout(() => {
-            gameCardElements.forEach((gameCard, index) => {
-                const gameGenreElement = gameCard.querySelector('[data-type="genre"]');
-                const gameGenre = gameGenreElement.textContent.replace('Genre:', ' ').trim().toLowerCase();
-                const year = gameDatesArray[index];
+            const isNewCondition = isCardWithinYearRange(year, checkNew.checked, false);
+            const isOldCondition = isCardWithinYearRange(year, false, checkOld.checked);
+            const isGenreCondition = isGenreMatching(gameCard, selectedGenreNow);
+            const isSearchCondition = isSearchMatching(gameCard, valueSearch.value);
 
-                const isGenreVisible = gameCard.style.display !== 'none';
-                const isNewCondition = year >= 2020 && isNewChecked;
-                const isOldCondition = year <= 2010 && isOldChecked;
-                const isGenreCondition = selectedGenreNow === 'genre' || selectedGenreNow === 'allgames' || gameGenre === selectedGenreNow;
-                const isSearchCondition = valueSearch.value.toLowerCase() === '' || (gameCard.querySelector('[data-type="title"]').innerText.toLowerCase().includes(valueSearch.value.toLowerCase())
-                    || gameCard.querySelector('[data-type="description"]').innerText.toLowerCase().includes(valueSearch.value.toLowerCase()));
+            const isNoFilterSelected = !checkNew.checked && !checkOld.checked && selectedGenreNow === 'genre' && valueSearch.value.trim() === '';
 
-                const isNoFilterSelected = !isNewChecked && !isOldChecked && selectedGenreNow === 'genre' && valueSearch.value.trim() === '';
+            const shouldDisplay = (isNewCondition || isOldCondition || !gameCard.style.display !== 'none' || isNoFilterSelected)
+            && isGenreCondition && isSearchCondition;
 
-                const shouldDisplay = (isNewCondition || isOldCondition
-                    || !isGenreVisible || isNoFilterSelected)
-                    && isGenreCondition && isSearchCondition;
-                gameCard.style.display = shouldDisplay ? 'block' : 'none';
-            });
+            updateCardVisibility(gameCard, shouldDisplay);
+        });
 
-            const hasResults = Array.from(gameCardElements).some((cardElement) => cardElement.style.display === 'block');
-            noResultsElement.style.display = hasResults ? 'none' : 'block';
-            noResultsElement.innerText = hasResults ? '' : 'No results!';
-        }, 200);
+        updateNoResultsDisplay(gameCardElements, noResultsElement);
     };
 
-    checkNew.addEventListener('click', () => {
-        isNewChecked = !isNewChecked;
-        updateCardsDisplay();
-    });
-
-    checkOld.addEventListener('click', () => {
-        isOldChecked = !isOldChecked;
-        updateCardsDisplay();
-    });
-
+    checkNew.addEventListener('click', updateCardsDisplay);
+    checkOld.addEventListener('click', updateCardsDisplay);
     selectElement.addEventListener('change', () => {
         selectedGenreNow = selectElement.value;
         updateCardsDisplay();
     });
-
-    valueSearch.addEventListener('input', () => {
-        updateCardsDisplay();
-    });
-
-    updateCardsDisplay();
+    valueSearch.addEventListener('input', updateCardsDisplay);
 }
 
 handleFilters();
