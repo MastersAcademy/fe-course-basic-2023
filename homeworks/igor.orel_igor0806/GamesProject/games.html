@@ -65,13 +65,14 @@
 
             <div class="filter_boxes">
                 <input type="checkbox" class="filter_checkbox" id="New" name="New" value="New" data-type-filter="new">
-                <label for="new">New</label>
+                <label for="New">New</label>
                 <input type="checkbox" class="filter_checkbox" id="Old" name="Old" value="Old" data-type-filter="old">
-                <label for="old">Old</label>
+                <label for="Old">Old</label>
             </div>
 
             <div class="filter_search">
                 <input type="search" id="search" name="search" placeholder="Search">
+                <label for="search"></label>
                 <input type="submit" value="Apply">
             </div>
 
@@ -82,25 +83,29 @@
         <div class="card_cards">
             <ul class="card_cards" data-type="games-list"></ul>
             <template data-type="card-template">
-                <div class="card_games">
-                    <img data-card-img alt="img">
-                    <div class="card_title">
-                        <h3 class="name_game" data-card-title></h3>
-                        <p class="info_game" data-card-description></p>
+                <div class="card_card">
+                    <div class="card_games">
+                        <div class="card_img">
+                            <img data-card-img alt="img" src="" width="90px" height="90px">
+                        </div>
+                        <div class="card_title">
+                            <h3 class="name_game" data-card-title></h3>
+                            <p class="info_game" data-card-description></p>
+                        </div>
                     </div>
-                </div>
-                <div class="card_text">
-                    <ul class="info_game">
-                        <li data-card-genre></li>
+                    <div class="card_text">
+                        <ul class="info_game">
+                            <li data-card-genre></li>
 
-                        <li data-card-platform></li>
+                            <li data-card-platform></li>
 
-                        <li data-card-publisher></li>
+                            <li data-card-publisher></li>
 
-                        <li data-card-developer></li>
+                            <li data-card-developer></li>
 
-                        <li data-card-release-data></li>
-                    </ul>
+                            <li data-card-release-data></li>
+                        </ul>
+                    </div>
                 </div>
             </template>
         </div>

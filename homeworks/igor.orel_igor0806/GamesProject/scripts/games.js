@@ -140,6 +140,8 @@ function createCardElement(game) {
     const cardImage = cardClone.querySelector('[data-card-img]');
 
     const cardDescription = cardClone.querySelector('[data-card-description]');
+    const maxLength = 60;
+
     const cardGenre = cardClone.querySelector('[data-card-genre]');
     const cardPlatform = cardClone.querySelector('[data-card-platform]');
     const cardPublisher = cardClone.querySelector('[data-card-publisher]');
@@ -148,7 +150,9 @@ function createCardElement(game) {
 
     cardTitle.textContent = game.title;
     cardImage.src = game.thumbnail;
-    cardDescription.textContent = game.short_description;
+    cardDescription.textContent = game.short_description.length > maxLength
+        ? `${game.short_description.slice(0, maxLength)}...`
+        : game.short_description;
     cardGenre.textContent = game.genre;
     cardPlatform.textContent = game.platform;
     cardPublisher.textContent = game.publisher;

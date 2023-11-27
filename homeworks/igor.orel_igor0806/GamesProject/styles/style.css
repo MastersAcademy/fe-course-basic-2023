@@ -153,8 +153,17 @@ a {
   display: flex;
   gap: 40px;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-bottom: 40px;
+}
+
+.card_card {
+  width: 275px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ECECEC;
+  border-radius: 12px;
+  padding: 12px 12px 20px;
 }
 
 .card_games {
