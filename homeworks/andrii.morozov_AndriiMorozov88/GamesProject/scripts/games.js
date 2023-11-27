@@ -1,7 +1,5 @@
 import { games } from './games-mock.js';
 
-console.log(games);
-
 const cardContainer = document.querySelector('[data-card-container]');
 const genreSelect = document.querySelector('[data-select-genre]');
 const newGameCheck = document.querySelector('[data-new-games]');
@@ -47,59 +45,34 @@ function getYear(string) {
     const dateArray = string.split('-');
     return Number(dateArray[0]);
 }
-function getGenreSelectArray(array) {
-    let genreSelectArray = [];
-    switch (genreSelect.value) {
-        case '1':
-            genreSelectArray = array.filter((element) => element.genre === 'Shooter');
-            break;
-        case '2':
-            genreSelectArray = array.filter((element) => element.genre === 'ARPG');
-            break;
-        case '3':
-            genreSelectArray = array.filter((element) => element.genre === 'Battle Royale');
-            break;
-        case '4':
-            genreSelectArray = array.filter((element) => element.genre === 'Strategy');
-            break;
-        case '5':
-            genreSelectArray = array.filter((element) => element.genre === 'MMORPG');
-            break;
-        case '6':
-            genreSelectArray = array.filter((element) => element.genre === 'Fighting');
-            break;
-        default:
-            return array;
-    }
-    return genreSelectArray;
-}
-function getNewAndOldGamesArray(arr) {
-    if (newGameCheck.checked && !oldGameCheck.checked) {
-        return arr.filter((element) => getYear(element.release_date) > 2020);
-    }
-    if (oldGameCheck.checked && !newGameCheck.checked) {
-        return arr.filter((element) => getYear(element.release_date) < 2010);
-    }
-    if (oldGameCheck.checked && newGameCheck.checked) {
-        return arr.filter((e) => getYear(e.release_date) < 2010 || getYear(e.release_date) > 2020);
-    }
-    return arr;
-}
-function getSearchArray(array) {
-    const searchArray = [];
+function getFilterArray(array) {
+    const filterArray = [];
+    const searchInputValue = searchInput.value.toLowerCase();
     array.forEach((element) => {
-        const searchInputValue = searchInput.value.toLowerCase();
         const isElTitleInc = element.title.toLowerCase().includes(searchInputValue);
         const isElDescInc = element.short_description.toLowerCase().includes(searchInputValue);
-        if (isElTitleInc || isElDescInc) searchArray.push(element);
+        const isGenreSelected = element.genre === genreSelect.value;
+        const isGenreNonSelected = genreSelect.value === '0';
+        const releaseYear = getYear(element.release_date);
+        if ((isElTitleInc || isElDescInc) && (isGenreSelected || isGenreNonSelected)) {
+            if (newGameCheck.checked && !oldGameCheck.checked) {
+                if (releaseYear > 2020) filterArray.push(element);
+            }
+            if (oldGameCheck.checked && !newGameCheck.checked) {
+                if (releaseYear < 2010) filterArray.push(element);
+            }
+            if (oldGameCheck.checked && newGameCheck.checked) {
+                if (releaseYear > 2020 || releaseYear < 2010) filterArray.push(element);
+            }
+            if (!oldGameCheck.checked && !newGameCheck.checked) {
+                filterArray.push(element);
+            }
+        }
     });
-    return searchArray;
+    return filterArray;
 }
 function showFilterArray() {
-    const firstLevelFilter = getSearchArray(games);
-    const secondLevelFilter = getGenreSelectArray(firstLevelFilter);
-    const thirdLevelFilter = getNewAndOldGamesArray(secondLevelFilter);
-    renderCards(cardContainer, thirdLevelFilter);
+    renderCards(cardContainer, getFilterArray(games));
 }
 function init() {
     renderCards(cardContainer, games);
