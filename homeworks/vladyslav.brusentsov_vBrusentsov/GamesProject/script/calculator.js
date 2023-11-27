@@ -3,7 +3,7 @@
  * @param firstValue string with first number
  * @param secondValue string with second number
  * @param operation string with operation symbol
- * @returns {string|number} result of calculation or error message:
+ * @returns {games} result of calculation or error message:
  * - if firstValue or secondValue is not a number, return 'Enter a number'
  * - if operation is not '+', '-', '*', '/', return 'Choose a valid operation'
  * - if the result is more than 100, return 'Result is too big'
@@ -11,26 +11,55 @@
  *
  */
 function calculate(firstValue, secondValue, operation) {
+    const startTime = new Date();
+    const monthAbbreviations = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const padZero = (num) => (num < 10 ? `0${num}` : num);
+    const formattedStartTime = `${padZero(startTime.getDate())}-${monthAbbreviations[startTime.getMonth()]}-${startTime.getFullYear()}, ${padZero(startTime.getHours())}:${padZero(startTime.getMinutes())}`;
+    console.log(formattedStartTime);
+    console.log(startTime);
     let resultOperation = 0;
+    let resultMessage = '';
+
     if (Number.isNaN(+firstValue) || Number.isNaN(+secondValue)) {
-        return 'Error: Enter a number';
+        return {
+            result: 'Error: Enter a number',
+        };
     }
+
     switch (operation) {
         case '+':
             resultOperation = Number(firstValue) + Number(secondValue);
-            return resultOperation > 100 ? 'Result is too big' : resultOperation;
+            break;
         case '-':
             resultOperation = Number(firstValue) - Number(secondValue);
-            return resultOperation > 100 ? 'Result is too big' : resultOperation;
+            break;
         case '*':
             resultOperation = Number(firstValue) * Number(secondValue);
-            return resultOperation > 100 ? 'Result is too big' : resultOperation;
+            break;
         case '/':
             resultOperation = Number(firstValue) / Number(secondValue);
-            return resultOperation > 100 ? 'Result is too big' : resultOperation;
+            break;
         default:
-            return 'Choose a valid operation';
+            return {
+                result: 'Choose a valid operation',
+            };
     }
+    if (resultOperation === 1) {
+        resultMessage = `${resultOperation} game`;
+    } else if (resultOperation > 1 && resultOperation <= 100) {
+        resultMessage = `${resultOperation} games`;
+    } else {
+        resultMessage = 'Result is too big';
+    }
+    const endTime = new Date();
+    console.log(endTime);
+    const executionTime = endTime - startTime;
+    console.log(executionTime);
+    return {
+        startedTime: formattedStartTime,
+        result: resultMessage,
+        benchmark: executionTime,
+    };
 }
 
 window.calculate = calculate;

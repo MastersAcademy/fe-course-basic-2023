@@ -99,11 +99,18 @@ body {
   font-weight: 400;
 }
 
-.calculate-opertaion {
+.calculate-operation {
   font-family: Roboto;
   font-size: 48px;
   font-style: normal;
   font-weight: 700;
   line-height: 32px;
   color: #EF4934;
+}
+
+.calculate-benchmark {
+  font-family: Roboto;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
 }

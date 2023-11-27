@@ -26,13 +26,26 @@ body {
 
 .header__items {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   align-items: center;
 }
 
 .header__items a {
   text-decoration: none;
   color: #FFF;
+}
+
+.header__items_Calculator {
+  color: #FFF;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18.75px;
+  margin-right: 40px;
+}
+
+.header__items_Calculator:active {
+  text-decoration: underline;
 }
 
 .header__items_Games {
