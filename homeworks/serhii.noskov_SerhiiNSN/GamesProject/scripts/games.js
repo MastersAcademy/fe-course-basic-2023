@@ -131,70 +131,72 @@ const gamesNew = [
     },
 ];
 
+const template = document.querySelector('[data-type="card-template"]');
+let gamesDisplayed = [...gamesNew];
+let checkboxNew;
+let checkboxOld;
+const radioButtons = document.querySelectorAll('.custom-radio');
+const searchInput = document.querySelector('.search');
+const dropList = document.querySelector('.drop-list');
+
+function createCardElement(game) {
+    const cardCopy = document.createElement('li');
+    cardCopy.classList.add('games__card');
+    cardCopy.innerHTML = template.innerHTML;
+
+    cardCopy.querySelector('[data-card-img]').src = game.thumbnail;
+    cardCopy.querySelector('[data-card-title]').textContent = game.title;
+    cardCopy.querySelector('[data-card-release]').innerHTML = `<span class='bold'>Release_date:</span> ${game.release_date}`;
+
+    return cardCopy;
+}
+
+function renderCards(container, games) {
+    const fragment = document.createDocumentFragment();
+    const containerElement = document.querySelector(`[data-type="${container}"]`);
+
+    games.forEach((game) => {
+        const card = createCardElement(game);
+        fragment.appendChild(card);
+    });
+
+    containerElement.appendChild(fragment);
+}
+
+function handleCheckboxChange() {
+    const isNewChecked = checkboxNew.checked;
+    const isOldChecked = checkboxOld.checked;
+
+    const isDisabled = isNewChecked || isOldChecked;
+
+    radioButtons.forEach((radioButton) => {
+        radioButton.disabled = isDisabled;
+    });
+
+    searchInput.disabled = isDisabled;
+
+    dropList.disabled = isDisabled;
+
+    gamesDisplayed = gamesNew.filter((game) => {
+        const releaseYear = new Date(game.release_date).getFullYear();
+
+        if (isNewChecked && !isOldChecked) {
+            return releaseYear > 2020;
+        } if (isOldChecked && !isNewChecked) {
+            return releaseYear < 2010;
+        } if (isNewChecked && isOldChecked) {
+            return releaseYear < 2010 || releaseYear > 2020;
+        }
+        return true;
+    });
+
+    const cardContainer = document.querySelector('[data-type="card-container"]');
+    cardContainer.innerHTML = '';
+
+    renderCards('card-container', gamesDisplayed);
+}
+
 function init() {
-    const template = document.querySelector('[data-type="card-template"]');
-    let gamesDisplayed = [...gamesNew];
-    let checkboxNew;
-    let checkboxOld;
-    const radioButtons = document.querySelectorAll('.custom-radio');
-    const searchInput = document.querySelector('.search');
-    const dropList = document.querySelector('.drop-list');
-
-    function createCardElement(game) {
-        const cardCopy = document.createElement('li');
-        cardCopy.classList.add('games__card');
-        cardCopy.innerHTML = template.innerHTML;
-
-        cardCopy.querySelector('[data-card-img]').src = game.thumbnail;
-        cardCopy.querySelector('[data-card-title]').textContent = game.title;
-        cardCopy.querySelector('[data-card-release]').innerHTML = `<span class='bold'>Release_date:</span> ${game.release_date}`;
-
-        return cardCopy;
-    }
-
-    function renderCards(container, games) {
-        const fragment = document.createDocumentFragment();
-        const containerElement = document.querySelector(`[data-type="${container}"]`);
-
-        games.forEach((game) => {
-            const card = createCardElement(game);
-            fragment.appendChild(card);
-        });
-
-        containerElement.appendChild(fragment);
-    }
-
-    function handleCheckboxChange() {
-        const isNewChecked = checkboxNew.checked;
-        const isOldChecked = checkboxOld.checked;
-
-        radioButtons.forEach((radioButton) => {
-            radioButton.disabled = isNewChecked || isOldChecked;
-        });
-
-        searchInput.disabled = isNewChecked || isOldChecked;
-
-        dropList.disabled = isNewChecked || isOldChecked;
-
-        gamesDisplayed = gamesNew.filter((game) => {
-            const releaseYear = new Date(game.release_date).getFullYear();
-
-            if (isNewChecked && !isOldChecked) {
-                return releaseYear > 2020;
-            } if (isOldChecked && !isNewChecked) {
-                return releaseYear < 2010;
-            } if (isNewChecked && isOldChecked) {
-                return releaseYear < 2010 || releaseYear > 2020;
-            }
-            return true;
-        });
-
-        const cardContainer = document.querySelector('[data-type="card-container"]');
-        cardContainer.innerHTML = '';
-
-        renderCards('card-container', gamesDisplayed);
-    }
-
     checkboxNew = document.querySelector('[data-filter="new"]');
     checkboxOld = document.querySelector('[data-filter="old"]');
 
