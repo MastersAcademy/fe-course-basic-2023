@@ -194,6 +194,26 @@ function createCardElement(game) {
     return clone;
 }
 
+function highlightText(element, searchText) {
+    const innerHTML = element.innerHTML;
+    const lowerCaseInnerHTML = innerHTML.toLowerCase();
+    const lowerCaseSearchText = searchText.toLowerCase();
+
+    element.innerHTML = innerHTML.replace(/<\/mark>/g, '').replace(/<mark>/g, '');
+
+    let index = lowerCaseInnerHTML.indexOf(lowerCaseSearchText);
+
+    while (index !== -1) {
+        const start = innerHTML.substring(0, index);
+        const match = innerHTML.substring(index, index + searchText.length);
+        const end = innerHTML.substring(index + searchText.length);
+
+        element.innerHTML = `${start}<mark>${match}</mark>${end}`;
+
+        index = lowerCaseInnerHTML.indexOf(lowerCaseSearchText, index + 1);
+    }
+}
+
 function renderGames(games) {
     const cardContainer = document.querySelector('[data-type="card-container"]');
 
@@ -213,7 +233,7 @@ function renderGames(games) {
 
             const elementsToHighlight = cardElement.querySelectorAll('[data-card-genre], [data-type="Games__cards_top_text_title"], [data-type="Games__cards_top_text_p"]');
 
-            elementsToHighlight.forEach(element => {
+            elementsToHighlight.forEach((element) => {
                 highlightText(element, searchText);
             });
         }
@@ -263,26 +283,6 @@ function filterGames() {
             });
         });
     });
-}
-
-function highlightText(element, searchText) {
-    const innerHTML = element.innerHTML;
-    const lowerCaseInnerHTML = innerHTML.toLowerCase();
-    const lowerCaseSearchText = searchText.toLowerCase();
-
-    element.innerHTML = innerHTML.replace(/<\/mark>/g, '').replace(/<mark>/g, '');
-
-    let index = lowerCaseInnerHTML.indexOf(lowerCaseSearchText);
-
-    while (index !== -1) {
-        const start = innerHTML.substring(0, index);
-        const match = innerHTML.substring(index, index + searchText.length);
-        const end = innerHTML.substring(index + searchText.length);
-
-        element.innerHTML = `${start}<mark>${match}</mark>${end}`;
-
-        index = lowerCaseInnerHTML.indexOf(lowerCaseSearchText, index + 1);
-    }
 }
 
 function init() {
