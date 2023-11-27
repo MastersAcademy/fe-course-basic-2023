@@ -175,3 +175,40 @@ function renderCards(container, gamesCards) {
 }
 const gameList = document.querySelector('[data-type="games-list"]');
 renderCards(gameList, games);
+
+function filterCards() {
+    const newCard = document.querySelector('[data-type-filter="new"]');
+    const oldCard = document.querySelector('[data-type-filter="old"]');
+
+    const isNewCard = newCard.checked;
+    const isOldCard = oldCard.checked;
+
+    const filteredCard = games.filter((game) => {
+        const releaseYear = new Date(game.release_date).getFullYear();
+
+        if (isNewCard && isOldCard) {
+            return releaseYear <= 2010 || releaseYear >= 2020;
+        } if (isNewCard) {
+            return releaseYear >= 2020;
+        } if (isOldCard) {
+            return releaseYear <= 2010;
+        }
+        return true;
+    });
+
+    renderCards(gameList, filteredCard);
+}
+
+function init() {
+    const filterForm = document.querySelector('[data-type="filter-form"]');
+    const newCheckbox = document.querySelector('[data-type-filter="new"]');
+    const oldCheckbox = document.querySelector('[data-type-filter="old"]');
+
+    filterForm.addEventListener('change', filterCards);
+    newCheckbox.addEventListener('change', filterCards);
+    oldCheckbox.addEventListener('change', filterCards);
+
+    renderCards(gameList, games);
+}
+
+init();

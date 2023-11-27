@@ -49,8 +49,8 @@ input[type="radio"] {
 
 label[for="platform"],
 label[for="online"],
-label[for="new"],
-label[for="old"] {
+label[for="New"],
+label[for="Old"] {
   color: #FFF;
 }
 
