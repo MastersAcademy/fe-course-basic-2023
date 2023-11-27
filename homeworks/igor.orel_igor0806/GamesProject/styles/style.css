@@ -151,9 +151,8 @@ a {
 
 .card_cards {
   display: flex;
-  gap: 40px;
+  gap: 54px;
   flex-wrap: wrap;
-  justify-content: space-between;
   margin-bottom: 40px;
 }
 
@@ -173,13 +172,13 @@ a {
 }
 
 .card_text {
-  margin-left: 20px;
+  margin-left: 14px;
 }
 
 .info_game {
   list-style: none;
   margin: 0;
-  padding: 14px 0 0;
+  padding: 7px 0 0;
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
