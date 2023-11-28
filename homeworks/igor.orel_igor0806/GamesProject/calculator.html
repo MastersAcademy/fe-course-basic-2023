@@ -1,14 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta
-            name="viewport"
-            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-        >
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Form</title>
-        <link rel="stylesheet" href="styles/form.css">
+        <title>Basic JS</title>
+        <link rel="stylesheet" href="./styles/calculator.css">
     </head>
     <body>
 
@@ -43,17 +38,26 @@
             </div>
         </header>
 
-        <h1 class="login_title">Login page</h1>
-        <form class="login_form" action="./succes.html">
-            <label for="email_input">Email</label>
-            <input type="text" class="login_input" id="email_input" name="email" placeholder="Enter your email address">
-            <label for="password_input">Password</label>
-            <input type="password" class="login_input" id="password_input" name="password" placeholder="Enter your password">
-            <input type="checkbox" id="not_a_robot_checkbox" name="not_a_robot">
-            <label for="not_a_robot_checkbox">I’m not a robot</label>
-            <div id="errors-container"></div>
-            <button type="button" id="submit_button" value="Login">Login</button>
-        </form>
+        <h1>Calculator v. 1</h1>
+        <div class="field">
+            <label>
+                <input id="firstValue">
+            </label>
+            <label>
+                <select name="operation" id="operation">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="/">/</option>
+                    <option value="*">*</option>
+                    <option value="**">**</option>
+                </select>
+            </label>
+            <label>
+                <input id="secondValue">
+            </label>
+            <button id="calculate" type="button">=</button>
+            <span id="result"></span>
+        </div>
 
         <footer class="footer">
             <div class="social">
@@ -72,9 +76,10 @@
 
             <p class="footer_text">
                 Made with 💗 on course <a class="footer_link" href="https://www.mastersacademy.education/frontend-
-                       for-beginners-it">'Frontend for beginners' from Masters Academy in 2023,</a> by Igor</p>
+                           for-beginners-it">'Frontend for beginners' from Masters Academy in 2023,</a> by Igor</p>
 
         </footer>
-        <script src="./scripts/script.js"></script>
+        <script src="./scripts/script-calculator.js"></script>
+        <script src="./scripts/homework.js"></script>
     </body>
 </html>
