@@ -67,7 +67,11 @@ function extractReleaseYears() {
     });
 }
 
-function isCardWithinYearRange(year, checkNew = false, checkOld = false) {
+function isCardWithinYearRange(year, checkNew, checkOld) {
+    if (!checkNew && !checkOld) {
+        return true;
+    }
+
     const isNewCondition = year >= 2020 && checkNew;
     const isOldCondition = year <= 2010 && checkOld;
     return isNewCondition || isOldCondition;
@@ -111,17 +115,18 @@ function handleFilters() {
         gameCardElements.forEach((gameCard, index) => {
             const year = gameDatesArray[index];
 
-            const isNewCondition = isCardWithinYearRange(year, checkNew.checked, false);
-            const isOldCondition = isCardWithinYearRange(year, false, checkOld.checked);
-            const isGenreCondition = isGenreMatching(gameCard, selectedGenreNow);
-            const isSearchCondition = isSearchMatching(gameCard, valueSearch.value);
-
             const isNoFilterSelected = !checkNew.checked && !checkOld.checked && selectedGenreNow === 'genre' && valueSearch.value.trim() === '';
 
-            const shouldDisplay = (isNewCondition || isOldCondition || !gameCard.style.display !== 'none' || isNoFilterSelected)
-            && isGenreCondition && isSearchCondition;
+            if (isNoFilterSelected) {
+                return updateCardVisibility(gameCard, true);
+            }
 
-            updateCardVisibility(gameCard, shouldDisplay);
+            const isYearCondition = isCardWithinYearRange(year, checkNew.checked, checkOld.checked);
+            const isGenreCondition = isGenreMatching(gameCard, selectedGenreNow);
+            const isSearchCondition = isSearchMatching(gameCard, valueSearch.value);
+            const shouldDisplay = isYearCondition && isGenreCondition && isSearchCondition;
+
+            return updateCardVisibility(gameCard, shouldDisplay);
         });
 
         updateNoResultsDisplay(gameCardElements, noResultsElement);
