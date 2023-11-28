@@ -93,6 +93,7 @@
 .search__input {
   outline: none;
   border: none;
+  height: 40px;
 }
 
 .search__svg {
@@ -245,7 +246,6 @@
 
   .card {
     width: 350px;
-    height: 330px;
     gap: 20px;
   }
 
