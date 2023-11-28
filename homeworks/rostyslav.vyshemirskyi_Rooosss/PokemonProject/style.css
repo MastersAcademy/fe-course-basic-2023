@@ -144,6 +144,14 @@ body {
   opacity: 1;
 }
 
+.filters__radio:disabled + .filters__label-radio::after {
+  background-color: #808080;
+}
+
+.filters__radio:disabled + .filters__label-radio::after {
+  opacity: 1;
+}
+
 .filters__checkbox {
   opacity: 0;
 }
@@ -202,6 +210,10 @@ body {
   transform: translate(1px, 1px);
 }
 
+.hide {
+  display: none;
+}
+
 /*About*/
 
 .about__section {
@@ -237,6 +249,10 @@ body {
 }
 
 /* Pokemon */
+
+body::-webkit-scrollbar {
+  display: none;
+}
 
 .pokemon {
   padding-right: 52px;
