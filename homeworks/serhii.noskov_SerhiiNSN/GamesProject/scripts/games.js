@@ -133,11 +133,8 @@ const gamesNew = [
 
 const template = document.querySelector('[data-type="card-template"]');
 let gamesDisplayed = [...gamesNew];
-let checkboxNew;
-let checkboxOld;
-const radioButtons = document.querySelectorAll('.custom-radio');
-const searchInput = document.querySelector('.search');
-const dropList = document.querySelector('.drop-list');
+const checkboxNew = document.querySelector('[data-filter="new"]');
+const checkboxOld = document.querySelector('[data-filter="old"]');
 
 function createCardElement(game) {
     const cardCopy = document.createElement('li');
@@ -166,17 +163,6 @@ function renderCards(container, games) {
 function handleCheckboxChange() {
     const isNewChecked = checkboxNew.checked;
     const isOldChecked = checkboxOld.checked;
-
-    const isDisabled = isNewChecked || isOldChecked;
-
-    radioButtons.forEach((radioButton) => {
-        radioButton.disabled = isDisabled;
-    });
-
-    searchInput.disabled = isDisabled;
-
-    dropList.disabled = isDisabled;
-
     gamesDisplayed = gamesNew.filter((game) => {
         const releaseYear = new Date(game.release_date).getFullYear();
 
@@ -197,9 +183,6 @@ function handleCheckboxChange() {
 }
 
 function init() {
-    checkboxNew = document.querySelector('[data-filter="new"]');
-    checkboxOld = document.querySelector('[data-filter="old"]');
-
     checkboxNew.addEventListener('change', handleCheckboxChange);
     checkboxOld.addEventListener('change', handleCheckboxChange);
 
