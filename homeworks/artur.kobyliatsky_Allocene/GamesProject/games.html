@@ -45,12 +45,15 @@
             <div class="search__contain">
                 <form action="#" class="search__form">
                     <div class="form__select">
-                        <select name="genre" id="genre" class="genre" title="genre">
+                        <select name="genre" id="genre" class="genre" title="genre" data-type="genre-select">
                             <option value="genre" selected disabled hidden>Genre</option>
-                            <option value="sport">Sport</option>
                             <option value="shooter">Shooter</option>
-                            <option value="racing">Racing</option>
-                            <option value="horror">Horror</option>
+                            <option value="arpg">ARPG</option>
+                            <option value="battle royale">Battle Royale</option>
+                            <option value="strategy">Strategy</option>
+                            <option value="mmorpg">MMORPG</option>
+                            <option value="fighting">Fighting</option>
+                            <option value="allgames">All games</option>
                         </select>
                     </div>
                     <div class="radio">
@@ -67,18 +70,18 @@
                     </div>
                     <div class="checkbox">
                         <label class="form__checkbox">
-                            <input class="inp__check" type="checkbox" name="newOrOld" value="new">
+                            <input class="inp__check" type="checkbox" name="newOrOld" value="new" data-type="check-new">
                             <span class="custom__check"></span>
                             New
                         </label>
                         <label class="form__checkbox">
-                            <input class="inp__check" type="checkbox" name="newOrOld" value="old">
+                            <input class="inp__check" type="checkbox" name="newOrOld" value="old" data-type="check-old">
                             <span class="custom__check"></span>
                             Old
                         </label>
                     </div>
                     <div class="form__search">
-                        <input class="inp__search" type="search" placeholder="Search">
+                        <input class="inp__search" type="search" placeholder="Search" data-type="search">
                         <button class="search__button" type="submit">Apply</button>
                     </div>
                 </form>
@@ -91,257 +94,28 @@
                         <h1 class="text__heading">
                             Study project "Games"
                         </h1>
+                        <h2 class="text__heading" data-type="text-h2">
+                        </h2>
                     </div>
                     <div class="game__cards">
 
-                        <div class="game__cod2">
-                            <div class="cod2__general">
-                                <div class="cod2__general--img">
-                                    <img src="./img/Call_of_Duty-_Modern_Warfare_II.jpeg" alt="COD MW2">
+                        <template data-type="card-template">
+                            <li class="game__cod2" data-type="cards">
+                                <div class="cod2__general">
+                                    <div class="cod2__general--img" data-type="image">
+                                        <img src="#">
+                                    </div>
+                                    <div class="cod2__general--desc">
+                                        <h3 data-type="title"></h3>
+                                        <p data-type="description"></p>
+                                    </div>
                                 </div>
-                                <div class="cod2__general--desc">
-                                    <h3>COD: MWII</h3>
-                                    <p>
-                                        Big changes come to the COD: MWII formula in this sequel...
-                                    </p>
-                                </div>
-                            </div>
-                            <ul class="cod2__description">
-                                <li>
-                                    <b>Genre:</b> Shooter
-                                </li>
-                                <li>
-                                    <b>Platform:</b> PC, PS5, Xbox One
-                                </li>
-                                <li>
-                                    <b>Publisher:</b> Activision Blizzard
-                                </li>
-                                <li>
-                                    <b>Developer:</b> Infinity Ward
-                                </li>
-                                <li>
-                                    <b>Release date:</b> 28-10-2022
-                                </li>
-                            </ul>
-                        </div>
+                                <ul class="cod2__description" data-type="short-description">
+                                </ul>
+                            </li>
+                        </template>
 
-                        <div class="game__cod2">
-                            <div class="cod2__general">
-                                <div class="cod2__general--img">
-                                    <img src="./img/Call_of_Duty-_Modern_Warfare_II.jpeg" alt="COD MW2">
-                                </div>
-                                <div class="cod2__general--desc">
-                                    <h3>COD: MWII</h3>
-                                    <p>
-                                        Big changes come to the COD: MWII formula in this sequel...
-                                    </p>
-                                </div>
-                            </div>
-                            <ul class="cod2__description">
-                                <li>
-                                    <b>Genre:</b> Shooter
-                                </li>
-                                <li>
-                                    <b>Platform:</b> PC, PS5, Xbox One
-                                </li>
-                                <li>
-                                    <b>Publisher:</b> Activision Blizzard
-                                </li>
-                                <li>
-                                    <b>Developer:</b> Infinity Ward
-                                </li>
-                                <li>
-                                    <b>Release date:</b> 28-10-2022
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="game__cod2">
-                            <div class="cod2__general">
-                                <div class="cod2__general--img">
-                                    <img src="./img/Call_of_Duty-_Modern_Warfare_II.jpeg" alt="COD MW2">
-                                </div>
-                                <div class="cod2__general--desc">
-                                    <h3>COD: MWII</h3>
-                                    <p>
-                                        Big changes come to the COD: MWII formula in this sequel...
-                                    </p>
-                                </div>
-                            </div>
-                            <ul class="cod2__description">
-                                <li>
-                                    <b>Genre:</b> Shooter
-                                </li>
-                                <li>
-                                    <b>Platform:</b> PC, PS5, Xbox One
-                                </li>
-                                <li>
-                                    <b>Publisher:</b> Activision Blizzard
-                                </li>
-                                <li>
-                                    <b>Developer:</b> Infinity Ward
-                                </li>
-                                <li>
-                                    <b>Release date:</b> 28-10-2022
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="game__cod2">
-                            <div class="cod2__general">
-                                <div class="cod2__general--img">
-                                    <img src="./img/Call_of_Duty-_Modern_Warfare_II.jpeg" alt="COD MW2">
-                                </div>
-                                <div class="cod2__general--desc">
-                                    <h3>COD: MWII</h3>
-                                    <p>
-                                        Big changes come to the COD: MWII formula in this sequel...
-                                    </p>
-                                </div>
-                            </div>
-                            <ul class="cod2__description">
-                                <li>
-                                    <b>Genre:</b> Shooter
-                                </li>
-                                <li>
-                                    <b>Platform:</b> PC, PS5, Xbox One
-                                </li>
-                                <li>
-                                    <b>Publisher:</b> Activision Blizzard
-                                </li>
-                                <li>
-                                    <b>Developer:</b> Infinity Ward
-                                </li>
-                                <li>
-                                    <b>Release date:</b> 28-10-2022
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="game__cod2">
-                            <div class="cod2__general">
-                                <div class="cod2__general--img">
-                                    <img src="./img/Call_of_Duty-_Modern_Warfare_II.jpeg" alt="COD MW2">
-                                </div>
-                                <div class="cod2__general--desc">
-                                    <h3>COD: MWII</h3>
-                                    <p>
-                                        Big changes come to the COD: MWII formula in this sequel...
-                                    </p>
-                                </div>
-                            </div>
-                            <ul class="cod2__description">
-                                <li>
-                                    <b>Genre:</b> Shooter
-                                </li>
-                                <li>
-                                    <b>Platform:</b> PC, PS5, Xbox One
-                                </li>
-                                <li>
-                                    <b>Publisher:</b> Activision Blizzard
-                                </li>
-                                <li>
-                                    <b>Developer:</b> Infinity Ward
-                                </li>
-                                <li>
-                                    <b>Release date:</b> 28-10-2022
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="game__cod2">
-                            <div class="cod2__general">
-                                <div class="cod2__general--img">
-                                    <img src="./img/Call_of_Duty-_Modern_Warfare_II.jpeg" alt="COD MW2">
-                                </div>
-                                <div class="cod2__general--desc">
-                                    <h3>COD: MWII</h3>
-                                    <p>
-                                        Big changes come to the COD: MWII formula in this sequel...
-                                    </p>
-                                </div>
-                            </div>
-                            <ul class="cod2__description">
-                                <li>
-                                    <b>Genre:</b> Shooter
-                                </li>
-                                <li>
-                                    <b>Platform:</b> PC, PS5, Xbox One
-                                </li>
-                                <li>
-                                    <b>Publisher:</b> Activision Blizzard
-                                </li>
-                                <li>
-                                    <b>Developer:</b> Infinity Ward
-                                </li>
-                                <li>
-                                    <b>Release date:</b> 28-10-2022
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="game__cod2">
-                            <div class="cod2__general">
-                                <div class="cod2__general--img">
-                                    <img src="./img/Call_of_Duty-_Modern_Warfare_II.jpeg" alt="COD MW2">
-                                </div>
-                                <div class="cod2__general--desc">
-                                    <h3>COD: MWII</h3>
-                                    <p>
-                                        Big changes come to the COD: MWII formula in this sequel...
-                                    </p>
-                                </div>
-                            </div>
-                            <ul class="cod2__description">
-                                <li>
-                                    <b>Genre:</b> Shooter
-                                </li>
-                                <li>
-                                    <b>Platform:</b> PC, PS5, Xbox One
-                                </li>
-                                <li>
-                                    <b>Publisher:</b> Activision Blizzard
-                                </li>
-                                <li>
-                                    <b>Developer:</b> Infinity Ward
-                                </li>
-                                <li>
-                                    <b>Release date:</b> 28-10-2022
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="game__cod2">
-                            <div class="cod2__general">
-                                <div class="cod2__general--img">
-                                    <img src="./img/Call_of_Duty-_Modern_Warfare_II.jpeg" alt="COD MW2">
-                                </div>
-                                <div class="cod2__general--desc">
-                                    <h3>COD: MWII</h3>
-                                    <p>
-                                        Big changes come to the COD: MWII formula in this sequel...
-                                    </p>
-                                </div>
-                            </div>
-                            <ul class="cod2__description">
-                                <li>
-                                    <b>Genre:</b> Shooter
-                                </li>
-                                <li>
-                                    <b>Platform:</b> PC, PS5, Xbox One
-                                </li>
-                                <li>
-                                    <b>Publisher:</b> Activision Blizzard
-                                </li>
-                                <li>
-                                    <b>Developer:</b> Infinity Ward
-                                </li>
-                                <li>
-                                    <b>Release date:</b> 28-10-2022
-                                </li>
-                            </ul>
-                        </div>
-
+                        <ul data-type="cards-container" class="cards-container"></ul>
                     </div>
                 </div>
             </div>
@@ -373,6 +147,7 @@
                 </div>
             </div>
         </footer>
+        <script type="module" src="./script/games.js"></script>
     </body>
 
 </html>

@@ -223,18 +223,17 @@ main {
   font-weight: 700;
 }
 
-.game__cards {
+/* .game__cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 25px;
-}
+} */
 
 .game__cod2 {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 275px;
   width: 260px;
   background-color: #ECECEC;
   padding: 12px 12px 22px;
@@ -258,7 +257,6 @@ main {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  height: 52px;
   width: 149px;
 }
 
@@ -294,4 +292,10 @@ main {
 
 .cod2__description li:last-child {
   margin-bottom: 0;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 25px;
 }
