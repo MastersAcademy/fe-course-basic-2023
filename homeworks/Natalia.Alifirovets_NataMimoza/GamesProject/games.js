@@ -167,16 +167,6 @@ function createCardElement(game) {
     return fragment;
 }
 
-// function renderCards(container, gamesToRender) {
-//     const fragment = document.createDocumentFragment();
-//
-//     for (const game of gamesToRender) {
-//         fragment.appendChild(createCardElement(game));
-//     }
-//
-//     container.appendChild(fragment);
-// }
-
 function renderCards(container, gamesToRender) {
     gamesToRender.forEach((game) => {
         const cardElement = createCardElement(game);
