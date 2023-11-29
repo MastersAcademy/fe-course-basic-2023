@@ -35,8 +35,6 @@ main {
 
 .game_card {
   background-color: #ECECEC;
-  width: 275px;
-  height: 260px;
   border-radius: 12px;
 }
 
@@ -59,10 +57,17 @@ main {
   line-height: 21px;
 }
 
+.game_image img {
+  width: 90px;
+  height: 90px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
 .game_info {
   display: flex;
   flex-direction: column;
-  margin: 6.5px 0 6.5px 12px;
+  margin: 0 0 6.5px 12px;
 }
 
 .game_details {

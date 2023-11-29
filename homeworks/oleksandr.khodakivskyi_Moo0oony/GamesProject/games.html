@@ -31,7 +31,7 @@
             </div>
         </header>
         <section class="filter">
-            <form action="" class="filter_form">
+            <form action="#" class="filter_form">
                 <div class="filter_drop_down">
                     <select name="genre" class="genre_list" id="genre">
                         <option value="genre" selected hidden disabled>Genre</option>
@@ -52,288 +52,40 @@
                     </label>
                 </div>
                 <div class="filter_checkbox">
-                    <label for="checkboxe_new" class="age">
-                        <input type="checkbox" class="checkbox_input" id="checkboxe_new" name="checkboxes" value="new">
+                    <label for="checkbox_new" class="age">
+                        <input type="checkbox" class="checkbox_input" id="checkbox_new" name="checkboxes" value="new" data-filter-new>
                         New
                     </label>
-                    <label for="checkboxe_old" class="age">
-                        <input type="checkbox" class="checkbox_input" id="checkboxe_old" name="checkboxes" value="old">
+                    <label for="checkbox_old" class="age">
+                        <input type="checkbox" class="checkbox_input" id="checkbox_old" name="checkboxes" value="old" data-filter-old>
                         Old
                     </label>
                 </div>
                 <div class="filter_search">
-                    <input type="search" class="search_input" placeholder="Search">
+                    <input type="search" class="search_input" placeholder="Search" data-type="filter-search">
                     <button type="submit" class="filter_search_button">Apply</button>
                 </div>
             </form>
         </section>
         <main class="games_main">
             <h1 class="games_header">Study project "Games"</h1>
-            <ul class="games_list">
-                <li class="game_card">
-                    <div class="game_overview">
-                        <img src="./images/Overwatch2.svg" alt="Overwatch2">
-                        <div class="game_info">
-                            <h3>Overwatch 2</h3>
-                            <p>Big changes come to the Overwatch formula in this sequel...</p>
+            <ul class="games_list" data-type="cards-container">
+                <template data-type="card-template">
+                    <li class="game_card" data-type="cards-list">
+                        <div class="game_overview">
+                            <div class="game_image" data-type="image">
+                                <img src="#">
+                            </div>
+                            <div class="game_info">
+                                <h3 data-type="title"></h3>
+                                <p data-type="short-description"></p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="game_description">
-                        <dl class="game_details">
-                            <div>
-                                <dt>Genre:</dt>
-                                <dd>Shooter</dd>
-                            </div>
-                            <div>
-                                <dt>Platform:</dt>
-                                <dd>PC (Windows)</dd>
-                            </div>
-                            <div>
-                                <dt>Publisher:</dt>
-                                <dd>Activision Blizzard King</dd>
-                            </div>
-                            <div>
-                                <dt>Developer:</dt>
-                                <dd>Blizzard Entertainment</dd>
-                            </div>
-                            <div>
-                                <dt>Release Date:</dt>
-                                <dd>2022-10-04</dd>
-                            </div>
-                        </dl>
-                    </div>
-                </li>
-                <li class="game_card">
-                    <div class="game_overview">
-                        <img src="./images/Overwatch2.svg" alt="Overwatch2">
-                        <div class="game_info">
-                            <h3>Overwatch 2</h3>
-                            <p>Big changes come to the Overwatch formula in this sequel...</p>
+                        <div class="game_description">
+                            <dl class="game_details" data-type="details"></dl>
                         </div>
-                    </div>
-                    <div class="game_description">
-                        <dl class="game_details">
-                            <div>
-                                <dt>Genre:</dt>
-                                <dd>Shooter</dd>
-                            </div>
-                            <div>
-                                <dt>Platform:</dt>
-                                <dd>PC (Windows)</dd>
-                            </div>
-                            <div>
-                                <dt>Publisher:</dt>
-                                <dd>Activision Blizzard King</dd>
-                            </div>
-                            <div>
-                                <dt>Developer:</dt>
-                                <dd>Blizzard Entertainment</dd>
-                            </div>
-                            <div>
-                                <dt>Release Date:</dt>
-                                <dd>2022-10-04</dd>
-                            </div>
-                        </dl>
-                    </div>
-                </li>
-                <li class="game_card">
-                    <div class="game_overview">
-                        <img src="./images/Overwatch2.svg" alt="Overwatch2">
-                        <div class="game_info">
-                            <h3>Overwatch 2</h3>
-                            <p>Big changes come to the Overwatch formula in this sequel...</p>
-                        </div>
-                    </div>
-                    <div class="game_description">
-                        <dl class="game_details">
-                            <div>
-                                <dt>Genre:</dt>
-                                <dd>Shooter</dd>
-                            </div>
-                            <div>
-                                <dt>Platform:</dt>
-                                <dd>PC (Windows)</dd>
-                            </div>
-                            <div>
-                                <dt>Publisher:</dt>
-                                <dd>Activision Blizzard King</dd>
-                            </div>
-                            <div>
-                                <dt>Developer:</dt>
-                                <dd>Blizzard Entertainment</dd>
-                            </div>
-                            <div>
-                                <dt>Release Date:</dt>
-                                <dd>2022-10-04</dd>
-                            </div>
-                        </dl>
-                    </div>
-                </li>
-                <li class="game_card">
-                    <div class="game_overview">
-                        <img src="./images/Overwatch2.svg" alt="Overwatch2">
-                        <div class="game_info">
-                            <h3>Overwatch 2</h3>
-                            <p>Big changes come to the Overwatch formula in this sequel...</p>
-                        </div>
-                    </div>
-                    <div class="game_description">
-                        <dl class="game_details">
-                            <div>
-                                <dt>Genre:</dt>
-                                <dd>Shooter</dd>
-                            </div>
-                            <div>
-                                <dt>Platform:</dt>
-                                <dd>PC (Windows)</dd>
-                            </div>
-                            <div>
-                                <dt>Publisher:</dt>
-                                <dd>Activision Blizzard King</dd>
-                            </div>
-                            <div>
-                                <dt>Developer:</dt>
-                                <dd>Blizzard Entertainment</dd>
-                            </div>
-                            <div>
-                                <dt>Release Date:</dt>
-                                <dd>2022-10-04</dd>
-                            </div>
-                        </dl>
-                    </div>
-                </li>
-                <li class="game_card">
-                    <div class="game_overview">
-                        <img src="./images/Overwatch2.svg" alt="Overwatch2">
-                        <div class="game_info">
-                            <h3>Overwatch 2</h3>
-                            <p>Big changes come to the Overwatch formula in this sequel...</p>
-                        </div>
-                    </div>
-                    <div class="game_description">
-                        <dl class="game_details">
-                            <div>
-                                <dt>Genre:</dt>
-                                <dd>Shooter</dd>
-                            </div>
-                            <div>
-                                <dt>Platform:</dt>
-                                <dd>PC (Windows)</dd>
-                            </div>
-                            <div>
-                                <dt>Publisher:</dt>
-                                <dd>Activision Blizzard King</dd>
-                            </div>
-                            <div>
-                                <dt>Developer:</dt>
-                                <dd>Blizzard Entertainment</dd>
-                            </div>
-                            <div>
-                                <dt>Release Date:</dt>
-                                <dd>2022-10-04</dd>
-                            </div>
-                        </dl>
-                    </div>
-                </li>
-                <li class="game_card">
-                    <div class="game_overview">
-                        <img src="./images/Overwatch2.svg" alt="Overwatch2">
-                        <div class="game_info">
-                            <h3>Overwatch 2</h3>
-                            <p>Big changes come to the Overwatch formula in this sequel...</p>
-                        </div>
-                    </div>
-                    <div class="game_description">
-                        <dl class="game_details">
-                            <div>
-                                <dt>Genre:</dt>
-                                <dd>Shooter</dd>
-                            </div>
-                            <div>
-                                <dt>Platform:</dt>
-                                <dd>PC (Windows)</dd>
-                            </div>
-                            <div>
-                                <dt>Publisher:</dt>
-                                <dd>Activision Blizzard King</dd>
-                            </div>
-                            <div>
-                                <dt>Developer:</dt>
-                                <dd>Blizzard Entertainment</dd>
-                            </div>
-                            <div>
-                                <dt>Release Date:</dt>
-                                <dd>2022-10-04</dd>
-                            </div>
-                        </dl>
-                    </div>
-                </li>
-                <li class="game_card">
-                    <div class="game_overview">
-                        <img src="./images/Overwatch2.svg" alt="Overwatch2">
-                        <div class="game_info">
-                            <h3>Overwatch 2</h3>
-                            <p>Big changes come to the Overwatch formula in this sequel...</p>
-                        </div>
-                    </div>
-                    <div class="game_description">
-                        <dl class="game_details">
-                            <div>
-                                <dt>Genre:</dt>
-                                <dd>Shooter</dd>
-                            </div>
-                            <div>
-                                <dt>Platform:</dt>
-                                <dd>PC (Windows)</dd>
-                            </div>
-                            <div>
-                                <dt>Publisher:</dt>
-                                <dd>Activision Blizzard King</dd>
-                            </div>
-                            <div>
-                                <dt>Developer:</dt>
-                                <dd>Blizzard Entertainment</dd>
-                            </div>
-                            <div>
-                                <dt>Release Date:</dt>
-                                <dd>2022-10-04</dd>
-                            </div>
-                        </dl>
-                    </div>
-                </li>
-                <li class="game_card">
-                    <div class="game_overview">
-                        <img src="./images/Overwatch2.svg" alt="Overwatch2">
-                        <div class="game_info">
-                            <h3>Overwatch 2</h3>
-                            <p>Big changes come to the Overwatch formula in this sequel...</p>
-                        </div>
-                    </div>
-                    <div class="game_description">
-                        <dl class="game_details">
-                            <div>
-                                <dt>Genre:</dt>
-                                <dd>Shooter</dd>
-                            </div>
-                            <div>
-                                <dt>Platform:</dt>
-                                <dd>PC (Windows)</dd>
-                            </div>
-                            <div>
-                                <dt>Publisher:</dt>
-                                <dd>Activision Blizzard King</dd>
-                            </div>
-                            <div>
-                                <dt>Developer:</dt>
-                                <dd>Blizzard Entertainment</dd>
-                            </div>
-                            <div>
-                                <dt>Release Date:</dt>
-                                <dd>2022-10-04</dd>
-                            </div>
-                        </dl>
-                    </div>
-                </li>
+                    </li>
+                </template>
             </ul>
         </main>
         <footer class="footer">
@@ -362,5 +114,7 @@
                 </h3>
             </div>
         </footer>
+        <script type="module" src="./scripts/games.js"></script>
     </body>
+
 </html>
