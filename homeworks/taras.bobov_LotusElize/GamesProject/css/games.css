@@ -123,7 +123,7 @@ p {
   width: 75px;
   height: 36px;
   border-radius: 0 6px 6px 0;
-  background-color: #ef4934;
+  background-color: #EF4934;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -134,7 +134,7 @@ p {
 /**/
 
 .section_title {
-  color: #221f1f;
+  color: #221F1F;
   font-size: 48px;
   font-weight: 700;
   line-height: 48px;
@@ -167,12 +167,12 @@ p {
   font-style: normal;
   font-weight: 400;
   border-radius: 12px;
-  transition: all 0.3s ease-out;
+  transition: all .3s ease-out;
 }
 
 .card:hover {
-  box-shadow: 1px 1px 13px 0 #221f1fa6;
-  background-color: #ef343400;
+  box-shadow: 1px 1px 13px 0 #221F1FA6;
+  background-color: #EF343400;
 }
 
 .card__header {
