@@ -37,27 +37,56 @@
         </header>
         <main class="main">
             <div class="container">
+                <section class="filters">
+                    <form class="filters__form" data-type="filters">
+                        <select class="filters__drop-list" disabled>
+                            <option value="Type" selected>Type</option>
+                            <option value="Fighting">Fighting</option>
+                            <option value="Dark">Dark</option>
+                            <option value="Fairy">Fairy</option>
+                            <option value="Flying">Flying</option>
+                        </select>
+                        <fieldset class="filters__group">
+                            <input class="filters__radio" id="only-new" type="radio" name="radio" disabled>
+                            <label class="filters__label-radio" for="only-new">Only new</label>
+                            <input class="filters__radio" id="favorites" type="radio" name="radio" disabled>
+                            <label class="filters__label-radio" for="favorites">Favorites</label>
+                        </fieldset>
+                        <fieldset class="filters__group">
+                            <input class="filters__checkbox" id="big" type="checkbox" name="big" data-type-big>
+                            <label class="filters__label-checkbox" for="big">Big</label>
+                            <input class="filters__checkbox" id="small" type="checkbox" name="small" data-type-small>
+                            <label class="filters__label-checkbox" for="small">Small</label>
+                        </fieldset>
+                        <fieldset class="filters__search">
+                            <input class="filters__search-input" type="search" placeholder="Search" disabled>
+                            <button class="filters__button" type="button">Apply</button>
+                        </fieldset>
+                    </form>
+                </section>
                 <section class="pokemon">
                     <h1 class="pokemon__title">Study project "Pokemons"</h1>
-                    <ul class="pokemon__cards-list">
-
+                    <ul class="pokemon__cards-list" data-type="cards-list"></ul>
+                    <template data-type="card-template">
                         <li class="pokemon__card-item">
                             <div class="pokemon__card-img">
-                                <img class="pokemon__image" src="./image/pokemon-image.svg" alt="pokemon-image">
-                                <h4 class="pokemon__name">Urshifu</h4>
+                                <img class="pokemon__image" src="./image/pokemon-image.svg" alt="pokemon-image" width="90px" height="90px" data-card-image>
+                                <h4 class="pokemon__name" data-card-name>Urshifu</h4>
                             </div>
                             <ul class="pokemon__special-list">
                                 <li class="pokemon__special">
                                     <span class="pokemon__special-bold">Height:</span>
-                                    6' 03"
+                                    <span class="pokemon__special-height" data-card-height>6'03</span>
+                                    <span class="pokemon__special-height">"</span>
                                 </li>
                                 <li class="pokemon__special">
                                     <span class="pokemon__special-bold">Weight:</span>
-                                    231.5 lbs
+                                    <span class="pokemon__special-weight" data-card-weight>231.5</span>
+                                    <span class="pokemon__special-lbs">lbs</span>
                                 </li>
                                 <li class="pokemon__special">
                                     <span class="pokemon__special-bold">Number:</span>
-                                    0002
+                                    <span class="pokemon__special-number" data-card-number>0002</span>
                                 </li>
                                 <li class="pokemon__special-inner">
                                     <p class="pokemon__special-type">
@@ -75,254 +104,10 @@
                                 </li>
                             </ul>
                         </li>
-
-                        <li class="pokemon__card-item">
-                            <div class="pokemon__card-img">
-                                <img class="pokemon__image" src="./image/pokemon-image.svg" alt="pokemon-image">
-                                <h4 class="pokemon__name">Urshifu</h4>
-                            </div>
-                            <ul class="pokemon__special-list">
-                                <li class="pokemon__special">
-                                    <span class="pokemon__special-bold">Height:</span>
-                                    6' 03"
-                                </li>
-                                <li class="pokemon__special">
-                                    <span class="pokemon__special-bold">Weight:</span>
-                                    231.5 lbs
-                                </li>
-                                <li class="pokemon__special">
-                                    <span class="pokemon__special-bold">Number:</span>
-                                    0002
-                                </li>
-                                <li class="pokemon__special-inner">
-                                    <p class="pokemon__special-type">
-                                        <span class="pokemon__special-bold">Type:</span>
-                                    </p>
-                                    <span class="pokemon__fighting">Fighting</span>
-                                    <span class="pokemon__dark">Dark</span>
-                                </li>
-                                <li class="pokemon__special-ls">
-                                    <p class="pokemon__special-weaknesses">
-                                        <span class="pokemon__special-bold">Weaknesses:</span>
-                                    </p>
-                                    <span class="pokemon__fairy">Fairy</span>
-                                    <span class="pokemon__flying">Flying</span>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="pokemon__card-item">
-                            <div class="pokemon__card-img">
-                                <img class="pokemon__image" src="./image/pokemon-image.svg" alt="pokemon-image">
-                                <h4 class="pokemon__name">Urshifu</h4>
-                            </div>
-                            <ul class="pokemon__special-list">
-                                <li class="pokemon__special">
-                                    <span class="pokemon__special-bold">Height:</span>
-                                    6' 03"
-                                </li>
-                                <li class="pokemon__special">
-                                    <span class="pokemon__special-bold">Weight:</span>
-                                    231.5 lbs
-                                </li>
-                                <li class="pokemon__special">
-                                    <span class="pokemon__special-bold">Number:</span>
-                                    0002
-                                </li>
-                                <li class="pokemon__special-inner">
-                                    <p class="pokemon__special-type">
-                                        <span class="pokemon__special-bold">Type:</span>
-                                    </p>
-                                    <span class="pokemon__fighting">Fighting</span>
-                                    <span class="pokemon__dark">Dark</span>
-                                </li>
-                                <li class="pokemon__special-ls">
-                                    <p class="pokemon__special-weaknesses">
-                                        <span class="pokemon__special-bold">Weaknesses:</span>
-                                    </p>
-                                    <span class="pokemon__fairy">Fairy</span>
-                                    <span class="pokemon__flying">Flying</span>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="pokemon__card-item">
-                            <div class="pokemon__card-img">
-                                <img class="pokemon__image" src="./image/pokemon-image.svg" alt="pokemon-image">
-                                <h4 class="pokemon__name">Urshifu</h4>
-                            </div>
-                            <ul class="pokemon__special-list">
-                                <li class="pokemon__special">
-                                    <span class="pokemon__special-bold">Height:</span>
-                                    6' 03"
-                                </li>
-                                <li class="pokemon__special">
-                                    <span class="pokemon__special-bold">Weight:</span>
-                                    231.5 lbs
-                                </li>
-                                <li class="pokemon__special">
-                                    <span class="pokemon__special-bold">Number:</span>
-                                    0002
-                                </li>
-                                <li class="pokemon__special-inner">
-                                    <p class="pokemon__special-type">
-                                        <span class="pokemon__special-bold">Type:</span>
-                                    </p>
-                                    <span class="pokemon__fighting">Fighting</span>
-                                    <span class="pokemon__dark">Dark</span>
-                                </li>
-                                <li class="pokemon__special-ls">
-                                    <p class="pokemon__special-weaknesses">
-                                        <span class="pokemon__special-bold">Weaknesses:</span>
-                                    </p>
-                                    <span class="pokemon__fairy">Fairy</span>
-                                    <span class="pokemon__flying">Flying</span>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="pokemon__card-item">
-                            <div class="pokemon__card-img">
-                                <img class="pokemon__image" src="./image/pokemon-image.svg" alt="pokemon-image">
-                                <h4 class="pokemon__name">Urshifu</h4>
-                            </div>
-                            <ul class="pokemon__special-list">
-                                <li class="pokemon__special">
-                                    <span class="pokemon__special-bold">Height:</span>
-                                    6' 03"
-                                </li>
-                                <li class="pokemon__special">
-                                    <span class="pokemon__special-bold">Weight:</span>
-                                    231.5 lbs
-                                </li>
-                                <li class="pokemon__special">
-                                    <span class="pokemon__special-bold">Number:</span>
-                                    0002
-                                </li>
-                                <li class="pokemon__special-inner">
-                                    <p class="pokemon__special-type">
-                                        <span class="pokemon__special-bold">Type:</span>
-                                    </p>
-                                    <span class="pokemon__fighting">Fighting</span>
-                                    <span class="pokemon__dark">Dark</span>
-                                </li>
-                                <li class="pokemon__special-ls">
-                                    <p class="pokemon__special-weaknesses">
-                                        <span class="pokemon__special-bold">Weaknesses:</span>
-                                    </p>
-                                    <span class="pokemon__fairy">Fairy</span>
-                                    <span class="pokemon__flying">Flying</span>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="pokemon__card-item">
-                            <div class="pokemon__card-img">
-                                <img class="pokemon__image" src="./image/pokemon-image.svg" alt="pokemon-image">
-                                <h4 class="pokemon__name">Urshifu</h4>
-                            </div>
-                            <ul class="pokemon__special-list">
-                                <li class="pokemon__special">
-                                    <span class="pokemon__special-bold">Height:</span>
-                                    6' 03"
-                                </li>
-                                <li class="pokemon__special">
-                                    <span class="pokemon__special-bold">Weight:</span>
-                                    231.5 lbs
-                                </li>
-                                <li class="pokemon__special">
-                                    <span class="pokemon__special-bold">Number:</span>
-                                    0002
-                                </li>
-                                <li class="pokemon__special-inner">
-                                    <p class="pokemon__special-type">
-                                        <span class="pokemon__special-bold">Type:</span>
-                                    </p>
-                                    <span class="pokemon__fighting">Fighting</span>
-                                    <span class="pokemon__dark">Dark</span>
-                                </li>
-                                <li class="pokemon__special-ls">
-                                    <p class="pokemon__special-weaknesses">
-                                        <span class="pokemon__special-bold">Weaknesses:</span>
-                                    </p>
-                                    <span class="pokemon__fairy">Fairy</span>
-                                    <span class="pokemon__flying">Flying</span>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="pokemon__card-item">
-                            <div class="pokemon__card-img">
-                                <img class="pokemon__image" src="./image/pokemon-image.svg" alt="pokemon-image">
-                                <h4 class="pokemon__name">Urshifu</h4>
-                            </div>
-                            <ul class="pokemon__special-list">
-                                <li class="pokemon__special">
-                                    <span class="pokemon__special-bold">Height:</span>
-                                    6' 03"
-                                </li>
-                                <li class="pokemon__special">
-                                    <span class="pokemon__special-bold">Weight:</span>
-                                    231.5 lbs
-                                </li>
-                                <li class="pokemon__special">
-                                    <span class="pokemon__special-bold">Number:</span>
-                                    0002
-                                </li>
-                                <li class="pokemon__special-inner">
-                                    <p class="pokemon__special-type">
-                                        <span class="pokemon__special-bold">Type:</span>
-                                    </p>
-                                    <span class="pokemon__fighting">Fighting</span>
-                                    <span class="pokemon__dark">Dark</span>
-                                </li>
-                                <li class="pokemon__special-ls">
-                                    <p class="pokemon__special-weaknesses">
-                                        <span class="pokemon__special-bold">Weaknesses:</span>
-                                    </p>
-                                    <span class="pokemon__fairy">Fairy</span>
-                                    <span class="pokemon__flying">Flying</span>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="pokemon__card-item">
-                            <div class="pokemon__card-img">
-                                <img class="pokemon__image" src="./image/pokemon-image.svg" alt="pokemon-image">
-                                <h4 class="pokemon__name">Urshifu</h4>
-                            </div>
-                            <ul class="pokemon__special-list">
-                                <li class="pokemon__special">
-                                    <span class="pokemon__special-bold">Height:</span>
-                                    6' 03"
-                                </li>
-                                <li class="pokemon__special">
-                                    <span class="pokemon__special-bold">Weight:</span>
-                                    231.5 lbs
-                                </li>
-                                <li class="pokemon__special">
-                                    <span class="pokemon__special-bold">Number:</span>
-                                    0002
-                                </li>
-                                <li class="pokemon__special-inner">
-                                    <p class="pokemon__special-type">
-                                        <span class="pokemon__special-bold">Type:</span>
-                                    </p>
-                                    <span class="pokemon__fighting">Fighting</span>
-                                    <span class="pokemon__dark">Dark</span>
-                                </li>
-                                <li class="pokemon__special-ls">
-                                    <p class="pokemon__special-weaknesses">
-                                        <span class="pokemon__special-bold">Weaknesses:</span>
-                                    </p>
-                                    <span class="pokemon__fairy">Fairy</span>
-                                    <span class="pokemon__flying">Flying</span>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+                    </template>
                 </section>
             </div>
         </main>
+        <script src="./scripts/pokemons.js"></script>
     </body>
 </html>
