@@ -87,6 +87,7 @@ body {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
+  cursor: not-allowed;
 }
 
 .filters__group,
@@ -119,7 +120,7 @@ body {
   vertical-align: middle;
   margin-right: 12px;
   margin-left: 10px;
-  cursor: pointer;
+  cursor: not-allowed;
 }
 
 .filters__radio + .filters__label-radio::after {
@@ -146,6 +147,7 @@ body {
 
 .filters__radio:disabled + .filters__label-radio::after {
   background-color: #808080;
+  cursor: not-allowed;
 }
 
 .filters__radio:disabled + .filters__label-radio::after {
@@ -190,6 +192,7 @@ body {
   background-image: url("./image/search-icon.svg");
   background-repeat: no-repeat;
   background-position: 12px 50%;
+  cursor: not-allowed;
 }
 
 .filters__button {
@@ -203,15 +206,7 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
-  cursor: pointer;
-}
-
-.filters__button:active {
-  transform: translate(1px, 1px);
-}
-
-.hide {
-  display: none;
+  cursor: not-allowed;
 }
 
 /*About*/

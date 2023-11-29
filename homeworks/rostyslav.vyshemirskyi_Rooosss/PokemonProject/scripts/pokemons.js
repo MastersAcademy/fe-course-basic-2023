@@ -256,6 +256,9 @@ const pokemons = [
 ];
 
 const cardsList = document.querySelector('[data-type="cards-list"]');
+const formFilters = document.querySelector('[data-type="filters"]');
+const bigPokemonCheckbox = formFilters.elements.big;
+const smallPokemonCheckbox = formFilters.elements.small;
 
 function createCardElement(pokemonsList) {
     const cardItem = document.querySelector('[data-type="card-template"]');
@@ -284,42 +287,35 @@ function renderCards(container, pokemonsList) {
     container.appendChild(fragment);
 }
 
-const formFilters = document.querySelector('[data-type="filters"]');
-const smallPokemon = formFilters.elements.small;
-const bigPokemon = formFilters.elements.big;
-
 function filterPokemons(pokemonsList) {
+    const isSmallSizeFilterChecked = formFilters.elements.small.checked;
+    const isBigSizeFilterChecked = formFilters.elements.big.checked;
     const filter = [];
     pokemonsList.forEach((card) => {
-        if (bigPokemon.checked) {
-            if (card.height >= 100) {
-                filter.push(card);
-            }
+        if (isBigSizeFilterChecked && card.height >= 100) {
+            filter.push(card);
         }
-        if (smallPokemon.checked) {
-            if (card.height <= 50) {
-                filter.push(card);
-            }
+        if (isSmallSizeFilterChecked && card.height <= 50) {
+            filter.push(card);
         }
-        if (smallPokemon.checked && bigPokemon.checked) {
-            if (card.height <= 50 && card.height >= 100) {
-                filter.push(card);
-            }
+        if (isSmallSizeFilterChecked && isBigSizeFilterChecked
+            && card.height <= 50 && card.height >= 100) {
+            filter.push(card);
         }
-        if (!smallPokemon.checked && !bigPokemon.checked) {
+        if (!isSmallSizeFilterChecked && !isBigSizeFilterChecked) {
             filter.push(card);
         }
     });
     return filter;
 }
 
+function onSizeFilterChange() {
+    renderCards(cardsList, filterPokemons(pokemons));
+}
+
 function init() {
-    bigPokemon.addEventListener('change', () => {
-        renderCards(cardsList, filterPokemons(pokemons));
-    });
-    smallPokemon.addEventListener('change', () => {
-        renderCards(cardsList, filterPokemons(pokemons));
-    });
+    bigPokemonCheckbox.addEventListener('change', onSizeFilterChange);
+    smallPokemonCheckbox.addEventListener('change', onSizeFilterChange);
     renderCards(cardsList, pokemons);
 }
 
