@@ -267,6 +267,7 @@ const selectSearchInputButtonEl = document.querySelector('[data-filter-search-in
 let checkboxBig = selectSearchCheckboxBigEl.checked;
 let checkboxSmall = selectSearchCheckboxSmallEl.checked;
 let searchValue = '';
+let filterPokemonsArray = [...pokemons];
 
 const createCardElement = (pokemon) => {
     const templateEl = document.querySelector('[data-type]');
@@ -302,7 +303,7 @@ const createCardElement = (pokemon) => {
 const renderCards = (cardContainer, pokemonsArray) => {
     const fragment = new DocumentFragment();
     for (let i = 0; i < pokemonsArray.length; i++) {
-        fragment.append(createCardElement(pokemons[i]));
+        fragment.append(createCardElement(pokemonsArray[i]));
     }
     cardContainer.append(fragment);
     return true;
@@ -323,8 +324,7 @@ const filterPokemons = (checkBig, checkSmall) => {
     } else if (!checkBig && checkSmall) {
         newPokemons = pokemons.filter((pokemon) => pokemon.weight < 50);
     }
-    cleanElement(cardsEl);
-    renderCards(cardsEl, newPokemons);
+    return newPokemons;
 };
 
 const init = () => {
@@ -337,18 +337,22 @@ const init = () => {
 
     selectSearchCheckboxBigEl.addEventListener('change', (e) => {
         checkboxBig = e.target.checked;
-        filterPokemons(checkboxBig, checkboxSmall);
+        filterPokemonsArray = filterPokemons(checkboxBig, checkboxSmall);
+        cleanElement(cardsEl);
+        renderCards(cardsEl, filterPokemonsArray);
     });
 
     selectSearchCheckboxSmallEl.addEventListener('change', (e) => {
         checkboxSmall = e.target.checked;
-        filterPokemons(checkboxBig, checkboxSmall);
+        filterPokemonsArray = filterPokemons(checkboxBig, checkboxSmall);
+        cleanElement(cardsEl);
+        renderCards(cardsEl, filterPokemonsArray);
     });
 
     selectSearchInputButtonEl.addEventListener('click', (e) => {
         e.preventDefault();
         // eslint-disable-next-line max-len
-        const newPokemons = pokemons.filter((pokemon) => pokemon.name.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase()));
+        const newPokemons = filterPokemonsArray.filter((pokemon) => pokemon.name.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase()));
         cleanElement(cardsEl);
         renderCards(cardsEl, newPokemons);
     });
