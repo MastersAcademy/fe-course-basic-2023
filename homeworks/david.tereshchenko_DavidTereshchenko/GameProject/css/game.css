@@ -160,13 +160,11 @@
 
 .item-block__game-item {
   display: grid;
-  grid-template-rows: 1fr;
   flex-direction: column;
   background-color: #ECECEC;
   padding: 10px;
   border-radius: 12px;
-  row-gap: 22px;
-  max-width: 280px;
+  max-width: 290px;
 }
 
 .game-item-item__header {
@@ -181,15 +179,44 @@
   row-gap: 12px;
 }
 
-.header__game-name {
-  font-size: 18px;
-  font-weight: 700;
+.header__icon {
+  height: 90px;
+}
+
+.header__img {
+  border-radius: 5px;
+}
+
+.header__game-name h2 {
+  font-size: 18px!important;
+  font-weight: 700!important;
+}
+
+.about__p {
+  /*white-space: nowrap;*/
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  margin-bottom: 1em;
+}
+
+.about__p::after {
+  content: "...";
+  display: inline-block;
+  margin-left: 10px;
 }
 
 .about__p {
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
+  height: 65px;
+}
+
+.cards-title {
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .game-item__info-list {
@@ -198,8 +225,6 @@
 }
 
 .info-game {
-  font-size: 14px;
-  font-weight: 400;
   flex-direction: column;
   word-spacing: normal;
 }
@@ -209,9 +234,13 @@
   margin-bottom: 16px;
 }
 
-.info-game li b {
+.info-game li, b {
+  font-size: 14px!important;
+  font-weight: 400;
   margin-right: 5px;
 }
+
+.info-game li b { font-weight: 600}
 
 /* Adaptation Cards */
 
