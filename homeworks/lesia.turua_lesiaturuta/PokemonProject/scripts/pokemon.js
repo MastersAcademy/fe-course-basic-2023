@@ -257,12 +257,12 @@ const pokemons = [
 
 const cardsEl = document.querySelector('[data-cards]');
 const selectSearchEl = document.querySelector('[data-filter-select-search]');
-const selectSearchRadioOnlyNewEl = document.querySelector('[data-filter-input-search-radio-only-new]');
-const selectSearchRadioFavoritesEl = document.querySelector('[data-filter-input-search-radio-favorites]');
-const selectSearchCheckboxBigEl = document.querySelector('[data-filter-search-checkbox-big]');
-const selectSearchCheckboxSmallEl = document.querySelector('[data-filter-search-checkbox-small]');
-const selectSearchInputSearchEl = document.querySelector('[data-filter-search-input-search]');
-const selectSearchInputButtonEl = document.querySelector('[data-filter-search-input-button]');
+const selectSearchRadioOnlyNewEl = document.querySelector('[data-filter-new]');
+const selectSearchRadioFavoritesEl = document.querySelector('[data-filter-favorites]');
+const selectSearchCheckboxBigEl = document.querySelector('[data-filter-big]');
+const selectSearchCheckboxSmallEl = document.querySelector('[data-filter-small]');
+const selectSearchInputSearchEl = document.querySelector('[data-filter-search]');
+const selectSearchInputButtonEl = document.querySelector('[data-filter-button]');
 
 let checkboxBig = selectSearchCheckboxBigEl.checked;
 let checkboxSmall = selectSearchCheckboxSmallEl.checked;
