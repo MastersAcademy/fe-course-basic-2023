@@ -264,9 +264,17 @@
 }
 
 .card__pokemon-name {
+  display: flex;
+  flex-direction: column;
   font-size: 18px;
   font-weight: 700;
   line-height: 21px;
+}
+
+.card__pokemon-name span {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 12px;
 }
 
 .card__characteristics {
