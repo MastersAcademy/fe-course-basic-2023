@@ -15,5 +15,5 @@
 // console.log('string'.slice());
 
 // console.log('string'.match(/sta/));
-// console.log('12-34-56'.split('').reverse().join(', '));
+console.log('12-34-56'.split('').reverse().join(', '));
 console.log('string'.replace('st', 'bo'));
