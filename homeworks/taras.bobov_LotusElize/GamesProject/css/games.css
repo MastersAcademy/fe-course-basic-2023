@@ -4,7 +4,6 @@ h2,
 p {
   margin: 0;
 }
-/**/
 
 .games-filter {
   position: absolute;
@@ -22,8 +21,6 @@ p {
   font-size: 14px;
   font-weight: 4000;
 }
-
-/*select*/
 
 .filter-select {
   width: 114px;
@@ -48,8 +45,8 @@ p {
   content: url("../images/icons/arrow.svg");
   position: absolute;
   width: 20px;
-  top: 5px}
-
+  top: 5px;
+}
 
 .select-item__option {
   background-color: #FFF;
@@ -98,7 +95,7 @@ p {
 }
 
 .filter-game__search input[placeholder] {
-  color: #A9A9A9;
+  color: hsl(0, 0%, 66%);
 }
 
 .filter-game__search input[type="search"] {
@@ -107,7 +104,6 @@ p {
   width: 200px;
   color: #333;
 }
-
 
 .game-search__label {
   width: 24px;
@@ -127,18 +123,18 @@ p {
   width: 75px;
   height: 36px;
   border-radius: 0 6px 6px 0;
-  background-color: #EF4934;
+  background-color: #ef4934;
   display: flex;
   align-items: center;
   justify-content: center;
   border: none;
-  color: #FFF;
+  color: hsl(0, 0%, 100%);
 }
+
 /**/
 
-
 .section_title {
-  color: #221F1F;
+  color: #221f1f;
   font-size: 48px;
   font-weight: 700;
   line-height: 48px;
@@ -148,32 +144,35 @@ p {
 
 .content_game-cards {
   width: 1175px;
-  height: 545px;
+  height: 100vh;
+  margin-bottom: 146px;
+  margin-top: 40px;
+}
+
+.game-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 25px;
-  margin-bottom: 146px;
-  margin-top: 40px;
 }
 
 .card {
   width: 275px;
   height: 260px;
-  background-color: #ECECEC;
-  color: #221F1F;
+  background-color: hsl(0, 0%, 93%);
+  color: hsl(0, 5%, 13%);
   display: grid;
   padding: 12px 12px 22px;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   border-radius: 12px;
-  transition: all .3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .card:hover {
-  box-shadow: 1px 1px 13px 0 #221F1FA6;
-  background-color: #EF343400;
+  box-shadow: 1px 1px 13px 0 #221f1fa6;
+  background-color: #ef343400;
 }
 
 .card__header {
@@ -224,6 +223,3 @@ p {
   font-weight: 600;
   margin-right: 6px;
 }
-
-/**/
-
