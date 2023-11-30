@@ -31,16 +31,23 @@
                     <form class="filters__form" action="#">
                         <div class="filters__form-select">
                             <select title="type" name="type" id="type" size="1">
-                                <option value="Type" selected hidden>Type</option>
+                                <option value="Type" selected>Type</option>
+                                
                                 <option value="fighting">Fighting</option>
                                 <option value="dark">Dark</option>
+
+                                <option value="grass">grass</option>
+                                <option value="poison">poison</option>
+                                <option value="fire">fire</option>
+                                <option value="flying">flying</option>
+                                <option value="dragon">dragon</option>
                             </select>
                         </div>
 
                         <div class="filters__form-choice">
-                            <input id="new" name="choice" type="radio" value="new">
+                            <input id="new" name="choice" type="radio" value="new" disabled>
                             <label for="new">Only new</label>
-                            <input id="favorites" name="choice" type="radio" value="favorites">
+                            <input id="favorites" name="choice" type="radio" value="favorites" disabled>
                             <label for="favorites">Favorites</label>
                         </div>
 
@@ -67,15 +74,20 @@
             <section class="pokemons">
                 <h1 class="pokemons__title">Study project "Pokemons"</h1>
                 <div class="pokemons__cards">
-                    <div class="pokemons__cards-item">
+                    <template class="pokemons__cards-item" data-type="card-template">
                         <div class="card__pokemon">
                             <img class="card__pokemon-img" src="img/pokemon.png" alt="pokemon">
                             <h3 class="card__pokemon-name">
                                 <strong>Urshifu</strong>
+                                <span>Charizard, in its final variant, harnesses the Tough Claws ability, bolstering its physical attacks and introducing a dragon aspect to its typing. Its fire, dragon, and flying capabilities ensure a formidable presence, despite remaining vulnerable to ground, rock, and dragon-type attacks</span>
                             </h3>
                         </div>
 
                         <div class="card__characteristics">
+                            <div class="card__characteristics-abilities">
+                                <strong>Abilities:</strong>
+                                <span>Blaze</span>
+                            </div>
                             <div class="card__characteristics-height">
                                 <strong>Height:</strong>
                                 <span>6'03"</span>
@@ -99,245 +111,7 @@
                                 <span>Flying</span>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="pokemons__cards-item">
-                        <div class="card__pokemon">
-                            <img class="card__pokemon-img" src="img/pokemon.png" alt="pokemon">
-                            <h3 class="card__pokemon-name">
-                                <strong>Urshifu</strong>
-                            </h3>
-                        </div>
-
-                        <div class="card__characteristics">
-                            <div class="card__characteristics-height">
-                                <strong>Height:</strong>
-                                <span>6'03"</span>
-                            </div>
-                            <div class="card__characteristics-weight">
-                                <strong>Weight:</strong>
-                                <span>231.5 lbs</span>
-                            </div>
-                            <div class="card__characteristics-number">
-                                <strong>Number:</strong>
-                                <span>0002</span>
-                            </div>
-                            <div class="card__characteristics-type">
-                                <strong>Type:</strong>
-                                <span>Fighting</span>
-                                <span>Dark</span>
-                            </div>
-                            <div class="card__characteristics-weaknesses">
-                                <strong>Weaknesses:</strong>
-                                <span>Fairy</span>
-                                <span>Flying</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="pokemons__cards-item">
-                        <div class="card__pokemon">
-                            <img class="card__pokemon-img" src="img/pokemon.png" alt="pokemon">
-                            <h3 class="card__pokemon-name">
-                                <strong>Urshifu</strong>
-                            </h3>
-                        </div>
-
-                        <div class="card__characteristics">
-                            <div class="card__characteristics-height">
-                                <strong>Height:</strong>
-                                <span>6'03"</span>
-                            </div>
-                            <div class="card__characteristics-weight">
-                                <strong>Weight:</strong>
-                                <span>231.5 lbs</span>
-                            </div>
-                            <div class="card__characteristics-number">
-                                <strong>Number:</strong>
-                                <span>0002</span>
-                            </div>
-                            <div class="card__characteristics-type">
-                                <strong>Type:</strong>
-                                <span>Fighting</span>
-                                <span>Dark</span>
-                            </div>
-                            <div class="card__characteristics-weaknesses">
-                                <strong>Weaknesses:</strong>
-                                <span>Fairy</span>
-                                <span>Flying</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="pokemons__cards-item">
-                        <div class="card__pokemon">
-                            <img class="card__pokemon-img" src="img/pokemon.png" alt="pokemon">
-                            <h3 class="card__pokemon-name">
-                                <strong>Urshifu</strong>
-                            </h3>
-                        </div>
-
-                        <div class="card__characteristics">
-                            <div class="card__characteristics-height">
-                                <strong>Height:</strong>
-                                <span>6'03"</span>
-                            </div>
-                            <div class="card__characteristics-weight">
-                                <strong>Weight:</strong>
-                                <span>231.5 lbs</span>
-                            </div>
-                            <div class="card__characteristics-number">
-                                <strong>Number:</strong>
-                                <span>0002</span>
-                            </div>
-                            <div class="card__characteristics-type">
-                                <strong>Type:</strong>
-                                <span>Fighting</span>
-                                <span>Dark</span>
-                            </div>
-                            <div class="card__characteristics-weaknesses">
-                                <strong>Weaknesses:</strong>
-                                <span>Fairy</span>
-                                <span>Flying</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="pokemons__cards-item">
-                        <div class="card__pokemon">
-                            <img class="card__pokemon-img" src="img/pokemon.png" alt="pokemon">
-                            <h3 class="card__pokemon-name">
-                                <strong>Urshifu</strong>
-                            </h3>
-                        </div>
-
-                        <div class="card__characteristics">
-                            <div class="card__characteristics-height">
-                                <strong>Height:</strong>
-                                <span>6'03"</span>
-                            </div>
-                            <div class="card__characteristics-weight">
-                                <strong>Weight:</strong>
-                                <span>231.5 lbs</span>
-                            </div>
-                            <div class="card__characteristics-number">
-                                <strong>Number:</strong>
-                                <span>0002</span>
-                            </div>
-                            <div class="card__characteristics-type">
-                                <strong>Type:</strong>
-                                <span>Fighting</span>
-                                <span>Dark</span>
-                            </div>
-                            <div class="card__characteristics-weaknesses">
-                                <strong>Weaknesses:</strong>
-                                <span>Fairy</span>
-                                <span>Flying</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="pokemons__cards-item">
-                        <div class="card__pokemon">
-                            <img class="card__pokemon-img" src="img/pokemon.png" alt="pokemon">
-                            <h3 class="card__pokemon-name">
-                                <strong>Urshifu</strong>
-                            </h3>
-                        </div>
-
-                        <div class="card__characteristics">
-                            <div class="card__characteristics-height">
-                                <strong>Height:</strong>
-                                <span>6'03"</span>
-                            </div>
-                            <div class="card__characteristics-weight">
-                                <strong>Weight:</strong>
-                                <span>231.5 lbs</span>
-                            </div>
-                            <div class="card__characteristics-number">
-                                <strong>Number:</strong>
-                                <span>0002</span>
-                            </div>
-                            <div class="card__characteristics-type">
-                                <strong>Type:</strong>
-                                <span>Fighting</span>
-                                <span>Dark</span>
-                            </div>
-                            <div class="card__characteristics-weaknesses">
-                                <strong>Weaknesses:</strong>
-                                <span>Fairy</span>
-                                <span>Flying</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="pokemons__cards-item">
-                        <div class="card__pokemon">
-                            <img class="card__pokemon-img" src="img/pokemon.png" alt="pokemon">
-                            <h3 class="card__pokemon-name">
-                                <strong>Urshifu</strong>
-                            </h3>
-                        </div>
-
-                        <div class="card__characteristics">
-                            <div class="card__characteristics-height">
-                                <strong>Height:</strong>
-                                <span>6'03"</span>
-                            </div>
-                            <div class="card__characteristics-weight">
-                                <strong>Weight:</strong>
-                                <span>231.5 lbs</span>
-                            </div>
-                            <div class="card__characteristics-number">
-                                <strong>Number:</strong>
-                                <span>0002</span>
-                            </div>
-                            <div class="card__characteristics-type">
-                                <strong>Type:</strong>
-                                <span>Fighting</span>
-                                <span>Dark</span>
-                            </div>
-                            <div class="card__characteristics-weaknesses">
-                                <strong>Weaknesses:</strong>
-                                <span>Fairy</span>
-                                <span>Flying</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="pokemons__cards-item">
-                        <div class="card__pokemon">
-                            <img class="card__pokemon-img" src="img/pokemon.png" alt="pokemon">
-                            <h3 class="card__pokemon-name">
-                                <strong>Urshifu</strong>
-                            </h3>
-                        </div>
-
-                        <div class="card__characteristics">
-                            <div class="card__characteristics-height">
-                                <strong>Height:</strong>
-                                <span>6'03"</span>
-                            </div>
-                            <div class="card__characteristics-weight">
-                                <strong>Weight:</strong>
-                                <span>231.5 lbs</span>
-                            </div>
-                            <div class="card__characteristics-number">
-                                <strong>Number:</strong>
-                                <span>0002</span>
-                            </div>
-                            <div class="card__characteristics-type">
-                                <strong>Type:</strong>
-                                <span>Fighting</span>
-                                <span>Dark</span>
-                            </div>
-                            <div class="card__characteristics-weaknesses">
-                                <strong>Weaknesses:</strong>
-                                <span>Fairy</span>
-                                <span>Flying</span>
-                            </div>
-                        </div>
-                    </div>
+                    </template>
                 </div>
             </section>
         </main>
@@ -362,5 +136,7 @@
                 </div>    
             </section>
         </footer>
+
+        <script type="module" src="scripts/pokemonsCards.js"></script>
     </body>
 </html>
