@@ -36,6 +36,7 @@ main {
 .game_card {
   background-color: #ECECEC;
   border-radius: 12px;
+  width: 285px;
 }
 
 .games_list {

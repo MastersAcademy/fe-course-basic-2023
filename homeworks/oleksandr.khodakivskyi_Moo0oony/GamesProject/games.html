@@ -33,7 +33,7 @@
         <section class="filter">
             <form action="#" class="filter_form">
                 <div class="filter_drop_down">
-                    <select name="genre" class="genre_list" id="genre">
+                    <select name="genre" class="genre_list" id="genre" disabled>
                         <option value="genre" selected hidden disabled>Genre</option>
                         <option value="sport">Sport</option>
                         <option value="shooter">Shooter</option>
@@ -43,11 +43,11 @@
                 </div>
                 <div class="filter_radio">
                     <label for="radio_platform" class="platform">
-                        <input type="radio" class="radio_input" id="radio_platform" name="radios" value="platforms">
+                        <input type="radio" class="radio_input" id="radio_platform" name="radios" value="platforms" disabled>
                         Platforms
                     </label>
                     <label for="radio_online" class="platform">
-                        <input type="radio" class="radio_input" id="radio_online" name="radios" value="online">
+                        <input type="radio" class="radio_input" id="radio_online" name="radios" value="online" disabled>
                         Online Games
                     </label>
                 </div>
@@ -62,7 +62,7 @@
                     </label>
                 </div>
                 <div class="filter_search">
-                    <input type="search" class="search_input" placeholder="Search" data-type="filter-search">
+                    <input type="search" class="search_input" placeholder="Search" data-type="filter-search" disabled>
                     <button type="submit" class="filter_search_button">Apply</button>
                 </div>
             </form>

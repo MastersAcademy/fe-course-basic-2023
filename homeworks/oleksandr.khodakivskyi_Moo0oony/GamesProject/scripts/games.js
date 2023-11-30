@@ -1,5 +1,9 @@
 import games from './games-mock.js';
 
+const ul = document.querySelector('[data-type="cards-container"]');
+const filterNew = document.querySelector('[data-filter-new]');
+const filterOld = document.querySelector('[data-filter-old]');
+
 function createCardElement(game) {
     const template = document.querySelector('template[data-type="card-template"]');
     const copiedTemplate = document.importNode(template.content, true);
@@ -22,22 +26,17 @@ function createCardElement(game) {
     return copiedTemplate;
 }
 
-function renderCards(container, cardsAmount) {
+function renderCards(container, gamesData) {
     const fragment = document.createDocumentFragment();
 
-    cardsAmount.forEach((game) => {
+    gamesData.forEach((game) => {
         const cardElement = createCardElement(game);
         fragment.appendChild(cardElement);
     });
     container.appendChild(fragment);
 }
 
-const ul = document.querySelector('[data-type="cards-container"]');
-renderCards(ul, games);
-
-function init() {
-    const filterNew = document.querySelector('[data-filter-new]');
-    const filterOld = document.querySelector('[data-filter-old]');
+function updateGames() {
     const gameDates = document.body.querySelectorAll('[data-type="release_date"]');
     const gameDatesArray = [...gameDates].map((dateElement) => {
         const releaseDateText = dateElement.innerText.replace('Release date:', '').trim();
@@ -45,32 +44,24 @@ function init() {
         return releaseDate.getFullYear();
     });
 
-    let newGameCheck = false;
-    let oldGameCheck = false;
+    gameDatesArray.forEach((year, index) => {
+        const gameCard = gameDates[index].closest('.game_card');
 
-    const updateGames = () => {
-        gameDatesArray.forEach((year, index) => {
-            const gameCard = gameDates[index].closest('.game_card');
-
-            if ((year >= 2020 && newGameCheck) || (year <= 2010 && oldGameCheck)) {
-                gameCard.style.display = 'grid';
-            } else if (!newGameCheck && !oldGameCheck) {
-                gameCard.style.display = 'grid';
-            } else {
-                gameCard.style.display = 'none';
-            }
-        });
-    };
-
-    filterNew.addEventListener('click', () => {
-        newGameCheck = !newGameCheck;
-        updateGames();
+        if ((year >= 2020 && filterNew.checked) || (year <= 2010 && filterOld.checked)) {
+            gameCard.style.display = 'grid';
+        } else if (!filterNew.checked && !filterOld.checked) {
+            gameCard.style.display = 'grid';
+        } else {
+            gameCard.style.display = 'none';
+        }
     });
+}
 
-    filterOld.addEventListener('click', () => {
-        oldGameCheck = !oldGameCheck;
-        updateGames();
-    });
+function init() {
+    renderCards(ul, games);
+
+    filterNew.addEventListener('click', updateGames);
+    filterOld.addEventListener('click', updateGames);
 }
 
 init();
