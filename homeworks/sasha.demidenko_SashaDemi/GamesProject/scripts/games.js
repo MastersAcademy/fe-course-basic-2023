@@ -196,12 +196,8 @@ function filterGamesByReleaseDate(gamesList, isNewChecked, isOldChecked) {
 
     return gamesList.filter((game) => {
         const releaseDate = new Date(game.release_date);
-
-        if (isNewChecked && releaseDate.getFullYear() <= 2020) {
-            return false;
-        }
-
-        if (isOldChecked && releaseDate.getFullYear() >= 2010) {
+        if ((isNewChecked && releaseDate.getFullYear() <= 2020)
+            || (isOldChecked && releaseDate.getFullYear() >= 2010)) {
             return false;
         }
 
