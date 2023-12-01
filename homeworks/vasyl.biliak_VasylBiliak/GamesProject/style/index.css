@@ -47,7 +47,6 @@ body {
   width: 100%;
   border-bottom: 2px solid #FFF;
   opacity: 0;
-  /*transition: opacity 0.3s;*/
 }
 
 .header__link:hover::after {
@@ -57,7 +56,6 @@ body {
 .about {
   display: flex;
   padding: 53px;
-  justify-content: space-evenly;
 }
 
 .about__img {
