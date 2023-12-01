@@ -24,6 +24,7 @@ body {
   gap: 60px;
 }
 
+
 .calculator__title {
   text-align: center;
   color: #221F1F;
@@ -36,6 +37,12 @@ body {
   display: flex;
   column-gap: 10px;
   align-items: center;
+}
+
+.calculator__time {
+  color: #221F1F;
+  font-size: 18px;
+  line-height: 21px;
 }
 
 .calculator__input {
