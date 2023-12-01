@@ -145,6 +145,7 @@ function createCardElement(game) {
     const cardsPublisher = selectElement('publisher');
     const cardsDeveloper = selectElement('developer');
     const cardsDate = selectElement('release_date');
+    const descMaxLength = 100;
 
     cardsTitle.textContent = game.title;
     cardsTitle.style.cssText = 'height: 90px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap';
@@ -154,7 +155,6 @@ function createCardElement(game) {
     cardsImg.style.cssText = 'width: 90px; height: 90px; border-radius: 12px';
 
     cardsDescription.textContent = game.short_description;
-    const descMaxLength = 100;
     if (game.short_description.length > descMaxLength) {
         cardsDescription.dataset.fullText = game.short_description;
         cardsDescription.textContent = `${game.short_description.substring(0, descMaxLength)}...`;
@@ -173,7 +173,7 @@ function createCardElement(game) {
     return elementCopy;
 }
 
-function cards(container, gamesList) {
+function renderCards(container, gamesList) {
     const fragment = document.createDocumentFragment();
 
     gamesList.forEach((game) => {
@@ -184,11 +184,6 @@ function cards(container, gamesList) {
     container.appendChild(fragment);
 }
 
-const newCards = document.querySelector('[data-type="cards-container"]');
-if (newCards) {
-    cards(newCards, games);
-}
-
 function filterGamesByReleaseDate(gamesList, isNewChecked, isOldChecked) {
     if (isNewChecked && isOldChecked) {
         return gamesList;
@@ -196,16 +191,14 @@ function filterGamesByReleaseDate(gamesList, isNewChecked, isOldChecked) {
 
     return gamesList.filter((game) => {
         const releaseDate = new Date(game.release_date);
-        if ((isNewChecked && releaseDate.getFullYear() <= 2020)
-            || (isOldChecked && releaseDate.getFullYear() >= 2010)) {
-            return false;
-        }
+        const isOld = isOldChecked && releaseDate.getFullYear() >= 2010;
+        const isNew = isNewChecked && releaseDate.getFullYear() <= 2020;
 
-        return true;
+        return !(isNew || isOld);
     });
 }
 
-function renderCards(container, gamesList, isNewChecked, isOldChecked) {
+function displayCards(container, gamesList, isNewChecked, isOldChecked) {
     const filteredGames = filterGamesByReleaseDate(gamesList, isNewChecked, isOldChecked);
 
     const fragment = document.createDocumentFragment();
@@ -219,14 +212,17 @@ function renderCards(container, gamesList, isNewChecked, isOldChecked) {
     container.appendChild(fragment);
 }
 
-const newCheckbox = document.getElementById('new');
-const oldCheckbox = document.getElementById('old');
+function init() {
+    const newCheckbox = document.getElementById('new');
+    const oldCheckbox = document.getElementById('old');
+    const newCards = document.querySelector('[data-type="cards-container"]');
+    if (newCards) {
+        renderCards(newCards, games);
+    }
+    displayCards(newCards, games, newCheckbox.checked, oldCheckbox.checked);
 
-function updateCards() {
-    renderCards(newCards, games, newCheckbox.checked, oldCheckbox.checked);
+    newCheckbox.addEventListener('change', init);
+    oldCheckbox.addEventListener('change', init);
 }
 
-newCheckbox.addEventListener('change', updateCards);
-oldCheckbox.addEventListener('change', updateCards);
-
-updateCards();
+init();
