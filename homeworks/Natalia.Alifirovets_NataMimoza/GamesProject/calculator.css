@@ -1,0 +1,82 @@
+.wrapper {
+  margin: 0 auto;
+  max-width: 1280px;
+  height: 1017px;
+}
+
+.header-menu {
+  background: #EF4934;
+  padding: 0 52px 0 53px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo-box {
+  width: 55px;
+  height: 58px;
+  position: relative;
+}
+
+.nav {
+  font-size: 16px;
+  gap: 50px;
+  display: flex;
+}
+
+.nav__link {
+  display: inline-block;
+  color: #FFF;
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  text-decoration: underline;
+}
+
+.name {
+  margin: 150px auto 50px 20px;
+  color: #C33523;
+  font-family: Roboto, serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.field {
+  margin: 20px;
+  display: flex;
+  column-gap: 15px;
+  align-items: center;
+}
+
+.value-box {
+  min-height: 35px;
+  width: 70px;
+  font-size: 20px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.operation-box {
+  min-height: 35px;
+  border-radius: 9px;
+  width: 45px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.button-box {
+  min-height: 35px;
+  border-radius: 9px;
+  width: 45px;
+  text-align: center;
+  background: #FFF;
+}
+
+.res-view {
+  color: #EF4934;
+  font-size: 25px;
+}
