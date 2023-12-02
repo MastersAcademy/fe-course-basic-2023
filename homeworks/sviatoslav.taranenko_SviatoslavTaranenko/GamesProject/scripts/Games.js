@@ -289,25 +289,7 @@ function init() {
     renderGames(gamesData);
     filterGames();
 
-    // const gamePropertiesSelect = document.getElementById('game_properties');
-    // const platformRadio = document.getElementById('platform');
-    // const onlineGamesRadio = document.getElementById('online-games');
     const applyButton = document.getElementById('apply');
-
-    // gamePropertiesSelect.addEventListener('change', () => {
-    //     const selectedGenre = gamePropertiesSelect.value;
-    //     filterByGenre(selectedGenre);
-    // });
-    //
-    // platformRadio.addEventListener('change', () => {
-    //     const selectedPlatform = platformRadio.value;
-    //     filterByPlatform(selectedPlatform);
-    // });
-    //
-    // onlineGamesRadio.addEventListener('change', () => {
-    //     const isOnlineChecked = onlineGamesRadio.checked;
-    //     filterByOnlineGames(isOnlineChecked);
-    // });
 
     applyButton.addEventListener('click', () => {
         filterGames();
