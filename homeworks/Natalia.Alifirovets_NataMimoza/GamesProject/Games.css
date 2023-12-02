@@ -5,7 +5,6 @@
 .wrapper {
   margin: 0 auto;
   max-width: 1280px;
-  height: 1017px;
 }
 
 .project {
@@ -44,8 +43,70 @@
   text-decoration: underline;
 }
 
+.filters {
+  background: #221F1F;
+  color: #FFF;
+  max-width: 1280px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.drop-down {
+  background: #333;
+  color: #FFF;
+  width: 114px;
+  height: 36px;
+  margin-top: 12px;
+  display: flex;
+}
+
+.radio-btn {
+  display: flex;
+  gap: 32px;
+  width: 237px;
+  height: 20px;
+  padding-top: 20px;
+}
+
+.checkbox-btn {
+  width: 145px;
+  height: 20px;
+  display: flex;
+  gap: 32px;
+  padding-top: 20px;
+}
+
+.search-box {
+  display: flex;
+  width: 377px;
+  height: 36px;
+  border-radius: 6px;
+  padding-top: 12px;
+}
+
+.search {
+  width: 255px;
+  padding-left: 45px;
+  background-color: #FFF;
+  background-image: url("./Images/Search.jpg");
+  background-position: 12px;
+  background-repeat: no-repeat;
+}
+
+.apply {
+  background: #EF4934;
+  color: #FFF;
+  width: 75px;
+  height: 36px;
+  left: 302px;
+}
+
 .title {
-  margin: 100px 652px 0 53px;
+  margin: 40px 652px 0 53px;
   font-size: 48px;
   font-weight: 700;
 }
@@ -54,7 +115,7 @@
 
 .container {
   display: flex;
-  width: 1175px;
+  width: 1200px;
   align-items: flex-start;
   align-content: flex-start;
   gap: 25px;
@@ -66,7 +127,7 @@
 .card {
   background: #ECECEC;
   width: 251px;
-  height: 226px;
+  height: 255px;
   padding: 12px;
   position: relative;
   display: flex;
@@ -96,7 +157,7 @@
 
 .header__title {
   margin: 0;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   line-height: normal;
 }
