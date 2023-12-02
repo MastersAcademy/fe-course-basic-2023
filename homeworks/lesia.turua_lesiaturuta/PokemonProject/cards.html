@@ -39,7 +39,7 @@
             </nav>
             <form class="form__search justify__content--center">
                 <div class="container justify__content--between">
-                    <select class="form__search-select" id="select" name="select">
+                    <select class="form__search-select" id="select" name="select" data-filter-select-search>
                         <option value="option_1" selected>Type</option>
                         <option value="option_2">Type #2</option>
                         <option value="option_3">Type #3</option>
@@ -47,31 +47,31 @@
                     <fieldset class="form__search-radio">
                         <div class="justify__content--center">
                             <input class="form__search-radio-radio gap-right6" type="radio" id="only-new" name="sel" checked
-                                value="Only new">
+                                value="Only new" data-filter-new>
                             <label class="form__search-radio-label" for="only-new">Only new</label>
                         </div>
                         <div class="justify__content--center">
                             <input class="form__search-radio-radio gap-right6" type="radio" id="favorites" name="sel"
-                                value="Favorites">
+                                value="Favorites" data-filter-favorites>
                             <label class="form__search-radio-label" for="favorites">Favorites</label>
                         </div>
                     </fieldset>
                     <fieldset class="form__search-checkbox">
                         <div class="justify__content--center">
                             <input class="form__search-checkbox-checkbox gap-right6" type="checkbox" id="big" name="big"
-                                value="Big">
+                                value="Big" data-filter-big>
                             <label class="form__search-checkbox-label" for="big">Big</label>
                         </div>
                         <div class="justify__content--center">
                             <input class="form__search-checkbox-checkbox gap-right6" type="checkbox" id="small" name="small"
-                                value="Small">
+                                value="Small" data-filter-small>
                             <label class="form__search-checkbox-label" for="small">Small</label>
                         </div>
                     </fieldset>
                     <div class="form__search-input">
-                        <input type="text" class="form__search-input-search" placeholder="Search">
+                        <input type="text" class="form__search-input-search" placeholder="Search" data-filter-search>
                         <img src="./assets/search.png" alt="search" class="form__search-input-image">
-                        <button class="form__search-input-button" type="submit">Apply</button>
+                        <button class="form__search-input-button" type="submit" data-filter-button>Apply</button>
                     </div>
                 </div>
             </form>
@@ -80,227 +80,45 @@
         <main class="main">
             <div class="container justify__content--between flex-direction-column">
                 <h1 class="title-pokemon">Study project "Pokemons"</h1>
-                <div class="cards">
-                    <article class="card">
-                        <div class="card__header">
-                            <img src="./assets/card-logo.png" alt="card-logo" class="card__header-img">
-                            <h3 class="card__header-title">Urshifu</h3>
-                        </div>
-                        <div class="card__footer">
-                            <p class="card__footer-text">
-                                <span class="text-weight">Height:</span> 6' 03"
-                            </p>
-                            <p class="card__footer-text gap-top6">
-                                <span class="text-weight ">Weight:</span> 231.5 lbs
-                            </p>
-                            <p class="card__footer-text gap-top6">
-                                <span class="text-weight ">Number:</span> 0002
-                            </p>
-                            <p class="card__footer-text gap-top12">
-                                <span class="text-weight">Type:</span>
-                                <span class="block-select gap-right6 color-background-FDB714">Fighting</span>
-                                <span class="block-select color-background-EF4934">Dark</span>
-                            </p>
-                            <p class="card__footer-text gap-top12">
-                                <span class="text-weight">Weaknesses:</span>
-                                <span class="block-select gap-right6 color-background-FF87F3">Fairy</span>
-                                <span class="block-select color-background-3447EF ">Flying</span>
-                            </p>
-                        </div>
-                    </article>
-                    <article class="card">
-                        <div class="card__header">
-                            <img src="./assets/card-logo.png" alt="card-logo" class="card__header-img">
-                            <h3 class="card__header-title">Urshifu</h3>
-                        </div>
-                        <div class="card__footer">
-                            <p class="card__footer-text">
-                                <span class="text-weight">Height:</span> 6' 03"
-                            </p>
-                            <p class="card__footer-text gap-top6">
-                                <span class="text-weight ">Weight:</span> 231.5 lbs
-                            </p>
-                            <p class="card__footer-text gap-top6">
-                                <span class="text-weight ">Number:</span> 0002
-                            </p>
-                            <p class="card__footer-text gap-top12">
-                                <span class="text-weight">Type:</span>
-                                <span class="block-select gap-right6 color-background-FDB714">Fighting</span>
-                                <span class="block-select color-background-EF4934">Dark</span>
-                            </p>
-                            <p class="card__footer-text gap-top12">
-                                <span class="text-weight">Weaknesses:</span>
-                                <span class="block-select gap-right6 color-background-FF87F3">Fairy</span>
-                                <span class="block-select color-background-3447EF ">Flying</span>
-                            </p>
-                        </div>
-                    </article>
-                    <article class="card">
-                        <div class="card__header">
-                            <img src="./assets/card-logo.png" alt="card-logo" class="card__header-img">
-                            <h3 class="card__header-title">Urshifu</h3>
-                        </div>
-                        <div class="card__footer">
-                            <p class="card__footer-text">
-                                <span class="text-weight">Height:</span> 6' 03"
-                            </p>
-                            <p class="card__footer-text gap-top6">
-                                <span class="text-weight ">Weight:</span> 231.5 lbs
-                            </p>
-                            <p class="card__footer-text gap-top6">
-                                <span class="text-weight ">Number:</span> 0002
-                            </p>
-                            <p class="card__footer-text gap-top12">
-                                <span class="text-weight">Type:</span>
-                                <span class="block-select gap-right6 color-background-FDB714">Fighting</span>
-                                <span class="block-select color-background-EF4934">Dark</span>
-                            </p>
-                            <p class="card__footer-text gap-top12">
-                                <span class="text-weight">Weaknesses:</span>
-                                <span class="block-select gap-right6 color-background-FF87F3">Fairy</span>
-                                <span class="block-select color-background-3447EF ">Flying</span>
-                            </p>
-                        </div>
-                    </article>
-                    <article class="card">
-                        <div class="card__header">
-                            <img src="./assets/card-logo.png" alt="card-logo" class="card__header-img">
-                            <h3 class="card__header-title">Urshifu</h3>
-                        </div>
-                        <div class="card__footer">
-                            <p class="card__footer-text">
-                                <span class="text-weight">Height:</span> 6' 03"
-                            </p>
-                            <p class="card__footer-text gap-top6">
-                                <span class="text-weight ">Weight:</span> 231.5 lbs
-                            </p>
-                            <p class="card__footer-text gap-top6">
-                                <span class="text-weight ">Number:</span> 0002
-                            </p>
-                            <p class="card__footer-text gap-top12">
-                                <span class="text-weight">Type:</span>
-                                <span class="block-select gap-right6 color-background-FDB714">Fighting</span>
-                                <span class="block-select color-background-EF4934">Dark</span>
-                            </p>
-                            <p class="card__footer-text gap-top12">
-                                <span class="text-weight">Weaknesses:</span>
-                                <span class="block-select gap-right6 color-background-FF87F3">Fairy</span>
-                                <span class="block-select color-background-3447EF ">Flying</span>
-                            </p>
-                        </div>
-                    </article>
-                    <article class="card">
-                        <div class="card__header">
-                            <img src="./assets/card-logo.png" alt="card-logo" class="card__header-img">
-                            <h3 class="card__header-title">Urshifu</h3>
-                        </div>
-                        <div class="card__footer">
-                            <p class="card__footer-text">
-                                <span class="text-weight">Height:</span> 6' 03"
-                            </p>
-                            <p class="card__footer-text gap-top6">
-                                <span class="text-weight ">Weight:</span> 231.5 lbs
-                            </p>
-                            <p class="card__footer-text gap-top6">
-                                <span class="text-weight ">Number:</span> 0002
-                            </p>
-                            <p class="card__footer-text gap-top12">
-                                <span class="text-weight">Type:</span>
-                                <span class="block-select gap-right6 color-background-FDB714">Fighting</span>
-                                <span class="block-select color-background-EF4934">Dark</span>
-                            </p>
-                            <p class="card__footer-text gap-top12">
-                                <span class="text-weight">Weaknesses:</span>
-                                <span class="block-select gap-right6 color-background-FF87F3">Fairy</span>
-                                <span class="block-select color-background-3447EF ">Flying</span>
-                            </p>
-                        </div>
-                    </article>
-                    <article class="card">
-                        <div class="card__header">
-                            <img src="./assets/card-logo.png" alt="card-logo" class="card__header-img">
-                            <h3 class="card__header-title">Urshifu</h3>
-                        </div>
-                        <div class="card__footer">
-                            <p class="card__footer-text">
-                                <span class="text-weight">Height:</span> 6' 03"
-                            </p>
-                            <p class="card__footer-text gap-top6">
-                                <span class="text-weight ">Weight:</span> 231.5 lbs
-                            </p>
-                            <p class="card__footer-text gap-top6">
-                                <span class="text-weight ">Number:</span> 0002
-                            </p>
-                            <p class="card__footer-text gap-top12">
-                                <span class="text-weight">Type:</span>
-                                <span class="block-select gap-right6 color-background-FDB714">Fighting</span>
-                                <span class="block-select color-background-EF4934">Dark</span>
-                            </p>
-                            <p class="card__footer-text gap-top12">
-                                <span class="text-weight">Weaknesses:</span>
-                                <span class="block-select gap-right6 color-background-FF87F3">Fairy</span>
-                                <span class="block-select color-background-3447EF ">Flying</span>
-                            </p>
-                        </div>
-                    </article>
-                    <article class="card">
-                        <div class="card__header">
-                            <img src="./assets/card-logo.png" alt="card-logo" class="card__header-img">
-                            <h3 class="card__header-title">Urshifu</h3>
-                        </div>
-                        <div class="card__footer">
-                            <p class="card__footer-text">
-                                <span class="text-weight">Height:</span> 6' 03"
-                            </p>
-                            <p class="card__footer-text gap-top6">
-                                <span class="text-weight ">Weight:</span> 231.5 lbs
-                            </p>
-                            <p class="card__footer-text gap-top6">
-                                <span class="text-weight ">Number:</span> 0002
-                            </p>
-                            <p class="card__footer-text gap-top12">
-                                <span class="text-weight">Type:</span>
-                                <span class="block-select gap-right6 color-background-FDB714">Fighting</span>
-                                <span class="block-select color-background-EF4934">Dark</span>
-                            </p>
-                            <p class="card__footer-text gap-top12">
-                                <span class="text-weight">Weaknesses:</span>
-                                <span class="block-select gap-right6 color-background-FF87F3">Fairy</span>
-                                <span class="block-select color-background-3447EF ">Flying</span>
-                            </p>
-                        </div>
-                    </article>
-                    <article class="card">
-                        <div class="card__header">
-                            <img src="./assets/card-logo.png" alt="card-logo" class="card__header-img">
-                            <h3 class="card__header-title">Urshifu</h3>
-                        </div>
-                        <div class="card__footer">
-                            <p class="card__footer-text">
-                                <span class="text-weight">Height:</span> 6' 03"
-                            </p>
-                            <p class="card__footer-text gap-top6">
-                                <span class="text-weight ">Weight:</span> 231.5 lbs
-                            </p>
-                            <p class="card__footer-text gap-top6">
-                                <span class="text-weight ">Number:</span> 0002
-                            </p>
-                            <p class="card__footer-text gap-top12">
-                                <span class="text-weight">Type:</span>
-                                <span class="block-select gap-right6 color-background-FDB714">Fighting</span>
-                                <span class="block-select color-background-EF4934">Dark</span>
-                            </p>
-                            <p class="card__footer-text gap-top12">
-                                <span class="text-weight">Weaknesses:</span>
-                                <span class="block-select gap-right6 color-background-FF87F3">Fairy</span>
-                                <span class="block-select color-background-3447EF ">Flying</span>
-                            </p>
-                        </div>
-                    </article>
-
+                <div class="cards" data-cards>
                 </div>
             </div>
         </main>
+        <template data-type="card-template">
+            <article class="card">
+                <div class="card__header">
+                    <img src="" alt="card-logo" class="card__header-img" data-card-image>
+                    <h3 class="card__header-title" data-card-title></h3>
+                </div>
+                <div class="card__footer">
+                    <p class="card__footer-text">
+                        <span class="text-weight">Height:</span>
+                        <span data-card-height></span>
+                    </p>
+                    <p class="card__footer-text gap-top6">
+                        <span class="text-weight ">Weight:</span>
+                        <span data-card-weight></span>
+                    </p>
+                    <p class="card__footer-text gap-top6">
+                        <span class="text-weight ">Number:</span>
+                        <span data-card-number></span>
+                    </p>
+                    <p class="card__footer-text gap-top12">
+                        <span class="text-weight">Type:</span>
+                        <span class="block-select gap-right6 color-background-FDB714"
+                            data-card-type1>Fighting</span>
+                        <span class="block-select color-background-EF4934" data-card-type2>Dark</span>
+                    </p>
+                    <p class="card__footer-text gap-top12">
+                        <span class="text-weight">Weaknesses:</span>
+                        <span class="block-select gap-right6 color-background-FF87F3"
+                            data-card-weaknesses1>Fairy</span>
+                        <span class="block-select color-background-3447EF" data-card-weaknesses2>Flying</span>
+                    </p>
+                </div>
+            </article>
+        </template>
+        <script src="./scripts/pokemon.js"></script>
     </body>
 
 </html>

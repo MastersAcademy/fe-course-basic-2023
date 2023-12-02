@@ -144,6 +144,11 @@ body {
   color: #221F1F;
 }
 
+.card__header-img {
+  width: 90px;
+  height: 90px;
+}
+
 .card__footer {
   font-weight: 400;
   font-size: 14px;
@@ -562,4 +567,8 @@ body {
 .flex-direction-column {
   display: flex;
   flex-direction: column;
+}
+
+.display-none {
+  display: none;
 }
