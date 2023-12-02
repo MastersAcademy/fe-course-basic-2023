@@ -14,148 +14,53 @@
             <div class="header__box">
                 <img class="header__logo" src="img/logo.png" alt="logo" width="55px" height="57px">
                 <nav class="header__links">
-                    <a class="header__link" href="./calculator.html">Calculator</a>
                     <a class="header__link" href="./games.html">Games</a>
                     <a class="header__link" href="./index.html">About</a>
                     <a class="header__link" href="./login.html">Login</a>
                 </nav>
             </div>
         </header>
-        <div class="wrapper__filter-search">
+        <form class="wrapper__filter-search" action="./games.html" method="get" data-form-filters>
             <div class="filter-search">
-                <select class="filter-search__select-option">
-                    <option class="select-option" value="option_1" selected>Genre</option>
-                    <option class="select-option" value="option_2">Sport</option>
-                    <option class="select-option" value="option_3">Racing</option>
-                    <option class="select-option" value="option_4">Horror</option>
+                <select class="filter-search__select-option" name="games-types">
+                    <option class="select-option" value="" selected>All</option>
+                    <option class="select-option" value="Shooter">Shooter</option>
+                    <option class="select-option" value="ARPG">ARPG</option>
+                    <option class="select-option" value="Strategy">Strategy</option>
+                    <option class="select-option" value="MMORPG">MMORPG</option>
                 </select>
 
                 <div class="filter-search__radio-select">
-                    <label class="radio-select__label" for="radio-platform">
-                        <input class="radio-select__btn" type="radio" id="radio-platform" name="radio-btns" value="platform">Platform
+                    <label class="radio-select__label" for="platform">
+                        <input class="radio-select__btn" type="radio" id="platform" name="radio-btns" value="platform">Platform
                     </label>
-                    <label class="radio-select__label" for="radio-online_games">
-                        <input class="radio-select__btn" type="radio" id="radio-online_games" name="radio-btns" value="online_games">Online games
+                    <label class="radio-select__label" for="online_games">
+                        <input class="radio-select__btn" type="radio" id="online_games" name="radio-btns" value="online_games">Online games
                     </label>
                 </div>
                 <div class="filter-search__checkbox">
                     <label class="checkbox__label" for="game_date_new">
-                        <input class="checkbox__game-date" type="checkbox" id="game_date_new" name="fav_language" value="not-robot">New
+                        <input class="checkbox__game-date" type="checkbox" id="game_date_new" name="game_date_new" value="not-robot">New
                     </label>
                     <label class="checkbox__label" for="game_date_old">
-                        <input class="checkbox__game-date" type="checkbox" id="game_date_old" name="fav_language" value="not-robot">Old
+                        <input class="checkbox__game-date" type="checkbox" id="game_date_old" name="game_date_old" value="not-robot">Old
                     </label>
                 </div>
 
                 <div class="search">
                     <label class="search__input">
                         <img class="search__img" src="img/search.png" alt="search" width="24px" height="24px">
-                        <input class="search__input-text" type="text" name="text" placeholder="Search" pattern=".{1,320}" required>
+                        <input class="search__input-text" type="text" name="search-query" placeholder="Search" pattern=".{1,20}" required>
                     </label>
                     <input class="search__btn" type="submit" value="Apply">
                 </div>
             </div>
-        </div>
+        </form>
         <main class="wrapper">
             <h1 class="contain__heading"> Study project "Games"</h1>
-            <div class="card-games">
-                <div class="card">
-                    <img class="game-card__img" src="./img/img_3.png" width="90" height="90" alt="">
-                    <div class="game-card__top-info">
-                        <span class="description__title">Overwatch 2</span>
-                        <p class="description__text">Big changes come to the Overwatch formula in this sequel...</p>
-                    </div>
-                    <ul class="card__actors">
-                        <li class="card__actor">
-                            <span class="bold-text">Genre:</span> Shooter
-                        </li>
-                        <li class="card__actor">
-                            <span class="bold-text">Platform:</span> PC (Windows)
-                        </li>
-                        <li class="card__actor">
-                            <span class="bold-text">Publisher:</span> Activision Blizzard King
-                        </li>
-                        <li class="card__actor">
-                            <span class="bold-text">Developer:</span> Blizzard Entertainment
-                        </li>
-                        <li class="card__actor">
-                            <span class="bold-text">Release_date:</span>2022-10-04
-                        </li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <img class="game-card__img" src="./img/img_3.png" width="90" height="90" alt="">
-                    <div class="game-card__top-info">
-                        <span class="description__title">Overwatch 2</span>
-                        <p class="description__text">Big changes come to the Overwatch formula in this sequel...</p>
-                    </div>
-                    <ul class="card__actors">
-                        <li class="card__actor">
-                            <span class="bold-text">Genre:</span> Shooter
-                        </li>
-                        <li class="card__actor">
-                            <span class="bold-text">Platform:</span> PC (Windows)
-                        </li>
-                        <li class="card__actor">
-                            <span class="bold-text">Publisher:</span> Activision Blizzard King
-                        </li>
-                        <li class="card__actor">
-                            <span class="bold-text">Developer:</span> Blizzard Entertainment
-                        </li>
-                        <li class="card__actor">
-                            <span class="bold-text">Release_date:</span>2022-10-04
-                        </li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <img class="game-card__img" src="./img/img_3.png" width="90" height="90" alt="">
-                    <div class="game-card__top-info">
-                        <span class="description__title">Overwatch 2</span>
-                        <p class="description__text">Big changes come to the Overwatch formula in this sequel...</p>
-                    </div>
-                    <ul class="card__actors">
-                        <li class="card__actor">
-                            <span class="bold-text">Genre:</span> Shooter
-                        </li>
-                        <li class="card__actor">
-                            <span class="bold-text">Platform:</span> PC (Windows)
-                        </li>
-                        <li class="card__actor">
-                            <span class="bold-text">Publisher:</span> Activision Blizzard King
-                        </li>
-                        <li class="card__actor">
-                            <span class="bold-text">Developer:</span> Blizzard Entertainment
-                        </li>
-                        <li class="card__actor">
-                            <span class="bold-text">Release_date:</span>2022-10-04
-                        </li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <img class="game-card__img" src="./img/img_3.png" width="90" height="90" alt="">
-                    <div class="game-card__top-info">
-                        <span class="description__title">Overwatch 2</span>
-                        <p class="description__text">Big changes come to the Overwatch formula in this sequel...</p>
-                    </div>
-                    <ul class="card__actors">
-                        <li class="card__actor">
-                            <span class="bold-text">Genre:</span> Shooter
-                        </li>
-                        <li class="card__actor">
-                            <span class="bold-text">Platform:</span> PC (Windows)
-                        </li>
-                        <li class="card__actor">
-                            <span class="bold-text">Publisher:</span> Activision Blizzard King
-                        </li>
-                        <li class="card__actor">
-                            <span class="bold-text">Developer:</span> Blizzard Entertainment
-                        </li>
-                        <li class="card__actor">
-                            <span class="bold-text">Release_date:</span>2022-10-04
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <section class="card-games">
+            </section>
         </main>
+        <script src="./scripts/games.js"></script>
     </body>
 </html>
