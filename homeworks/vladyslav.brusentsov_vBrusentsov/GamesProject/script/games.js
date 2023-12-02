@@ -58,13 +58,22 @@ async function getCheckboxFilteredGames() {
     }
 }
 
-// function getSearchBarFilteredGames() {
-//     const searchBar = document.getElementById('search').value.toLowerCase();
+async function getSearchBarFilteredGames() {
+    const searchBar = document.getElementById('search').value.toLowerCase();
 
-//     const searchBarFilter = games.filter((game) => game.title.toLowerCase().includes(searchBar)
-//        || game.short_description.toLowerCase().includes(searchBar));
-//     renderCards(cardContainer, searchBarFilter);
-// }
+    const response = await fetch('https://mmo-games.p.rapidapi.com/games', {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '1c3169c707mshb51bff34cbc9ff6p1749b9jsn648a19134256',
+            'X-RapidAPI-Host': 'mmo-games.p.rapidapi.com',
+        },
+    });
+    const data = await response.json();
+    const games = data.slice(0, 50);
+    const searchBarFilter = games.filter((game) => game.title.toLowerCase().includes(searchBar)
+       || game.short_description.toLowerCase().includes(searchBar));
+    renderCards(cardContainer, searchBarFilter);
+}
 
 // function getSelectFilterGames() {
 //     const genreSelect = document.getElementById('game-properties');
@@ -76,19 +85,19 @@ async function getCheckboxFilteredGames() {
 
 function init() {
     const checkboxes = document.querySelectorAll('.checkbox-filter input[type="checkbox"]');
-    // const applyButton = document.getElementById('applyButton');
-    // const searchBar = document.getElementById('search');
+    const applyButton = document.getElementById('applyButton');
+    const searchBar = document.getElementById('search');
     // const genreSelect = document.getElementById('game-properties');
     checkboxes.forEach((checkbox) => {
         checkbox.addEventListener('change', getCheckboxFilteredGames);
     });
 
-    // applyButton.addEventListener('click', getSearchBarFilteredGames);
-    // searchBar.addEventListener('keyup', getSearchBarFilteredGames);
+    applyButton.addEventListener('click', getSearchBarFilteredGames);
+    searchBar.addEventListener('keyup', getSearchBarFilteredGames);
     // genreSelect.addEventListener('change', getSelectFilterGames);
 
-    return getCheckboxFilteredGames();
-    /* || getSearchBarFilteredGames() || getSelectFilterGames(); */
+    return getCheckboxFilteredGames() || getSearchBarFilteredGames();
+    // || getSelectFilterGames(); */
 }
 
 document.addEventListener('DOMContentLoaded', init);
