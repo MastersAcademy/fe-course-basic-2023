@@ -137,6 +137,7 @@ const games = mocGames.map((game) => {
 });
 const CARDS_LIST = document.querySelector('[data-cards]');
 const FORM_BUTTON = document.querySelector('[data-filter-button]');
+
 function createGameCardStr(game) {
     const {
         title,
@@ -173,12 +174,14 @@ function createGameCardStr(game) {
                         </ul>
                    `;
 }
+
 function createCardElement(game) {
     const cardElement = document.createElement('li');
     cardElement.classList.add('card');
     cardElement.innerHTML = createGameCardStr(game);
     return cardElement;
 }
+
 function filterGames(gamesArr) {
     const selectedGenre = document.querySelector('[data-filter-select]').value;
     const isPlatformGame = document.querySelector('[data-type-games="platform"]').checked;
@@ -205,11 +208,13 @@ function filterGames(gamesArr) {
             && !description.toLowerCase().includes(searchTerm.toLowerCase()));
     });
 }
+
 function markedSearchText(search, originString) {
     if (search === '') return originString;
     const regex = new RegExp(search, 'ig');
     return originString.replaceAll(regex, (match) => `<span class="filter-matched-text">${match}</span>`);
 }
+
 function renderCards(container, arrGames) {
     container.innerHTML = '';
     const fragment = new DocumentFragment();
@@ -218,6 +223,7 @@ function renderCards(container, arrGames) {
     });
     container.append(fragment);
 }
+
 function reRenderCards() {
     const searchTerm = document.querySelector('[data-filter-search]').value;
     const filterArrGames = filterGames(games);
@@ -229,5 +235,10 @@ function reRenderCards() {
     });
     renderCards(CARDS_LIST, markedTextFilterArrGames);
 }
-renderCards(CARDS_LIST, games);
-FORM_BUTTON.addEventListener('click', reRenderCards);
+
+function init() {
+    renderCards(CARDS_LIST, games);
+    FORM_BUTTON.addEventListener('click', reRenderCards);
+}
+
+init();
