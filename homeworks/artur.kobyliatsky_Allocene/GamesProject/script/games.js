@@ -58,9 +58,9 @@ async function renderCards(container, genre) {
 
     try {
         const response = await fetch(url, options);
-        // URL
+        // console URL
         console.log(response);
-        // URL
+        // console URL
         if (response.ok) {
             const gamesList = await response.json();
 
@@ -101,18 +101,30 @@ const queryParams = {
 };
 
 // Function to apply all filters and render cards
-async function applyFiltersAndRenderCards() {
-    const genre = '';// = genreFilter(queryParams);
-    const platform = document.querySelector('[data-type="platform-radio"]').checked ? queryParams.platform : '';
-    const online = document.querySelector('[data-type="online-radio"]').checked ? queryParams.online : '';
-    const newGames = document.querySelector('[data-type="check-new"]').checked ? queryParams.newGames : '';
-    const oldGames = document.querySelector('[data-type="check-old"]').checked ? queryParams.oldGames : '';
+function buildDynamicUrl(params) {
+    const selectedGenre = document.getElementById('genre').value;
+    const platform = document.querySelector('[data-type="platform-radio"]').checked
+        ? params.platform
+        : '';
+    const online = document.querySelector('[data-type="online-radio"]').checked
+        ? params.online
+        : '';
+    const newGames = document.querySelector('[data-type="check-new"]').checked
+        ? params.newGames
+        : '';
+    const oldGames = document.querySelector('[data-type="check-old"]').checked
+        ? params.oldGames
+        : '';
 
-    const dynamicUrl = `${genre}${platform}${online}${newGames}${oldGames}`;
+    return `${params.genre}${selectedGenre}${platform}${online}${newGames}${oldGames}`;
+}
+
+async function applyFiltersAndRenderCards() {
+    const dynamicUrl = buildDynamicUrl(queryParams);
     await renderCards(ulContainer, dynamicUrl);
 }
 
-// genre filtering
+// Genre filtering
 function genreFilter(params) {
     const selectElement = document.getElementById('genre');
     let dynamicUrl = params.genre;
@@ -130,29 +142,28 @@ renderCards(ulContainer, queryParams.genre);
 
 genreFilter(queryParams);
 
-// radio filtering
+// Radio filtering
 function radioFilter(params) {
     const radioPlatform = document.querySelector('[data-type="platform-radio"]');
     const radioOnline = document.querySelector('[data-type="online-radio"]');
     let dynamicUrl = '';
 
     radioPlatform.addEventListener('change', async () => {
-        dynamicUrl = params.platform;
+        dynamicUrl = radioPlatform.checked ? params.platform : params.allgames;
         await applyFiltersAndRenderCards();
     });
 
     radioOnline.addEventListener('change', async () => {
-        dynamicUrl = params.online;
+        dynamicUrl = radioOnline.checked ? params.online : params.allgames;
         await applyFiltersAndRenderCards();
     });
 
-    dynamicUrl = params.allgames;
     renderCards(ulContainer, dynamicUrl);
 }
 
 radioFilter(queryParams);
 
-// checkbox filtering
+// Checkbox filtering
 function checkboxFilter(params) {
     const checkNew = document.querySelector('[data-type="check-new"]');
     const checkOld = document.querySelector('[data-type="check-old"]');
