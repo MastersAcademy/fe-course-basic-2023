@@ -1,3 +1,4 @@
+// const c = console.log; // for short use console.log
 const games = [
     {
         id: 1,
@@ -66,7 +67,7 @@ const games = [
     },
     {
         id: 6,
-        title: 'Game Of Thrones Winter Is Coming',
+        title: 'Game Of Thrones Winter',
         thumbnail: 'https://www.mmobomb.com/g/340/thumbnail.jpg',
         short_description: 'Fame and glory await you in Westeros, in Game of Thrones: Winter Is Coming, the officially licensed free-to-play browser game based on the epic fantasy series by George R.R. Martin.',
         game_url: 'https://www.mmobomb.com/open/game-of-thrones-winter-is-coming',
@@ -132,6 +133,7 @@ const games = [
 ];
 
 const cardsBlock = document.querySelector('.game__item-blocks');
+const searchInput = document.querySelector('.search__input');
 const newCheck = document.querySelector('#checkbox-1-1');
 const oldCheck = document.querySelector('#checkbox-1-2');
 const dateYear = '2020-01-01';
@@ -153,7 +155,7 @@ function renderCard(
                                     </div>
                                     <div class="header__about">
                                         <h2 class="header__game-name cards-title">${title}</h2>
-                                        <p class="about__p">${shortDescription}</p>
+                                        <div class="about__p">${shortDescription}</div>
                                     </div>
                                 </div>
                                 <div class="game-item__info-list">
@@ -178,8 +180,49 @@ function renderCard(
                             </div>`;
 }
 
+document.querySelector('.search__button').onclick = function () {
+    const search = games.filter((el) => el.title.startsWith(
+        searchInput.value === searchInput.value.toLowerCase()
+            ? searchInput.value.toUpperCase() : searchInput.value,
+    ));
+    cardsBlock.innerHTML = '';
+    search.forEach((cards) => {
+        cardsBlock.innerHTML += renderCard(
+            cards.release_date,
+            cards.genre,
+            cards.platform,
+            cards.thumbnail,
+            cards.title,
+            cards.short_description,
+            cards.publisher,
+            cards.developer,
+        );
+    });
+};
+
+searchInput.oninput = function () {
+    newCheck.checked = false;
+    oldCheck.checked = false;
+    if (!this.value.length) {
+        cardsBlock.innerHTML = '';
+        games.forEach((cards) => {
+            cardsBlock.innerHTML += renderCard(
+                cards.release_date,
+                cards.genre,
+                cards.platform,
+                cards.thumbnail,
+                cards.title,
+                cards.short_description,
+                cards.publisher,
+                cards.developer,
+            );
+        });
+    }
+};
+
 function checkBoxFilter(element) {
-    const newCards = games.filter((el) => {
+    const filterCards = games.filter((el) => {
+        searchInput.value = '';
         if (newCheck.checked === true && oldCheck.checked === true) {
             return element;
         }
@@ -203,7 +246,7 @@ function checkBoxFilter(element) {
     });
     cardsBlock.innerHTML = '';
 
-    newCards.forEach((cards) => {
+    filterCards.forEach((cards) => {
         cardsBlock.innerHTML += renderCard(
             cards.release_date,
             cards.genre,
