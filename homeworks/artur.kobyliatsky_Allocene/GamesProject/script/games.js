@@ -180,7 +180,7 @@ function checkboxFilter(params) {
 radioFilter(queryParams);
 checkboxFilter(queryParams);
 
-// Searc field filltering
+// Search field filtering
 function searchFilter() {
     const searchField = document.querySelector('[data-type="search"]');
     const noFound = document.querySelector('[data-type="text-h2"]');
@@ -188,18 +188,22 @@ function searchFilter() {
         const searchTerm = searchField.value.toLowerCase();
         const cards = document.querySelectorAll('.game__cod2');
 
+        let anyCardFound = false;
+
         cards.forEach(async (card) => {
             const title = card.querySelector('[data-type="title"]').textContent.toLowerCase();
             const description = card.querySelector('[data-type="description"]').textContent.toLowerCase();
 
             if (title.includes(searchTerm) || description.includes(searchTerm)) {
                 card.style.display = 'block';
-                noFound.innerText = '';
+                anyCardFound = true;
             } else {
                 card.style.display = 'none';
-                noFound.innerText = 'No results found!';
             }
         });
+
+        // Display 'No results found!' if no matching cards are found
+        noFound.innerText = anyCardFound ? '' : 'No results found!';
     });
 }
 
