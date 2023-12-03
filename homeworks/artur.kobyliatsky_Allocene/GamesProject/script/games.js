@@ -58,9 +58,6 @@ async function renderCards(container, genre) {
 
     try {
         const response = await fetch(url, options);
-        // console URL
-        console.log(response);
-        // console URL
         if (response.ok) {
             const gamesList = await response.json();
 
@@ -100,9 +97,16 @@ const queryParams = {
     oldGames: '&sort-by=alphabetical',
 };
 
+// Genre filtering
+function genreFilter(params) {
+    const selectElement = document.getElementById('genre');
+    const selectedGenreNow = selectElement.value;
+    return params[selectedGenreNow] || params.allgames;
+}
+
 // Function to apply all filters and render cards
 function buildDynamicUrl(params) {
-    const selectedGenre = document.getElementById('genre').value;
+    const dynamicUrl = genreFilter(params);
     const platform = document.querySelector('[data-type="platform-radio"]').checked
         ? params.platform
         : '';
@@ -116,7 +120,7 @@ function buildDynamicUrl(params) {
         ? params.oldGames
         : '';
 
-    return `${params.genre}${selectedGenre}${platform}${online}${newGames}${oldGames}`;
+    return `${params.genre}${dynamicUrl}${platform}${online}${newGames}${oldGames}`;
 }
 
 async function applyFiltersAndRenderCards() {
@@ -124,19 +128,10 @@ async function applyFiltersAndRenderCards() {
     await renderCards(ulContainer, dynamicUrl);
 }
 
-// Genre filtering
-function genreFilter(params) {
-    const selectElement = document.getElementById('genre');
-    let dynamicUrl = params.genre;
-
-    selectElement.addEventListener('change', async () => {
-        const selectedGenreNow = selectElement.value;
-        dynamicUrl = params[selectedGenreNow] || params.allgames;
-        await applyFiltersAndRenderCards();
-    });
-
-    return dynamicUrl;
-}
+const selectElement = document.getElementById('genre');
+selectElement.addEventListener('change', async () => {
+    await applyFiltersAndRenderCards();
+});
 
 renderCards(ulContainer, queryParams.genre);
 
@@ -182,6 +177,30 @@ function checkboxFilter(params) {
     renderCards(ulContainer, dynamicUrl);
 }
 
-// Initialize genre, radio, and checkbox filters
 radioFilter(queryParams);
 checkboxFilter(queryParams);
+
+// Searc field filltering
+function searchFilter() {
+    const searchField = document.querySelector('[data-type="search"]');
+    const noFound = document.querySelector('[data-type="text-h2"]');
+    searchField.addEventListener('input', async () => {
+        const searchTerm = searchField.value.toLowerCase();
+        const cards = document.querySelectorAll('.game__cod2');
+
+        cards.forEach(async (card) => {
+            const title = card.querySelector('[data-type="title"]').textContent.toLowerCase();
+            const description = card.querySelector('[data-type="description"]').textContent.toLowerCase();
+
+            if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                card.style.display = 'block';
+                noFound.innerText = '';
+            } else {
+                card.style.display = 'none';
+                noFound.innerText = 'No results found!';
+            }
+        });
+    });
+}
+
+searchFilter();
