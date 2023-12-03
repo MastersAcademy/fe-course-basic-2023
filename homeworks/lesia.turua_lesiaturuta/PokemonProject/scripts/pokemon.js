@@ -133,7 +133,7 @@ const init = async () => {
     selectSearchCheckboxBigEl.addEventListener('change', (e) => {
         checkboxBig = e.target.checked;
         filterPokemonsArray = filterPokemons(checkboxBig, checkboxSmall);
-        typesPokemons = updateTypes(filterPokemonsArray);
+        typesPokemons = updateTypes(pokemons);
         renderSelect();
         cleanElement(cardsEl);
         renderCards(cardsEl, filterPokemonsArray);
@@ -142,7 +142,7 @@ const init = async () => {
     selectSearchCheckboxSmallEl.addEventListener('change', (e) => {
         checkboxSmall = e.target.checked;
         filterPokemonsArray = filterPokemons(checkboxBig, checkboxSmall);
-        typesPokemons = updateTypes(filterPokemonsArray);
+        typesPokemons = updateTypes(pokemons);
         renderSelect();
         cleanElement(cardsEl);
         renderCards(cardsEl, filterPokemonsArray);
@@ -152,6 +152,8 @@ const init = async () => {
         filterPokemonsArray = filterPokemonsByType(e.target.value);
         cleanElement(cardsEl);
         renderCards(cardsEl, sortPokemonsUp(filterPokemonsArray));
+        selectSearchCheckboxBigEl.checked = false;
+        selectSearchCheckboxSmallEl.checked = false;
     });
 
     selectSearchRadioHighEl.addEventListener('change', () => {
