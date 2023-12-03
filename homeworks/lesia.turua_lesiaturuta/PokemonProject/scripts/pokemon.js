@@ -3,8 +3,8 @@ let pokemons = [];
 
 const cardsEl = document.querySelector('[data-cards]');
 const selectSearchEl = document.querySelector('[data-filter-select-search]');
-const selectSearchRadioOnlyNewEl = document.querySelector('[data-filter-new]');
-const selectSearchRadioFavoritesEl = document.querySelector('[data-filter-favorites]');
+const selectSearchRadioHighEl = document.querySelector('[data-filter-high]');
+const selectSearchRadioLowEl = document.querySelector('[data-filter-Low]');
 const selectSearchCheckboxBigEl = document.querySelector('[data-filter-big]');
 const selectSearchCheckboxSmallEl = document.querySelector('[data-filter-small]');
 const selectSearchInputSearchEl = document.querySelector('[data-filter-search]');
@@ -14,7 +14,8 @@ const loadingEl = document.querySelector('[data-loading]');
 let checkboxBig = selectSearchCheckboxBigEl.checked;
 let checkboxSmall = selectSearchCheckboxSmallEl.checked;
 let searchValue = '';
-let filterPokemonsArray = [...pokemons];
+let filterPokemonsArray = [];
+let typesPokemons = [];
 
 const createCardElement = (pokemon) => {
     const templateEl = document.querySelector('[data-type]');
@@ -65,6 +66,34 @@ const cleanElement = (el) => {
     }
 };
 
+const renderSelect = () => {
+    cleanElement(selectSearchEl);
+    const optionFirstEl = document.createElement('option');
+    optionFirstEl.value = 'Select type: ';
+    optionFirstEl.text = 'Select type: ';
+    optionFirstEl.selected = true;
+    optionFirstEl.disabled = true;
+    selectSearchEl.add(optionFirstEl);
+    typesPokemons.forEach((type) => {
+        const optionEl = document.createElement('option');
+        optionEl.value = type;
+        optionEl.text = type;
+        selectSearchEl.add(optionEl);
+    });
+};
+
+const sortPokemonsUp = (array) => array.sort((a, b) => a.height - b.height);
+
+const sortPokemonsDown = (array) => array.sort((a, b) => b.height - a.height);
+
+const updateTypes = (array) => {
+    const types = [];
+    array.forEach((pokemon) => pokemon.type.forEach((type) => {
+        if (!types.includes(type)) types.push(type);
+    }));
+    return types;
+};
+
 const filterPokemons = (checkBig, checkSmall) => {
     let newPokemons = pokemons;
     if (checkBig && checkSmall) {
@@ -77,12 +106,17 @@ const filterPokemons = (checkBig, checkSmall) => {
     return newPokemons;
 };
 
+const filterPokemonsByType = (type) => pokemons.filter((pokemon) => pokemon.type.includes(type));
+
 const init = async () => {
     // get pokemons
     try {
         const url = 'https://my-json-server.typicode.com/electrovladyslav/pokemon-json-server/pokemons';
         const response = await fetch(url);
         pokemons = await response.json();
+        filterPokemonsArray = [...pokemons];
+        typesPokemons = updateTypes(pokemons);
+        renderSelect();
         loadingEl.classList.add('display-none');
     } catch (e) {
         alert('Error url, please update this page');
@@ -90,15 +124,17 @@ const init = async () => {
     }
 
     // disabled for html elements
-    selectSearchEl.disabled = true;
-    selectSearchRadioOnlyNewEl.disabled = true;
-    selectSearchRadioFavoritesEl.disabled = true;
+    // selectSearchEl.disabled = true;
+    // selectSearchRadioHighEl.disabled = true;
+    // selectSearchRadioLowEl.disabled = true;
     // selectSearchInputSearchEl.disabled = true;
     // selectSearchInputButtonEl.disabled = true;
 
     selectSearchCheckboxBigEl.addEventListener('change', (e) => {
         checkboxBig = e.target.checked;
         filterPokemonsArray = filterPokemons(checkboxBig, checkboxSmall);
+        typesPokemons = updateTypes(filterPokemonsArray);
+        renderSelect();
         cleanElement(cardsEl);
         renderCards(cardsEl, filterPokemonsArray);
     });
@@ -106,8 +142,26 @@ const init = async () => {
     selectSearchCheckboxSmallEl.addEventListener('change', (e) => {
         checkboxSmall = e.target.checked;
         filterPokemonsArray = filterPokemons(checkboxBig, checkboxSmall);
+        typesPokemons = updateTypes(filterPokemonsArray);
+        renderSelect();
         cleanElement(cardsEl);
         renderCards(cardsEl, filterPokemonsArray);
+    });
+
+    selectSearchEl.addEventListener('change', (e) => {
+        filterPokemonsArray = filterPokemonsByType(e.target.value);
+        cleanElement(cardsEl);
+        renderCards(cardsEl, sortPokemonsUp(filterPokemonsArray));
+    });
+
+    selectSearchRadioHighEl.addEventListener('change', () => {
+        cleanElement(cardsEl);
+        renderCards(cardsEl, sortPokemonsUp(filterPokemonsArray));
+    });
+
+    selectSearchRadioLowEl.addEventListener('change', () => {
+        cleanElement(cardsEl);
+        renderCards(cardsEl, sortPokemonsDown(filterPokemonsArray));
     });
 
     selectSearchInputButtonEl.addEventListener('click', (e) => {
