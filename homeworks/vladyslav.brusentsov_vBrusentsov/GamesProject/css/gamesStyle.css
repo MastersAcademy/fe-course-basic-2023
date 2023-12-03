@@ -78,7 +78,7 @@
   left: 6px;
 }
 
-.checkbox-games-filter label::before {
+.radio-date-games-sort label::before {
   content: "";
   display: flex;
   width: 20px;
@@ -94,7 +94,7 @@
   transition: background-color 300ms;
 }
 
-.checkbox-games-filter label::after {
+.radio-date-games-sort label::after {
   content: "";
   display: block;
   width: 14px;
@@ -116,19 +116,19 @@
 
 /* Checkbox-input */
 
-.checkbox-filter {
+.radio-date-sort {
   display: flex;
   align-items: center;
-  gap: 90px
+  gap: 32px
 }
 
-.checkbox-games-filter {
+.radio-date-games-sort {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-.checkbox-games-filter input {
+.radio-date-games-sort input {
   appearance: none;
   position: absolute;
   z-index: -1;
@@ -138,22 +138,22 @@
   background-color: #FFF;
 }
 
-.checkbox-games-filter label {
+.radio-date-games-sort label {
   cursor: pointer;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   color: #FFF;
-  position: absolute;
+  position: relative;
   display: flex;
   align-items: center;
 }
 
-.checkbox-games-filter input:checked +  label::before {
+.radio-date-games-sort input:checked +  label::before {
   background-color: #221F1F
 }
 
-.checkbox-games-filter input:checked +  label::after {
+.radio-date-games-sort input:checked +  label::after {
   opacity: 1;
 }
 
