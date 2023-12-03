@@ -173,34 +173,35 @@ function createCardElement(game) {
     return elementCopy;
 }
 
-function renderCards(container, gamesList) {
-    const fragment = document.createDocumentFragment();
-
-    gamesList.forEach((game) => {
-        const card = createCardElement(game);
-        fragment.appendChild(card);
-    });
-
-    container.appendChild(fragment);
-}
-
-function filterGamesByReleaseDate(gamesList, isNewChecked, isOldChecked) {
-    if (isNewChecked && isOldChecked) {
-        return gamesList;
-    }
-
-    return gamesList.filter((game) => {
+function filterNewGames(allGames) {
+    const newGames = allGames.filter((game) => {
         const releaseDate = new Date(game.release_date);
-        const isOld = isOldChecked && releaseDate.getFullYear() >= 2010;
-        const isNew = isNewChecked && releaseDate.getFullYear() <= 2020;
-
-        return !(isNew || isOld);
+        return releaseDate.getFullYear() >= 2020;
     });
+    return newGames;
+}
+function filterOldGames(allGames) {
+    const oldGames = allGames.filter((game) => {
+        const releaseDate = new Date(game.release_date);
+        return releaseDate.getFullYear() <= 2010;
+    });
+    return oldGames;
 }
 
 function displayCards(container, gamesList, isNewChecked, isOldChecked) {
-    const filteredGames = filterGamesByReleaseDate(gamesList, isNewChecked, isOldChecked);
-
+    // None of check-boxes is selected.
+    let filteredGames = gamesList;
+    // Only new selected.
+    if (isNewChecked && !isOldChecked) {
+        filteredGames = filterNewGames(gamesList);
+        // Only old selected.
+    } else if (!isNewChecked && isOldChecked) {
+        filteredGames = filterOldGames(gamesList);
+        // Both selected.
+    } else if (isNewChecked && isOldChecked) {
+        // We link results from new and old games together.
+        filteredGames = filterNewGames(gamesList).concat(filterOldGames(gamesList));
+    }
     const fragment = document.createDocumentFragment();
 
     filteredGames.forEach((game) => {
@@ -212,17 +213,19 @@ function displayCards(container, gamesList, isNewChecked, isOldChecked) {
     container.appendChild(fragment);
 }
 
+function filterAndRenderCards() {
+    const newCheckbox = document.getElementById('new');
+    const oldCheckbox = document.getElementById('old');
+    const newCardSelector = document.querySelector('[data-type="cards-container"]');
+    displayCards(newCardSelector, games, newCheckbox.checked, oldCheckbox.checked);
+}
+
 function init() {
     const newCheckbox = document.getElementById('new');
     const oldCheckbox = document.getElementById('old');
-    const newCards = document.querySelector('[data-type="cards-container"]');
-    if (newCards) {
-        renderCards(newCards, games);
-    }
-    displayCards(newCards, games, newCheckbox.checked, oldCheckbox.checked);
-
-    newCheckbox.addEventListener('change', init);
-    oldCheckbox.addEventListener('change', init);
+    newCheckbox.addEventListener('change', filterAndRenderCards);
+    oldCheckbox.addEventListener('change', filterAndRenderCards);
+    filterAndRenderCards();
 }
 
 init();
