@@ -25,34 +25,75 @@ function renderCards(container, dataGames) {
     container.appendChild(fragment);
 }
 
-async function getCheckboxFilteredGames() {
-    const newGamesCheckbox = document.getElementById('new-games').checked;
-    const oldGamesCheckbox = document.getElementById('old-games').checked;
-
+async function getAllGame() {
     try {
-        const response = await fetch('https://mmo-games.p.rapidapi.com/games', {
+        await fetch('https://mmo-games.p.rapidapi.com/games', {
             method: 'GET',
             headers: {
                 'X-RapidAPI-Key': '1c3169c707mshb51bff34cbc9ff6p1749b9jsn648a19134256',
                 'X-RapidAPI-Host': 'mmo-games.p.rapidapi.com',
             },
+        }).then((response) => response.json()).then((data) => {
+            const games = data.slice(0, 50);
+            return renderCards(cardContainer, games);
         });
-        const data = await response.json();
-        const games = data.slice(0, 50);
-        console.log(games);
+    } catch (error) {
+        console.error(error);
+    }
+}
 
-        if (!newGamesCheckbox && !oldGamesCheckbox) {
+async function getRadioButtonFilter(event) {
+    try {
+        const selectedValue = event.target.value;
+        await fetch(`https://mmo-games.p.rapidapi.com/games?platform=${selectedValue}`, {
+            method: 'GET',
+            headers: {
+                'X-RapidAPI-Key': '1c3169c707mshb51bff34cbc9ff6p1749b9jsn648a19134256',
+                'X-RapidAPI-Host': 'mmo-games.p.rapidapi.com',
+            },
+        }).then((response) => response.json()).then((data) => {
+            const games = data.slice(0, 50);
+            renderCards(cardContainer, games);
+        });
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+async function getSelectFilterGames() {
+    try {
+        const genreSelect = document.getElementById('game-properties');
+        const selectedGenre = genreSelect.value;
+        await fetch(`https://mmo-games.p.rapidapi.com/games?category=${selectedGenre}`, {
+            method: 'GET',
+            headers: {
+                'X-RapidAPI-Key': '1c3169c707mshb51bff34cbc9ff6p1749b9jsn648a19134256',
+                'X-RapidAPI-Host': 'mmo-games.p.rapidapi.com',
+            },
+        }).then((response) => response.json()).then((data) => {
+            const games = data.slice(0, 50);
+            renderCards(cardContainer, games);
+        });
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+async function getSortGamesByDate(event) {
+    try {
+        console.log(event.target.value);
+        if (event.target.value === 'New First') {
+            const response = await fetch(' https://www.mmobomb.com/api1/games?&sort-by=release-date', {
+                method: 'GET',
+                headers: {
+                    'X-RapidAPI-Key': '1c3169c707mshb51bff34cbc9ff6p1749b9jsn648a19134256',
+                    'X-RapidAPI-Host': 'mmo-games.p.rapidapi.com',
+                },
+            });
+            const data = response.json();
+            const games = data.slice(0, 50);
             renderCards(cardContainer, games);
         }
-
-        const filteredCheckboxGames = games.filter((game) => {
-            const releaseYear = parseInt(game.release_date.split('-')[0], 10);
-
-            return (!newGamesCheckbox && !oldGamesCheckbox)
-            || (newGamesCheckbox && releaseYear > 2020)
-            || (oldGamesCheckbox && releaseYear <= 2010);
-        });
-        renderCards(cardContainer, filteredCheckboxGames);
     } catch (error) {
         console.error(error);
     }
@@ -75,29 +116,23 @@ async function getSearchBarFilteredGames() {
     renderCards(cardContainer, searchBarFilter);
 }
 
-// function getSelectFilterGames() {
-//     const genreSelect = document.getElementById('game-properties');
-//     const selectedGenre = genreSelect.value;
-//     const selectFilter = games
-//         .filter((game) => selectedGenre === 'default' || game.genre === selectedGenre);
-//     renderCards(cardContainer, selectFilter);
-// }
-
 function init() {
-    const checkboxes = document.querySelectorAll('.checkbox-filter input[type="checkbox"]');
+    const radioButtonsFilterPlatform = document.querySelector('.radio-filter');
+    const radioButtonsSortByDate = document.querySelectorAll('.radio-date-sort');
     const applyButton = document.getElementById('applyButton');
     const searchBar = document.getElementById('search');
-    // const genreSelect = document.getElementById('game-properties');
-    checkboxes.forEach((checkbox) => {
-        checkbox.addEventListener('change', getCheckboxFilteredGames);
+    const genreSelect = document.getElementById('game-properties');
+    // event listeners
+    radioButtonsSortByDate.forEach((checkbox) => {
+        checkbox.addEventListener('change', getSortGamesByDate);
     });
-
+    radioButtonsFilterPlatform.addEventListener('change', getRadioButtonFilter);
     applyButton.addEventListener('click', getSearchBarFilteredGames);
     searchBar.addEventListener('keyup', getSearchBarFilteredGames);
-    // genreSelect.addEventListener('change', getSelectFilterGames);
+    genreSelect.addEventListener('change', getSelectFilterGames);
 
-    return getCheckboxFilteredGames() || getSearchBarFilteredGames();
-    // || getSelectFilterGames(); */
+    // return getSortGamesByDate() || getSearchBarFilteredGames()|| getSelectFilterGames();
+    return getAllGame() || getSelectFilterGames() || getSortGamesByDate();
 }
 
 document.addEventListener('DOMContentLoaded', init);
