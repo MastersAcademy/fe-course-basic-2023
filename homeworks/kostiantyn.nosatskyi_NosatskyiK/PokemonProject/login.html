@@ -31,22 +31,26 @@
                 <div>
                     <h1 class="login__title">Login page</h1>
                 </div>
-                <form class="login__form" action="successful.html">
+                <form class="login__form">
                     <div class="login__form-email">
                         <label class="form__txt" for="email">Email</label>
-                        <input type="email" name="email" id="email" placeholder="Enter your email address" required>
+                        <input type="text" name="email" id="email" class="form__input" placeholder="Enter your email address">
+                        <span id="output-email" class="output-error"></span>
                     </div>
                     <div class="login__form-password">
                         <label class="form__txt" for="password">Password</label>
-                        <input type="password" name="password" id="password" placeholder="Enter your password" required>
+                        <input type="password" name="password" id="password" class="form__input" placeholder="Enter your password">
+                        <span id="output-password" class="output-error"></span>
                     </div>
                     <div class="login__form-checkbox">
-                        <input type="checkbox" name="checkbox" id="checkbox" required>
+                        <input type="checkbox" name="checkbox" id="checkbox" class="form__checkbox">
                         <label class="form__txt login__form-checkbox-captcha" for="checkbox">I'm not a robot</label>
+                        <span id="output-checkbox" class="output-error"></span>
                     </div>
-                    <input type="submit" value="send">
+                    <button id="button" type="submit" class="btn__submit">Button</button>
                 </form>
             </section>
         </main>
+        <script src="js/login.js"></script>
     </body>
 </html>
