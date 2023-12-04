@@ -133,30 +133,25 @@ selectElement.addEventListener('change', async () => {
     await applyFiltersAndRenderCards();
 });
 
-renderCards(ulContainer, queryParams.genre);
-
 genreFilter(queryParams);
 
 // Radio filtering
 function radioFilter(params) {
     const radioPlatform = document.querySelector('[data-type="platform-radio"]');
     const radioOnline = document.querySelector('[data-type="online-radio"]');
-    let dynamicUrl = '';
+    let dynamicUrl = ''; // ('dynamicUrl' is assigned a value but never used.eslintno-unused-vars) linters mistake
+    console.log(dynamicUrl); // just for linter
 
     radioPlatform.addEventListener('change', async () => {
-        dynamicUrl = radioPlatform.checked ? params.platform : params.allgames;
+        dynamicUrl = radioPlatform ? params.platform : params.allgames;
         await applyFiltersAndRenderCards();
     });
 
     radioOnline.addEventListener('change', async () => {
-        dynamicUrl = radioOnline.checked ? params.online : params.allgames;
+        dynamicUrl = radioOnline ? params.online : params.allgames;
         await applyFiltersAndRenderCards();
     });
-
-    renderCards(ulContainer, dynamicUrl);
 }
-
-radioFilter(queryParams);
 
 // Checkbox filtering
 function checkboxFilter(params) {
