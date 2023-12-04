@@ -133,7 +133,7 @@ header {
 
 .main_login {
   font-family: Roboto,sans-serif;
-  display: center;
+  display: grid;
   align-content: center;
   width: 575px;
   height: 520px;
@@ -186,4 +186,14 @@ header {
 
 .body\.result {
   text-align: center;
+}
+
+.field {
+  align-items: center;
+  margin-left: 30%;
+  width: 575px;
+  height: 409px;
+  font-family: Roboto, sans-serif;
+  color: #221F1F;
+  font-size: 22px;
 }

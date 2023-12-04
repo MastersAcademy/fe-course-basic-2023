@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="style.css" rel="stylesheet" type="text/css">
+
+        <link href="https://fonts.gooleapis.com/css?family=Roboto" rel="stylesheet">
+
+        <meta content="IE=edge" http-equiv="X-UA-Compatible">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>Basic JS</title>
+
+    </head>
+    <body>
+        <header>
+            <img alt="Logo" src="logo.svg">
+            <div class="nav">
+                <ul class="nav-items">
+                    <li>
+                        <a href="game%20cards.html">Games</a>
+                    </li>
+                    <li>
+                        <a href="index.html">About</a>
+                    </li>
+                    <li>
+                        <a class="login-link" href="login.html" title="Login">Login</a>
+                    </li>
+                    <li>
+                        <a href="calculator.html">Calculator</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <div class="field">
+            <h1>Calculator v. 1</h1>
+            <label>
+                <input id="firstValue">
+            </label>
+            <label>
+                <select id="operation" name="operation">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="/">/</option>
+                    <option value="*">*</option>
+                    <option value="**">**</option>
+                </select>
+            </label>
+            <label>
+                <input id="secondValue">
+            </label>
+            <button id="calculate" type="button">=</button>
+            <span id="result"></span>
+        </div>
+        <script src="./dates.js"></script>
+        <script src="./homework.js"></script>
+        <script src="string.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
