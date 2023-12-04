@@ -35,23 +35,21 @@
                 <fieldset class="filters__container">
                     <select class="filters__select" name="pokemons-types">
                         <option value="" selected>Type</option>
-                        <option value="Fire">Fire</option>
-                        <option value="Dragon">Dragon</option>
-                        <option value="Poison">Poison</option>
-                        <option value="Flying">Flying</option>
-                        <option value="Ground">Ground</option>
+                        <option value="grass">Grass</option>
+                        <option value="poison">Poison</option>
+                        <option value="electric">Electric</option>
+                        <option value="psychic">Psychic</option>
+                        <option value="fire">Fire</option>
+                        <option value="flying">Flying</option>
+                        <option value="water">Water</option>
+                        <option value="bug">Bug</option>
+                        <option value="normal">Normal</option>
                     </select>
                     <fieldset class="filters__group">
-                        <input class="filters__input" id="all" type="radio" name="radio-options" value="all">
-                        <label class="filters__custom filters__custom--radio" for="all">All</label>
-                        <input class="filters__input" id="favorites" type="radio" name="radio-options" value="favorites">
-                        <label class="filters__custom filters__custom--radio" for="favorites">Favorites</label>
-                    </fieldset>
-                    <fieldset class="filters__group">
-                        <input class="filters__input" id="big" type="checkbox" name="size" value="big">
-                        <label class="filters__custom filters__custom--checkbox" for="big">Big</label>
-                        <input class="filters__input" id="small" type="checkbox" name="size" value="small">
-                        <label class="filters__custom filters__custom--checkbox" for="small">Small</label>
+                        <input class="filters__input" type="radio" name="sort-height" value="High first" id="high">
+                        <label class="filters__custom filters__custom--radio" for="high">High first</label>
+                        <input class="filters__input" type="radio" name="sort-height" value="Low first" id="low">
+                        <label class="filters__custom filters__custom--radio" for="low">Low first</label>
                     </fieldset>
                     <fieldset class="filters__search">
                         <input class="filters__search-input" type="search" name="search-query" placeholder="Search...">
@@ -63,6 +61,7 @@
                 <div class="pokemons__container">
                     <h2 class="pokemons__title">Study project "Pokemons"</h2>
                     <ul class="pokemons__cards" data-cards-container></ul>
+                    <div class="pokemons__loader-container" data-loader-container></div>
                 </div>
             </section>
         </main>

@@ -107,10 +107,6 @@ body {
   border-radius: 50%;
 }
 
-.filters__custom--checkbox::before {
-  border-radius: 6px;
-}
-
 .filters__custom--radio::after {
   opacity: 0;
   border-radius: 50%;
@@ -120,20 +116,7 @@ body {
   transition: opacity .3s ease-in-out;
 }
 
-.filters__custom--checkbox::after {
-  opacity: 0;
-  border-radius: 6px;
-  background-image: url("../images/icon-check-filter.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  transition: opacity .3s ease-in-out;
-}
-
 .filters__input:checked+.filters__custom--radio::after {
-  opacity: 1;
-}
-
-.filters__input:checked+.filters__custom--checkbox::after {
   opacity: 1;
 }
 
@@ -219,10 +202,48 @@ body {
 .pokemons__cards {
   list-style-type: none;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+  grid-template-columns: repeat(auto-fit, 275px);
   gap: 25px;
 }
 
 .pokemons__card-item {
   max-width: 275px;
+}
+
+.pokemons__loader-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.pokemons__loader-text {
+  color: var(--color-dark);
+  font-size: 40px;
+}
+
+.pokemons__loader-animation {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border: 3px solid rgba(255, 255, 255, .3);
+  border-radius: 50%;
+  border-top-color: var(--color-accent);
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+
+  to {
+    -webkit-transform: rotate(360deg);
+  }
 }

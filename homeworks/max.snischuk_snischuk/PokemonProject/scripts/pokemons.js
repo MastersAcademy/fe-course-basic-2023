@@ -1,265 +1,28 @@
-function initPokemons() {
-    const pokemons = [
-        {
-            abilities: [
-                'Overgrow',
-            ],
-            detailPageURL: '/us/pokedex/bulbasaur',
-            weight: 15.2,
-            weakness: [
-                'Fire',
-                'Psychic',
-                'Flying',
-                'Ice',
-            ],
-            number: '0001',
-            height: 28.4,
-            collectibles_slug: 'bulbasaur',
-            featured: 'false',
-            slug: 'bulbasaur',
-            name: 'Bulbasaur',
-            ThumbnailAltText: 'Bulbasaur',
-            ThumbnailImage: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png',
-            id: 1,
-            type: [
-                'Ground',
-                'Poison',
-            ],
-        },
-        {
-            abilities: [
-                'Overgrow',
-            ],
-            detailPageURL: '/us/pokedex/ivysaur',
-            weight: 28.7,
-            weakness: [
-                'Fire',
-                'Psychic',
-                'Flying',
-                'Ice',
-            ],
-            number: '0002',
-            height: 39.9,
-            collectibles_slug: 'ivysaur',
-            featured: 'false',
-            slug: 'ivysaur',
-            name: 'Ivysaur',
-            ThumbnailAltText: 'Ivysaur',
-            ThumbnailImage: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/002.png',
-            id: 2,
-            type: [
-                'Ground',
-                'Poison',
-            ],
-        },
-        {
-            abilities: [
-                'Overgrow',
-            ],
-            detailPageURL: '/us/pokedex/venusaur',
-            weight: 9999.0,
-            weakness: [
-                'Fire',
-                'Psychic',
-                'Flying',
-                'Ice',
-            ],
-            number: '0003',
-            height: 945.0,
-            collectibles_slug: 'venusaur',
-            featured: 'false',
-            slug: 'venusaur',
-            name: 'Venusaur',
-            ThumbnailAltText: 'Venusaur',
-            ThumbnailImage: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/003.png',
-            id: 3,
-            type: [
-                'Ground',
-                'Poison',
-            ],
-        },
-        {
-            abilities: [
-                'Thick Fat',
-            ],
-            detailPageURL: '/us/pokedex/venusaur',
-            weight: 342.8,
-            weakness: [
-                'Fire',
-                'Psychic',
-                'Flying',
-                'Ice',
-            ],
-            number: '0003',
-            height: 94.8,
-            collectibles_slug: 'venusaur',
-            featured: 'false',
-            slug: 'venusaur',
-            name: 'Venusaur',
-            ThumbnailAltText: 'Venusaur',
-            ThumbnailImage: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/003.png',
-            id: 3,
-            type: [
-                'Ground',
-                'Poison',
-            ],
-        },
-        {
-            abilities: [
-                'Overgrow',
-            ],
-            detailPageURL: '/us/pokedex/venusaur',
-            weight: 220.5,
-            weakness: [
-                'Fire',
-                'Psychic',
-                'Flying',
-                'Ice',
-            ],
-            number: '0003',
-            height: 79.2,
-            collectibles_slug: 'venusaur',
-            featured: 'false',
-            slug: 'venusaur',
-            name: 'Venusaur',
-            ThumbnailAltText: 'Venusaur',
-            ThumbnailImage: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/003.png',
-            id: 3,
-            type: [
-                'Ground',
-                'Poison',
-            ],
-        },
-        {
-            abilities: [
-                'Blaze',
-            ],
-            detailPageURL: '/us/pokedex/charmander',
-            weight: 18.7,
-            weakness: [
-                'Water',
-                'Ground',
-                'Rock',
-            ],
-            number: '0004',
-            height: 24.0,
-            collectibles_slug: 'charmander',
-            featured: 'true',
-            slug: 'charmander',
-            name: 'Charmander',
-            ThumbnailAltText: 'Charmander',
-            ThumbnailImage: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/004.png',
-            id: 4,
-            type: [
-                'Fire',
-            ],
-        },
-        {
-            abilities: [
-                'Blaze',
-            ],
-            detailPageURL: '/us/pokedex/charmeleon',
-            weight: 41.9,
-            weakness: [
-                'Water',
-                'Ground',
-                'Rock',
-            ],
-            number: '0005',
-            height: 43.5,
-            collectibles_slug: 'charmeleon',
-            featured: 'true',
-            slug: 'charmeleon',
-            name: 'Charmeleon',
-            ThumbnailAltText: 'Charmeleon',
-            ThumbnailImage: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/005.png',
-            id: 5,
-            type: [
-                'Fire',
-            ],
-        },
-        {
-            abilities: [
-                'Blaze',
-            ],
-            detailPageURL: '/us/pokedex/charizard',
-            weight: 9999.0,
-            weakness: [
-                'Water',
-                'Electric',
-                'Rock',
-            ],
-            number: '0006',
-            height: 1102.6,
-            collectibles_slug: 'charizard',
-            featured: 'false',
-            slug: 'charizard',
-            name: 'Charizard',
-            ThumbnailAltText: 'Charizard',
-            ThumbnailImage: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/006.png',
-            id: 6,
-            type: [
-                'Fire',
-                'Flying',
-            ],
-        },
-        {
-            abilities: [
-                'Drought',
-            ],
-            detailPageURL: '/us/pokedex/charizard',
-            weight: 221.6,
-            weakness: [
-                'Water',
-                'Electric',
-                'Rock',
-            ],
-            number: '0006',
-            height: 67.0,
-            collectibles_slug: 'charizard',
-            featured: 'true',
-            slug: 'charizard',
-            name: 'Charizard',
-            ThumbnailAltText: 'Charizard',
-            ThumbnailImage: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/006.png',
-            id: 6,
-            type: [
-                'Fire',
-                'Flying',
-            ],
-        },
-        {
-            abilities: [
-                'Tough Claws',
-            ],
-            detailPageURL: '/us/pokedex/charizard',
-            weight: 243.6,
-            weakness: [
-                'Ground',
-                'Rock',
-                'Dragon',
-            ],
-            number: '0006',
-            height: 67.4,
-            collectibles_slug: 'charizard',
-            featured: 'false',
-            slug: 'charizard',
-            name: 'Charizard',
-            ThumbnailAltText: 'Charizard',
-            ThumbnailImage: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/006.png',
-            id: 6,
-            type: [
-                'Fire',
-                'Dragon',
-            ],
-        },
-    ];
-
-    let filteredCards = [...pokemons];
-
+async function initPokemons() {
     const FORM_FILTERS_ELEMENT = document.querySelector('[data-form-filters]');
     const TEXT_INPUT_ELEMENT = FORM_FILTERS_ELEMENT.elements['search-query'];
     const CARDS_CONTAINER_ELEMENT = document.querySelector('[data-cards-container]');
+    const LOADER_CONTAINER_ELEMENT = document.querySelector('[data-loader-container]');
+
+    let allCards;
+    let filteredCards = [];
+
+    function clearContainer(container) {
+        if (!container) return;
+        container.innerHTML = '';
+    }
+
+    function showLoader() {
+        const LOADER_ELELEMNT = `
+            <div class="pokemons__loader-animation"></div>
+            <p class="pokemons__loader-text">Loading...</p>
+        `;
+        LOADER_CONTAINER_ELEMENT.innerHTML = LOADER_ELELEMNT;
+    }
+
+    function hideLoader() {
+        clearContainer(LOADER_CONTAINER_ELEMENT);
+    }
 
     function createCardElement(pokemon) {
         const {
@@ -273,13 +36,8 @@ function initPokemons() {
             weakness,
         } = pokemon;
 
-        const heightNumber = height;
-        const integerPart = Math.floor(heightNumber);
-        const decimalPart = String(heightNumber).includes('.') ? String(heightNumber).split('.')[1] : '0';
-        const heightStr = decimalPart !== '0' ? `${integerPart}' ${decimalPart}"` : `${integerPart}'`;
-
         const typesButtons = type
-            .map((subtype) => `<button class="card-pokemon__btn card-pokemon__btn--${subtype.toLowerCase()}" type="button">${subtype}</button>`)
+            .map((subtype) => `<button class="card-pokemon__btn card-pokemon__btn--${subtype.toLowerCase()}" type="button">${subtype.charAt(0).toUpperCase()}${subtype.toLowerCase().slice(1)}</button>`)
             .join('');
 
         const weaknessesButtons = weakness
@@ -294,7 +52,7 @@ function initPokemons() {
                 </div>
                 <ul class="card-pokemon__body">
                     <li class="card-pokemon__text">
-                        <span class="card-pokemon__text--bold">Height: </span>${heightStr}
+                        <span class="card-pokemon__text--bold">Height: </span>${height}′
                     </li>
                     <li class="card-pokemon__text">
                         <span class="card-pokemon__text--bold">Weight: </span>${weight} lbs
@@ -317,11 +75,6 @@ function initPokemons() {
         return cardTemplateStr;
     }
 
-    function clearContainer(container) {
-        if (!container) return;
-        container.innerHTML = '';
-    }
-
     function renderCards(container, cards) {
         clearContainer(container);
 
@@ -334,29 +87,6 @@ function initPokemons() {
         return renderedCards;
     }
 
-    function filterByHeight(cards) {
-        const isSmallChecked = FORM_FILTERS_ELEMENT.elements.small.checked;
-        const isBigChecked = FORM_FILTERS_ELEMENT.elements.big.checked;
-
-        return cards.filter((card) => {
-            switch (true) {
-                case isSmallChecked && isBigChecked:
-                    return card.height <= 50 || card.height >= 100;
-                case isSmallChecked:
-                    return card.height <= 50;
-                case isBigChecked:
-                    return card.height >= 100;
-                default:
-                    return true;
-            }
-        });
-    }
-
-    function filterByFavorites(cards) {
-        const isFavoritesChecked = FORM_FILTERS_ELEMENT.elements.favorites.checked;
-        return cards.filter((card) => (isFavoritesChecked ? card.featured === 'true' : false));
-    }
-
     function filterByPokemonsType(cards) {
         const selectedPokemonTypeValue = FORM_FILTERS_ELEMENT.elements['pokemons-types'].value;
         return cards.filter((card) => card.type.includes(selectedPokemonTypeValue));
@@ -367,17 +97,21 @@ function initPokemons() {
         return cards.filter((card) => card.name.toLowerCase().includes(inputValue));
     }
 
+    function sortByHeight(cards) {
+        const isLowFirstChecked = FORM_FILTERS_ELEMENT.elements.low.checked;
+
+        const sortedCards = cards.sort((a, b) => {
+            if (isLowFirstChecked) {
+                return a.height - b.height;
+            }
+            return b.height - a.height;
+        });
+
+        return sortedCards;
+    }
+
     function updateFilteredCards() {
-        filteredCards = [...pokemons];
-
-        if (FORM_FILTERS_ELEMENT.elements.small.checked
-            || FORM_FILTERS_ELEMENT.elements.big.checked) {
-            filteredCards = filterByHeight(filteredCards);
-        }
-
-        if (FORM_FILTERS_ELEMENT.elements.favorites.checked) {
-            filteredCards = filterByFavorites(filteredCards);
-        }
+        filteredCards = [...allCards];
 
         if (FORM_FILTERS_ELEMENT.elements['pokemons-types'].value) {
             filteredCards = filterByPokemonsType(filteredCards);
@@ -386,6 +120,11 @@ function initPokemons() {
         if (FORM_FILTERS_ELEMENT.elements['search-query'].value) {
             filteredCards = filterBySearchQuery(filteredCards);
         }
+
+        if (FORM_FILTERS_ELEMENT.elements['sort-height'].value) {
+            filteredCards = sortByHeight(filteredCards);
+        }
+
         return filteredCards;
     }
 
@@ -394,14 +133,8 @@ function initPokemons() {
         renderCards(CARDS_CONTAINER_ELEMENT, updatedFilteredCards);
     }
 
-    function onInputSearchHandler(event) {
-        let updatedFilteredCards = updateFilteredCards();
-        const inputValue = event.target.value.toLowerCase();
-
-        updatedFilteredCards = pokemons.filter((pokemon) => pokemon.name
-            .toLowerCase()
-            .includes(inputValue));
-
+    function onInputSearchHandler() {
+        const updatedFilteredCards = updateFilteredCards();
         renderCards(CARDS_CONTAINER_ELEMENT, updatedFilteredCards);
     }
 
@@ -410,10 +143,33 @@ function initPokemons() {
         onChangeFiltersHandler();
     }
 
-    renderCards(CARDS_CONTAINER_ELEMENT, pokemons);
-    TEXT_INPUT_ELEMENT.addEventListener('input', onInputSearchHandler);
-    FORM_FILTERS_ELEMENT.addEventListener('change', onChangeFiltersHandler);
-    FORM_FILTERS_ELEMENT.addEventListener('submit', onSubmitFiltersHandler);
+    async function fetchAndRenderPokemons() {
+        try {
+            showLoader();
+
+            const pokemonsUrl = 'https://my-json-server.typicode.com/electrovladyslav/pokemon-json-server/pokemons';
+            const options = {
+                method: 'GET',
+            };
+
+            const response = await fetch(`${pokemonsUrl}`, options);
+            const pokemons = await response.json();
+            allCards = [...pokemons];
+
+            renderCards(CARDS_CONTAINER_ELEMENT, allCards);
+
+            TEXT_INPUT_ELEMENT.addEventListener('input', onInputSearchHandler);
+            FORM_FILTERS_ELEMENT.addEventListener('change', onChangeFiltersHandler);
+            FORM_FILTERS_ELEMENT.addEventListener('submit', onSubmitFiltersHandler);
+        } catch (error) {
+            console.error(`GET error: ${error.message}`);
+            CARDS_CONTAINER_ELEMENT.innerHTML = `GET error: ${error.message}... Please try again later.`;
+        } finally {
+            hideLoader();
+        }
+    }
+
+    await fetchAndRenderPokemons();
 }
 
 document.addEventListener('DOMContentLoaded', initPokemons);
