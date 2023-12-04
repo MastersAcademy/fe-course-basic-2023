@@ -31,19 +31,18 @@
             </nav>
         </header>
         <main>
-            <form class="filters" action="./pokemons.html" method="get" data-form-filters>
+            <form class="filters" action="#" data-form-filters>
                 <fieldset class="filters__container">
-                    <select class="filters__select" name="pokemons-types">
-                        <option value="" selected>Type</option>
-                        <option value="grass">Grass</option>
-                        <option value="poison">Poison</option>
-                        <option value="electric">Electric</option>
-                        <option value="psychic">Psychic</option>
-                        <option value="fire">Fire</option>
-                        <option value="flying">Flying</option>
-                        <option value="water">Water</option>
-                        <option value="bug">Bug</option>
-                        <option value="normal">Normal</option>
+                    <select class="filters__select" name="pokemons-types[]" multiple size="2">
+                        <option class="filters__select-option" value="grass">Grass</option>
+                        <option class="filters__select-option" value="poison">Poison</option>
+                        <option class="filters__select-option" value="electric">Electric</option>
+                        <option class="filters__select-option" value="psychic">Psychic</option>
+                        <option class="filters__select-option" value="fire">Fire</option>
+                        <option class="filters__select-option" value="flying">Flying</option>
+                        <option class="filters__select-option" value="water">Water</option>
+                        <option class="filters__select-option" value="bug">Bug</option>
+                        <option class="filters__select-option" value="normal">Normal</option>
                     </select>
                     <fieldset class="filters__group">
                         <input class="filters__input" type="radio" name="sort-height" value="High first" id="high">

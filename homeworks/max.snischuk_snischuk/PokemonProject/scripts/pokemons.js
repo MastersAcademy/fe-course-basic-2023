@@ -88,8 +88,12 @@ async function initPokemons() {
     }
 
     function filterByPokemonsType(cards) {
-        const selectedPokemonTypeValue = FORM_FILTERS_ELEMENT.elements['pokemons-types'].value;
-        return cards.filter((card) => card.type.includes(selectedPokemonTypeValue));
+        const selectedOptions = Array.from(FORM_FILTERS_ELEMENT.elements['pokemons-types[]'].selectedOptions);
+        const selectedPokemonTypes = selectedOptions.map((option) => option.value);
+        const filteredTypes = cards.filter((card) => selectedPokemonTypes
+            .every((type) => card.type.includes(type)));
+
+        return filteredTypes;
     }
 
     function filterBySearchQuery(cards) {
@@ -113,7 +117,7 @@ async function initPokemons() {
     function updateFilteredCards() {
         filteredCards = [...allCards];
 
-        if (FORM_FILTERS_ELEMENT.elements['pokemons-types'].value) {
+        if (FORM_FILTERS_ELEMENT.elements['pokemons-types[]'].selectedOptions) {
             filteredCards = filterByPokemonsType(filteredCards);
         }
 
