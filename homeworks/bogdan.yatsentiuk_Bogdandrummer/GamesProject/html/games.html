@@ -40,7 +40,7 @@
                 <!--Меню в Main-->
                 <form action="#" class="main__menu" data-type="form-filter">
                     <!--Input жанры-->
-                    <select list="genre__datalist" name="ganre__datalist" class="genres__inp" id="genres__inp" placeholder="Genres">
+                    <select list="genre__datalist" name="ganre__datalist" class="genres__inp" id="genres__inp" placeholder="Genres" disabled>
                         <option class="option__item" value="Sport">Sport</option>
                         <option class="option__item" value="Shooter">Shooter</option>
                         <option class="option__item" value="Racing">Racing</option>
@@ -48,9 +48,9 @@
                     </select>
                     <!--Radio box-->
                     <div class="radio__main">
-                        <input class="radio__input" type="radio" name="game" id="platform__ch1" value="Platform">
+                        <input class="radio__input" type="radio" name="game" id="platform__ch1" value="Platform" disabled>
                         <label class="radio__label" for="platform__ch1">Platform</label>
-                        <input class="radio__input online__ch2" type="radio" name="game" id="online__ch2" value="Online games">
+                        <input class="radio__input online__ch2" type="radio" name="game" id="online__ch2" value="Online games" disabled>
                         <label class="radio__label" for="online__ch2">Online games</label>
                     </div>
                     <!--Check box-->
@@ -145,7 +145,7 @@
                 </div>
             </article>
         </template>
-        <script src="../js/games.js"></script>
+        <script src="../js/games.js" type="module"></script>
     </body>
 
 </html>
