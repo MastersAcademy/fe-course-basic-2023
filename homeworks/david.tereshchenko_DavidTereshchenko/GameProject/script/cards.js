@@ -181,10 +181,15 @@ function renderCard(
 }
 
 document.querySelector('.search__button').onclick = function () {
-    const search = games.filter((el) => el.title.startsWith(
-        searchInput.value === searchInput.value.toLowerCase()
-            ? searchInput.value.toUpperCase() : searchInput.value,
-    ));
+    const search = games.filter((el) => {
+        const searchThem = searchInput.value.toLowerCase();
+        return el.title.toLowerCase().includes(searchThem)
+            || el.short_description.toLowerCase().includes(searchThem)
+            || el.genre.toLowerCase().includes(searchThem)
+            || el.platform.toLowerCase().includes(searchThem)
+            || el.publisher.toLowerCase().includes(searchThem)
+            || el.developer.toLowerCase().includes(searchThem);
+    });
     cardsBlock.innerHTML = '';
     search.forEach((cards) => {
         cardsBlock.innerHTML += renderCard(
