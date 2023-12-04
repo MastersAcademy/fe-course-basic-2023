@@ -119,7 +119,7 @@ const gamesData = [
     {
         gameId: 1010,
         title: 'Horizon Zero Dawn',
-        thumbnail: './images/card-10.jpeg',
+        thumbnail: './images/card-11.jpeg',
         description: 'Explore a world by Aloy',
         gameUrl: 'https://www.example.com/horizon-zero-dawn',
         genre: 'Action RPG',
@@ -174,3 +174,36 @@ function renderCards(cardsContainer, games) {
 }
 
 renderCards('game-cards', gamesData);
+
+// Додаємо обробник подій до чекбоксів
+const newCheckbox = document.getElementById('newCheckbox');
+const oldCheckbox = document.getElementById('oldCheckbox');
+
+function updateCards() {
+    // Отримуємо значення чекбоксів
+    const isNewChecked = newCheckbox.checked;
+    const isOldChecked = oldCheckbox.checked;
+
+    // Фільтруємо дані за датою реліза
+    const filteredGames = gamesData.filter((game) => {
+        const releaseYear = new Date(game.releaseDate).getFullYear();
+        if (isNewChecked && isOldChecked) {
+            return true;
+        } if (isNewChecked) {
+            return releaseYear > 2016;
+        } if (isOldChecked) {
+            return releaseYear <= 2015;
+        }
+        return true;
+    });
+
+    const container = document.querySelector('[data-container="game-cards"]');
+    container.innerHTML = '';
+
+    renderCards('game-cards', filteredGames);
+}
+
+newCheckbox.addEventListener('change', updateCards);
+oldCheckbox.addEventListener('change', updateCards);
+
+updateCards();
