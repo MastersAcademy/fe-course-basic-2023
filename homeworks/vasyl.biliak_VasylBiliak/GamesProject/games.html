@@ -7,6 +7,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./style/games.css">
+        <link rel="stylesheet" href="./style/index.css">
         <title>Games</title>
     </head>
     <body>
@@ -14,6 +15,7 @@
             <div class="header__box">
                 <img class="header__logo" src="img/logo.png" alt="logo" width="55px" height="57px">
                 <nav class="header__links">
+                    <a class="header__link" href="./calculator.html">Calculator</a>
                     <a class="header__link" href="./games.html">Games</a>
                     <a class="header__link" href="./index.html">About</a>
                     <a class="header__link" href="./login.html">Login</a>
@@ -22,42 +24,48 @@
         </header>
         <form class="wrapper__filter-search" action="./games.html" method="get" data-form-filters>
             <div class="filter-search">
-                <select class="filter-search__select-option" name="games-types">
-                    <option class="select-option" value="" selected>All</option>
-                    <option class="select-option" value="Shooter">Shooter</option>
-                    <option class="select-option" value="ARPG">ARPG</option>
-                    <option class="select-option" value="Strategy">Strategy</option>
-                    <option class="select-option" value="MMORPG">MMORPG</option>
+                <select class="filter-search__select-option" name="games-category">
+                    <option class="select-option" value="all" selected>all</option>
+                    <option class="select-option" value="mmorpg">mmorpg</option>
+                    <option class="select-option" value="shooter">shooter</option>
+                    <option class="select-option" value="strategy">strategy</option>
+                    <option class="select-option" value="moba">moba</option>
+                    <option class="select-option" value="racing">racing</option>
+                    <option class="select-option" value="sports">sports</option>
+                    <option class="select-option" value="social">social</option>
                 </select>
 
                 <div class="filter-search__radio-select">
-                    <label class="radio-select__label" for="platform">
-                        <input class="radio-select__btn" type="radio" id="platform" name="radio-btns" value="platform">Platform
+                    <label class="radio-select__label" for="pcWindow">
+                        <input class="radio-select__btn" type="radio" id="pcWindow" name="radio-btns" value="pc">Platform
                     </label>
-                    <label class="radio-select__label" for="online_games">
-                        <input class="radio-select__btn" type="radio" id="online_games" name="radio-btns" value="online_games">Online games
+                    <label class="radio-select__label" for="browser">
+                        <input class="radio-select__btn" type="radio" id="browser" name="radio-btns" value="browser">Online games
                     </label>
                 </div>
                 <div class="filter-search__checkbox">
                     <label class="checkbox__label" for="game_date_new">
-                        <input class="checkbox__game-date" type="checkbox" id="game_date_new" name="game_date_new" value="not-robot">New
+                        <input class="checkbox__game-date" type="checkbox" id="game_date_new" name="game_date_new" value="not-robot">New First
                     </label>
                     <label class="checkbox__label" for="game_date_old">
-                        <input class="checkbox__game-date" type="checkbox" id="game_date_old" name="game_date_old" value="not-robot">Old
+                        <input class="checkbox__game-date" type="checkbox" id="game_date_old" name="game_date_old" value="not-robot">Old first
                     </label>
                 </div>
-
                 <div class="search">
                     <label class="search__input">
                         <img class="search__img" src="img/search.png" alt="search" width="24px" height="24px">
                         <input class="search__input-text" type="text" name="search-query" placeholder="Search" pattern=".{1,20}" required>
                     </label>
-                    <input class="search__btn" type="submit" value="Apply">
+                    <input class="search__btn" type="submit" name="search_submit" value="Apply" disabled>
                 </div>
             </div>
         </form>
         <main class="wrapper">
             <h1 class="contain__heading"> Study project "Games"</h1>
+            <div class="loading-overlay">
+                <div class="loading-overlay__spinner">
+                </div>
+            </div>
             <section class="card-games">
             </section>
         </main>
