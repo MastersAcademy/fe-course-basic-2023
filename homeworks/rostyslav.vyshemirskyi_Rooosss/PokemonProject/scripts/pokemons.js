@@ -81,7 +81,6 @@ function onSizeFilterChange() {
 async function init() {
     bigPokemonCheckbox.addEventListener('change', onSizeFilterChange);
     smallPokemonCheckbox.addEventListener('change', onSizeFilterChange);
-    renderCards(cardsList, pokemons);
     await fetchData();
 }
 
