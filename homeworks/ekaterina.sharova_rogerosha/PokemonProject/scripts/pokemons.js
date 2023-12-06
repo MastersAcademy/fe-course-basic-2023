@@ -333,8 +333,6 @@ function init() {
             }));
 
         renderCards(cardListElement, filteredPokemons);
-
-        console.log(selectedSizes);
     });
 }
 
