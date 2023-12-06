@@ -134,7 +134,7 @@
   padding: 12px 12px 22px;
   display: grid;
   grid-template-columns: 90px 1fr;
-  grid-template-rows: 90px 1fr;
+  grid-template-rows: 100px 1fr;
   gap: 12px;
   grid-template-areas: "image card-name" "card-description card-description";
   background-color: #ECECEC;
@@ -152,14 +152,13 @@
 
 .card__name {
   grid-area: card-name;
+  width: 200px;
 }
 
 .card__heading {
   font-size: 18px;
   font-weight: 700;
   color: #221F1F;
-  width: 180px;
-  height: min-content;
 }
 
 .card__paragraf {

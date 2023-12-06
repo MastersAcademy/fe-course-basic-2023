@@ -1,5 +1,15 @@
-import { games } from './games-mock.js';
-
+async function getGamesArray() {
+    const option = {
+        headers: {
+            'X-RapidAPI-Key': '1c3169c707mshb51bff34cbc9ff6p1749b9jsn648a19134256',
+            'X-RapidAPI-Host': 'mmo-games.p.rapidapi.com',
+        },
+    };
+    const gamesPromice = await fetch('https://mmo-games.p.rapidapi.com/games?limit=10', option);
+    const allGames = await gamesPromice.json();
+    const games = await allGames.splice(0, 50);
+    return games;
+}
 const cardContainer = document.querySelector('[data-card-container]');
 const genreSelect = document.querySelector('[data-select-genre]');
 const newGameCheck = document.querySelector('[data-new-games]');
@@ -71,11 +81,11 @@ function getFilterArray(array) {
     });
     return filterArray;
 }
-function showFilterArray() {
-    renderCards(cardContainer, getFilterArray(games));
+async function showFilterArray() {
+    renderCards(cardContainer, getFilterArray(await getGamesArray()));
 }
-function init() {
-    renderCards(cardContainer, games);
+async function init() {
+    renderCards(cardContainer, await getGamesArray());
     genreSelect.addEventListener('change', showFilterArray);
     newGameCheck.addEventListener('change', showFilterArray);
     oldGameCheck.addEventListener('change', showFilterArray);
