@@ -9,6 +9,19 @@
   padding-left: 53px;
 }
 
+.main__loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  color: #F00;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.main__loading--disabled {
+  display: none;
+}
+
 .games__main {
   position: relative;
   top: 180px;

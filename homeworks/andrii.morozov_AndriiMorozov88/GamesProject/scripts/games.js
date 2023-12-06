@@ -1,21 +1,26 @@
-async function getGamesArray() {
-    const option = {
-        headers: {
-            'X-RapidAPI-Key': '1c3169c707mshb51bff34cbc9ff6p1749b9jsn648a19134256',
-            'X-RapidAPI-Host': 'mmo-games.p.rapidapi.com',
-        },
-    };
-    const gamesPromice = await fetch('https://mmo-games.p.rapidapi.com/games?limit=10', option);
-    const allGames = await gamesPromice.json();
-    const games = await allGames.splice(0, 50);
-    return games;
-}
 const cardContainer = document.querySelector('[data-card-container]');
 const genreSelect = document.querySelector('[data-select-genre]');
 const newGameCheck = document.querySelector('[data-new-games]');
 const oldGameCheck = document.querySelector('[data-old-games]');
 const searchButton = document.querySelector('[data-search-button]');
 const searchInput = document.querySelector('[data-search-input]');
+const loading = document.querySelector('[data-loading]');
+async function getGamesArray() {
+    loading.classList.replace('main__loading--disabled', 'main__loading');
+    const option = {
+        headers: {
+            'X-RapidAPI-Key': '1c3169c707mshb51bff34cbc9ff6p1749b9jsn648a19134256',
+            'X-RapidAPI-Host': 'mmo-games.p.rapidapi.com',
+        },
+    };
+    const gamesPromice = await fetch('https://mmo-games.p.rapidapi.com/games', option);
+    const allGames = await gamesPromice.json();
+    const games = await allGames.splice(0, 50);
+    for (let count = 0; count < 100000; count++) {
+        console.log(count);
+    }
+    return games;
+}
 function createCardElement(game, array) {
     const cardTemplate = document.querySelector('[data-card-template]');
     const cardID = cardTemplate.content.querySelector('[data-game-id]');
@@ -45,6 +50,7 @@ function createCardElement(game, array) {
 }
 function renderCards(container, gamesArray) {
     container.innerHTML = '';
+    loading.classList.replace('main__loading', 'main__loading--disabled');
     const fragment = new DocumentFragment();
     for (let count = 0; count < gamesArray.length; count++) {
         fragment.append(createCardElement(count, gamesArray));
