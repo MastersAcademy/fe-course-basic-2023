@@ -63,14 +63,14 @@ function createCardElement(game, array) {
     return cardContent;
 }
 function renderCards(container, gamesArray) {
-    const spliceGamesArray = gamesArray.splice(0, 50);
+    gamesArray.splice(50);
     container.innerHTML = '';
-    loading.classList.replace('main__loading', 'main__loading--disabled');
     const fragment = new DocumentFragment();
-    for (let count = 0; count < spliceGamesArray.length; count++) {
-        fragment.append(createCardElement(count, spliceGamesArray));
+    for (let count = 0; count < gamesArray.length; count++) {
+        fragment.append(createCardElement(count, gamesArray));
     }
     container.append(fragment);
+    loading.classList.replace('main__loading', 'main__loading--disabled');
 }
 function getYear(string) {
     const dateArray = string.split('-');
