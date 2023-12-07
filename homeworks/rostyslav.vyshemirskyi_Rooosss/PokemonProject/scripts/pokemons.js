@@ -55,9 +55,17 @@ function filterPokemons(pokemonsList) {
     return filter;
 }
 
+function showSpinner() {
+    loading.style.display = 'block';
+}
+
+function hideSpinner() {
+    loading.style.display = 'none';
+}
+
 async function fetchData() {
     try {
-        loading.style.display = 'block';
+        showSpinner();
         const options = {
             method: 'GET',
             mode: 'cors',
@@ -67,11 +75,10 @@ async function fetchData() {
         const response = await fetch(baseUrl, options);
         const json = await response.json();
         pokemons = json.slice(0, 50);
-        renderCards(cardsList, pokemons);
-        loading.style.display = 'none';
+        hideSpinner();
     } catch (error) {
         console.error('GET error:', error.message);
-    }
+    } return pokemons;
 }
 
 function onSizeFilterChange() {
@@ -82,6 +89,7 @@ async function init() {
     bigPokemonCheckbox.addEventListener('change', onSizeFilterChange);
     smallPokemonCheckbox.addEventListener('change', onSizeFilterChange);
     await fetchData();
+    renderCards(cardsList, pokemons);
 }
 
 window.onload = init;
