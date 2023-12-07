@@ -11,11 +11,12 @@ const selectSearchInputSearchEl = document.querySelector('[data-filter-search]')
 const selectSearchInputButtonEl = document.querySelector('[data-filter-button]');
 const loadingEl = document.querySelector('[data-loading]');
 
+const url = 'https://my-json-server.typicode.com/electrovladyslav/pokemon-json-server/pokemons';
 let checkboxBig = selectSearchCheckboxBigEl.checked;
 let checkboxSmall = selectSearchCheckboxSmallEl.checked;
 let searchValue = '';
-let filterPokemonsArray = [];
 let typesPokemons = [];
+let typeValue = '';
 
 const createCardElement = (pokemon) => {
     const templateEl = document.querySelector('[data-type]');
@@ -51,7 +52,14 @@ const createCardElement = (pokemon) => {
     return templateContent;
 };
 
+const cleanElement = (el) => {
+    while (el.firstChild) {
+        el.removeChild(el.firstChild);
+    }
+};
+
 const renderCards = (cardContainer, pokemonsArray) => {
+    cleanElement(cardsEl);
     const fragment = new DocumentFragment();
     for (let i = 0; i < pokemonsArray.length; i++) {
         fragment.append(createCardElement(pokemonsArray[i]));
@@ -60,31 +68,34 @@ const renderCards = (cardContainer, pokemonsArray) => {
     return true;
 };
 
-const cleanElement = (el) => {
-    while (el.firstChild) {
-        el.removeChild(el.firstChild);
-    }
-};
-
-const renderSelect = () => {
+const renderSelect = (name) => {
     cleanElement(selectSearchEl);
     const optionFirstEl = document.createElement('option');
-    optionFirstEl.value = 'Select type: ';
-    optionFirstEl.text = 'Select type: ';
-    optionFirstEl.selected = true;
-    optionFirstEl.disabled = true;
+    if (name === '') {
+        optionFirstEl.value = 'Select type: ';
+        optionFirstEl.text = 'Select type: ';
+        optionFirstEl.selected = true;
+        optionFirstEl.disabled = true;
+    } else {
+        optionFirstEl.value = '';
+        optionFirstEl.text = 'All types';
+    }
+
     selectSearchEl.add(optionFirstEl);
     typesPokemons.forEach((type) => {
         const optionEl = document.createElement('option');
         optionEl.value = type;
+        if (type === name) {
+            optionEl.selected = true;
+        }
         optionEl.text = type;
         selectSearchEl.add(optionEl);
     });
 };
 
-const sortPokemonsUp = (array) => array.sort((a, b) => a.height - b.height);
+const sortPokemonsUp = (arrayPokemons) => arrayPokemons.sort((a, b) => a.height - b.height);
 
-const sortPokemonsDown = (array) => array.sort((a, b) => b.height - a.height);
+const sortPokemonsDown = (arrayPokemons) => arrayPokemons.sort((a, b) => b.height - a.height);
 
 const updateTypes = (array) => {
     const types = [];
@@ -94,90 +105,101 @@ const updateTypes = (array) => {
     return types;
 };
 
-const filterPokemons = (checkBig, checkSmall) => {
-    let newPokemons = pokemons;
-    if (checkBig && checkSmall) {
-        newPokemons = pokemons.filter((pokemon) => pokemon.weight < 100 && pokemon.weight > 50);
-    } else if (checkBig && !checkSmall) {
-        newPokemons = pokemons.filter((pokemon) => pokemon.weight > 100);
-    } else if (!checkBig && checkSmall) {
-        newPokemons = pokemons.filter((pokemon) => pokemon.weight < 50);
+const getPokemonsByType = (type, arrayPokemons) => arrayPokemons
+    .filter((pokemon) => pokemon.type
+        .includes(type));
+const getPokemonsByValet = (text, arrayPokemons) => arrayPokemons
+    .filter((pokemon) => pokemon.name
+        .toLocaleLowerCase()
+        .includes(text.toLocaleLowerCase()));
+
+const getPokemons = async (urlPokemons) => {
+    try {
+        const response = await fetch(urlPokemons);
+        return await response.json();
+    } catch (e) {
+        alert('Error url, please update this page');
+        console.error(e);
+        return [];
     }
+};
+
+const getFilterPokemons = () => {
+    let newPokemons = [];
+    if (searchValue && typeValue) {
+        newPokemons = getPokemonsByValet(searchValue, pokemons);
+        newPokemons = newPokemons.length
+            ? getPokemonsByType(typeValue, newPokemons)
+            : getPokemonsByType(typeValue, pokemons);
+    } else if (searchValue && !typeValue) {
+        newPokemons = getPokemonsByValet(searchValue, pokemons);
+    } else if (!searchValue && typeValue) {
+        newPokemons = getPokemonsByType(typeValue, pokemons);
+    } else if (!typeValue && !searchValue) {
+        newPokemons = pokemons;
+    }
+
+    if (checkboxBig && checkboxSmall && newPokemons.length) {
+        newPokemons = newPokemons.filter((pokemon) => pokemon.weight < 100 && pokemon.weight > 50);
+    } else if (checkboxBig && !checkboxSmall && newPokemons.length) {
+        newPokemons = newPokemons.filter((pokemon) => pokemon.weight > 100);
+    } else if (!checkboxBig && checkboxSmall && newPokemons.length) {
+        newPokemons = newPokemons.filter((pokemon) => pokemon.weight < 50);
+    }
+
+    if (selectSearchRadioHighEl.checked && newPokemons.length) {
+        newPokemons = sortPokemonsDown(newPokemons);
+    }
+    if (selectSearchRadioLowEl.checked && newPokemons.length) {
+        newPokemons = sortPokemonsUp(newPokemons);
+    }
+    typesPokemons = updateTypes(newPokemons);
+    renderSelect(typeValue);
     return newPokemons;
 };
 
-const filterPokemonsByType = (type) => pokemons.filter((pokemon) => pokemon.type.includes(type));
-
 const init = async () => {
-    // get pokemons
     try {
-        const url = 'https://my-json-server.typicode.com/electrovladyslav/pokemon-json-server/pokemons';
-        const response = await fetch(url);
-        pokemons = await response.json();
-        filterPokemonsArray = [...pokemons];
-        typesPokemons = updateTypes(pokemons);
-        renderSelect();
-        loadingEl.classList.add('display-none');
+        pokemons = await getPokemons(url);
     } catch (e) {
         alert('Error url, please update this page');
         console.error(e);
     }
-
-    // disabled for html elements
-    // selectSearchEl.disabled = true;
-    // selectSearchRadioHighEl.disabled = true;
-    // selectSearchRadioLowEl.disabled = true;
-    // selectSearchInputSearchEl.disabled = true;
-    // selectSearchInputButtonEl.disabled = true;
+    typesPokemons = updateTypes(pokemons);
+    renderSelect(typeValue);
+    loadingEl.classList.add('display-none');
 
     selectSearchCheckboxBigEl.addEventListener('change', (e) => {
         checkboxBig = e.target.checked;
-        filterPokemonsArray = filterPokemons(checkboxBig, checkboxSmall);
-        typesPokemons = updateTypes(pokemons);
-        renderSelect();
-        cleanElement(cardsEl);
-        renderCards(cardsEl, filterPokemonsArray);
+        renderCards(cardsEl, getFilterPokemons());
     });
 
     selectSearchCheckboxSmallEl.addEventListener('change', (e) => {
         checkboxSmall = e.target.checked;
-        filterPokemonsArray = filterPokemons(checkboxBig, checkboxSmall);
-        typesPokemons = updateTypes(pokemons);
-        renderSelect();
-        cleanElement(cardsEl);
-        renderCards(cardsEl, filterPokemonsArray);
+        renderCards(cardsEl, getFilterPokemons());
     });
 
     selectSearchEl.addEventListener('change', (e) => {
-        filterPokemonsArray = filterPokemonsByType(e.target.value);
-        cleanElement(cardsEl);
-        renderCards(cardsEl, sortPokemonsUp(filterPokemonsArray));
-        selectSearchCheckboxBigEl.checked = false;
-        selectSearchCheckboxSmallEl.checked = false;
+        typeValue = e.target.value;
+        renderCards(cardsEl, getFilterPokemons());
     });
 
     selectSearchRadioHighEl.addEventListener('change', () => {
-        cleanElement(cardsEl);
-        renderCards(cardsEl, sortPokemonsUp(filterPokemonsArray));
+        renderCards(cardsEl, getFilterPokemons());
     });
 
     selectSearchRadioLowEl.addEventListener('change', () => {
-        cleanElement(cardsEl);
-        renderCards(cardsEl, sortPokemonsDown(filterPokemonsArray));
+        renderCards(cardsEl, getFilterPokemons());
     });
 
     selectSearchInputButtonEl.addEventListener('click', (e) => {
         e.preventDefault();
-        // eslint-disable-next-line max-len
-        const newPokemons = filterPokemonsArray.filter((pokemon) => pokemon.name.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase()));
-        cleanElement(cardsEl);
-        renderCards(cardsEl, newPokemons);
+        renderCards(cardsEl, getFilterPokemons());
     });
 
     selectSearchInputSearchEl.addEventListener('input', (e) => {
         searchValue = e.target.value;
     });
-
     renderCards(cardsEl, pokemons);
 };
 
