@@ -16,12 +16,23 @@ async function getGamesArray() {
             'X-RapidAPI-Host': 'mmo-games.p.rapidapi.com',
         },
     };
-    const gamesPromice = await fetch(url, option);
+    let gamesPromice;
+    let games;
+    if (oldFirstButton.checked || newFirstButton.checked) {
+        gamesPromice = await fetch(`${url}?sort-by=release-date`, option);
+    } else {
+        gamesPromice = await fetch(url, option);
+    }
     const allGames = await gamesPromice.json();
-    const games = await allGames.splice(0, 50);
-    // for (let count = 0; count < 100000; count++) {
-    //     console.log(count);
-    // }
+    if (oldFirstButton.checked) {
+        games = await allGames.reverse();
+    } else {
+        games = await allGames;
+    }
+    for (let count = 0; count < 100000; count++) {
+        console.log(count);
+        console.clear();
+    }
     return games;
 }
 function createCardElement(game, array) {
@@ -52,11 +63,12 @@ function createCardElement(game, array) {
     return cardContent;
 }
 function renderCards(container, gamesArray) {
+    const spliceGamesArray = gamesArray.splice(0, 50);
     container.innerHTML = '';
     loading.classList.replace('main__loading', 'main__loading--disabled');
     const fragment = new DocumentFragment();
-    for (let count = 0; count < gamesArray.length; count++) {
-        fragment.append(createCardElement(count, gamesArray));
+    for (let count = 0; count < spliceGamesArray.length; count++) {
+        fragment.append(createCardElement(count, spliceGamesArray));
     }
     container.append(fragment);
 }
@@ -90,6 +102,7 @@ function getFilterArray(array) {
     });
     return filterArray;
 }
+
 async function showFilterArray() {
     renderCards(cardContainer, getFilterArray(await getGamesArray()));
 }
@@ -99,12 +112,8 @@ async function init() {
     genreSelect.addEventListener('change', showFilterArray);
     newGameCheck.addEventListener('change', showFilterArray);
     oldGameCheck.addEventListener('change', showFilterArray);
-    newFirstButton.addEventListener('change', () => {
-        console.log('new');
-    });
-    oldFirstButton.addEventListener('change', () => {
-        console.log('old');
-    });
+    newFirstButton.addEventListener('change', showFilterArray);
+    oldFirstButton.addEventListener('change', showFilterArray);
     searchInput.addEventListener('keyup', () => {
         if (searchInput.value.trim() === '') showFilterArray();
     });
