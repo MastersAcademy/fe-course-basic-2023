@@ -44,7 +44,6 @@ h1 {
 header {
   max-width: 100%;
   background-color: #EF4934;
-  margin-bottom: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -133,7 +132,7 @@ header {
 
 .main_login {
   font-family: Roboto,sans-serif;
-  display: center;
+  display: grid;
   align-content: center;
   width: 575px;
   height: 520px;
@@ -187,3 +186,48 @@ header {
 .body\.result {
   text-align: center;
 }
+
+.checkbox {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  background-color: #FFF;
+}
+
+
+.games__text-title {
+  padding: 40px 0;
+}
+
+.games__cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  gap: 25px;
+  width: 1175px;
+  height: 545px;
+  left: 52px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 70px;
+  width: 100%;
+  background-color: #221F1F;
+  color: #FFF;
+}
+
+.search__contain {
+  width: 100%;
+}
+
+.search__form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
