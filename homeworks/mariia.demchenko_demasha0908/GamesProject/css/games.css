@@ -153,6 +153,17 @@ a {
   padding: 40px 0;
 }
 
+.games__loading {
+  font-size: 48px;
+  color: #221F1F;
+}
+
+.games__loading-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .games__cards-container {
   display: grid;
   grid-template-columns: repeat(4, 2fr);
