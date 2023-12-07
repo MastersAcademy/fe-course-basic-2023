@@ -43,8 +43,7 @@ const apiUrl = 'https://mmo-games.p.rapidapi.com/games?';
 const ulContainer = document.querySelector('[data-type="cards-container"]');
 
 async function renderCards(container, genre) {
-    const dynamicUrl = genre;
-    const url = new URL(`${apiUrl}${dynamicUrl}`);
+    const url = new URL(`${apiUrl}${genre}`);
 
     const options = {
         method: 'GET',
@@ -63,8 +62,7 @@ async function renderCards(container, genre) {
 
             container.innerHTML = '';
 
-            const gamesJSON = Array.isArray(gamesList) ? gamesList : JSON.stringify(gamesList);
-            const limitedGames = gamesJSON.slice(0, 50);
+            const limitedGames = gamesList.length > 50 ? gamesList.slice(0, 50) : gamesList;
 
             limitedGames.forEach(async (game) => {
                 const cardElement = await createCardElement(game);
@@ -96,6 +94,14 @@ const queryParams = {
     newGames: '&sort-by=release-date',
     oldGames: '&sort-by=alphabetical',
 };
+
+// announcement data-type
+const checkNew = document.querySelector('[data-type="check-new"]');
+const checkOld = document.querySelector('[data-type="check-old"]');
+const radioPlatform = document.querySelector('[data-type="platform-radio"]');
+const radioOnline = document.querySelector('[data-type="online-radio"]');
+const searchField = document.querySelector('[data-type="search"]');
+const noFound = document.querySelector('[data-type="text-h2"]');
 
 // Genre filtering
 function genreFilter(params) {
@@ -137,26 +143,19 @@ genreFilter(queryParams);
 
 // Radio filtering
 function radioFilter(params) {
-    const radioPlatform = document.querySelector('[data-type="platform-radio"]');
-    const radioOnline = document.querySelector('[data-type="online-radio"]');
-    let dynamicUrl = ''; // ('dynamicUrl' is assigned a value but never used.eslintno-unused-vars) linters mistake
-    console.log(dynamicUrl); // just for linter
-
     radioPlatform.addEventListener('change', async () => {
-        dynamicUrl = radioPlatform ? params.platform : params.allgames;
+        params.dynamicUrl = radioPlatform.checked ? params.platform : params.allgames;
         await applyFiltersAndRenderCards();
     });
 
     radioOnline.addEventListener('change', async () => {
-        dynamicUrl = radioOnline ? params.online : params.allgames;
+        params.dynamicUrl = radioOnline.checked ? params.online : params.allgames;
         await applyFiltersAndRenderCards();
     });
 }
 
 // Checkbox filtering
 function checkboxFilter(params) {
-    const checkNew = document.querySelector('[data-type="check-new"]');
-    const checkOld = document.querySelector('[data-type="check-old"]');
     let dynamicUrl = params.allgames;
 
     checkNew.addEventListener('change', async () => {
@@ -172,20 +171,15 @@ function checkboxFilter(params) {
     renderCards(ulContainer, dynamicUrl);
 }
 
-radioFilter(queryParams);
-checkboxFilter(queryParams);
-
 // Search field filtering
 function searchFilter() {
-    const searchField = document.querySelector('[data-type="search"]');
-    const noFound = document.querySelector('[data-type="text-h2"]');
-    searchField.addEventListener('input', async () => {
+    searchField.addEventListener('input', () => {
         const searchTerm = searchField.value.toLowerCase();
         const cards = document.querySelectorAll('.game__cod2');
 
         let anyCardFound = false;
 
-        cards.forEach(async (card) => {
+        cards.forEach((card) => {
             const title = card.querySelector('[data-type="title"]').textContent.toLowerCase();
             const description = card.querySelector('[data-type="description"]').textContent.toLowerCase();
 
@@ -202,4 +196,6 @@ function searchFilter() {
     });
 }
 
+radioFilter(queryParams);
+checkboxFilter(queryParams);
 searchFilter();
