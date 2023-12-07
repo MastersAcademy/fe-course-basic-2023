@@ -63,7 +63,7 @@
 
 .filter {
   display: grid;
-  grid-template-columns: 17fr 30fr 25fr 30fr;
+  grid-template-columns: 17fr 30fr 30fr 25fr 30fr;
   background-color: #221F1F;
   padding-left: 50px;
   padding-right: 50px;

@@ -1,5 +1,6 @@
 const cardContainer = document.querySelector('[data-card-container]');
 const genreSelect = document.querySelector('[data-select-genre]');
+const platformSelect = document.querySelector('[data-select-platform]');
 const newGameCheck = document.querySelector('[data-new-games]');
 const oldGameCheck = document.querySelector('[data-old-games]');
 const searchButton = document.querySelector('[data-search-button]');
@@ -7,7 +8,6 @@ const searchInput = document.querySelector('[data-search-input]');
 const newFirstButton = document.querySelector('[data-new-first]');
 const oldFirstButton = document.querySelector('[data-old-first]');
 const loading = document.querySelector('[data-loading]');
-const url = 'https://mmo-games.p.rapidapi.com/games';
 async function getGamesArray() {
     loading.classList.replace('main__loading--disabled', 'main__loading');
     const option = {
@@ -16,13 +16,23 @@ async function getGamesArray() {
             'X-RapidAPI-Host': 'mmo-games.p.rapidapi.com',
         },
     };
-    let gamesPromice;
+    let url = 'https://mmo-games.p.rapidapi.com/games?';
     let games;
-    if (oldFirstButton.checked || newFirstButton.checked) {
-        gamesPromice = await fetch(`${url}?sort-by=release-date`, option);
-    } else {
-        gamesPromice = await fetch(url, option);
+    switch (platformSelect.value) {
+        case 'PC (Windows)':
+            url += 'platform=pc';
+            break;
+        case 'Web Browser':
+            url += 'platform=browser';
+            break;
+        default:
+            url += 'platform=all';
+            break;
     }
+    if (oldFirstButton.checked || newFirstButton.checked) {
+        url += '&sort-by=release-date';
+    }
+    const gamesPromice = await fetch(url, option);
     const allGames = await gamesPromice.json();
     if (oldFirstButton.checked) {
         games = await allGames.reverse();
@@ -84,19 +94,23 @@ function getFilterArray(array) {
         const isElDescInc = element.short_description.toLowerCase().includes(searchInputValue);
         const isGenreSelected = element.genre === genreSelect.value;
         const isGenreNonSelected = genreSelect.value === '0';
+        const isPlatSelected = element.platform === platformSelect.value;
+        const isPlatNonSelected = platformSelect.value === 'all';
         const releaseYear = getYear(element.release_date);
-        if ((isElTitleInc || isElDescInc) && (isGenreSelected || isGenreNonSelected)) {
-            if (newGameCheck.checked && !oldGameCheck.checked) {
-                if (releaseYear > 2020) filterArray.push(element);
-            }
-            if (oldGameCheck.checked && !newGameCheck.checked) {
-                if (releaseYear < 2010) filterArray.push(element);
-            }
-            if (oldGameCheck.checked && newGameCheck.checked) {
-                if (releaseYear > 2020 || releaseYear < 2010) filterArray.push(element);
-            }
-            if (!oldGameCheck.checked && !newGameCheck.checked) {
-                filterArray.push(element);
+        if (isElTitleInc || isElDescInc) {
+            if ((isGenreSelected || isGenreNonSelected) && (isPlatSelected || isPlatNonSelected)) {
+                if (newGameCheck.checked && !oldGameCheck.checked) {
+                    if (releaseYear > 2020) filterArray.push(element);
+                }
+                if (oldGameCheck.checked && !newGameCheck.checked) {
+                    if (releaseYear < 2010) filterArray.push(element);
+                }
+                if (oldGameCheck.checked && newGameCheck.checked) {
+                    if (releaseYear > 2020 || releaseYear < 2010) filterArray.push(element);
+                }
+                if (!oldGameCheck.checked && !newGameCheck.checked) {
+                    filterArray.push(element);
+                }
             }
         }
     });
@@ -110,6 +124,7 @@ async function showFilterArray() {
 async function init() {
     renderCards(cardContainer, await getGamesArray());
     genreSelect.addEventListener('change', showFilterArray);
+    platformSelect.addEventListener('change', showFilterArray);
     newGameCheck.addEventListener('change', showFilterArray);
     oldGameCheck.addEventListener('change', showFilterArray);
     newFirstButton.addEventListener('change', showFilterArray);
