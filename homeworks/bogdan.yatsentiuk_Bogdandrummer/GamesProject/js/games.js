@@ -61,7 +61,7 @@ const filterGames = () => {
         return true;
     });
 
-    renderCards(gamesList, filterRelease);
+    renderCards(gamesList, filterRelease.slice(0, 50));
 };
 async function loadGames() {
     try {
