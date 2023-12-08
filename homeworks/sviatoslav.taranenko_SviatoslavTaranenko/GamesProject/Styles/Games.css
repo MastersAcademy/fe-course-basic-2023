@@ -388,7 +388,6 @@ body {
 .footer__icons {
   display: flex;
   justify-content: center;
-
 }
 
 .footer__icons_row {
@@ -427,7 +426,7 @@ body {
 
 .footer__text {
   display: flex;
-  margin-top: 10px;;
+  margin-top: 10px;
   justify-content: center;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
