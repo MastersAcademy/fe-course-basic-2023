@@ -401,7 +401,7 @@ body {
 .footer__icons_all {
   display: flex;
   justify-content: center;
-  margin: auto auto;
+  margin: auto;
   align-items: center;
   background-color: #FFF;
   width: 42px;
@@ -412,7 +412,7 @@ body {
 .footer__icons_all {
   display: flex;
   justify-content: center;
-  margin: auto auto;
+  margin: auto;
   align-items: center;
   background-color: #FFF;
   width: 42px;
