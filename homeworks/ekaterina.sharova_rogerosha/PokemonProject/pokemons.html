@@ -37,318 +37,28 @@
                 <option value="dropdown-fighting">Fighting</option>
                 <option value="dropdown-dark">Dark</option>
             </select>
-            <div class="radio-buttons">
+            <form class="radio-buttons" data-size-new-filter>
                 <label for="favourites">Favourites</label>
-                <input type="radio" id="favourites" name="new-filter">
+                <input type="radio" id="favourites" name="new-filter" disabled>
                 <label for="only-new">Only New</label>
-                <input type="radio" id="only-new" name="new-filter">
-            </div>
-            <div class="checkboxes">
+                <input type="radio" id="only-new" name="new-filter" disabled>
+            </form>
+            <form class="checkboxes" data-size-form>
                 <label for="small">Small</label>
-                <input type="checkbox" id="small" name="size">
+                <input type="checkbox" name="size" id="small" value="50">
                 <label for="big">Big</label>
-                <input type="checkbox" id="big" name="size">
-            </div>
+                <input type="checkbox" name="size" id="big" value="100">
+            </form>
             <div class="search-field">
                 <div class="image-search">
-                    <img src="images/search.svg" alt="search">
-                    <input class="input-search" type="text" id="search" placeholder="Search">
+                    <input class="input-search" type="text" id="search" placeholder="Search" disabled>
                 </div>
                 <button class="button-apply" type="submit">Apply</button>
             </div>
         </header>
         <div class="content">
             <h1 class="headline">Study Project "Pokemons"</h1>
-            <div class="card-container">
-                <section class="card">
-                    <div class="card-header">
-                        <img src="images/Urshifu.svg" alt="Urshifu" class="card-image">
-                        <h5 class="card-title">
-                            Urshifu
-                        </h5>
-                    </div>
-                    <main class="card-content">
-                        <p class="card-text">
-                            <span class="card-text-bold">Height:</span>
-                            6' 03"
-                        </p>
-                        <p class="card-text">
-                            <span class="card-text-bold">Weight:</span>
-                            231.5 lbs
-                        </p>
-                        <p class="card-text">
-                            <span class="card-text-bold">Number:</span>
-                            0002
-                        </p>
-                        <div class="card-property">
-                            <span class="card-property-name card-text-bold">Type:</span>
-                            <div class="card-property-tags">
-                                <span class="card-property-tag group-yellow">Fighting</span>
-                                <span class="card-property-tag group-red">Dark</span>
-                            </div>
-                        </div>
-                        <div class="card-property">
-                            <span class="card-property-name card-text-bold">Weaknesses:</span>
-                            <div class="card-property-tags">
-                                <span class="card-property-tag group-pink">Fairy</span>
-                                <span class="card-property-tag group-blue">Flying</span>
-                            </div>
-                        </div>
-                    </main>
-                </section>
-                <section class="card">
-                    <div class="card-header">
-                        <img src="images/Urshifu.svg" alt="Urshifu" class="card-image">
-                        <h5 class="card-title">
-                            Urshifu
-                        </h5>
-                    </div>
-                    <main class="card-content">
-                        <p class="card-text">
-                            <span class="card-text-bold">Height:</span>
-                            6' 03"
-                        </p>
-                        <p class="card-text">
-                            <span class="card-text-bold">Weight:</span>
-                            231.5 lbs
-                        </p>
-                        <p class="card-text">
-                            <span class="card-text-bold">Number:</span>
-                            0002
-                        </p>
-                        <div class="card-property">
-                            <span class="card-property-name card-text-bold">Type:</span>
-                            <div class="card-property-tags">
-                                <span class="card-property-tag group-yellow">Fighting</span>
-                                <span class="card-property-tag group-red">Dark</span>
-                            </div>
-                        </div>
-                        <div class="card-property">
-                            <span class="card-property-name card-text-bold">Weaknesses:</span>
-                            <div class="card-property-tags">
-                                <span class="card-property-tag group-pink">Fairy</span>
-                                <span class="card-property-tag group-blue">Flying</span>
-                            </div>
-                        </div>
-                    </main>
-                </section>
-                <section class="card">
-                    <div class="card-header">
-                        <img src="images/Urshifu.svg" alt="Urshifu" class="card-image">
-                        <h5 class="card-title">
-                            Urshifu
-                        </h5>
-                    </div>
-                    <main class="card-content">
-                        <p class="card-text">
-                            <span class="card-text-bold">Height:</span>
-                            6' 03"
-                        </p>
-                        <p class="card-text">
-                            <span class="card-text-bold">Weight:</span>
-                            231.5 lbs
-                        </p>
-                        <p class="card-text">
-                            <span class="card-text-bold">Number:</span>
-                            0002
-                        </p>
-                        <div class="card-property">
-                            <span class="card-property-name card-text-bold">Type:</span>
-                            <div class="card-property-tags">
-                                <span class="card-property-tag group-yellow">Fighting</span>
-                                <span class="card-property-tag group-red">Dark</span>
-                            </div>
-                        </div>
-                        <div class="card-property">
-                            <span class="card-property-name card-text-bold">Weaknesses:</span>
-                            <div class="card-property-tags">
-                                <span class="card-property-tag group-pink">Fairy</span>
-                                <span class="card-property-tag group-blue">Flying</span>
-                            </div>
-                        </div>
-                    </main>
-                </section>
-                <section class="card">
-                    <div class="card-header">
-                        <img src="images/Urshifu.svg" alt="Urshifu" class="card-image">
-                        <h5 class="card-title">
-                            Urshifu
-                        </h5>
-                    </div>
-                    <main class="card-content">
-                        <p class="card-text">
-                            <span class="card-text-bold">Height:</span>
-                            6' 03"
-                        </p>
-                        <p class="card-text">
-                            <span class="card-text-bold">Weight:</span>
-                            231.5 lbs
-                        </p>
-                        <p class="card-text">
-                            <span class="card-text-bold">Number:</span>
-                            0002
-                        </p>
-                        <div class="card-property">
-                            <span class="card-property-name card-text-bold">Type:</span>
-                            <div class="card-property-tags">
-                                <span class="card-property-tag group-yellow">Fighting</span>
-                                <span class="card-property-tag group-red">Dark</span>
-                            </div>
-                        </div>
-                        <div class="card-property">
-                            <span class="card-property-name card-text-bold">Weaknesses:</span>
-                            <div class="card-property-tags">
-                                <span class="card-property-tag group-pink">Fairy</span>
-                                <span class="card-property-tag group-blue">Flying</span>
-                            </div>
-                        </div>
-                    </main>
-                </section>
-                <section class="card">
-                    <div class="card-header">
-                        <img src="images/Urshifu.svg" alt="Urshifu" class="card-image">
-                        <h5 class="card-title">
-                            Urshifu
-                        </h5>
-                    </div>
-                    <main class="card-content">
-                        <p class="card-text">
-                            <span class="card-text-bold">Height:</span>
-                            6' 03"
-                        </p>
-                        <p class="card-text">
-                            <span class="card-text-bold">Weight:</span>
-                            231.5 lbs
-                        </p>
-                        <p class="card-text">
-                            <span class="card-text-bold">Number:</span>
-                            0002
-                        </p>
-                        <div class="card-property">
-                            <span class="card-property-name card-text-bold">Type:</span>
-                            <div class="card-property-tags">
-                                <span class="card-property-tag group-yellow">Fighting</span>
-                                <span class="card-property-tag group-red">Dark</span>
-                            </div>
-                        </div>
-                        <div class="card-property">
-                            <span class="card-property-name card-text-bold">Weaknesses:</span>
-                            <div class="card-property-tags">
-                                <span class="card-property-tag group-pink">Fairy</span>
-                                <span class="card-property-tag group-blue">Flying</span>
-                            </div>
-                        </div>
-                    </main>
-                </section>
-                <section class="card">
-                    <div class="card-header">
-                        <img src="images/Urshifu.svg" alt="Urshifu" class="card-image">
-                        <h5 class="card-title">
-                            Urshifu
-                        </h5>
-                    </div>
-                    <main class="card-content">
-                        <p class="card-text">
-                            <span class="card-text-bold">Height:</span>
-                            6' 03"
-                        </p>
-                        <p class="card-text">
-                            <span class="card-text-bold">Weight:</span>
-                            231.5 lbs
-                        </p>
-                        <p class="card-text">
-                            <span class="card-text-bold">Number:</span>
-                            0002
-                        </p>
-                        <div class="card-property">
-                            <span class="card-property-name card-text-bold">Type:</span>
-                            <div class="card-property-tags">
-                                <span class="card-property-tag group-yellow">Fighting</span>
-                                <span class="card-property-tag group-red">Dark</span>
-                            </div>
-                        </div>
-                        <div class="card-property">
-                            <span class="card-property-name card-text-bold">Weaknesses:</span>
-                            <div class="card-property-tags">
-                                <span class="card-property-tag group-pink">Fairy</span>
-                                <span class="card-property-tag group-blue">Flying</span>
-                            </div>
-                        </div>
-                    </main>
-                </section>
-                <section class="card">
-                    <div class="card-header">
-                        <img src="images/Urshifu.svg" alt="Urshifu" class="card-image">
-                        <h5 class="card-title">
-                            Urshifu
-                        </h5>
-                    </div>
-                    <main class="card-content">
-                        <p class="card-text">
-                            <span class="card-text-bold">Height:</span>
-                            6' 03"
-                        </p>
-                        <p class="card-text">
-                            <span class="card-text-bold">Weight:</span>
-                            231.5 lbs
-                        </p>
-                        <p class="card-text">
-                            <span class="card-text-bold">Number:</span>
-                            0002
-                        </p>
-                        <div class="card-property">
-                            <span class="card-property-name card-text-bold">Type:</span>
-                            <div class="card-property-tags">
-                                <span class="card-property-tag group-yellow">Fighting</span>
-                                <span class="card-property-tag group-red">Dark</span>
-                            </div>
-                        </div>
-                        <div class="card-property">
-                            <span class="card-property-name card-text-bold">Weaknesses:</span>
-                            <div class="card-property-tags">
-                                <span class="card-property-tag group-pink">Fairy</span>
-                                <span class="card-property-tag group-blue">Flying</span>
-                            </div>
-                        </div>
-                    </main>
-                </section>
-                <section class="card">
-                    <div class="card-header">
-                        <img src="images/Urshifu.svg" alt="Urshifu" class="card-image">
-                        <h5 class="card-title">
-                            Urshifu
-                        </h5>
-                    </div>
-                    <main class="card-content">
-                        <p class="card-text">
-                            <span class="card-text-bold">Height:</span>
-                            6' 03"
-                        </p>
-                        <p class="card-text">
-                            <span class="card-text-bold">Weight:</span>
-                            231.5 lbs
-                        </p>
-                        <p class="card-text">
-                            <span class="card-text-bold">Number:</span>
-                            0002
-                        </p>
-                        <div class="card-property">
-                            <span class="card-property-name card-text-bold">Type:</span>
-                            <div class="card-property-tags">
-                                <span class="card-property-tag group-yellow">Fighting</span>
-                                <span class="card-property-tag group-red">Dark</span>
-                            </div>
-                        </div>
-                        <div class="card-property">
-                            <span class="card-property-name card-text-bold">Weaknesses:</span>
-                            <div class="card-property-tags">
-                                <span class="card-property-tag group-pink">Fairy</span>
-                                <span class="card-property-tag group-blue">Flying</span>
-                            </div>
-                        </div>
-                    </main>
-                </section>
-            </div>
+            <div class="card-container" data-card-list></div>
         </div>
         <footer>
             <div class="social-networks">
@@ -358,5 +68,46 @@
                 Made with 🤍 on course <a href="https://www.mastersacademy.education/frontend-for-beginners-it" class="link"> 'Frontend for beginners' from Masters Academy in 2023</a>, by Katya Sharova
             </p>
         </footer>
+
+        <template data-type="card-template">
+            <section class="card">
+                <div class="card-header">
+                    <img data-card-image alt="Pokemon image" class="card-image">
+                    <h5 data-card-title class="card-title"></h5>
+                </div>
+                <main class="card-content">
+                    <p class="card-text">
+                        <span class="card-text-bold">Height:</span>
+                        <span data-card-height></span>
+                    </p>
+                    <p class="card-text">
+                        <span class="card-text-bold">Weight:</span>
+                        <span data-card-weight></span>
+                    </p>
+                    <p class="card-text">
+                        <span class="card-text-bold">Number:</span>
+                        <span data-card-number></span>
+                    </p>
+                    <div class="card-property">
+                        <span class="card-property-name card-text-bold">Type:</span>
+                        <div data-card-types class="card-property-tags"></div>
+                    </div>
+                    <div class="card-property">
+                        <span class="card-property-name card-text-bold">Weaknesses:</span>
+                        <div data-card-weaknesses class="card-property-tags"></div>
+                    </div>
+                </main>
+            </section>
+        </template>
+
+        <template data-type="card-type-template">
+            <span data-card-type class="card-property-tag group-red"></span>
+        </template>
+
+        <template data-type="card-weakness-template">
+            <span data-card-weakness class="card-property-tag group-blue"></span>
+        </template>
+
+        <script src="./scripts/pokemons.js"></script>
     </body>
 </html>

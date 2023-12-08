@@ -69,13 +69,15 @@ body {
   border-radius: 6px 0 0 6px;
   display: flex;
   align-items: center;
-  padding: 12px;
 }
 
 .input-search {
   border: 1px solid #FFF;
-  padding: 10px;
   width: 100%;
+  background-image: url("../images/search.svg");
+  background-repeat: no-repeat;
+  background-position: 5px center;
+  padding: 13px 20px 13px 30px;
 }
 
 .radio-buttons input, .checkboxes input {
@@ -244,7 +246,6 @@ footer {
   text-align: center;
   width: 100%;
   bottom: 0;
-  position: fixed;
 }
 
 .footer-text {
