@@ -18,6 +18,52 @@
   height: 100vh;
 }
 
+.error {
+  font-size: 30px;
+  color: #CA331F;
+}
+
+.preloader {
+  display: none;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  top: 50%;
+  z-index: 100;
+  margin: auto;
+  background: rgba(200, 200, 200, .5);
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  z-index: 100;
+  background: linear-gradient(0deg, rgba(255, 61, 0, .2) 33%, #FF3D00 100%);
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #263238;
+}
+
+@keyframes rotation {
+  0% { transform: rotate(0deg) }
+  100% { transform: rotate(360deg)}
+}
+
 .content {
   max-width: 1280px;
   margin: 0 auto;
@@ -233,6 +279,7 @@
 
 .games__row {
   display: grid;
+  width: 100%;
   grid-template-rows: repeat(3, 270px);
   grid-template-columns: repeat(4, 275px);
   gap: 25px;

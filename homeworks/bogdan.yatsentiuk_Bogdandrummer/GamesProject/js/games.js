@@ -1,4 +1,11 @@
-import { games } from './mock_games.js';
+const preloader = document.querySelector('.preloader');
+// const searchInput = document.getElementById('search__input');
+let games = [];
+const gamesList = document.querySelector('[data-type="games_list"]');
+
+const Err = document.createElement('div');
+Err.innerText = 'Error fetching data from server!';
+Err.classList.add('error');
 
 const createCardElement = (game) => {
     const cardTemplate = document.querySelector('[data-type="card-template"]');
@@ -14,6 +21,7 @@ const createCardElement = (game) => {
     newCard.querySelector('[data-release_date]').innerText = game.release_date;
 
     const dataTitle = newCard.querySelector('[data-title]').innerText;
+
     const shortDescription = newCard.querySelector('[data-short_description]').innerText;
     if (shortDescription.length > 40 && dataTitle.length > 15) {
         newCard.querySelector('[data-short_description]').innerText = `${shortDescription.slice(0, 40)}...`;
@@ -34,7 +42,6 @@ const renderCards = (container, cardsAmount) => {
     return container;
 };
 
-const gamesList = document.querySelector('[data-type="games_list"]');
 renderCards(gamesList, games);
 const filterGames = () => {
     const oldRelease = document.querySelector('[data-type="old-release"]');
@@ -53,8 +60,31 @@ const filterGames = () => {
         }
         return true;
     });
+
     renderCards(gamesList, filterRelease);
 };
+async function loadGames() {
+    try {
+        preloader.style.display = 'block';
+        const response = await fetch('https://mmo-games.p.rapidapi.com/games', {
+            method: 'GET',
+            headers: {
+                'X-RapidAPI-Key': '1c3169c707mshb51bff34cbc9ff6p1749b9jsn648a19134256',
+                'X-RapidAPI-Host': 'mmo-games.p.rapidapi.com',
+            },
+        });
+        if (!response.ok) {
+            throw new Error(`We have a trouble : ${response.statusText}`);
+        }
+        games = await response.json();
+        preloader.style.display = 'none';
+        renderCards(gamesList, games.slice(0, 50));
+    } catch (err) {
+        preloader.style.display = 'none';
+        gamesList.innerHTML = '';
+        gamesList.append(Err);
+    }
+}
 
 const startRender = () => {
     const oldCheck = document.querySelector('[data-type="old-release"]');
@@ -64,8 +94,7 @@ const startRender = () => {
     formFilter.addEventListener('click', filterGames);
     oldCheck.addEventListener('click', filterGames);
     newCheck.addEventListener('click', filterGames);
-
-    renderCards(gamesList, games);
+    loadGames();
 };
 
 startRender();
