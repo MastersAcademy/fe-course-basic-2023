@@ -16,6 +16,7 @@
   color: #F00;
   font-size: 40px;
   font-weight: 700;
+  transform: translate(-50%);
 }
 
 .main__loading--disabled {
