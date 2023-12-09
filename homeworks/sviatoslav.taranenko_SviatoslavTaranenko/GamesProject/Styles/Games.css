@@ -52,7 +52,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  line-height: 18.75px;
+  line-height: 19px;
   margin-right: 40px;
 }
 
@@ -65,7 +65,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  line-height: 18.75px;
+  line-height: 19px;
   margin-right: 40px;
 }
 
@@ -78,7 +78,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  line-height: 18.75px;
+  line-height: 19px;
   margin-right: 40px;
 }
 
@@ -86,81 +86,210 @@ body {
   text-decoration: underline;
 }
 
-.Filter {
+.games__filter {
+  display: flex;
   width: 100%;
+  min-height: 60px;
   background-color: #221F1F;
-  padding: 15px 0;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.Filter__forms {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr 2fr;  /* Погратися з відсотками */
-  justify-content: center;align-items: center;
-  color: #FFF;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
-}
-
-.Filter__forms_select {
-  margin-left: 100px;
-}
-
-.Filter__forms_checkbox {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  margin-left: 120px;
-}
-
-.Filter__forms_radio {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  margin-left: 50px;
-  color: #FFF;
-  font-size: 14px;
-}
-
-.Filter__forms_search {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.Filter__forms_search_input {
+.datalist__games_filter select {
+  min-width: 114px;
   border: none;
-  width: 200px;
-  height: 34px;
-  margin-left: 100px;
-  padding-left: 30px;
-  border-top-left-radius: 6px;
-  border-bottom-left-radius: 6px;
-  background-image: url("../img/Icons.png");
-  background-position: left;background-size: 24px 24px;
+  background-color: #333;
+  appearance: none;
+  min-height: 36px;
+  border-radius: 6px;
+  align-items: center;
+  gap: 33px;
+  padding: 0 12px;
+  background-image: url("../img/arrow.png");
   background-repeat: no-repeat;
+  background-position: calc(100% - 15px);
+  color: #FFF;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
+  font-style: normal;
   font-weight: 400;
-  line-height: 21px;
 }
 
-.Filter__forms_search_input:focus {
-  box-shadow: 0 0 0 1px #A9A9A9; /* Погратися з фокусом */
+.radio__filter {
+  display: flex;
+  gap: 12px;
 }
 
-.Filter__forms_search_btn {
-  border: none;
-  width: 75px;height: 34px;
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
+.radio__games_filter {
+  display: flex;
+}
+
+.radio__games_filter input {
+  appearance: none;
+  z-index: -1;
+  opacity: 0;
+  gap: 20px;
+}
+
+.radio__games_filter label {
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+
+.radio__games_filter label::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  border: 1px solid #FFF;
+  transition: background-color 300ms;
+}
+
+.radio__games_filter label::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  opacity: 0;
+  background: #FFF;
+  position: absolute;
+  left: 6px;
+}
+
+.checkbox__games_filter label::before {
+  content: "";
+  display: flex;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 1px solid #FFF;
+  padding: 3px;
+  background-color: #221F1F;
+  margin-right: 12px;
+  text-align: center;
+  line-height: 16px;
+  font-size: 16px;
+  transition: background-color 300ms;
+}
+
+.checkbox__games_filter label::after {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  background: url("../img/check-white.png");
+  background-repeat: no-repeat;
+  opacity: 0;
+  position: absolute;
+  top: 10px;
+  left: 8px;
+}
+
+.radio__games_filter input:checked + label::before {
+  background-color: #221F1F;
+}
+
+.radio__games_filter input:checked + label::after {
+  opacity: 1;
+}
+
+.checkbox__filter {
+  display: flex;
+  align-items: center;
+  gap: 90px
+}
+
+.checkbox__games_filter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.checkbox__games_filter input {
+  appearance: none;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #FFF;
+}
+
+.checkbox__games_filter label {
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  color: #FFF;
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox__games_filter input:checked + label::before {
+  background-color: #221F1F
+}
+
+.checkbox__games_filter input:checked + label::after {
+  opacity: 1;
+}
+
+.search__bar {
+  display: flex;
+  padding-left: 20px;
+  width: 100%;
+  max-width: 377px;
+  height: 36px;
+  align-items: center;
+  border-radius: 6px;
+  background-color: #FFF;
+  background-image: url("../img/Icons.png");
+  background-position: left 5px center;
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+}
+
+.search__bar input {
+  background: transparent;
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding-left: 15px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.search__bar button {
+  display: flex;
+  height: 36px;
+  width: 25%;
+  padding: 13px 20px;
+  border: 0;
+  border-radius: 0 6px 6px 0;
+  align-items: center;
+  justify-content: center;
   background-color: #EF4934;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
+  font-style: normal;
   font-weight: 400;
-  line-height: 21px;
   color: #FFF;
 }
 
-.Filter__forms_search_btn:active {
+.search__bar button:active {
   box-shadow: 0 0 0 1px #A9A9A9;
 }
 
@@ -172,7 +301,7 @@ body {
   line-height: 32px;
 }
 
-.Games .Games__cards {
+.card__container {
   margin-top: 60px;
   display: grid;
   grid-template-columns: 275px 275px 275px 275px;
@@ -183,7 +312,18 @@ body {
   min-height: auto;
 }
 
-.Games .Games__cards .Games__cards_desc {
+.Games__cards {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: 275px 275px 275px 275px;
+  column-gap: 25px;
+  grid-template-rows: 260px;
+  row-gap: 60px;
+  justify-content: center;
+  min-height: auto;
+}
+
+.Games__cards_desc {
   margin-bottom: 15px;
   border-radius: 12px;
   padding: 12px 12px 22px;
@@ -191,7 +331,7 @@ body {
   height: 260px;
 }
 
-.Games .Games__cards .Games__cards_desc .Games__cards_top {
+.Games__cards_top {
   display: grid;
   grid-template-columns: 1fr 2fr;
   column-gap: 12px;
@@ -200,18 +340,19 @@ body {
   justify-content: center;
 }
 
-.Games .Games__cards .Games__cards_desc .Games__cards_top .Games__cards_top_img {
+.Games__cards_top_img {
   width: 90px;
   height: 90px;
   justify-content: center;
+  border-radius: 8px;
 }
 
-.Games .Games__cards .Games__cards_desc .Games__cards_top .Games__cards_top_text {
+.Games__cards_top_text {
   padding-top: 0;
   margin-top: 0;
 }
 
-.Games .Games__cards .Games__cards_desc .Games__cards_top .Games__cards_top_text_title {
+.Games__cards_top_text_title {
   padding-top: 0;
   margin-top: 0;
   margin-bottom: 0;
@@ -219,28 +360,22 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 18px;
-  line-height: 21.09px;
+  line-height: 21px;
 }
 
-.Games .Games__cards .Games__cards_desc .Games__cards_top .Games__cards_top_text_p {
+.Games__cards_top_text_p {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
   margin-top: 0;
-  padding-top: 10px;
+  padding-top: 5px;
 }
 
-.Games .Games__cards .Games__cards_desc .Games__cards_btm {
+.Games__cards_btm {
+  padding-top: 10px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-}
-
-.Games .Games__cards .Games__cards_desc .Games__cards_btm .Games__cards_btm_bold {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 18.2px;
 }
