@@ -14,6 +14,9 @@
             </div>
             <nav>
                 <ul class="navigation">
+                    <li class="navigation__item">
+                        <a class="navigation__item-link" href="calculator.html">Calculator</a>
+                    </li>
                     <li class="navigation__item active">
                         <a class="navigation__item-link" href="#">Pokemons</a>
                     </li>
@@ -28,7 +31,7 @@
         </header>
         <div class="filterBar">
             <div>
-                <select class="drop-down-list" name="list" id="list">
+                <select class="drop-down-list" name="list" id="list" disabled>
                     <option value="1">Fighting</option>
                     <option value="2">Dark</option>
                 </select>
@@ -36,311 +39,77 @@
             <div class="radio">
                 <form class="radio__label" action="#">
                     <div class="radio__only-new">
-                        <input type="radio" name="radio" id="radio1">
-                        <label for="radio">Only new</label>
+                        <input class="radio" type="radio" name="radio" id="radio1" disabled>
+                        <label class="label" for="radio1">Only new</label>
                     </div>
                     <div class="radio__favorites">
-                        <input type="radio" name="radio" id="radio2">
-                        <label for="radio">Favorites</label>
+                        <input class="radio" type="radio" name="radio" id="radio2" disabled>
+                        <label class="label" for="radio2">Favorites</label>
                     </div>
                 </form>
             </div>
             <div class="checkbox">
                 <form class="checkbox__label" action="#">
                     <div class="checkbox__big">
-                        <input type="checkbox" name="checkbox" id="checkbox1">
-                        <label for="checkbox">Big</label>
+                        <input class="checkbox" type="checkbox" name="checkbox" id="bigPokemon" data-bigPokemon>
+                        <label class="label" for="bigPokemon">Big</label>
                     </div>
                     <div class="checkbox__small">
-                        <input type="checkbox" name="checkbox" id="checkbox2">
-                        <label for="checkbox">Small</label>
+                        <input class="checkbox" type="checkbox" name="checkbox" id="smallPokemon">
+                        <label class="label" for="smallPokemon">Small</label>
                     </div>
                 </form>
             </div>
             <div class="search-bar">
                 <div class="search">
                     <img class="search__img" src="img/search.png" alt="search-img">
-                    <input type="search" placeholder="Search">
+                    <input class="search" type="search" placeholder="Search">
                 </div>
                 <input class="search__btn" type="button" value="Apply">
             </div>
         </div>
         <main>
             <h1 class="title__txt">Study project "Pokemons"</h1>
-            <section class="card">
-                <div class="card__information">
-                    <div class="card__information-title">
-                        <div class="card__information-img">
-                            <img class="card__img" src="img/heroe1.png" alt="hero">
+            <template data-cardTemplate>
+                <section class="card">
+                    <div class="card__information">
+                        <div class="card__information-title">
+                            <div class="card__information-img">
+                                <img class="card__img" data-newSrc="" src="img/heroe1.png" alt="hero" data-cardImg>
+                            </div>
+                            <div class="card__information-head">
+                                <h3 data-cardName>Urshifu</h3>
+                            </div>
                         </div>
-                        <div class="card__information-head">
-                            <h3>Urshifu</h3>
-                        </div>
-                    </div>
-                    <div class="card__information-txt">
-                        <div class="card__information-txt-height">
-                            <span class="property">Height:</span>
-                            <span class="value"> 6'03'</span>
-                        </div>
-                        <div class="card__information-txt-weight">
-                            <span class="property">Weight:</span>
-                            <span class="value"> 231.5 lbs</span>
-                        </div>
-                        <div class="card__information-txt-number">
-                            <span class="property">Number:</span>
-                            <span class="value"> 0002</span>
-                        </div>
-                        <div class="card__information-txt-type">
-                            <span class="property">Type:</span>
-                            <span class="value value-yellow type"> Fighting</span>
-                            <span class="value value-red type"> Dark</span>
-                        </div>
-                        <div class="card__information-txt-weaknesses">
-                            <span class="">Weaknesses:</span>
-                            <span class="value value-pink weaknesses"> Fairy</span>
-                            <span class="value value-blue weaknesses"> Flying</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card__information">
-                    <div class="card__information-title">
-                        <div class="card__information-img">
-                            <img class="card__img" src="img/heroe1.png" alt="hero">
-                        </div>
-                        <div class="card__information-head">
-                            <h3>Urshifu</h3>
+                        <div class="card__information-txt">
+                            <div class="heightPokemon">
+                                <span class="property">Height:</span>
+                                <span class="value" data-cardHeight> 6'03'</span>
+                            </div>
+                            <div class="card__information-txt-weight">
+                                <span class="property">Weight:</span>
+                                <span class="value"> 231.5 lbs</span>
+                            </div>
+                            <div class="card__information-txt-number">
+                                <span class="property">Number:</span>
+                                <span class="value"> 0002</span>
+                            </div>
+                            <div class="card__information-txt-type">
+                                <span class="property">Type:</span>
+                                <span class="value value-yellow type"> Fighting</span>
+                                <span class="value value-red type"> Dark</span>
+                            </div>
+                            <div class="card__information-txt-weaknesses">
+                                <span class="">Weaknesses:</span>
+                                <span class="value value-pink weaknesses"> Fairy</span>
+                                <span class="value value-blue weaknesses"> Flying</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="card__information-txt">
-                        <div class="card__information-txt-height">
-                            <span class="property">Height:</span>
-                            <span class="value"> 6'03'</span>
-                        </div>
-                        <div class="card__information-txt-weight">
-                            <span class="property">Weight:</span>
-                            <span class="value"> 231.5 lbs</span>
-                        </div>
-                        <div class="card__information-txt-number">
-                            <span class="property">Number:</span>
-                            <span class="value"> 0002</span>
-                        </div>
-                        <div class="card__information-txt-type">
-                            <span class="property">Type:</span>
-                            <span class="value value-yellow type"> Fighting</span>
-                            <span class="value value-red type"> Dark</span>
-                        </div>
-                        <div class="card__information-txt-weaknesses">
-                            <span class="property">Weaknesses:</span>
-                            <span class="value value-pink weaknesses"> Fairy</span>
-                            <span class="value value-blue weaknesses"> Flying</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card__information">
-                    <div class="card__information-title">
-                        <div class="card__information-img">
-                            <img class="card__img" src="img/heroe1.png" alt="hero">
-                        </div>
-                        <div class="card__information-head">
-                            <h3>Urshifu</h3>
-                        </div>
-                    </div>
-                    <div class="card__information-txt">
-                        <div class="card__information-txt-height">
-                            <span class="property">Height:</span>
-                            <span class="value"> 6'03'</span>
-                        </div>
-                        <div class="card__information-txt-weight">
-                            <span class="property">Weight:</span>
-                            <span class="value"> 231.5 lbs</span>
-                        </div>
-                        <div class="card__information-txt-number">
-                            <span class="property">Number:</span>
-                            <span class="value"> 0002</span>
-                        </div>
-                        <div class="card__information-txt-type">
-                            <span class="property">Type:</span>
-                            <span class="value value-yellow type"> Fighting</span>
-                            <span class="value value-red type"> Dark</span>
-                        </div>
-                        <div class="card__information-txt-weaknesses">
-                            <span class="property">Weaknesses:</span>
-                            <span class="value value-pink weaknesses"> Fairy</span>
-                            <span class="value value-blue weaknesses"> Flying</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card__information">
-                    <div class="card__information-title">
-                        <div class="card__information-img">
-                            <img class="card__img" src="img/heroe1.png" alt="hero">
-                        </div>
-                        <div class="card__information-head">
-                            <h3>Urshifu</h3>
-                        </div>
-                    </div>
-                    <div class="card__information-txt">
-                        <div class="card__information-txt-height">
-                            <span class="property">Height:</span>
-                            <span class="value"> 6'03'</span>
-                        </div>
-                        <div class="card__information-txt-weight">
-                            <span class="property">Weight:</span>
-                            <span class="value"> 231.5 lbs</span>
-                        </div>
-                        <div class="card__information-txt-number">
-                            <span class="property">Number:</span>
-                            <span class="value"> 0002</span>
-                        </div>
-                        <div class="card__information-txt-type">
-                            <span class="property">Type:</span>
-                            <span class="value value-yellow type"> Fighting</span>
-                            <span class="value value-red type"> Dark</span>
-                        </div>
-                        <div class="card__information-txt-weaknesses">
-                            <span class="property">Weaknesses:</span>
-                            <span class="value value-pink weaknesses"> Fairy</span>
-                            <span class="value value-blue weaknesses"> Flying</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card__information">
-                    <div class="card__information-title">
-                        <div class="card__information-img">
-                            <img class="card__img" src="img/heroe1.png" alt="hero">
-                        </div>
-                        <div class="card__information-head">
-                            <h3>Urshifu</h3>
-                        </div>
-                    </div>
-                    <div class="card__information-txt">
-                        <div class="card__information-txt-height">
-                            <span class="property">Height:</span>
-                            <span class="value"> 6'03'</span>
-                        </div>
-                        <div class="card__information-txt-weight">
-                            <span class="property">Weight:</span>
-                            <span class="value"> 231.5 lbs</span>
-                        </div>
-                        <div class="card__information-txt-number">
-                            <span class="property">Number:</span>
-                            <span class="value"> 0002</span>
-                        </div>
-                        <div class="card__information-txt-type">
-                            <span class="property">Type:</span>
-                            <span class="value value-yellow type"> Fighting</span>
-                            <span class="value value-red type"> Dark</span>
-                        </div>
-                        <div class="card__information-txt-weaknesses">
-                            <span class="property">Weaknesses:</span>
-                            <span class="value value-pink weaknesses"> Fairy</span>
-                            <span class="value value-blue weaknesses"> Flying</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card__information">
-                    <div class="card__information-title">
-                        <div class="card__information-img">
-                            <img class="card__img" src="img/heroe1.png" alt="hero">
-                        </div>
-                        <div class="card__information-head">
-                            <h3>Urshifu</h3>
-                        </div>
-                    </div>
-                    <div class="card__information-txt">
-                        <div class="card__information-txt-height">
-                            <span class="property">Height:</span>
-                            <span class="value"> 6'03'</span>
-                        </div>
-                        <div class="card__information-txt-weight">
-                            <span class="property">Weight:</span>
-                            <span class="value"> 231.5 lbs</span>
-                        </div>
-                        <div class="card__information-txt-number">
-                            <span class="property">Number:</span>
-                            <span class="value"> 0002</span>
-                        </div>
-                        <div class="card__information-txt-type">
-                            <span class="property">Type:</span>
-                            <span class="value value-yellow type"> Fighting</span>
-                            <span class="value value-red type"> Dark</span>
-                        </div>
-                        <div class="card__information-txt-weaknesses">
-                            <span class="property">Weaknesses:</span>
-                            <span class="value value-pink weaknesses"> Fairy</span>
-                            <span class="value value-blue weaknesses"> Flying</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card__information">
-                    <div class="card__information-title">
-                        <div class="card__information-img">
-                            <img class="card__img" src="img/heroe1.png" alt="hero">
-                        </div>
-                        <div class="card__information-head">
-                            <h3>Urshifu</h3>
-                        </div>
-                    </div>
-                    <div class="card__information-txt">
-                        <div class="card__information-txt-height">
-                            <span class="property">Height:</span>
-                            <span class="value"> 6'03'</span>
-                        </div>
-                        <div class="card__information-txt-weight">
-                            <span class="property">Weight:</span>
-                            <span class="value"> 231.5 lbs</span>
-                        </div>
-                        <div class="card__information-txt-number">
-                            <span class="property">Number:</span>
-                            <span class="value"> 0002</span>
-                        </div>
-                        <div class="card__information-txt-type">
-                            <span class="property">Type:</span>
-                            <span class="value value-yellow type"> Fighting</span>
-                            <span class="value value-red type"> Dark</span>
-                        </div>
-                        <div class="card__information-txt-weaknesses">
-                            <span class="property">Weaknesses:</span>
-                            <span class="value value-pink weaknesses"> Fairy</span>
-                            <span class="value value-blue weaknesses"> Flying</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card__information">
-                    <div class="card__information-title">
-                        <div class="card__information-img">
-                            <img class="card__img" src="img/heroe1.png" alt="hero">
-                        </div>
-                        <div class="card__information-head">
-                            <h3>Urshifu</h3>
-                        </div>
-                    </div>
-                    <div class="card__information-txt">
-                        <div class="card__information-txt-height">
-                            <span class="property">Height:</span>
-                            <span class="value"> 6'03'</span>
-                        </div>
-                        <div class="card__information-txt-weight">
-                            <span class="property">Weight:</span>
-                            <span class="value"> 231.5 lbs</span>
-                        </div>
-                        <div class="card__information-txt-number">
-                            <span class="property">Number:</span>
-                            <span class="value"> 0002</span>
-                        </div>
-                        <div class="card__information-txt-type">
-                            <span class="property">Type:</span>
-                            <span class="value value-yellow type"> Fighting</span>
-                            <span class="value value-red type"> Dark</span>
-                        </div>
-                        <div class="card__information-txt-weaknesses">
-                            <span class="property">Weaknesses:</span>
-                            <span class="value value-pink weaknesses"> Fairy</span>
-                            <span class="value value-blue weaknesses"> Flying</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                </section>
+            </template>
         </main>
+        <div id="cardContainer" class="card-container" data-cards="10"></div>
+        <script src="js/pokemon.js"></script>
     </body>
 </html>
