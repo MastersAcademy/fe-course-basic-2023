@@ -1,7 +1,8 @@
 // const c = console.log; // for short use console.log
+
 const games = [
     {
-        id: 1,
+        id: 1136,
         title: 'Overwatch 2',
         thumbnail: 'https://www.mmobomb.com/g/1136/thumbnail.jpg',
         short_description: 'Big changes come to the Overwatch formula in this sequel...and so does PvE content, eventually.',
@@ -14,7 +15,7 @@ const games = [
         profile_url: 'https://www.mmobomb.com/overwatch-2',
     },
     {
-        id: 2,
+        id: 523,
         title: 'Lost Ark',
         thumbnail: 'https://www.mmobomb.com/g/523/thumbnail.jpg',
         short_description: 'Journey throughout the realm of Arkesia and do battle against a demon invasion in Smilegate\'s free-to-play ARPG Lost Ark!',
@@ -27,7 +28,7 @@ const games = [
         profile_url: 'https://www.mmobomb.com/lost-ark',
     },
     {
-        id: 3,
+        id: 1113,
         title: 'PUBG: BATTLEGROUNDS',
         thumbnail: 'https://www.mmobomb.com/g/1113/thumbnail.jpg',
         short_description: 'Battle the odds in a 100v1 death match in PUBG: Battlegrounds, the classic free-to-play battle royale experience.',
@@ -40,7 +41,7 @@ const games = [
         profile_url: 'https://www.mmobomb.com/pubg',
     },
     {
-        id: 4,
+        id: 508,
         title: 'Enlisted',
         thumbnail: 'https://www.mmobomb.com/g/508/thumbnail.jpg',
         short_description: 'Step into the most famous battles of World War II in Enlisted, a free-to-play shooter from the makers of War Thunder. Experience squad-based combat from the ground level, as you command your troops, outfitted with era-authentic weapons and gear, in massive battles with over a hundred soldiers apiece.',
@@ -53,7 +54,7 @@ const games = [
         profile_url: 'https://www.mmobomb.com/enlisted',
     },
     {
-        id: 5,
+        id: 1120,
         title: 'Fall Guys',
         thumbnail: 'https://www.mmobomb.com/g/1120/thumbnail.jpg',
         short_description: 'Fall Guys is a free-to-play massively multiplayer party royale game.',
@@ -66,8 +67,8 @@ const games = [
         profile_url: 'https://www.mmobomb.com/fall-guys',
     },
     {
-        id: 6,
-        title: 'Game Of Thrones Winter',
+        id: 340,
+        title: 'Game Of Thrones Winter Is Coming',
         thumbnail: 'https://www.mmobomb.com/g/340/thumbnail.jpg',
         short_description: 'Fame and glory await you in Westeros, in Game of Thrones: Winter Is Coming, the officially licensed free-to-play browser game based on the epic fantasy series by George R.R. Martin.',
         game_url: 'https://www.mmobomb.com/open/game-of-thrones-winter-is-coming',
@@ -79,7 +80,7 @@ const games = [
         profile_url: 'https://www.mmobomb.com/game-of-thrones-winter-is-coming',
     },
     {
-        id: 7,
+        id: 427,
         title: 'Drakensang Online',
         thumbnail: 'https://www.mmobomb.com/g/427/thumbnail.jpg',
         short_description: 'Drakensang Online is a free to play 3D action RPG game that features extraordinary 3D graphics and effects and heralds the next generation of free-to-play online browser games. With the ability to customize your character, skills and magic powers like never before, join your comrades to wage a brutal war against evil.',
@@ -92,7 +93,7 @@ const games = [
         profile_url: 'https://www.mmobomb.com/drakensang-online',
     },
     {
-        id: 8,
+        id: 380,
         title: 'Dark Orbit Reloaded',
         thumbnail: 'https://www.mmobomb.com/g/380/thumbnail.jpg',
         short_description: 'Take part in huge intergalactic battles and take on the whole galaxy in DarkOrbit, the free-to-play browser-based space combat MMO from Bigpoint -- now in 3-D! Choose your faction and your ship, each with their own strengths, and take off into adventure!',
@@ -105,7 +106,7 @@ const games = [
         profile_url: 'https://www.mmobomb.com/darkorbit',
     },
     {
-        id: 9,
+        id: 1122,
         title: 'MultiVersus',
         thumbnail: 'https://www.mmobomb.com/g/1122/thumbnail.jpg',
         short_description: 'Match up in 1v1, 2v2 co-op, or 4-person free-for-all modes in this free-to-play Smash-Style Brawler!',
@@ -118,7 +119,7 @@ const games = [
         profile_url: 'https://www.mmobomb.com/multiversus',
     },
     {
-        id: 10,
+        id: 5,
         title: 'Crossout',
         thumbnail: 'https://www.mmobomb.com/g/5/thumbnail.jpg',
         short_description: 'Trick out your ride and take to the post-apocalyptic roads for battle in Crossout, the free-to-play vehicular combat game from Gaijin Entertainment! Featuring a vehicle design system with endless customization and fast-paced, armor-crunching combat, Crossout offers high-octane excitement in brief and explosive matches.',
@@ -134,8 +135,8 @@ const games = [
 
 const cardsBlock = document.querySelector('.game__item-blocks');
 const searchInput = document.querySelector('.search__input');
-const newCheck = document.querySelector('#checkbox-1-1');
-const oldCheck = document.querySelector('#checkbox-1-2');
+const newCheck = document.querySelector('#newGames');
+const oldCheck = document.querySelector('#oldGames');
 const dateYear = '2020-01-01';
 
 function renderCard(
@@ -180,7 +181,7 @@ function renderCard(
                             </div>`;
 }
 
-document.querySelector('.search__button').onclick = function () {
+document.querySelector('[data-search]').addEventListener('click', () => {
     const search = games.filter((el) => {
         const searchThem = searchInput.value.toLowerCase();
         return el.title.toLowerCase().includes(searchThem)
@@ -190,7 +191,7 @@ document.querySelector('.search__button').onclick = function () {
             || el.publisher.toLowerCase().includes(searchThem)
             || el.developer.toLowerCase().includes(searchThem);
     });
-    cardsBlock.innerHTML = '';
+    cardsBlock.innerText = '';
     search.forEach((cards) => {
         cardsBlock.innerHTML += renderCard(
             cards.release_date,
@@ -203,13 +204,13 @@ document.querySelector('.search__button').onclick = function () {
             cards.developer,
         );
     });
-};
+});
 
 searchInput.oninput = function () {
     newCheck.checked = false;
     oldCheck.checked = false;
     if (!this.value.length) {
-        cardsBlock.innerHTML = '';
+        cardsBlock.innerText = '';
         games.forEach((cards) => {
             cardsBlock.innerHTML += renderCard(
                 cards.release_date,
@@ -249,7 +250,7 @@ function checkBoxFilter(element) {
         }
         return false;
     });
-    cardsBlock.innerHTML = '';
+    cardsBlock.innerText = '';
 
     filterCards.forEach((cards) => {
         cardsBlock.innerHTML += renderCard(
