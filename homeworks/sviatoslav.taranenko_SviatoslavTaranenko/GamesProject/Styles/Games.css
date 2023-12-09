@@ -408,17 +408,6 @@ body {
   border-radius: 50%;
 }
 
-.footer__icons_all {
-  display: flex;
-  justify-content: center;
-  margin: auto;
-  align-items: center;
-  background-color: #FFF;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-}
-
 .footer__icons_row img {
   width: 20px;
   height: 20px;
