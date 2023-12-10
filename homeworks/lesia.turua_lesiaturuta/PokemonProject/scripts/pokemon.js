@@ -69,16 +69,8 @@ const renderCards = (cardContainer, pokemonsArray) => {
 const renderSelect = (name) => {
     cleanElement(searchEl);
     const optionFirstEl = document.createElement('option');
-    if (name === '') {
-        optionFirstEl.value = 'Select type: ';
-        optionFirstEl.text = 'Select type: ';
-        optionFirstEl.selected = true;
-        optionFirstEl.disabled = true;
-    } else {
-        optionFirstEl.value = '';
-        optionFirstEl.text = 'All types';
-    }
-
+    optionFirstEl.value = '';
+    optionFirstEl.text = 'All types';
     searchEl.add(optionFirstEl);
     typesPokemons.forEach((type) => {
         const optionEl = document.createElement('option');
@@ -95,21 +87,49 @@ const sortPokemonsUp = (arrayPokemons) => arrayPokemons.sort((a, b) => a.height 
 
 const sortPokemonsDown = (arrayPokemons) => arrayPokemons.sort((a, b) => b.height - a.height);
 
-const updateTypes = (array) => {
+const getPokemonTypes = (arrayPokemons) => {
     const types = [];
-    array.forEach((pokemon) => pokemon.type.forEach((type) => {
+    arrayPokemons.forEach((pokemon) => pokemon.type.forEach((type) => {
         if (!types.includes(type)) types.push(type);
     }));
     return types;
 };
 
-const getPokemonsByType = (type, arrayPokemons) => arrayPokemons
-    .filter((pokemon) => pokemon.type
-        .includes(type));
-const getPokemonsByValet = (text, arrayPokemons) => arrayPokemons
-    .filter((pokemon) => pokemon.name
-        .toLocaleLowerCase()
-        .includes(text.toLocaleLowerCase()));
+const getPokemonsByType = (arrayPokemons) => (typeValue
+    ? arrayPokemons
+        .filter((pokemon) => pokemon.type
+            .includes(typeValue))
+    : arrayPokemons);
+
+const getPokemonsByName = (arrayPokemons) => (searchValue
+    ? arrayPokemons
+        .filter((pokemon) => pokemon.name
+            .toLocaleLowerCase()
+            .includes(searchValue.toLocaleLowerCase()))
+    : arrayPokemons);
+
+const getPokemonsByWeight = (arrayPokemons) => {
+    let newPokemons = [...arrayPokemons];
+    if (checkboxBig && checkboxSmall && newPokemons.length) {
+        newPokemons = newPokemons.filter((pokemon) => pokemon.weight < 100 && pokemon.weight > 50);
+    } else if (checkboxBig && !checkboxSmall && newPokemons.length) {
+        newPokemons = newPokemons.filter((pokemon) => pokemon.weight > 100);
+    } else if (!checkboxBig && checkboxSmall && newPokemons.length) {
+        newPokemons = newPokemons.filter((pokemon) => pokemon.weight < 50);
+    }
+    return newPokemons;
+};
+
+const sortByHeight = (arrayPokemons) => {
+    let newPokemons = [...arrayPokemons];
+    if (highFilterEl.checked && newPokemons.length) {
+        newPokemons = sortPokemonsDown(newPokemons);
+    }
+    if (lowFilterEl.checked && newPokemons.length) {
+        newPokemons = sortPokemonsUp(newPokemons);
+    }
+    return newPokemons;
+};
 
 const getPokemons = async (urlPokemons) => {
     try {
@@ -122,82 +142,55 @@ const getPokemons = async (urlPokemons) => {
     }
 };
 
-const getFilterPokemons = () => {
-    let newPokemons = [];
-    if (searchValue && typeValue) {
-        newPokemons = getPokemonsByValet(searchValue, pokemons);
-        newPokemons = newPokemons.length
-            ? getPokemonsByType(typeValue, newPokemons)
-            : getPokemonsByType(typeValue, pokemons);
-    } else if (searchValue && !typeValue) {
-        newPokemons = getPokemonsByValet(searchValue, pokemons);
-    } else if (!searchValue && typeValue) {
-        newPokemons = getPokemonsByType(typeValue, pokemons);
-    } else if (!typeValue && !searchValue) {
-        newPokemons = pokemons;
-    }
-
-    if (checkboxBig && checkboxSmall && newPokemons.length) {
-        newPokemons = newPokemons.filter((pokemon) => pokemon.weight < 100 && pokemon.weight > 50);
-    } else if (checkboxBig && !checkboxSmall && newPokemons.length) {
-        newPokemons = newPokemons.filter((pokemon) => pokemon.weight > 100);
-    } else if (!checkboxBig && checkboxSmall && newPokemons.length) {
-        newPokemons = newPokemons.filter((pokemon) => pokemon.weight < 50);
-    }
-
-    if (highFilterEl.checked && newPokemons.length) {
-        newPokemons = sortPokemonsDown(newPokemons);
-    }
-    if (lowFilterEl.checked && newPokemons.length) {
-        newPokemons = sortPokemonsUp(newPokemons);
-    }
-    typesPokemons = updateTypes(newPokemons);
-    renderSelect(typeValue);
+const getFilteredPokemons = () => {
+    let newPokemons = [...pokemons];
+    newPokemons = getPokemonsByName(newPokemons);
+    newPokemons = getPokemonsByType(newPokemons);
+    newPokemons = getPokemonsByWeight(newPokemons);
+    newPokemons = sortByHeight(newPokemons);
     return newPokemons;
 };
 
-const init = async () => {
-    try {
-        pokemons = await getPokemons(url);
-    } catch (e) {
-        alert('Error url, please update this page');
-        console.error(e);
-    }
-    typesPokemons = updateTypes(pokemons);
-    renderSelect(typeValue);
-    loadingEl.classList.add('display-none');
-
+const addHandlers = () => {
     checkboxBigEl.addEventListener('change', (e) => {
         checkboxBig = e.target.checked;
-        renderCards(cardsEl, getFilterPokemons());
+        renderCards(cardsEl, getFilteredPokemons());
     });
 
     checkboxSmallEl.addEventListener('change', (e) => {
         checkboxSmall = e.target.checked;
-        renderCards(cardsEl, getFilterPokemons());
+        renderCards(cardsEl, getFilteredPokemons());
     });
 
     searchEl.addEventListener('change', (e) => {
         typeValue = e.target.value;
-        renderCards(cardsEl, getFilterPokemons());
+        renderCards(cardsEl, getFilteredPokemons());
     });
 
     highFilterEl.addEventListener('change', () => {
-        renderCards(cardsEl, getFilterPokemons());
+        renderCards(cardsEl, getFilteredPokemons());
     });
 
     lowFilterEl.addEventListener('change', () => {
-        renderCards(cardsEl, getFilterPokemons());
+        renderCards(cardsEl, getFilteredPokemons());
     });
 
     buttonSearchEl.addEventListener('click', (e) => {
         e.preventDefault();
-        renderCards(cardsEl, getFilterPokemons());
+        renderCards(cardsEl, getFilteredPokemons());
     });
 
     inputSearchEl.addEventListener('input', (e) => {
         searchValue = e.target.value;
     });
+};
+
+const init = async () => {
+    pokemons = await getPokemons(url);
+    typesPokemons = getPokemonTypes(pokemons);
+    renderSelect(typeValue);
+    loadingEl.remove();
+    addHandlers();
     renderCards(cardsEl, pokemons);
 };
 
