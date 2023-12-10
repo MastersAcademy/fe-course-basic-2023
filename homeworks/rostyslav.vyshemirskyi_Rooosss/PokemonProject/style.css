@@ -375,6 +375,30 @@ body::-webkit-scrollbar {
   color: #FFF;
 }
 
+.loading-title {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.loading {
+  text-align: center;
+}
+
+.loading-item {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #221F1F;
+  border-radius: 50%;
+  border-top-color: #EF4934;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+
 /* Login */
 
 .login__inner {

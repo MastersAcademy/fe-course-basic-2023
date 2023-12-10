@@ -40,19 +40,21 @@
             <div class="filter">
                 <div class="filter__container">
                     <div class="filter__icon">
-                        <img src="img/icons/filter.png" height="30" id="filter-icon">
+                        <img src="img/icons/filter.png" height="512" class="filter-icon" id="filter-icon" alt="filter-icon">
                         <label for="filter-icon">Filter</label>
                     </div>
                     <nav class="filter__list">
                         <div class="filter__checkbox">
                             <div class="filter__select">
-                                <select class="select__option" name="user_profile_color_1">
-                                    <option value="1">Genre</option>
-                                    <option value="2">Sport</option>
-                                    <option value="3">Shooter</option>
-                                    <option value="4">Racing</option>
-                                    <option value="5">Horror</option>
-                                </select>
+                                <label>
+                                    <select class="select__option" name="user_profile_color_1">
+                                        <option value="1">Genre</option>
+                                        <option value="2">Sport</option>
+                                        <option value="3">Shooter</option>
+                                        <option value="4">Racing</option>
+                                        <option value="5">Horror</option>
+                                    </select>
+                                </label>
                             </div>
                             <div class="checkbox__radio">
                                 <label>
@@ -66,18 +68,18 @@
                             </div>
                             <div class="checkbox__checkbox">
                                 <label>
-                                    <input type="checkbox" id="checkbox-1-1" class="regular-checkbox">
+                                    <input type="checkbox" id="newGames" class="regular-checkbox" onclick="checkBoxFilter(this)" data-check="new">
                                     New
                                 </label>
                                 <label>
-                                    <input type="checkbox" id="checkbox-1-2" class="regular-checkbox">
+                                    <input type="checkbox" id="oldGames" class="regular-checkbox" onclick="checkBoxFilter(this)" data-check="old">
                                     Old
                                 </label>
                             </div>
                         </div>
                         <div class="filter__search">
                             <input type="search" class="search__input" placeholder="Search">
-                            <button type="button" class="search__button">Apply</button>
+                            <button type="button" class="search__button" data-search="button">Apply</button>
                         </div>
                     </nav>
                 </div>
@@ -86,38 +88,6 @@
                 <div class="game__contend__container">
                     <h1 class="game__title-game">Study project "Games"</h1>
                     <div class="game__item-blocks">
-                        <template data-type="card-template">
-                            <div class="item-block__game-item ">
-                                <div class="game-item-item__header">
-                                    <div class="header__icon">
-                                        <img src="img/Rectangle%207.png" class="header__img" alt="game icon">
-                                    </div>
-                                    <div class="header__about">
-                                        <h2 class="header__game-name">Overwatch 2</h2>
-                                        <p class="about__p">Big changes come to the Overwatch formula in this sequel...</p>
-                                    </div>
-                                </div>
-                                <div class="game-item__info-list">
-                                    <ul id="info-game" data-info="info">
-                                        <li>
-                                            <b>Genre:</b> Shooter
-                                        </li>
-                                        <li>
-                                            <b>Platform:</b> PC (Windows)
-                                        </li>
-                                        <li>
-                                            <b>Publisher:</b> Activision Blizzard King
-                                        </li>
-                                        <li>
-                                            <b>Developer:</b> Blizzard Entertainmen
-                                        </li>
-                                        <li>
-                                            <b>Release_date:</b> 2022-10-04
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </template>
                     </div>
                 </div>
             </main>
@@ -141,6 +111,6 @@
             </footer>
         </div>
         <script src="script/burger.js"></script>
-        <script src="script/game.js"></script>
+        <script src="script/cards.js"></script>
     </body>
 </html>

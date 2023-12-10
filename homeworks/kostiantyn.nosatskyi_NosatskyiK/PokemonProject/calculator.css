@@ -1,5 +1,6 @@
 body {
   font-family: "Roboto", sans-serif;
+  font-style: normal;
   margin: 0;
   padding: 0;
 }
@@ -20,6 +21,7 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+
 
 .logo__img {
   width: 190px;
@@ -58,35 +60,39 @@ page we are on will behave
   text-decoration: underline;
 }
 
-/* main information */
+/* calculator */
 
-main {
+.field {
   display: flex;
-  justify-content: space-between;
-  gap: 68px;
-  margin: 60px 53px auto 52px;
-}
-
-.main__img {
-  width: 532px;
-  height: 297px;
+  align-items: center;
+  column-gap: 10px;
+  margin: 20px;
 }
 
 .title__txt {
-  font-size: 48px ;
-  font-weight: 700 ;
-  line-height: 32px;
-  margin: 0;
+  display: flex;
+  justify-content: center;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 48px;
 }
 
-.main__txt {
-  font-size: 22px ;
-  font-weight: 400 ;
-  line-height: 32px;
-  margin-top: 24px;
+.input__form {
+  padding: 15px 75px;
+  border-radius: 6px;
+  border: solid 1px;
+  text-align: center;
 }
 
-.link {
-  text-decoration: underline ;
-  color: #EF4934 ;
+.calculate {
+  background-color: #EF4934;
+  color: #FFF;
 }
+
+.result {
+  font-family: inherit;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 32px;
+}
+

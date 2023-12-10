@@ -73,7 +73,7 @@ page we are on will behave
   height: 150px;
 }
 
-input[type="submit"] {
+.btn__return[type="submit"] {
   font-family: Roboto, sans-serif;
   font-size: 22px;
   font-weight: 600;
@@ -87,7 +87,7 @@ input[type="submit"] {
   box-shadow: 0 4px 30px 0;
 }
 
-.title_txt {
+.title__txt {
   font-family: Roboto, sans-serif;
   font-size: 48px;
   font-weight: 700;
