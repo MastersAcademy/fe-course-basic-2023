@@ -31,32 +31,32 @@
             <form class="datalist-games-filter">
                 <select id="game-properties">
                     <option value="default" select>Genre</option>
-                    <option value="ARPG">ARPG</option>
-                    <option value="Battle Royale">Battle Royale</option>
-                    <option value="Fighting">Fighting</option>
-                    <option value="MMORPG">MMORPG</option>
-                    <option value="Shooter">Shooter</option>
-                    <option value="Strategy">Strategy</option>
+                    <option value="action-rpg">ARPG</option>
+                    <option value="battle-royale">Battle Royale</option>
+                    <option value="fighting">Fighting</option>
+                    <option value="mmorpg">MMORPG</option>
+                    <option value="shooter">Shooter</option>
+                    <option value="strategy">Strategy</option>
                 </select>
             </form>
             <form class="radio-filter">
                 <div class="radio-games-filter">
-                    <input type="radio" id="platform" name="filter_games" value="Platform" disabled>
+                    <input type="radio" id="platform" name="filter_games" value="pc" data-radio-platform="pc">
                     <label for="platform">Platform</label>
                 </div>
                 <div class="radio-games-filter">
-                    <input type="radio" id="online-games" name="filter_games" value="Online games" disabled>
+                    <input type="radio" id="online-games" name="filter_games" value="browser" data-radio-platform="browser">
                     <label for="online-games">Online games</label>
                 </div>
             </form>
-            <form class="checkbox-filter" data-type="checkbox-form">
-                <div class="checkbox-games-filter">
-                    <input type="checkbox" id="new-games" name="New" data-checkbox-name="new-games">
-                    <label for="new-games">New</label>
+            <form class="radio-date-sort">
+                <div class="radio-date-games-sort">
+                    <input type="radio" id="new-games" name="filter_games" value="New First" data-radio-date-sort="new-games">
+                    <label for="new-games">New First</label>
                 </div>
-                <div class="checkbox-games-filter">
-                    <input type="checkbox" id="old-games" name="Old" data-checkbox-name="old-games">
-                    <label for="old-games">Old</label>
+                <div class="radio-date-games-sort">
+                    <input type="radio" id="old-games" name="filter_games" value="Old First" data-radio-date-sort="old-games">
+                    <label for="old-games">Old First</label>
                 </div>
             </form>
             <form class="search-bar" id="search-bar" action="./games.html">
@@ -67,6 +67,10 @@
         </div>
         <main class="main__section">
             <h1 class="main-header">Study project "Games"</h1>
+            <div class="loading-overlay" id="loading-overlay">
+                <div class="loading-spinner" id="loading-spinner"></div>
+                <p>Loading...</p>
+            </div>
             <div class="main-cards-container">
                 <ul class="card-list" data-type="card-container"></ul>
             </div>
