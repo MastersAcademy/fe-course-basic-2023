@@ -324,7 +324,6 @@ body {
 }
 
 .Games__cards_desc {
-
   margin-bottom: 5px;
   border-radius: 12px;
   padding: 12px 12px 22px;
@@ -370,17 +369,14 @@ body {
   font-size: 14px;
   line-height: 21px;
   margin-top: 0;
-
 }
 
 .Games__cards_btm {
-
   padding-top: 5px;
 }
 
 .Games__cards_btm {
   padding-top: 10px;
-
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 14px;
