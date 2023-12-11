@@ -39,7 +39,7 @@ async function getPokemons() {
         const response = await fetch(apiUrl, options);
         pokemons = await response.json();
         renderCards(mainElement, pokemons);
-        } catch (error) {
+    } catch (error) {
         console.error('GET error:', error);
     } finally {
         hiddenLoader();
