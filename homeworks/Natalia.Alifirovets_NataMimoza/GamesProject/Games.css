@@ -70,12 +70,76 @@
   padding-top: 20px;
 }
 
-.checkbox-btn {
-  width: 145px;
+.radio-games,
+.radio-platform {
+  appearance: none;
+  width: 20px;
   height: 20px;
+  border: 1px solid #FFF;
+  border-radius: 50px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.radio-games:checked,
+.radio-platform:checked {
+  background-color: #221F1F;
+  border: 1px solid #FFF;
+}
+
+.radio-games:checked::before,
+.radio-platform:checked::before {
+  content: " ";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #FFF;
+  display: flex;
+  position: relative;
+  left: 6px;
+  top: 6px;
+  cursor: pointer;
+}
+
+.checkbox-btn {
   display: flex;
   gap: 32px;
   padding-top: 20px;
+}
+
+.radio,
+.checkbox {
+  display: flex;
+  gap: 12px;
+}
+
+.checkbox-new,
+.checkbox-old {
+  position: relative;
+  appearance: none;
+  border: 1px solid #FFF;
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.checkbox-new:checked,
+.checkbox-old:checked {
+  background-color: #221F1F;
+  border: 1px solid #FFF;
+}
+
+.checkbox-new:checked::before,
+.checkbox-old:checked::before {
+  content: "✔";
+  font-size: 14px;
+  color: #FFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .search-box {
