@@ -1,8 +1,51 @@
 ul,
 li,
 h2,
+h3,
 p {
   margin: 0;
+}
+
+
+/* Add this to your existing CSS file or create a new one */
+
+.loading-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    z-index: 999;
+}
+
+.loading-overlay.active {
+    display: flex;
+}
+
+.loading-message {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .games-filter {
@@ -10,8 +53,10 @@ p {
   top: 80px;
   width: 100%;
   height: 60px;
-  background-color: #221F1F;
-  color: #FFF;
+  background-color: #221f1f;
+  color: #fff;
+  display: flex;
+  justify-content: center;
 }
 
 .games-filter__box {
@@ -19,7 +64,8 @@ p {
   display: flex;
   align-items: center;
   font-size: 14px;
-  font-weight: 4000;
+  font-weight: 400;
+  width: 1280px;
 }
 
 .filter-select {
@@ -34,7 +80,7 @@ p {
   padding: 10px;
   border: none;
   border-radius: 6px;
-  color: #FFF;
+  color: #fff;
   margin-right: 86px;
   appearance: none;
   cursor: pointer;
@@ -49,7 +95,7 @@ p {
 }
 
 .select-item__option {
-  background-color: #FFF;
+  background-color: #fff;
   color: #333;
   font-size: 14px;
   font-style: normal;
@@ -70,17 +116,67 @@ p {
 .radio__input-games[type="radio"] {
   width: 20px;
   height: 20px;
-  border: 1px solid #FFF;
+  border: 1px solid #fff;
   border-radius: 100%;
 }
 
 /*checkbox*/
 
 .filter-group__checkbox {
-  width: 145px;
-  height: 20px;
-  margin-right: 153px;
+   display: flex;
+  gap: 32px;
+   margin-right: 153px;
 }
+
+.checkbox-container {
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #221F1F;
+  border: 1px solid #FFF;
+  border-radius: 6px;
+}
+
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark::after {
+  display: block;
+}
+
+.checkbox-container input:checked ~ .checkmark::after {
+  left: 6px;
+  top: 3px;
+  width: 6px;
+  height: 9px;
+  border: solid #FFF;
+  border-width: 0 1px 1px 0;
+  transform: rotate(45deg);
+}
+
+
 
 /*search*/
 
@@ -90,7 +186,7 @@ p {
   border-radius: 6px;
   width: 377px;
   height: 36px;
-  background-color: #FFF;
+  background-color: #fff;
   position: relative;
 }
 
@@ -123,7 +219,7 @@ p {
   width: 75px;
   height: 36px;
   border-radius: 0 6px 6px 0;
-  background-color: #EF4934;
+  background-color: #ef4934;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -134,7 +230,7 @@ p {
 /**/
 
 .section_title {
-  color: #221F1F;
+  color: #221f1f;
   font-size: 48px;
   font-weight: 700;
   line-height: 48px;
@@ -143,10 +239,10 @@ p {
 }
 
 .content_game-cards {
-  width: 1175px;
-  height: 100vh;
-  margin-bottom: 146px;
-  margin-top: 40px;
+  /*! width: 1175px; */
+  /*! height: 100vh; */
+  /*! margin-bottom: 146px; */
+  margin-bottom: 46px;
 }
 
 .game-cards {
@@ -154,25 +250,29 @@ p {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 25px;
+  padding: 0;
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
   width: 275px;
   height: 260px;
   background-color: hsl(0, 0%, 93%);
   color: hsl(0, 5%, 13%);
-  display: grid;
   padding: 12px 12px 22px;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   border-radius: 12px;
-  transition: all .3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .card:hover {
-  box-shadow: 1px 1px 13px 0 #221F1FA6;
-  background-color: #EF343400;
+  box-shadow: 1px 1px 13px 0 #221f1fa6;
+  background-color: #ef343400;
 }
 
 .card__header {
@@ -197,6 +297,28 @@ p {
   gap: 12px;
 }
 
+.card__title {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.card__description {
+  width: 149px;
+  height: 52px;
+  color: var(--color-2, #221f1f);
+  line-height: 1.5; /* 150% as line-height */
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  /*! overflow: hidden; */
+  /*! text-overflow: ellipsis; */
+  /*! white-space: nowrap; */
+  display: block;
+}
+
 .section_card_title {
   margin-bottom: 40px;
   font-size: 48px;
@@ -205,7 +327,7 @@ p {
 }
 
 .content_game-cards {
-  margin-top: 40px;
+  /*! margin-top: 40px; */
 }
 
 .card__list {
@@ -214,9 +336,26 @@ p {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-rows: auto;
-  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 11px;
+}
+
+.card__list .card__list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.card__list-item-title {
+  font-weight: 600;
+  display: flex;
+  gap: 6px;
+}
+
+.card__list-value {
+  font-weight: 400;
 }
 
 .card_list__title {
