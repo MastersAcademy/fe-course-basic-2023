@@ -1,4 +1,4 @@
-import pokemons from './pokemonsArray.js';
+// import pokemons from './pokemonsArray.js';
 
 const container = '.pokemons__cards';
 const bigCheckbox = document.getElementById('big');
@@ -6,8 +6,13 @@ const smallCheckbox = document.getElementById('small');
 const applyButton = document.querySelector('.filters__search--button');
 const searchInput = document.getElementById('search');
 const selectElement = document.getElementById('type');
+const spinner = document.querySelector('.loading'); // Получаем элемент спиннера по его id
 
-let filteredPokemons = [...pokemons];
+spinner.style.display = 'inline-block';
+
+// let filteredPokemons = [...pokemons];
+let allPokemons = [];
+let filteredPokemons = [];
 
 function createPokemonCard(pokemon) {
     const {
@@ -20,10 +25,11 @@ function createPokemonCard(pokemon) {
         number,
         type,
         weakness,
-        description,
+        // description,
     } = pokemon;
 
-    const slicer = description.length > 100 ? `${description.slice(0, 100)}...` : description;
+    // const slicer = description.length > 100 ? `${description.slice(0, 100)}...` : description;
+    // <span>${slicer}</span>
 
     const rendering = `
         <div class="pokemons__cards-item">
@@ -31,14 +37,13 @@ function createPokemonCard(pokemon) {
                 <img class="card__pokemon-img" src="${ThumbnailImage}" alt="${ThumbnailAltText}">
                 <h3 class="card__pokemon-name">
                     <strong>${name}</strong>
-                    <span>${slicer}</span>
                 </h3>
             </div>
 
             <div class="card__characteristics">
                 <div class="card__characteristics-abilities">
                     <strong>Abilities:</strong>
-                    <span>${abilities}"</span>
+                    <span>${abilities}</span>
                 </div>
                 <div class="card__characteristics-height">
                     <strong>Height:</strong>
@@ -96,8 +101,9 @@ function applySearchFilter() {
 
     const searchFilteredPokemons = filteredPokemons.filter((pokemon) => {
         const pokemonName = pokemon.name.toLowerCase();
-        const pokemonDescription = pokemon.description.toLowerCase();
-        return pokemonName.includes(searchValue) || pokemonDescription.includes(searchValue);
+        // const pokemonDescription = pokemon.description.toLowerCase();
+        return pokemonName.includes(searchValue);
+        // || pokemonDescription.includes(searchValue)
     });
 
     renderCardsByType(container, searchFilteredPokemons, selectElement.value.toLowerCase());
@@ -107,7 +113,7 @@ function filterPokemons() {
     const isBigChecked = bigCheckbox.checked;
     const isSmallChecked = smallCheckbox.checked;
 
-    filteredPokemons = pokemons.filter((pokemon) => {
+    filteredPokemons = allPokemons.filter((pokemon) => {
         if (isBigChecked && isSmallChecked) {
             return pokemon.height > 100 || pokemon.height < 50;
         }
@@ -123,21 +129,34 @@ function filterPokemons() {
     applySearchFilter();
 }
 
+function sortPokemonsByHeight(order, pokemonList) {
+    const sortedPokemons = [...pokemonList];
+    if (order === 'HighFirst') {
+        sortedPokemons.sort((a, b) => b.height - a.height);
+    } else {
+        sortedPokemons.sort((a, b) => a.height - b.height);
+    }
+    renderCards(container, sortedPokemons);
+}
+
+let currentSortType = null;
+
 function applyAllFilters() {
-    filterPokemons();
+    if (currentSortType) {
+        filterPokemons();
 
-    const selectedType = selectElement.value.toLowerCase();
-    const searchValue = searchInput.value.toLowerCase().trim();
+        const selectedType = selectElement.value.toLowerCase();
+        const searchValue = searchInput.value.toLowerCase().trim();
 
-    const filteredByType = filteredPokemons.filter((pokemon) => selectedType === 'type' || pokemon.type.includes(selectedType));
+        const filteredByType = filteredPokemons.filter((pokemon) => selectedType === 'type' || pokemon.type.includes(selectedType));
 
-    const filteredBySearch = filteredByType.filter((pokemon) => {
-        const pokemonName = pokemon.name.toLowerCase();
-        const pokemonDescription = pokemon.description.toLowerCase();
-        return pokemonName.includes(searchValue) || pokemonDescription.includes(searchValue);
-    });
+        const filteredBySearch = filteredByType.filter((pokemon) => {
+            const pokemonName = pokemon.name.toLowerCase();
+            return pokemonName.includes(searchValue);
+        });
 
-    renderCards(container, filteredBySearch);
+        sortPokemonsByHeight(currentSortType, filteredBySearch);
+    }
 }
 
 function filterByType(event) {
@@ -145,11 +164,39 @@ function filterByType(event) {
     renderCardsByType(container, filteredPokemons, selectedType);
 }
 
+document.getElementById('highFirst').addEventListener('change', () => {
+    currentSortType = 'HighFirst';
+    applyAllFilters();
+});
+
+document.getElementById('lowFirst').addEventListener('change', () => {
+    currentSortType = 'LowFirst';
+    applyAllFilters();
+});
+
 selectElement.addEventListener('change', filterByType);
 applyButton.addEventListener('click', applyAllFilters);
 bigCheckbox.addEventListener('change', applyAllFilters);
 smallCheckbox.addEventListener('change', applyAllFilters);
 searchInput.addEventListener('input', applyAllFilters);
 
-renderCards(container, pokemons);
-applyAllFilters();
+fetch('https://my-json-server.typicode.com/electrovladyslav/pokemon-json-server/pokemons')
+    .then((response) => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then((data) => {
+        allPokemons = data;
+        filteredPokemons = [...allPokemons];
+
+        renderCards(container, filteredPokemons);
+        applyAllFilters();
+
+        spinner.style.display = 'none';
+    })
+    .catch((error) => {
+        console.error('There was a problem fetching data:', error);
+        spinner.style.display = 'none';
+    });
