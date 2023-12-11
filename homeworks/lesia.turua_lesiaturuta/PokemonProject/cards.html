@@ -11,6 +11,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./loader/loader.css">
     </head>
     <body>
         <header class="header">
@@ -40,20 +41,18 @@
             <form class="form__search justify__content--center">
                 <div class="container justify__content--between">
                     <select class="form__search-select" id="select" name="select" data-filter-select-search>
-                        <option value="option_1" selected>Type</option>
-                        <option value="option_2">Type #2</option>
-                        <option value="option_3">Type #3</option>
+
                     </select>
                     <fieldset class="form__search-radio">
                         <div class="justify__content--center">
-                            <input class="form__search-radio-radio gap-right6" type="radio" id="only-new" name="sel" checked
-                                value="Only new" data-filter-new>
-                            <label class="form__search-radio-label" for="only-new">Only new</label>
+                            <input class="form__search-radio-radio gap-right6" type="radio" id="only-new" name="sel"
+                                value="Only new" data-filter-high>
+                            <label class="form__search-radio-label" for="only-new">High first</label>
                         </div>
                         <div class="justify__content--center">
                             <input class="form__search-radio-radio gap-right6" type="radio" id="favorites" name="sel"
-                                value="Favorites" data-filter-favorites>
-                            <label class="form__search-radio-label" for="favorites">Favorites</label>
+                                value="Favorites" data-filter-Low>
+                            <label class="form__search-radio-label" for="favorites">Low First</label>
                         </div>
                     </fieldset>
                     <fieldset class="form__search-checkbox">
@@ -80,8 +79,8 @@
         <main class="main">
             <div class="container justify__content--between flex-direction-column">
                 <h1 class="title-pokemon">Study project "Pokemons"</h1>
-                <div class="cards" data-cards>
-                </div>
+                <div class="cards" data-cards></div>
+                <div class="loading" data-loading></div>
             </div>
         </main>
         <template data-type="card-template">

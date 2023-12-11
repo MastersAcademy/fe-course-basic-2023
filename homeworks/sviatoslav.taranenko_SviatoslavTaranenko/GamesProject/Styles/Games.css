@@ -3,6 +3,21 @@ body {
   padding: 0;
 }
 
+.loading-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 50%);
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+}
+
 .header {
   border: none;
   width: 100%;
@@ -324,7 +339,7 @@ body {
 }
 
 .Games__cards_desc {
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   border-radius: 12px;
   padding: 12px 12px 22px;
   background-color: #ECECEC;
@@ -369,6 +384,9 @@ body {
   font-size: 14px;
   line-height: 21px;
   margin-top: 0;
+}
+
+.Games__cards_btm {
   padding-top: 5px;
 }
 
@@ -379,3 +397,59 @@ body {
   font-size: 14px;
   line-height: 21px;
 }
+
+.footer {
+  background-color: #221F1F;
+  border: none;
+  width: 100%;
+  min-height: 100px;
+}
+
+.footer__icons {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__icons_row {
+  display: flex;
+  justify-content: center;
+  gap: 33px;
+  margin-top: 20px;
+}
+
+.footer__icons_all {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  align-items: center;
+  background-color: #FFF;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+
+.footer__icons_row img {
+  width: 20px;
+  height: 20px;
+}
+
+.footer__text {
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+  color: #FFF;
+}
+
+.about__text_link {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.about__text_link:hover {
+  color: #EF4934;
+}
+
