@@ -22,7 +22,7 @@ function renderCards(container, cardsAmount) {
     }
 }
 
-function hiddenLoader () {
+function hiddenLoader() {
     const loader = document.querySelector('[data-loader]');
     loader.style.display = 'none';
 }
@@ -33,18 +33,15 @@ async function getPokemons() {
         const options = {
             method: 'GET',
             mode: 'cors',
-            cache: 'no-cache'
+            cache: 'no-cache',
         };
 
         const response = await fetch(apiUrl, options);
         pokemons = await response.json();
         renderCards(mainElement, pokemons);
-    }
-    catch (error) {
+        } catch (error) {
         console.error('GET error:', error);
-
-    }
-    finally {
+    } finally {
         hiddenLoader();
     }
 }
