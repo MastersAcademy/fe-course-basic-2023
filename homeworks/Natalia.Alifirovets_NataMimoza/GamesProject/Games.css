@@ -1,19 +1,17 @@
-.body {
+* {
   font-family: Roboto, serif;
+  margin: 0;
+  padding: 0;
 }
 
 .wrapper {
   margin: 0 auto;
-  max-width: 1280px;
-}
-
-.project {
-  background: #EF4934;
-  height: 80px;
+  min-width: 1280px;
 }
 
 .header-menu {
-  padding: 0 52px;
+  background: #EF4934;
+  padding: 0 60px;
   height: 80px;
   display: flex;
   align-items: center;
@@ -34,7 +32,6 @@
 }
 
 .nav__link {
-  display: inline-block;
   color: #FFF;
   text-decoration: none;
 }
@@ -46,17 +43,18 @@
 .filters {
   background: #221F1F;
   color: #FFF;
-  max-width: 1280px;
   height: 60px;
   display: flex;
   justify-content: space-between;
-  padding: 0 50px;
+  padding: 0 60px;
   font-size: 14px;
   line-height: 150%;
 }
 
 .drop-down {
   background: #333;
+  border: 0;
+  border-radius: 6px;
   color: #FFF;
   width: 114px;
   height: 36px;
@@ -82,19 +80,23 @@
 
 .search-box {
   display: flex;
-  width: 377px;
   height: 36px;
-  border-radius: 6px;
   padding-top: 12px;
+  position: relative;
+}
+
+.search-field {
+  position: absolute;
+  top: 62%;
+  transform: translate(50%, -50%);
 }
 
 .search {
   width: 255px;
   padding-left: 45px;
   background-color: #FFF;
-  background-image: url("./Images/Search.jpg");
-  background-position: 12px;
-  background-repeat: no-repeat;
+  border-radius: 8px 0 0 8px;
+  border: none;
 }
 
 .apply {
@@ -103,10 +105,13 @@
   width: 75px;
   height: 36px;
   left: 302px;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
 }
 
 .title {
-  margin: 40px 652px 0 53px;
+  margin: 40px 652px 0 60px;
   font-size: 48px;
   font-weight: 700;
 }
@@ -115,24 +120,21 @@
 
 .container {
   display: flex;
-  width: 1200px;
   align-items: flex-start;
   align-content: flex-start;
-  gap: 15px;
+  gap: 25px;
   flex-wrap: wrap;
-  margin: 40px 30px 0;
+  margin: 40px 60px 0;
   position: relative;
 }
 
 .card {
   background: #ECECEC;
-  width: 260px;
+  width: 282px;
   height: 255px;
   padding: 12px;
   position: relative;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
   border-radius: 12px;
 }
 

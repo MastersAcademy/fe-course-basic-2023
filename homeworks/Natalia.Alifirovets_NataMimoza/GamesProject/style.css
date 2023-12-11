@@ -1,20 +1,17 @@
-.body {
+* {
   font-family: Roboto, serif;
+  margin: 0;
+  padding: 0;
 }
 
 .wrapper {
   margin: 0 auto;
-  max-width: 1280px;
-  height: 1017px;
-}
-
-.about {
-  background: #EF4934;
-  height: 80px;
+  min-width: 1280px;
 }
 
 .header-menu {
-  padding: 0 52px 0 53px;
+  background: #EF4934;
+  padding: 0 60px;
   height: 80px;
   display: flex;
   align-items: center;
@@ -47,10 +44,13 @@
 /*Main*/
 
 .content {
-  padding: 60px 52px 0 53px;
+  margin-left: 70px;
+  margin-top: 60px;
+  /*padding: 60px 52px 0 53px;*/
+
   display: flex;
   justify-content: space-between;
-  gap: 68px;
+  gap: 100px;
   width: 1175px;
   height: 479px;
 }

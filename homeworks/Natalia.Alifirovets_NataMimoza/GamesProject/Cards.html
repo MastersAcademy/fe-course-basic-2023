@@ -5,100 +5,100 @@
         <meta name="viewport"
             content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="Games.css">
         <title>"Games Project"</title>
     </head>
     <body>
         <div class="wrapper">
-            <div class="project">
-                <header class="header-menu">
-                    <div class="logo-box">
-                        <img src="Images/logo.png" alt="logoMA" width="55" height="58">
+            <header class="header-menu">
+                <div class="logo-box">
+                    <img src="Images/logo.png" alt="logoMA" width="55" height="58">
+                </div>
+                <nav class="nav">
+                    <a class="nav__link" href="index.html">Calculator</a>
+                    <a class="nav__link" href="./Cards.html">Games</a>
+                    <a class="nav__link" href="About.html">About</a>
+                    <a class="nav__link" href="Login.html">Login</a>
+                </nav>
+            </header>
+            <div class="filters">
+                <select class="drop-down" name="drop-down">
+                    <option value="Genre" selected>
+                        Genre
+                    </option>
+                    <option value="Sport">Sport</option>
+                    <option value="Shooter">Shooter</option>
+                    <option value="Racing">Racing</option>
+                    <option value="Horror">Horror</option>
+                </select>
+                <div class="radio-btn">
+                    <div>
+                        <input type="radio" name="option" id="platform">
+                        <label for="platform">Platform</label>
                     </div>
-                    <nav class="nav">
-                        <a class="nav__link" href="index.html">Calculator</a>
-                        <a class="nav__link" href="./Cards.html">Games</a>
-                        <a class="nav__link" href="About.html">About</a>
-                        <a class="nav__link" href="Login.html">Login</a>
-                    </nav>
-                </header>
-                <div class="filters">
-                    <select class="drop-down" name="drop-down">
-                        <option value="Genre" disabled selected>
-                            Genre
-                        </option>
-                        <option value="Sport">Sport</option>
-                        <option value="Shooter">Shooter</option>
-                        <option value="Racing">Racing</option>
-                        <option value="Horror">Horror</option>
-                    </select>
-                    <div class="radio-btn">
-                        <div>
-                            <input type="radio" name="option" id="platform" disabled>
-                            <label for="platform">Platform</label>
-                        </div>
-                        <div>
-                            <input type="radio" name="option" id="games" disabled>
-                            <label for="games">Online games</label>
-                        </div>
-                    </div>
-                    <div class="checkbox-btn">
-                        <div>
-                            <input type="checkbox" name="age" data-filter-box="new">
-                            <span>New</span>
-                        </div>
-                        <div>
-                            <input type="checkbox" name="age" data-filter-box="old">
-                            <span>Old</span>
-                        </div>
-                    </div>
-                    <div class="search-box">
-                        <input class="search" type="text" name="search" placeholder="Search" disabled>
-                        <button class="apply" type="button">
-                            Apply
-                        </button>
+                    <div>
+                        <input type="radio" name="option" id="games">
+                        <label for="games">Online games</label>
                     </div>
                 </div>
-                <h1 class="title">Study project "Games"</h1>
-                <div class="spinner-box" id="spinner-form">
-                    <div class="spinner">
+                <div class="checkbox-btn">
+                    <div>
+                        <input type="checkbox" name="age" data-filter-box="new">
+                        <span>New</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="age" data-filter-box="old">
+                        <span>Old</span>
                     </div>
                 </div>
-                <main class="container" data-type="cards">
-                    <template data-type="card-template">
-                        <article class="card">
-                            <div class="image-header">
-                                <div class="header">
-                                    <p class="header__title" data-card-title></p>
-                                    <p class="header__info" data-card-info></p>
-                                </div>
-                                <img class="image" data-card-img>
-                            </div>
-                            <section class="actors">
-                                <ul class="list">
-                                    <li>
-                                        <span class="font" data-card-genre>Genre:</span>
-                                    </li>
-                                    <li>
-                                        <span class="font" data-card-platform>Platform:</span>
-                                    </li>
-
-                                    <li>
-                                        <span class="font" data-card-publisher>Publisher:</span>
-                                    </li>
-
-                                    <li>
-                                        <span class="font" data-card-developer>Developer:</span>
-                                    </li>
-                                    <li>
-                                        <span class="font" data-card-release>Release_date:</span>
-                                    </li>
-                                </ul>
-                            </section>
-                        </article>
-                    </template>
-                </main>
+                <div class="search-box">
+                    <img class="search-field" src="./Images/Search.jpg" alt="search-icon">
+                    <input class="search" type="text" name="search" placeholder="Search">
+                    <button class="apply" type="button">
+                        Apply
+                    </button>
+                </div>
             </div>
+            <h1 class="title">Study project "Games"</h1>
+            <div class="spinner-box" id="spinner-form">
+                <div class="spinner">
+                </div>
+            </div>
+            <main class="container" data-type="cards">
+                <template data-type="card-template">
+                    <article class="card">
+                        <div class="image-header">
+                            <div class="header">
+                                <p class="header__title" data-card-title></p>
+                                <p class="header__info" data-card-info></p>
+                            </div>
+                            <img class="image" data-card-img>
+                        </div>
+                        <section class="actors">
+                            <ul class="list">
+                                <li>
+                                    <span class="font" data-card-genre>Genre:</span>
+                                </li>
+                                <li>
+                                    <span class="font" data-card-platform>Platform:</span>
+                                </li>
+
+                                <li>
+                                    <span class="font" data-card-publisher>Publisher:</span>
+                                </li>
+
+                                <li>
+                                    <span class="font" data-card-developer>Developer:</span>
+                                </li>
+                                <li>
+                                    <span class="font" data-card-release>Release_date:</span>
+                                </li>
+                            </ul>
+                        </section>
+                    </article>
+                </template>
+            </main>
         </div>
         <script src="games.js">
         </script>
