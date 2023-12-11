@@ -121,6 +121,7 @@ body {
   font-size: 48px;
   line-height: 32px;
   gap: 16px;
+  padding-bottom: 52px;
 }
 
 footer {
@@ -130,7 +131,6 @@ footer {
   text-align: center;
   width: 100%;
   bottom: 0;
-  position: fixed;
 }
 
 .footer-text {

@@ -140,6 +140,7 @@ body {
 .content {
   max-width: 1280px;
   padding-inline: 52px;
+  padding-bottom: 52px;
 }
 
 .headline {
