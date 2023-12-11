@@ -1,259 +1,4 @@
-const pokemons = [
-    {
-        abilities: [
-            'Overgrow',
-        ],
-        detailPageURL: '/us/pokedex/bulbasaur',
-        weight: 15.2,
-        weakness: [
-            'Fire',
-            'Psychic',
-            'Flying',
-            'Ice',
-        ],
-        number: '0001',
-        height: 28.0,
-        collectibles_slug: 'bulbasaur',
-        featured: 'true',
-        slug: 'bulbasaur',
-        name: 'Bulbasaur',
-        ThumbnailAltText: 'Bulbasaur',
-        ThumbnailImage: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png',
-        id: 1,
-        type: [
-            'grass',
-            'poison',
-        ],
-    },
-    {
-        abilities: [
-            'Overgrow',
-        ],
-        detailPageURL: '/us/pokedex/ivysaur',
-        weight: 28.7,
-        weakness: [
-            'Fire',
-            'Psychic',
-            'Flying',
-            'Ice',
-        ],
-        number: '0002',
-        height: 39.0,
-        collectibles_slug: 'ivysaur',
-        featured: 'true',
-        slug: 'ivysaur',
-        name: 'Ivysaur',
-        ThumbnailAltText: 'Ivysaur',
-        ThumbnailImage: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/002.png',
-        id: 2,
-        type: [
-            'grass',
-            'poison',
-        ],
-    },
-    {
-        abilities: [
-            'Overgrow',
-        ],
-        detailPageURL: '/us/pokedex/venusaur',
-        weight: 9999.0,
-        weakness: [
-            'Fire',
-            'Psychic',
-            'Flying',
-            'Ice',
-        ],
-        number: '0003',
-        height: 945.0,
-        collectibles_slug: 'venusaur',
-        featured: 'true',
-        slug: 'venusaur',
-        name: 'Venusaur',
-        ThumbnailAltText: 'Venusaur',
-        ThumbnailImage: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/003.png',
-        id: 3,
-        type: [
-            'grass',
-            'poison',
-        ],
-    },
-    {
-        abilities: [
-            'Thick Fat',
-        ],
-        detailPageURL: '/us/pokedex/venusaur',
-        weight: 342.8,
-        weakness: [
-            'Fire',
-            'Psychic',
-            'Flying',
-            'Ice',
-        ],
-        number: '0003',
-        height: 94.0,
-        collectibles_slug: 'venusaur',
-        featured: 'true',
-        slug: 'venusaur',
-        name: 'Venusaur',
-        ThumbnailAltText: 'Venusaur',
-        ThumbnailImage: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/003.png',
-        id: 3,
-        type: [
-            'grass',
-            'poison',
-        ],
-    },
-    {
-        abilities: [
-            'Overgrow',
-        ],
-        detailPageURL: '/us/pokedex/venusaur',
-        weight: 220.5,
-        weakness: [
-            'Fire',
-            'Psychic',
-            'Flying',
-            'Ice',
-        ],
-        number: '0003',
-        height: 79.0,
-        collectibles_slug: 'venusaur',
-        featured: 'true',
-        slug: 'venusaur',
-        name: 'Venusaur',
-        ThumbnailAltText: 'Venusaur',
-        ThumbnailImage: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/003.png',
-        id: 3,
-        type: [
-            'grass',
-            'poison',
-        ],
-    },
-    {
-        abilities: [
-            'Blaze',
-        ],
-        detailPageURL: '/us/pokedex/charmander',
-        weight: 18.7,
-        weakness: [
-            'Water',
-            'Ground',
-            'Rock',
-        ],
-        number: '0004',
-        height: 24.0,
-        collectibles_slug: 'charmander',
-        featured: 'true',
-        slug: 'charmander',
-        name: 'Charmander',
-        ThumbnailAltText: 'Charmander',
-        ThumbnailImage: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/004.png',
-        id: 4,
-        type: [
-            'fire',
-        ],
-    },
-    {
-        abilities: [
-            'Blaze',
-        ],
-        detailPageURL: '/us/pokedex/charmeleon',
-        weight: 41.9,
-        weakness: [
-            'Water',
-            'Ground',
-            'Rock',
-        ],
-        number: '0005',
-        height: 43.0,
-        collectibles_slug: 'charmeleon',
-        featured: 'true',
-        slug: 'charmeleon',
-        name: 'Charmeleon',
-        ThumbnailAltText: 'Charmeleon',
-        ThumbnailImage: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/005.png',
-        id: 5,
-        type: [
-            'fire',
-        ],
-    },
-    {
-        abilities: [
-            'Blaze',
-        ],
-        detailPageURL: '/us/pokedex/charizard',
-        weight: 9999.0,
-        weakness: [
-            'Water',
-            'Electric',
-            'Rock',
-        ],
-        number: '0006',
-        height: 1102.0,
-        collectibles_slug: 'charizard',
-        featured: 'true',
-        slug: 'charizard',
-        name: 'Charizard',
-        ThumbnailAltText: 'Charizard',
-        ThumbnailImage: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/006.png',
-        id: 6,
-        type: [
-            'fire',
-            'flying',
-        ],
-    },
-    {
-        abilities: [
-            'Drought',
-        ],
-        detailPageURL: '/us/pokedex/charizard',
-        weight: 221.6,
-        weakness: [
-            'Water',
-            'Electric',
-            'Rock',
-        ],
-        number: '0006',
-        height: 67.0,
-        collectibles_slug: 'charizard',
-        featured: 'true',
-        slug: 'charizard',
-        name: 'Charizard',
-        ThumbnailAltText: 'Charizard',
-        ThumbnailImage: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/006.png',
-        id: 6,
-        type: [
-            'fire',
-            'flying',
-        ],
-    },
-    {
-        abilities: [
-            'Tough Claws',
-        ],
-        detailPageURL: '/us/pokedex/charizard',
-        weight: 243.6,
-        weakness: [
-            'Ground',
-            'Rock',
-            'Dragon',
-        ],
-        number: '0006',
-        height: 67.0,
-        collectibles_slug: 'charizard',
-        featured: 'true',
-        slug: 'charizard',
-        name: 'Charizard',
-        ThumbnailAltText: 'Charizard',
-        ThumbnailImage: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/006.png',
-        id: 6,
-        type: [
-            'fire',
-            'dragon',
-        ],
-    },
-];
-
+let pokemons = [];
 const sizePokemonBig = document.querySelector('[data-filter="big"]');
 const sizePokemonSmall = document.querySelector('[data-filter="small"]');
 
@@ -276,6 +21,37 @@ function renderCards(container, cardsAmount) {
         container.appendChild(content);
     }
 }
+
+function hiddenLoader () {
+    const loader = document.querySelector('[data-loader]');
+    loader.style.display = 'none';
+}
+
+async function getPokemons() {
+    try {
+        const apiUrl = 'https://my-json-server.typicode.com/electrovladyslav/pokemon-json-server/pokemons';
+        const options = {
+            method: 'GET',
+            mode: 'cors',
+            cache: 'no-cache'
+        };
+
+        const response = await fetch(apiUrl, options);
+        pokemons = await response.json();
+        renderCards(mainElement, pokemons);
+    }
+    catch (error) {
+        console.error('GET error:', error);
+
+    }
+    finally {
+        hiddenLoader();
+    }
+}
+
+setTimeout(() => {
+    getPokemons();
+}, 2000);
 
 function resetfiletrs() {
     while (mainElement.firstChild) {
