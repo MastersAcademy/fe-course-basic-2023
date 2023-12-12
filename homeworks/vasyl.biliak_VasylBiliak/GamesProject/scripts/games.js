@@ -1,13 +1,7 @@
 const FORM_FILTERS_ELEMENT = document.querySelector('[data-form-filters]');
-const TEXT_INPUT_ELEMENT = FORM_FILTERS_ELEMENT.elements['search-query'];
 const GAMES_CONTAINER_ELEMENT = document.querySelector('.card-games');
 const loadingOverlay = document.querySelector('.loading-overlay__spinner');
-const oldGames = new Date('2010-01-01');
-let allGamesData = [];
-let gamesDisplayed = [];
-let selectedGenreValue = '';
-let selectedRadioValue = 'all';
-let selectedDate = '&sort-by=release-date';
+let games = [];
 
 function showLoadingOverlay() {
     loadingOverlay.style.display = 'block';
@@ -23,8 +17,8 @@ function createGameCardElement(card) {
         developer, release_date: releaseDate,
     } = card;
 
-    const truncatedDescription = shortDescription.length > 80
-        ? `${shortDescription.substring(0, 80)}...`
+    const truncatedDescription = shortDescription.length > 85
+        ? `${shortDescription.substring(0, 85)}...`
         : shortDescription;
 
     const cardTemplateStr = `
@@ -69,6 +63,8 @@ function renderCards(container, cards) {
             const gameCard = createGameCardElement(card);
             container.innerHTML += gameCard;
         });
+    } else {
+        container.innerHTML += '<div style=" font-weight: bold; margin-top: 25px; font-size: 25px;">Nothing found</div>';
     }
 }
 
@@ -78,11 +74,50 @@ function filterByGameCategory(category) {
     } return `&category=${category}`;
 }
 
-async function fetchData(platform, date, category) {
+function filterByGamePlatform(platform) {
+    if (platform === 'all') {
+        return '';
+    } return `&platform=${platform}`;
+}
+
+function filterByGameDate(array, isNewChecked, isOldChecked) {
+    if (isOldChecked) {
+        return array.reverse();
+    }
+    return array;
+}
+
+function filterBySearchQuery(arrayGames, searchQuery) {
+    return arrayGames.filter((game) => game.title.toLowerCase().includes(searchQuery));
+}
+
+function checkRadioButton(radioElement) {
+    radioElement.checked = !radioElement.checked;
+}
+
+async function fetchData() {
     try {
+        const categorySelect = FORM_FILTERS_ELEMENT.elements['games-category'].value;
+        const platformSelect = FORM_FILTERS_ELEMENT.elements['games-platform'].value;
+        const gameDate = FORM_FILTERS_ELEMENT.elements.game_date.value;
+        const inputValue = FORM_FILTERS_ELEMENT.elements['search-query'].value;
+        const isRadioNewData = FORM_FILTERS_ELEMENT.elements.game_date_new.checked;
+        const isRadioOldData = FORM_FILTERS_ELEMENT.elements.game_date_old.checked;
+
         showLoadingOverlay();
-        const apiUrl = `https://mmo-games.p.rapidapi.com/games?platform=${platform}${category}${date}`;
-        const response = await fetch(apiUrl, {
+        let url = 'https://mmo-games.p.rapidapi.com/games?';
+        if (categorySelect) {
+            url += filterByGameCategory(categorySelect);
+        }
+        if (platformSelect) {
+            url += filterByGamePlatform(platformSelect);
+        }
+        console.log(gameDate);
+        if (gameDate) {
+            url += '&sort-by=release-date';
+            checkRadioButton(gameDate);
+        }
+        const response = await fetch(url, {
             method: 'GET',
             mode: 'cors',
             cache: 'no-cache',
@@ -95,9 +130,12 @@ async function fetchData(platform, date, category) {
             throw new Error('Failed to fetch data');
         }
         const data = await response.json();
-        allGamesData = Array.isArray(data) ? data.slice(0, 50) : [];
-        gamesDisplayed = [...allGamesData];
-        renderCards(GAMES_CONTAINER_ELEMENT, gamesDisplayed);
+        games = Array.isArray(data) ? data.slice(0, 50) : [];
+        games = filterByGameDate(games, isRadioNewData, isRadioOldData);
+        if (inputValue > '') {
+            games = filterBySearchQuery(games, inputValue);
+        }
+        renderCards(GAMES_CONTAINER_ELEMENT, games);
     } catch (error) {
         console.error('Error fetching data:', error);
     } finally {
@@ -105,52 +143,10 @@ async function fetchData(platform, date, category) {
     }
 }
 
-function filterByGameDate(isNewChecked, isOldChecked) {
-    if (isNewChecked) {
-        return '&sort-by=2022-01-01';
-    }
-    if (isOldChecked) {
-        return `&sort-by=${oldGames}`;
-    }
-    return '&sort-by=release-date';
-}
-
-function filterBySearchQuery(cards) {
-    const inputValue = FORM_FILTERS_ELEMENT.elements['search-query'].value.toLowerCase();
-    return cards.filter((card) => card.title.toLowerCase().includes(inputValue));
-}
-
-async function getUpdatedFilteredCards() {
-    if (FORM_FILTERS_ELEMENT.elements['games-category'].value) {
-        selectedGenreValue = filterByGameCategory(FORM_FILTERS_ELEMENT.elements['games-category'].value);
-    }
-
-    if (FORM_FILTERS_ELEMENT.elements.browser.checked) {
-        selectedRadioValue = FORM_FILTERS_ELEMENT.elements['radio-btns'].value.toLowerCase();
-    }
-
-    if (FORM_FILTERS_ELEMENT.elements.game_date_new.checked
-        || FORM_FILTERS_ELEMENT.elements.game_date_old.checked) {
-        selectedDate = filterByGameDate(FORM_FILTERS_ELEMENT.elements.game_date_new.checked,
-            FORM_FILTERS_ELEMENT.elements.game_date_old.checked);
-    }
-    await fetchData(selectedRadioValue, selectedDate, selectedGenreValue);
-}
-
-function onChangeFiltersHandler() {
-    const updatedFilteredGames = getUpdatedFilteredCards();
-    renderCards(GAMES_CONTAINER_ELEMENT, updatedFilteredGames);
-}
-
-function onInputSearchHandler() {
-    const updatedFilteredCards = filterBySearchQuery(gamesDisplayed);
-    renderCards(GAMES_CONTAINER_ELEMENT, updatedFilteredCards);
-}
-
 async function initGames() {
-    await fetchData(selectedRadioValue, selectedDate, selectedGenreValue);
-    TEXT_INPUT_ELEMENT.addEventListener('input', onInputSearchHandler);
-    FORM_FILTERS_ELEMENT.addEventListener('change', onChangeFiltersHandler);
+    await fetchData();
+    FORM_FILTERS_ELEMENT.addEventListener('change', await fetchData);
+    FORM_FILTERS_ELEMENT.addEventListener('submit', (event) => event.preventDefault());
 }
 
 document.addEventListener('DOMContentLoaded', initGames);

@@ -24,7 +24,7 @@
         </header>
         <form class="wrapper__filter-search" action="./games.html" method="get" data-form-filters>
             <div class="filter-search">
-                <select class="filter-search__select-option" name="games-category">
+                <select class="filter-search__select-option" name="games-category" data-select-genre>
                     <option class="select-option" value="all" selected>all</option>
                     <option class="select-option" value="mmorpg">mmorpg</option>
                     <option class="select-option" value="shooter">shooter</option>
@@ -34,29 +34,26 @@
                     <option class="select-option" value="sports">sports</option>
                     <option class="select-option" value="social">social</option>
                 </select>
+                <select class="filter-search__select-option" name="games-platform" games-platform>
+                    <option value="all" selected>All platforms</option>
+                    <option value="pc">PC (Windows)</option>
+                    <option value="browser">Web Browser</option>
+                </select>
 
-                <div class="filter-search__radio-select">
-                    <label class="radio-select__label" for="pcWindow">
-                        <input class="radio-select__btn" type="radio" id="pcWindow" name="radio-btns" value="pc">Platform
+                <div class="filter-search__radio-select" name="radio-date-sort" radio-date-sort>
+                    <label class="radio-select__label" for="game_date_new">
+                        <input class="radio-select__btn" type="radio" id="game_date_new" name="game_date" value="New First">New First
                     </label>
-                    <label class="radio-select__label" for="browser">
-                        <input class="radio-select__btn" type="radio" id="browser" name="radio-btns" value="browser">Online games
-                    </label>
-                </div>
-                <div class="filter-search__checkbox">
-                    <label class="checkbox__label" for="game_date_new">
-                        <input class="checkbox__game-date" type="checkbox" id="game_date_new" name="game_date_new" value="not-robot">New First
-                    </label>
-                    <label class="checkbox__label" for="game_date_old">
-                        <input class="checkbox__game-date" type="checkbox" id="game_date_old" name="game_date_old" value="not-robot">Old first
+                    <label class="radio-select__label" for="game_date_old">
+                        <input class="radio-select__btn" type="radio" id="game_date_old" name="game_date" value="Old First">Old First
                     </label>
                 </div>
-                <div class="search">
+                <div class="search" data-search-input>
                     <label class="search__input">
                         <img class="search__img" src="img/search.png" alt="search" width="24px" height="24px">
-                        <input class="search__input-text" type="text" name="search-query" placeholder="Search" pattern=".{1,20}" required>
+                        <input class="search__input-text" type="text" name="search-query" data-search-button placeholder="Search" pattern=".{1,20}" required>
                     </label>
-                    <input class="search__btn" type="submit" name="search_submit" value="Apply" disabled>
+                    <button class="search__btn" type="button" id="applyButton">Apply</button>
                 </div>
             </div>
         </form>
