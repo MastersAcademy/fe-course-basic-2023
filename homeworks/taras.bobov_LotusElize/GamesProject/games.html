@@ -36,37 +36,95 @@
                     <div class="filter-group__select">
                         <span class="icon-select"></span>
                         <select name="" id="" class="filter-select" disabled>
-                            <option class="select-item__option" value="genre" select-option__items="">Genre</option>
-                            <option class="select-item__option" value="sport" select-option__items="">Sport</option>
-                            <option class="select-item__option" value="shooter" select-option__items="">Shooter</option>
-                            <option class="select-item__option" value="racing" select-option__items="">Racing</option>
-                            <option class="select-item__option" value="horror" select-option__items="">Horror</option>
+                            <option
+                                class="select-item__option"
+                                value="genre"
+                                select-option__items=""
+                            >
+                                Genre
+                            </option>
+                            <option
+                                class="select-item__option"
+                                value="sport"
+                                select-option__items=""
+                            >
+                                Sport
+                            </option>
+                            <option
+                                class="select-item__option"
+                                value="shooter"
+                                select-option__items=""
+                            >
+                                Shooter
+                            </option>
+                            <option
+                                class="select-item__option"
+                                value="racing"
+                                select-option__items=""
+                            >
+                                Racing
+                            </option>
+                            <option
+                                class="select-item__option"
+                                value="horror"
+                                select-option__items=""
+                            >
+                                Horror
+                            </option>
                         </select>
                     </div>
                     <div class="filter-group__radio">
                         <label class="radio-control" for="platform">
-                            <input class="radio__input-games" id="platform" type="radio" name="radio-control" disabled>
+                            <input
+                                class="radio__input-games"
+                                id="platform"
+                                type="radio"
+                                name="radio-control"
+                                disabled
+                            >
                             Platform
                         </label>
                         <label class="radio-control" for="on">
-                            <input class="radio__input-games" id="on" type="radio" name="radio-control" disabled>
+                            <input
+                                class="radio__input-games"
+                                id="on"
+                                type="radio"
+                                name="radio-control"
+                                disabled
+                            >
                             Online games
                         </label>
                     </div>
                     <div class="filter-group__checkbox">
                         <label for="newCheckbox" class="checkbox-container">
-                            <input type="checkbox" id="newCheckbox" data-filter="new">
+                            <input
+                                type="checkbox"
+                                id="newCheckbox"
+                                data-filter="new"
+                            >
                             <span class="checkmark"></span>
-                            New</label>
+                            New</label
+                        >
                         <label for="oldCheckbox" class="checkbox-container">
-                            <input type="checkbox" id="oldCheckbox" data-filter="old">
+                            <input
+                                type="checkbox"
+                                id="oldCheckbox"
+                                data-filter="old"
+                            >
                             <span class="checkmark"></span>
-                            Old</label>
+                            Old</label
+                        >
                     </div>
                     <div class="filter-game__search">
                         <label class="game-search__label" for="search"></label>
                         <input id="search" type="search" placeholder="Search">
-                        <button type="button" class="apply-btn" id="apply-filter">Apply</button>
+                        <button
+                            type="button"
+                            class="apply-btn"
+                            id="apply-filter"
+                        >
+                            Apply
+                        </button>
                     </div>
                 </div>
             </div>
@@ -80,84 +138,115 @@
                 <h2 class="section_title">Games</h2>
             </div>
             <section class="content_game-cards">
-                <!-- card template -->
-                <ul class="game-cards" data-container="game-cards" style="list-style: none;"></ul>
+                <ul
+                    class="game-cards"
+                    data-container="game-cards"
+                    style="list-style: none"
+                ></ul>
                 <template data-type="card-template">
                     <div class="card" data-card>
                         <div class="card__header">
-                            <img src="./images/card-3.jpeg" class="card__image" data-card-img>
+                            <img
+                                src="./images/card-3.jpeg"
+                                class="card__image"
+                                data-card-img
+                            >
                             <div class="card__header__title">
                                 <h3 class="card__title" data-card-title></h3>
-                                <p class="card__description" data-card-description></p>
+                                <p
+                                    class="card__description"
+                                    data-card-description
+                                ></p>
                             </div>
                         </div>
-                        <!--  -->
                         <ul class="card__list">
                             <li class="card__list-item">
                                 <div class="card__list-item-title">
-                                    Genre:<span class="card__list-value"
-                                        data-card-genre></span></div>
+                                    Genre:<span
+                                        class="card__list-value"
+                                        data-card-genre
+                                    ></span>
+                                </div>
                             </li>
                             <li class="card__list-item">
                                 <div class="card__list-item-title">
-                                    Platform:<span class="card__list-value"
-                                        data-card-platform></span></div>
+                                    Platform:<span
+                                        class="card__list-value"
+                                        data-card-platform
+                                    ></span>
+                                </div>
                             </li>
                             <li class="card__list-item">
                                 <div class="card__list-item-title">
-                                    Publisher:<span class="card__list-value"
-                                        data-card-publisher></span></div>
+                                    Publisher:<span
+                                        class="card__list-value"
+                                        data-card-publisher
+                                    ></span>
+                                </div>
                             </li>
                             <li class="card__list-item">
                                 <div class="card__list-item-title">
-                                    Developer:<span class="card__list-value"
-                                        data-card-developer></span></div>
+                                    Developer:<span
+                                        class="card__list-value"
+                                        data-card-developer
+                                    ></span>
+                                </div>
                             </li>
                             <li class="card__list-item">
                                 <div class="card__list-item-title">
-                                    Release date:<span class="card__list-value"
-                                        data-card-release-date></span></div>
+                                    Release date:<span
+                                        class="card__list-value"
+                                        data-card-release-date
+                                    ></span>
+                                </div>
                             </li>
                         </ul>
-                        <!--  -->
                     </div>
                 </template>
-                <!-- end card template -->
             </section>
         </main>
-        <!-- footer -->
         <footer>
             <div class="container footer-social__info">
                 <div class="social-media">
                     <ul>
                         <li>
                             <a href="#">
-                                <img src="./images/fb-soc-ico.svg" alt="Facebook">
+                                <img
+                                    src="./images/fb-soc-ico.svg"
+                                    alt="Facebook"
+                                >
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <img src="./images/link-soc-ico.svg" alt="LinkedIn">
+                                <img
+                                    src="./images/link-soc-ico.svg"
+                                    alt="LinkedIn"
+                                >
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <img src="./images/insta-soc-ico.png" alt="Instagram">
+                                <img
+                                    src="./images/insta-soc-ico.png"
+                                    alt="Instagram"
+                                >
                             </a>
                         </li>
                     </ul>
                 </div>
                 <div class="links">
                     <p>
-                        Made with 💗 on course<a href="https://www.mastersacademy.education/frontend-for-beginners-it"
-                            target="_blank">'Frontend for beginners' from Masters Academy in
-                            2023,</a>from Masters Academy in 2023, by Taras
+                        Made with 💗 on course<a
+                            href="https://www.mastersacademy.education/frontend-for-beginners-it"
+                            target="_blank"
+                        >'Frontend for beginners' from Masters Academy in
+                            2023,</a
+                        >from Masters Academy in 2023, by Taras
                     </p>
                 </div>
             </div>
         </footer>
-        <!-- footer end -->
         <script src="./js/games.js"></script>
-        <script src="./js/footer.js"></script>
     </body>
 </html>
