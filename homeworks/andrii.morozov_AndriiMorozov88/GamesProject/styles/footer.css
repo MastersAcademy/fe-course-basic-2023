@@ -1,0 +1,14 @@
+.footer {
+  height: 160px;
+  width: 100%;
+  background-color: #221F1F;
+  bottom: 0;
+}
+
+.page--loaded {
+  position: relative;
+}
+
+.page--loading {
+  position: absolute;
+}

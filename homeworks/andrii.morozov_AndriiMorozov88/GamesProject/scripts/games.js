@@ -1,4 +1,5 @@
 const cardContainer = document.querySelector('[data-card-container]');
+const footerElement = document.querySelector('[data-footer]');
 const genreSelect = document.querySelector('[data-select-genre]');
 const platformSelect = document.querySelector('[data-select-platform]');
 const newGameCheck = document.querySelector('[data-new-games]');
@@ -7,9 +8,10 @@ const searchButton = document.querySelector('[data-search-button]');
 const searchInput = document.querySelector('[data-search-input]');
 const newFirstButton = document.querySelector('[data-new-first]');
 const oldFirstButton = document.querySelector('[data-old-first]');
-const loading = document.querySelector('[data-loading]');
+const infoElement = document.querySelector('[data-info]');
 async function getGamesArray() {
-    loading.classList.replace('main__loading--disabled', 'main__loading');
+    infoElement.classList.replace('main__info--disabled', 'main__info');
+    infoElement.innerText = 'Loading...';
     const option = {
         headers: {
             'X-RapidAPI-Key': '1c3169c707mshb51bff34cbc9ff6p1749b9jsn648a19134256',
@@ -73,14 +75,21 @@ function createCardElement(game, array) {
     return cardContent;
 }
 function renderCards(container, gamesArray) {
-    gamesArray.splice(50);
+    gamesArray.splice(10);
     container.innerHTML = '';
     const fragment = new DocumentFragment();
     for (let count = 0; count < gamesArray.length; count++) {
         fragment.append(createCardElement(count, gamesArray));
     }
     container.append(fragment);
-    loading.classList.replace('main__loading', 'main__loading--disabled');
+    infoElement.classList.replace('main__info', 'main__info--disabled');
+    if (gamesArray.length !== 0) {
+        footerElement.classList.replace('page--loading', 'page--loaded');
+    } else {
+        footerElement.classList.add('page--loading');
+        infoElement.classList.replace('main__info--disabled', 'main__info');
+        infoElement.innerText = 'No Results';
+    }
 }
 function getYear(string) {
     const dateArray = string.split('-');
@@ -122,6 +131,7 @@ async function showFilterArray() {
 }
 
 async function init() {
+    footerElement.classList.add('page--loading');
     renderCards(cardContainer, await getGamesArray());
     genreSelect.addEventListener('change', showFilterArray);
     platformSelect.addEventListener('change', showFilterArray);

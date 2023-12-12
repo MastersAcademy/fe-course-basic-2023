@@ -9,7 +9,7 @@
   padding-left: 53px;
 }
 
-.main__loading {
+.main__info {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -19,13 +19,8 @@
   transform: translate(-50%);
 }
 
-.main__loading--disabled {
+.main__info--disabled {
   display: none;
-}
-
-.games__main {
-  position: relative;
-  top: 180px;
 }
 
 .aboutMe-block {
@@ -137,8 +132,14 @@
 
 .card-container {
   display: grid;
-  grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+  grid-template: repeat(1, 1fr) / repeat(4, 1fr);
   gap: 20px;
+}
+
+.games__main {
+  position: relative;
+  top: 180px;
+  margin-bottom: 240px;
 }
 
 .card {
@@ -147,7 +148,7 @@
   border-radius: 10px;
   padding: 12px 12px 22px;
   display: grid;
-  grid-template-columns: 90px 1fr;
+  grid-template-columns: 90px 175px;
   grid-template-rows: 100px 1fr;
   gap: 12px;
   grid-template-areas: "image card-name" "card-description card-description";
