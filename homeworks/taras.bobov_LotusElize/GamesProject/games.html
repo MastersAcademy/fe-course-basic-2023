@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta charset="UTF-8">
         <meta name="description" content="this page about games">
@@ -9,7 +8,6 @@
         <link rel="stylesheet" type="text/css" href="./css/games.css">
         <title>Game cards</title>
     </head>
-
     <body>
         <header>
             <div class="container logo-menu">
@@ -37,7 +35,7 @@
                 <div class="games-filter__box container">
                     <div class="filter-group__select">
                         <span class="icon-select"></span>
-                        <select name="" id="" class="filter-select">
+                        <select name="" id="" class="filter-select" disabled>
                             <option class="select-item__option" value="genre" select-option__items="">Genre</option>
                             <option class="select-item__option" value="sport" select-option__items="">Sport</option>
                             <option class="select-item__option" value="shooter" select-option__items="">Shooter</option>
@@ -47,17 +45,19 @@
                     </div>
                     <div class="filter-group__radio">
                         <label class="radio-control" for="platform">
-                            <input class="radio__input-games" id="platform" type="radio" name="radio-control">
-                            Platform</label>
+                            <input class="radio__input-games" id="platform" type="radio" name="radio-control" disabled>
+                            Platform
+                        </label>
                         <label class="radio-control" for="on">
-                            <input class="radio__input-games" id="on" type="radio" name="radio-control">
-                            Online games</label>
+                            <input class="radio__input-games" id="on" type="radio" name="radio-control" disabled>
+                            Online games
+                        </label>
                     </div>
                     <div class="filter-group__checkbox">
-                        <input type="checkbox" id="new">
-                        <label for="new">New</label>
-                        <input type="checkbox" id="old">
-                        <label for="old">Old</label>
+                        <input type="checkbox" id="newCheckbox" data-filter="new">
+                        <label for="newCheckbox">New</label>
+                        <input type="checkbox" id="oldCheckbox" data-filter="old">
+                        <label for="oldCheckbox">Old</label>
                     </div>
                     <div class="filter-game__search">
                         <label class="game-search__label" for="search"></label>
@@ -66,340 +66,66 @@
                     </div>
                 </div>
             </div>
+
         </header>
         <main class="site-main container">
             <div class="section_card_title">
                 <h2 class="section_title">Games</h2>
             </div>
             <section class="content_game-cards">
-                <div class="card">
-                    <div class="card__header">
-                        <img class="card__image" src="./images/card-1.jpeg">
-                        <div class="card__header__title">
-                            <h2 class="card__title">Last os Us</h2>
-                            <p class="card__paragraph">
-                                A post-apocalyptic tale of survival
-                            </p>
+                <!-- card template -->
+                <ul class="game-cards" data-container="game-cards"></ul>
+                <template data-type="card-template">
+                    <div class="card" data-card>
+                        <div class="card__header">
+                            <img
+                                src="./images/card-3.jpeg"
+                                class="card__image"
+                                data-card-img
+                            >
+                            <div class="card__header__title">
+                                <h2 class="card__title" data-card-title></h2>
+                                <p
+                                    class="card__paragraph"
+                                    data-card-description
+                                ></p>
+                            </div>
                         </div>
+                        <ul class="card__list">
+                            <li>
+                                <span
+                                    class="card_list__title"
+                                    data-card-genre
+                                ></span>
+                            </li>
+                            <li>
+                                <span
+                                    class="card_list__title"
+                                    data-card-platform
+                                ></span>
+                            </li>
+                            <li>
+                                <span
+                                    class="card_list__title"
+                                    data-card-publisher
+                                ></span>
+                            </li>
+                            <li>
+                                <span
+                                    class="card_list__title"
+                                    data-card-developer
+                                ></span>
+                            </li>
+                            <li>
+                                <span
+                                    class="card_list__title"
+                                    data-card-release-date
+                                ></span>
+                            </li>
+                        </ul>
                     </div>
-                    <ul class="card__list">
-                        <li>
-                            <p>
-                                <span class="card_list__title">Genre&colon;</span>Action-adventure
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span class="card_list__title">Platform&colon;</span>PlayStation
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span class="card_list__title">Publisher&colon;</span>Sony
-                                Interactive
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span class="card_list__title">Developer&colon;</span>Naughty
-                                Dog
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span class="card_list__title">Release_date&colon;</span>June
-                                14, 2013
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <div class="card__header">
-                        <img class="card__image" src="./images/card-2.jpeg">
-                        <div class="card__header__title">
-                            <h2 class="card__title">Last os Us</h2>
-                            <p class="card__paragraph">
-                                A post-apocalyptic tale of survival
-                            </p>
-                        </div>
-                    </div>
-                    <ul class="card__list">
-                        <li>
-                            <p>
-                                <span class="card_list__title">Genre&colon;</span>Action-adventure
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span class="card_list__title">Platform&colon;</span>PlayStation
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span class="card_list__title">Publisher&colon;</span>Sony
-                                Interactive
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span class="card_list__title">Developer&colon;</span>Naughty
-                                Dog
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span class="card_list__title">Release_date&colon;</span>June
-                                14, 2013
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <div class="card__header">
-                        <img class="card__image" src="./images/card-3.jpeg">
-                        <div class="card__header__title">
-                            <h2 class="card__title">Uncharted</h2>
-                            <p class="card__paragraph">
-                                A post-apocalyptic tale of survival
-                            </p>
-                        </div>
-                    </div>
-                    <ul class="card__list">
-                        <li>
-                            <p>
-                                <span class="card_list__title">Genre&colon;</span>Action-adventure
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span class="card_list__title">Platform&colon;</span>PlayStation
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span class="card_list__title">Publisher&colon;</span>Sony
-                                Interactive
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span class="card_list__title">Developer&colon;</span>Naughty
-                                Dog
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span class="card_list__title">Release_date&colon;</span>June
-                                14, 2013
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <div class="card__header">
-                        <img class="card__image" src="./images/card-4.jpeg">
-                        <div class="card__header__title">
-                            <h2 class="card__title">Wolfenstein</h2>
-                            <p class="card__paragraph">
-                                A post-apocalyptic tale of survival
-                            </p>
-                        </div>
-                    </div>
-                    <ul class="card__list">
-                        <li>
-                            <p>
-                                <span class="card_list__title">Genre&colon;</span>Action-adventure
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span class="card_list__title">Platform&colon;</span>PlayStation
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span class="card_list__title">Publisher&colon;</span>Sony
-                                Interactive
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span class="card_list__title">Developer&colon;</span>Naughty
-                                Dog
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span class="card_list__title">Release_date&colon;</span>June
-                                14, 2013
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <div class="card__header">
-                        <img class="card__image" src="./images/card-4.jpeg">
-                        <div class="card__header__title">
-                            <h2 class="card__title">Last os Us</h2>
-                            <p class="card__paragraph">
-                                A post-apocalyptic tale of survival
-                            </p>
-                        </div>
-                    </div>
-                    <ul class="card__list">
-                        <li>
-                            <p>
-                                <span class="card_list__title">Genre&colon;</span>Action-adventure
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span class="card_list__title">Platform&colon;</span>PlayStation
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span class="card_list__title">Publisher&colon;</span>Sony
-                                Interactive
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span class="card_list__title">Developer&colon;</span>Naughty
-                                Dog
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span class="card_list__title">Release_date&colon;</span>June
-                                14, 2013
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <div class="card__header">
-                        <img class="card__image" src="./images/card-3.jpeg">
-                        <div class="card__header__title">
-                            <h2 class="card__title">Last os Us</h2>
-                            <p class="card__paragraph">
-                                A post-apocalyptic tale of survival
-                            </p>
-                        </div>
-                    </div>
-                    <ul class="card__list">
-                        <li>
-                            <p>
-                                <span class="card_list__title">Genre&colon;</span>Action-adventure
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span class="card_list__title">Platform&colon;</span>PlayStation
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span class="card_list__title">Publisher&colon;</span>Sony
-                                Interactive
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span class="card_list__title">Developer&colon;</span>Naughty
-                                Dog
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span class="card_list__title">Release_date&colon;</span>June
-                                14, 2013
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <div class="card__header">
-                        <img class="card__image" src="./images/card-2.jpeg">
-                        <div class="card__header__title">
-                            <h2 class="card__title">Last os Us</h2>
-                            <p class="card__paragraph">
-                                A post-apocalyptic tale of survival
-                            </p>
-                        </div>
-                    </div>
-                    <ul class="card__list">
-                        <li>
-                            <p>
-                                <span class="card_list__title">Genre&colon;</span>Action-adventure
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span class="card_list__title">Platform&colon;</span>PlayStation
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span class="card_list__title">Publisher&colon;</span>Sony
-                                Interactive
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span class="card_list__title">Developer&colon;</span>Naughty
-                                Dog
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span class="card_list__title">Release_date&colon;</span>June
-                                14, 2013
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <div class="card__header">
-                        <img class="card__image" src="./images/card-1.jpeg">
-                        <div class="card__header__title">
-                            <h2 class="card__title">Last os Us</h2>
-                            <p class="card__paragraph">
-                                A post-apocalyptic tale of survival
-                            </p>
-                        </div>
-                    </div>
-                    <ul class="card__list">
-                        <li>
-                            <p>
-                                <span class="card_list__title">Genre&colon;</span>Action-adventure
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span class="card_list__title">Platform&colon;</span>PlayStation
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span class="card_list__title">Publisher&colon;</span>Sony
-                                Interactive
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span class="card_list__title">Developer&colon;</span>Naughty
-                                Dog
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span class="card_list__title">Release_date&colon;</span>June
-                                14, 2013
-                            </p>
-                        </li>
-                    </ul>
-                </div>
+                </template>
+                <!-- end card template -->
             </section>
         </main>
         <!-- footer -->
@@ -408,30 +134,41 @@
                 <div class="social-media">
                     <ul>
                         <li>
-                            <a href="#">
-                                <img src="./images/fb-soc-ico.svg" alt="Facebook">
-                            </a>
+                            <a href="#"
+                            ><img
+                                    src="./images/fb-soc-ico.svg"
+                                    alt="Facebook"
+                                ></a>
                         </li>
                         <li>
-                            <a href="#">
-                                <img src="./images/link-soc-ico.svg" alt="LinkedIn">
-                            </a>
+                            <a href="#"
+                            ><img
+                                    src="./images/link-soc-ico.svg"
+                                    alt="LinkedIn"
+                                ></a>
                         </li>
                         <li>
-                            <a href="#">
-                                <img src="./images/insta-soc-ico.png" alt="Instagram">
-                            </a>
+                            <a href="#"
+                            ><img
+                                    src="./images/insta-soc-ico.png"
+                                    alt="Instagram"
+                                ></a>
                         </li>
                     </ul>
                 </div>
                 <div class="links">
                     <p>
-                        Made with 💗 on course<a href="https://www.mastersacademy.education/frontend-for-beginners-it" target="_blank">'Frontend for beginners' from Masters Academy in 2023,</a>from Masters Academy in
-                        2023, by Taras
+                        Made with 💗 on course<a
+                            href="https://www.mastersacademy.education/frontend-for-beginners-it"
+                            target="_blank"
+                        >'Frontend for beginners' from Masters Academy in
+                            2023,</a
+                        >from Masters Academy in 2023, by Taras
                     </p>
                 </div>
             </div>
         </footer>
+        <!-- footer end -->
+        <script src="./js/games.js"></script>
     </body>
-
 </html>
