@@ -197,7 +197,7 @@
 
 .log-in__main {
   position: absolute;
-  top: 140px;
+  top: 100px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -211,7 +211,7 @@
 }
 
 .log-in__label {
-  margin-top: 40px;
+  margin-top: 10px;
 }
 
 .log-in__heading {
@@ -224,7 +224,7 @@
   font-size: 14px;
   font-weight: 400;
   padding-left: 10px;
-  margin-top: 22px;
+  margin-top: 15px;
 }
 
 .log-in__checkbox {
@@ -238,7 +238,7 @@
   font-size: 22px;
   padding: 35px 0;
   border-radius: 5px;
-  margin-top: 40px;
+  margin-top: 20px;
   border: none;
 }
 

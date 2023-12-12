@@ -75,7 +75,7 @@ function createCardElement(game, array) {
     return cardContent;
 }
 function renderCards(container, gamesArray) {
-    gamesArray.splice(10);
+    gamesArray.splice(50);
     container.innerHTML = '';
     const fragment = new DocumentFragment();
     for (let count = 0; count < gamesArray.length; count++) {
@@ -84,9 +84,9 @@ function renderCards(container, gamesArray) {
     container.append(fragment);
     infoElement.classList.replace('main__info', 'main__info--disabled');
     if (gamesArray.length !== 0) {
-        footerElement.classList.replace('page--loading', 'page--loaded');
+        footerElement.classList.replace('page--empty', 'page--loaded');
     } else {
-        footerElement.classList.add('page--loading');
+        footerElement.classList.add('page--empty');
         infoElement.classList.replace('main__info--disabled', 'main__info');
         infoElement.innerText = 'No Results';
     }
@@ -131,7 +131,7 @@ async function showFilterArray() {
 }
 
 async function init() {
-    footerElement.classList.add('page--loading');
+    footerElement.classList.add('page--empty');
     renderCards(cardContainer, await getGamesArray());
     genreSelect.addEventListener('change', showFilterArray);
     platformSelect.addEventListener('change', showFilterArray);
