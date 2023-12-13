@@ -196,6 +196,14 @@ function searchFilter() {
     });
 }
 
-radioFilter(queryParams);
-checkboxFilter(queryParams);
-searchFilter();
+// Function to call other functions and render cards
+async function callFunctionsAndRenderCards(params) {
+    await applyFiltersAndRenderCards(params);
+    genreFilter(params);
+    radioFilter(params);
+    checkboxFilter(params);
+    searchFilter();
+}
+
+// Initial call to set up filters and render cards
+callFunctionsAndRenderCards(queryParams);
