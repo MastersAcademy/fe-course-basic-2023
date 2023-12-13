@@ -1,11 +1,43 @@
 async function initPokemons() {
     const FORM_FILTERS_ELEMENT = document.querySelector('[data-form-filters]');
+    const SELECT_CUSTOM_BTN = FORM_FILTERS_ELEMENT.querySelector('[data-select-custom-btn]');
+    const SELECT_CUSTOM_LIST = FORM_FILTERS_ELEMENT.querySelector('[data-select-custom-list]');
+    const SELECT_CUSTOM_OPTIONS = SELECT_CUSTOM_LIST.querySelectorAll('[data-option-value]');
     const TEXT_INPUT_ELEMENT = FORM_FILTERS_ELEMENT.elements['search-query'];
     const CARDS_CONTAINER_ELEMENT = document.querySelector('[data-cards-container]');
     const LOADER_CONTAINER_ELEMENT = document.querySelector('[data-loader-container]');
 
     let allCards;
     let filteredCards = [];
+
+    function getSelectedOptionsValues() {
+        const selectedOptionsValues = [];
+
+        SELECT_CUSTOM_OPTIONS.forEach((option) => {
+            if (option.classList.contains('filters__select-option--selected')) {
+                const { optionValue } = option.dataset;
+                selectedOptionsValues.push(optionValue);
+            }
+        });
+
+        return selectedOptionsValues;
+    }
+
+    function toggleSelectedOptionHandler(event) {
+        SELECT_CUSTOM_OPTIONS.forEach((option) => {
+            if (event.target !== option) return;
+            option.classList.toggle('filters__select-option--selected');
+        });
+    }
+
+    function clickSelectBtnHandler() {
+        SELECT_CUSTOM_LIST.classList.toggle('filters__select-list--active');
+        SELECT_CUSTOM_LIST.addEventListener('click', toggleSelectedOptionHandler);
+    }
+
+    function initCustomSelect() {
+        SELECT_CUSTOM_BTN.addEventListener('click', clickSelectBtnHandler);
+    }
 
     function clearContainer(container) {
         if (!container) return;
@@ -80,7 +112,7 @@ async function initPokemons() {
 
         const renderedCards = cards.map((card) => {
             const pokemonCard = createCardElement(card);
-            container.innerHTML += pokemonCard;
+            container.insertAdjacentHTML('beforeEnd', pokemonCard);
             return pokemonCard;
         });
 
@@ -88,9 +120,9 @@ async function initPokemons() {
     }
 
     function filterByPokemonsType(cards) {
-        const selectedOptions = Array.from(FORM_FILTERS_ELEMENT.elements['pokemons-types[]'].selectedOptions);
-        const selectedPokemonTypes = selectedOptions.map((option) => option.value);
-        const filteredTypes = cards.filter((card) => selectedPokemonTypes
+        const selectedOptionsValues = getSelectedOptionsValues();
+
+        const filteredTypes = cards.filter((card) => selectedOptionsValues
             .every((type) => card.type.includes(type)));
 
         return filteredTypes;
@@ -117,7 +149,7 @@ async function initPokemons() {
     function updateFilteredCards() {
         filteredCards = [...allCards];
 
-        if (FORM_FILTERS_ELEMENT.elements['pokemons-types[]'].selectedOptions) {
+        if (FORM_FILTERS_ELEMENT.querySelector('[data-select-custom-btn]')) {
             filteredCards = filterByPokemonsType(filteredCards);
         }
 
@@ -173,6 +205,7 @@ async function initPokemons() {
         }
     }
 
+    initCustomSelect();
     await fetchAndRenderPokemons();
 }
 
