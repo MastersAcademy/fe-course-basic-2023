@@ -1,3 +1,9 @@
+const newCheckbox = document.getElementById('new');
+const oldCheckbox = document.getElementById('old');
+const newCardSelector = document.querySelector('[data-type="cards-container"]');
+const loadingContainer = document.getElementById('loading-spinner');
+const container = document.querySelector('.cards_wrapper[data-type=\'cards-container\']');
+let games = [];
 function createCardElement(game) {
     const elementTemplate = document.querySelector('[data-type="card-template"]');
     const elementCopy = elementTemplate.content.cloneNode(true);
@@ -55,7 +61,7 @@ function filterOldGames(allGames) {
     return oldGames;
 }
 
-function displayCards(container, gamesList, isNewChecked, isOldChecked) {
+function displayCards(cont, gamesList, isNewChecked, isOldChecked) {
     // None of check-boxes is selected.
     let filteredGames = gamesList;
     // Only new selected.
@@ -80,11 +86,7 @@ function displayCards(container, gamesList, isNewChecked, isOldChecked) {
     container.appendChild(fragment);
 }
 
-let games = [];
-
-const loadingContainer = document.getElementById('loading-spinner');
-const container = document.querySelector('.cards_wrapper[data-type=\'cards-container\']');
-async function fethcCards() {
+async function fetchCards() {
     try {
         // show spinner loading
         loadingContainer.style.display = 'flex';
@@ -98,30 +100,24 @@ async function fethcCards() {
             },
         });
         // converting to json
-        games = await response.json();
+        const json = await response.json();
+        games = json.slice(0, 50);
         loadingContainer.style.display = 'none';
-        displayCards(container, games.slice(0, 50));
         // Errors block
     } catch (err) {
         console.log('Error data:', err);
         container.innerHTML = 'Error loading data';
-    }
+    } return games;
 }
 
 function filterAndRenderCards() {
-    const newCheckbox = document.getElementById('new');
-    const oldCheckbox = document.getElementById('old');
-    const newCardSelector = document.querySelector('[data-type="cards-container"]');
     displayCards(newCardSelector, games, newCheckbox.checked, oldCheckbox.checked);
 }
-
-function init() {
-    const newCheckbox = document.getElementById('new');
-    const oldCheckbox = document.getElementById('old');
+async function init() {
     newCheckbox.addEventListener('change', filterAndRenderCards);
     oldCheckbox.addEventListener('change', filterAndRenderCards);
-    filterAndRenderCards();
-    fethcCards();
+    await fetchCards();
+    displayCards(container, games);
 }
 
 init();
