@@ -1,4 +1,6 @@
+@import "./variables.css";
 @import "./header.css";
+@import "./footer.css";
 
 * {
   margin: 0;
@@ -50,7 +52,7 @@ body {
 }
 
 .about__link {
-  color: #EF4934;
+  color: var(--color-accent);
   transition: color .3s ease-in-out;
 }
 

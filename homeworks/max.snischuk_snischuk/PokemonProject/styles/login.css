@@ -1,4 +1,6 @@
+@import "./variables.css";
 @import "./header.css";
+@import "./footer.css";
 
 * {
   margin: 0;
