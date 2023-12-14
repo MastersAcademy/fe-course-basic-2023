@@ -140,15 +140,20 @@ button:hover {
   padding-left: 25px;
 }
 
+/* mobile */
 @media screen and (min-width: 320px) and (max-width: 767px) {
 
   .content,
   .visualInterpritation,
   .item,
-  button,
   .inp__select,
-  .inp {
+  .inp,
+  button {
     width: calc(100%);
+  }
+
+  .contain {
+    margin-bottom: 50px;
   }
 
   .main__heading {
@@ -162,6 +167,7 @@ button:hover {
   }
 
   .visualTimeDurationExecution {
+    text-align: center;
     margin-top: 10px;
     font-weight: 600;
     line-height: 20px;
@@ -170,6 +176,9 @@ button:hover {
   }
 
   .visualInterpritation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 14px;
     margin-top: 0;
   }
@@ -186,20 +195,23 @@ button:hover {
   .inp {
     box-sizing: border-box;
     text-align: center;
-    height: 36px;
+    height: 25px;
+    width: 40px;
     font-size: 14px;
     margin-top: 22px;
     margin-right: 16px;
   }
 
   .inp__select {
-    height: 36px;
+    height: 25px;
+    width: 40px;
     padding-left: 12px;
     margin-right: 16px;
   }
 
   button {
-    height: 36px;
+    height: 25px;
+    width: 40px;
     font-size: 14px;
     border-radius: 6px;
     margin-right: 10px;
@@ -214,11 +226,12 @@ button:hover {
     display: flex;
     align-items: center;
     flex-direction: row;
-    height: 36px;
+    height: 25px;
+    width: 40px;
     margin-top: 22px;
     font-size: 14px;
     font-weight: 400;
-    line-height: 21px;
+    line-height: 10px;
   }
 
   label {
