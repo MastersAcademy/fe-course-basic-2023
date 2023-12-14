@@ -1,16 +1,7 @@
-@import "./variables.css";
+@import "./base.css";
 @import "./header.css";
+@import "./footer.css";
 @import "./card.css";
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Roboto, sans-serif;
-}
 
 .filters {
   background-color: var(--color-dark);
@@ -19,12 +10,12 @@ body {
 
 .filters__container {
   max-width: 1280px;
-  padding: 0 50px;
+  padding: 0 var(--padding-container);
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 25px;
   border: none;
 }
 
@@ -202,7 +193,7 @@ body {
 
 .pokemons__container {
   max-width: 1280px;
-  padding: 0 50px;
+  padding: 0 var(--padding-container);
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
@@ -211,7 +202,7 @@ body {
 
 .pokemons__title {
   color: var(--color-dark);
-  font-size: 48px;
+  font-size: 40px;
   line-height: normal;
   font-weight: 700;
 }
@@ -221,8 +212,16 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
   gap: 25px;
+  justify-items: center
 }
 
 .pokemons__card-item {
   max-width: 275px;
+}
+
+@media (min-width: 769px) {
+
+  .pokemons__title {
+    font-size: 48px;
+  }
 }
