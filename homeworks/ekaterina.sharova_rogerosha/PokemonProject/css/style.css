@@ -64,6 +64,7 @@ body {
   margin-top: 60px;
   display: flex;
   flex-direction: column;
+  padding-bottom: 52px;
 }
 
 .pokemon {
@@ -110,7 +111,6 @@ footer {
   text-align: center;
   width: 100%;
   bottom: 0;
-  position: fixed;
 }
 
 .footer-text {
