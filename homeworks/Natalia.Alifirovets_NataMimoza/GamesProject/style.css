@@ -6,7 +6,7 @@
 
 .wrapper {
   margin: 0 auto;
-  min-width: 1280px;
+  min-width: 100%;
 }
 
 .header-menu {
@@ -35,6 +35,11 @@
   display: inline-block;
   color: #FFF;
   text-decoration: none;
+}
+
+.nav__link-active {
+  color: #FFF;
+  text-decoration: underline;
 }
 
 .nav__link:hover {
