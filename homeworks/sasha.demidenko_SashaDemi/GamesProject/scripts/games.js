@@ -86,11 +86,16 @@ function displayCards(cont, gamesList, isNewChecked, isOldChecked) {
     container.appendChild(fragment);
 }
 
+function showLoading() {
+    loadingContainer.style.display = 'flex';
+}
+function hideLoading() {
+    loadingContainer.style.display = 'none';
+}
+
 async function fetchCards() {
     try {
-        // show spinner loading
-        loadingContainer.style.display = 'flex';
-
+        showLoading();
         // fetch takes two param.: url and object param.
         const response = await fetch('https://mmo-games.p.rapidapi.com/games', {
             method: 'get',
@@ -102,7 +107,6 @@ async function fetchCards() {
         // converting to json
         const json = await response.json();
         games = json.slice(0, 50);
-        loadingContainer.style.display = 'none';
         // Errors block
     } catch (err) {
         console.log('Error data:', err);
@@ -118,6 +122,7 @@ async function init() {
     oldCheckbox.addEventListener('change', filterAndRenderCards);
     await fetchCards();
     displayCards(container, games);
+    hideLoading();
 }
 
 init();
