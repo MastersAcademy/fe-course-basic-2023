@@ -1,12 +1,17 @@
+* {
+  font-family: Roboto, serif;
+  margin: 0;
+  padding: 0;
+}
+
 .wrapper {
   margin: 0 auto;
-  max-width: 1280px;
-  height: 1017px;
+  min-width: 100%;
 }
 
 .header-menu {
   background: #EF4934;
-  padding: 0 52px 0 53px;
+  padding: 0 60px;
   height: 80px;
   display: flex;
   align-items: center;
@@ -32,21 +37,25 @@
   text-decoration: none;
 }
 
+.nav__link-active {
+  color: #FFF;
+  text-decoration: underline;
+}
+
 .nav__link:hover {
   text-decoration: underline;
 }
 
 .name {
-  margin: 150px auto 50px 20px;
+  margin: 150px auto 50px 80px;
   color: #C33523;
-  font-family: Roboto, serif;
   font-size: 48px;
   font-weight: 700;
   line-height: 32px;
 }
 
 .field {
-  margin: 20px;
+  margin: 20px 0 0 80px;
   display: flex;
   column-gap: 15px;
   align-items: center;
