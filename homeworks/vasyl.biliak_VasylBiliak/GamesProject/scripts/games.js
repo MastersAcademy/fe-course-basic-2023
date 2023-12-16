@@ -112,7 +112,6 @@ async function fetchData() {
         if (platformSelect) {
             url += filterByGamePlatform(platformSelect);
         }
-        console.log(gameDate);
         if (gameDate) {
             url += '&sort-by=release-date';
             checkRadioButton(gameDate);

@@ -52,31 +52,32 @@ function crateImg() {
 }
 
 function getTimestampString() {
-    const endTime = new Date();
-    const executionTime = endTime - startTime;
+    const executionTime = new Date() - startTime;
+
     const timeFormatOptions = { hour: '2-digit', minute: '2-digit' };
     const formattedTime = new Intl.DateTimeFormat('uk-UA', timeFormatOptions).format(startTime);
+
     const day = startTime.getDate();
     const month = new Intl.DateTimeFormat('en-US', { month: 'short' }).format(startTime);
     const year = startTime.getFullYear();
+
     return `Date of calculation: ${day}-${month}-${year}, ${formattedTime}. Time of function execution: ${executionTime}ms`;
 }
 
 function calculate(operator) {
     const num1 = parseFloat(number1Input.value);
     const num2 = parseFloat(number2Input.value);
-    // eslint-disable-next-line no-restricted-globals
-    if ((isNaN(num1)) && (isNaN(num2))) {
+    if (Number.isNaN(num1) && Number.isNaN(num2)) {
         resultOutput.textContent = 'Enter the correct numbers';
         return;
     }
-    // eslint-disable-next-line no-restricted-globals
-    if (isNaN(num2)) {
+
+    if (Number.isNaN(num2)) {
         resultOutput.textContent = 'Enter the numbers 2';
         return;
     }
-    // eslint-disable-next-line no-restricted-globals
-    if (isNaN(num1)) {
+
+    if (Number.isNaN(num1)) {
         resultOutput.textContent = 'Enter the numbers 1';
         return;
     }
@@ -108,7 +109,7 @@ function calculate(operator) {
     valueNum2.textContent = `${num2}`;
     selectedOperator.textContent = `${operator}`;
 
-    photoContainer.innerHTML = ''; // clear content
+    photoContainer.innerHTML = '';
     if (Math.abs(result) > 100) {
         resultOutput.textContent = 'Max 100';
         photoContainer.textContent = 'Too many dr. Strange > |100|';
@@ -116,7 +117,7 @@ function calculate(operator) {
     }
     const containerResult = document.createElement('div');
     containerResult.classList.add('img-container-result');
-    const numColumns = Math.ceil(Math.abs(result) / 10); // calculated quantity of columns
+    const numColumns = Math.ceil(Math.abs(result) / 10);
     containerResult.style.gridTemplateColumns = `repeat(${numColumns}, 1fr)`;
     if (Math.abs(result) < 1) {
         containerResult.appendChild(sliceImage(Math.abs(result)));
@@ -128,15 +129,13 @@ function calculate(operator) {
     photoContainer.appendChild(containerResult);
 }
 
-// clicked on =
 equals.addEventListener('click', () => {
     const selectedOperatorClick = operatorSelect.value;
     calculate(selectedOperatorClick);
 });
 
-// inputed in number 1
 number1Input.addEventListener('input', () => {
-    photoContainerNum1.innerHTML = ''; // Очистимо вміст
+    photoContainerNum1.innerHTML = '';
     const num1 = parseFloat(number1Input.value);
     if (Math.abs(num1) > 10) {
         resultOutput.textContent = 'Max 10';
