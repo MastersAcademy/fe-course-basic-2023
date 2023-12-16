@@ -1,0 +1,36 @@
+@import url("main.css");
+
+.about__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 65px;
+  margin-top: 60px;
+}
+
+.about__text {
+  max-width: 575px;
+  color: #221F1F;
+}
+
+.about__text-title {
+  font-size: 48px;
+  padding-bottom: 24px;
+}
+
+.about__text-info {
+  font-size: 22px;
+}
+
+.about__text-link {
+  color: #EF4934;
+  text-decoration: underline;
+}
+
+@media (max-width: 860px) {
+
+  .about__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
