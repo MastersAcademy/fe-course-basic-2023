@@ -565,6 +565,52 @@ body {
   padding-bottom: 30px;
 }
 
+/* ========================== CALCULATOR =============================== */
+
+.calculator-block input, select {
+  font-size: 22px;
+  text-align: center;
+}
+
+.calculator-block {
+  padding: 80px 0;
+}
+
+.field {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+  padding: 0 53px;
+  font-size: 22px;
+}
+
+.tittle__calculator {
+  color: #221F1F;
+  font-family: Roboto;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.custom__item-calculator {
+  width: 122px;
+  height: 36px;
+  border-radius: 6px;
+  border: 1px solid #221F1F;
+  outline: none;
+}
+
+.btn-calculator {
+  border-radius: 6px;
+  background: #EF4934;
+  font-size: 22px;
+  color: #FFF;
+  border: none;
+  cursor: pointer;
+}
+
 /* ===================== MEDIA ============================ */
 
 @media (max-width: 1278px) {
@@ -582,6 +628,19 @@ body {
 
   .games__tittle {
     font-size: 38px;
+  }
+}
+
+@media (max-width: 650px) {
+
+  .tittle__calculator {
+    font-size: 32px;
+  }
+
+  .field {
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
   }
 }
 
