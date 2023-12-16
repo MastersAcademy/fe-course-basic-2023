@@ -95,3 +95,12 @@
 .error {
   color: #EF4934;
 }
+
+@media (max-width: 560px) {
+
+  .login__form-btn {
+    padding: 27px;
+    width: 100%;
+  }
+}
+

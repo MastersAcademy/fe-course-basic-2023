@@ -22,7 +22,8 @@ body {
   line-height: 32px;
 }
 
-img {
+img,
+button {
   max-width: 100%;
 }
 
