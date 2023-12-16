@@ -2,9 +2,6 @@
 @import url("./footer.css");
 @import url("./font.css");
 
-
-/*search section*/
-
 .search {
   position: fixed;
   display: flex;
@@ -30,9 +27,6 @@
   width: 100%;
 }
 
-
-/*custom select*/
-
 select[name="genre"] {
   border-radius: 6px;
   color: #FFF;
@@ -55,9 +49,6 @@ select option {
   font-weight: 400;
   line-height: 21px;
 }
-
-
-/*custom radio*/
 
 .radio {
   display: flex;
@@ -103,9 +94,6 @@ select option {
 .inp__radio:checked+.custom__radio::before {
   transform: translate(-50%, -50%) scale(1);
 }
-
-
-/*custom checkbox*/
 
 .checkbox {
   display: flex;
@@ -153,9 +141,6 @@ select option {
   transform: translate(-50%, -50%) scale(1);
 }
 
-
-/*search*/
-
 .inp__search {
   width: 342px;
   height: 36px;
@@ -176,9 +161,6 @@ select option {
   background-repeat: no-repeat;
 }
 
-
-/*button*/
-
 .search__button {
   width: 75px;
   height: 36px;
@@ -194,14 +176,12 @@ select option {
   float: left;
 }
 
-
-/*main section*/
-
 main {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: calc(100vh - 160px);
+  min-width: 320px;
 }
 
 .contain {
@@ -222,12 +202,6 @@ main {
   line-height: 32px;
   font-weight: 700;
 }
-
-/* .game__cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 25px;
-} */
 
 .game__cod2 {
   display: flex;
@@ -313,8 +287,7 @@ main {
   animation: loadingAnimation 1s infinite;
 }
 
-/* mobile */
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (min-width: 1px) and (max-width: 767px) {
 
   .contain {
     margin-top: 150px;
@@ -412,12 +385,11 @@ main {
   }
 }
 
-/* tablet */
-@media screen and (min-width: 768px) and (max-width: 1250px) {
+@media screen and (min-width: 930px) and (max-width: 1250px) {
 
   .cards-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 25px;
   }
 
@@ -432,7 +404,7 @@ main {
 
   .inp__search {
     height: 30px;
-    width: 120px;
+    width: 240px;
   }
 
   .search__button {
@@ -485,7 +457,100 @@ main {
   }
 }
 
-/* wide screen */
+@media screen and (min-width: 768px) and (max-width: 930px) {
+
+  .cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+  }
+
+  .search__contain {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .search {
+    height: 220px;
+    margin-top: 70px;
+    background-color: #221F1FEE;
+    transition: margin-top .3s ease, opacity .3s ease, max-height .3s ease;
+  }
+
+  .search__form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .search-hidden {
+    margin-top: -100px;
+    opacity: 1;
+    max-height: 220px;
+  }
+
+  .plate h3 {
+    margin-bottom: 0;
+  }
+
+  select[name="genre"] {
+    width: 70px;
+  }
+
+  .inp__search {
+    height: 30px;
+    width: 200px;
+  }
+
+  .search__button {
+    height: 30px;
+    width: 50px;
+  }
+
+  .text__heading {
+    text-align: center;
+    font-size: 38px;
+  }
+
+  .cod2__general--img img {
+    height: 80px;
+    width: 80px;
+  }
+
+  .radio {
+    gap: 10px;
+  }
+
+  .custom__radio {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    margin-right: 12px;
+  }
+
+  .form__radio {
+    font-size: 15px;
+  }
+
+  .checkbox {
+    gap: 10px;
+  }
+
+  .custom__check {
+    height: 15px;
+    width: 15px;
+    border-radius: 6px;
+    margin-right: 12px;
+  }
+
+  .form__checkbox {
+    font-size: 15px;
+  }
+}
+
 @media screen and (min-width: 1250px) and (max-width: 1700px) {
 
   .plate {

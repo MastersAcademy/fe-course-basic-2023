@@ -7,6 +7,7 @@ main {
   align-items: center;
   justify-content: center;
   min-height: calc(100vh - 160px);
+  min-width: 320px;
 }
 
 .contain {
@@ -49,8 +50,7 @@ main {
   color: #EF4934;
 }
 
-/* mobile */
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (min-width: 1px) and (max-width: 767px) {
 
   .content {
     width: 90%;
@@ -58,7 +58,6 @@ main {
     grid-template-columns: 1fr;
     align-items: center;
     justify-content: center;
-    margin-bottom: 80px;
   }
 
   .img {
@@ -68,14 +67,14 @@ main {
   }
 
   .img img {
-    width: 250px;
+    width: calc(90%);
     height: auto;
   }
 
   .text__heading {
     margin-top: 0;
     color: #221F1F;
-    font-size: 48px;
+    font-size: 24px;
     line-height: 32px;
     font-weight: 700;
     text-align: center;
@@ -83,14 +82,13 @@ main {
 
   .text__chapter {
     color: #221F1F;
-    font-size: 22px;
-    line-height: 32px;
+    font-size: 14px;
+    line-height: 20px;
     font-weight: 400;
     text-align: center;
   }
 }
 
-/* tablet */
 @media screen and (min-width: 767px) and (max-width: 1023px) {
 
   .content {
@@ -126,7 +124,6 @@ main {
   }
 }
 
-/* wide screen */
 @media screen and (min-width: 1023px) {
 
   .content {
