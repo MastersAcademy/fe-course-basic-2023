@@ -22,7 +22,7 @@ function calculate(firstValue, secondValue, operation) {
     const firstNumber = Number(firstValue);
     const secondNumber = Number(secondValue);
     let result;
-    if ((!firstNumber || !secondNumber) && firstNumber !== 0 && secondNumber !== 0) return 'Enter a number';
+    if ((!firstNumber || !secondNumber) && (firstValue === '' || secondValue === '')) return 'Enter a number';
     if (operation === '**') return 'Choose a valid operation';
     switch (operation) {
         case '+':

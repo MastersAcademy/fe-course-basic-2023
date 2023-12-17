@@ -21,27 +21,46 @@ function formatDate(date) {
 function creatDateString(date, executionTime) {
     return `Data of calculation: ${date}. Time of function execution: ${executionTime}ms`;
 }
-CALCULATE_BUTTON_ELEMENT.addEventListener('click', () => {
-    const firstValue = FIRST_VALUE_ELEMENT.value;
-    const secondValue = SECOND_VALUE_ELEMENT.value;
-    const operation = OPERATION_ELEMENT.value;
+
+function clearBigResultElement() {
     FIRST_NUMBER_BIG_ELEMENT.innerText = '';
     OPERATION_BIG_ELEMENT.innerText = '';
     SECOND_NUMBER_BIG_ELEMENT.innerText = '';
     RESULT_BIG_ELEMENT.innerText = '';
     EQUAL_BIG_ELEMENT.innerText = '';
+}
+
+function trimLastCard(num, place) {
+    const remainder = num - Number.parseInt(num, 10);
+    const trim = (100 - remainder * 100) / 2;
+    place.lastElementChild.style.clipPath = `polygon(0% ${trim}%, 100% ${trim}%, 100% calc(100% - ${trim}%), 0% calc(100% - ${trim}%))`;
+}
+function showManyCards(amount, place) {
+    for (let i = 0; i < +amount; i++) {
+        const img = document.createElement('img');
+        img.src = './src/img-card.png';
+        img.classList.add('big-result__img');
+        place.append(img);
+    }
+    if (!Number.isInteger(+amount)) {
+        trimLastCard(amount, place);
+    }
+}
+
+function handlerCalculate() {
+    clearBigResultElement();
+    const firstValue = FIRST_VALUE_ELEMENT.value;
+    const secondValue = SECOND_VALUE_ELEMENT.value;
+    const operation = OPERATION_ELEMENT.value;
     const startTime = Date.now();
     let result = window.calculate(firstValue, secondValue, operation);
     const calculationTime = Date.now() - startTime;
+
     if (firstValue > 10) result = 'enter first number 1 - 10';
-    RESULT_ELEMENT.innerText = result + (result > 1 ? ' games' : ' game');
+    if ((typeof result) === 'number') RESULT_ELEMENT.innerText = result + (result > 1 ? ' games' : ' game');
+
     if (result === 'Result is too big') {
-        for (let i = 0; i < +firstValue; i++) {
-            const img = document.createElement('img');
-            img.src = './src/img-card.png';
-            img.classList.add('big-result__img');
-            FIRST_NUMBER_BIG_ELEMENT.append(img);
-        }
+        showManyCards(firstValue, FIRST_NUMBER_BIG_ELEMENT);
         OPERATION_BIG_ELEMENT.innerText = operation;
         SECOND_NUMBER_BIG_ELEMENT.innerText = secondValue;
         EQUAL_BIG_ELEMENT.innerText = '=';
@@ -55,12 +74,7 @@ CALCULATE_BUTTON_ELEMENT.addEventListener('click', () => {
         } else {
             FIRST_NUMBER_BIG_ELEMENT.style.top = '55px';
         }
-        for (let i = 0; i < +firstValue; i++) {
-            const img = document.createElement('img');
-            img.src = './src/img-card.png';
-            img.classList.add('big-result__img');
-            FIRST_NUMBER_BIG_ELEMENT.append(img);
-        }
+        showManyCards(firstValue, FIRST_NUMBER_BIG_ELEMENT);
         OPERATION_BIG_ELEMENT.innerText = operation;
         SECOND_NUMBER_BIG_ELEMENT.innerText = secondValue;
         EQUAL_BIG_ELEMENT.innerText = '=';
@@ -69,19 +83,11 @@ CALCULATE_BUTTON_ELEMENT.addEventListener('click', () => {
             RESULT_BIG_ELEMENT.style.top = '28px';
             RESULT_BIG_ELEMENT.innerText = '0';
         }
-        for (let i = 0; i < result; i++) {
-            const img = document.createElement('img');
-            img.src = './src/img-card.png';
-            img.classList.add('big-result__img');
-            RESULT_BIG_ELEMENT.append(img);
-        }
+        showManyCards(result, RESULT_BIG_ELEMENT);
     } else {
         RESULT_BIG_ELEMENT.innerText = result;
     }
-    if (!Number.isInteger(result)) {
-        const remainder = result - Number.parseInt(result, 10);
-        const trim = (100 - remainder * 100) / 2;
-        RESULT_BIG_ELEMENT.lastElementChild.style.clipPath = `polygon(0% ${trim}%, 100% ${trim}%, 100% calc(100% - ${trim}%), 0% calc(100% - ${trim}%))`;
-    }
     DATE_TEXT_ELEMENT.innerText = creatDateString(formatDate(new Date()), calculationTime);
-});
+}
+
+CALCULATE_BUTTON_ELEMENT.addEventListener('click', handlerCalculate);
