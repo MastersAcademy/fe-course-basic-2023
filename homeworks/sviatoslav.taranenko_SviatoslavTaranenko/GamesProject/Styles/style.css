@@ -140,7 +140,6 @@ body {
 @media (max-width: 1220px) {
   .about__img {
     display: flex;
-    margin-top: 25px;
     justify-content: center;
     align-content: center;
     align-items: center;
@@ -171,12 +170,10 @@ body {
   font-size: 22px;
   line-height: 32px;
   @media (max-width: 1220px) {
-    display: flex;
     margin-top: 25px;
     justify-content: center;
     align-content: center;
     align-items: center;
-    text-align: center;
   }
 }
 
