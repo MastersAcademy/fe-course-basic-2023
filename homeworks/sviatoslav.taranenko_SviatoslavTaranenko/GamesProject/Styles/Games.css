@@ -415,7 +415,7 @@ body {
   grid-template-columns: 275px 275px 275px 275px;
   column-gap: 25px;
   grid-template-rows: 260px;
-  row-gap: 60px;
+  row-gap: 100px;
   justify-content: center;
   min-height: auto;
 }
@@ -427,7 +427,7 @@ body {
     grid-template-columns: 275px 275px 275px;
     column-gap: 25px;
     grid-template-rows: 260px;
-    row-gap: 60px;
+    row-gap: 100px;
     justify-content: center;
     min-height: auto;
   }
@@ -441,7 +441,7 @@ body {
     grid-template-columns: 275px 275px;
     column-gap: 25px;
     grid-template-rows: 260px;
-    row-gap: 60px;
+    row-gap: 100px;
     align-content: center;
     justify-content: center;
     min-height: auto;
@@ -456,7 +456,7 @@ body {
     grid-template-columns: 275px;
     column-gap: 25px;
     grid-template-rows: 260px;
-    row-gap: 60px;
+    row-gap: 100px;
     align-content: center;
     justify-content: center;
     min-height: auto;
@@ -471,7 +471,7 @@ body {
     grid-template-columns: 250px;
     column-gap: 25px;
     grid-template-rows: 260px;
-    row-gap: 60px;
+    row-gap: 100px;
     align-content: center;
     justify-content: center;
     min-height: auto;
@@ -495,7 +495,7 @@ body {
   border-radius: 12px;
   padding: 12px 12px 22px;
   background-color: #ECECEC;
-  height: 260px;
+  height: 280px;
 }
 
 .Games__cards_top {
@@ -590,6 +590,7 @@ body {
   margin-top: 10px;
   justify-content: center;
   align-content: center;
+  text-align: center;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 22px;
