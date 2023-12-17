@@ -290,11 +290,11 @@ page we are on will behave
   background-color: #3447EF;
 }
 
-.displayOn {
+.display-on {
   display: block;
 }
 
-.displayOff {
+.display-off {
   display: none;
 }
 

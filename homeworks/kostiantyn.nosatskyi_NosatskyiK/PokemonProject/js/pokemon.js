@@ -1,4 +1,4 @@
-const cardContainer = document.querySelector('div[data-cards]');
+const cardContainer = document.querySelector('[data-cards]');
 const numberOfCards = parseInt(cardContainer.getAttribute('data-cards'), 10);
 const apiUrl = 'https://my-json-server.typicode.com/electrovladyslav/pokemon-json-server/pokemons';
 
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', renderPokemonCards);
 function filterPokemonCards() {
     const bigPokemonCheckbox = document.getElementById('bigPokemon');
     const smallPokemonCheckbox = document.getElementById('smallPokemon');
-    const cardElements = document.querySelectorAll('.card');
+    const cardElements = document.querySelectorAll('[data-card]');
 
     let showAll = true;
 
@@ -78,18 +78,18 @@ function filterPokemonCards() {
         const cardHeight = parseInt(card.querySelector('[data-cardHeight]').textContent, 10);
 
         if (showAll) {
-            card.classList.add('displayOn');
-            card.classList.remove('displayOff');
+            card.classList.add('display-on');
+            card.classList.remove('display-off');
         } else {
             const showBigPokemon = bigPokemonCheckbox.checked && cardHeight > 100;
             const showSmallPokemon = smallPokemonCheckbox.checked && cardHeight < 50;
 
             if (showBigPokemon || showSmallPokemon) {
-                card.classList.add('displayOn');
-                card.classList.remove('displayOff');
+                card.classList.add('display-on');
+                card.classList.remove('display-off');
             } else {
-                card.classList.add('displayOff');
-                card.classList.remove('displayOn');
+                card.classList.add('display-off');
+                card.classList.remove('display-on');
             }
         }
     });
