@@ -111,6 +111,11 @@
   align-items: center;
 }
 
+.filter-icon {
+  height: 30px;
+  width: 30px;
+}
+
 .search__input {
   background: url("../../GameProject/img/icons/Search.svg") no-repeat left #FFF;
   background-position-x: calc(5% - 0px);
@@ -160,19 +165,20 @@
 
 .item-block__game-item {
   display: grid;
-  grid-template-rows: 1fr;
+  height: fit-content;
+  min-height: 297px;
   flex-direction: column;
   background-color: #ECECEC;
   padding: 10px;
   border-radius: 12px;
-  row-gap: 22px;
-  max-width: 280px;
+  max-width: 290px;
 }
 
 .game-item-item__header {
   display: flex;
   flex-direction: row;
   column-gap: 12px;
+  margin-bottom: 10px;
 }
 
 .header__about {
@@ -181,15 +187,49 @@
   row-gap: 12px;
 }
 
-.header__game-name {
-  font-size: 18px;
-  font-weight: 700;
+.header__icon {
+  height: 90px;
 }
+
+.header__img {
+  border-radius: 5px;
+}
+
+.header__game-name h2 {
+  font-size: 18px!important;
+  font-weight: 700!important;
+}
+
+.about__p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* .about__p { Error linter, but this work
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+*/
 
 .about__p {
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
+  height: 65px;
+}
+
+.about__p:hover {
+  overflow: inherit;
+  height: fit-content;
+  -webkit-line-clamp: inherit;
+}
+
+.cards-title {
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .game-item__info-list {
@@ -198,8 +238,6 @@
 }
 
 .info-game {
-  font-size: 14px;
-  font-weight: 400;
   flex-direction: column;
   word-spacing: normal;
 }
@@ -209,9 +247,17 @@
   margin-bottom: 16px;
 }
 
-.info-game li b {
+.item-block__game-item.hide {
+  display: none;
+}
+
+.info-game li, b {
+  font-size: 14px!important;
+  font-weight: 400;
   margin-right: 5px;
 }
+
+.info-game li b { font-weight: 600}
 
 /* Adaptation Cards */
 
