@@ -1,13 +1,13 @@
 .filter {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   column-gap: 10px;
   row-gap: 20px;
   color: #FFF;
   background: #221F1F;
-  padding: 12px 22px;
+  padding: 12px;
   font-size: 14px;
   line-height: 21px;
 }
@@ -68,25 +68,4 @@ input[type="checkbox"]:not(:checked)::after {
   background: #EF4934;
   border: none;
   border-radius: 0 6px 6px 0;
-}
-
-@media (min-width: 480px) {
-
-  .filter {
-    padding: 12px 32px;
-  }
-}
-
-@media (min-width: 768px) {
-
-  .filter {
-    padding: 12px 42px;
-  }
-}
-
-@media (min-width: 1024px) {
-
-  .filter {
-    padding: 12px 52px;
-  }
 }
