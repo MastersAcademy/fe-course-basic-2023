@@ -30,17 +30,11 @@ function setErrors(inputData) {
     });
 }
 
-/**
- * Delete all errors from errors container.
- */
 function deleteErrors() {
     const errorContainerElements = document.querySelectorAll('.error');
     errorContainerElements.forEach((el) => el.remove());
 }
 
-/**
- * Goes to the page with the result.
- */
 function navigateToResultPage() {
     window.location.href = RESULT_PAGE_PATH;
 }
@@ -56,6 +50,7 @@ function isLengthPassword(password) {
 function cutSpaces(text) {
     return text.replaceAll(' ', '');
 }
+
 function validateForm() {
     deleteErrors();
     const emailValue = getValueById(EMAIL_INPUT_ID);

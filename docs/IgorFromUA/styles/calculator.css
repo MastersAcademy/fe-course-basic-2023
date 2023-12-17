@@ -3,33 +3,28 @@
   display: flex;
   justify-content: start;
   align-items: center;
-  gap: 16px;
+  flex-wrap: wrap;
+  row-gap: 32px;
+  column-gap: 16px;
   margin: 0 0 12px 53px;
 }
 
 .field__title {
-  font-size: 48px;
+  font-size: 36px;
   font-weight: 700;
   line-height: 48px;
   text-align: center;
-  margin: 80px 0 50px;
+  margin: 40px 0 25px;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  margin-top: -22px;
 }
 
 .limit {
-  margin: 0 0 8px 53px;
-}
-
-.limit__first-number,
-.limit__second-number {
-  display: inline-block;
-  font-size: 22px;
-  font-weight: 500;
-  line-height: 26px;
-  margin: 0;
-}
-
-.limit__second-number {
-  margin-left: 470px;
+  font-size: 14px;
 }
 
 .field__input {
@@ -76,22 +71,23 @@
 }
 
 .date-text {
-  font-size: 22px;
-  line-height: 32px;
+  font-size: 14px;
+  line-height: 21px;
   margin-left: 53px;
 }
 
 .big-result {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 90px) 1fr;
+  grid-template-columns: repeat(3, 90px);
   align-items: center;
-  gap: 60px;
+  gap: 30px;
   color: #EF4A34;
   font-size: 48px;
   font-weight: 700;
   line-height: 48px;
   margin-left: 53px;
+  margin-bottom: 75px;
 }
 
 .big-result__first-number {
@@ -144,14 +140,57 @@
   box-shadow: 0 0 6px 0 #00000040;
 }
 
-/*@media (min-width: 480px) {*/
+@media (min-width: 768px) {
 
-/*}*/
+  .big-result {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 90px);
+    align-items: center;
+    gap: 60px;
+    color: #EF4A34;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 48px;
+    margin-left: 53px;
+    margin-bottom: 75px;
+  }
 
-/*@media (min-width: 768px) {*/
+  .date-text {
+    font-size: 22px;
+    line-height: 32px;
+    margin-left: 53px;
+  }
 
-/*}*/
+  .limit {
+    font-size: 22px;
+  }
 
-/*@media (min-width: 1024px) {*/
+  .field__title {
+    font-size: 48px;
+    margin: 80px 0 50px;
+  }
+}
 
-/*}*/
+@media (min-width: 1024px) {
+
+  .big-result {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 90px) 1fr;
+    align-items: center;
+    gap: 60px;
+    color: #EF4A34;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 48px;
+    margin-left: 53px;
+    margin-bottom: 75px;
+  }
+
+  .date-text {
+    font-size: 22px;
+    line-height: 32px;
+    margin-left: 53px;
+  }
+}

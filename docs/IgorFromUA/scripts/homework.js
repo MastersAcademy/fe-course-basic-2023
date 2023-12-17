@@ -18,7 +18,6 @@ function randomDelay() {
 }
 
 function calculate(firstValue, secondValue, operation) {
-    // TODO: write your code here, remove the line below and uncomment the lines above
     const firstNumber = Number(firstValue);
     const secondNumber = Number(secondValue);
     let result;

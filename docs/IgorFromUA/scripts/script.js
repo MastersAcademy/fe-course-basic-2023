@@ -9,6 +9,7 @@ const SECOND_NUMBER_BIG_ELEMENT = document.querySelector('[data-big-result="seco
 const RESULT_BIG_ELEMENT = document.querySelector('[data-big-result="result"]');
 const EQUAL_BIG_ELEMENT = document.querySelector('[data-big-result="equal"]');
 const DATE_TEXT_ELEMENT = document.querySelector('[data-date-text]');
+
 function formatDate(date) {
     const allMonth = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     const dateNow = date.getDate();
@@ -18,6 +19,7 @@ function formatDate(date) {
     const minutes = (date.getMinutes() < 10 ? '0' : '') + date.getMinutes();
     return `${dateNow}-${monthNow} ${year}, ${hours}:${minutes}`;
 }
+
 function creatDateString(date, executionTime) {
     return `Data of calculation: ${date}. Time of function execution: ${executionTime}ms`;
 }
@@ -35,6 +37,7 @@ function trimLastCard(num, place) {
     const trim = (100 - remainder * 100) / 2;
     place.lastElementChild.style.clipPath = `polygon(0% ${trim}%, 100% ${trim}%, 100% calc(100% - ${trim}%), 0% calc(100% - ${trim}%))`;
 }
+
 function showManyCards(amount, place) {
     for (let i = 0; i < +amount; i++) {
         const img = document.createElement('img');
@@ -47,23 +50,27 @@ function showManyCards(amount, place) {
     }
 }
 
-function handlerCalculate() {
+function showResult(firstValue, secondValue, operation) {
+    const result = window.calculate(firstValue, secondValue, operation);
+    if ((typeof result) === 'number') showResult(result);
+    RESULT_ELEMENT.innerText = result + (result > 1 ? ' games' : ' game');
+}
+
+function showBigElement(operation, secondValue) {
+    OPERATION_BIG_ELEMENT.innerText = operation;
+    SECOND_NUMBER_BIG_ELEMENT.innerText = secondValue;
+    EQUAL_BIG_ELEMENT.innerText = '=';
+}
+
+function showBigResult(firstValue, secondValue, operation) {
     clearBigResultElement();
-    const firstValue = FIRST_VALUE_ELEMENT.value;
-    const secondValue = SECOND_VALUE_ELEMENT.value;
-    const operation = OPERATION_ELEMENT.value;
     const startTime = Date.now();
     let result = window.calculate(firstValue, secondValue, operation);
     const calculationTime = Date.now() - startTime;
-
     if (firstValue > 10) result = 'enter first number 1 - 10';
-    if ((typeof result) === 'number') RESULT_ELEMENT.innerText = result + (result > 1 ? ' games' : ' game');
-
     if (result === 'Result is too big') {
         showManyCards(firstValue, FIRST_NUMBER_BIG_ELEMENT);
-        OPERATION_BIG_ELEMENT.innerText = operation;
-        SECOND_NUMBER_BIG_ELEMENT.innerText = secondValue;
-        EQUAL_BIG_ELEMENT.innerText = '=';
+        showBigElement(operation, secondValue);
         RESULT_BIG_ELEMENT.style.top = '25px';
         result = 'Too many games';
     }
@@ -75,9 +82,7 @@ function handlerCalculate() {
             FIRST_NUMBER_BIG_ELEMENT.style.top = '55px';
         }
         showManyCards(firstValue, FIRST_NUMBER_BIG_ELEMENT);
-        OPERATION_BIG_ELEMENT.innerText = operation;
-        SECOND_NUMBER_BIG_ELEMENT.innerText = secondValue;
-        EQUAL_BIG_ELEMENT.innerText = '=';
+        showBigElement(operation, secondValue);
         RESULT_BIG_ELEMENT.style.top = '55px';
         if (result === 0) {
             RESULT_BIG_ELEMENT.style.top = '28px';
@@ -88,6 +93,14 @@ function handlerCalculate() {
         RESULT_BIG_ELEMENT.innerText = result;
     }
     DATE_TEXT_ELEMENT.innerText = creatDateString(formatDate(new Date()), calculationTime);
+}
+
+function handlerCalculate() {
+    const firstValue = FIRST_VALUE_ELEMENT.value;
+    const secondValue = SECOND_VALUE_ELEMENT.value;
+    const operation = OPERATION_ELEMENT.value;
+    showResult(firstValue, secondValue, operation);
+    showBigResult(firstValue, secondValue, operation);
 }
 
 CALCULATE_BUTTON_ELEMENT.addEventListener('click', handlerCalculate);
