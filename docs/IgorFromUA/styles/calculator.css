@@ -1,0 +1,157 @@
+.field {
+  max-width: 900px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 16px;
+  margin: 0 0 12px 53px;
+}
+
+.field__title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 48px;
+  text-align: center;
+  margin: 80px 0 50px;
+}
+
+.limit {
+  margin: 0 0 8px 53px;
+}
+
+.limit__first-number,
+.limit__second-number {
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 26px;
+  margin: 0;
+}
+
+.limit__second-number {
+  margin-left: 470px;
+}
+
+.field__input {
+  max-width: 122px;
+  padding: 7px 4px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: center;
+  border: 1px solid #A9A9A9;
+  border-radius: 6px;
+  outline: none;
+}
+
+.field__input:focus {
+  border-bottom: 5px solid #EF4934;
+  padding-bottom: 2px;
+}
+
+.field__select {
+  width: 114px;
+  font-size: 14px;
+  line-height: 21px;
+  border-radius: 6px;
+  padding: 7px 4px;
+  background-color: #FFF;
+  outline: none;
+}
+
+.field__button {
+  width: 122px;
+  color: #FFF;
+  background-color: #EF4934;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 11px 0;
+}
+
+.field__result {
+  font-size: 22px;
+  line-height: 32px;
+}
+
+.date-text {
+  font-size: 22px;
+  line-height: 32px;
+  margin-left: 53px;
+}
+
+.big-result {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 90px) 1fr;
+  align-items: center;
+  gap: 60px;
+  color: #EF4A34;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 48px;
+  margin-left: 53px;
+}
+
+.big-result__first-number {
+  position: relative;
+  top: 55px;
+  width: 100%;
+  max-height: 360px;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  column-gap: 20px;
+}
+
+.big-result__operator {
+  width: 100%;
+  text-align: center;
+  padding-top: 55px;
+}
+
+
+.big-result__second-number {
+  width: 100%;
+  text-align: center;
+  padding-top: 55px;
+}
+
+.big-result__equal {
+  width: 100%;
+  text-align: center;
+  padding-top: 55px;
+}
+
+.big-result__result {
+  position: relative;
+  top: 55px;
+  width: 100%;
+  max-height: 360px;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  column-gap: 20px;
+}
+
+.big-result__img {
+  width: 90px;
+  height: 90px;
+  margin-top: -55px;
+  box-shadow: 0 0 6px 0 #00000040;
+}
+
+/*@media (min-width: 480px) {*/
+
+/*}*/
+
+/*@media (min-width: 768px) {*/
+
+/*}*/
+
+/*@media (min-width: 1024px) {*/
+
+/*}*/
