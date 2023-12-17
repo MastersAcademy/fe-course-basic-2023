@@ -1,12 +1,12 @@
 .title {
-  font-size: 48px;
+  font-size: 36px;
   font-weight: 700;
-  margin: 40px 0 40px 53px;
+  margin: 20px 0 20px 20px;
 }
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(4, 275px);
+  grid-template-columns: 275px;
   grid-gap: 25px;
   justify-content: center;
 }
@@ -83,7 +83,7 @@
   display: inline-block;
   width: 50px;
   height: 50px;
-  border: 3px solid rgba(255,213,0,.3);
+  border: 3px solid rgba(255, 213, 0, .3);
   border-radius: 50%;
   border-top-color: #FFD500;
   animation: spin 1s ease-in-out infinite;
@@ -91,18 +91,33 @@
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-/*@media (min-width: 480px) {*/
+@media (min-width: 580px) {
 
-/*}*/
+  .cards {
+    grid-template-columns: repeat(2, 275px);
+  }
 
-/*@media (min-width: 768px) {*/
+  .title {
+    font-size: 48px;
+  }
+}
 
-/*}*/
+@media (min-width: 1024px) {
 
-/*@media (min-width: 1024px) {*/
+  .cards {
+    grid-template-columns: repeat(3, 275px);
+  }
+}
 
-/*}*/
+@media (min-width: 1280px) {
 
+  .cards {
+    grid-template-columns: repeat(4, 275px);
+  }
+}

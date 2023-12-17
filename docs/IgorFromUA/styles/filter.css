@@ -3,9 +3,11 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  column-gap: 10px;
+  row-gap: 20px;
   color: #FFF;
   background: #221F1F;
-  padding: 12px 52px;
+  padding: 12px 22px;
   font-size: 14px;
   line-height: 21px;
 }
@@ -19,6 +21,7 @@
   border: none;
   border-radius: 6px;
   padding: 12px 18px 12px 12px;
+  margin-left: 10px;
   outline: none;
 }
 
@@ -44,6 +47,10 @@ input[type="checkbox"]:not(:checked)::after {
   border-color: #FFF;
 }
 
+.radio-text {
+  margin-left: 10px;
+}
+
 .filter__search {
   padding: 13px 20px 13px 30px;
   margin-right: -5px;
@@ -63,14 +70,23 @@ input[type="checkbox"]:not(:checked)::after {
   border-radius: 0 6px 6px 0;
 }
 
-/*@media (min-width: 480px) {*/
+@media (min-width: 480px) {
 
-/*}*/
+  .filter {
+    padding: 12px 32px;
+  }
+}
 
-/*@media (min-width: 768px) {*/
+@media (min-width: 768px) {
 
-/*}*/
+  .filter {
+    padding: 12px 42px;
+  }
+}
 
-/*@media (min-width: 1024px) {*/
+@media (min-width: 1024px) {
 
-/*}*/
+  .filter {
+    padding: 12px 52px;
+  }
+}
