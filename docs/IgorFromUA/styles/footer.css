@@ -1,0 +1,23 @@
+.wrapper-footer {
+  margin: 0;
+}
+
+.footer {
+  background: #221F1F;
+  padding: 30px 0;
+}
+
+.footer__link {
+  display: flex;
+  justify-content: center;
+  column-gap: 33px;
+  margin-bottom: 26px;
+}
+
+.footer__text {
+  color: #FFF;
+  font-size: 22px;
+  line-height: 32px;
+  text-align: center;
+  margin: 0;
+}
