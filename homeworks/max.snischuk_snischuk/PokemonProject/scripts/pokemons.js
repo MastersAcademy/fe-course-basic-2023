@@ -386,6 +386,7 @@ function initPokemons() {
         if (FORM_FILTERS_ELEMENT.elements['search-query'].value) {
             filteredCards = filterBySearchQuery(filteredCards);
         }
+
         return filteredCards;
     }
 
@@ -398,7 +399,7 @@ function initPokemons() {
         let updatedFilteredCards = updateFilteredCards();
         const inputValue = event.target.value.toLowerCase();
 
-        updatedFilteredCards = pokemons.filter((pokemon) => pokemon.name
+        updatedFilteredCards = filteredCards.filter((pokemon) => pokemon.name
             .toLowerCase()
             .includes(inputValue));
 

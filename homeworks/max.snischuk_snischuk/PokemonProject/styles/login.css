@@ -3,6 +3,7 @@
 @import "./footer.css";
 
 .login {
+  min-width: 300px;
   padding: 0 var(--padding-container);
   max-width: 605px;
   margin: 40px auto;
@@ -19,8 +20,8 @@
 }
 
 .login__label {
+  margin-top: 60px;
   display: block;
-  margin-top: 20px;
   color: var(--color-dark);
   font-family: Roboto;
   font-size: 22px;
@@ -34,13 +35,14 @@
   display: block;
   width: 100%;
   border-radius: 6px;
-  border: .6px solid #A9A9A9;
+  border: 1px solid #A9A9A9;
   background: #FFF;
   color: var(--color-dark);
   font-family: Roboto;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
+  border-bottom: 5px solid #A9A9A9;
 }
 
 .login__field::placeholder {
@@ -51,6 +53,7 @@
   font-weight: 400;
 }
 
+.login__field:hover,
 .login__field:focus {
   outline: none;
   border-bottom: 5px solid var(--color-accent);
@@ -61,9 +64,9 @@
 }
 
 .login__checkbox-custom {
+  margin-top: 60px;
   display: flex;
   align-items: center;
-  margin-top: 20px;
   color: var(--color-dark);
   font-size: 14px;
   line-height: 21px;
@@ -88,7 +91,7 @@
 }
 
 .login__btn {
-  margin-top: 20px;
+  margin-top: 60px;
   cursor: pointer;
   width: 100%;
   padding: 27px;
@@ -109,10 +112,16 @@
 }
 
 .error {
+  position: absolute;
   margin: 5px;
   color: #F00;
   font-size: 14px;
   line-height: 21px;
+}
+
+.error::before {
+  content: "x";
+  margin-right: 5px;
 }
 
 @media (min-width: 769px) {

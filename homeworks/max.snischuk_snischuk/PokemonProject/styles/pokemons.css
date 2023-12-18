@@ -4,6 +4,7 @@
 @import "./card.css";
 
 .filters {
+  min-width: 300px;
   background-color: var(--color-dark);
   padding: 12px 0;
 }

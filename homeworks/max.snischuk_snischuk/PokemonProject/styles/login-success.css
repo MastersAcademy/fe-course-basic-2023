@@ -3,6 +3,7 @@
 @import "./footer.css";
 
 .success {
+  min-width: 300px;
   padding: 0 var(--padding-container);
   max-width: 605px;
   margin: 20px auto;
@@ -21,6 +22,7 @@
 }
 
 .success__title {
+  text-align: center;
   color: var(--color-dark);
   font-size: 32px;
   line-height: 36px;
