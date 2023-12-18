@@ -136,6 +136,14 @@
   gap: 20px;
 }
 
+.card-container--empty {
+  position: absolute;
+}
+
+.card-container--with-content {
+  position: relative;
+}
+
 .games__main {
   position: relative;
   top: 180px;

@@ -11,6 +11,8 @@ const oldFirstButton = document.querySelector('[data-old-first]');
 const infoElement = document.querySelector('[data-info]');
 async function getGamesArray() {
     infoElement.classList.replace('main__info--disabled', 'main__info');
+    footerElement.classList.replace('card-container--with-content', 'card-container--empty');
+    cardContainer.innerHTML = '';
     infoElement.innerText = 'Loading...';
     const option = {
         headers: {
@@ -84,9 +86,9 @@ function renderCards(container, gamesArray) {
     container.append(fragment);
     infoElement.classList.replace('main__info', 'main__info--disabled');
     if (gamesArray.length !== 0) {
-        footerElement.classList.replace('page--empty', 'page--loaded');
+        footerElement.classList.replace('card-container--empty', 'card-container--with-content');
     } else {
-        footerElement.classList.add('page--empty');
+        footerElement.classList.add('card-container--empty');
         infoElement.classList.replace('main__info--disabled', 'main__info');
         infoElement.innerText = 'No Results';
     }
@@ -131,7 +133,7 @@ async function showFilterArray() {
 }
 
 async function init() {
-    footerElement.classList.add('page--empty');
+    footerElement.classList.add('card-container--empty');
     renderCards(cardContainer, await getGamesArray());
     genreSelect.addEventListener('change', showFilterArray);
     platformSelect.addEventListener('change', showFilterArray);
