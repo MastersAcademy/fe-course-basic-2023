@@ -1,7 +1,7 @@
-.page__heading {
-  text-align: center;
-  font-size: 48px;
-  padding-top: 120px;
+.main__calculator {
+  padding-top: 140px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .calculator {

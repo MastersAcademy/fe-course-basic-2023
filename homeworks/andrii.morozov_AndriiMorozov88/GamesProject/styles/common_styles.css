@@ -4,11 +4,24 @@
   margin: 0;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   width: 100%;
   min-height: 100%;
 }
 
-html {
-  height: 100%;
+.main {
+  padding-left: 53px;
+  display: flex;
+  justify-content: center;
+}
+
+.main__heading {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 40px;
 }

@@ -1,6 +1,6 @@
 .footer {
   height: 140px;
-  width: 100%;
+  width: inherit;
   background-color: #221F1F;
   bottom: 0;
   display: flex;
@@ -24,4 +24,18 @@
 .footer__link {
   text-decoration: none;
   color: #FFF;
+}
+
+.footer--fixed {
+  position: fixed;
+  bottom: 0;
+}
+
+.footer--absolute {
+  position: absolute;
+  bottom: 0;
+}
+
+.footer--relative {
+  position: relative;
 }
