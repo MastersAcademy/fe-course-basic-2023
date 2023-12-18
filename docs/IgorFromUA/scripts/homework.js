@@ -21,7 +21,7 @@ function calculate(firstValue, secondValue, operation) {
     const firstNumber = Number(firstValue);
     const secondNumber = Number(secondValue);
     let result;
-    if ((!firstNumber || !secondNumber) && (!Number.isNaN(firstNumber) || !Number.isNaN(secondNumber))) return 'Enter a number';
+    if (firstValue === '' || secondValue === '' || Number.isNaN(firstNumber) || Number.isNaN(secondNumber)) return 'Enter a number';
     if (operation === '**') return 'Choose a valid operation';
     switch (operation) {
         case '+':

@@ -21,7 +21,8 @@ function formatDate(date) {
 }
 
 function creatDateString(date, executionTime) {
-    return `Data of calculation: ${date}. Time of function execution: ${executionTime}ms`;
+    return `Data of calculation: ${date}.
+    Time of function execution: ${executionTime}ms`;
 }
 
 function clearBigResultElement() {
@@ -50,10 +51,12 @@ function showManyCards(amount, place) {
     }
 }
 
-function showResult(firstValue, secondValue, operation) {
-    const result = window.calculate(firstValue, secondValue, operation);
-    if ((typeof result) === 'number') showResult(result);
-    RESULT_ELEMENT.innerText = result + (result > 1 ? ' games' : ' game');
+function showResult(result) {
+    if ((typeof result) === 'number') {
+        RESULT_ELEMENT.innerText = result + (result > 1 ? ' games' : ' game');
+    } else {
+        RESULT_ELEMENT.innerText = result;
+    }
 }
 
 function showBigElement(operation, secondValue) {
@@ -62,11 +65,9 @@ function showBigElement(operation, secondValue) {
     EQUAL_BIG_ELEMENT.innerText = '=';
 }
 
-function showBigResult(firstValue, secondValue, operation) {
+function showBigResult(firstValue, secondValue, operation, res) {
+    let result = res;
     clearBigResultElement();
-    const startTime = Date.now();
-    let result = window.calculate(firstValue, secondValue, operation);
-    const calculationTime = Date.now() - startTime;
     if (firstValue > 10) result = 'enter first number 1 - 10';
     if (result === 'Result is too big') {
         showManyCards(firstValue, FIRST_NUMBER_BIG_ELEMENT);
@@ -90,17 +91,20 @@ function showBigResult(firstValue, secondValue, operation) {
         }
         showManyCards(result, RESULT_BIG_ELEMENT);
     } else {
-        RESULT_BIG_ELEMENT.innerText = result;
+        FIRST_NUMBER_BIG_ELEMENT.innerText = result;
     }
-    DATE_TEXT_ELEMENT.innerText = creatDateString(formatDate(new Date()), calculationTime);
 }
 
 function handlerCalculate() {
     const firstValue = FIRST_VALUE_ELEMENT.value;
     const secondValue = SECOND_VALUE_ELEMENT.value;
     const operation = OPERATION_ELEMENT.value;
-    showResult(firstValue, secondValue, operation);
-    showBigResult(firstValue, secondValue, operation);
+    const startTime = Date.now();
+    const result = window.calculate(firstValue, secondValue, operation);
+    const calculationTime = Date.now() - startTime;
+    DATE_TEXT_ELEMENT.innerText = creatDateString(formatDate(new Date()), calculationTime);
+    showResult(result);
+    showBigResult(firstValue, secondValue, operation, result);
 }
 
 CALCULATE_BUTTON_ELEMENT.addEventListener('click', handlerCalculate);
