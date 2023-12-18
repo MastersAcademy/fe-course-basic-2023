@@ -17,6 +17,10 @@ a {
   margin: 0 auto;
 }
 
+[disabled] {
+  cursor: not-allowed;
+}
+
 /* ======================= ABOUT ========================== */
 
 .header {
@@ -224,6 +228,10 @@ a {
   display: inline-flex;
   align-items: center;
   cursor: pointer;
+}
+
+.custom-radio:disabled + label {
+  cursor: not-allowed;
 }
 
 .custom-radio + label::before {
@@ -500,4 +508,11 @@ a {
   font-size: 18px;
   color: #F00;
   margin-right: 10px;
+}
+
+.loading-overlay {
+  display: block;
+  text-align: center;
+  margin-top: 100px;
+  font-size: 36px;
 }

@@ -98,7 +98,7 @@
   margin-top: 80px;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 20px; /* Додавання властивості gap для сумісності з браузерами */
+  gap: 20px;
   position: relative;
   justify-content: center;
 }

@@ -35,240 +35,48 @@
                 </div>
             </header>
             <main class="main">
+                <div class="checkbox">
+                    <label class="checkbox__item">
+                        <input class="checkbox__item-inp" type="checkbox" data-check-new>
+                        <span class="checkbox__item-check"></span>
+                        New
+                    </label>
+                    <label class="checkbox__item">
+                        <input class="checkbox__item-inp" type="checkbox" data-check-old>
+                        <span class="checkbox__item-check"></span>
+                        Old
+                    </label>
+                </div>
                 <div class="games">
                     <div class="container">
                         <div class="games__inner">
                             <h1 class="games__text-title">Study project "Games"</h1>
-                            <div class="games__list-blocks">
-                                <div class="games__box-item">
-                                    <div class="games__box-top">
-                                        <img class="games__top-icon" src="images/gameicon.png" alt="gameicon">
-                                        <div class="games__top-text">
-                                            <h2 class="games__top-name">Overwatch 2</h2>
-                                            <p class="games__top-info">Big changes come to the Overwatch formula in this sequel...</p>
+                            <div class="games__loading">
+                                <p class="games__loading-text">Loading...</p>
+                            </div>
+                            <div class="games__cards">
+                                <template data-card-template>
+                                    <li class="games__box-item" data-cards-item>
+                                        <div class="games__box-top">
+                                            <img class="games__top-icon" data-card-img>
+                                            <div class="games__top-text">
+                                                <h2 class="games__top-name" data-card-title></h2>
+                                                <p class="games__top-info" data-card-description></p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="games__box-bottom">
-                                        <ul class="games__box-info">
-                                            <li>
-                                                <b>Genre:</b> Shooter
-                                            </li>
-                                            <li>
-                                                <b>Platform:</b> PC (Windows)
-                                            </li>
-                                            <li>
-                                                <b>Publisher:</b> Activision Blizzard King
-                                            </li>
-                                            <li>
-                                                <b>Developer:</b> Blizzard Entertainmen
-                                            </li>
-                                            <li>
-                                                <b>Release_date:</b> 2022-10-04
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="games__box-item">
-                                    <div class="games__box-top">
-                                        <img class="games__top-icon" src="images/gameicon.png" alt="gameicon">
-                                        <div class="games__top-text">
-                                            <h2 class="games__top-name">Overwatch 2</h2>
-                                            <p class="games__top-info">Big changes come to the Overwatch formula in this sequel...</p>
+                                        <div class="games__box-bottom">
+                                            <ul class="games__box-info" data-short-description>
+                                            </ul>
                                         </div>
-                                    </div>
-                                    <div class="games__box-bottom">
-                                        <ul class="games__box-info">
-                                            <li>
-                                                <b>Genre:</b> Shooter
-                                            </li>
-                                            <li>
-                                                <b>Platform:</b> PC (Windows)
-                                            </li>
-                                            <li>
-                                                <b>Publisher:</b> Activision Blizzard King
-                                            </li>
-                                            <li>
-                                                <b>Developer:</b> Blizzard Entertainmen
-                                            </li>
-                                            <li>
-                                                <b>Release_date:</b> 2022-10-04
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="games__box-item">
-                                    <div class="games__box-top">
-                                        <img class="games__top-icon" src="images/gameicon.png" alt="gameicon">
-                                        <div class="games__top-text">
-                                            <h2 class="games__top-name">Overwatch 2</h2>
-                                            <p class="games__top-info">Big changes come to the Overwatch formula in this sequel...</p>
-                                        </div>
-                                    </div>
-                                    <div class="games__box-bottom">
-                                        <ul class="games__box-info">
-                                            <li>
-                                                <b>Genre:</b> Shooter
-                                            </li>
-                                            <li>
-                                                <b>Platform:</b> PC (Windows)
-                                            </li>
-                                            <li>
-                                                <b>Publisher:</b> Activision Blizzard King
-                                            </li>
-                                            <li>
-                                                <b>Developer:</b> Blizzard Entertainmen
-                                            </li>
-                                            <li>
-                                                <b>Release_date:</b> 2022-10-04
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="games__box-item">
-                                    <div class="games__box-top">
-                                        <img class="games__top-icon" src="images/gameicon.png" alt="gameicon">
-                                        <div class="games__top-text">
-                                            <h2 class="games__top-name">Overwatch 2</h2>
-                                            <p class="games__top-info">Big changes come to the Overwatch formula in this sequel...</p>
-                                        </div>
-                                    </div>
-                                    <div class="games__box-bottom">
-                                        <ul class="games__box-info">
-                                            <li>
-                                                <b>Genre:</b> Shooter
-                                            </li>
-                                            <li>
-                                                <b>Platform:</b> PC (Windows)
-                                            </li>
-                                            <li>
-                                                <b>Publisher:</b> Activision Blizzard King
-                                            </li>
-                                            <li>
-                                                <b>Developer:</b> Blizzard Entertainmen
-                                            </li>
-                                            <li>
-                                                <b>Release_date:</b> 2022-10-04
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="games__box-item">
-                                    <div class="games__box-top">
-                                        <img class="games__top-icon" src="images/gameicon.png" alt="gameicon">
-                                        <div class="games__top-text">
-                                            <h2 class="games__top-name">Overwatch 2</h2>
-                                            <p class="games__top-info">Big changes come to the Overwatch formula in this sequel...</p>
-                                        </div>
-                                    </div>
-                                    <div class="games__box-bottom">
-                                        <ul class="games__box-info">
-                                            <li>
-                                                <b>Genre:</b> Shooter
-                                            </li>
-                                            <li>
-                                                <b>Platform:</b> PC (Windows)
-                                            </li>
-                                            <li>
-                                                <b>Publisher:</b> Activision Blizzard King
-                                            </li>
-                                            <li>
-                                                <b>Developer:</b> Blizzard Entertainmen
-                                            </li>
-                                            <li>
-                                                <b>Release_date:</b> 2022-10-04
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="games__box-item">
-                                    <div class="games__box-top">
-                                        <img class="games__top-icon" src="images/gameicon.png" alt="gameicon">
-                                        <div class="games__top-text">
-                                            <h2 class="games__top-name">Overwatch 2</h2>
-                                            <p class="games__top-info">Big changes come to the Overwatch formula in this sequel...</p>
-                                        </div>
-                                    </div>
-                                    <div class="games__box-bottom">
-                                        <ul class="games__box-info">
-                                            <li>
-                                                <b>Genre:</b> Shooter
-                                            </li>
-                                            <li>
-                                                <b>Platform:</b> PC (Windows)
-                                            </li>
-                                            <li>
-                                                <b>Publisher:</b> Activision Blizzard King
-                                            </li>
-                                            <li>
-                                                <b>Developer:</b> Blizzard Entertainmen
-                                            </li>
-                                            <li>
-                                                <b>Release_date:</b> 2022-10-04
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="games__box-item">
-                                    <div class="games__box-top">
-                                        <img class="games__top-icon" src="images/gameicon.png" alt="gameicon">
-                                        <div class="games__top-text">
-                                            <h2 class="games__top-name">Overwatch 2</h2>
-                                            <p class="games__top-info">Big changes come to the Overwatch formula in this sequel...</p>
-                                        </div>
-                                    </div>
-                                    <div class="games__box-bottom">
-                                        <ul class="games__box-info">
-                                            <li>
-                                                <b>Genre:</b> Shooter
-                                            </li>
-                                            <li>
-                                                <b>Platform:</b> PC (Windows)
-                                            </li>
-                                            <li>
-                                                <b>Publisher:</b> Activision Blizzard King
-                                            </li>
-                                            <li>
-                                                <b>Developer:</b> Blizzard Entertainmen
-                                            </li>
-                                            <li>
-                                                <b>Release_date:</b> 2022-10-04
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="games__box-item">
-                                    <div class="games__box-top">
-                                        <img class="games__top-icon" src="images/gameicon.png" alt="gameicon">
-                                        <div class="games__top-text">
-                                            <h2 class="games__top-name">Overwatch 2</h2>
-                                            <p class="games__top-info">Big changes come to the Overwatch formula in this sequel...</p>
-                                        </div>
-                                    </div>
-                                    <div class="games__box-bottom">
-                                        <ul class="games__box-info">
-                                            <li>
-                                                <b>Genre:</b> Shooter
-                                            </li>
-                                            <li>
-                                                <b>Platform:</b> PC (Windows)
-                                            </li>
-                                            <li>
-                                                <b>Publisher:</b> Activision Blizzard King
-                                            </li>
-                                            <li>
-                                                <b>Developer:</b> Blizzard Entertainmen
-                                            </li>
-                                            <li>
-                                                <b>Release_date:</b> 2022-10-04
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                    </li>
+                                </template>
+                                <ul class="games__cards-container" data-cards-container></ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </main>
         </div>
+        <script src="./scripts/games.js"></script>
     </body>
 </html>

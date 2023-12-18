@@ -1,36 +1,52 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;}
+
+
 body {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   color: #221F1F;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.container {
-  width: 1280px;
+a {
+  text-decoration: none;
+}
+
+.container,.calculator-game-main {
   margin: 0 auto;
 }
+
 /* header */
 
-header {
-  background-color: #EF4A34;
+.header {
   height: 80px;
   width: 100%;
-  text-align: center;
+  display: flex;
+  justify-content: center;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 0 auto;
+  background-color: #EF4A34;
+  text-align: center;
 }
 
-.logo-menu {
+.header__wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 11px 52px 11px 53px;
+  width: 1280px;
 }
 
 .logo {
@@ -41,7 +57,6 @@ header {
 }
 
 .menu {
-  width: 238px;
   height: 18px;
   display: inline-block;
   list-style: none;
@@ -76,9 +91,11 @@ header {
 
 /* main */
 
-main {
-  padding-top: 100px;
+.site-main {
+  margin-top: 180px;
+  /*! padding-left: 53px; */
 }
+
 
 .content_game-place {
   display: flex;
@@ -127,17 +144,19 @@ main {
 /* footer */
 
 footer {
+  width: 100%;
   height: 160px;
   background-color: #221F1F;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding-top: 30px;
+  flex-shrink: 0;
+}
+
+.footer-social__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .social-media ul {
@@ -156,12 +175,12 @@ footer {
   font-size: 22px;
   font-weight: 400;
   line-height: 32px;
+  margin: 0;
   margin-top: 20px;
   color: #FFF;
 }
 
 .links a {
-  text-decoration: none;
   color: #FFF;
 }
 

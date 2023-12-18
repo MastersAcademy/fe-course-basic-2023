@@ -4,140 +4,87 @@ const operation = document.querySelector('[data-operation]');
 const button = document.querySelector('[data-button]');
 const resultContainer = document.querySelector('[data-result]');
 const commentContainer = document.querySelector('[data-comment]');
-const inputCardContainer = document.querySelector('[data-input-card]');
-const resultCardContainer = document.querySelector('[data-result-card]');
-const operatorContainer = document.querySelector('[data-operator]');
-const secondOperandContainer = document.querySelector('[data-second-operand]');
 resultContainer.innerText = 'Result';
-function showCalcResult() {
+function getDate() {
+    const currentDate = new Date();
+    const dateOptions = {
+        day: 'numeric',
+        month: 'short',
+        year: 'numeric',
+    };
+    return currentDate.toLocaleString('en-GB', dateOptions).replace(/ /g, '-');
+}
+function getTime() {
+    const currentDate = new Date();
+    const timeOptions = {
+        hour: '2-digit',
+        minute: '2-digit',
+    };
+    return currentDate.toLocaleString('en-GB', timeOptions);
+}
+function getAbsoluteTime() {
+    const date = new Date();
+    return date.getTime();
+}
+function getAddition(number) {
+    if (number <= 1) {
+        return 'game';
+    }
+    return 'games';
+}
+function showResult() {
+    const timeStart = getAbsoluteTime();
     let result;
+    commentContainer.innerText = '';
+    commentContainer.classList.remove('comment-container--error');
     const firstNumber = Number(firstNumberInput.value);
     const secondNumber = Number(secondNumberInput.value);
+    if (firstNumberInput.value.trim() === '' || secondNumberInput.value.trim() === '') {
+        resultContainer.innerText = 'Error';
+        commentContainer.innerText = 'Enter a number';
+        commentContainer.classList.add('comment-container--error');
+        return;
+    }
+    if (Number.isNaN(firstNumber) || Number.isNaN(secondNumber)) {
+        resultContainer.innerText = 'Error';
+        commentContainer.innerText = 'Enter a number';
+        commentContainer.classList.add('comment-container--error');
+        return;
+    }
     switch (operation.value) {
         case '1':
             result = firstNumber + secondNumber;
-            commentContainer.innerText = `${firstNumber} + ${secondNumber} = ${result}`;
             break;
         case '2':
             result = firstNumber - secondNumber;
-            commentContainer.innerText = `${firstNumber} - ${secondNumber} = ${result}`;
             break;
         case '3':
             result = firstNumber * secondNumber;
-            commentContainer.innerText = `${firstNumber} * ${secondNumber} = ${result}`;
             break;
         case '4':
             result = firstNumber / secondNumber;
-            commentContainer.innerText = `${firstNumber} / ${secondNumber} = ${result}`;
             break;
         default:
             result = firstNumber ** secondNumber;
-            commentContainer.innerHTML = `${firstNumber}<sup>${secondNumber}</sup> = ${result}`;
             break;
     }
-    if (firstNumber > 100) {
-        result = 'Error';
-        commentContainer.innerText = 'Enter a first number less then 100';
-    }
-    if (firstNumberInput.value.trim() === '' || secondNumberInput.value.trim() === '') {
-        result = 'Error';
-        commentContainer.innerText = 'Enter a number';
-    }
-    if (Number.isNaN(firstNumber) || Number.isNaN(secondNumber)) {
-        result = 'Error';
-        commentContainer.innerText = 'Enter a number';
-    }
-    resultContainer.innerText = `${result}`;
+    resultContainer.innerText = `${result} ${getAddition(result)}`;
+
     if (result > 100) {
-        commentContainer.innerText = 'Too many games';
         resultContainer.innerText = 'Error';
+        commentContainer.innerText = 'Too many games';
+        commentContainer.classList.add('comment-container--error');
+        return;
+    }
+    if (result < 0) {
+        resultContainer.innerText = 'Error';
+        commentContainer.innerText = 'Negative count of games is not possible';
+        commentContainer.classList.add('comment-container--error');
+        return;
     }
     resultContainer.classList.add('calculator__result--calc');
-    return result;
+    for (let count = 0; count < 10000000; count++);
+    const timeFinish = getAbsoluteTime();
+    commentContainer.innerText = `Date of calculation: ${getDate()}, ${getTime()}. Time of function execution: ${timeFinish - timeStart} ms`;
 }
-function getDataObject() {
-    const result = showCalcResult();
-    const firstNumber = Number(firstNumberInput.value);
-    const secondNumber = Number(secondNumberInput.value);
-    const operationType = operation.value;
-    const dataObject = {
-        result,
-        firstNumber,
-        secondNumber,
-        operationType,
-        fullInputColumns: Math.floor(firstNumber / 10),
-        lastInputColumn: Math.floor((firstNumber % 10)),
-        fullResultColumns: Math.floor(result / 10),
-        lastResultColumn: Math.floor((result % 10)),
-    };
-    return dataObject;
-}
-function getImageColumn(amount) {
-    let top = 0;
-    const imageContainer = document.createElement('div');
-    imageContainer.classList.add('card-container__column');
-    for (let count = 0; count < amount; count++) {
-        const card = document.createElement('div');
-        card.classList.add('card-container__card');
-        card.style.top = `${top}px`;
-        top += 20;
-        imageContainer.append(card);
-    }
-    return imageContainer;
-}
-function get10ImagesColumn() {
-    return getImageColumn(10);
-}
-function showHalfCard() {
-    const halfCard = document.createElement('div');
-    halfCard.classList.add('card-container__card--half');
-    return halfCard;
-}
-function showCards() {
-    inputCardContainer.innerHTML = '';
-    resultCardContainer.innerHTML = '';
-    operatorContainer.innerHTML = '';
-    secondOperandContainer.innerHTML = '';
-    resultCardContainer.classList.remove('card-container__cards--error');
-    const dataObject = getDataObject();
-    if (dataObject.result !== 'Error') {
-        for (let count = 0; count < dataObject.fullInputColumns; count++) {
-            inputCardContainer.append(get10ImagesColumn());
-        }
-        inputCardContainer.append(getImageColumn(dataObject.lastInputColumn));
-        if (!Number.isInteger(dataObject.firstNumber)) {
-            inputCardContainer.append(showHalfCard());
-        }
-        if (dataObject.result < 100) {
-            for (let count = 0; count < dataObject.fullResultColumns; count++) {
-                resultCardContainer.append(get10ImagesColumn());
-            }
-            resultCardContainer.append(getImageColumn(dataObject.lastResultColumn));
-            if (!Number.isInteger(dataObject.result) && dataObject.result > 0) {
-                resultCardContainer.append(showHalfCard());
-            }
-        } else {
-            resultCardContainer.innerText = 'Too many games';
-            resultCardContainer.classList.add('card-container__cards--error');
-        }
-        secondOperandContainer.innerText = `${dataObject.secondNumber} = `;
-        switch (dataObject.operationType) {
-            case '1':
-                operatorContainer.innerText = '+';
-                break;
-            case '2':
-                operatorContainer.innerText = '-';
-                break;
-            case '3':
-                operatorContainer.innerText = '*';
-                break;
-            case '4':
-                operatorContainer.innerText = '/';
-                break;
-            default:
-                operatorContainer.innerText = '^';
-                break;
-        }
-    }
-}
-button.addEventListener('click', showCards);
+button.addEventListener('click', showResult);

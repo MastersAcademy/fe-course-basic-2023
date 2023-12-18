@@ -69,13 +69,15 @@ body {
   border-radius: 6px 0 0 6px;
   display: flex;
   align-items: center;
-  padding: 12px;
 }
 
 .input-search {
   border: 1px solid #FFF;
-  padding: 10px;
   width: 100%;
+  background-image: url("../images/search.svg");
+  background-repeat: no-repeat;
+  background-position: 5px center;
+  padding: 13px 20px 13px 30px;
 }
 
 .radio-buttons input, .checkboxes input {
@@ -138,6 +140,7 @@ body {
 .content {
   max-width: 1280px;
   padding-inline: 52px;
+  padding-bottom: 52px;
 }
 
 .headline {
@@ -244,7 +247,6 @@ footer {
   text-align: center;
   width: 100%;
   bottom: 0;
-  position: fixed;
 }
 
 .footer-text {
@@ -260,4 +262,34 @@ footer {
 
 .social-networks {
   margin-block: 30px;
+}
+
+.loading {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgb(239 73 52);
+  border-radius: 50%;
+  border-top-color: #FFF;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+
+@-webkit-keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+
+.loading-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 60px;
+}
+
+.hide {
+  display: none;
 }

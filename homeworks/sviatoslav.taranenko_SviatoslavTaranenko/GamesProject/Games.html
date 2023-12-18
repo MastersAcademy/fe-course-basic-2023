@@ -12,6 +12,9 @@
             <div class="header__all">
                 <img class="header__img" src="img/logo.png" alt="Logo">
                 <div class="header__items">
+                    <div class="header__items_Calculator">
+                        <a href="calculator.html">Calculator</a>
+                    </div>
                     <div class="header__items_Games">
                         <a href="Games.html">Games</a>
                     </div>
@@ -24,321 +27,136 @@
                 </div>
             </div>
         </header>
-        <form action="#" class="Filter">
-            <div class="Filter__forms">
-                <div class="Filter__forms_select">
-                    <select>
-                        <option value="Type" selected>Type</option>
-                        <option value="Type_2">Type 2</option>
-                        <option value="Type_3">Type 3</option>
-                    </select>
+        <div class="games__filter">
+            <form class="datalist__games_filter">
+                <select id="game_properties">
+                    <option value="Genre">Genre</option>
+                    <option value="Sport">Sport</option>
+                    <option value="Shooter">Shooter</option>
+                    <option value="Racing">Racing</option>
+                    <option value="Horror">Horror</option>
+                </select>
+            </form>
+            <form class="radio__filter">
+                <div class="radio__games_filter">
+                    <input disabled type="radio" id="platform" name="filter_games" value="Platform">
+                    <label for="platform">Platform</label>
                 </div>
-                <div class="Filter__forms_checkbox">
-                    <label for="Platform">
-                        <input type="checkbox" id="Platform">
-                        Platform
-                    </label>
-                    <label for="Online_games">
-                        <input type="checkbox" id="Online_games">
-                        Online games
-                    </label>
+                <div class="radio__games_filter">
+                    <input disabled type="radio" id="online-games" name="filter_games" value="Online games">
+                    <label for="online-games">Online games</label>
                 </div>
-                <div class="Filter__forms_radio">
-                    <label for="New">
-                        <input type="radio" name="radio" value="New" id="New">
-                        New
-                    </label>
-                    <label for="Old">
-                        <input type="radio" name="radio" value="Old" id="Old">
-                        Old
-                    </label>
+            </form>
+            <form class="checkbox__filter" id="filterForm" data-type="filter-form">
+                <div class="checkbox__games_filter">
+
+                    <input disabled type="checkbox" data-filter="new" id="new_games" name="New">
+                    <label for="new_games">New</label>
                 </div>
-                <div class="Filter__forms_search">
-                    <input class="Filter__forms_search_input" placeholder="Search" type="search">
-                    <button type="submit" class="Filter__forms_search_btn">Apply</button>
+                <div class="checkbox__games_filter">
+                    <input disabled type="checkbox" data-filter="old" id="old_games" name="Old">
+
+                    <label for="old_games">Old</label>
                 </div>
-            </div>
-        </form>
+            </form>
+            <form class="search__bar" action="#">
+
+                <input disabled type="text" id="search" class="search__input" placeholder="Search">
+
+                <button id="apply" type="submit">Apply</button>
+            </form>
+        </div>
         <section class="Games">
             <h1 class="Games__title">Study project "Games"</h1>
-            <div class="Games__cards">
-                <div class="Games__cards_desc">
-                    <div class="Games__cards_top">
-                        <img class="Games__cards_top_img" src="img/Rectangle 7.png" alt="Games logo">
-                        <div class="Games__cards_top_text">
-                            <h2 class="Games__cards_top_text_title">Overwatch 2</h2>
-                            <p class="Games__cards_top_text_p">Big changes come to the Overwatch formula in this sequel...</p>
-                        </div>
-                    </div>
-                    <div class="Games__cards_btm">
-                        <p class="Games__cards_btm_name">
-                            <span class="Games__cards_btm_bold">Genre: </span>
-                            Shooter
-                        </p>
-                        <p class="Games__cards_btm_name">
-                            <span class="Games__cards_btm_bold">Platform: </span>
-                            PC (Windows)
-                        </p>
-                        <p class="Games__cards_btm_name">
-                            <span class="Games__cards_btm_bold">Publisher: </span>
-                            Activision Blizzard King
-                        </p>
-                        <p class="Games__cards_btm_name">
-                            <span class="Games__cards_btm_bold">Developer: </span>
-                            Blizzard Entertainment
-                        </p>
-                        <p class="Games__cards_btm_name">
-                            <span class="Games__cards_btm_bold">Release_date: </span>
-                            2022-10-04
-                        </p>
+
+            <div class="loading-overlay" id="loading-overlay">Loading...</div>
+            <ul class="card__container" data-type="card-container"></ul>
+        </section>
+
+        <template class="card-template">
+            <div class="Games__cards_desc" data-type="Games__cards_desc">
+                <div class="Games__cards_top">
+                    <img src="img/Rectangle%207.png" class="Games__cards_top_img" data-type="Games__cards_top_img" data-card-img alt="Games logo">
+                    <div class="Games__cards_top_text" data-type="Games__cards_top_text">
+                        <h2 class="Games__cards_top_text_title" data-type="Games__cards_top_text_title" data-card-title></h2>
+                        <p class="Games__cards_top_text_p" data-type="Games__cards_top_text_p"></p>
                     </div>
                 </div>
-                <div class="Games__cards_desc">
-                    <div class="Games__cards_top">
-                        <img class="Games__cards_top_img" src="img/Rectangle 7.png" alt="Games logo">
-                        <div class="Games__cards_top_text">
-                            <h2 class="Games__cards_top_text_title">
-                                Overwatch 2
-                            </h2>
-                            <p class="Games__cards_top_text_p">
-                                Big changes come to the Overwatch formula in this sequel...
-                            </p>
-                        </div>
-                    </div>
-                    <div class="Games__cards_btm">
-                        <p class="Games__cards_btm_name">
-                            <span class="Games__cards_btm_bold">Genre: </span>
-                            Shooter
-                        </p>
-                        <p class="Games__cards_btm_name">
-                            <span class="Games__cards_btm_bold">Platform: </span>
-                            PC (Windows)
-                        </p>
-                        <p class="Games__cards_btm_name">
-                            <span class="Games__cards_btm_bold">Publisher: </span>
-                            Activision Blizzard King
-                        </p>
-                        <p class="Games__cards_btm_name">
-                            <span class="Games__cards_btm_bold">Developer: </span>
-                            Blizzard Entertainment
-                        </p>
-                        <p class="Games__cards_btm_name">
-                            <span class="Games__cards_btm_bold">Release_date: </span>
-                            2022-10-04
-                        </p>
-                    </div>
-                </div>
-                <div class="Games__cards_desc">
-                    <div class="Games__cards_top">
-                        <img class="Games__cards_top_img" src="img/Rectangle 7.png" alt="Games logo">
-                        <div class="Games__cards_top_text">
-                            <h2 class="Games__cards_top_text_title">
-                                Overwatch 2
-                            </h2>
-                            <p class="Games__cards_top_text_p">
-                                Big changes come to the Overwatch formula in this sequel...
-                            </p>
-                        </div>
-                    </div>
-                    <div class="Games__cards_btm">
-                        <p class="Games__cards_btm_name">
-                            <span class="Games__cards_btm_bold">Genre: </span>
-                            Shooter
-                        </p>
-                        <p class="Games__cards_btm_name">
-                            <span class="Games__cards_btm_bold">Platform: </span>
-                            PC (Windows)
-                        </p>
-                        <p class="Games__cards_btm_name">
-                            <span class="Games__cards_btm_bold">Publisher: </span>
-                            Activision Blizzard King
-                        </p>
-                        <p class="Games__cards_btm_name">
-                            <span class="Games__cards_btm_bold">Developer: </span>
-                            Blizzard Entertainment
-                        </p>
-                        <p class="Games__cards_btm_name">
-                            <span class="Games__cards_btm_bold">Release_date: </span>
-                            2022-10-04
-                        </p>
-                    </div>
-                </div>
-                <div class="Games__cards_desc">
-                    <div class="Games__cards_top">
-                        <img class="Games__cards_top_img" src="img/Rectangle 7.png" alt="Games logo">
-                        <div class="Games__cards_top_text">
-                            <h2 class="Games__cards_top_text_title">
-                                Overwatch 2
-                            </h2>
-                            <p class="Games__cards_top_text_p">
-                                Big changes come to the Overwatch formula in this sequel...
-                            </p>
-                        </div>
-                    </div>
-                    <div class="Games__cards_btm">
-                        <p class="Games__cards_btm_name">
-                            <span class="Games__cards_btm_bold">Genre: </span>
-                            Shooter
-                        </p>
-                        <p class="Games__cards_btm_name">
-                            <span class="Games__cards_btm_bold">Platform: </span>
-                            PC (Windows)
-                        </p>
-                        <p class="Games__cards_btm_name">
-                            <span class="Games__cards_btm_bold">Publisher: </span>
-                            Activision Blizzard King
-                        </p>
-                        <p class="Games__cards_btm_name">
-                            <span class="Games__cards_btm_bold">Developer: </span>
-                            Blizzard Entertainment
-                        </p>
-                        <p class="Games__cards_btm_name">
-                            <span class="Games__cards_btm_bold">Release_date: </span>
-                            2022-10-04
-                        </p>
-                    </div>
-                </div>
-                <div class="Games__cards_desc">
-                    <div class="Games__cards_top">
-                        <img class="Games__cards_top_img" src="img/Rectangle 7.png" alt="Games logo">
-                        <div class="Games__cards_top_text">
-                            <h2 class="Games__cards_top_text_title">
-                                Overwatch 2
-                            </h2>
-                            <p class="Games__cards_top_text_p">
-                                Big changes come to the Overwatch formula in this sequel...
-                            </p>
-                        </div>
-                    </div>
-                    <div class="Games__cards_btm">
-                        <p class="Games__cards_btm_name">
-                            <span class="Games__cards_btm_bold">Genre: </span>
-                            Shooter
-                        </p>
-                        <p class="Games__cards_btm_name">
-                            <span class="Games__cards_btm_bold">Platform: </span>
-                            PC (Windows)
-                        </p>
-                        <p class="Games__cards_btm_name">
-                            <span class="Games__cards_btm_bold">Publisher: </span>
-                            Activision Blizzard King
-                        </p>
-                        <p class="Games__cards_btm_name">
-                            <span class="Games__cards_btm_bold">Developer: </span>
-                            Blizzard Entertainment
-                        </p>
-                        <p class="Games__cards_btm_name">
-                            <span class="Games__cards_btm_bold">Release_date: </span>
-                            2022-10-04
-                        </p>
-                    </div>
-                </div>
-                <div class="Games__cards_desc">
-                    <div class="Games__cards_top">
-                        <img class="Games__cards_top_img" src="img/Rectangle 7.png" alt="Games logo">
-                        <div class="Games__cards_top_text">
-                            <h2 class="Games__cards_top_text_title">
-                                Overwatch 2
-                            </h2>
-                            <p class="Games__cards_top_text_p">
-                                Big changes come to the Overwatch formula in this sequel...
-                            </p>
-                        </div>
-                    </div>
-                    <div class="Games__cards_btm">
-                        <p class="Games__cards_btm_name">
-                            <span class="Games__cards_btm_bold">Genre: </span>
-                            Shooter
-                        </p>
-                        <p class="Games__cards_btm_name">
-                            <span class="Games__cards_btm_bold">Platform: </span>
-                            PC (Windows)
-                        </p>
-                        <p class="Games__cards_btm_name">
-                            <span class="Games__cards_btm_bold">Publisher: </span>
-                            Activision Blizzard King
-                        </p>
-                        <p class="Games__cards_btm_name">
-                            <span class="Games__cards_btm_bold">Developer: </span>
-                            Blizzard Entertainment
-                        </p>
-                        <p class="Games__cards_btm_name">
-                            <span class="Games__cards_btm_bold">Release_date: </span>
-                            2022-10-04
-                        </p>
-                    </div>
-                </div>
-                <div class="Games__cards_desc">
-                    <div class="Games__cards_top">
-                        <img class="Games__cards_top_img" src="img/Rectangle 7.png" alt="Games logo">
-                        <div class="Games__cards_top_text">
-                            <h2 class="Games__cards_top_text_title">
-                                Overwatch 2
-                            </h2>
-                            <p class="Games__cards_top_text_p">
-                                Big changes come to the Overwatch formula in this sequel...
-                            </p>
-                        </div>
-                    </div>
-                    <div class="Games__cards_btm">
-                        <p class="Games__cards_btm_name">
-                            <span class="Games__cards_btm_bold">Genre: </span>
-                            Shooter
-                        </p>
-                        <p class="Games__cards_btm_name">
-                            <span class="Games__cards_btm_bold">Platform: </span>
-                            PC (Windows)
-                        </p>
-                        <p class="Games__cards_btm_name">
-                            <span class="Games__cards_btm_bold">Publisher: </span>
-                            Activision Blizzard King
-                        </p>
-                        <p class="Games__cards_btm_name">
-                            <span class="Games__cards_btm_bold">Developer: </span>
-                            Blizzard Entertainment
-                        </p>
-                        <p class="Games__cards_btm_name">
-                            <span class="Games__cards_btm_bold">Release_date: </span>
-                            2022-10-04
-                        </p>
-                    </div>
-                </div>
-                <div class="Games__cards_desc">
-                    <div class="Games__cards_top">
-                        <img class="Games__cards_top_img" src="img/Rectangle 7.png" alt="Games logo">
-                        <div class="Games__cards_top_text">
-                            <h2 class="Games__cards_top_text_title">
-                                Overwatch 2
-                            </h2>
-                            <p class="Games__cards_top_text_p">
-                                Big changes come to the Overwatch formula in this sequel...
-                            </p>
-                        </div>
-                    </div>
-                    <div class="Games__cards_btm">
-                        <p class="Games__cards_btm_name">
-                            <span class="Games__cards_btm_bold">Genre: </span>
-                            Shooter
-                        </p>
-                        <p class="Games__cards_btm_name">
-                            <span class="Games__cards_btm_bold">Platform: </span>
-                            PC (Windows)
-                        </p>
-                        <p class="Games__cards_btm_name">
-                            <span class="Games__cards_btm_bold">Publisher: </span>
-                            Activision Blizzard King
-                        </p>
-                        <p class="Games__cards_btm_name">
-                            <span class="Games__cards_btm_bold">Developer: </span>
-                            Blizzard Entertainment
-                        </p>
-                        <p class="Games__cards_btm_name">
-                            <span class="Games__cards_btm_bold">Release_date: </span>
-                            2022-10-04
-                        </p>
-                    </div>
+                <div class="Games__cards_btm" data-type="Games__cards_btm">
+                    <p class="Games__cards_btm_name" data-type="data-card-genre">
+                        <span class="Games__cards_btm_bold" data-type="Games__cards_btm_bold" data-card-genre>Genre: </span>
+                    </p>
+                    <p class="Games__cards_btm_name" data-type="data-card-platform">
+                        <span class="Games__cards_btm_bold" data-type="Games__cards_btm_bold" data-card-platform>Platform: </span>
+                    </p>
+                    <p class="Games__cards_btm_name" data-type="data-card-publisher">
+                        <span class="Games__cards_btm_bold" data-type="Games__cards_btm_bold" data-card-publisher>Publisher: </span>
+                    </p>
+                    <p class="Games__cards_btm_name" data-type="data-card-developer">
+                        <span class="Games__cards_btm_bold" data-type="Games__cards_btm_bold" data-card-developer>Developer: </span>
+                    </p>
+                    <p class="Games__cards_btm_name" data-type="data-card-release-date">
+                        <span class="Games__cards_btm_bold" data-type="Games__cards_btm_bold" data-card-release-date>Release_date: </span>
+                    </p>
+
                 </div>
             </div>
-        </section>
+        </template>
+        <footer class="footer">
+            <div class="footer__icons">
+                <div class="footer__icons_row">
+                    <a href="https://www.facebook.com/sviatoslav.taranenko" target="_blank">
+                        <div class="footer__icons_all">
+                            <img src="img/facebook.png" alt="Logo">
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/%D1%81%D0%B2%D1%8F%D1%82%D0%BE%D1%81%D0%BB%D0%B0%D0%B2-%D1%82%D0%B0%D1%80%D0%B0%D0%BD%D0%B5%D0%BD%D0%BA%D0%BE-6bb602273/" target="_blank">
+                        <div class="footer__icons_all">
+                            <img src="img/LinkedIn.png" alt="Logo">
+                        </div>
+                    </a>
+                    <a href="https://www.instagram.com/sviat_taranenko" target="_blank">
+                        <div class="footer__icons_all">
+                            <img src="img/Instagram.png" alt="Logo">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="footer__text">
+                <p>Made with 💗 on course
+                    <a class="about__text_link" href="https://www.mastersacademy.education/frontend-for-beginners-it" target="_blank">'Frontend for beginners' from Masters Academy in 2023,</a>  by Sviatoslav Taranenko
+                </p>
+            </div>
+        </footer>
+        <script src="scripts/Games.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                loadAndRenderGames();
+            });
+
+            async function loadAndRenderGames() {
+                const loadingOverlay = document.getElementById('loading-overlay');
+                loadingOverlay.style.display = 'flex';
+
+                try {
+                    const response = await fetch('https://mmo-games.p.rapidapi.com/games', {
+                        method: 'GET',
+                        headers: {
+                            'X-RapidAPI-Key': '1c3169c707mshb51bff34cbc9ff6p1749b9jsn648a19134256',
+                            'X-RapidAPI-Host': 'mmo-games.p.rapidapi.com',
+                        },
+                    });
+
+                    const gamesData = await response.json();
+
+                    renderGames(gamesData.slice(0, 50));
+                } catch (error) {
+                    console.error('Помилка при отриманні ігор:', error);
+                } finally {
+                    loadingOverlay.style.display = 'none';
+                }
+            }
+        </script>
+        <script src="scripts/Games.js"></script>
     </body>
 </html>

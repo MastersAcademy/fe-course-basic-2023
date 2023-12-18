@@ -16,8 +16,7 @@
 }
 
 .card-pokemon__image {
-  min-width: 90px;
-  min-height: 90px;
+  max-width: 90px;
 }
 
 .card-pokemon__title {
@@ -51,6 +50,7 @@
 .card-pokemon__btn {
   cursor: pointer;
   min-width: 69px;
+  margin: 5px;
   padding: 7px 9px;
   font-family: Roboto, sans-serif;
   font-size: 14px;
@@ -67,18 +67,38 @@
   filter: brightness(.9);
 }
 
-.card-pokemon__btn--yellow {
+.card-pokemon__btn--flying {
   background-color: #FDB714;
 }
 
-.card-pokemon__btn--red {
-  background-color: #EF4934;
+.card-pokemon__btn--fire {
+  background-color: #FC8B00;
 }
 
-.card-pokemon__btn--pink {
+.card-pokemon__btn--psychic {
   background-color: #FF87F3;
 }
 
-.card-pokemon__btn--purple {
-  background-color: #3447EF;
+.card-pokemon__btn--dragon {
+  background-color: #803078;
+}
+
+.card-pokemon__btn--ice {
+  background-color: #A5CEDC;
+}
+
+.card-pokemon__btn--water {
+  background-color: #00BAF7;
+}
+
+.card-pokemon__btn--rock {
+  background-color: #7D7C7C;
+}
+
+.card-pokemon__btn--ground {
+  background-color: #27561A;
+}
+
+.card-pokemon__btn--electric {
+  background-color: #7B00FF;
 }

@@ -9,9 +9,16 @@
   column-gap: 12px;
 }
 
+/* stylelint-disable value-no-vendor-prefix */
+
 .card__view p {
   font-size: 14px;
   font-weight: 400;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  white-space: pre-wrap;
 }
 
 .card__list {
@@ -60,6 +67,10 @@ dd {
 
 dt::after {
   content: ": ";
+}
+
+.hidden {
+  display: none;
 }
 
 @media only screen and (min-width: 768px) {

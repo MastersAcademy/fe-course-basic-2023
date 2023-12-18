@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Basic JS</title>
+        <link rel="stylesheet" href="./styles/calculator.css">
+    </head>
+    <body>
+
+        <!-- Header  -->
+        <header class="intro">
+            <div class="nav">
+                <div class="logo">
+                    <img src="icon/logo.svg" alt="img">
+                </div>
+
+                <div class="nav-menu">
+                    <ul class="link_list">
+
+                        <li class="link">
+                            <a class="nav-link" href="./calculator.html">Calculator</a>
+                        </li>
+
+                        <li class="link">
+                            <a class="nav-link" href="./games.html">Games</a>
+                        </li>
+
+                        <li class="link">
+                            <a class="nav-link" href="./index.html">About</a>
+                        </li>
+
+                        <li class="link">
+                            <a class="nav-link" href="./form.html">Login</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <h1>Calculator v. 1</h1>
+        <div class="field">
+            <label>
+                <input id="firstValue">
+            </label>
+            <label>
+                <select name="operation" id="operation">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="/">/</option>
+                    <option value="*">*</option>
+                    <option value="**">**</option>
+                </select>
+            </label>
+            <label>
+                <input id="secondValue">
+            </label>
+            <button id="calculate" type="button">=</button>
+            <span id="result"></span>
+        </div>
+
+        <footer class="footer">
+            <div class="social">
+                <a href="#">
+                    <img src="icon/facebook.svg" alt="img">
+                </a>
+
+                <a href="#">
+                    <img src="icon/in.svg" alt="img">
+                </a>
+
+                <a href="#">
+                    <img src="icon/insta.svg" alt="img">
+                </a>
+            </div>
+
+            <p class="footer_text">
+                Made with 💗 on course <a class="footer_link" href="https://www.mastersacademy.education/frontend-
+                           for-beginners-it">'Frontend for beginners' from Masters Academy in 2023,</a> by Igor</p>
+
+        </footer>
+        <script src="./scripts/script-calculator.js"></script>
+        <script src="./scripts/homework.js"></script>
+    </body>
+</html>

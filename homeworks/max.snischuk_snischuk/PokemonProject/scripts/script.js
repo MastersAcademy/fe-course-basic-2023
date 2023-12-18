@@ -4,9 +4,36 @@ const OPERATION_ELEMENT = document.querySelector('[data-math-operation]');
 const CALCULATE_BUTTON_ELEMENT = document.querySelector('[data-math-calculate-btn]');
 const RESULT_VALUE_ELEMENT = document.querySelector('[data-math-output-value]');
 const CALCULATOR_CONTAINER = document.querySelector('[data-math-container]');
+const CALCULATOR_TIME = document.querySelector('[data-math-time]');
 
 const MIN_CARDS_IN_COLUMN = 1;
 const MAX_CARDS_IN_COLUMN = 10;
+
+function measureTimeFn(fn) {
+    const start = Date.now();
+    for (let i = 0; i < 100; i++) {
+        fn();
+    }
+    const finish = Date.now();
+    const duration = finish - start;
+
+    return `Time of function execution: ${duration}ms`;
+}
+
+function formatCustomDate(date) {
+    const year = date.getFullYear();
+    const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const month = monthNames[date.getMonth()];
+    let dayOfMonth = date.getDate();
+    let hour = date.getHours();
+    let minutes = date.getMinutes();
+
+    dayOfMonth = dayOfMonth < 10 ? `0${dayOfMonth}` : dayOfMonth;
+    hour = hour < 10 ? `0${hour}` : hour;
+    minutes = minutes < 10 ? `0${minutes}` : minutes;
+
+    return `Date of calculation: ${dayOfMonth}-${month}-${year}, ${hour}:${minutes}.`;
+}
 
 function deleteMathExpression() {
     const MATH_EXPRESSION_ELEMENT = CALCULATOR_CONTAINER.querySelector('[data-math-output-list]');
@@ -21,7 +48,7 @@ function createMathExpressionElement(value1, sign, value2, result) {
             <li class="calculator__math-output-item">${sign}</li>
             <li class="calculator__math-output-item">${value2}</li>
             <li class="calculator__math-output-item">=</li>
-            <li class="calculator__math-output-item" data-math-operand="last">${result} pokemons</li>
+            <li class="calculator__math-output-item" data-math-operand="last">${result}</li>
         </ul>
     `;
 }
@@ -29,14 +56,17 @@ function createMathExpressionElement(value1, sign, value2, result) {
 function renderMathExpressionElement() {
     deleteMathExpression();
 
-    const firstValue = FIRST_VALUE_ELEMENT.value;
-    const secondValue = SECOND_VALUE_ELEMENT.value;
+    const firstValue = Number.parseFloat(FIRST_VALUE_ELEMENT.value);
+    const secondValue = Number.parseFloat(SECOND_VALUE_ELEMENT.value);
     const operation = OPERATION_ELEMENT.value;
+
+    if (Number.isNaN(firstValue) || Number.isNaN(secondValue)) {
+        RESULT_VALUE_ELEMENT.innerText = 'Enter a number';
+        return;
+    }
 
     const mathResult = window.calculate(firstValue, secondValue, operation);
     RESULT_VALUE_ELEMENT.innerText = mathResult;
-
-    if (typeof mathResult !== 'number') return;
 
     CALCULATOR_CONTAINER.insertAdjacentHTML('beforeend', createMathExpressionElement(firstValue, operation, secondValue, mathResult));
 }
@@ -131,12 +161,16 @@ function firstOutputOperandHandler() {
     const MATH_FIRST_OPERAND_ELEMENT = document.querySelector('[data-math-operand="first"]');
     const pokemonsCardsCount = FIRST_VALUE_ELEMENT.value;
 
-    if (pokemonsCardsCount <= 0) {
+    if (pokemonsCardsCount < 0) {
         deleteMathExpression();
         return;
     }
 
-    if (pokemonsCardsCount < MIN_CARDS_IN_COLUMN) {
+    if (pokemonsCardsCount === 0) {
+        MATH_FIRST_OPERAND_ELEMENT.innerHTML = 0;
+    }
+
+    if (pokemonsCardsCount > 0 && pokemonsCardsCount < MIN_CARDS_IN_COLUMN) {
         clearElement(MATH_FIRST_OPERAND_ELEMENT);
 
         const partialCardSize = pokemonsCardsCount;
@@ -146,7 +180,7 @@ function firstOutputOperandHandler() {
         return;
     }
 
-    if (pokemonsCardsCount <= MAX_CARDS_IN_COLUMN) {
+    if (pokemonsCardsCount >= MIN_CARDS_IN_COLUMN && pokemonsCardsCount <= MAX_CARDS_IN_COLUMN) {
         clearElement(MATH_FIRST_OPERAND_ELEMENT);
 
         const cardsList = addCardsToList(pokemonsCardsCount);
@@ -160,7 +194,7 @@ function lastOutputOperandHandler() {
     const LIMIT_CARDS = 100;
     const MATH_LAST_OPERAND_ELEMENT = document.querySelector('[data-math-operand="last"]');
 
-    const pokemonsCountResult = RESULT_VALUE_ELEMENT.innerText;
+    const pokemonsCountResult = Number.parseFloat(RESULT_VALUE_ELEMENT.innerText);
 
     if (pokemonsCountResult <= 0) {
         deleteMathExpression();
@@ -177,7 +211,7 @@ function lastOutputOperandHandler() {
         return;
     }
 
-    if (pokemonsCountResult <= LIMIT_CARDS) {
+    if (pokemonsCountResult >= MIN_CARDS_IN_COLUMN && pokemonsCountResult <= LIMIT_CARDS) {
         clearElement(MATH_LAST_OPERAND_ELEMENT);
 
         const columnCount = Math.ceil(pokemonsCountResult / MAX_CARDS_IN_COLUMN);
@@ -196,12 +230,16 @@ function lastOutputOperandHandler() {
 }
 
 CALCULATE_BUTTON_ELEMENT.addEventListener('click', () => {
-    renderMathExpressionElement();
+    const measuredTime = measureTimeFn(renderMathExpressionElement);
+    const dateCalculation = formatCustomDate(new Date());
+    CALCULATOR_TIME.innerHTML = `${dateCalculation} ${measuredTime}`;
 });
 
 FIRST_VALUE_ELEMENT.addEventListener('input', () => {
     renderMathExpressionElement();
-
     firstOutputOperandHandler();
-    lastOutputOperandHandler();
+
+    const measuredTime = measureTimeFn(lastOutputOperandHandler);
+    const dateCalculation = formatCustomDate(new Date());
+    CALCULATOR_TIME.innerHTML = `${dateCalculation} ${measuredTime}`;
 });
