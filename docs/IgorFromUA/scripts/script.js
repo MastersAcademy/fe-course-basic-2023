@@ -1,15 +1,3 @@
-const FIRST_VALUE_ELEMENT = document.getElementById('firstValue');
-const SECOND_VALUE_ELEMENT = document.getElementById('secondValue');
-const OPERATION_ELEMENT = document.getElementById('operation');
-const CALCULATE_BUTTON_ELEMENT = document.getElementById('calculate');
-const RESULT_ELEMENT = document.getElementById('result');
-const FIRST_NUMBER_BIG_ELEMENT = document.querySelector('[data-big-result="first-number"]');
-const OPERATION_BIG_ELEMENT = document.querySelector('[data-big-result="operation"]');
-const SECOND_NUMBER_BIG_ELEMENT = document.querySelector('[data-big-result="second-number"]');
-const RESULT_BIG_ELEMENT = document.querySelector('[data-big-result="result"]');
-const EQUAL_BIG_ELEMENT = document.querySelector('[data-big-result="equal"]');
-const DATE_TEXT_ELEMENT = document.querySelector('[data-date-text]');
-
 function formatDate(date) {
     const allMonth = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     const dateNow = date.getDate();
@@ -26,11 +14,10 @@ function creatDateString(date, executionTime) {
 }
 
 function clearBigResultElement() {
-    FIRST_NUMBER_BIG_ELEMENT.innerText = '';
-    OPERATION_BIG_ELEMENT.innerText = '';
-    SECOND_NUMBER_BIG_ELEMENT.innerText = '';
-    RESULT_BIG_ELEMENT.innerText = '';
-    EQUAL_BIG_ELEMENT.innerText = '';
+    const BIG_RESULT_ELEMENTS = document.querySelector('[data-big-result]');
+    Array.from(BIG_RESULT_ELEMENTS.children).forEach((el) => {
+        el.innerText = '';
+    });
 }
 
 function trimLastCard(num, place) {
@@ -52,6 +39,7 @@ function showManyCards(amount, place) {
 }
 
 function showResult(result) {
+    const RESULT_ELEMENT = document.getElementById('result');
     if ((typeof result) === 'number') {
         RESULT_ELEMENT.innerText = result + (result > 1 ? ' games' : ' game');
     } else {
@@ -60,12 +48,17 @@ function showResult(result) {
 }
 
 function showBigElement(operation, secondValue) {
+    const OPERATION_BIG_ELEMENT = document.querySelector('[data-big-result="operation"]');
+    const SECOND_NUMBER_BIG_ELEMENT = document.querySelector('[data-big-result="second-number"]');
+    const EQUAL_BIG_ELEMENT = document.querySelector('[data-big-result="equal"]');
     OPERATION_BIG_ELEMENT.innerText = operation;
     SECOND_NUMBER_BIG_ELEMENT.innerText = secondValue;
     EQUAL_BIG_ELEMENT.innerText = '=';
 }
 
 function showBigResult(firstValue, secondValue, operation, res) {
+    const FIRST_NUMBER_BIG_ELEMENT = document.querySelector('[data-big-result="first-number"]');
+    const RESULT_BIG_ELEMENT = document.querySelector('[data-big-result="result"]');
     let result = res;
     clearBigResultElement();
     if (firstValue > 10) result = 'enter first number 1 - 10';
@@ -96,6 +89,10 @@ function showBigResult(firstValue, secondValue, operation, res) {
 }
 
 function handlerCalculate() {
+    const FIRST_VALUE_ELEMENT = document.getElementById('firstValue');
+    const SECOND_VALUE_ELEMENT = document.getElementById('secondValue');
+    const OPERATION_ELEMENT = document.getElementById('operation');
+    const DATE_TEXT_ELEMENT = document.querySelector('[data-date-text]');
     const firstValue = FIRST_VALUE_ELEMENT.value;
     const secondValue = SECOND_VALUE_ELEMENT.value;
     const operation = OPERATION_ELEMENT.value;
@@ -107,4 +104,8 @@ function handlerCalculate() {
     showBigResult(firstValue, secondValue, operation, result);
 }
 
-CALCULATE_BUTTON_ELEMENT.addEventListener('click', handlerCalculate);
+function initCalc() {
+    const CALCULATE_BUTTON_ELEMENT = document.getElementById('calculate');
+    CALCULATE_BUTTON_ELEMENT.addEventListener('click', handlerCalculate);
+}
+initCalc();

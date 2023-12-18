@@ -15,14 +15,12 @@
   margin: 40px 0 25px;
 }
 
-.label {
-  display: flex;
-  flex-direction: column;
-  margin-top: -20px;
-}
-
 .limit {
+  max-width: 300px;
+  display: flex;
+  justify-content: space-between;
   font-size: 14px;
+  margin-left: 8px;
 }
 
 .field__input {
@@ -140,6 +138,11 @@
 
 @media (min-width: 480px) {
 
+  .limit {
+    max-width: 400px;
+    margin-left: 53px;
+  }
+
   .big-result {
     font-size: 30px;
     gap: 30px;
@@ -183,6 +186,11 @@
 }
 
 @media (min-width: 768px) {
+
+  .limit {
+    max-width: 620px;
+    margin-left: 53px;
+  }
 
   .big-result {
     font-size: 48px;
