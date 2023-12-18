@@ -1,8 +1,9 @@
-.log-in__main {
-  position: absolute;
-  top: 100px;
-  left: 50%;
-  transform: translateX(-50%);
+.main__log-in {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 140px;
+  padding-bottom: 200px;
 }
 
 .log-in {
@@ -14,11 +15,7 @@
 }
 
 .log-in__label {
-  margin-top: 10px;
-}
-
-.log-in__heading {
-  text-align: center;
+  margin-top: 20px;
 }
 
 .log-in__input {

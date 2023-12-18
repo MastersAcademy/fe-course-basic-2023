@@ -10,7 +10,7 @@ const newFirstButton = document.querySelector('[data-new-first]');
 const oldFirstButton = document.querySelector('[data-old-first]');
 const infoElement = document.querySelector('[data-info]');
 async function getGamesArray() {
-    infoElement.classList.replace('main__info--disabled', 'main__info');
+    infoElement.classList.replace('cards-loading-info--disabled', 'cards-loading-info');
     footerElement.classList.replace('footer--relative', 'footer--absolute');
     cardContainer.innerHTML = '';
     infoElement.innerText = 'Loading...';
@@ -84,12 +84,12 @@ function renderCards(container, gamesArray) {
         fragment.append(createCardElement(count, gamesArray));
     }
     container.append(fragment);
-    infoElement.classList.replace('main__info', 'main__info--disabled');
+    infoElement.classList.replace('cards-loading-info', 'cards-loading-info--disabled');
     if (gamesArray.length !== 0) {
         footerElement.classList.replace('footer--absolute', 'footer--relative');
     } else {
         footerElement.classList.add('footer--absolute');
-        infoElement.classList.replace('main__info--disabled', 'main__info');
+        infoElement.classList.replace('cards-loading-info--disabled', 'cards-loading-info');
         infoElement.innerText = 'No Results';
     }
 }

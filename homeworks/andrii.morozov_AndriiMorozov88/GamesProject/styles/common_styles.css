@@ -14,9 +14,9 @@ body {
 }
 
 .main {
-  padding-left: 53px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .main__heading {
