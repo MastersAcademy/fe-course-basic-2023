@@ -13,7 +13,7 @@ function hideLoadingOverlay() {
     loadingOverlay.style.display = 'none';
 }
 
-async function createCardElement(game) {
+function createCardElement(game) {
     const cardCopy = document.createElement('li');
     cardCopy.classList.add('games__card');
     cardCopy.innerHTML = template.innerHTML;
@@ -25,14 +25,14 @@ async function createCardElement(game) {
     return cardCopy;
 }
 
-async function renderCards(container, games) {
+function renderCards(container, games) {
     const fragment = document.createDocumentFragment();
     const containerElement = document.querySelector(`[data-type="${container}"]`);
 
-    await Promise.all(games.map(async (game) => {
-        const card = await createCardElement(game);
+    games.forEach((game) => {
+        const card = createCardElement(game);
         fragment.appendChild(card);
-    }));
+    });
 
     containerElement.innerHTML = '';
     containerElement.appendChild(fragment);

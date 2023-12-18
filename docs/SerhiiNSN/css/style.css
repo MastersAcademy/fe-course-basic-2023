@@ -21,6 +21,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  min-width: 400px;
 }
 
 .main {
@@ -151,9 +152,17 @@ body {
   margin-bottom: 22px;
 }
 
-.card__icon img {
-  width: 90px;
+.card__icon {
   height: 90px;
+  overflow: hidden;
+}
+
+.card__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
 }
 
 .card__tittle {
@@ -378,7 +387,6 @@ body {
   font-family: Roboto;
   font-size: 14px;
   font-weight: 400;
-  cursor: pointer;
 }
 
 /* ========================== LOGIN ============================= */
@@ -646,7 +654,7 @@ body {
 
 @media (max-width: 600px) {
 
-  body.active {
+  body.no-scroll {
     overflow: hidden;
   }
 
@@ -721,17 +729,17 @@ body {
     bottom: 0;
   }
 
-  .header__burger.active span {
+  .header__burger.opened span {
     transform: scale(0);
   }
 
 
-  .header__burger.active::before {
+  .header__burger.opened::before {
     transform: rotate(45deg);
     top: 9px;
   }
 
-  .header__burger.active::after {
+  .header__burger.opened::after {
     transform: rotate(-45deg);
     bottom: 9px;
   }

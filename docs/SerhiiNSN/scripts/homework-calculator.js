@@ -15,7 +15,11 @@ function calculate(firstValue, secondValue, operation) {
     const num1 = Number(firstValue);
     const num2 = Number(secondValue);
 
-    if (!num1 || !num2) {
+    if (Number.isNaN(num1) || Number.isNaN(num2)) {
+        return 'Enter a number';
+    }
+
+    if (firstValue.trim() === '' || secondValue.trim() === '') {
         return 'Enter a number';
     }
 
