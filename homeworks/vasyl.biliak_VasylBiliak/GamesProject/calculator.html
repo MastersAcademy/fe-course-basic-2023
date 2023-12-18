@@ -41,31 +41,18 @@
             </div>
 
             <section class="calculator">
-                <label class="calculator__label">
-                    Number 1
-                    <input class="input_number" id="number1" type="number" placeholder="Enter the number 1" maxlength="1" max="10" min="-10">
-                </label>
-                <label class="calculator__label">
-                    Operation:
-                    <select class="select-option" id="operatorSelect">
-                        <option class="selected-option" value="+">+</option>
-                        <option class="selected-option" value="-">-</option>
-                        <option class="selected-option" value="*">*</option>
-                        <option class="selected-option" value="/">/</option>
-                        <option class="selected-option" value="%">%</option>
-                        <option class="selected-option" value="**">**</option>
-                    </select>
-                </label>
-                <label class="calculator__label">Number 2
-                    <input class="input_number" id="number2" type="number" placeholder="Enter the number 2" max="100" min="-100">
-                </label>
-                <label class="calculator__label"> Equals
-                    <button class="select-option" id="equals" type="button">=</button>
-                </label>
-                <label class="calculator__label">
-                    Result:
-                    <h1 class="result" id="result"></h1>
-                </label>
+                <input class="input_number" id="number1" type="number" placeholder="Enter the number 1" maxlength="1" max="10" min="-10">
+                <select class="select-option" id="operatorSelect">
+                    <option class="selected-option" value="+">+</option>
+                    <option class="selected-option" value="-">-</option>
+                    <option class="selected-option" value="*">*</option>
+                    <option class="selected-option" value="/">/</option>
+                    <option class="selected-option" value="%">%</option>
+                    <option class="selected-option" value="**">**</option>
+                </select>
+                <input class="input_number" id="number2" type="number" placeholder="Enter the number 2" max="100" min="-100">
+                <button class="select-option" id="equals" type="button">=</button>
+                <h1 class="result" id="result"></h1>
 
                 <!--quantity foto -->
                 <div class="calculator__input-foto result">
@@ -87,8 +74,8 @@
                     <div class="img" id="photo-container">
                     </div>
                 </div>
-                <div id="result-timestamp" class="result-timestamp"></div>
             </section>
+            <div id="result-timestamp" class="result-timestamp"></div>
         </main>
         <footer class="footer">
             <div class="footer__container">
@@ -116,6 +103,7 @@
                 </div>
             </div>
         </footer>
+
         <script src="scripts/menu.js"></script>
         <script src="./scripts/calculator.js"></script>
     </body>

@@ -38,7 +38,8 @@
   line-height: normal;
 }
 
-.input_number, .select-option {
+.input_number,
+.select-option {
   height: 80px;
   width: 95%;
   font-size: 20px;
@@ -80,6 +81,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  height: 350px;
 }
 
 .result-timestamp {
@@ -88,7 +90,7 @@
   text-align: center;
   padding: 10px;
   margin-top: 10px;
-  grid-column: 1 / span 5;
+  grid-column: 1 / span 4;
 }
 
 .img-container,
@@ -96,7 +98,7 @@
   margin-top: 80px;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-column-gap: 20px;
+  gap: 20px; /* Додавання властивості gap для сумісності з браузерами */
   position: relative;
   justify-content: center;
 }
@@ -108,23 +110,12 @@
   margin-top: -70px;
 }
 
-
-@media (max-width: 1250px) {
-
-  .calculator {
-    height: 125px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-}
-
 @media (max-width: 600px) {
 
   .calculator {
-    height: 125px;
     display: grid;
     grid-template-columns: 1fr;
     gap: 5px;
+    justify-items: center;
   }
 }
