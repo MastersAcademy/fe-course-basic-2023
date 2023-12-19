@@ -19,8 +19,11 @@ const router = createBrowserRouter([
         path: "/calculator",
         element: <CalculatorPage />,
         errorElement: <ErrorPage />,
-    }
-]);
+    }],
+    {
+        basename: "/fe-course-basic-2023",
+    },
+);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
