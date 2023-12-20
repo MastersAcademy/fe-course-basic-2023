@@ -161,10 +161,12 @@ body {
   line-height: 26px;
   padding-top: 10px;
   @media (max-width: 670px) {
+    display: block;
     font-size: 20px;
     line-height: 24px;
   }
   @media (max-width: 500px) {
+    display: block;
     font-size: 16px;
     line-height: 20px;
   }
@@ -205,10 +207,12 @@ body {
   line-height: 26px;
   padding-top: 20px;
   @media (max-width: 670px) {
+    display: block;
     font-size: 20px;
     line-height: 24px;
   }
   @media (max-width: 500px) {
+    display: block;
     font-size: 16px;
     line-height: 20px;
   }
@@ -285,7 +289,7 @@ body {
   line-height: 21px;
   color: #221F1F;
   padding-left: 30px;
-  @media (max-width: 500pxx) {
+  @media (max-width: 500px) {
     font-size: 10px;
   }
 }
