@@ -13,9 +13,8 @@ function creatDateString(date, executionTime) {
     Time of function execution: ${executionTime}ms`;
 }
 
-function clearBigResultElement() {
-    const BIG_RESULT_ELEMENTS = document.querySelector('[data-big-result]');
-    Array.from(BIG_RESULT_ELEMENTS.children).forEach((el) => {
+function clearElements(clearElementsArr) {
+    clearElementsArr.forEach((el) => {
         el.innerText = '';
     });
 }
@@ -57,10 +56,12 @@ function showBigElement(operation, secondValue) {
 }
 
 function showBigResult(firstValue, secondValue, operation, res) {
+    const ERROR_TEXT_ELEMENT = document.querySelector('[data-error-text]');
+    const BIG_RESULT_ELEMENTS = Array.from(document.querySelector('[data-big-result]').children);
     const FIRST_NUMBER_BIG_ELEMENT = document.querySelector('[data-big-result="first-number"]');
     const RESULT_BIG_ELEMENT = document.querySelector('[data-big-result="result"]');
     let result = res;
-    clearBigResultElement();
+    clearElements([ERROR_TEXT_ELEMENT, ...BIG_RESULT_ELEMENTS]);
     if (firstValue > 10) result = 'enter first number 1 - 10';
     if (result === 'Result is too big') {
         showManyCards(firstValue, FIRST_NUMBER_BIG_ELEMENT);
@@ -84,7 +85,7 @@ function showBigResult(firstValue, secondValue, operation, res) {
         }
         showManyCards(result, RESULT_BIG_ELEMENT);
     } else {
-        FIRST_NUMBER_BIG_ELEMENT.innerText = result;
+        ERROR_TEXT_ELEMENT.innerText = result;
     }
 }
 

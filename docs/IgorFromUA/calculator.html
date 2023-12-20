@@ -42,15 +42,13 @@
                     </nav>
                 </header>
                 <h1 class="field__title">Calculate Games</h1>
-                <div class="limit">
-                    <span>max 10</span>
-                    <span>max100</span>
-                </div>
                 <div class="field">
-                    <label  >
+                    <span class="limit__min">max 10</span>
+                    <span class="limit__max">max100</span>
+                    <label class="field__label-firstValue">
                         <input id="firstValue" class="field__input">
                     </label>
-                    <label>
+                    <label class="field__label-select">
                         <select name="operation" id="operation" class="field__select">
                             <option value="+">+</option>
                             <option value="-">-</option>
@@ -59,13 +57,14 @@
                             <option value="**">**</option>
                         </select>
                     </label>
-                    <label>
+                    <label class="field__label-SecondValue">
                         <input id="secondValue" class="field__input">
                     </label>
                     <button id="calculate" type="button" class="field__button">=</button>
                     <span id="result" class="field__result"></span>
                 </div>
                 <div class="date-text" data-date-text=""></div>
+                <div class="error-text" data-error-text></div>
                 <div class="big-result" data-big-result>
                     <div class="big-result__first-number" data-big-result="first-number"></div>
                     <div class="big-result__operator" data-big-result="operation"></div>

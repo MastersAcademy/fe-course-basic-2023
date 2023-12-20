@@ -1,10 +1,10 @@
 .field {
   max-width: 900px;
-  display: flex;
-  justify-content: start;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(30px, 122px)) minmax(50px, 150px);
+  grid-column-gap: 2px;
   align-items: center;
-  column-gap: 16px;
-  margin: 0 0 12px 8px;
+  margin-left: 8px;
 }
 
 .field__title {
@@ -15,16 +15,12 @@
   margin: 40px 0 25px;
 }
 
-.limit {
-  max-width: 300px;
-  display: flex;
-  justify-content: space-between;
-  font-size: 14px;
-  margin-left: 8px;
+.field__label {
+  width: 20px;
 }
 
 .field__input {
-  max-width: 50px;
+  width: 100%;
   padding: 7px 4px;
   font-size: 14px;
   font-weight: 400;
@@ -40,8 +36,12 @@
   padding-bottom: 2px;
 }
 
-.field__select {
-  width: 40px;
+.field__label-firstValue {
+  grid-column: 1/2;
+}
+
+.field__label-select {
+  grid-column: 2/3;
   font-size: 14px;
   line-height: 21px;
   border-radius: 6px;
@@ -50,8 +50,22 @@
   outline: none;
 }
 
+.field__select {
+  width: 100%;
+  font-size: 14px;
+  line-height: 21px;
+  border-radius: 6px;
+  padding: 7px 4px;
+  background-color: #FFF;
+  outline: none;
+}
+
+.field__label-SecondValue {
+  grid-column: 3/4;
+}
+
 .field__button {
-  width: 40px;
+  grid-column: 4/5;
   color: #FFF;
   background-color: #EF4934;
   border-radius: 6px;
@@ -62,8 +76,21 @@
 }
 
 .field__result {
+  grid-column: 5/6;
   font-size: 14px;
   line-height: 21px;
+}
+
+.limit__min, .limit__max {
+  font-size: 14px;
+}
+
+.limit__min {
+  grid-column: 1/5;
+}
+
+.limit__max {
+  grid-column: 5/6;
 }
 
 .date-text {
@@ -72,10 +99,19 @@
   margin-left: 8px;
 }
 
+.error-text {
+  color: #EF4A34;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 48px;
+  margin-left: 8px;
+  margin-bottom: 75px;
+}
+
 .big-result {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, auto) 1fr;
+  grid-template-columns: repeat(4, 1fr) 5fr;
   align-items: center;
   gap: 10px;
   color: #EF4A34;
@@ -138,63 +174,19 @@
 
 @media (min-width: 480px) {
 
-  .limit {
-    max-width: 400px;
-    margin-left: 53px;
-  }
-
   .big-result {
     font-size: 30px;
-    gap: 30px;
-    margin-left: 53px;
   }
 
   .date-text {
     font-size: 22px;
     line-height: 32px;
-    margin-left: 53px;
-  }
-
-  .limit {
-    font-size: 22px;
-  }
-
-  .field {
-    margin: 0 0 12px 53px;
-  }
-
-  .field__title {
-    font-size: 48px;
-    margin: 80px 0 50px;
-  }
-
-  .field__input {
-    max-width: 65px;
-  }
-
-  .field__select {
-    width: 65px;
-  }
-
-  .label {
-    margin-top: -22px;
-  }
-
-  .field__button {
-    width: 60px;
   }
 }
 
 @media (min-width: 768px) {
 
-  .limit {
-    max-width: 620px;
-    margin-left: 53px;
-  }
-
-  .big-result {
-    font-size: 48px;
-    gap: 60px;
+  .error-text {
     margin-left: 53px;
   }
 
@@ -204,7 +196,7 @@
     margin-left: 53px;
   }
 
-  .limit {
+  .limit__min, .limit__max {
     font-size: 22px;
   }
 
@@ -217,21 +209,6 @@
     margin: 80px 0 50px;
   }
 
-  .field__input {
-    max-width: 122px;
-  }
-
-  .field__select {
-    width: 114px;
-  }
-
-  .label {
-    margin-top: -22px;
-  }
-
-  .field__button {
-    width: 122px;
-  }
 
   .field__result {
     font-size: 18px;

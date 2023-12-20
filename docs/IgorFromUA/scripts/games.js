@@ -43,7 +43,7 @@ function createGameCardStr(game) {
 function createCardElement(game) {
     const cardElement = document.createElement('li');
     cardElement.classList.add('card');
-    cardElement.innerHTML = createGameCardStr(game);
+    cardElement.insertAdjacentHTML('afterbegin', createGameCardStr(game));
     return cardElement;
 }
 
@@ -71,7 +71,7 @@ function creatSearchQueryString() {
 }
 
 function renderCards(container, arrGames) {
-    container.innerHTML = '';
+    container.insertAdjacentHTML('afterbegin', '');
     const fragment = new DocumentFragment();
     arrGames.forEach((game) => {
         fragment.append(createCardElement(game));
@@ -108,7 +108,7 @@ function getGames(url = urlGames) {
             return copyGame;
         }))
         .catch((error) => {
-            CARDS_LIST.innerHTML = `<span class="error-message">Щось пішло не так! помилка: ${error.message}</span>`;
+            CARDS_LIST.insertAdjacentHTML('afterbegin', `<span class="error-message">Щось пішло не так! помилка: ${error.message}</span>`);
             console.log('get error', error);
         })
         .finally(() => loadingSwitch(false));

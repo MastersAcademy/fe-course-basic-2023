@@ -1,14 +1,19 @@
+.cards-wrapper {
+  max-width: 1175px;
+  margin: 0 auto;
+}
+
 .title {
   font-size: 36px;
   font-weight: 700;
-  margin: 20px 0 20px 20px;
+  margin: 20px 0 20px 30px;
 }
 
 .cards {
   display: grid;
   grid-template-columns: 275px;
   grid-gap: 25px;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .card {
@@ -116,6 +121,10 @@
 }
 
 @media (min-width: 1280px) {
+
+  .title {
+    margin-left: 0;
+  }
 
   .cards {
     grid-template-columns: repeat(4, 275px);
