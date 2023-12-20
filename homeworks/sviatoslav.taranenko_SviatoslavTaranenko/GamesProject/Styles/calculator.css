@@ -134,6 +134,12 @@ body {
   font-size: 48px;
   font-weight: 700;
   line-height: 32px;
+  @media (max-width: 700px) {
+    font-size: 36px;
+  }
+  @media (max-width: 300px) {
+    font-size: 24px;
+  }
 }
 
 .field {
@@ -141,6 +147,12 @@ body {
   justify-content: center;
   column-gap: 10px;
   margin: 20px;
+  @media (max-width: 700px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 input {
@@ -153,6 +165,9 @@ input {
   font-size: 14px;
   line-height: 21px;
   text-align: center;
+  @media (max-width: 700px) {
+   margin: 5px 0 5px 0;
+  }
 }
 
 select {
@@ -165,6 +180,9 @@ select {
   font-size: 14px;
   line-height: 21px;
   text-align: center;
+  @media (max-width: 700px) {
+    margin: 5px 0 5px 0;
+  }
 }
 
 button {
@@ -179,6 +197,9 @@ button {
   color: #FFF;
   border: none;
   cursor: pointer;
+  @media (max-width: 700px) {
+    margin: 5px 0 5px 0;
+  }
 }
 
 button:active {
@@ -195,6 +216,9 @@ span {
   font-size: 14px;
   line-height: 42px;
   text-align: center;
+  @media (max-width: 700px) {
+    margin: 5px 0 5px 0;
+  }
 }
 
 .footer {
