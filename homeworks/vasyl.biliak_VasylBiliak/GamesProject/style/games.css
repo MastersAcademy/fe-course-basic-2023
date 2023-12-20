@@ -62,40 +62,38 @@
   background-color: #EF4934;
 }
 
-.checkbox__game-date {
-  margin-right: 12px;
-  appearance: none;
-  width: 15px;
-  height: 15px;
-  border: 2px solid #FFF;
-  border-radius: 5px;
-  background-color: transparent;
-  cursor: pointer;
-  position: relative;
-}
+/*.checkbox__game-date {*/
+/*  margin-right: 12px;*/
+/*  appearance: none;*/
+/*  width: 15px;*/
+/*  height: 15px;*/
+/*  border: 2px solid #FFF;*/
+/*  border-radius: 5px;*/
+/*  background-color: transparent;*/
+/*  cursor: pointer;*/
+/*  position: relative;*/
+/*}*/
 
-.checkbox__game-date:checked::before {
-  content: "✔";
-  font-size: 14px;
-  color: #EF4934;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+/*.checkbox__game-date:checked::before {*/
+/*  content: "✔";*/
+/*  font-size: 14px;*/
+/*  color: #EF4934;*/
+/*  position: absolute;*/
+/*  top: 50%;*/
+/*  left: 50%;*/
+/*  transform: translate(-50%, -50%);*/
+/*}*/
 
 .filter-search__radio-select {
   display: flex;
 }
 
-.checkbox__game-date:checked {
-  background-color: #FFF;
-  border: 2px solid transparent;
-}
+/*.checkbox__game-date:checked {*/
+/*  background-color: #FFF;*/
+/*  border: 2px solid transparent;*/
+/*}*/
 
-
-.radio-select__label,
-.checkbox__label {
+.radio-select__label {
   width: 100%;
   margin-right: 12px;
   display: flex;
@@ -111,36 +109,35 @@
 .search__img {
   position: relative;
   z-index: 2;
-  margin: 6px 12px;
+  margin: 4px -6px;
 }
 
-.search__input {
-  display: grid;
-  justify-content: end;
-  grid-template-columns: 0 auto;
-  height: 34px;
+.search__btn {
+  width: 40px;
+  height: 34px
 }
 
 .search__input-text {
-  text-indent: 46px;
   border-radius: 6px 0 0 6px;
-  border: none;
+  border: 1px solid #EF4934;
+  width: 200px;
+  height: 36.4px;
+  padding-left: 5px;
 }
 
 .search__input input::placeholder {
   color: #A9A9A9;
-  text-indent: 46px;
 }
 
 .search__input-text:focus {
-  border: 2px solid #EF4934;
+  border: 1px solid #C03A24FF;
   outline: none;
 }
 
 .search__btn {
   border: none;
   font-size: 14px;
-  height: 36px;
+  height: 40px;
   color: #FFF;
   background: #EF4934;
   border-radius: 0 6px 6px 0;
@@ -248,10 +245,6 @@
 
 @media (max-width: 950px) {
 
-  .filter-search__radio-select {
-    display: flow;
-  }
-
   .filter-search {
     height: 125px;
     display: grid;
@@ -261,7 +254,39 @@
     grid-column-gap: 15px;
   }
 
+  .filter-search__radio-select {
+    display: flow;
+  }
+
+  .search {
+    display: grid;
+    grid-template-columns: auto 40px;
+    justify-content: start;
+  }
+
+  .search__input {
+    display: grid;
+    justify-content: start;
+    grid-template-columns: 0 auto;
+  }
+
+  .search__img {
+    position: relative;
+    z-index: 2;
+    margin: 4px -6px;
+  }
+
+  .search__btn {
+    margin: 0 84px;
+    width: 30px;
+    font-size: 10px;
+  }
+
   .search__input-text {
-    width: 150px;
+    width: 80px;
+  }
+
+  .search__input-text:focus {
+    outline: none;
   }
 }
