@@ -18,6 +18,8 @@
 }
 
 .navigation__menu-icon {
+  width: 50px;
+  text-align: center;
   visibility: visible;
 }
 
@@ -26,7 +28,7 @@
   width: 120px;
   padding: 20px;
   position: absolute;
-  top: 55px;
+  top: 47px;
   left: calc(100% - 130px);
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr;
