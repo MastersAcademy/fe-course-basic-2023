@@ -14,7 +14,7 @@ function createGameCardStr(game) {
         developer,
         release_date: releaseDate,
     } = game;
-    return `            <img class="card__img" data-card-img src="${thumbnail}" width="90" height="90" alt="game picture">
+    return `            <img class="card__img" data-card-img src="${thumbnail}" alt="game picture">
 
                         <div class="card__description">
                             <h2 class="description__title" data-description-title>${title}</h2>

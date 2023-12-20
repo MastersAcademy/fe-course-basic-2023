@@ -30,6 +30,7 @@
 
 .card__img {
   width: 90px;
+  margin: auto 0;
 }
 
 .description__title {
