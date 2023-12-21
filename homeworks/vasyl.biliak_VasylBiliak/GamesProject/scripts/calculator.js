@@ -15,6 +15,7 @@
  *
  *
  */
+
 const number1Input = document.getElementById('number1');
 const number2Input = document.getElementById('number2');
 const equals = document.getElementById('equals');
@@ -30,24 +31,20 @@ const valueNum2 = document.getElementById('valueNumber2');
 const resultTimestamp = document.getElementById('result-timestamp');
 const startTime = new Date();
 
-function sliceImage(value) {
+function createImgElement() {
     const img = document.createElement('img');
     img.classList.add('container-img');
     img.src = photoPozitivUrl;
     img.width = 90;
     img.height = 90;
+    return img;
+}
+
+function sliceImage(value) {
+    const img = createImgElement();
     const topCut = (value / 2) * 100;
     const downCut = (value / 2) * 100;
     img.style.clipPath = `polygon(0 ${topCut}%, 100% ${topCut}%, 100% ${100 - topCut}%, 0 ${100 - downCut}%)`;
-    return (img);
-}
-
-function crateImg() {
-    const img = document.createElement('img');
-    img.classList.add('container-img');
-    img.src = photoPozitivUrl;
-    img.width = 90;
-    img.height = 90;
     return img;
 }
 
@@ -67,40 +64,41 @@ function getTimestampString() {
 function calculate(operator) {
     const num1 = parseFloat(number1Input.value);
     const num2 = parseFloat(number2Input.value);
-    if (Number.isNaN(num1) && Number.isNaN(num2)) {
+    if (Number.isNaN(num1) || Number.isNaN(num2)) {
         resultOutput.textContent = 'Enter the correct numbers';
         return;
     }
 
-    if (Number.isNaN(num2)) {
-        resultOutput.textContent = 'Enter the numbers 2';
-        return;
-    }
-
-    if (Number.isNaN(num1)) {
-        resultOutput.textContent = 'Enter the numbers 1';
-        return;
-    }
     let result;
-    if (operator === '+') {
-        result = num1 + num2;
-    } else if (operator === '-') {
-        result = num1 - num2;
-    } else if (operator === '*') {
-        result = num1 * num2;
-    } else if (operator === '/') {
-        if (num2 === 0) {
-            resultOutput.textContent = 'Division by zero is impossible';
+    switch (operator) {
+        case '+':
+            result = num1 + num2;
+            break;
+        case '-':
+            result = num1 - num2;
+            break;
+        case '*':
+            result = num1 * num2;
+            break;
+        case '/':
+            if (num2 === 0) {
+                resultOutput.textContent = 'Division by zero is impossible';
+                return;
+            }
+            result = num1 / num2;
+            break;
+        case '%':
+            result = num1 % num2;
+            break;
+        case '**':
+            result = num1 ** num2;
+            break;
+        default:
+            resultOutput.textContent = 'Choose a valid operation';
             return;
-        }
-        result = num1 / num2;
-    } else if (operator === '%') {
-        result = num1 % num2;
-    } else if (operator === '**') {
-        result = num1 ** num2;
     }
 
-    resultTimestamp.innerHTML = getTimestampString();
+    resultTimestamp.textContent = getTimestampString();
 
     resultOutput.textContent = `${parseFloat(result.toFixed(3))} ${Math.abs(result) > 1 ? 'Stranges' : 'Strange'}`;
 
@@ -109,12 +107,13 @@ function calculate(operator) {
     valueNum2.textContent = `${num2}`;
     selectedOperator.textContent = `${operator}`;
 
-    photoContainer.innerHTML = '';
+    photoContainer.textContent = '';
     if (Math.abs(result) > 100) {
         resultOutput.textContent = 'Max 100';
         photoContainer.textContent = 'Too many dr. Strange > |100|';
         return;
     }
+
     const containerResult = document.createElement('div');
     containerResult.classList.add('img-container-result');
     const numColumns = Math.ceil(Math.abs(result) / 10);
@@ -125,7 +124,7 @@ function calculate(operator) {
         }
     } else {
         for (let i = 0; i < Math.abs(Math.floor(result)); i++) {
-            containerResult.appendChild(crateImg());
+            containerResult.appendChild(createImgElement());
         }
     }
     photoContainer.appendChild(containerResult);
@@ -137,7 +136,7 @@ equals.addEventListener('click', () => {
 });
 
 number1Input.addEventListener('input', () => {
-    photoContainerNum1.innerHTML = '';
+    photoContainerNum1.textContent = '';
     const num1 = parseFloat(number1Input.value);
     if (Math.abs(num1) > 10) {
         resultOutput.textContent = 'Max 10';
@@ -152,7 +151,7 @@ number1Input.addEventListener('input', () => {
         container.appendChild(sliceImage(Math.abs(num1)));
     } else {
         for (let i = 0; i < Math.abs(Math.floor(num1)); i++) {
-            container.appendChild(crateImg());
+            container.appendChild(createImgElement());
         }
     }
 

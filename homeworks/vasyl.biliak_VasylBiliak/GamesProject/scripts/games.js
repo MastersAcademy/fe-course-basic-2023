@@ -22,31 +22,31 @@ function createGameCardElement(card) {
         : shortDescription;
 
     const cardTemplateStr = `
-            <div class="card">
-                <img class="game-card__img" src="${thumbnail}" width="90" height="90" alt="">
-                <div class="game-card__top-info">
-                    <span class="description__title">${title}</span>
-                    <p class="description__text">${truncatedDescription}</p>
-                </div>
-                <ul class="card__actors">
-                    <li class="card__actor">
-                        <span class="bold-text">Genre:</span> ${genre}
-                    </li>
-                    <li class="card__actor">
-                        <span class="bold-text">Platform:</span> ${platform}
-                    </li>
-                    <li class="card__actor">
-                        <span class="bold-text">Publisher:</span> ${publisher}
-                    </li>
-                    <li class="card__actor">
-                        <span class="bold-text">Developer:</span> ${developer}
-                    </li>
-                    <li class="card__actor">
-                        <span class="bold-text">Release Date:</span> ${releaseDate}
-                    </li>
-                </ul>
+        <div class="card">
+            <img class="game-card__img" src="${thumbnail}" width="90" height="90" alt="">
+            <div class="game-card__top-info">
+                <span class="description__title">${title}</span>
+                <p class="description__text">${truncatedDescription}</p>
             </div>
-        `;
+            <ul class="card__actors">
+                <li class="card__actor">
+                    <span class="bold-text">Genre:</span> ${genre}
+                </li>
+                <li class="card__actor">
+                    <span class="bold-text">Platform:</span> ${platform}
+                </li>
+                <li class="card__actor">
+                    <span class="bold-text">Publisher:</span> ${publisher}
+                </li>
+                <li class="card__actor">
+                    <span class="bold-text">Developer:</span> ${developer}
+                </li>
+                <li class="card__actor">
+                    <span class="bold-text">Release Date:</span> ${releaseDate}
+                </li>
+            </ul>
+        </div>
+    `;
 
     return cardTemplateStr;
 }
@@ -61,30 +61,24 @@ function renderCards(container, cards) {
     if (cards.length) {
         cards.forEach((card) => {
             const gameCard = createGameCardElement(card);
-            container.innerHTML += gameCard;
+            container.appendChild(document.createRange().createContextualFragment(gameCard));
         });
     } else {
-        container.innerHTML += '<div style=" font-weight: bold; margin-top: 25px; font-size: 25px;">Nothing found</div>';
+        const nothingFoundMessage = '<div style="font-weight: bold; margin-top: 25px; font-size: 25px;">Nothing found</div>';
+        container.appendChild(document.createRange().createContextualFragment(nothingFoundMessage));
     }
 }
 
 function filterByGameCategory(category) {
-    if (category === 'all') {
-        return '';
-    } return `&category=${category}`;
+    return category === 'all' ? '' : `&category=${category}`;
 }
 
 function filterByGamePlatform(platform) {
-    if (platform === 'all') {
-        return '';
-    } return `&platform=${platform}`;
+    return platform === 'all' ? '' : `&platform=${platform}`;
 }
 
 function filterByGameDate(array, isNewChecked, isOldChecked) {
-    if (isOldChecked) {
-        return array.reverse();
-    }
-    return array;
+    return isOldChecked ? array.reverse() : array;
 }
 
 function filterBySearchQuery(arrayGames, searchQuery) {
