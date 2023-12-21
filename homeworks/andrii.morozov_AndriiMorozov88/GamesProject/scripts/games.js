@@ -43,10 +43,10 @@ async function getGamesArray() {
     } else {
         games = await allGames;
     }
-    for (let count = 0; count < 100000; count++) {
-        console.log(count);
-        console.clear();
-    }
+    // for (let count = 0; count < 100000; count++) {
+    //     console.log(count);
+    //     console.clear();
+    // }
     return games;
 }
 function createCardElement(game, array) {
