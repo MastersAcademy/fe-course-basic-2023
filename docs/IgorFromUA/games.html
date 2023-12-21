@@ -19,94 +19,92 @@
     </head>
     <body class="wrapper-all">
         <div>
-            <div class="wrapper">
-                <header class="header container">
-                    <img class="header__logo" src="./src/logo.png" alt="logo masters academy">
-                    <nav class="navigation">
-                        <div class="navigation__menu-icon">
-                            <svg width="34" height="19" viewBox="0 0 34 19">
-                                <rect width="34" height="3.5" rx="1" fill="#FFF"></rect>
-                                <rect y="8" width="34" height="3.5" rx="1" fill="#FFF"></rect>
-                                <rect y="16" width="34" height="3.5" rx="1" fill="#FFF"></rect>
-                            </svg>
-                        </div>
-                        <ul class="navigation__list">
-                            <li class="navigation__item">
-                                <a class="navigation__link" href="./calculator.html">Calculator</a>
-                            </li>
-                            <li class="navigation__item">
-                                <a class="navigation__link navigation__link_active" href="#">Games</a>
-                            </li>
-                            <li class="navigation__item">
-                                <a class="navigation__link" href="./index.html">About</a>
-                            </li>
-                            <li class="navigation__item">
-                                <a class="navigation__link" href="./login.html">Login</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </header>
-                <form action="" class="filter container">
-                    <div class="filter-select-wrapper">
-                        <label for="filter__select">
-                            <select id="filter__select" name="genre" data-filter-select="genre" class="filter__select">
-                                <option class="select__option" selected value="genre">Genre</option>
-                                <option class="select__option" value="strategy">Strategy</option>
-                                <option class="select__option" value="shooter">Shooter</option>
-                                <option class="select__option" value="arpg">ARPG</option>
-                                <option class="select__option" value="fighting">Fighting</option>
-                                <option class="select__option" value="mmorpg">MMORPG</option>
-                                <option class="select__option" value="card">Card Game</option>
-                                <option class="select__option" value="action-rpg">Action RPG</option>
-                                <option class="select__option" value="open-world">Open-world</option>
-                                <option class="select__option" value="sports">sports</option>
-                                <option class="select__option" value="racing">racing</option>
-                                <option class="select__option" value="social">social</option>
-                                <option class="select__option" value="superhero">superhero</option>
-                                <option class="select__option" value="horror">horror</option>
-                                <option class="select__option" value="military">military</option>
-                                <option class="select__option" value="action">action</option>
-                                <option class="select__option" value="space">space</option>
-                                <option class="select__option" value="tank">tank</option>
-                                <option class="select__option" value="sailing">sailing</option>
-                                <option class="select__option" value="3d">3d</option>
-                                <option class="select__option" value="2d">2d</option>
-                            </select>
-                        </label>
-                        <label for="filter__platform">
-                            <select name="platform" id="filter__platform" data-filter-select="platform" class="filter__select">
-                                <option class="select__option" selected value="all">Platform</option>
-                                <option class="select__option" value="pc">PC</option>
-                                <option class="select__option" value="browser">Browser</option>
-                            </select>
-                        </label>
+            <header class="header wrapper container">
+                <img class="header__logo" src="./src/logo.png" alt="logo masters academy">
+                <nav class="navigation">
+                    <div class="navigation__menu-icon">
+                        <svg width="34" height="19" viewBox="0 0 34 19">
+                            <rect width="34" height="3.5" rx="1" fill="#FFF"></rect>
+                            <rect y="8" width="34" height="3.5" rx="1" fill="#FFF"></rect>
+                            <rect y="16" width="34" height="3.5" rx="1" fill="#FFF"></rect>
+                        </svg>
                     </div>
-                    <div>
-                        <input type="radio" data-age-games="new" class="radio-input" name="age" id="age-1">
-                        <label for="age-1" class="radio-text    ">
-                            New first
-                        </label>
-                        <input type="radio" data-age-games="old" class="radio-input" name="age" id="age-2">
-                        <label for="age-2" class="radio-text">
-                            Old first
-                        </label>
-                    </div>
-                    <div class="filter-search-wrapper">
-                        <label for="filter__search">
-                            <input type="text" data-filter-search id="filter__search" class="filter__search"
-                                placeholder="Search">
-                        </label>
-                        <button type="button" class="filter__btn" data-filter-button>Apply</button>
-                    </div>
-                </form>
-                <main class="container">
-                    <h1 class="title">Study project "Games"</h1>
-                    <ul class="cards" data-cards></ul>
-                    <div class="loading">
-                        <div class="loading__spin" data-loading></div>
-                    </div>
-                </main>
-            </div>
+                    <ul class="navigation__list">
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="./calculator.html">Calculator</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__link navigation__link_active" href="#">Games</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="./index.html">About</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="./login.html">Login</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <form action="" class="filter container">
+                <div class="filter-select-wrapper">
+                    <label for="filter__select">
+                        <select id="filter__select" name="genre" data-filter-select="genre" class="filter__select">
+                            <option class="select__option" selected value="genre">Genre</option>
+                            <option class="select__option" value="strategy">Strategy</option>
+                            <option class="select__option" value="shooter">Shooter</option>
+                            <option class="select__option" value="arpg">ARPG</option>
+                            <option class="select__option" value="fighting">Fighting</option>
+                            <option class="select__option" value="mmorpg">MMORPG</option>
+                            <option class="select__option" value="card">Card Game</option>
+                            <option class="select__option" value="action-rpg">Action RPG</option>
+                            <option class="select__option" value="open-world">Open-world</option>
+                            <option class="select__option" value="sports">sports</option>
+                            <option class="select__option" value="racing">racing</option>
+                            <option class="select__option" value="social">social</option>
+                            <option class="select__option" value="superhero">superhero</option>
+                            <option class="select__option" value="horror">horror</option>
+                            <option class="select__option" value="military">military</option>
+                            <option class="select__option" value="action">action</option>
+                            <option class="select__option" value="space">space</option>
+                            <option class="select__option" value="tank">tank</option>
+                            <option class="select__option" value="sailing">sailing</option>
+                            <option class="select__option" value="3d">3d</option>
+                            <option class="select__option" value="2d">2d</option>
+                        </select>
+                    </label>
+                    <label for="filter__platform">
+                        <select name="platform" id="filter__platform" data-filter-select="platform" class="filter__select">
+                            <option class="select__option" selected value="all">Platform</option>
+                            <option class="select__option" value="pc">PC</option>
+                            <option class="select__option" value="browser">Browser</option>
+                        </select>
+                    </label>
+                </div>
+                <div>
+                    <input type="radio" data-age-games="new" class="radio-input" name="age" id="age-1">
+                    <label for="age-1" class="radio-text    ">
+                        New first
+                    </label>
+                    <input type="radio" data-age-games="old" class="radio-input" name="age" id="age-2">
+                    <label for="age-2" class="radio-text">
+                        Old first
+                    </label>
+                </div>
+                <div class="filter-search-wrapper">
+                    <label for="filter__search">
+                        <input type="text" data-filter-search id="filter__search" class="filter__search"
+                            placeholder="Search">
+                    </label>
+                    <button type="button" class="filter__btn" data-filter-button>Apply</button>
+                </div>
+            </form>
+            <main class="container">
+                <h1 class="title">Study project "Games"</h1>
+                <ul class="cards" data-cards></ul>
+                <div class="loading">
+                    <div class="loading__spin" data-loading></div>
+                </div>
+            </main>
         </div>
         <div>
             <footer class="footer wrapper container">
