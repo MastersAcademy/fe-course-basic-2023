@@ -85,6 +85,11 @@
   font-weight: 400;
 }
 
+.cards__heading {
+  margin-top: 180px;
+  text-align: center;
+}
+
 .card-container {
   width: 400px;
   display: flex;
@@ -93,7 +98,6 @@
 }
 
 .main__cards {
-  padding-top: 180px;
   padding-bottom: 50px;
 }
 
@@ -205,6 +209,10 @@
 
   .filter > section {
     padding: 5px;
+  }
+
+  .cards__heading {
+    margin-top: 320px;
   }
 }
 
