@@ -1,0 +1,478 @@
+
+.loading-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000B3;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #FFF;
+  z-index: 999;
+}
+
+.loading-overlay.active {
+  display: flex;
+}
+
+.loading-message {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(255, 255, 255, .3);
+  border-radius: 50%;
+  border-top-color: #FFF;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.games-filter {
+  position: absolute;
+  z-index: 998;
+  top: 80px;
+  width: 100%;
+  height: 60px;
+  background-color: #221F1F;
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+}
+
+.games-filter__box {
+  padding: 12px 52px 12px 53px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  width: 1280px;
+}
+
+.filter-select {
+  width: 114px;
+  height: 36px;
+  display: flex;
+  align-items: flex-start;
+  gap: 33px;
+  justify-content: center;
+  padding: 0 12px;
+  background-color: #333;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  color: #FFF;
+  margin-right: 86px;
+  appearance: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.select-item__option {
+  background-color: #FFF;
+  color: #333;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.filter-group__radio {
+  width: 237px;
+  height: 20px;
+  margin-right: 63px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.radio__input-games[type="radio"] {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #FFF;
+  border-radius: 100%;
+}
+
+.filter-group__checkbox {
+  display: flex;
+  gap: 32px;
+  margin-right: 153px;
+}
+
+.checkbox-container {
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #221F1F;
+  border: 1px solid #FFF;
+  border-radius: 6px;
+}
+
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark::after {
+  display: block;
+}
+
+.checkbox-container input:checked ~ .checkmark::after {
+  left: 6px;
+  top: 3px;
+  width: 6px;
+  height: 9px;
+  border: solid #FFF;
+  border-width: 0 1px 1px 0;
+  transform: rotate(45deg);
+}
+
+.filter-game__search {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 6px;
+  width: 377px;
+  height: 36px;
+  background-color: #FFF;
+  position: relative;
+}
+
+.filter-game__search input[placeholder] {
+  color: hsl(0, 0%, 66%);
+}
+
+.filter-game__search input[type="search"] {
+  border: none;
+  width: 200px;
+  color: #333;
+}
+
+.game-search__label {
+  width: 24px;
+  height: 24px;
+}
+
+.game-search__label::before {
+  content: url("../images/ico/icons/search.svg");
+  width: 19px;
+  height: 19px;
+  position: relative;
+  top: 8px;
+  left: 10px;
+}
+
+.apply-btn {
+  width: 75px;
+  height: 36px;
+  border-radius: 0 6px 6px 0;
+  background-color: #EF4934;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  color: hsl(0, 0%, 100%);
+}
+
+.main__game {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 180px;
+}
+.section_title {
+  color: #221F1F;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 48px;
+  text-align: left;
+  margin: 0;
+}
+
+.section_game-cards {
+  margin-bottom: 46px;
+}
+
+.game-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 25px;
+  padding: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  width: 275px;
+  height: 260px;
+  background-color: hsl(0, 0%, 93%);
+  color: hsl(0, 5%, 13%);
+  padding: 12px 12px 22px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  border-radius: 12px;
+  transition: all .3s ease-out;
+}
+
+.card:hover {
+  box-shadow: 1px 1px 13px 0 #221F1FA6;
+  background-color: #EF343400;
+}
+
+.card__header {
+  width: 251px;
+  height: 90px;
+  display: flex;
+}
+
+.card__image {
+  width: 90px;
+  height: 90px;
+  border-radius: 8px;
+  margin-right: 12px;
+  object-fit: cover;
+}
+
+.card__header__title {
+  width: 149px;
+  height: 77px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.card__title {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.card__description {
+  width: 149px;
+  height: 52px;
+  color: #221F1F;
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  display: block;
+}
+
+.section_card_title {
+  margin-bottom: 40px;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.card__list {
+  width: 231px;
+  height: 114px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 11px;
+}
+
+.card__list .card__list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.card__list-item-title {
+  font-weight: 600;
+  display: flex;
+  gap: 6px;
+}
+
+.card__list-value {
+  font-weight: 400;
+}
+
+.card_list__title {
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+@media  (max-width: 1279px) {
+  .games-filter {
+    top: 110px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+  }
+
+  .filter-group__radio {
+    width: 138px;
+    height: 100px;
+    margin-right: 5px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .filter-group__checkbox {
+    height:100px;
+    width:60px;
+    display: flex;
+    justify-content:center;
+    flex-direction:column;
+    gap: 28px;
+    margin-right: 100px;
+  }
+
+  .filter-game__search {
+    width: 277px;
+    height: 36px;
+  }
+  
+  .games-filter__box {
+    justify-content: center;
+  }
+
+  .section_game-cards {
+    margin-top: 50px;
+  }
+  .game-cards {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+    padding: 0;
+
+  }
+
+  .card {
+    gap: 22px;
+    width: 320px;
+    height: 280px;
+    font-size: 15px;
+  }
+
+}
+
+@media  (max-width: 1023px) {
+  .section_game-cards {
+    margin-top: 250px;
+  }
+
+  .games-filter {
+    top: 110px;
+    width: 100%;
+    height: 380px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    align-items: center;
+    justify-items: center;
+  }
+
+  .games-filter__box {
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+    grid-template-rows: repeat(1,1fr);
+    max-width: 50%;
+    align-items: baseline;
+    justify-content: end;
+  }
+
+  .section_card_title {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .game-cards {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap: 15px;
+    padding: 0;
+  
+  }
+  
+  .card {
+    gap: 22px;
+    width: 80%;
+    height: 280px;
+    font-size: 15px;
+  }
+  
+}
+
+@media (max-width: 400px) {
+  .section_game-cards {
+    margin-top: 350px;
+  }
+
+  .games-filter {
+    top: 110px;
+    height: 380px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    justify-items: center;
+  }
+
+  .games-filter__box {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
+
+  .section_card_title {
+    display: flex;
+    justify-content: center;
+  }
+
+  .game-cards {
+    min-width:400px;
+    display: flex;
+    gap: 10px;
+  }
+
+}

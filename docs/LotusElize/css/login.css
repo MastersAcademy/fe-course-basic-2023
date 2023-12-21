@@ -1,0 +1,161 @@
+.main__login {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 180px;
+}
+
+.login_form_box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.login_form {
+  width: 575px;
+  height: 520px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px 177px 20px;
+}
+
+.login_title h1 {
+  margin-bottom: 60px;
+  margin-top: 0;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.form_input__info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.email,
+.password {
+  display: flex;
+  flex-direction: column;
+  height: 141px;
+}
+
+.not_a_robot_-container {
+  height: 40px;
+}
+
+
+.add__info_place {
+  width: 100%;
+  height: 70px;
+  color: #221F1F;
+  padding-left: 20px;
+  font-size: 14px;
+  margin-top: 22px;
+  margin-bottom: 5px;
+  outline: none;
+  border-radius: 6px;
+  border: 0.6px solid #A9A9A9;
+}
+
+.add__info_place:focus {
+  border-bottom: 5px solid #EF4934;
+}
+
+.add__info_place::placeholder {
+  color: #A9A9A9;
+}
+
+
+.verify-container {
+  display: flex;
+  align-items: center;
+}
+
+.verify-container input {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+
+.verify-container label {
+  position: relative;
+  cursor: pointer;
+}
+
+.verify-container label::before {
+  content: "";
+  border-radius: 6px;
+  border: 2px solid #EF4934;
+  background-color: #FFF;
+  display: inline-block;
+  right: 20px;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.verify-container input:checked+label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 4px;
+  left: -12px;
+  width: 4px;
+  height: 12px;
+  border: solid #EF4934;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.input_name {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.btn__success {
+  border-radius: 6px;
+  background-color: #EF4934;
+  width: 100%;
+  height: 70px;
+  border: none;
+  color: #FFF;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: normal;
+  transition: font-size 0.1s ease-in;
+  cursor: pointer;
+}
+
+.btn__success:hover {
+  background-color: #F7250B;
+}
+
+.btn__success:active {
+  font-size: 24px;
+}
+
+.errors_info {
+  color: #F7250B;
+  margin-left: 10px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.verify-container {
+  display: flex;
+  align-items: center;
+}
+
+.errors-container {
+  display: none;
+}
