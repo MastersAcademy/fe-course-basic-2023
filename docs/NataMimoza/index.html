@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="calculator.css">
+        <title>Basic JS</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="header-menu">
+                <div class="logo-box">
+                    <img src="Images/logo.png" alt="logoMA">
+                </div>
+                <nav class="nav">
+                    <a class="nav__link nav__link-active" href="index.html">Calculator</a>
+                    <a class="nav__link" href="./Cards.html">Games</a>
+                    <a class="nav__link" href="About.html">About</a>
+                    <a class="nav__link" href="Login.html">Login</a>
+                </nav>
+            </header>
+            <h1 class="name">Calculator v. 1</h1>
+            <div class="field">
+                <label>
+                    <input id="firstValue" class="value-box">
+                </label>
+                <label>
+                    <select name="operation" id="operation" class="operation-box">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="/">/</option>
+                        <option value="*">*</option>
+                        <option value="**">**</option>
+                    </select>
+                </label>
+                <label>
+                    <input id="secondValue" class="value-box">
+                </label>
+                <button id="calculate" type="button" class="button-box">=</button>
+                <span id="result" class="res-view"></span>
+            </div>
+            <footer class="footer">
+                <div class="footer-box">
+                    <div class="social-box">
+                        <div>
+                            <img src="./Images/facebook.png">
+                        </div>
+                        <div>
+                            <img src="./Images/linked.png">
+                        </div>
+                        <div>
+                            <img src="./Images/insta.png">
+                        </div>
+                    </div>
+                    <div class="phrase-box">
+                        <p class="phrase">
+                            Made with 💗 on course 'Frontend for beginners' from Masters Academy in 2023, by Natalia</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="./script-calc.js"></script>
+        <script src="./homework.js"></script>
+    </body>
+</html>

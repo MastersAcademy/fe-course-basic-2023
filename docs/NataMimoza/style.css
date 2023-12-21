@@ -1,0 +1,187 @@
+* {
+  font-family: Roboto, serif;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.header-menu {
+  background: #EF4934;
+  padding: 0 60px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo-box {
+  width: 55px;
+  height: 58px;
+  position: relative;
+}
+
+.nav {
+  font-size: 16px;
+  gap: 50px;
+  display: flex;
+}
+
+.nav__link {
+  display: inline-block;
+  color: #FFF;
+  text-decoration: none;
+}
+
+.nav__link-active {
+  color: #FFF;
+  text-decoration: underline;
+}
+
+.nav__link:hover {
+  text-decoration: underline;
+}
+
+/*Main*/
+
+.content {
+  margin-top: 60px;
+  display: flex;
+  gap: 75px;
+  justify-content: center;
+}
+
+.content__image-box {
+  width: 532px;
+  height: 356px;
+  border-radius: 22px;
+}
+
+.content__story {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.main-title {
+  height: 46px;
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.contents {
+  width: 575px;
+  height: 409px;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+  font-style: normal
+}
+
+.description {
+  margin: 0;
+}
+
+.link {
+  color: #EF4934;
+}
+
+.footer {
+  height: 160px;
+  background-color: #221F1F;
+  margin-top: 156px;
+}
+
+.footer-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 30px 0 0;
+}
+
+.social-box {
+  display: flex;
+  width: 192px;
+  height: 42px;
+  gap: 33px;
+}
+
+.phrase {
+  color: #FFF;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@media (max-width: 1100px) {
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .header-menu {
+    padding: 0 20px;
+  }
+
+  .logo-box {
+    width: 45px;
+    height: 35px;
+  }
+
+  .logo-box img {
+    width: 70%;
+  }
+
+  .nav {
+    font-size: 13px;
+    gap: 25px;
+    display: flex;
+  }
+
+  .content {
+    margin-top: 30px;
+    gap: 30px;
+  }
+
+  .content__image-box {
+    text-align: center;
+    height: auto;
+    width: auto;
+  }
+
+  .content__image-box img {
+    width: 65%;
+  }
+
+  .main-title {
+    text-align: center;
+    font-size: 35px;
+  }
+
+  .contents {
+    width: 340px;
+    font-size: 17px;
+    line-height: 27px;
+  }
+
+  .footer {
+    margin-top: 246px;
+  }
+
+  .phrase {
+    font-size: 16px;
+    text-align: center;
+  }
+}

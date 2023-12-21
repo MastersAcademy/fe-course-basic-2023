@@ -1,0 +1,158 @@
+* {
+  font-family: Roboto, serif;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.header-menu {
+  background: #EF4934;
+  padding: 0 60px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo-box {
+  width: 55px;
+  height: 58px;
+  position: relative;
+}
+
+.nav {
+  font-size: 16px;
+  gap: 50px;
+  display: flex;
+}
+
+.nav__link {
+  display: inline-block;
+  color: #FFF;
+  text-decoration: none;
+}
+
+.nav__link-active {
+  color: #FFF;
+  text-decoration: underline;
+}
+
+.nav__link:hover {
+  text-decoration: underline;
+}
+
+.name {
+  margin: 150px auto 50px 80px;
+  color: #C33523;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.field {
+  margin: 20px 0 0 80px;
+  display: flex;
+  column-gap: 15px;
+  align-items: center;
+}
+
+.value-box {
+  min-height: 35px;
+  width: 70px;
+  font-size: 20px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.operation-box {
+  min-height: 35px;
+  border-radius: 9px;
+  width: 45px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.button-box {
+  min-height: 35px;
+  border-radius: 9px;
+  width: 45px;
+  text-align: center;
+  background: #FFF;
+}
+
+.res-view {
+  color: #EF4934;
+  font-size: 25px;
+}
+
+.footer {
+  height: 160px;
+  background-color: #221F1F;
+  margin-top: 500px;
+}
+
+.footer-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 30px 0 0;
+}
+
+.social-box {
+  display: flex;
+  width: 192px;
+  height: 42px;
+  gap: 33px;
+}
+
+.phrase {
+  color: #FFF;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@media (max-width: 500px) {
+
+  .header-menu {
+    padding: 0 20px;
+  }
+
+  .logo-box {
+    width: 45px;
+    height: 35px;
+  }
+
+  .logo-box img {
+    width: 70%;
+  }
+
+  .nav {
+    font-size: 13px;
+    gap: 25px;
+    display: flex;
+  }
+
+  .name {
+    margin: 100px auto 60px;
+    text-align: center;
+    font-size: 35px;
+  }
+
+  .field {
+    margin: 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .phrase {
+    font-size: 15px;
+    text-align: center;
+  }
+}
