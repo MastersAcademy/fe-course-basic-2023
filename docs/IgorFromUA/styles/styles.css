@@ -9,12 +9,18 @@ ul, li {
   list-style: none;
 }
 
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 .wrapper-all {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: 0;
+  overflow-x: hidden;
 }
 
 .wrapper {

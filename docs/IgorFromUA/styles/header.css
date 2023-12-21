@@ -8,12 +8,12 @@
 }
 
 .header__logo {
-  margin-left: 50px;
+  margin-left: 25px;
   align-self: center;
 }
 
 .navigation {
-  margin-right: 50px;
+  margin-right: 25px;
   align-self: center;
 }
 
@@ -64,11 +64,18 @@
   border-bottom: 2px solid #FFF;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 480px) {
+
+  .header__logo {
+    margin-left: 50px;
+  }
 
   .navigation {
-    align-self: normal;
+    margin-right: 50px;
   }
+}
+
+@media (min-width: 768px) {
 
   .navigation__list {
     visibility: visible;

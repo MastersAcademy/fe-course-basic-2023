@@ -1,15 +1,20 @@
 .filter {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   column-gap: 10px;
   row-gap: 20px;
   color: #FFF;
   background: #221F1F;
-  padding: 12px;
+  padding: 12px 10px 12px 25px;
   font-size: 14px;
   line-height: 21px;
+}
+
+.filter-select-wrapper {
+  display: flex;
+  column-gap: 10px;
 }
 
 .filter__select {
@@ -21,7 +26,6 @@
   border: none;
   border-radius: 6px;
   padding: 12px 18px 12px 12px;
-  margin-left: 10px;
   outline: none;
 }
 
@@ -51,6 +55,11 @@ input[type="checkbox"]:not(:checked)::after {
   margin-left: 10px;
 }
 
+.filter-search-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
 .filter__search {
   padding: 13px 20px 13px 30px;
   margin-right: -5px;
@@ -68,4 +77,11 @@ input[type="checkbox"]:not(:checked)::after {
   background: #EF4934;
   border: none;
   border-radius: 0 6px 6px 0;
+}
+
+@media (min-width: 480px) {
+
+  .filter {
+    padding: 12px 50px;
+  }
 }
