@@ -1,17 +1,13 @@
 * {
   font-family: Roboto, sans-serif;
   box-sizing: border-box;
+  outline: none;
 }
 
 ul, li {
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
 }
 
 .wrapper-all {

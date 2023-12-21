@@ -1,12 +1,11 @@
 .wrapper__about {
   width: 100%;
-  margin: 20px auto 0;
+  padding: 20px 25px;
   display: grid;
   grid-template-columns: 1fr;
 }
 
 .about {
-  max-width: 575px;
   padding: 0 5px;
   justify-self: center;
 }
@@ -40,6 +39,10 @@
 
 @media (min-width: 480px) {
 
+  .wrapper__about {
+    padding: 20px 50px;
+  }
+
   .about__image {
     width: 390px;
     height: 260px;
@@ -48,12 +51,6 @@
 
 @media (min-width: 768px) {
 
-  .wrapper__about {
-    grid-template-columns: 1fr 1fr;
-    column-gap: 30px;
-    margin-top: 60px;
-  }
-
   .about {
     padding: 0;
   }
@@ -61,7 +58,6 @@
   .about__image {
     width: 480px;
     height: 320px;
-    margin-bottom: 0;
   }
 
   .about__title {
@@ -78,7 +74,9 @@
 @media (min-width: 1024px) {
 
   .wrapper__about {
+    grid-template-columns: 1fr 1fr;
     column-gap: 60px;
+    margin-top: 60px;
   }
 
   .about__image {

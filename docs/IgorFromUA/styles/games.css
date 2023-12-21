@@ -81,8 +81,7 @@
 .error-message {
   font-size: 24px;
   color: #F00;
-  grid-column: 2/4;
-  text-align: center;
+  grid-column: 1/5;
 }
 
 .loading__spin {

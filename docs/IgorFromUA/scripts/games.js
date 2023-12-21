@@ -108,7 +108,7 @@ function getGames(url = urlGames) {
             return copyGame;
         }))
         .catch((error) => {
-            CARDS_LIST.insertAdjacentHTML('afterbegin', `<span class="error-message">Щось пішло не так! помилка: ${error.message}</span>`);
+            CARDS_LIST.insertAdjacentHTML('afterbegin', `<span class="error-message">Something went wrong! ERROR: ${error.message}</span>`);
             console.log('get error', error);
         })
         .finally(() => loadingSwitch(false));
