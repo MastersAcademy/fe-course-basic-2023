@@ -1,6 +1,7 @@
 .login {
-  max-width: 575px;
-  margin: 40px auto 0;
+  max-width: 625px;
+  margin: 0 auto;
+  padding: 0 25px;
   color: #221F1F;
 }
 
@@ -65,6 +66,13 @@
   font-size: 14px;
   color: #F00;
   margin: -36px 0 20px;
+}
+
+@media (min-width: 480px) {
+
+  .login {
+    padding: 0 50px;
+  }
 }
 
 @media (min-width: 768px) {

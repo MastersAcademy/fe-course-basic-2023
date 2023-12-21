@@ -13,7 +13,7 @@
   display: grid;
   grid-template-columns: 275px;
   grid-gap: 25px;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .card {
@@ -118,6 +118,7 @@
 
   .cards {
     grid-template-columns: repeat(2, 275px);
+    justify-content: space-between;
   }
 
   .title {
