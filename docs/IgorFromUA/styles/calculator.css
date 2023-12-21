@@ -4,7 +4,6 @@
   grid-template-columns: repeat(4, minmax(30px, 122px)) minmax(50px, 150px);
   grid-column-gap: 2px;
   align-items: center;
-  margin-left: 8px;
 }
 
 .field__title {
@@ -28,7 +27,6 @@
   text-align: center;
   border: 1px solid #A9A9A9;
   border-radius: 6px;
-  outline: none;
 }
 
 .field__input:focus {
@@ -47,7 +45,6 @@
   border-radius: 6px;
   padding: 7px 4px;
   background-color: #FFF;
-  outline: none;
 }
 
 .field__select {
@@ -57,7 +54,6 @@
   border-radius: 6px;
   padding: 7px 4px;
   background-color: #FFF;
-  outline: none;
 }
 
 .field__label-SecondValue {
@@ -96,7 +92,6 @@
 .date-text {
   font-size: 14px;
   line-height: 21px;
-  margin-left: 8px;
 }
 
 .error-text {
@@ -104,7 +99,6 @@
   font-size: 24px;
   font-weight: 700;
   line-height: 48px;
-  margin-left: 8px;
   margin-bottom: 75px;
 }
 
@@ -118,7 +112,6 @@
   font-size: 24px;
   font-weight: 700;
   line-height: 48px;
-  margin-left: 8px;
   margin-bottom: 75px;
 }
 
@@ -175,33 +168,24 @@
 @media (min-width: 480px) {
 
   .big-result {
-    font-size: 30px;
+    font-size: 28px;
   }
 
   .date-text {
-    font-size: 22px;
+    font-size: 20px;
     line-height: 32px;
   }
 }
 
 @media (min-width: 768px) {
 
-  .error-text {
-    margin-left: 53px;
-  }
-
   .date-text {
     font-size: 22px;
     line-height: 32px;
-    margin-left: 53px;
   }
 
   .limit__min, .limit__max {
     font-size: 22px;
-  }
-
-  .field {
-    margin: 0 0 12px 53px;
   }
 
   .field__title {
@@ -226,6 +210,5 @@
   .date-text {
     font-size: 22px;
     line-height: 32px;
-    margin-left: 53px;
   }
 }

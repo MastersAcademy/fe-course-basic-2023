@@ -1,20 +1,18 @@
 .wrapper__about {
   width: 100%;
-  padding: 20px 25px;
+  padding: 20px 0;
   display: grid;
   grid-template-columns: 1fr;
 }
 
 .about {
-  padding: 0 5px;
   justify-self: center;
 }
 
 .about__image {
-  width: 320px;
-  height: 214px;
+  width: 350px;
+  height: 232px;
   justify-self: center;
-  margin-left: 8px;
   margin-bottom: 20px;
 }
 
@@ -39,10 +37,6 @@
 
 @media (min-width: 480px) {
 
-  .wrapper__about {
-    padding: 20px 50px;
-  }
-
   .about__image {
     width: 390px;
     height: 260px;
@@ -50,10 +44,6 @@
 }
 
 @media (min-width: 768px) {
-
-  .about {
-    padding: 0;
-  }
 
   .about__image {
     width: 480px;

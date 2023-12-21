@@ -7,13 +7,7 @@
   background: #EF4934;
 }
 
-.header__logo {
-  margin-left: 25px;
-  align-self: center;
-}
-
-.navigation {
-  margin-right: 25px;
+.header__logo, .navigation {
   align-self: center;
 }
 
@@ -62,17 +56,6 @@
 
 .navigation__link_active {
   border-bottom: 2px solid #FFF;
-}
-
-@media (min-width: 480px) {
-
-  .header__logo {
-    margin-left: 50px;
-  }
-
-  .navigation {
-    margin-right: 50px;
-  }
 }
 
 @media (min-width: 768px) {
