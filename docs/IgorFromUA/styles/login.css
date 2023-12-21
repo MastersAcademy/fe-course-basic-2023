@@ -62,9 +62,9 @@
 }
 
 .error {
-  font-size: 14px;
+  font-size: 12px;
   color: #F00;
-  margin: -36px 0 20px;
+  margin: -34px 0 20px;
 }
 
 @media (min-width: 768px) {
@@ -76,5 +76,13 @@
   .login__title {
     font-size: 48px;
     margin-bottom: 60px;
+  }
+}
+
+@media (min-width: 480px) {
+
+  .error {
+    font-size: 14px;
+    margin: -36px 0 20px;
   }
 }
