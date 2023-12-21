@@ -1,0 +1,119 @@
+@media (min-width: 768px) and (max-width: 1279px) {
+	.header {
+		height: 110px;
+	}
+
+	.header__logo {
+		width: 80px;
+		height: 80px;
+	}
+
+	.footer {
+		margin-top: 50px;
+	}
+}
+
+@media (max-width: 1023px) {
+	.header,
+	.footer {
+		height: 110px;
+	}
+
+	.header__logo {
+		width: 100px;
+		height: 100px;
+	}
+
+	.nav__menu {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		gap: 5px;
+		height: 90px;
+	}
+
+	.nav__menu_list {
+		height: 20px;
+		padding-bottom: 7px;
+	}
+
+	.footer {
+		max-width: 100%;
+		height: 260px;
+		display: flex;
+		gap: 32px;
+		align-items: center;
+		justify-content: space-evenly;
+		flex-direction: row;
+	}
+
+	.footer__social_list {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		gap: 13px;
+	}
+
+	.social__ico {
+		width: 52px;
+		height: 52px;
+	}
+
+	.footer__about {
+		max-width: 50%;
+	}
+
+	.footer__about_info {
+		text-align: end;
+	}
+
+	.footer__about a {
+		color: #FFF;
+	}
+}
+
+@media (max-width: 1023px) {
+	body {
+		min-width: 400px;
+	}
+
+	.main {
+		margin-top: 250px;
+	}
+
+	.main__section {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+	}
+
+	.main__section_img {
+		margin-bottom: 20px;
+		margin-top: 100px;
+	}
+
+	.about__title {
+		display: flex;
+		justify-content: center;
+	}
+
+	.section__img {
+		width: 100%;
+		height: auto;
+	}
+
+	.section__about_me {
+		max-width: 575px;
+		margin-bottom: 50px;
+		width: 100%;
+	}
+
+	.about__me_info {
+		padding: 0 20px;
+	}
+
+	.footer {
+		margin-top: 220px;
+	}
+}
