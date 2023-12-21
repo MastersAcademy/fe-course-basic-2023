@@ -16,65 +16,67 @@
     </head>
     <body class="wrapper-all">
         <div>
-            <header class="header wrapper container">
-                <img class="header__logo" src="./src/logo.png" width="55" height="58" alt="logo masters academy">
-                <nav class="navigation">
-                    <div class="navigation__menu-icon">
-                        <svg width="34" height="19" viewBox="0 0 34 19">
-                            <rect width="34" height="3.5" rx="1" fill="#FFF"></rect>
-                            <rect y="8" width="34" height="3.5" rx="1" fill="#FFF"></rect>
-                            <rect y="16" width="34" height="3.5" rx="1" fill="#FFF"></rect>
-                        </svg>
+            <div class="wrapper">
+                <header class="header container">
+                    <img class="header__logo" src="./src/logo.png" width="55" height="58" alt="logo masters academy">
+                    <nav class="navigation">
+                        <div class="navigation__menu-icon">
+                            <svg width="34" height="19" viewBox="0 0 34 19">
+                                <rect width="34" height="3.5" rx="1" fill="#FFF"></rect>
+                                <rect y="8" width="34" height="3.5" rx="1" fill="#FFF"></rect>
+                                <rect y="16" width="34" height="3.5" rx="1" fill="#FFF"></rect>
+                            </svg>
+                        </div>
+                        <ul class="navigation__list">
+                            <li class="navigation__item">
+                                <a class="navigation__link navigation__link_active" href="./calculator.html">Calculator</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a class="navigation__link" href="./games.html">Games</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a class="navigation__link" href="./index.html">About</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a class="navigation__link" href="./login.html">Login</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <main class="container">
+                    <h1 class="field__title">Calculate Games</h1>
+                    <div class="field">
+                        <span class="limit__min">max 10</span>
+                        <span class="limit__max">max100</span>
+                        <label class="field__label-firstValue">
+                            <input id="firstValue" class="field__input">
+                        </label>
+                        <label class="field__label-select">
+                            <select name="operation" id="operation" class="field__select">
+                                <option value="+">+</option>
+                                <option value="-">-</option>
+                                <option value="/">/</option>
+                                <option value="*">*</option>
+                                <option value="**">**</option>
+                            </select>
+                        </label>
+                        <label class="field__label-SecondValue">
+                            <input id="secondValue" class="field__input">
+                        </label>
+                        <button id="calculate" type="button" class="field__button">=</button>
+                        <span id="result" class="field__result"></span>
                     </div>
-                    <ul class="navigation__list">
-                        <li class="navigation__item">
-                            <a class="navigation__link navigation__link_active" href="./calculator.html">Calculator</a>
-                        </li>
-                        <li class="navigation__item">
-                            <a class="navigation__link" href="./games.html">Games</a>
-                        </li>
-                        <li class="navigation__item">
-                            <a class="navigation__link" href="./index.html">About</a>
-                        </li>
-                        <li class="navigation__item">
-                            <a class="navigation__link" href="./login.html">Login</a>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
-            <main class="container">
-                <h1 class="field__title">Calculate Games</h1>
-                <div class="field">
-                    <span class="limit__min">max 10</span>
-                    <span class="limit__max">max100</span>
-                    <label class="field__label-firstValue">
-                        <input id="firstValue" class="field__input">
-                    </label>
-                    <label class="field__label-select">
-                        <select name="operation" id="operation" class="field__select">
-                            <option value="+">+</option>
-                            <option value="-">-</option>
-                            <option value="/">/</option>
-                            <option value="*">*</option>
-                            <option value="**">**</option>
-                        </select>
-                    </label>
-                    <label class="field__label-SecondValue">
-                        <input id="secondValue" class="field__input">
-                    </label>
-                    <button id="calculate" type="button" class="field__button">=</button>
-                    <span id="result" class="field__result"></span>
-                </div>
-                <div class="date-text" data-date-text=""></div>
-                <div class="error-text" data-error-text></div>
-                <div class="big-result" data-big-result>
-                    <div class="big-result__first-number" data-big-result="first-number"></div>
-                    <div class="big-result__operator" data-big-result="operation"></div>
-                    <div class="big-result__second-number" data-big-result="second-number"></div>
-                    <div class="big-result__equal" data-big-result="equal"></div>
-                    <div class="big-result__result" data-big-result="result"></div>
-                </div>
-            </main>
+                    <div class="date-text" data-date-text=""></div>
+                    <div class="error-text" data-error-text></div>
+                    <div class="big-result" data-big-result>
+                        <div class="big-result__first-number" data-big-result="first-number"></div>
+                        <div class="big-result__operator" data-big-result="operation"></div>
+                        <div class="big-result__second-number" data-big-result="second-number"></div>
+                        <div class="big-result__equal" data-big-result="equal"></div>
+                        <div class="big-result__result" data-big-result="result"></div>
+                    </div>
+                </main>
+            </div>
         </div>
         <div>
             <footer class="footer wrapper container">
