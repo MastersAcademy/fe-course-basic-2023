@@ -1,0 +1,121 @@
+@import url("./header.css");
+@import url("./footer.css");
+@import url("./font.css");
+@import url("./index.css");
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-form {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr;
+  width: 575px;
+  height: 520px;
+  border-radius: 5px;
+}
+
+.login-form__title {
+  color: #221F1F;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 32px;
+  word-wrap: break-word;
+  justify-self: center;
+  margin-bottom: 60px;
+}
+
+.login-form__label {
+  color: #221F1F;
+  font-size: 22px;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.login-form__label--pwd {
+  margin-top: 40px;
+}
+
+.login-form__input {
+  font-size: 20px;
+  width: 100%;
+  height: 70px;
+  background-color: transparent;
+  border-radius: 6px;
+  border: 1px #A9A9A9 solid;
+  margin-top: 22px;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+
+.login-form__input::placeholder {
+  padding-left: 20px;
+  color: #A9A9A9;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.login-form__checkbox {
+  margin: 40px 0;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox__input {
+  margin-right: 14px;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #EF4934;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.checkbox__input:hover + label {
+  font-weight: 700;
+}
+
+.checkbox__input:checked::after {
+  width: 20px;
+  height: 20px;
+  content: "\2713";
+  font-size: 30px;
+  color: #008000;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.checkbox__text {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.login-form__submit-btn {
+  height: 70px;
+  border-radius: 6px;
+  background-color: #EF4934;
+  border: none;
+  color: #FFF;
+  box-shadow: 0 4px 30px 0;
+}
+
+.login-form__submit-btn:hover {
+  background-color: #C03A24;
+  cursor: pointer;
+  border: none;
+}
+
+.error {
+  color: #C03A24;
+  padding: 5px;
+}
