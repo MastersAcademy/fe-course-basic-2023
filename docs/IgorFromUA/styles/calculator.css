@@ -1,7 +1,7 @@
 .field {
   max-width: 900px;
   display: grid;
-  grid-template-columns: repeat(4, minmax(30px, 122px)) minmax(50px, 150px);
+  grid-template-columns: repeat(4, minmax(20px, 122px)) minmax(65px, 400px);
   grid-column-gap: 2px;
   align-items: center;
 }
@@ -73,8 +73,8 @@
 
 .field__result {
   grid-column: 5/6;
-  font-size: 14px;
-  line-height: 21px;
+  font-size: 22px;
+  line-height: 22px;
 }
 
 .limit__min, .limit__max {
@@ -192,20 +192,9 @@
     font-size: 48px;
     margin: 80px 0 50px;
   }
-
-
-  .field__result {
-    font-size: 18px;
-    line-height: 27px;
-  }
 }
 
 @media (min-width: 1024px) {
-
-  .field__result {
-    font-size: 22px;
-    line-height: 32px;
-  }
 
   .date-text {
     font-size: 22px;

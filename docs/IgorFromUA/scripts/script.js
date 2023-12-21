@@ -41,8 +41,10 @@ function showResult(result) {
     const RESULT_ELEMENT = document.getElementById('result');
     if ((typeof result) === 'number') {
         RESULT_ELEMENT.innerText = result + (result > 1 ? ' games' : ' game');
+        RESULT_ELEMENT.style.fontSize = '22px';
     } else {
         RESULT_ELEMENT.innerText = result;
+        RESULT_ELEMENT.style.fontSize = '12px';
     }
 }
 
