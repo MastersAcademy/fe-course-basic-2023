@@ -1,42 +1,45 @@
 async function initPokemons() {
+    const body = document.querySelector('body');
     const FORM_FILTERS_ELEMENT = document.querySelector('[data-form-filters]');
     const SELECT_CUSTOM_BTN = FORM_FILTERS_ELEMENT.querySelector('[data-select-custom-btn]');
     const SELECT_CUSTOM_LIST = FORM_FILTERS_ELEMENT.querySelector('[data-select-custom-list]');
-    const SELECT_CUSTOM_OPTIONS = SELECT_CUSTOM_LIST.querySelectorAll('[data-option-value]');
     const TEXT_INPUT_ELEMENT = FORM_FILTERS_ELEMENT.elements['search-query'];
     const CARDS_CONTAINER_ELEMENT = document.querySelector('[data-cards-container]');
     const LOADER_CONTAINER_ELEMENT = document.querySelector('[data-loader-container]');
+
+    const selectCustomOptions = Array.from(SELECT_CUSTOM_LIST.querySelectorAll('[data-option-value]'));
 
     let allCards;
     let filteredCards = [];
 
     function getSelectedOptionsValues() {
-        const selectedOptionsValues = [];
-
-        SELECT_CUSTOM_OPTIONS.forEach((option) => {
-            if (option.classList.contains('filters__select-option--selected')) {
-                const { optionValue } = option.dataset;
-                selectedOptionsValues.push(optionValue);
-            }
-        });
-
-        return selectedOptionsValues;
+        return selectCustomOptions.filter((option) => option.classList.contains('filters__select-option--selected'))
+            .map((option) => option.dataset.optionValue);
     }
 
     function toggleSelectedOptionHandler(event) {
-        SELECT_CUSTOM_OPTIONS.forEach((option) => {
+        selectCustomOptions.forEach((option) => {
             if (event.target !== option) return;
             option.classList.toggle('filters__select-option--selected');
         });
     }
 
-    function clickSelectBtnHandler() {
-        SELECT_CUSTOM_LIST.classList.toggle('filters__select-list--active');
-        SELECT_CUSTOM_LIST.addEventListener('click', toggleSelectedOptionHandler);
+    function hideDropDownOptions(event) {
+        event.stopPropagation();
+        if (event.target.tagName === 'LI') return;
+        SELECT_CUSTOM_LIST.classList.remove('filters__select-list--active');
+        body.removeEventListener('click', hideDropDownOptions);
+    }
+
+    function showDropDownOptions(event) {
+        event.stopPropagation();
+        SELECT_CUSTOM_LIST.classList.add('filters__select-list--active');
+        body.addEventListener('click', hideDropDownOptions);
     }
 
     function initCustomSelect() {
-        SELECT_CUSTOM_BTN.addEventListener('click', clickSelectBtnHandler);
+        SELECT_CUSTOM_BTN.addEventListener('click', showDropDownOptions);
+        SELECT_CUSTOM_LIST.addEventListener('click', toggleSelectedOptionHandler);
     }
 
     function clearContainer(container) {
@@ -179,6 +182,11 @@ async function initPokemons() {
         onChangeFiltersHandler();
     }
 
+    function onClickCustomSelectHandler() {
+        const updatedFilteredCards = updateFilteredCards();
+        renderCards(CARDS_CONTAINER_ELEMENT, updatedFilteredCards);
+    }
+
     async function fetchAndRenderPokemons() {
         try {
             showLoader();
@@ -196,6 +204,7 @@ async function initPokemons() {
 
             TEXT_INPUT_ELEMENT.addEventListener('input', onInputSearchHandler);
             FORM_FILTERS_ELEMENT.addEventListener('change', onChangeFiltersHandler);
+            SELECT_CUSTOM_LIST.addEventListener('click', onClickCustomSelectHandler);
             FORM_FILTERS_ELEMENT.addEventListener('submit', onSubmitFiltersHandler);
         } catch (error) {
             console.error(`GET error: ${error.message}`);
