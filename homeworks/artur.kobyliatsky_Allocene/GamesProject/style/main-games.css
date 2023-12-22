@@ -299,7 +299,7 @@ main {
   animation: loadingAnimation 1s infinite;
 }
 
-@media screen and (min-width: 1px) and (max-width: 767px) {
+@media screen and (min-width: 1px) and (max-width: 768px) {
 
   .contain {
     width: calc(90%);
@@ -409,97 +409,23 @@ main {
   }
 }
 
-@media screen and (min-width: 610px) and (max-width: 767px) {
+@media screen and (min-width: 768px) and (max-width: 930px) {
 
   .contain {
+    width: calc(90%);
     margin-top: 150px;
-  }
-
-  .cards-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
   }
 
   .game__cod2 {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 25px);
+    background-color: #ECECEC;
+    padding: 12px 12px 22px;
+    border-radius: 12px;
   }
-}
-
-@media screen and (min-width: 930px) and (max-width: 1250px) {
-
-  .cards-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 25px;
-  }
-
-  .search {
-    height: 55px;
-    margin-top: 70px;
-  }
-
-  select[name="genre"] {
-    width: 70px;
-  }
-
-  .inp__search {
-    height: 30px;
-    width: 240px;
-  }
-
-  .search__button {
-    height: 30px;
-    width: 50px;
-  }
-
-  .text__heading {
-    text-align: center;
-    font-size: 38px;
-  }
-
-  .cod2__general--img img {
-    height: 80px;
-    width: 80px;
-  }
-
-  .radio {
-    gap: 10px;
-  }
-
-  .custom__radio {
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
-    margin-right: 12px;
-  }
-
-  .form__radio {
-    font-size: 15px;
-  }
-
-  .checkbox {
-    gap: 10px;
-  }
-
-  .custom__check {
-    height: 15px;
-    width: 15px;
-    border-radius: 6px;
-    margin-right: 12px;
-  }
-
-  .form__checkbox {
-    font-size: 15px;
-  }
-
-  .plate {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 930px) {
 
   .cards-container {
     display: grid;
@@ -590,6 +516,78 @@ main {
 
   .form__checkbox {
     font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 930px) and (max-width: 1250px) {
+
+  .cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+  }
+
+  .search {
+    height: 55px;
+    margin-top: 70px;
+  }
+
+  select[name="genre"] {
+    width: 70px;
+  }
+
+  .inp__search {
+    height: 30px;
+    width: 240px;
+  }
+
+  .search__button {
+    height: 30px;
+    width: 50px;
+  }
+
+  .text__heading {
+    text-align: center;
+    font-size: 38px;
+  }
+
+  .cod2__general--img img {
+    height: 80px;
+    width: 80px;
+  }
+
+  .radio {
+    gap: 10px;
+  }
+
+  .custom__radio {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    margin-right: 12px;
+  }
+
+  .form__radio {
+    font-size: 15px;
+  }
+
+  .checkbox {
+    gap: 10px;
+  }
+
+  .custom__check {
+    height: 15px;
+    width: 15px;
+    border-radius: 6px;
+    margin-right: 12px;
+  }
+
+  .form__checkbox {
+    font-size: 15px;
+  }
+
+  .plate {
+    display: none;
   }
 }
 

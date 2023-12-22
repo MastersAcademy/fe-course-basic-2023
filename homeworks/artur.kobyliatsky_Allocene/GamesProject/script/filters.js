@@ -3,12 +3,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const genreSelect = document.querySelector('select[name="genre"]');
     const searchInput = document.querySelector('.inp__search');
     const mainElement = document.querySelector('main');
+    const plateText = document.getElementById('plate');
 
     function toggleSearchVisibility() {
         if (searchContainer.classList.contains('search-hidden')) {
             searchContainer.classList.remove('search-hidden');
+            plateText.textContent = 'Close game filters';
         } else {
             searchContainer.classList.add('search-hidden');
+            plateText.textContent = 'Open game filters';
         }
     }
 
