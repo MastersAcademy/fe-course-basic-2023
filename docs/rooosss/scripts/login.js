@@ -50,6 +50,10 @@ function isEmail(email) {
     return /\S+@\S+\.\S+/.test(email);
 }
 
+function isPasswordLength(password) {
+    return password.length >= 8 && password.length <= 12;
+}
+
 function deleteSpaces(str) {
     return str.replace(/\s/g, '');
 }
@@ -68,7 +72,7 @@ function validateForm() {
 
     if (!password) {
         setErrors({ [PASSWORD_INPUT_ID]: 'The password field must be filled' });
-    } else if (password.length < 8 || password.length > 12) {
+    } else if (!isPasswordLength(password)) {
         setErrors({ [PASSWORD_INPUT_ID]: 'Password must be between 8 and 12 characters' });
     }
 
@@ -76,7 +80,7 @@ function validateForm() {
         setErrors({ [NOT_A_ROBOT_CHECKBOX_ID]: 'Please check not a robot checkbox' });
     }
 
-    if (isEmail(email) && password && check) {
+    if (isEmail(email) && isPasswordLength(password) && check) {
         navigateToResultPage();
     }
 }

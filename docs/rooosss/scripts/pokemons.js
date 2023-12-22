@@ -36,23 +36,22 @@ function renderCards(container, pokemonsList) {
 function filterPokemons(pokemonsList) {
     const isSmallSizeFilterChecked = formFilters.elements.small.checked;
     const isBigSizeFilterChecked = formFilters.elements.big.checked;
-    const filter = [];
-    pokemonsList.forEach((card) => {
-        if (isBigSizeFilterChecked && card.height >= 100) {
-            filter.push(card);
+    const smallPokemonSize = 20;
+    const bigPokemonSize = 50;
+
+    const resultFilter = pokemonsList.filter((pokemon) => {
+        if (isSmallSizeFilterChecked && isBigSizeFilterChecked) {
+            return pokemon.height <= smallPokemonSize || pokemon.height >= bigPokemonSize;
         }
-        if (isSmallSizeFilterChecked && card.height <= 50) {
-            filter.push(card);
+        if (isBigSizeFilterChecked) {
+            return pokemon.height >= bigPokemonSize;
         }
-        if (isSmallSizeFilterChecked && isBigSizeFilterChecked
-            && card.height <= 50 && card.height >= 100) {
-            filter.push(card);
+        if (isSmallSizeFilterChecked) {
+            return pokemon.height <= smallPokemonSize;
         }
-        if (!isSmallSizeFilterChecked && !isBigSizeFilterChecked) {
-            filter.push(card);
-        }
+        return true;
     });
-    return filter;
+    return resultFilter;
 }
 
 function showSpinner() {

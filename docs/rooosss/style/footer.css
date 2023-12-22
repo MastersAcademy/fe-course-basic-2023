@@ -1,9 +1,9 @@
-.footer__inner {
-  padding: 30px 0 40px;
+.footer {
+  background-color: #EF4934;
 }
 
-.footer__container {
-  background-color: #EF4934;
+.footer__inner {
+  padding: 30px 0 40px;
 }
 
 .footer__image-container {
@@ -11,10 +11,6 @@
   display: flex;
   justify-content: center;
   gap: 30px;
-}
-
-footer__image-container a {
-  cursor: pointer;
 }
 
 .footer__title {

@@ -1,12 +1,16 @@
+.calculator {
+  padding-left: 53px;
+}
+
 .calculator__field {
   display: flex;
   column-gap: 10px;
-  margin: 20px;
   align-items: center;
+  margin: 20px 0;
 }
 
 .calculator__title {
-  margin: 40px 0 0 20px;
+  margin-top: 40px;
   font-size: 48px;
   font-style: normal;
   font-weight: 700;
@@ -39,7 +43,7 @@
   transform: translate(1px, 1px);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 740px) {
 
   .calculator__title {
     font-size: 36px;
