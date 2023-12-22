@@ -1,14 +1,13 @@
 @import url("main.css");
 
 .about__inner {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 65px;
-  margin-top: 60px;
+  padding: 60px 0;
 }
 
 .about__text {
-  max-width: 575px;
   color: #221F1F;
 }
 
@@ -32,5 +31,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .about__text {
+    text-align: center;
   }
 }
