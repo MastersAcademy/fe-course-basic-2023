@@ -39,3 +39,10 @@
 .footer--relative {
   position: relative;
 }
+
+@media (max-width: 1100px) {
+
+  .footer__text {
+    display: none;
+  }
+}
