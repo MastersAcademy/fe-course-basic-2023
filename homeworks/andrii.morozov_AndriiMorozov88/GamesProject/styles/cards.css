@@ -14,7 +14,7 @@
 
 .filter {
   display: grid;
-  grid-template-columns: 17fr 30fr 30fr 25fr 30fr;
+  grid-template-columns: 9fr 3fr;
   background-color: #221F1F;
   padding-left: 3%;
   padding-right: 3%;
@@ -25,6 +25,16 @@
   top: 80px;
   color: #FFF;
   z-index: 9999;
+}
+
+.filter__button {
+  display: none;
+}
+
+.filter__block {
+  display: grid;
+  grid-template-columns: 20fr 20fr 35fr 35fr;
+  align-items: center;
 }
 
 .filter-element {
@@ -194,25 +204,57 @@
 
   .filter {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    height: max-content;
+    justify-content: space-between;
+  }
+
+  .filter__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #221F1F;
+  }
+
+  .button__logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .filter__block {
+    display: none;
+  }
+
+  .filter__select {
+    width: 90%;
+    min-width: 200px;
+    height: 60px;
+    font-size: 20px;
+    margin: 10px;
   }
 
   .filter__radio {
     width: 300px;
+    font-size: 30px;
+    margin: 10px;
   }
 
   .filter__checkbox {
-    width: 200px;
+    width: 300px;
+    font-size: 30px;
+    margin: 10px;
   }
 
-  .filter > section {
-    padding: 5px;
-  }
-
-  .cards__heading {
-    margin-top: 320px;
+  .filter__block--active {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 140px;
+    background-color: #221F1F;
+    width: 30%;
+    height: max-content;
+    opacity: .9;
+    left: 0;
+    align-items: flex-start;
+    min-width: 350px;
   }
 }
 

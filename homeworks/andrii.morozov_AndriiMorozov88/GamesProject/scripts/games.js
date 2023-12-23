@@ -9,6 +9,8 @@ const searchInput = document.querySelector('[data-search-input]');
 const newFirstButton = document.querySelector('[data-new-first]');
 const oldFirstButton = document.querySelector('[data-old-first]');
 const infoElement = document.querySelector('[data-info]');
+const burgerButton = document.querySelector('[data-burger-button]');
+const filterBlock = document.querySelector('[data-filter-block]');
 async function getGamesArray() {
     infoElement.classList.replace('cards-loading-info--disabled', 'cards-loading-info');
     footerElement.classList.replace('footer--relative', 'footer--absolute');
@@ -43,10 +45,10 @@ async function getGamesArray() {
     } else {
         games = await allGames;
     }
-    // for (let count = 0; count < 100000; count++) {
-    //     console.log(count);
-    //     console.clear();
-    // }
+    for (let count = 0; count < 100000; count++) {
+        console.log(count);
+        console.clear();
+    }
     return games;
 }
 function createCardElement(game, array) {
@@ -146,6 +148,10 @@ async function init() {
     });
     searchButton.addEventListener('click', () => {
         if (searchInput.value.trim() !== '') showFilterArray();
+    });
+    burgerButton.addEventListener('click', () => {
+        filterBlock.classList.toggle('filter__block--active');
+        console.log(1);
     });
 }
 window.addEventListener('load', init);

@@ -38,44 +38,51 @@
             </div>
         </header>
         <form action="#" method="post" class="filter">
-            <section>
-                <select name="select-genre" class="filter__select" data-select-genre>
-                    <option value="0" selected>All Genres</option>
-                    <option value="Shooter">Shooter</option>
-                    <option value="ARPG">ARPG</option>
-                    <option value="Battle Royale">Battle Royale</option>
-                    <option value="Strategy">Strategy</option>
-                    <option value="MMORPG">MMORPG</option>
-                    <option value="Fighting">Fighting</option>
-                    <option value="Card Game">Card Game</option>
-                </select>
-            </section>
-            <section>
-                <select name="select-platform" class="filter__select" data-select-platform>
-                    <option value="all" selected>All Platforms</option>
-                    <option value="PC (Windows)">PC (Windows)</option>
-                    <option value="Web Browser">Web Browser</option>
-                </select>
-            </section>
-            <section class="filter__radio">
-                <input type="radio" name="radio" data-old-first>
-                <label for="new" class="filter-element">
-                    Old First
-                </label>
-                <input type="radio" name="radio" data-new-first>
-                <label for="favorites">
-                    New First
-                </label>
-            </section>
-            <section class="filter__checkbox">
-                <input type="checkbox" data-new-games>
-                <label for="new" class="filter-element">
-                    New
-                </label>
-                <input type="checkbox" data-old-games>
-                <label for="old">
-                    Old
-                </label>
+            <button type="button" class="filter__button" data-burger-button>
+                <svg class="button__logo">
+                    <use xlink:href="sprite.svg#filter"></use>
+                </svg>
+            </button>
+            <section class="filter__block" data-filter-block>
+                <section>
+                    <select name="select-genre" class="filter__select" data-select-genre>
+                        <option value="0" selected>All Genres</option>
+                        <option value="Shooter">Shooter</option>
+                        <option value="ARPG">ARPG</option>
+                        <option value="Battle Royale">Battle Royale</option>
+                        <option value="Strategy">Strategy</option>
+                        <option value="MMORPG">MMORPG</option>
+                        <option value="Fighting">Fighting</option>
+                        <option value="Card Game">Card Game</option>
+                    </select>
+                </section>
+                <section>
+                    <select name="select-platform" class="filter__select" data-select-platform>
+                        <option value="all" selected>All Platforms</option>
+                        <option value="PC (Windows)">PC (Windows)</option>
+                        <option value="Web Browser">Web Browser</option>
+                    </select>
+                </section>
+                <section class="filter__radio">
+                    <input type="radio" name="radio" data-old-first>
+                    <label for="new" class="filter-element">
+                        Old First
+                    </label>
+                    <input type="radio" name="radio" data-new-first>
+                    <label for="favorites">
+                        New First
+                    </label>
+                </section>
+                <section class="filter__checkbox">
+                    <input type="checkbox" data-new-games>
+                    <label for="new" class="filter-element">
+                        New
+                    </label>
+                    <input type="checkbox" data-old-games>
+                    <label for="old">
+                        Old
+                    </label>
+                </section>
             </section>
             <section class="filter__search">
                 <div class="search__svg">
