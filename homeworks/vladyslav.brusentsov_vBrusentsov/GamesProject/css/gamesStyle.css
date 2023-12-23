@@ -1,3 +1,34 @@
+/* loading-page-style */
+
+.loading-overlay {
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255,);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.loading-spinner {
+  border: 8px solid #F3F3F3;
+  border-top: 8px solid #3498DB;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* games-filters */
+
 .games-filter {
   display: flex;
   width: 100%;
@@ -20,7 +51,6 @@
   background-image: url("../Img/arrow.svg");
   background-repeat: no-repeat;
   background-position: calc(100% - 12px);
-  font-family: Roboto;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -47,7 +77,6 @@
 
 .radio-games-filter label {
   cursor: pointer;
-  font-family: Roboto;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -80,15 +109,14 @@
   left: 6px;
 }
 
-.checkbox-games-filter label::before {
+.radio-date-games-sort label::before {
   content: "";
-  display: flex;
+  display: block;
   width: 20px;
   height: 20px;
-  border-radius: 6px;
+  border-radius: 10px;
   border: 1px solid #FFF;
-  padding: 3px;
-  background-color: #221F1F;
+  transition: background-color 300ms;
   margin-right: 12px;
   text-align: center;
   line-height: 16px;
@@ -96,16 +124,16 @@
   transition: background-color 300ms;
 }
 
-.checkbox-games-filter label::after {
+.radio-date-games-sort label::after {
   content: "";
   display: block;
-  width: 14px;
-  height: 14px;
-  background: url("../Img/filter-checkbox.svg");
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
   opacity: 0;
+  background: #FFF;
   position: absolute;
-  top: 7px;
-  left: 7px;
+  left: 6px;
 }
 
 .radio-games-filter input:checked + label::before {
@@ -118,19 +146,19 @@
 
 /* Checkbox-input */
 
-.checkbox-filter {
+.radio-date-sort {
   display: flex;
   align-items: center;
-  gap: 90px
+  gap: 32px
 }
 
-.checkbox-games-filter {
+.radio-date-games-sort {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-.checkbox-games-filter input {
+.radio-date-games-sort input {
   appearance: none;
   position: absolute;
   z-index: -1;
@@ -140,23 +168,22 @@
   background-color: #FFF;
 }
 
-.checkbox-games-filter label {
+.radio-date-games-sort label {
   cursor: pointer;
-  font-family: Roboto;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   color: #FFF;
-  position: absolute;
+  position: relative;
   display: flex;
   align-items: center;
 }
 
-.checkbox-games-filter input:checked +  label::before {
+.radio-date-games-sort input:checked +  label::before {
   background-color: #221F1F
 }
 
-.checkbox-games-filter input:checked +  label::after {
+.radio-date-games-sort input:checked +  label::after {
   opacity: 1;
 }
 
@@ -179,7 +206,6 @@
   border: 0;
   outline: none;
   padding-left: 12px;
-  font-family: Roboto;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -201,7 +227,6 @@
   align-items: center;
   justify-content: center;
   background-color: #EF4934;
-  font-family: Roboto;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -210,13 +235,12 @@
 
 
 .main-section {
+  display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-top: 100px;
+  flex: 1;
 }
 
 .main-header {
-  font-family: Roboto;
   font-size: 48px;
   font-style: normal;
   font-weight: 700;
@@ -228,15 +252,19 @@
   max-width: 1175px;
   align-items: flex-start;
   margin-top: 40px;
+  justify-content: center;
+  flex: 1;
 }
 
 .card-list {
-  display: inline-flex;
+  display: grid;
   flex-wrap: wrap;
+  flex: 1;
   list-style: none;
   padding: 0;
   margin: 0;
   gap: 25px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .card {
@@ -246,12 +274,11 @@
   gap: 22px;
   border-radius: 12px;
   background-color: #ECECEC;
+  overflow: hidden;
 }
 
 .main-card-header {
   display: flex;
-  width: 251px;
-  height: 90px;
   gap: 12px;
 }
 
@@ -259,33 +286,44 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 149px;
-  height: 77px;
   gap: 12px;
+  flex-grow: 1;
+  overflow: hidden;
 }
 
-.card-header h3 {
-  font-family: Roboto;
+.card-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 8px;
+}
+
+.card-title {
   font-size: 18px;
   font-weight: 700;
-  width: 134px;
-  height: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   margin: 0;
+  max-width: 100%;
 }
 
-.card-header p {
-  font-family: Roboto;
+.short-description {
   font-size: 14px;
   font-weight: 400;
-  width: 149px;
-  height: 52px;
+  max-height: 52px;
   margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  /* stylelint-disable value-no-vendor-prefix */
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  /* stylelint-enable value-no-vendor-prefix */
 }
 
 .card-actors {
   display: flex;
-  width: 231px;
-  height: 114px;
   flex-direction: column;
   align-items: flex-start;
   padding: 0;
@@ -301,15 +339,39 @@
 }
 
 .card-actors .key {
-  font-family: Roboto;
   font-size: 14px;
   font-weight: 600;
   line-height: 18.2px;
 }
 
 .card-actors .value {
-  font-family: Roboto;
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
+}
+
+@media screen and (max-width: 768px) {
+
+  .games-filter {
+    flex-direction: column;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .main-header {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .card-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 425px) {
+
+  .card-list {
+    grid-template-columns: 1fr 1fr;
+  }
 }
