@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:100");
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #221F1F;
+  margin: 0;
+  min-width: 400px;
+}
+
+.container {
+  max-width: 1175px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.intro {
+  background-color: #EF4934;
+  padding: 0 53px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.link_list {
+  list-style: none;
+  color: #FFF;
+  display: flex;
+  gap: 50px;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Form */
+
+.form_games {
+  background-color: #221F1F;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input[type="radio"] {
+  margin-left: 70px;
+  border: #F2F2F2;
+}
+
+label[for="platform"],
+label[for="online"],
+label[for="New"],
+label[for="Old"] {
+  color: #FFF;
+}
+
+
+.search-button {
+  background-color: #EF4934;
+  color: #FFF;
+  margin: 0;
+  padding: 12px 20px;
+  border-radius: 0 6px 6px 0;
+}
+
+.filter_search {
+  display: flex;
+}
+
+input[type="text"] {
+  background-image: url("../icon/search_form.svg");
+  background-position: 11px 7px;
+  background-repeat: no-repeat;
+  padding: 10px 90px 10px 50px;
+  border-radius: 6px;
+  margin-right: -7px;
+}
+
+.form_flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.select-name {
+  background-color: #333;
+  color: #FFF;
+  padding: 13px;
+  border-radius: 6px;
+}
+
+.select_gap {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 960px) {
+
+  .form_flex {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 1050px) {
+
+  h2 .title_about_1 {
+    font-size: 1.5em;
+  }
+}
+/* --------- */
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 50px 40px;
+}
+
+
+.hero_flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+
+.title_one {
+  margin: 0;
+  font-weight: 700;
+  font-size: 48px;
+}
+
+.link_MA {
+  color: #EF4934;
+}
+
+.about_me {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+@media (max-width: 520px) {
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .hero_flex {
+    flex-direction: column;
+  }
+
+  .hero_img {
+    width: 1100px;
+  }
+}
+
+@media (max-width: 920px) {
+
+  .hero_img {
+    width: 400px;
+  }
+}
+
+/* Footer */
+
+.footer {
+  background-color: #221F1F;
+  padding: 30px;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer_text {
+  color: #FFF;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.footer_link {
+  color: #FFF;
+}
+
+.title_about_1 {
+  line-height: 32px;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.card_load {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  color: #221F1F;
+}
+
+.card_loading_text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.all_cards {
+  padding: 0 53px;
+}
+
+.loading {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(255,255,255,.3);
+  border-radius: 50%;
+  border-top-color: #E35734;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+
+@-webkit-keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+
+.card {
+  background-color: #ECECEC;
+  width: 275px;
+  border-radius: 12px;
+  padding: 12px 12px 20px;
+}
+
+.card_cards {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+ul.card_cards {
+  margin: 0;
+  padding: 0;
+}
+
+.card_card {
+  width: 275px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ECECEC;
+  border-radius: 12px;
+}
+
+.card_games {
+  display: flex;
+  gap: 10px;
+  line-height: 21px;
+  margin: 12px;
+}
+
+.card_text {
+  margin-left: 14px;
+}
+
+.info_game {
+  list-style: none;
+  padding: 7px 0 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.name_game {
+  margin: 0;
+}
+
+.info_game {
+  margin: 0;
+}
+
+.bolt {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.list_card {
+  padding-bottom: 10px;
+}
+
+.list_card:last-child {
+  padding-bottom: 0;
+}

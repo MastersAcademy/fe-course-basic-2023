@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #221F1F;
+  margin: 0;
+  min-width: 400px;
+}
+
+.container {
+  max-width: 1175px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.intro {
+  background-color: #EF4934;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+
+@media (max-width: 520px) {
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.link_list {
+  list-style: none;
+  color: #FFF;
+  display: flex;
+  gap: 50px;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.login_title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 48px;
+  margin-top: 70px;
+  margin-bottom: 40px;
+}
+
+.login_form {
+  margin: 0 auto;
+  max-width: 60%;
+}
+
+.login_input {
+  width: 80%;
+  border-radius: 7px;
+  border: .006em solid #A9A9A9;
+  font-size: 14px;
+}
+
+input[type="text"],
+input[type="password"] {
+  display: block;
+  margin: 20px 0 40px;
+  padding: 30px 20px;
+  color: #A9A9A9;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-bottom: 5px solid #EF4934;
+}
+
+label[for="email"],
+label[for="password"] {
+  font-weight: 600;
+  font-size: 22px;
+}
+
+input[type="checkbox"] {
+  border: #EF4934;
+  margin-bottom: 40px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #221F1F;
+}
+
+button[type="button"],
+input[type="submit"] {
+  width: 575px;
+  font-weight: 600;
+  font-size: 22px;
+  background-color: #EF4934;
+  color: #FFF;
+  padding: 27px 0;
+  margin-bottom: 170px;
+  border: none;
+  border-radius: 6px;
+}
+
+/* Footer */
+
+.footer {
+  background-color: #221F1F;
+  padding: 30px;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer_text {
+  color: #FFF;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.footer_link {
+  color: #FFF;
+}
+
+.center_title {
+  text-align: center;
+  padding-top: 200px;
+}

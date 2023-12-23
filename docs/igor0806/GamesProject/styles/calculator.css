@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #221F1F;
+  margin: 0;
+}
+
+.container {
+  max-width: 1175px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.intro {
+  background-color: #EF4934;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+
+.link_list {
+  list-style: none;
+  color: #FFF;
+  display: flex;
+  gap: 50px;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 48px;
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+
+.field {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  column-gap: 10px;
+  margin: 20px;
+}
+
+input[id="firstValue"],
+input[id="secondValue"] {
+  margin: 20px 0 40px;
+  padding: 11px 2px;
+  color: #A9A9A9;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+button[type="button"] {
+  font-weight: 600;
+  font-size: 22px;
+  background-color: #EF4934;
+  color: #FFF;
+  padding: 10px 17px;
+  border: none;
+  border-radius: 6px;
+}
+
+/* Footer */
+
+.footer {
+  background-color: #221F1F;
+  margin-top: 170px;
+  padding: 30px;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer_text {
+  color: #FFF;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.footer_link {
+  color: #FFF;
+}
+
+.center_title {
+  text-align: center;
+  padding-top: 200px;
+}
