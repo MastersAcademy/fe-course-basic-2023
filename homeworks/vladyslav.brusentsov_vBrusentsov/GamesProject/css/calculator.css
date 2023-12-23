@@ -1,13 +1,8 @@
-body {
-  gap: 60px;
-}
 
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  max-width: 1175px;
-  max-height: 479px;
+  flex: 1;
 }
 
 .main h1 {
@@ -22,6 +17,7 @@ body {
 
 .field {
   display: flex;
+  justify-content: center;
   gap: 16px;
 }
 
