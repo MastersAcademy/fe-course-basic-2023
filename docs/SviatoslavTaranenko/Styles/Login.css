@@ -1,6 +1,9 @@
 body {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .header {
@@ -23,10 +26,38 @@ body {
   margin-left: 61px;
 }
 
+@media (max-width: 670px) {
+
+  .header__all {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header__img {
+    padding: 15px 0;
+    display: block;
+    margin: 0 auto;
+    width: 55px;
+    height: 55px;
+    justify-content: center;
+    align-content: center;
+  }
+}
+
 .header__items {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   align-items: center;
+}
+
+@media (max-width: 670px) {
+
+  .header__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 25px;
+  }
 }
 
 .header__items a {
@@ -86,6 +117,17 @@ body {
   text-decoration: underline;
 }
 
+@media (max-width: 430px) {
+
+  .header__items {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-left: 35px;
+    padding-bottom: 15px;
+  }
+}
+
 .Login__table {
   margin: 0 auto;
   max-width: 575px;
@@ -99,6 +141,16 @@ body {
   font-size: 48px;
   font-weight: 700;
   line-height: 32px;
+
+  @media (max-width: 670px) {
+    font-size: 36px;
+    line-height: 24px;
+  }
+
+  @media (max-width: 430px) {
+    font-size: 24px;
+    line-height: 20px;
+  }
 }
 
 .Login__table_email {
@@ -112,6 +164,18 @@ body {
   font-weight: 600;
   line-height: 26px;
   padding-top: 10px;
+
+  @media (max-width: 670px) {
+    display: block;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @media (max-width: 500px) {
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .Login__table_email_input {
@@ -123,6 +187,20 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
+
+  @media (max-width: 670px) {
+    min-width: 500px;
+    min-height: 35px;
+    font-size: 12px;
+    line-height: 19px;
+  }
+
+  @media (max-width: 500px) {
+    min-width: 300px;
+    min-height: 30px;
+    font-size: 10px;
+    line-height: 17px;
+  }
 }
 
 .Login__table_password {
@@ -136,6 +214,18 @@ body {
   font-weight: 600;
   line-height: 26px;
   padding-top: 20px;
+
+  @media (max-width: 670px) {
+    display: block;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @media (max-width: 500px) {
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .Login__table_password_input {
@@ -147,6 +237,20 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
+
+  @media (max-width: 670px) {
+    min-width: 500px;
+    min-height: 35px;
+    font-size: 12px;
+    line-height: 19px;
+  }
+
+  @media (max-width: 500px) {
+    min-width: 300px;
+    min-height: 30px;
+    font-size: 10px;
+    line-height: 17px;
+  }
 }
 
 .Login__table_verif {
@@ -197,6 +301,10 @@ body {
   line-height: 21px;
   color: #221F1F;
   padding-left: 30px;
+
+  @media (max-width: 500px) {
+    font-size: 10px;
+  }
 }
 
 .errors-container {
@@ -204,6 +312,10 @@ body {
   font-size: 14px;
   margin-top: 10px;
   color: #FF2E2EBA;
+
+  @media (max-width: 500px) {
+    font-size: 10px;
+  }
 }
 
 .Login__table_btn {
@@ -222,8 +334,76 @@ body {
   color: #FFF;
   border: none;
   cursor: pointer;
+
+  @media (max-width: 670px) {
+    min-width: 500px;
+    min-height: 35px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @media (max-width: 500px) {
+    min-width: 305px;
+    min-height: 30px;
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .Login__table_btn_name:active {
   box-shadow: 0 0 0 1px #A9A9A9;
+}
+
+.footer {
+  margin-top: 100px;
+  background-color: #333;
+  color: #FFF;
+  padding: 10px;
+  text-align: center;
+}
+
+.footer__icons {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__icons_row {
+  display: flex;
+  justify-content: center;
+  gap: 33px;
+  margin-top: 20px;
+}
+
+.footer__icons_all {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  align-items: center;
+  background-color: #FFF;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+
+.footer__icons_row img {
+  width: 20px;
+  height: 20px;
+}
+
+.footer__text {
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+  color: #FFF;
+}
+
+.about__text_link {
+  color: #FFF;
+  text-decoration: none;
 }

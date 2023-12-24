@@ -38,10 +38,38 @@ body {
   margin-left: 61px;
 }
 
+@media (max-width: 670px) {
+
+  .header__all {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header__img {
+    padding: 15px 0;
+    display: block;
+    margin: 0 auto;
+    width: 55px;
+    height: 55px;
+    justify-content: center;
+    align-content: center;
+  }
+}
+
 .header__items {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   align-items: center;
+}
+
+@media (max-width: 670px) {
+
+  .header__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 25px;
+  }
 }
 
 .header__items a {
@@ -101,6 +129,17 @@ body {
   text-decoration: underline;
 }
 
+@media (max-width: 430px) {
+
+  .header__items {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-left: 35px;
+    padding-bottom: 15px;
+  }
+}
+
 .games__filter {
   display: flex;
   width: 100%;
@@ -108,6 +147,20 @@ body {
   background-color: #221F1F;
   align-items: center;
   justify-content: space-around;
+}
+
+@media (max-width: 1120px) {
+
+  .games__filter {
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 60px;
+    background-color: #221F1F;
+    align-items: center;
+    gap: 25px;
+  }
 }
 
 .datalist__games_filter select {
@@ -128,11 +181,13 @@ body {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
+  cursor: not-allowed;
 }
 
 .radio__filter {
   display: flex;
   gap: 12px;
+  max-width: 240px;
 }
 
 .radio__games_filter {
@@ -144,10 +199,11 @@ body {
   z-index: -1;
   opacity: 0;
   gap: 20px;
+  cursor: not-allowed;
 }
 
 .radio__games_filter label {
-  cursor: pointer;
+  cursor: not-allowed;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-style: normal;
@@ -221,13 +277,17 @@ body {
 .checkbox__filter {
   display: flex;
   align-items: center;
-  gap: 90px
+  gap: 90px;
+  max-width: 80px;
+  padding-right: 100px;
+  cursor: not-allowed;
 }
 
 .checkbox__games_filter {
   display: flex;
   align-items: center;
   gap: 12px;
+  cursor: not-allowed;
 }
 
 .checkbox__games_filter input {
@@ -238,10 +298,11 @@ body {
   width: 20px;
   height: 20px;
   background-color: #FFF;
+  cursor: not-allowed;
 }
 
 .checkbox__games_filter label {
-  cursor: pointer;
+  cursor: not-allowed;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-style: normal;
@@ -273,6 +334,15 @@ body {
   background-position: left 5px center;
   background-size: 24px 24px;
   background-repeat: no-repeat;
+  cursor: not-allowed;
+
+  @media (max-width: 400px) {
+    max-width: 250px;
+  }
+
+  @media (max-width: 280px) {
+    max-width: 180px;
+  }
 }
 
 .search__bar input {
@@ -285,6 +355,7 @@ body {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
+  cursor: not-allowed;
 }
 
 .search__bar button {
@@ -302,6 +373,7 @@ body {
   font-style: normal;
   font-weight: 400;
   color: #FFF;
+  cursor: not-allowed;
 }
 
 .search__bar button:active {
@@ -316,15 +388,110 @@ body {
   line-height: 32px;
 }
 
+@media (max-width: 940px) {
+
+  .Games .Games__title {
+    margin: 60px 0 0 85px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 32px;
+  }
+}
+
+@media (max-width: 670px) {
+
+  .Games .Games__title {
+    display: flex;
+    align-content: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+@media (max-width: 340px) {
+
+  .Games .Games__title {
+    margin: 40px 0 20px 55px;
+    display: flex;
+    align-content: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
 .card__container {
   margin-top: 60px;
   display: grid;
   grid-template-columns: 275px 275px 275px 275px;
   column-gap: 25px;
   grid-template-rows: 260px;
-  row-gap: 60px;
+  row-gap: 100px;
   justify-content: center;
   min-height: auto;
+}
+
+@media (max-width: 1250px) {
+
+  .card__container {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 275px 275px 275px;
+    column-gap: 25px;
+    grid-template-rows: 260px;
+    row-gap: 100px;
+    justify-content: center;
+    min-height: auto;
+  }
+}
+
+@media (max-width: 970px) {
+
+  .card__container {
+    margin: 60px 60px 0 0;
+    display: grid;
+    grid-template-columns: 275px 275px;
+    column-gap: 25px;
+    grid-template-rows: 260px;
+    row-gap: 100px;
+    align-content: center;
+    justify-content: center;
+    min-height: auto;
+  }
+}
+
+@media (max-width: 670px) {
+
+  .card__container {
+    margin: 60px 60px 0 0;
+    display: grid;
+    grid-template-columns: 275px;
+    column-gap: 25px;
+    grid-template-rows: 260px;
+    row-gap: 100px;
+    align-content: center;
+    justify-content: center;
+    min-height: auto;
+  }
+}
+
+@media (max-width: 340px) {
+
+  .card__container {
+    margin: 0 60px 0 0;
+    display: grid;
+    grid-template-columns: 250px;
+    column-gap: 25px;
+    grid-template-rows: 260px;
+    row-gap: 100px;
+    align-content: center;
+    justify-content: center;
+    min-height: auto;
+  }
 }
 
 .Games__cards {
@@ -343,7 +510,7 @@ body {
   border-radius: 12px;
   padding: 12px 12px 22px;
   background-color: #ECECEC;
-  height: 260px;
+  height: 280px;
 }
 
 .Games__cards_top {
@@ -437,6 +604,8 @@ body {
   display: flex;
   margin-top: 10px;
   justify-content: center;
+  align-content: center;
+  text-align: center;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 22px;
@@ -452,4 +621,3 @@ body {
 .about__text_link:hover {
   color: #EF4934;
 }
-

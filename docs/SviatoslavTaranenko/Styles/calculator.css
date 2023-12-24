@@ -1,6 +1,9 @@
 body {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .header {
@@ -23,10 +26,38 @@ body {
   margin-left: 61px;
 }
 
+@media (max-width: 670px) {
+
+  .header__all {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header__img {
+    padding: 15px 0;
+    display: block;
+    margin: 0 auto;
+    width: 55px;
+    height: 55px;
+    justify-content: center;
+    align-content: center;
+  }
+}
+
 .header__items {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   align-items: center;
+}
+
+@media (max-width: 670px) {
+
+  .header__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 25px;
+  }
 }
 
 .header__items a {
@@ -52,7 +83,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  line-height: 18.75px;
+  line-height: 19px;
   margin-right: 40px;
 }
 
@@ -65,7 +96,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  line-height: 18.75px;
+  line-height: 19px;
   margin-right: 40px;
 }
 
@@ -78,12 +109,23 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  line-height: 18.75px;
+  line-height: 19px;
   margin-right: 40px;
 }
 
 .header__items_Login:active {
   text-decoration: underline;
+}
+
+@media (max-width: 430px) {
+
+  .header__items {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-left: 35px;
+    padding-bottom: 15px;
+  }
 }
 
 .title {
@@ -94,6 +136,14 @@ body {
   font-size: 48px;
   font-weight: 700;
   line-height: 32px;
+
+  @media (max-width: 700px) {
+    font-size: 36px;
+  }
+
+  @media (max-width: 300px) {
+    font-size: 24px;
+  }
 }
 
 .field {
@@ -101,6 +151,13 @@ body {
   justify-content: center;
   column-gap: 10px;
   margin: 20px;
+
+  @media (max-width: 700px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 input {
@@ -113,6 +170,10 @@ input {
   font-size: 14px;
   line-height: 21px;
   text-align: center;
+
+  @media (max-width: 700px) {
+    margin: 5px 0;
+  }
 }
 
 select {
@@ -125,6 +186,10 @@ select {
   font-size: 14px;
   line-height: 21px;
   text-align: center;
+
+  @media (max-width: 700px) {
+    margin: 5px 0;
+  }
 }
 
 button {
@@ -139,6 +204,10 @@ button {
   color: #FFF;
   border: none;
   cursor: pointer;
+
+  @media (max-width: 700px) {
+    margin: 5px 0;
+  }
 }
 
 button:active {
@@ -155,4 +224,62 @@ span {
   font-size: 14px;
   line-height: 42px;
   text-align: center;
+
+  @media (max-width: 700px) {
+    margin: 5px 0;
+  }
+}
+
+.footer {
+  margin-top: auto;
+  background-color: #333;
+  color: #FFF;
+  padding: 10px;
+  text-align: center;
+}
+
+.footer__icons {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__icons_row {
+  display: flex;
+  justify-content: center;
+  gap: 33px;
+  margin-top: 20px;
+}
+
+.footer__icons_all {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  align-items: center;
+  background-color: #FFF;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+
+.footer__icons_row img {
+  width: 20px;
+  height: 20px;
+}
+
+.footer__text {
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+  color: #FFF;
+}
+
+.about__text_link {
+  color: #FFF;
+  text-decoration: none;
 }

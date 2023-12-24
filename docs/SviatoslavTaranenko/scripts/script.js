@@ -3,6 +3,8 @@ const PASSWORD_INPUT_ID = 'password-input-id';
 const NOT_A_ROBOT_CHECKBOX_ID = 'not-a-robot-checkbox-id';
 const SUBMIT_BUTTON_ID = 'submit-button-id';
 const ERRORS_CONTAINER_ID = 'errors-container';
+const ERRORS_EMAIL_ID = 'errors-email';
+const ERRORS_PASSWORD_ID = 'errors-password';
 const RESULT_PAGE_PATH = 'LoginDone.html';
 
 const submitButton = document.getElementById(SUBMIT_BUTTON_ID);
@@ -21,8 +23,28 @@ function getValueById(elementId) {
  * Add errors to errors container.
  * @param {Object} inputData in format like: { [input_id]: error_text, ... }
  */
-function setErrors(inputData) {
+function setErrorsCheckbox(inputData) {
     const errorContainerElement = document.getElementById(ERRORS_CONTAINER_ID);
+    Object.values(inputData).forEach((error) => {
+        const errorElement = document.createElement('p');
+        errorElement.classList.add('error');
+        errorElement.textContent = error;
+        errorContainerElement.appendChild(errorElement);
+    });
+}
+
+function setErrorsEmail(inputData) {
+    const errorContainerElement = document.getElementById(ERRORS_EMAIL_ID);
+    Object.values(inputData).forEach((error) => {
+        const errorElement = document.createElement('p');
+        errorElement.classList.add('error');
+        errorElement.textContent = error;
+        errorContainerElement.appendChild(errorElement);
+    });
+}
+
+function setErrorsPassword(inputData) {
+    const errorContainerElement = document.getElementById(ERRORS_PASSWORD_ID);
     Object.values(inputData).forEach((error) => {
         const errorElement = document.createElement('p');
         errorElement.classList.add('error');
@@ -33,8 +55,18 @@ function setErrors(inputData) {
 /**
  * Delete all errors from errors container.
  */
-function deleteErrors() {
+function deleteErrorsCheckbox() {
     const errorContainerElement = document.getElementById(ERRORS_CONTAINER_ID);
+    errorContainerElement.replaceChildren();
+}
+
+function deleteErrorsEmail() {
+    const errorContainerElement = document.getElementById(ERRORS_EMAIL_ID);
+    errorContainerElement.replaceChildren();
+}
+
+function deleteErrorsPassword() {
+    const errorContainerElement = document.getElementById(ERRORS_PASSWORD_ID);
     errorContainerElement.replaceChildren();
 }
 
@@ -52,7 +84,10 @@ function isEmail(email) {
 }
 
 function validateForm() {
-    deleteErrors();
+    deleteErrorsCheckbox();
+    deleteErrorsEmail();
+    deleteErrorsPassword();
+
     const errors = {};
     const email = getValueById(EMAIL_INPUT_ID);
     const password = getValueById(PASSWORD_INPUT_ID);
@@ -65,14 +100,18 @@ function validateForm() {
     if (password.length < 8 || password.length > 12) {
         errors[PASSWORD_INPUT_ID] = 'Password must be from 8 to 12 symbols';
     }
+
     if (!checkbox) {
         errors[NOT_A_ROBOT_CHECKBOX_ID] = 'Are you a robot?';
     }
-    if (Object.keys(errors).length > 0) {
-        setErrors(errors);
-    } else {
+
+    setErrorsEmail({ [EMAIL_INPUT_ID]: errors[EMAIL_INPUT_ID] });
+    setErrorsPassword({ [PASSWORD_INPUT_ID]: errors[PASSWORD_INPUT_ID] });
+    setErrorsCheckbox({ [NOT_A_ROBOT_CHECKBOX_ID]: errors[NOT_A_ROBOT_CHECKBOX_ID] });
+
+    if (Object.keys(errors).length === 0) {
         navigateToResultPage();
     }
 }
-
+validateForm();
 submitButton.onclick = validateForm;
