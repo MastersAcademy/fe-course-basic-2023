@@ -1,8 +1,3 @@
-const CARDS_LIST = document.querySelector('[data-cards]');
-const FORM_BUTTON = document.querySelector('[data-filter-button]');
-const LOADING_ELEMENT = document.querySelector('[data-loading]');
-const urlGames = 'https://mmo-games.p.rapidapi.com/games';
-
 function createGameCardStr(game) {
     const {
         title,
@@ -79,21 +74,22 @@ function renderCards(container, arrGames) {
     container.append(fragment);
 }
 
-function loadingSwitch(switching) {
-    if (switching) CARDS_LIST.innerHTML = '';
+function loadingSwitch(switching, place) {
+    const LOADING_ELEMENT = document.querySelector('[data-loading]');
+    if (switching) place.textContent = '';
     LOADING_ELEMENT.style.visibility = switching ? 'visible' : 'hidden';
 }
 
-function getGames(url = urlGames) {
-    loadingSwitch(true);
-    const optionsGamesUr = {
+function getGames(url, place) {
+    loadingSwitch(true, place);
+    const optionsGamesUrl = {
         method: 'GET',
         headers: {
             'X-RapidAPI-Key': '1c3169c707mshb51bff34cbc9ff6p1749b9jsn648a19134256',
             'X-RapidAPI-Host': 'mmo-games.p.rapidapi.com',
         },
     };
-    return fetch(url, optionsGamesUr)
+    return fetch(url, optionsGamesUrl)
         .then((response) => {
             if (response.status < 200 || response.status >= 300) {
                 throw new Error(response.status);
@@ -108,17 +104,17 @@ function getGames(url = urlGames) {
             return copyGame;
         }))
         .catch((error) => {
-            CARDS_LIST.insertAdjacentHTML('afterbegin', `<span class="error-message">Something went wrong! ERROR: ${error.message}</span>`);
+            place.insertAdjacentHTML('afterbegin', `<span class="error-message">Something went wrong! ERROR: ${error.message}</span>`);
             console.log('get error', error);
         })
         .finally(() => loadingSwitch(false));
 }
 
-async function applyFilter() {
+async function applyFilter(url, place) {
     try {
-        const urlGamesQuery = `${urlGames}?${creatSearchQueryString()}`;
+        const urlGamesQuery = `${url}?${creatSearchQueryString()}`;
         const isOldGame = document.querySelector('[data-age-games="old"]').checked;
-        const games = await getGames(urlGamesQuery);
+        const games = await getGames(urlGamesQuery, place);
         if (isOldGame) games.reverse();
         const searchTerm = document.querySelector('[data-filter-search]').value;
         const filterArrGames = filterGames(games);
@@ -128,21 +124,28 @@ async function applyFilter() {
             copyGame.small_description = markedSearchText(searchTerm, game.small_description);
             return copyGame;
         });
-        renderCards(CARDS_LIST, markedTextFilterArrGames);
+        renderCards(place, markedTextFilterArrGames);
     } catch (e) {
         console.log('filter error: ', e);
     }
 }
 
 async function init() {
+    const urlGames = 'https://mmo-games.p.rapidapi.com/games';
+    const CARDS_LIST = document.querySelector('[data-cards]');
     try {
-        const games = await getGames();
+        const games = await getGames(urlGames, CARDS_LIST);
         if (!Array.isArray(games)) throw new Error('is not Array');
         renderCards(CARDS_LIST, games);
     } catch (e) {
         console.log('init error: ', e.message);
     } finally {
-        FORM_BUTTON.addEventListener('click', applyFilter);
+        const [INPUT_GENGE, INPUT_PLATFORM, RADIO_NEW, RADIO_OLD, , BUTTON_APPLY] = Array.from(document.forms['filter-form']);
+        INPUT_GENGE.addEventListener('change', () => applyFilter(urlGames, CARDS_LIST));
+        INPUT_PLATFORM.addEventListener('change', () => applyFilter(urlGames, CARDS_LIST));
+        RADIO_NEW.addEventListener('change', () => applyFilter(urlGames, CARDS_LIST));
+        RADIO_OLD.addEventListener('change', () => applyFilter(urlGames, CARDS_LIST));
+        BUTTON_APPLY.addEventListener('click', () => applyFilter(urlGames, CARDS_LIST));
     }
 }
 
