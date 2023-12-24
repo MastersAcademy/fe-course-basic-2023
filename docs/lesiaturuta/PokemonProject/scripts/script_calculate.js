@@ -60,14 +60,11 @@ CALCULATE_BUTTON_ELEMENT.addEventListener('click', () => {
         resultImagesEl.innerHTML = resultMath === 'Result is too big' ? 'Too many <br />pokemons' : resultMath;
     } else if (resultMath < 0) {
         resultImagesEl.innerHTML = resultMath;
-    } else {
-        const images = window.createImages(resultMath);
-        resultImagesEl.appendChild(images);
-    }
-
-    if (firstValue && secondValue && operation) {
+    } else if (firstValue && secondValue && operation) {
         resultEqualsEl.innerHTML = '=';
         RESULT_ELEMENT.innerText = resultMath <= 1 ? `${resultMath} pokemon` : `${resultMath} pokemons`;
+        const images = window.createImages(resultMath);
+        resultImagesEl.appendChild(images);
     }
 
     dateEl.textContent = `Date of calculation: ${window.getDateFormat()}. `;
