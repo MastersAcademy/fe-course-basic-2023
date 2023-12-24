@@ -56,17 +56,6 @@ const cleanElement = (el) => {
     }
 };
 
-const checkScroll = () => {
-    if (
-        document.body.scrollHeight > window.innerHeight
-        || document.documentElement.scrollHeight > window.innerHeight
-    ) {
-        document.body.style.height = '100%';
-    } else {
-        document.body.style.height = '100vh';
-    }
-};
-
 const renderCards = (cardContainer, pokemonsArray) => {
     cleanElement(cardsEl);
     const fragment = new DocumentFragment();
@@ -74,7 +63,6 @@ const renderCards = (cardContainer, pokemonsArray) => {
         fragment.append(createCardElement(pokemonsArray[i]));
     }
     cardContainer.append(fragment);
-    checkScroll();
     return true;
 };
 
@@ -123,7 +111,7 @@ const getPokemonsByName = (arrayPokemons) => (searchValue
 const getPokemonsByWeight = (arrayPokemons) => {
     let newPokemons = [...arrayPokemons];
     if (checkboxBig && checkboxSmall && newPokemons.length) {
-        newPokemons = newPokemons.filter((pokemon) => pokemon.weight < 100 && pokemon.weight > 50);
+        newPokemons = newPokemons.filter((pokemon) => pokemon.weight > 100 || pokemon.weight < 50);
     } else if (checkboxBig && !checkboxSmall && newPokemons.length) {
         newPokemons = newPokemons.filter((pokemon) => pokemon.weight > 100);
     } else if (!checkboxBig && checkboxSmall && newPokemons.length) {

@@ -8,9 +8,10 @@ body {
   font-family: "Roboto", sans-serif;
   color: #221F1F;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
   height: 100vh;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
 }
 
 /*HEADER*/
@@ -329,7 +330,7 @@ body {
 .footer {
   margin-top: 20px;
   width: 100%;
-  height: 160px;
+  min-height: 160px;
   background: #EF4934;
   display: flex;
   align-items: center;
@@ -356,6 +357,12 @@ body {
 
 .item {
   list-style-type: none;
+}
+
+.item__link-facebook,
+.item__icon-linkedin,
+.item__icon-instagram {
+  cursor: not-allowed;
 }
 
 .footer__description {
@@ -561,11 +568,11 @@ body {
 }
 
 .border-error {
-  border: 4px solid #FA0A0A !important;
+  border: 4px solid #FA0A0A;
 }
 
 .border-ok {
-  border: 4px solid #66EA11 !important;
+  border: 4px solid #66EA11;
 }
 
 /*HELPER*/
@@ -758,5 +765,6 @@ body {
   .footer {
     padding: 20px 10px;
     height: auto;
+    min-height: auto;
   }
 }

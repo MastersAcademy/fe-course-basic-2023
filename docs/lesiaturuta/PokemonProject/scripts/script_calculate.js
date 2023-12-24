@@ -33,9 +33,11 @@ FIRST_VALUE_ELEMENT.addEventListener('change', () => {
 });
 
 OPERATION_ELEMENT.addEventListener('change', () => {
-    resultOperationEl.innerHTML = OPERATION_ELEMENT.value;
-    window.cleanElement(resultEqualsEl);
-    window.cleanElement(resultImagesEl);
+    if (FIRST_VALUE_ELEMENT.value) {
+        resultOperationEl.innerHTML = OPERATION_ELEMENT.value;
+        window.cleanElement(resultEqualsEl);
+        window.cleanElement(resultImagesEl);
+    }
 });
 
 SECOND_VALUE_ELEMENT.addEventListener('change', () => {
@@ -62,8 +64,11 @@ CALCULATE_BUTTON_ELEMENT.addEventListener('click', () => {
         const images = window.createImages(resultMath);
         resultImagesEl.appendChild(images);
     }
-    resultEqualsEl.innerHTML = '=';
-    RESULT_ELEMENT.innerText = resultMath <= 1 ? `${resultMath} pokemon` : `${resultMath} pokemons`;
+
+    if (firstValue && secondValue && operation) {
+        resultEqualsEl.innerHTML = '=';
+        RESULT_ELEMENT.innerText = resultMath <= 1 ? `${resultMath} pokemon` : `${resultMath} pokemons`;
+    }
 
     dateEl.textContent = `Date of calculation: ${window.getDateFormat()}. `;
     dateMsEl.textContent = `Time of function execution: ${(Date.now() - start).toString()}`;
