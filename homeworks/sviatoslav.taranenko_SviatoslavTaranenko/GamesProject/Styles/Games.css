@@ -179,6 +179,7 @@ body {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
+  cursor: not-allowed;
 }
 
 .radio__filter {
@@ -196,10 +197,11 @@ body {
   z-index: -1;
   opacity: 0;
   gap: 20px;
+  cursor: not-allowed;
 }
 
 .radio__games_filter label {
-  cursor: pointer;
+  cursor: not-allowed;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-style: normal;
@@ -276,12 +278,14 @@ body {
   gap: 90px;
   max-width: 80px;
   padding-right: 100px;
+  cursor: not-allowed;
 }
 
 .checkbox__games_filter {
   display: flex;
   align-items: center;
   gap: 12px;
+  cursor: not-allowed;
 }
 
 .checkbox__games_filter input {
@@ -292,10 +296,11 @@ body {
   width: 20px;
   height: 20px;
   background-color: #FFF;
+  cursor: not-allowed;
 }
 
 .checkbox__games_filter label {
-  cursor: pointer;
+  cursor: not-allowed;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-style: normal;
@@ -327,6 +332,7 @@ body {
   background-position: left 5px center;
   background-size: 24px 24px;
   background-repeat: no-repeat;
+  cursor: not-allowed;
   @media (max-width: 400px) {
     max-width: 250px;
   }
@@ -345,6 +351,7 @@ body {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
+  cursor: not-allowed;
 }
 
 .search__bar button {
@@ -362,6 +369,7 @@ body {
   font-style: normal;
   font-weight: 400;
   color: #FFF;
+  cursor: not-allowed;
 }
 
 .search__bar button:active {
