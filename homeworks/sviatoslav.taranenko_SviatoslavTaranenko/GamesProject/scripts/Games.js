@@ -1,7 +1,6 @@
 // games-mock.js
 
 const games = [];
-const gamesData = games.map((game) => ({ ...game, isNew: game.release_date.includes('2022') }));
 
 function createCardElement(game) {
     const template = document.querySelector('.card-template');
@@ -63,7 +62,7 @@ function createCardElement(game) {
     return clone;
 }
 
-function renderGames(games) {
+function renderGames(gamess) {
     const cardContainer = document.querySelector('[data-type="card-container"]');
 
     if (!cardContainer) {
@@ -75,16 +74,13 @@ function renderGames(games) {
 
     cardContainer.innerHTML = '';
 
-    games.forEach((game) => {
+    gamess.forEach((game) => {
         const cardElement = createCardElement(game);
         if (cardElement) {
             cardContainer.appendChild(cardElement);
 
             const elementsToHighlight = cardElement.querySelectorAll('[data-card-genre], [data-type="Games__cards_top_text_title"], [data-type="Games__cards_top_text_p"]');
 
-            elementsToHighlight.forEach((element) => {
-                highlightText(element, searchText);
-            });
         }
     });
 }

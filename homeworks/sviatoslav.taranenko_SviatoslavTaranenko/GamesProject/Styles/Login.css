@@ -27,10 +27,12 @@ body {
 }
 
 @media (max-width: 670px) {
+
   .header__all {
     display: flex;
     flex-direction: column;
   }
+
   .header__img {
     padding: 15px 0 15px 0;
     display: block;
@@ -49,13 +51,13 @@ body {
 }
 
 @media (max-width: 670px) {
+
   .header__items {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-left: 25px;
   }
-
 }
 
 .header__items a {
@@ -116,6 +118,7 @@ body {
 }
 
 @media (max-width: 430px) {
+
   .header__items {
     display: flex;
     flex-direction: column;
@@ -123,7 +126,6 @@ body {
     padding-left: 35px;
     padding-bottom: 15px;
   }
-
 }
 
 .Login__table {
@@ -139,10 +141,12 @@ body {
   font-size: 48px;
   font-weight: 700;
   line-height: 32px;
+
   @media (max-width: 670px) {
     font-size: 36px;
     line-height: 24px;
   }
+
   @media (max-width: 430px) {
     font-size: 24px;
     line-height: 20px;
@@ -160,11 +164,13 @@ body {
   font-weight: 600;
   line-height: 26px;
   padding-top: 10px;
+
   @media (max-width: 670px) {
     display: block;
     font-size: 20px;
     line-height: 24px;
   }
+
   @media (max-width: 500px) {
     display: block;
     font-size: 16px;
@@ -181,12 +187,14 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
+
   @media (max-width: 670px) {
     min-width: 500px;
     min-height: 35px;
     font-size: 12px;
     line-height: 19px;
   }
+
   @media (max-width: 500px) {
     min-width: 300px;
     min-height: 30px;
@@ -206,11 +214,13 @@ body {
   font-weight: 600;
   line-height: 26px;
   padding-top: 20px;
+
   @media (max-width: 670px) {
     display: block;
     font-size: 20px;
     line-height: 24px;
   }
+
   @media (max-width: 500px) {
     display: block;
     font-size: 16px;
@@ -227,12 +237,14 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
+
   @media (max-width: 670px) {
     min-width: 500px;
     min-height: 35px;
     font-size: 12px;
     line-height: 19px;
   }
+
   @media (max-width: 500px) {
     min-width: 300px;
     min-height: 30px;
@@ -289,6 +301,7 @@ body {
   line-height: 21px;
   color: #221F1F;
   padding-left: 30px;
+
   @media (max-width: 500px) {
     font-size: 10px;
   }
@@ -299,6 +312,7 @@ body {
   font-size: 14px;
   margin-top: 10px;
   color: #FF2E2EBA;
+
   @media (max-width: 500px) {
     font-size: 10px;
   }
@@ -320,12 +334,14 @@ body {
   color: #FFF;
   border: none;
   cursor: pointer;
+
   @media (max-width: 670px) {
     min-width: 500px;
     min-height: 35px;
     font-size: 20px;
     line-height: 24px;
   }
+
   @media (max-width: 500px) {
     min-width: 305px;
     min-height: 30px;
@@ -341,7 +357,7 @@ body {
 .footer {
   margin-top: 100px;
   background-color: #333;
-  color: #fff;
+  color: #FFF;
   padding: 10px;
   text-align: center;
 }

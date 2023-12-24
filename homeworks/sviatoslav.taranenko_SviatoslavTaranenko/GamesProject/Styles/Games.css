@@ -39,12 +39,14 @@ body {
 }
 
 @media (max-width: 670px) {
+
   .header__all {
     display: flex;
     flex-direction: column;
   }
+
   .header__img {
-    padding: 15px 0 15px 0;
+    padding: 15px 0;
     display: block;
     margin: 0 auto;
     width: 55px;
@@ -61,13 +63,13 @@ body {
 }
 
 @media (max-width: 670px) {
+
   .header__items {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-left: 25px;
   }
-
 }
 
 .header__items a {
@@ -128,6 +130,7 @@ body {
 }
 
 @media (max-width: 430px) {
+
   .header__items {
     display: flex;
     flex-direction: column;
@@ -135,7 +138,6 @@ body {
     padding-left: 35px;
     padding-bottom: 15px;
   }
-
 }
 
 .games__filter {
@@ -148,8 +150,9 @@ body {
 }
 
 @media (max-width: 1120px) {
+
   .games__filter {
-    padding: 10px 0 10px 0;
+    padding: 10px 0;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -158,7 +161,6 @@ body {
     align-items: center;
     gap: 25px;
   }
-
 }
 
 .datalist__games_filter select {
@@ -333,9 +335,11 @@ body {
   background-size: 24px 24px;
   background-repeat: no-repeat;
   cursor: not-allowed;
+
   @media (max-width: 400px) {
     max-width: 250px;
   }
+
   @media (max-width: 280px) {
     max-width: 180px;
   }
@@ -385,6 +389,7 @@ body {
 }
 
 @media (max-width: 940px) {
+
   .Games .Games__title {
     margin: 60px 0 0 85px;
     font-family: "Roboto", sans-serif;
@@ -395,6 +400,7 @@ body {
 }
 
 @media (max-width: 670px) {
+
   .Games .Games__title {
     display: flex;
     align-content: center;
@@ -406,6 +412,7 @@ body {
 }
 
 @media (max-width: 340px) {
+
   .Games .Games__title {
     margin: 40px 0 20px 55px;
     display: flex;
@@ -429,6 +436,7 @@ body {
 }
 
 @media (max-width: 1250px) {
+
   .card__container {
     margin-top: 60px;
     display: grid;
@@ -439,10 +447,10 @@ body {
     justify-content: center;
     min-height: auto;
   }
-
 }
 
 @media (max-width: 970px) {
+
   .card__container {
     margin: 60px 60px 0 0;
     display: grid;
@@ -454,10 +462,10 @@ body {
     justify-content: center;
     min-height: auto;
   }
-
 }
 
 @media (max-width: 670px) {
+
   .card__container {
     margin: 60px 60px 0 0;
     display: grid;
@@ -469,10 +477,10 @@ body {
     justify-content: center;
     min-height: auto;
   }
-
 }
 
 @media (max-width: 340px) {
+
   .card__container {
     margin: 0 60px 0 0;
     display: grid;
@@ -484,7 +492,6 @@ body {
     justify-content: center;
     min-height: auto;
   }
-
 }
 
 .Games__cards {
@@ -614,4 +621,3 @@ body {
 .about__text_link:hover {
   color: #EF4934;
 }
-

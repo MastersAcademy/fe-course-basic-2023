@@ -27,12 +27,14 @@ body {
 }
 
 @media (max-width: 670px) {
+
   .header__all {
     display: flex;
     flex-direction: column;
   }
+
   .header__img {
-    padding: 15px 0 15px 0;
+    padding: 15px 0;
     display: block;
     margin: 0 auto;
     width: 55px;
@@ -49,13 +51,13 @@ body {
 }
 
 @media (max-width: 670px) {
+
   .header__items {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-left: 25px;
   }
-
 }
 
 .header__items a {
@@ -116,6 +118,7 @@ body {
 }
 
 @media (max-width: 430px) {
+
   .header__items {
     display: flex;
     flex-direction: column;
@@ -123,7 +126,6 @@ body {
     padding-left: 35px;
     padding-bottom: 15px;
   }
-
 }
 
 .title {
@@ -134,9 +136,11 @@ body {
   font-size: 48px;
   font-weight: 700;
   line-height: 32px;
+
   @media (max-width: 700px) {
     font-size: 36px;
   }
+
   @media (max-width: 300px) {
     font-size: 24px;
   }
@@ -147,6 +151,7 @@ body {
   justify-content: center;
   column-gap: 10px;
   margin: 20px;
+
   @media (max-width: 700px) {
     display: flex;
     flex-direction: column;
@@ -166,7 +171,7 @@ input {
   line-height: 21px;
   text-align: center;
   @media (max-width: 700px) {
-   margin: 5px 0 5px 0;
+   margin: 5px 0;
   }
 }
 
@@ -181,7 +186,7 @@ select {
   line-height: 21px;
   text-align: center;
   @media (max-width: 700px) {
-    margin: 5px 0 5px 0;
+    margin: 5px 0;
   }
 }
 
@@ -197,8 +202,9 @@ button {
   color: #FFF;
   border: none;
   cursor: pointer;
+
   @media (max-width: 700px) {
-    margin: 5px 0 5px 0;
+    margin: 5px 0;
   }
 }
 
@@ -216,15 +222,16 @@ span {
   font-size: 14px;
   line-height: 42px;
   text-align: center;
+
   @media (max-width: 700px) {
-    margin: 5px 0 5px 0;
+    margin: 5px 0;
   }
 }
 
 .footer {
   margin-top: auto;
   background-color: #333;
-  color: #fff;
+  color: #FFF;
   padding: 10px;
   text-align: center;
 }
