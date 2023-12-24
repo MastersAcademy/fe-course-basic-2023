@@ -11,6 +11,9 @@ body {
   color: #221F1F;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 a {
@@ -18,32 +21,32 @@ a {
 }
 
 .container,.calculator-game-main {
-  width: 1280px;
   margin: 0 auto;
 }
+
 /* header */
 
-header {
-  background-color: #EF4A34;
+.header {
   height: 80px;
   width: 100%;
-  text-align: center;
+  display: flex;
+  justify-content: center;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  margin: 0 auto;
+  background-color: #EF4A34;
+  text-align: center;
 }
 
-.logo-menu {
+.header__wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 11px 52px 11px 53px;
+  width: 1280px;
 }
 
 .logo {
@@ -90,8 +93,7 @@ header {
 
 .site-main {
   margin-top: 180px;
-  height: 100vh;
-  padding-left: 53px;
+  /*! padding-left: 53px; */
 }
 
 
@@ -148,7 +150,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  flex-shrink: 0;
 }
 
 .footer-social__info {

@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Calculator</title>
         <link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/footer.css">
         <link rel="stylesheet" href="styles/calculator.css">
         <link rel="stylesheet" href="styles/common_styles.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -65,6 +66,24 @@
                 <div class="card-container__cards" data-result-card></div>
             </section>
         </main>
+        <footer class="footer page--empty" data-footer>
+            <section class="footer__svg-container">
+                <svg class="footer__svg">
+                    <use xlink:href="sprite.svg#facebook"></use>
+                </svg>
+                <svg class="footer__svg">
+                    <use xlink:href="sprite.svg#linked_in"></use>
+                </svg>
+                <svg class="footer__svg">
+                    <use xlink:href="sprite.svg#instagram"></use>
+                </svg> 
+            </section>
+            <section class="footer__text">
+                <p>Made with 💗 on course 
+                    <a class="footer__link" target="_blank" href="https://www.mastersacademy.education/frontend-for-beginners-it">'Frontend for beginners' from Masters Academy in 2023</a>
+                    , by Andrii Morozov</p>
+            </section>
+        </footer>
         <script src="./scripts/logic.js"></script>
     </body>
 </html>

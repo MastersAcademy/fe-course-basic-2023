@@ -196,7 +196,7 @@ page we are on will behave
   justify-content: space-between;
   gap: 25px;
   border-radius: 12px;
-  margin: 40px 53px auto 52px;
+  margin: 40px 20px auto;
 }
 
 .card__information {
@@ -290,11 +290,11 @@ page we are on will behave
   background-color: #3447EF;
 }
 
-.displayOn {
+.display-on {
   display: block;
 }
 
-.displayOff {
+.display-off {
   display: none;
 }
 
@@ -305,4 +305,26 @@ page we are on will behave
   gap: 25px;
   border-radius: 12px;
   margin: 40px 53px auto 52px;
+}
+
+.loader__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.loader {
+  border: 8px solid #F3F3F3;
+  border-top: 8px solid #EF4934;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+  display: none;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

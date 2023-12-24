@@ -45,10 +45,10 @@
                         </div>
 
                         <div class="filters__form-choice">
-                            <input id="new" name="choice" type="radio" value="new" disabled>
-                            <label for="new">Only new</label>
-                            <input id="favorites" name="choice" type="radio" value="favorites" disabled>
-                            <label for="favorites">Favorites</label>
+                            <input type="radio" id="highFirst" name="sort" value="HighFirst">
+                            <label for="highFirst">High first</label>
+                            <input type="radio" id="lowFirst" name="sort" value="LowFirst">
+                            <label for="lowFirst">Low first</label>
                         </div>
 
                         <div class="filters__form-size">
@@ -114,6 +114,10 @@
                     </template>
                 </div>
             </section>
+
+            <div class="loading">
+                <div class="loading-spinner"></div>
+            </div>
         </main>
 
         <footer>

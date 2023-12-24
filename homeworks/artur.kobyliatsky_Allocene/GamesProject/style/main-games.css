@@ -299,3 +299,15 @@ main {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 25px;
 }
+
+@keyframes loadingAnimation {
+  0% { content: "Loading"; }
+  25% { content: "Loading."; }
+  50% { content: "Loading.."; }
+  75% { content: "Loading..."; }
+}
+
+[data-type="cards-container"]:empty::before {
+  content: "Loading...";
+  animation: loadingAnimation 1s infinite;
+}
