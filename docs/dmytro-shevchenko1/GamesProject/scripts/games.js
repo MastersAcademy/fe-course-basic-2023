@@ -98,7 +98,6 @@ function filterGames() {
     const searchTerm = searchInput.value.toLowerCase();
 
     const filteredGames = games.filter((game) => {
-        // const releaseYear = new Date(game.release_date).getFullYear();
         const isGenreMatch = selectedGenre === 'Genre' || game.genre.includes(selectedGenre);
         const isPlatformMatch = selectedPlatform === 'Platform' || game.platform.includes(selectedPlatform);
         const isSearchMatch = game.title.toLowerCase().includes(searchTerm);
