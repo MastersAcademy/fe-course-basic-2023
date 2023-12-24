@@ -1,4 +1,3 @@
-
 function createCardElement(game) {
     const template = document.querySelector('.card-template');
 

@@ -83,8 +83,6 @@ function isEmail(email) {
     return emailText.test(showEmail);
 }
 
-submitButton.onclick = validateForm;
-
 function validateForm() {
 
     deleteErrorsCheckbox();
