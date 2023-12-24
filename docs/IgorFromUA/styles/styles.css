@@ -20,15 +20,16 @@ ul, li {
 }
 
 .container {
+  max-width: 1280px;
+  min-width: 400px;
   padding-left: 25px;
   padding-right: 25px;
+  margin: 0 auto;
 }
 
 .wrapper {
   display: block;
-  max-width: 1280px;
-  min-width: 400px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .semiBold {
