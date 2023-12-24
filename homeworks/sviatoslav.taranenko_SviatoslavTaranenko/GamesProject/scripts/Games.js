@@ -67,8 +67,6 @@ function renderGames(games) {
         return;
     }
 
-    const searchText = document.getElementById('search').value.toLowerCase();
-
     cardContainer.innerHTML = '';
 
     games.forEach((game) => {
@@ -78,6 +76,8 @@ function renderGames(games) {
         }
     });
 }
+
+renderGames();
 
 function init() {
 }

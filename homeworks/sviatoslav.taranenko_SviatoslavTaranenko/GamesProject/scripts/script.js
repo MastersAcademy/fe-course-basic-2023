@@ -87,8 +87,6 @@ submitButton.onclick = validateForm;
 
 function validateForm() {
 
-    submitButton.onclick = validateForm;
-
     deleteErrorsCheckbox();
     deleteErrorsEmail();
     deleteErrorsPassword();
@@ -118,5 +116,7 @@ function validateForm() {
         navigateToResultPage();
     }
 }
+
+validateForm();
 
 submitButton.onclick = validateForm;
