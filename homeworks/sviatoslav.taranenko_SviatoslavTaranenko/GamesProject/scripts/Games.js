@@ -1,6 +1,3 @@
-// games-mock.js
-
-const games = []; // Припускаю, що ця змінна буде використовуватися в інших частинах програми
 
 function createCardElement(game) {
     const template = document.querySelector('.card-template');
@@ -62,7 +59,7 @@ function createCardElement(game) {
     return clone;
 }
 
-function renderGames(gamess) {
+function renderGames(games) {
     const cardContainer = document.querySelector('[data-type="card-container"]');
 
     if (!cardContainer) {
@@ -74,20 +71,13 @@ function renderGames(gamess) {
 
     cardContainer.innerHTML = '';
 
-    gamess.forEach((game) => {
+    games.forEach((game) => {
         const cardElement = createCardElement(game);
         if (cardElement) {
             cardContainer.appendChild(cardElement);
-
-            const elementsToHighlight = cardElement.querySelectorAll('[data-card-genre], [data-type="Games__cards_top_text_title"], [data-type="Games__cards_top_text_p"]');
-
-            elementsToHighlight.forEach((element) => {
-                highlightText(element, searchText);
-            });
         }
     });
 }
-
 
 function init() {
 }
