@@ -183,6 +183,11 @@ body {
   }
 }
 
+.about__text_link {
+  color: #FFF;
+  text-decoration: none;
+}
+
 .about__text_link:hover {
   color: #EF4934;
 }
@@ -236,9 +241,4 @@ body {
   font-size: 22px;
   line-height: 32px;
   color: #FFF;
-}
-
-.about__text_link {
-  color: #FFF;
-  text-decoration: none;
 }

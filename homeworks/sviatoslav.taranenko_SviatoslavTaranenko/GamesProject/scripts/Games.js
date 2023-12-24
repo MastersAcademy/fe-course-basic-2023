@@ -1,6 +1,6 @@
 // games-mock.js
 
-const games = [];
+const games = []; // Припускаю, що ця змінна буде використовуватися в інших частинах програми
 
 function createCardElement(game) {
     const template = document.querySelector('.card-template');
@@ -81,8 +81,15 @@ function renderGames(gamess) {
 
             const elementsToHighlight = cardElement.querySelectorAll('[data-card-genre], [data-type="Games__cards_top_text_title"], [data-type="Games__cards_top_text_p"]');
 
+            elementsToHighlight.forEach((element) => {
+                highlightText(element, searchText);
+            });
         }
     });
+}
+
+
+function init() {
 }
 
 document.addEventListener('DOMContentLoaded', init);

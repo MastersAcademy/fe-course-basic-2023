@@ -83,6 +83,8 @@ function isEmail(email) {
     return emailText.test(showEmail);
 }
 
+submitButton.onclick = validateForm;
+
 function validateForm() {
 
     deleteErrorsCheckbox();
@@ -110,7 +112,6 @@ function validateForm() {
     setErrorsPassword({ [PASSWORD_INPUT_ID]: errors[PASSWORD_INPUT_ID] });
     setErrorsCheckbox({ [NOT_A_ROBOT_CHECKBOX_ID]: errors[NOT_A_ROBOT_CHECKBOX_ID] });
 
-    // Якщо є помилки, не переходимо на сторінку результатів
     if (Object.keys(errors).length === 0) {
         navigateToResultPage();
     }
