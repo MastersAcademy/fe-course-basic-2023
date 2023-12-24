@@ -83,7 +83,7 @@ function isEmail(email) {
     return emailText.test(showEmail);
 }
 
-function validateForm() {
+function validateForm(){
 
     deleteErrorsCheckbox();
     deleteErrorsEmail();
