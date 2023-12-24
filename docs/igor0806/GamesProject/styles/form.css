@@ -24,14 +24,6 @@ body {
   padding: 15px 40px;
 }
 
-@media (max-width: 520px) {
-
-  .nav {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
 .link_list {
   list-style: none;
   color: #FFF;
@@ -70,8 +62,7 @@ body {
   font-size: 14px;
 }
 
-input[type="text"],
-input[type="password"] {
+.login_input {
   display: block;
   margin: 20px 0 40px;
   padding: 30px 20px;
@@ -80,18 +71,17 @@ input[type="password"] {
   font-size: 14px;
 }
 
-input[type="text"]:focus,
-input[type="password"]:focus {
+.login_input:focus {
   border-bottom: 5px solid #EF4934;
 }
 
-label[for="email"],
-label[for="password"] {
+.email,
+.password {
   font-weight: 600;
   font-size: 22px;
 }
 
-input[type="checkbox"] {
+.checkbox {
   border: #EF4934;
   margin-bottom: 40px;
   font-size: 14px;
@@ -99,8 +89,7 @@ input[type="checkbox"] {
   color: #221F1F;
 }
 
-button[type="button"],
-input[type="submit"] {
+.btn_form {
   width: 575px;
   font-weight: 600;
   font-size: 22px;
@@ -141,4 +130,12 @@ a {
 .center_title {
   text-align: center;
   padding-top: 200px;
+}
+
+@media (max-width: 520px) {
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+  }
 }

@@ -58,8 +58,8 @@ h1 {
   margin: 20px;
 }
 
-input[id="firstValue"],
-input[id="secondValue"] {
+.firstValue,
+.secondValue {
   margin: 20px 0 40px;
   padding: 11px 2px;
   color: #A9A9A9;
@@ -67,7 +67,7 @@ input[id="secondValue"] {
   font-size: 14px;
 }
 
-button[type="button"] {
+.btn_calculator {
   font-weight: 600;
   font-size: 22px;
   background-color: #EF4934;
