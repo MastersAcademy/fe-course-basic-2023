@@ -1,0 +1,23 @@
+.successful-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.successful-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.back-button {
+  padding: 27px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #FFF;
+  background-color: #EF4934;
+  border: none;
+  border-radius: 6px;
+}
