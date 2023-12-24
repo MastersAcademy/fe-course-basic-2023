@@ -1,11 +1,52 @@
-import { games } from './games-mock.js';
-
 const cardContainer = document.querySelector('[data-card-container]');
+const footerElement = document.querySelector('[data-footer]');
 const genreSelect = document.querySelector('[data-select-genre]');
+const platformSelect = document.querySelector('[data-select-platform]');
 const newGameCheck = document.querySelector('[data-new-games]');
 const oldGameCheck = document.querySelector('[data-old-games]');
 const searchButton = document.querySelector('[data-search-button]');
 const searchInput = document.querySelector('[data-search-input]');
+const newFirstButton = document.querySelector('[data-new-first]');
+const oldFirstButton = document.querySelector('[data-old-first]');
+const infoElement = document.querySelector('[data-info]');
+async function getGamesArray() {
+    infoElement.classList.replace('main__info--disabled', 'main__info');
+    infoElement.innerText = 'Loading...';
+    const option = {
+        headers: {
+            'X-RapidAPI-Key': '1c3169c707mshb51bff34cbc9ff6p1749b9jsn648a19134256',
+            'X-RapidAPI-Host': 'mmo-games.p.rapidapi.com',
+        },
+    };
+    let url = 'https://mmo-games.p.rapidapi.com/games?';
+    let games;
+    switch (platformSelect.value) {
+        case 'PC (Windows)':
+            url += 'platform=pc';
+            break;
+        case 'Web Browser':
+            url += 'platform=browser';
+            break;
+        default:
+            url += 'platform=all';
+            break;
+    }
+    if (oldFirstButton.checked || newFirstButton.checked) {
+        url += '&sort-by=release-date';
+    }
+    const gamesPromice = await fetch(url, option);
+    const allGames = await gamesPromice.json();
+    if (oldFirstButton.checked) {
+        games = await allGames.reverse();
+    } else {
+        games = await allGames;
+    }
+    for (let count = 0; count < 100000; count++) {
+        console.log(count);
+        console.clear();
+    }
+    return games;
+}
 function createCardElement(game, array) {
     const cardTemplate = document.querySelector('[data-card-template]');
     const cardID = cardTemplate.content.querySelector('[data-game-id]');
@@ -34,12 +75,21 @@ function createCardElement(game, array) {
     return cardContent;
 }
 function renderCards(container, gamesArray) {
+    gamesArray.splice(50);
     container.innerHTML = '';
     const fragment = new DocumentFragment();
     for (let count = 0; count < gamesArray.length; count++) {
         fragment.append(createCardElement(count, gamesArray));
     }
     container.append(fragment);
+    infoElement.classList.replace('main__info', 'main__info--disabled');
+    if (gamesArray.length !== 0) {
+        footerElement.classList.replace('page--empty', 'page--loaded');
+    } else {
+        footerElement.classList.add('page--empty');
+        infoElement.classList.replace('main__info--disabled', 'main__info');
+        infoElement.innerText = 'No Results';
+    }
 }
 function getYear(string) {
     const dateArray = string.split('-');
@@ -53,32 +103,42 @@ function getFilterArray(array) {
         const isElDescInc = element.short_description.toLowerCase().includes(searchInputValue);
         const isGenreSelected = element.genre === genreSelect.value;
         const isGenreNonSelected = genreSelect.value === '0';
+        const isPlatSelected = element.platform === platformSelect.value;
+        const isPlatNonSelected = platformSelect.value === 'all';
         const releaseYear = getYear(element.release_date);
-        if ((isElTitleInc || isElDescInc) && (isGenreSelected || isGenreNonSelected)) {
-            if (newGameCheck.checked && !oldGameCheck.checked) {
-                if (releaseYear > 2020) filterArray.push(element);
-            }
-            if (oldGameCheck.checked && !newGameCheck.checked) {
-                if (releaseYear < 2010) filterArray.push(element);
-            }
-            if (oldGameCheck.checked && newGameCheck.checked) {
-                if (releaseYear > 2020 || releaseYear < 2010) filterArray.push(element);
-            }
-            if (!oldGameCheck.checked && !newGameCheck.checked) {
-                filterArray.push(element);
+        if (isElTitleInc || isElDescInc) {
+            if ((isGenreSelected || isGenreNonSelected) && (isPlatSelected || isPlatNonSelected)) {
+                if (newGameCheck.checked && !oldGameCheck.checked) {
+                    if (releaseYear > 2020) filterArray.push(element);
+                }
+                if (oldGameCheck.checked && !newGameCheck.checked) {
+                    if (releaseYear < 2010) filterArray.push(element);
+                }
+                if (oldGameCheck.checked && newGameCheck.checked) {
+                    if (releaseYear > 2020 || releaseYear < 2010) filterArray.push(element);
+                }
+                if (!oldGameCheck.checked && !newGameCheck.checked) {
+                    filterArray.push(element);
+                }
             }
         }
     });
     return filterArray;
 }
-function showFilterArray() {
-    renderCards(cardContainer, getFilterArray(games));
+
+async function showFilterArray() {
+    renderCards(cardContainer, getFilterArray(await getGamesArray()));
 }
-function init() {
-    renderCards(cardContainer, games);
+
+async function init() {
+    footerElement.classList.add('page--empty');
+    renderCards(cardContainer, await getGamesArray());
     genreSelect.addEventListener('change', showFilterArray);
+    platformSelect.addEventListener('change', showFilterArray);
     newGameCheck.addEventListener('change', showFilterArray);
     oldGameCheck.addEventListener('change', showFilterArray);
+    newFirstButton.addEventListener('change', showFilterArray);
+    oldFirstButton.addEventListener('change', showFilterArray);
     searchInput.addEventListener('keyup', () => {
         if (searchInput.value.trim() === '') showFilterArray();
     });

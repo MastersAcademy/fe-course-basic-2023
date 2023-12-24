@@ -49,7 +49,7 @@
                             <option value="genre" selected disabled hidden>Genre</option>
                             <option value="shooter">Shooter</option>
                             <option value="arpg">ARPG</option>
-                            <option value="battle royale">Battle Royale</option>
+                            <option value="battleRoyale">Battle Royale</option>
                             <option value="strategy">Strategy</option>
                             <option value="mmorpg">MMORPG</option>
                             <option value="fighting">Fighting</option>
@@ -58,12 +58,14 @@
                     </div>
                     <div class="radio">
                         <label class="form__radio">
-                            <input class="inp__radio" type="radio" name="platformsOrOnline" value="platform">
+                            <input class="inp__radio" type="radio" name="platformsOrOnline" value="platform"
+                                data-type="platform-radio">
                             <span class="custom__radio"></span>
                             Platform
                         </label>
                         <label class="form__radio">
-                            <input class="inp__radio" type="radio" name="platformsOrOnline" value="online games">
+                            <input class="inp__radio" type="radio" name="platformsOrOnline" value="online-games"
+                                data-type="online-radio">
                             <span class="custom__radio"></span>
                             Online games
                         </label>
@@ -72,12 +74,12 @@
                         <label class="form__checkbox">
                             <input class="inp__check" type="checkbox" name="newOrOld" value="new" data-type="check-new">
                             <span class="custom__check"></span>
-                            New
+                            Sort by realese date
                         </label>
                         <label class="form__checkbox">
                             <input class="inp__check" type="checkbox" name="newOrOld" value="old" data-type="check-old">
                             <span class="custom__check"></span>
-                            Old
+                            Sort by name
                         </label>
                     </div>
                     <div class="form__search">
