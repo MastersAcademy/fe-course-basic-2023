@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
 
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="./styles/style.css">
 
         <link rel="stylesheet" href="https://fonts.gooleapis.com/css?family=Roboto">
 
@@ -14,7 +14,7 @@
     </head>
     <body>
         <header>
-            <img src="logo.svg" alt="Logo">
+            <img src="./assets/logo.svg" alt="Logo">
             <div class="nav">
                 <ul class="nav-items">
                     <li>
@@ -27,32 +27,37 @@
                     <li>
                         <a class="login-link" href="login.html" title="Login">Login</a>
                     </li>
+                    <li>
+                        <a class="login-link" href="calculator.html" title="Calculator">Calculator</a>
+                    </li>
                 </ul>
             </div>
         </header>
-        <main class="main_login">
-            <h1 class="h1l">Login page</h1>
-            <form>
-                <label for="email">
-                    <h2>Email</h2>
-                </label>
-
-                <input class="input" type="email" id="email" name ="email">
-
-                <label for ="password">
-                    <h2>Password:</h2>
-                </label>
-                <input class="input" type="password" id="password" name="password">
-
-                <label for="checkbox"> I`m not a robot:</label>
-                <input class="checkbox" type="checkbox" id="checkbox" name="option" value="1">
-                <div id="errors-container"></div>
-
-                <button id="button" class="button" type="button">
-                    Login
-                </button>
-            </form>
+        <main class="login-container">
+            <div class="main_login">
+                <h1 class="h1l">Login page</h1>
+                <form>
+                    <label for="email">
+                        <h2>Email</h2>
+                    </label>
+    
+                    <input class="input" type="email" id="email" name ="email">
+    
+                    <label for ="password">
+                        <h2>Password:</h2>
+                    </label>
+                    <input class="input" type="password" id="password" name="password">
+    
+                    <label for="checkbox"> I`m not a robot:</label>
+                    <input class="checkbox" type="checkbox" id="checkbox" name="option" value="1">
+                    <div id="errors-container"></div>
+    
+                    <button id="button" class="button" type="button">
+                        Login
+                    </button>
+                </form>
+            </div>
         </main>
-        <script src="./script.js"></script>
+        <script src="./scripts/script.js"></script>
     </body>
 </html>

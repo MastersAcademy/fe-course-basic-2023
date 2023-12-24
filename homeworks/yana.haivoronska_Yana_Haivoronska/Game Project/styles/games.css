@@ -1,0 +1,137 @@
+.games-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-message {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.section_title {
+  color: #221F1F;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 48px;
+  text-align: center;
+  margin: 0;
+}
+
+.content_game-cards {
+  margin-bottom: 46px;
+}
+
+.game-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 275px;
+  height: 260px;
+  background-color: hsl(0, 0%, 93%);
+  color: hsl(0, 5%, 13%);
+  padding: 12px 12px 22px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  border-radius: 12px;
+  transition: all .3s ease-out;
+}
+
+.card:hover {
+  box-shadow: 1px 1px 13px 0 #221F1FA6;
+  background-color: #EF343400;
+}
+
+.card__header {
+  display: flex;
+  width: inherit;
+}
+
+.card__image {
+  width: 90px;
+  height: 90px;
+  border-radius: 8px;
+  margin-right: 12px;
+}
+
+.data-card-title {
+    margin: 0;
+}
+
+.card__header__title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.card__title {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+
+.card__description {
+  color: #221F1F;
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  display: block;
+  margin: 0;
+}
+
+.section_card_title {
+  margin-bottom: 40px;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.card__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 11px;
+  margin-top: 35px;
+}
+
+.card__list .card__list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.card__list-item-title {
+  font-weight: 600;
+  display: flex;
+  gap: 6px;
+}
+
+.card__list-value {
+  font-weight: 400;
+}
+
+.card_list__title {
+  font-weight: 600;
+  margin-right: 6px;
+}
