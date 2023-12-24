@@ -103,22 +103,13 @@ function filterGames() {
         const isPlatformMatch = selectedPlatform === 'Platform' || game.platform.includes(selectedPlatform);
         const isSearchMatch = game.title.toLowerCase().includes(searchTerm);
 
-        // if (isNewChecked && isOldChecked) {
-        //     return isGenreMatch && isPlatformMatch && (releaseYear <= 2010 || releaseYear >= 2020);
-        // } if (isNewChecked) {
-        //     return isGenreMatch && isPlatformMatch && releaseYear >= 2020;
-        // } if (isOldChecked) {
-        //     return isGenreMatch && isPlatformMatch && releaseYear <= 2010;
-        // }
-
         return isGenreMatch && isPlatformMatch && isSearchMatch;
     });
 
-    // Если выбрана сортировка от новых к старым
     if (isNewChecked) {
         filteredGames.sort((a, b) => new Date(b.release_date) - new Date(a.release_date));
     }
-    // Если выбрана сортировка от старых к новым
+
     else if (isOldChecked) {
         filteredGames.sort((a, b) => new Date(a.release_date) - new Date(b.release_date));
     }
@@ -132,7 +123,7 @@ function init() {
     const oldCheckbox = document.querySelector('[data-type-filter="old"]');
     const genreSelect = document.querySelector('[data-type-filter="genre"]');
     const platformSelect = document.querySelector('[data-type-filter="platform"]');
-    const searchButton = document.querySelector('[data-type-filter="search-button"]');
+    const searchInput = document.querySelector('[data-type-filter="search"]');
 
     filterForm.addEventListener('change', filterGames);
     newCheckbox.addEventListener('change', filterGames);
@@ -140,9 +131,11 @@ function init() {
     genreSelect.addEventListener('change', filterGames);
     platformSelect.addEventListener('change', filterGames);
 
-    searchButton.addEventListener('click', function (event) {
-        event.preventDefault(); // Отменяет стандартное поведение кнопки submit (если форма есть)
-        filterGames();
+    searchInput.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            filterGames();
+        }
     });
 
     renderCards(gameList, games);
