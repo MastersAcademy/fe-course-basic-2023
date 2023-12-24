@@ -1,0 +1,158 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  border: none;
+  width: 100%;
+  background-color: #EF4934;
+}
+
+.header__all {
+  display: grid;
+  grid-template-columns: 6fr 1fr;
+}
+
+.header__img {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  width: 55px;
+  height: 55px;
+  justify-content: center;
+  margin-left: 61px;
+}
+
+.header__items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+}
+
+.header__items a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+.header__items_Calculator {
+  color: #FFF;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18.75px;
+  margin-right: 40px;
+}
+
+.header__items_Calculator:active {
+  text-decoration: underline;
+}
+
+.header__items_Games {
+  color: #FFF;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18.75px;
+  margin-right: 40px;
+}
+
+.header__items_Games:active {
+  text-decoration: underline;
+}
+
+.header__items_About {
+  color: #FFF;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18.75px;
+  margin-right: 40px;
+}
+
+.header__items_About:active {
+  text-decoration: underline;
+}
+
+.header__items_Login {
+  color: #FFF;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18.75px;
+  margin-right: 40px;
+}
+
+.header__items_Login:active {
+  text-decoration: underline;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  color: #221F1F;
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.field {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+  margin: 20px;
+}
+
+input {
+  border: solid 1px #A9A9A9;
+  border-radius: 6px;
+  min-width: 6px;
+  min-height: 40px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+}
+
+select {
+  border: solid 1px #A9A9A9;
+  border-radius: 6px;
+  min-width: 6px;
+  min-height: 45px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+}
+
+button {
+  min-width: 60px;
+  min-height: 40px;
+  border-radius: 6px;
+  background-color: #EF4934;
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #FFF;
+  border: none;
+  cursor: pointer;
+}
+
+button:active {
+  box-shadow: 0 0 0 1px #A9A9A9;
+}
+
+span {
+  border: solid 1px #A9A9A9;
+  border-radius: 6px;
+  min-width: 155px;
+  min-height: 40px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 42px;
+  text-align: center;
+}
