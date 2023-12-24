@@ -560,6 +560,10 @@ body {
   margin: 0 100px;
 }
 
+.main__calculate {
+  align-items: flex-start;
+}
+
 /*ERRORS*/
 
 .error-text {
