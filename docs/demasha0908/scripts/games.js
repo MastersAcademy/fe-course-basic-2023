@@ -12,7 +12,7 @@ function hideLoadingOverlay() {
     loadingOverlay.style.display = 'none';
 }
 
-async function createCardElement(game) {
+ function createCardElement(game) {
     const template = document.querySelector('[data-card-template]');
 
     const cardCopy = document.importNode(template.content, true);
