@@ -29,3 +29,27 @@
 .link--red {
   color: #EF4934;
 }
+
+@media (max-width: 1200px) {
+
+  .aboutMe-block {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .aboutMe-block__image {
+    width: 350px;
+    height: 250px;
+  }
+
+  .aboutMe-block__article {
+    width: 350px;
+  }
+
+  .aboutMe-block__paragraf {
+    font-size: 18px;
+  }
+}
