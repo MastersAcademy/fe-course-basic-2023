@@ -17,6 +17,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: Roboto;
 }
 
 .main__heading {
@@ -24,4 +25,11 @@ body {
   font-weight: 700;
   line-height: 32px;
   margin-bottom: 40px;
+}
+
+@media (max-width: 700px) {
+
+  .main__heading {
+    font-size: 36px;
+  }
 }
