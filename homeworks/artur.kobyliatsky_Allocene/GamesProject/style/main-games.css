@@ -6,7 +6,7 @@
   position: fixed;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   height: 60px;
   width: 100%;
   margin-top: 70px;
@@ -15,14 +15,17 @@
 }
 
 .search__contain {
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
 }
 
 .search__form {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
 }
@@ -181,11 +184,13 @@ main {
   align-items: center;
   justify-content: center;
   min-height: calc(100vh - 160px);
+  width: 100%;
   min-width: 400px;
 }
 
 .contain {
   margin-top: 180px;
+  width: 90%;
 }
 
 .content {
@@ -208,7 +213,6 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 260px;
   background-color: #ECECEC;
   padding: 12px 12px 22px;
   border-radius: 12px;
@@ -303,18 +307,58 @@ main {
 
   .contain {
     width: calc(90%);
-    margin-top: 150px;
+    margin-top: 130px;
   }
 
   .game__cod2 {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
     align-items: center;
     justify-content: center;
     width: calc(100% - 25px);
     background-color: #ECECEC;
     padding: 12px 12px 22px;
     border-radius: 12px;
+  }
+
+  .cod2__general {
+    display: grid;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cod2__description {
+    text-align: start;
+  }
+
+  .cod2__general--img img {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+    max-height: 120px;
+    border-radius: 9px;
+    object-fit: cover;
+  }
+
+  .cod2__general--desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .cod2__general--desc h3 {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  .cod2__general--desc p {
+    font-size: 14px;
+    text-align: center;
   }
 
   .search__contain {
@@ -333,13 +377,13 @@ main {
 
   .search {
     height: 220px;
-    margin-top: 70px;
+    margin-top: 50px;
     background-color: #221F1FEE;
     transition: margin-top .3s ease, opacity .3s ease, max-height .3s ease;
   }
 
   .search-hidden {
-    margin-top: -100px;
+    margin-top: -110px;
     opacity: 1;
     max-height: 220px;
   }
@@ -371,11 +415,6 @@ main {
   .text__heading {
     text-align: center;
     font-size: 28px;
-  }
-
-  .cod2__general--img img {
-    height: 80px;
-    width: 80px;
   }
 
   .radio {
@@ -538,7 +577,7 @@ main {
 
   .inp__search {
     height: 30px;
-    width: 240px;
+    width: 200px;
   }
 
   .search__button {
@@ -595,6 +634,10 @@ main {
 
   .plate {
     display: none;
+  }
+
+  .inp__search {
+    width: 250px;
   }
 }
 

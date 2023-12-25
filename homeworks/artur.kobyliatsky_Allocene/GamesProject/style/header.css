@@ -28,6 +28,7 @@
 }
 
 .header__logo-section img {
+  width: 50px;
   cursor: pointer;
 }
 
@@ -74,6 +75,10 @@
 }
 
 @media screen and (min-width: 1px) and (max-width: 767px) {
+
+  .header {
+    height: 60px;
+  }
 
   .header__burger {
     display: flex;
