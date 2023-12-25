@@ -12,7 +12,7 @@ main {
 }
 
 .contain {
-  width: 100%;
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,7 +35,7 @@ main {
 .content {
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   flex-direction: column;
 }
@@ -141,7 +141,7 @@ button:hover {
   padding-left: 25px;
 }
 
-@media screen and (min-width: 1px) and (max-width: 767px) {
+@media screen and (min-width: 1px) and (max-width: 915px) {
 
   .content,
   .visualInterpritation,
@@ -154,6 +154,11 @@ button:hover {
 
   .contain {
     margin-bottom: 50px;
+  }
+
+  .field {
+    display: flex;
+    width: auto;
   }
 
   .main__heading {

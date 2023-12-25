@@ -43,6 +43,7 @@ select[name="genre"] {
   line-height: 21px;
   letter-spacing: 0;
   text-align: left;
+  padding-left: 12px;
 }
 
 select option {
@@ -65,6 +66,7 @@ select option {
   position: absolute;
   font-size: 14px;
   font-weight: 400;
+  line-height: 21px;
 }
 
 .custom__radio {
@@ -558,7 +560,7 @@ main {
   }
 }
 
-@media screen and (min-width: 930px) and (max-width: 1250px) {
+@media screen and (min-width: 930px) and (max-width: 1307px) {
 
   .cards-container {
     display: grid;
@@ -630,7 +632,13 @@ main {
   }
 }
 
-@media screen and (min-width: 1250px) and (max-width: 1700px) {
+@media screen and (min-width: 1307px) and (max-width: 1700px) {
+
+  .cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 25px;
+  }
 
   .plate {
     display: none;
