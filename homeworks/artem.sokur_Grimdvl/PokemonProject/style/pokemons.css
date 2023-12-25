@@ -329,3 +329,33 @@
 .card__characteristics-weaknesses span:nth-child(3) {
   background-color: #3447EF;
 }
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:100");
+
+.loading {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+}
+
+.loading-spinner {
+  width: 100%;
+  height: 100%;
+  border: 3px solid rgba(51, 51, 51, .3);
+  border-radius: 50%;
+  border-top-color: #221F1F;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+
+@-webkit-keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}

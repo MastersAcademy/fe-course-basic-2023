@@ -4,6 +4,9 @@
 @import "default/default.css";
 @import "Footer/footer.css";
 
+/* Loading...*/
+@import "loading/loading.css";
+
 /* Filter */
 
 .filter {
@@ -142,6 +145,7 @@
 
 .game {
   display: flex;
+  height: fit-content;
   margin: 0 auto;
 }
 
@@ -205,14 +209,14 @@
   text-overflow: ellipsis;
 }
 
-/* .about__p { Error linter, but this work
-  display: -webkit-box;
+.about__p {
+  display: box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-*/
+
 
 .about__p {
   font-size: 14px;
@@ -234,6 +238,7 @@
 
 .game-item__info-list {
   display: flex;
+  justify-content: flex-end;
   flex-direction: column;
 }
 
