@@ -61,4 +61,3 @@ CALCULATE_BUTTON_ELEMENT.addEventListener('click', () => {
 
     RESULT_ELEMENT.innerText = calculate(firstValue, secondValue, operation);
 });
-

@@ -1,7 +1,3 @@
-let allGamesData = [];
-let gamesDisplayed = [];
-const checkboxNew = document.querySelector('[data-filter="new"]');
-const checkboxOld = document.querySelector('[data-filter="old"]');
 let loadingElement;
 
 document.addEventListener('DOMContentLoaded', () => {

@@ -5,12 +5,12 @@ const checkboxOld = document.querySelector('[data-filter="old"]');
 let loadingOverlay;
 
 document.addEventListener('DOMContentLoaded', () => {
-    loadingOverlay = document.querySelector('.loading');
+    loadingElement = document.querySelector('.loading');
 });
 
 function showLoadingOverlay() {
-    if (loadingOverlay) {
-        loadingOverlay.style.display = 'inline-block';
+    if (loadingElement) {
+        loadingElement.style.display = 'inline-block';
     }
 }
 
@@ -73,8 +73,8 @@ async function renderCards(container, games) {
 }
 
 function hideLoadingOverlay() {
-    if (loadingOverlay) {
-        loadingOverlay.style.display = 'none';
+    if (loadingElement) {
+        loadingElement.style.display = 'none';
     }
 }
 
