@@ -117,7 +117,6 @@
   border-radius: 10px;
   border: 1px solid #FFF;
   transition: background-color 300ms;
-  margin-right: 12px;
   text-align: center;
   line-height: 16px;
   font-size: 16px;
@@ -149,7 +148,8 @@
 .radio-date-sort {
   display: flex;
   align-items: center;
-  gap: 32px
+  gap: 15px;
+  padding-right: 22px;
 }
 
 .radio-date-games-sort {
@@ -174,9 +174,10 @@
   font-style: normal;
   font-weight: 400;
   color: #FFF;
-  position: relative;
   display: flex;
   align-items: center;
+  gap: 12px;
+  position: relative;
 }
 
 .radio-date-games-sort input:checked +  label::before {
@@ -244,7 +245,7 @@
   font-size: 48px;
   font-style: normal;
   font-weight: 700;
-  line-height: 32px;
+  margin-bottom: 0;
 }
 
 .main-cards-container {
@@ -350,6 +351,17 @@
   line-height: 21px;
 }
 
+@media screen and (max-width: 1080px) {
+
+  .main-section {
+    max-width: 75%;
+  }
+
+  .card-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 @media screen and (max-width: 768px) {
 
   .games-filter {
@@ -365,13 +377,24 @@
   }
 
   .card-list {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 700px) {
 
   .card-list {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .main-section {
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  .main-section {
+    max-width: 80%;
   }
 }

@@ -2,17 +2,16 @@
 .main {
   display: flex;
   flex-direction: column;
-  flex: 1;
+  flex: 1
 }
 
-.main h1 {
+.calculator-header {
   display: flex;
   justify-content: center;
   font-family: Roboto;
   font-size: 48px;
   font-style: normal;
   font-weight: 700;
-  line-height: 32px;
 }
 
 .field {
@@ -109,4 +108,28 @@
   font-size: 22px;
   font-style: normal;
   font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+
+  .calculator-header {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .result-operation {
+    padding: 15px;
+  }
+
+  .firstValue input, .secondValue input {
+    max-width: 122px;
+  }
 }

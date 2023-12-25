@@ -52,4 +52,14 @@
     flex-direction: column;
     gap: 30px;
   }
+
+  .about-main__content {
+    margin-left: 0;
+  }
+
+  .about-image {
+    display: flex;
+    max-width: 100%;
+    max-height: 100%;
+  }
 }
