@@ -17,7 +17,7 @@ const checkNew = document.querySelector('[data-type="check-new"]');
 const checkOld = document.querySelector('[data-type="check-old"]');
 const radioPlatform = document.querySelector('[data-type="platform-radio"]');
 const radioOnline = document.querySelector('[data-type="online-radio"]');
-const searchField = document.querySelector('[data-type="search"]');
+const searchField = document.querySelector('[data-type="inp-search"]');
 const noFound = document.querySelector('[data-type="text-h2"]');
 
 async function createCardElement(game) {
@@ -158,6 +158,7 @@ function searchFilter() {
     searchField.addEventListener('input', () => {
         const searchTerm = searchField.value.toLowerCase();
         const cards = document.querySelectorAll('.game__cod2');
+        console.log(searchTerm);
 
         let anyCardFound = false;
 

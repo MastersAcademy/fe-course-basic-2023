@@ -1,10 +1,10 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const searchContainer = document.querySelector('.search');
-    const genreSelect = document.querySelector('select[name="genre"]');
-    const searchInput = document.querySelector('.inp__search');
-    const mainElement = document.querySelector('main');
-    const plateText = document.getElementById('plate');
+const searchContainer = document.querySelector('[data-type="search"]');
+const genreSelect = document.querySelector('select[name="genre"]');
+const searchInput = document.querySelector('[data-type="inp-search"]');
+const mainElement = document.querySelector('[data-type="main-games"]');
+const plateText = document.querySelector('[data-type="plate"]');
 
+document.addEventListener('DOMContentLoaded', () => {
     function toggleSearchVisibility() {
         if (searchContainer.classList.contains('search-hidden')) {
             searchContainer.classList.remove('search-hidden');
