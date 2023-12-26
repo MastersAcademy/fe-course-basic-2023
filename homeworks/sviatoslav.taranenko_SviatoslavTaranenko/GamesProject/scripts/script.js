@@ -113,5 +113,4 @@ function validateForm() {
         navigateToResultPage();
     }
 }
-validateForm();
 submitButton.onclick = validateForm;

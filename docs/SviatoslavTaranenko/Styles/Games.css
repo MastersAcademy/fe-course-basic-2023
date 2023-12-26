@@ -429,8 +429,8 @@ body {
   display: grid;
   grid-template-columns: 275px 275px 275px 275px;
   column-gap: 25px;
-  grid-template-rows: 260px;
-  row-gap: 100px;
+  grid-template-rows: 310px;
+  row-gap: 80px;
   justify-content: center;
   min-height: auto;
 }
@@ -442,8 +442,8 @@ body {
     display: grid;
     grid-template-columns: 275px 275px 275px;
     column-gap: 25px;
-    grid-template-rows: 260px;
-    row-gap: 100px;
+    grid-template-rows: 310px;
+    row-gap: 80px;
     justify-content: center;
     min-height: auto;
   }
@@ -456,8 +456,8 @@ body {
     display: grid;
     grid-template-columns: 275px 275px;
     column-gap: 25px;
-    grid-template-rows: 260px;
-    row-gap: 100px;
+    grid-template-rows: 310px;
+    row-gap: 80px;
     align-content: center;
     justify-content: center;
     min-height: auto;
@@ -471,8 +471,8 @@ body {
     display: grid;
     grid-template-columns: 275px;
     column-gap: 25px;
-    grid-template-rows: 260px;
-    row-gap: 100px;
+    grid-template-rows: 310px;
+    row-gap: 80px;
     align-content: center;
     justify-content: center;
     min-height: auto;
@@ -482,27 +482,15 @@ body {
 @media (max-width: 340px) {
 
   .card__container {
-    margin: 0 60px 0 0;
     display: grid;
     grid-template-columns: 250px;
     column-gap: 25px;
-    grid-template-rows: 260px;
-    row-gap: 100px;
+    grid-template-rows: 310px;
+    row-gap: 80px;
     align-content: center;
     justify-content: center;
     min-height: auto;
   }
-}
-
-.Games__cards {
-  margin-top: 60px;
-  display: grid;
-  grid-template-columns: 275px 275px 275px 275px;
-  column-gap: 25px;
-  grid-template-rows: 260px;
-  row-gap: 60px;
-  justify-content: center;
-  min-height: auto;
 }
 
 .Games__cards_desc {

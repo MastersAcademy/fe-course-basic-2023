@@ -131,6 +131,14 @@ body {
 .Login__table {
   margin: 0 auto;
   max-width: 575px;
+
+  @media (max-width: 670px) {
+    max-width: 500px;
+  }
+
+  @media (max-width: 500px) {
+    max-width: 300px;
+  }
 }
 
 .Login__table_title {
@@ -143,11 +151,15 @@ body {
   line-height: 32px;
 
   @media (max-width: 670px) {
+    display: flex;
+    justify-content: center;
     font-size: 36px;
     line-height: 24px;
   }
 
   @media (max-width: 430px) {
+    display: flex;
+    justify-content: center;
     font-size: 24px;
     line-height: 20px;
   }
@@ -166,19 +178,19 @@ body {
   padding-top: 10px;
 
   @media (max-width: 670px) {
-    display: block;
     font-size: 20px;
     line-height: 24px;
   }
 
   @media (max-width: 500px) {
-    display: block;
     font-size: 16px;
     line-height: 20px;
   }
 }
 
 .Login__table_email_input {
+  display: flex;
+  justify-content: center;
   border: solid 1px #A9A9A9;
   border-radius: 6px;
   min-width: 575px;
@@ -189,6 +201,8 @@ body {
   line-height: 21px;
 
   @media (max-width: 670px) {
+    display: flex;
+    justify-content: center;
     min-width: 500px;
     min-height: 35px;
     font-size: 12px;
@@ -196,6 +210,8 @@ body {
   }
 
   @media (max-width: 500px) {
+    display: flex;
+    justify-content: center;
     min-width: 300px;
     min-height: 30px;
     font-size: 10px;
@@ -229,6 +245,8 @@ body {
 }
 
 .Login__table_password_input {
+  display: flex;
+  justify-content: center;
   border: solid 1px #A9A9A9;
   border-radius: 6px;
   min-width: 575px;
@@ -239,6 +257,8 @@ body {
   line-height: 21px;
 
   @media (max-width: 670px) {
+    display: flex;
+    justify-content: center;
     min-width: 500px;
     min-height: 35px;
     font-size: 12px;
@@ -246,6 +266,8 @@ body {
   }
 
   @media (max-width: 500px) {
+    display: flex;
+    justify-content: center;
     min-width: 300px;
     min-height: 30px;
     font-size: 10px;
