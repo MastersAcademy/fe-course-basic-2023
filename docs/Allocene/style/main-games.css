@@ -86,7 +86,7 @@ select option {
   display: inline-block;
   width: 8px;
   height: 8px;
-  background-image: url("/homeworks/artur.kobyliatsky_Allocene/GamesProject/img/check__radio.svg");
+  background-image: url("../img/check__radio.svg");
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
@@ -131,7 +131,7 @@ select option {
   display: inline-block;
   width: 15px;
   height: 15px;
-  background-image: url("/homeworks/artur.kobyliatsky_Allocene/GamesProject/img/check__black.svg");
+  background-image: url("../img/check__black.svg");
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
@@ -161,7 +161,7 @@ select option {
 }
 
 .inp__search {
-  background-image: url("/homeworks/artur.kobyliatsky_Allocene/GamesProject/img/search.svg");
+  background-image: url("../img/search.svg");
   background-position: left 12px center;
   background-repeat: no-repeat;
 }
