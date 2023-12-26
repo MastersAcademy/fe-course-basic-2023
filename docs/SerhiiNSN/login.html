@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic"
+            rel="stylesheet"
+        >
+        <link rel="stylesheet" href="css/style.css">
+        <title>GamesProject</title>
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="header__container">
+                <a class="header__logo" href="#">
+                    <img src="img/logo.svg" alt="logo">
+                </a>
+                <div class="header__burger">
+                    <span></span>
+                </div>
+                <nav class="nav">
+                    <ul class="header__menu">
+                        <li class="menu__list">
+                            <a href="calculator.html" class="menu__link">Calculator</a>
+                        </li>
+                        <li class="menu__list">
+                            <a href="games.html" class="menu__link">Games</a>
+                        </li>
+                        <li class="menu__list">
+                            <a href="index.html" class="menu__link">About</a>
+                        </li>
+                        <li class="menu__list">
+                            <a href="login.html" class="menu__link">Login</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main class="main">
+            <section class="login">
+                <div class="login__container">
+                    <div class="form__inner">
+                        <div class="login__tittle">Login page</div>
+                        <form class="email-form">
+                            <div class="form__area">
+                                <label for="email" class="email__text"
+                                >Email</label
+                                >
+                                <input
+                                    type="text"
+                                    placeholder="Enter your email address"
+                                    class="email__input"
+                                    id="email"
+                                >
+                                <label
+                                    for="password"
+                                    class="email__password"
+                                >Password</label
+                                >
+                                <input
+                                    type="password"
+                                    placeholder="Enter your password"
+                                    class="password__input"
+                                    id="password"
+                                >
+                            </div>
+                            <div class="verefication">
+                                <input
+                                    class="check"
+                                    id="check__custom"
+                                    required
+                                    type="checkbox"
+                                >
+                                <label for="check__custom"
+                                >I’m not a robot</label
+                                >
+                            </div>
+                            <div id="errors-container" class="errors-box"></div>
+                            <button class="login__btn" id="button-login" type="button">
+                                Login
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__social">
+                    <a href="https://www.facebook.com/profile.php?id=100011383900387&locale=uk_UA">
+                        <img src="./img/Footer/face.svg" alt="facebook">
+                    </a>
+                    <a href="https://www.linkedin.com/in/%D1%81%D0%B5%D1%80%D0%B3%D1%96%D0%B9-%D0%BD%D0%BE%D1%81%D0%BA%D0%BE%D0%B2-54148928a/">
+                        <img src="./img/Footer/linkdn.svg" alt="linkedin">
+                    </a>
+                    <a href="https://www.instagram.com/yasnyy.sirius/">
+                        <img src="./img/Footer/inst.svg" alt="instagram">
+                    </a>
+                </div>
+                <div class="footer__text">
+                    Made with 💗 on course 'Frontend for beginners' from Masters Academy in 2023, by Serhii Noskov
+                </div>
+            </div>
+        </footer>
+        <script src="./scripts/script.js"></script>
+        <script src="./scripts/burger.js"></script>
+    </body>
+</html>
