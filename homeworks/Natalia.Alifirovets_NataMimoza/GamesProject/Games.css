@@ -1,20 +1,17 @@
-.body {
+* {
   font-family: Roboto, serif;
+  margin: 0;
+  padding: 0;
 }
 
 .wrapper {
   margin: 0 auto;
-  max-width: 1280px;
-  height: 1017px;
-}
-
-.project {
-  background: #EF4934;
-  height: 80px;
+  min-width: 100%;
 }
 
 .header-menu {
-  padding: 0 52px;
+  background: #EF4934;
+  padding: 0 60px;
   height: 80px;
   display: flex;
   align-items: center;
@@ -35,17 +32,155 @@
 }
 
 .nav__link {
-  display: inline-block;
   color: #FFF;
   text-decoration: none;
+}
+
+.nav__link-active {
+  color: #FFF;
+  text-decoration: underline;
 }
 
 .nav__link:hover {
   text-decoration: underline;
 }
 
+.filters {
+  background: #221F1F;
+  color: #FFF;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 60px;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.drop-down {
+  background: #333;
+  border: 0;
+  border-radius: 6px;
+  color: #FFF;
+  width: 114px;
+  height: 36px;
+  margin-top: 12px;
+  display: flex;
+}
+
+.radio-btn {
+  display: flex;
+  gap: 32px;
+  width: 237px;
+  height: 20px;
+  padding-top: 20px;
+}
+
+.radio-games,
+.radio-platform {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #FFF;
+  border-radius: 50px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.radio-games:checked,
+.radio-platform:checked {
+  background-color: #221F1F;
+  border: 1px solid #FFF;
+}
+
+.radio-games:checked::before,
+.radio-platform:checked::before {
+  content: " ";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #FFF;
+  display: flex;
+  position: relative;
+  left: 6px;
+  top: 6px;
+  cursor: pointer;
+}
+
+.checkbox-btn {
+  display: flex;
+  gap: 32px;
+  padding-top: 20px;
+}
+
+.radio,
+.checkbox {
+  display: flex;
+  gap: 12px;
+}
+
+.checkbox-new,
+.checkbox-old {
+  position: relative;
+  appearance: none;
+  border: 1px solid #FFF;
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.checkbox-new:checked,
+.checkbox-old:checked {
+  background-color: #221F1F;
+  border: 1px solid #FFF;
+}
+
+.checkbox-new:checked::before,
+.checkbox-old:checked::before {
+  content: "✔";
+  font-size: 14px;
+  color: #FFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.search-box {
+  display: flex;
+  height: 36px;
+  padding-top: 12px;
+  position: relative;
+}
+
+.search-field {
+  position: absolute;
+  top: 62%;
+  transform: translate(50%, -50%);
+}
+
+.search {
+  width: 255px;
+  padding-left: 45px;
+  background-color: #FFF;
+  border-radius: 8px 0 0 8px;
+  border: none;
+}
+
+.apply {
+  background: #EF4934;
+  color: #FFF;
+  width: 75px;
+  height: 36px;
+  left: 302px;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+}
+
 .title {
-  margin: 100px 652px 0 53px;
+  margin: 40px 652px 0 60px;
   font-size: 48px;
   font-weight: 700;
 }
@@ -54,24 +189,21 @@
 
 .container {
   display: flex;
-  width: 1175px;
   align-items: flex-start;
   align-content: flex-start;
   gap: 25px;
   flex-wrap: wrap;
-  margin: 40px 53px 0 52px;
+  margin: 40px 60px 0;
   position: relative;
 }
 
 .card {
   background: #ECECEC;
-  width: 251px;
-  height: 226px;
+  width: 282px;
+  height: 255px;
   padding: 12px;
   position: relative;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
   border-radius: 12px;
 }
 
@@ -88,7 +220,7 @@
 .header {
   width: 149px;
   height: 70px;
-  line-height: 150%;
+  line-height: 130%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -96,7 +228,7 @@
 
 .header__title {
   margin: 0;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   line-height: normal;
 }
@@ -115,7 +247,7 @@
 }
 
 .actors {
-  height: 114px;
+  height: 130px;
   left: 2px;
   bottom: 20px;
   position: absolute;
@@ -131,4 +263,31 @@
 
 .font {
   font-weight: 600;
+}
+
+.spinner-box {
+  display: flex;
+  position: fixed;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ECECEC;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.spinner {
+  border: 10px dotted #B24538;
+  border-top: 10px dotted #FDAE1B;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

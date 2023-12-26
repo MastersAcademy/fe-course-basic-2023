@@ -61,6 +61,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 25px;
+  padding: 0;
 }
 
 .game-card {
@@ -100,3 +101,4 @@
   line-height: 18px;
   margin-left: 10px;
 }
+

@@ -18,6 +18,52 @@
   height: 100vh;
 }
 
+.error {
+  font-size: 30px;
+  color: #CA331F;
+}
+
+.preloader {
+  display: none;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  top: 50%;
+  z-index: 100;
+  margin: auto;
+  background: rgba(200, 200, 200, .5);
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  z-index: 100;
+  background: linear-gradient(0deg, rgba(255, 61, 0, .2) 33%, #FF3D00 100%);
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #263238;
+}
+
+@keyframes rotation {
+  0% { transform: rotate(0deg) }
+  100% { transform: rotate(360deg)}
+}
+
 .content {
   max-width: 1280px;
   margin: 0 auto;
@@ -233,8 +279,9 @@
 
 .games__row {
   display: grid;
-  grid-template-rows: repeat(2, 250px);
-  grid-template-columns: repeat(4, minmax(200px, 275px));
+  width: 100%;
+  grid-template-rows: repeat(3, 270px);
+  grid-template-columns: repeat(4, 275px);
   gap: 25px;
   margin-top: 40px;
   box-sizing: border-box;
@@ -243,6 +290,7 @@
 .games__item {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   padding: 12px 12px 22px;
   align-items: center;
   border-radius: 12px;
@@ -265,22 +313,36 @@
 
 .item__top {
   display: flex;
+  /*overflow: hidden;*/
+
+  min-height: 90px;
 }
 
 .game__logo {
-  min-width: 90px;
-  height: 90px;
-  object-fit: cover;
+  display: flex;
+  flex: 1 0 90px;
+  height: 100%;
   border-radius: 8px;
+  object-fit: cover;
+}
+
+.game__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .top__right {
   display: flex;
   flex-direction: column;
-  margin-left: 12px;
+  flex: 0 1 auto;
+  justify-content: center;
+  overflow-y: hidden;
+  margin: 0 0 0 12px;
 }
 
 .game__title {
+  text-overflow: ellipsis "...";
   font-family: Roboto;
   font-size: 18px;
   font-style: normal;
@@ -290,6 +352,8 @@
 }
 
 .game__subtitle {
+  overflow: hidden;
+  word-break: break-word;
   font-family: Roboto;
   font-size: 14px;
   font-style: normal;
@@ -303,6 +367,11 @@
   flex-direction: column;
   width: 100%;
   margin-top: 10px;
+}
+
+.item__row {
+  display: flex;
+  align-items: center;
 }
 
 .overview {

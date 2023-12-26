@@ -1,137 +1,18 @@
-const games = [
-    {
-        id: 1136,
-        title: 'Overwatch 2',
-        thumbnail: 'https://www.mmobomb.com/g/1136/thumbnail.jpg',
-        short_description: 'Big changes come to the Overwatch formula in this sequel...and so does PvE content, eventually.',
-        game_url: 'https://www.mmobomb.com/open/overwatch-2',
-        genre: 'Shooter',
-        platform: 'PC (Windows)',
-        publisher: 'Activision Blizzard King',
-        developer: 'Blizzard Entertainment',
-        release_date: '2022-10-04',
-        profile_url: 'https://www.mmobomb.com/overwatch-2',
-    },
-    {
-        id: 523,
-        title: 'Lost Ark',
-        thumbnail: 'https://www.mmobomb.com/g/523/thumbnail.jpg',
-        short_description: 'Journey throughout the realm of Arkesia and do battle against a demon invasion in Smilegate\'s free-to-play ARPG Lost Ark!',
-        game_url: 'https://www.mmobomb.com/open/lost-ark',
-        genre: 'ARPG',
-        platform: 'PC (Windows)',
-        publisher: 'Amazon Games',
-        developer: 'Smilegate',
-        release_date: '2022-02-11',
-        profile_url: 'https://www.mmobomb.com/lost-ark',
-    },
-    {
-        id: 1113,
-        title: 'PUBG: BATTLEGROUNDS',
-        thumbnail: 'https://www.mmobomb.com/g/1113/thumbnail.jpg',
-        short_description: 'Battle the odds in a 100v1 death match in PUBG: Battlegrounds, the classic free-to-play battle royale experience.',
-        game_url: 'https://www.mmobomb.com/open/pubg',
-        genre: 'Shooter',
-        platform: 'PC (Windows)',
-        publisher: 'KRAFTON, Inc.',
-        developer: 'KRAFTON, Inc.',
-        release_date: '2022-01-12',
-        profile_url: 'https://www.mmobomb.com/pubg',
-    },
-    {
-        id: 508,
-        title: 'Enlisted',
-        thumbnail: 'https://www.mmobomb.com/g/508/thumbnail.jpg',
-        short_description: 'Step into the most famous battles of World War II in Enlisted, a free-to-play shooter from the makers of War Thunder. Experience squad-based combat from the ground level, as you command your troops, outfitted with era-authentic weapons and gear, in massive battles with over a hundred soldiers apiece.',
-        game_url: 'https://www.mmobomb.com/open/enlisted',
-        genre: 'Shooter',
-        platform: 'PC (Windows)',
-        publisher: 'Gaijin Entertainment',
-        developer: 'Darkflow Software',
-        release_date: '2021-04-08',
-        profile_url: 'https://www.mmobomb.com/enlisted',
-    },
-    {
-        id: 1120,
-        title: 'Fall Guys',
-        thumbnail: 'https://www.mmobomb.com/g/1120/thumbnail.jpg',
-        short_description: 'Fall Guys is a free-to-play massively multiplayer party royale game.',
-        game_url: 'https://www.mmobomb.com/open/fall-guys',
-        genre: 'Battle Royale',
-        platform: 'PC (Windows)',
-        publisher: 'Mediatonic',
-        developer: 'Mediatonic',
-        release_date: '2020-08-04',
-        profile_url: 'https://www.mmobomb.com/fall-guys',
-    },
-    {
-        id: 340,
-        title: 'Game Of Thrones Winter Is Coming',
-        thumbnail: 'https://www.mmobomb.com/g/340/thumbnail.jpg',
-        short_description: 'Fame and glory await you in Westeros, in Game of Thrones: Winter Is Coming, the officially licensed free-to-play browser game based on the epic fantasy series by George R.R. Martin.',
-        game_url: 'https://www.mmobomb.com/open/game-of-thrones-winter-is-coming',
-        genre: 'Strategy',
-        platform: 'Web Browser',
-        publisher: 'GTArcade',
-        developer: 'YOOZOO Games ',
-        release_date: '2019-11-14',
-        profile_url: 'https://www.mmobomb.com/game-of-thrones-winter-is-coming',
-    },
-    {
-        id: 427,
-        title: 'Drakensang Online',
-        thumbnail: 'https://www.mmobomb.com/g/427/thumbnail.jpg',
-        short_description: 'Drakensang Online is a free to play 3D action RPG game that features extraordinary 3D graphics and effects and heralds the next generation of free-to-play online browser games. With the ability to customize your character, skills and magic powers like never before, join your comrades to wage a brutal war against evil.',
-        game_url: 'https://www.mmobomb.com/open/drakensang-online',
-        genre: 'MMORPG',
-        platform: 'Web Browser',
-        publisher: 'Bigpoint',
-        developer: 'Bigpoint',
-        release_date: '2011-08-08',
-        profile_url: 'https://www.mmobomb.com/drakensang-online',
-    },
-    {
-        id: 380,
-        title: 'Dark Orbit Reloaded',
-        thumbnail: 'https://www.mmobomb.com/g/380/thumbnail.jpg',
-        short_description: 'Take part in huge intergalactic battles and take on the whole galaxy in DarkOrbit, the free-to-play browser-based space combat MMO from Bigpoint -- now in 3-D! Choose your faction and your ship, each with their own strengths, and take off into adventure!',
-        game_url: 'https://www.mmobomb.com/open/darkorbit',
-        genre: 'Shooter',
-        platform: 'Web Browser',
-        publisher: 'Bigpoint',
-        developer: 'Bigpoint',
-        release_date: '2006-12-11',
-        profile_url: 'https://www.mmobomb.com/darkorbit',
-    },
-    {
-        id: 1122,
-        title: 'MultiVersus',
-        thumbnail: 'https://www.mmobomb.com/g/1122/thumbnail.jpg',
-        short_description: 'Match up in 1v1, 2v2 co-op, or 4-person free-for-all modes in this free-to-play Smash-Style Brawler!',
-        game_url: 'https://www.mmobomb.com/open/multiversus',
-        genre: 'Fighting',
-        platform: 'PC (Windows)',
-        publisher: 'Warner Bros. Games',
-        developer: 'Player First Games',
-        release_date: '2022-07-19',
-        profile_url: 'https://www.mmobomb.com/multiversus',
-    },
-    {
-        id: 5,
-        title: 'Crossout',
-        thumbnail: 'https://www.mmobomb.com/g/5/thumbnail.jpg',
-        short_description: 'Trick out your ride and take to the post-apocalyptic roads for battle in Crossout, the free-to-play vehicular combat game from Gaijin Entertainment! Featuring a vehicle design system with endless customization and fast-paced, armor-crunching combat, Crossout offers high-octane excitement in brief and explosive matches.',
-        game_url: 'https://www.mmobomb.com/open/crossout',
-        genre: 'Shooter',
-        platform: 'PC (Windows)',
-        publisher: 'Targem',
-        developer: 'Gaijin',
-        release_date: '2017-05-30',
-        profile_url: 'https://www.mmobomb.com/crossout',
-    },
-];
+let allGamesData = [];
+let gamesDisplayed = [];
+const loadingOverlay = document.querySelector('.games__loading');
+const checkNew = document.querySelector('[data-check-new]');
+const checkOld = document.querySelector('[data-check-old]');
 
-function createCardElement(game) {
+function showLoadingOverlay() {
+    loadingOverlay.style.display = 'block';
+}
+
+function hideLoadingOverlay() {
+    loadingOverlay.style.display = 'none';
+}
+
+async function createCardElement(game) {
     const template = document.querySelector('[data-card-template]');
 
     const cardCopy = document.importNode(template.content, true);
@@ -171,57 +52,79 @@ function createCardElement(game) {
     return cardCopy;
 }
 
-function renderCards(container, gamesAll) {
+async function renderCards(container, games) {
     const fragment = document.createDocumentFragment();
+    const containerElement = document.querySelector('[data-cards-container]');
 
-    gamesAll.forEach((game) => {
-        const cardElement = createCardElement(game);
-        fragment.appendChild(cardElement);
-    });
+    await Promise.all(games.map(async (game) => {
+        const card = await createCardElement(game);
+        fragment.appendChild(card);
+    }));
 
-    container.appendChild(fragment);
+    containerElement.innerHTML = '';
+    containerElement.appendChild(fragment);
 }
 
-const ulContainer = document.querySelector('[data-cards-container]');
+async function fetchData() {
+    try {
+        showLoadingOverlay();
 
-renderCards(ulContainer, games);
-
-function init() {
-    const checkNew = document.querySelector('[data-check-new]');
-    const checkOld = document.querySelector('[data-check-old]');
-    const gameDates = document.body.querySelectorAll('[data-release-date]');
-    const gameDatesArray = Array.from(gameDates).map((dateElement) => {
-        const releaseDateText = dateElement.innerText.replace('Release date:', '').trim();
-        const releaseDate = new Date(releaseDateText);
-        return releaseDate.getFullYear();
-    });
-
-    let newGameCheck = false;
-    let oldGameCheck = false;
-
-    const updateCardsDisplay = () => {
-        gameDatesArray.forEach((year, index) => {
-            const gameCard = gameDates[index].closest('.games__box-item');
-
-            if ((year >= 2020 && newGameCheck) || (year <= 2010 && oldGameCheck)) {
-                gameCard.style.display = 'block';
-            } else if (!newGameCheck && !oldGameCheck) {
-                gameCard.style.display = 'block';
-            } else {
-                gameCard.style.display = 'none';
-            }
+        const apiUrl = 'https://mmo-games.p.rapidapi.com/games';
+        const response = await fetch(apiUrl, {
+            method: 'GET',
+            mode: 'cors',
+            cache: 'no-cache',
+            headers: {
+                'X-RapidAPI-Key': '1c3169c707mshb51bff34cbc9ff6p1749b9jsn648a19134256',
+                'X-RapidAPI-Host': 'mmo-games.p.rapidapi.com',
+            },
         });
-    };
 
-    checkNew.addEventListener('click', () => {
-        newGameCheck = !newGameCheck;
-        updateCardsDisplay();
-    });
+        if (!response.ok) {
+            throw new Error('Error! No data');
+        }
 
-    checkOld.addEventListener('click', () => {
-        oldGameCheck = !oldGameCheck;
-        updateCardsDisplay();
-    });
+        const data = await response.json();
+        allGamesData = Array.isArray(data) ? data.slice(0, 50) : [];
+        gamesDisplayed = [...allGamesData];
+
+        renderCards('data-cards-container', gamesDisplayed);
+    } catch (error) {
+        console.error('Error:', error);
+    } finally {
+        hideLoadingOverlay();
+    }
 }
 
-init();
+function CheckboxChange() {
+    const isNewChecked = checkNew.checked;
+    const isOldChecked = checkOld.checked;
+
+    if (isNewChecked || isOldChecked) {
+        gamesDisplayed = allGamesData.filter((game) => {
+            const releaseYear = new Date(game.release_date).getFullYear();
+
+            if (isNewChecked && !isOldChecked) {
+                return releaseYear > 2020;
+            } if (isOldChecked && !isNewChecked) {
+                return releaseYear < 2010;
+            } if (isNewChecked && isOldChecked) {
+                return releaseYear < 2010 || releaseYear > 2020;
+            }
+            return true;
+        });
+    } else {
+        gamesDisplayed = [...allGamesData];
+    }
+
+    renderCards('data-cards-container', gamesDisplayed);
+}
+
+async function init() {
+    checkNew.addEventListener('change', CheckboxChange);
+    checkOld.addEventListener('change', CheckboxChange);
+    renderCards('data-cards-container', gamesDisplayed);
+    await fetchData();
+}
+
+document.addEventListener('DOMContentLoaded', init);

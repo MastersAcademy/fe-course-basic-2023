@@ -1,0 +1,780 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+[class*="__container"] {
+  max-width: 1175px;
+  padding: 0 53px;
+  margin: 0 auto;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 400px;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+[disabled] {
+  cursor: not-allowed;
+}
+
+/* ======================= ABOUT ========================== */
+
+.header {
+  background-color: #EF4934;
+}
+
+.header__container {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo img {
+  width: 55px;
+  height: 57px;
+}
+
+.header__menu {
+  display: flex;
+  gap: 50px;
+}
+
+.menu__link {
+  text-decoration: none;
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.menu__link:hover {
+  text-decoration: underline;
+}
+
+.main-img {
+  max-width: 100%;
+}
+
+.block-text {
+  width: 575px;
+}
+
+.tittle {
+  color: #221F1F;
+  font-family: Roboto;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.about__text {
+  color: #221F1F;
+  font-family: Roboto;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.about__text:not(:last-child) {
+  margin-bottom: 22px;
+}
+
+.moc-link {
+  color: #EF4934;
+  font-family: Roboto;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  text-decoration-line: underline;
+}
+
+.about {
+  min-height: 100vh;
+}
+
+.about__container {
+  margin: 60px auto;
+  display: flex;
+  justify-content: center;
+  column-gap: 65px;
+  flex-wrap: wrap;
+  row-gap: 30px;
+}
+
+/* ======================== GAMES ================================= */
+
+.games__tittle {
+  color: #221F1F;
+  font-family: Roboto;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  margin: 40px 0;
+}
+
+.games__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 275px);
+  gap: 25px;
+  margin-bottom: 46px;
+  justify-content: center;
+}
+
+.games__card {
+  border-radius: 12px;
+  background: #ECECEC;
+  padding: 12px 12px 22px;
+}
+
+.card__item {
+  display: flex;
+  margin-bottom: 22px;
+}
+
+.card__icon {
+  height: 90px;
+  overflow: hidden;
+}
+
+.card__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+}
+
+.card__tittle {
+  color: #221F1F;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.card__text,
+.card__about {
+  color: #221F1F;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.card__description {
+  margin-left: 12px;
+}
+
+.card__about p:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.bold {
+  color: #221F1F;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.card__text {
+  width: 149px;
+}
+
+/* ========================= FILTERS ============================  */
+
+.filters {
+  background-color: #221F1F;
+  padding: 12px 0;
+  flex-wrap: wrap;
+}
+
+.set-forms {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.drop-list {
+  background: #333;
+  border: none;
+  padding-left: 10px;
+  border-radius: 6px;
+  color: #FFF;
+  font-size: 15px;
+  width: 114px;
+  height: 36px;
+  outline: none;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.radio-block {
+  display: flex;
+  align-items: center;
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  column-gap: 32px;
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+}
+
+.custom-radio {
+  display: none;
+}
+
+.custom-radio + label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.custom-radio:disabled + label {
+  cursor: not-allowed;
+}
+
+.custom-radio + label::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #FFF;
+  border-radius: 50%;
+  margin-right: 12px;
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.check ~ label::before {
+  content: "\2713";
+  text-align: center;
+  color: #FFF;
+  line-height: 1;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #EF4934;
+  border-radius: 6px;
+  margin-right: 12px;
+  display: inline-block;
+}
+
+.custom-radio:checked + label::before {
+  border-color: #FFF;
+  background-color: #000;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+}
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  color: #FFF;
+  cursor: pointer;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.chekbox-block {
+  display: flex;
+  align-items: center;
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  column-gap: 32px;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #000;
+  border: 1px solid #FFF;
+  border-radius: 6px;
+}
+
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark::after {
+  display: block;
+}
+
+.checkbox-container input:checked ~ .checkmark::after {
+  left: 7px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid #FFF;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.search-area {
+  position: relative;
+  display: flex;
+}
+
+.search {
+  padding: 14px 14px 14px 46px;
+  outline: none;
+  border: none;
+  border-radius: 6px 0 0 6px;
+  background: #FFF;
+  width: 100%;
+  max-width: 240px;
+}
+
+.search-img {
+  position: absolute;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+
+.submit {
+  padding: 13px 20px;
+  border-radius: 0 6px 6px 0;
+  background: #EF4934;
+  border: none;
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* ========================== LOGIN ============================= */
+
+.login__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.login__tittle {
+  color: #221F1F;
+  font-family: Roboto;
+  font-size: 48px;
+  font-weight: 700;
+  margin: 80px 0 60px;
+  text-align: center;
+}
+
+.email__text,
+.email__password {
+  color: #221F1F;
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 22px;
+}
+
+.email__input,
+.password__input {
+  padding: 30px 20px;
+  border-radius: 6px;
+  border: 1px solid  #A9A9A9;
+  background: #FFF;
+  margin-bottom: 40px;
+  outline: none;
+  font-size: 14px;
+}
+
+.email__input::placeholder {
+  color: #A9A9A9;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.password__input::placeholder {
+  color: #A9A9A9;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.robot__label {
+  color: #221F1F;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 12px;
+}
+
+.login__btn {
+  padding: 27px 258px;
+  border-radius: 6px;
+  background: #EF4934;
+  box-shadow: 0 4px 30px 0 rgba(38, 58, 67, .15);
+  border: none;
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+.check {
+  opacity: 0;
+  margin-right: -16px;
+}
+
+.check:checked ~ label::before {
+  color: #EF4934;
+  border: 2px solid #EF4934;
+}
+
+.form__area {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==================== SUCCESS LOGIN ========================= */
+
+.notification__container {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.success__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.success__message {
+  color: #543C3C;
+  font-family: Roboto;
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.btn-orange {
+  padding: 27px 100px;
+  border-radius: 6px;
+  background: #EF4934;
+  box-shadow: 0 4px 30px 0 rgba(38, 58, 67, .15);
+  border: none;
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+.return__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================== ERRORS-BOX ============================ */
+
+.errors-box {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.error:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.error::before {
+  content: "✕";
+  font-size: 18px;
+  color: #F00;
+  margin-right: 10px;
+}
+
+.loading-overlay {
+  display: block;
+  text-align: center;
+  margin-top: 100px;
+  font-size: 36px;
+}
+
+/* ======================== FOOTER ================================= */
+
+.footer {
+  background-color: #221F1F;
+}
+
+.footer__social {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+.footer__social > a {
+  margin-right: 33px;
+}
+
+.footer__text {
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+/* ========================== CALCULATOR =============================== */
+
+.calculator-block input, select {
+  font-size: 22px;
+  text-align: center;
+}
+
+.calculator-block {
+  padding: 80px 0;
+}
+
+.field {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+  padding: 0 53px;
+  font-size: 22px;
+}
+
+.tittle__calculator {
+  color: #221F1F;
+  font-family: Roboto;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.custom__item-calculator {
+  width: 122px;
+  height: 36px;
+  border-radius: 6px;
+  border: 1px solid #221F1F;
+  outline: none;
+}
+
+.btn-calculator {
+  border-radius: 6px;
+  background: #EF4934;
+  font-size: 22px;
+  color: #FFF;
+  border: none;
+  cursor: pointer;
+}
+
+/* ===================== MEDIA ============================ */
+
+@media (max-width: 1278px) {
+
+  .block-text {
+    text-align: center;
+  }
+
+  .games__tittle {
+    text-align: center;
+  }
+}
+
+@media (max-width: 900px) {
+
+  .games__tittle {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 650px) {
+
+  .tittle__calculator {
+    font-size: 32px;
+  }
+
+  .field {
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  body.no-scroll {
+    overflow: hidden;
+  }
+
+  .games__tittle {
+    font-size: 28px;
+  }
+
+  .login__btn {
+    padding: 15px 120px;
+  }
+
+  .login__tittle {
+    font-size: 36px;
+    margin: 50px 0;
+  }
+
+  .email__text,
+  .email__password {
+    margin-bottom: 10px;
+  }
+
+  .header__logo {
+    position: fixed;
+    z-index: 3;
+  }
+
+  .success__message {
+    font-size: 34px;
+  }
+
+  .btn-orange {
+    padding: 20px 50px
+  }
+
+  .header__burger {
+    display: block;
+    position: fixed;
+    left: 85%;
+    top: 30px;
+    width: 30px;
+    height: 20px;
+    z-index: 3;
+    cursor: pointer;
+  }
+
+  .header__burger span {
+    position: absolute;
+    background-color: #FFF;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    top: 9px;
+    transition: all .5s ease;
+  }
+
+  .header__burger::before,
+  .header__burger::after {
+    content: "";
+    background-color: #FFF;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: all .5s ease;
+  }
+
+  .header__burger::before {
+    top: 0;
+  }
+
+  .header__burger::after {
+    bottom: 0;
+  }
+
+  .header__burger.opened span {
+    transform: scale(0);
+  }
+
+
+  .header__burger.opened::before {
+    transform: rotate(45deg);
+    top: 9px;
+  }
+
+  .header__burger.opened::after {
+    transform: rotate(-45deg);
+    bottom: 9px;
+  }
+
+  .nav {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #EF4934;
+    padding: 50px 10px 20px;
+    transition: all .5s ease;
+    z-index: 1;
+  }
+
+  .nav.active {
+    top: 0;
+  }
+
+  .header__menu {
+    display: block;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .header__menu > li {
+    margin-bottom: 30px;
+  }
+
+  .menu__link {
+    font-size: 36px;
+  }
+
+  [class*="__container"] {
+    padding: 0 30px;
+  }
+}
