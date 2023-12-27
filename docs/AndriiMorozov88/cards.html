@@ -43,43 +43,39 @@
                     <use xlink:href="sprite.svg#filter"></use>
                 </svg>
             </button>
-            <section class="filter__block" data-filter-block>
-                <section>
-                    <select name="select-genre" class="filter__select" data-select-genre>
-                        <option value="0" selected>All Genres</option>
-                        <option value="Shooter">Shooter</option>
-                        <option value="ARPG">ARPG</option>
-                        <option value="Battle Royale">Battle Royale</option>
-                        <option value="Strategy">Strategy</option>
-                        <option value="MMORPG">MMORPG</option>
-                        <option value="Fighting">Fighting</option>
-                        <option value="Card Game">Card Game</option>
-                    </select>
-                </section>
-                <section>
-                    <select name="select-platform" class="filter__select" data-select-platform>
-                        <option value="all" selected>All Platforms</option>
-                        <option value="PC (Windows)">PC (Windows)</option>
-                        <option value="Web Browser">Web Browser</option>
-                    </select>
-                </section>
-                <section class="filter__radio">
-                    <input type="radio" name="radio" data-old-first>
-                    <label for="new" class="filter-element">
+            <section class="filter__block" data-filter-block> 
+                <select name="select-genre" class="filter__select" data-select-genre>
+                    <option value="0" selected>All Genres</option>
+                    <option value="Shooter">Shooter</option>
+                    <option value="ARPG">ARPG</option>
+                    <option value="Battle Royale">Battle Royale</option>
+                    <option value="Strategy">Strategy</option>
+                    <option value="MMORPG">MMORPG</option>
+                    <option value="Fighting">Fighting</option>
+                    <option value="Card Game">Card Game</option>
+                </select>
+                <select name="select-platform" class="filter__select" data-select-platform>
+                    <option value="all" selected>All Platforms</option>
+                    <option value="PC (Windows)">PC (Windows)</option>
+                    <option value="Web Browser">Web Browser</option>
+                </select>
+                <section class="filter__element">
+                    <label class="filter-element">
+                        <input type="radio" name="radio" data-old-first>
                         Old First
                     </label>
-                    <input type="radio" name="radio" data-new-first>
-                    <label for="favorites">
+                    <label for="old-first" class="filter-element">
+                        <input type="radio" name="radio" data-new-first>
                         New First
-                    </label>
+                    </label> 
                 </section>
-                <section class="filter__checkbox">
-                    <input type="checkbox" data-new-games>
+                <section class="filter__element">
                     <label for="new" class="filter-element">
+                        <input type="checkbox" data-new-games>
                         New
                     </label>
-                    <input type="checkbox" data-old-games>
                     <label for="old">
+                        <input type="checkbox" data-old-games>
                         Old
                     </label>
                 </section>

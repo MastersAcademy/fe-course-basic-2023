@@ -151,7 +151,6 @@ async function init() {
     });
     burgerButton.addEventListener('click', () => {
         filterBlock.classList.toggle('filter__block--active');
-        console.log(1);
     });
 }
 window.addEventListener('load', init);

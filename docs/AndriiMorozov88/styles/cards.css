@@ -225,21 +225,16 @@
 
   .filter__select {
     width: 90%;
-    min-width: 200px;
     height: 60px;
     font-size: 20px;
     margin: 10px;
   }
 
-  .filter__radio {
-    width: 300px;
-    font-size: 30px;
-    margin: 10px;
-  }
-
-  .filter__checkbox {
-    width: 300px;
-    font-size: 30px;
+  .filter__element {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 90%;
+    font-size: 25px;
     margin: 10px;
   }
 
@@ -249,12 +244,11 @@
     position: fixed;
     top: 140px;
     background-color: #221F1F;
-    width: 30%;
+    width: 40%;
     height: max-content;
     opacity: .9;
     left: 0;
     align-items: flex-start;
-    min-width: 350px;
   }
 }
 
