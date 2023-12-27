@@ -140,12 +140,21 @@ async function init() {
     } catch (e) {
         console.log('init error: ', e.message);
     } finally {
-        const [INPUT_GENGE, INPUT_PLATFORM, RADIO_NEW, RADIO_OLD, , BUTTON_APPLY] = Array.from(document.forms['filter-form']);
+        const INPUT_GENGE = document.querySelector('[data-filter-select="genre"]');
+        const INPUT_PLATFORM = document.querySelector('[data-filter-select="platform"]');
+        const RADIO_NEW = document.querySelector('[data-age-games="new"]');
+        const RADIO_OLD = document.querySelector('[data-age-games="old"]');
+        const BUTTON_APPLY = document.querySelector('[data-filter-button]');
+        const FORM = document.querySelector('[data-form-filters]');
         INPUT_GENGE.addEventListener('change', () => applyFilter(urlGames, CARDS_LIST));
         INPUT_PLATFORM.addEventListener('change', () => applyFilter(urlGames, CARDS_LIST));
         RADIO_NEW.addEventListener('change', () => applyFilter(urlGames, CARDS_LIST));
         RADIO_OLD.addEventListener('change', () => applyFilter(urlGames, CARDS_LIST));
         BUTTON_APPLY.addEventListener('click', () => applyFilter(urlGames, CARDS_LIST));
+        FORM.addEventListener('submit', (event) => {
+            event.preventDefault();
+            applyFilter(urlGames, CARDS_LIST);
+        });
     }
 }
 

@@ -23,7 +23,6 @@ function calculate(firstValue, secondValue, operation) {
     let result;
     if (firstValue === '' || secondValue === '' || Number.isNaN(firstNumber) || Number.isNaN(secondNumber)) return 'Enter a number';
     if (firstNumber > 10) return 'enter first number 1 - 10';
-    if (operation === '**') return 'Choose a valid operation';
     switch (operation) {
         case '+':
             result = firstNumber + secondNumber;
