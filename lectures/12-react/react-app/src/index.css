@@ -1,0 +1,77 @@
+body {
+  margin: 80px 0 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.game__cod2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 260px;
+  height: 100%;
+  background-color: #ECECEC;
+  padding: 12px 12px 22px;
+  border-radius: 12px;
+}
+
+.cod2__general {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.cod2__general--img img {
+  height: 90px;
+  width: 90px;
+  border-radius: 9px;
+  object-fit: cover;
+}
+
+.cod2__general--desc {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 149px;
+}
+
+.cod2__general--desc h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.cod2__general--desc p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.cod2__description {
+  font-size: 14px;
+  line-height: 21px;
+  text-align: start;
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+.cod2__description li b {
+  font-weight: 700;
+}
+
+.cod2__description li {
+  font-weight: 400;
+  list-style-type: none;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+.cod2__description li:last-child {
+  margin-bottom: 0;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 25px;
+}

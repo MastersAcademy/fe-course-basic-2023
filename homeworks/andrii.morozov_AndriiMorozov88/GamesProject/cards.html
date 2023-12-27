@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="styles/styles.css">
         <link rel="stylesheet" href="styles/header.css">
         <link rel="stylesheet" href="styles/common_styles.css">
+        <link rel="stylesheet" href="styles/footer.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Roboto:wght@500&display=swap" rel="stylesheet">
@@ -38,7 +39,7 @@
         </header>
         <form action="#" method="post" class="filter">
             <section>
-                <select name="select" class="filter__select" data-select-genre>
+                <select name="select-genre" class="filter__select" data-select-genre>
                     <option value="0" selected>All Genres</option>
                     <option value="Shooter">Shooter</option>
                     <option value="ARPG">ARPG</option>
@@ -46,16 +47,24 @@
                     <option value="Strategy">Strategy</option>
                     <option value="MMORPG">MMORPG</option>
                     <option value="Fighting">Fighting</option>
+                    <option value="Card Game">Card Game</option>
                 </select>
             </section>
             <section>
-                <input type="radio" name="radio" id="only-new" disabled>
+                <select name="select-platform" class="filter__select" data-select-platform>
+                    <option value="all" selected>All Platforms</option>
+                    <option value="PC (Windows)">PC (Windows)</option>
+                    <option value="Web Browser">Web Browser</option>
+                </select>
+            </section>
+            <section>
+                <input type="radio" name="radio" data-old-first>
                 <label for="new" class="filter-element">
-                    Only new
+                    Old First
                 </label>
-                <input type="radio" name="radio" id="favorites" disabled>
+                <input type="radio" name="radio" data-new-first>
                 <label for="favorites">
-                    Favorites
+                    New First
                 </label>
             </section>
             <section>
@@ -91,6 +100,7 @@
                     <p class="card__paragraf card__paragraf--short" data-game-description></p>
                 </div>
                 <div class="card__description">
+                    <p class="card__paragraf card__paragraf--short" data-game-description></p>
                     <p class="card__paragraf" data-game-genre></p>
                     <p class="card__paragraf" data-game-url></p>
                     <p class="card__paragraf" data-game-platform></p>
@@ -103,9 +113,28 @@
         </template>  
         <main class="main games__main">
             <h1 class="main__heading">Study project "Games"</h1>
+            <p class="main__info--disabled" data-info></p>
             <article class="card-container" data-card-container>
             </article>
         </main>
+        <footer class="footer" data-footer>
+            <section class="footer__svg-container">
+                <svg class="footer__svg">
+                    <use xlink:href="sprite.svg#facebook"></use>
+                </svg>
+                <svg class="footer__svg">
+                    <use xlink:href="sprite.svg#linked_in"></use>
+                </svg>
+                <svg class="footer__svg">
+                    <use xlink:href="sprite.svg#instagram"></use>
+                </svg> 
+            </section>
+            <section class="footer__text">
+                <p>Made with 💗 on course 
+                    <a class="footer__link" target="_blank" href="https://www.mastersacademy.education/frontend-for-beginners-it">'Frontend for beginners' from Masters Academy in 2023</a>
+                    , by Andrii Morozov</p>
+            </section>
+        </footer>
         <script type="module" src="scripts/games.js"></script>
     </body>
 </html>

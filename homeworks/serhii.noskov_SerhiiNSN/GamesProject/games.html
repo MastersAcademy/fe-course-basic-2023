@@ -17,6 +17,9 @@
                 <a class="header__logo" href="#">
                     <img src="img/logo.svg" alt="logo">
                 </a>
+                <div class="header__burger">
+                    <span></span>
+                </div>
                 <nav class="nav">
                     <ul class="header__menu">
                         <li class="menu__list">
@@ -114,15 +117,13 @@
                     <ul class="games__list" data-type="card-container">
                         <template data-type="card-template">
                             <div class="card__item">
-                                <a href="">
-                                    <div class="card__icon">
-                                        <img
-                                            data-card-img
-                                            src="img/Game/game-icon.jpg"
-                                            alt=""
-                                        >
-                                    </div>
-                                </a>
+                                <div class="card__icon">
+                                    <img
+                                        data-card-img
+                                        src="img/Game/game-icon.jpg"
+                                        alt=""
+                                    >
+                                </div>
                                 <div class="card__description">
                                     <div class="card__tittle" data-card-title>
                                         Overwatch 2
@@ -158,6 +159,25 @@
                 </div>
             </section>
         </main>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__social">
+                    <a href="">
+                        <img src="./img/Footer/face.svg" alt="facebook">
+                    </a>
+                    <a href="">
+                        <img src="./img/Footer/linkdn.svg" alt="linkedin">
+                    </a>
+                    <a href="">
+                        <img src="./img/Footer/inst.svg" alt="instagram">
+                    </a>
+                </div>
+                <div class="footer__text">
+                    Made with 💗 on course 'Frontend for beginners' from Masters Academy in 2023, by Serhii Noskov
+                </div>
+            </div>
+        </footer>
         <script src="../GamesProject/scripts/games.js"></script>
+        <script src="./scripts/burger.js"></script>
     </body>
 </html>
