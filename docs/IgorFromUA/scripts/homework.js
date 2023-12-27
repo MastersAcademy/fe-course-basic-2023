@@ -12,9 +12,7 @@
  */
 
 function randomDelay() {
-    const start = new Date().getTime();
-    const delay = Math.floor(Math.random() * (2000 - 200) + 200);
-    while (new Date().getTime() - start < delay);
+    return Math.floor(Math.random() * (2000 - 200) + 200);
 }
 
 function calculate(firstValue, secondValue, operation) {
@@ -35,8 +33,7 @@ function calculate(firstValue, secondValue, operation) {
             break;
         case '/':
             if (secondNumber === 0) {
-                result = 'Division by zero is not allowed';
-                break;
+                return 'Division by zero is not allowed';
             }
             result = firstNumber / secondNumber;
             break;
@@ -44,8 +41,12 @@ function calculate(firstValue, secondValue, operation) {
             return 'Choose a valid operation';
     }
     if (result > 100) return 'Result is too big';
-    randomDelay();
-    return result;
+    // randomDelay();
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(result);
+        }, randomDelay());
+    });
 }
 
 window.calculate = calculate;

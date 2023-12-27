@@ -25,6 +25,10 @@ function trimLastCard(num, place) {
     place.lastElementChild.style.clipPath = `polygon(0% ${trim}%, 100% ${trim}%, 100% calc(100% - ${trim}%), 0% calc(100% - ${trim}%))`;
 }
 
+function loadingSwitch(switching) {
+    const LOADING_ELEMENT = document.querySelector('[data-loading]');
+    LOADING_ELEMENT.style.visibility = switching ? 'visible' : 'hidden';
+}
 function showErrorText(result, placeError, placeResult) {
     (result === 'Too many games' ? placeResult : placeError).innerText = result;
 }
@@ -41,12 +45,11 @@ function showManyCards(amount, place) {
     }
 }
 
-function showResult(result) {
-    const RESULT_ELEMENT = document.getElementById('result');
+function showResult(result, place) {
     if ((typeof result) === 'number') {
-        RESULT_ELEMENT.innerText = result + (result > 1 ? ' games' : ' game');
+        place.innerText = result + (result > 1 ? ' games' : ' game');
     } else {
-        RESULT_ELEMENT.innerText = result;
+        place.innerText = result;
     }
 }
 
@@ -61,11 +64,9 @@ function showBigElement(operation, secondValue) {
 
 function showBigResult(firstValue, secondValue, operation, res) {
     const ERROR_TEXT_ELEMENT = document.querySelector('[data-error-text]');
-    const BIG_RESULT_ELEMENTS = Array.from(document.querySelector('[data-big-result]').children);
     const FIRST_NUMBER_BIG_ELEMENT = document.querySelector('[data-big-result="first-number"]');
     const RESULT_BIG_ELEMENT = document.querySelector('[data-big-result="result"]');
     let result = res;
-    clearElements([ERROR_TEXT_ELEMENT, ...BIG_RESULT_ELEMENTS]);
     if (firstValue > 10) result = 'enter first number 1 - 10';
     if (result === 'Result is too big') {
         showManyCards(firstValue, FIRST_NUMBER_BIG_ELEMENT);
@@ -92,20 +93,30 @@ function showBigResult(firstValue, secondValue, operation, res) {
         showErrorText(result, ERROR_TEXT_ELEMENT, RESULT_BIG_ELEMENT);
     }
 }
+function clearBigResult() {
+    const BIG_RESULT_ELEMENTS = Array.from(document.querySelector('[data-big-result]').children);
+    const ERROR_TEXT_ELEMENT = document.querySelector('[data-error-text]');
+    clearElements([ERROR_TEXT_ELEMENT, ...BIG_RESULT_ELEMENTS]);
+}
 
-function handlerCalculate() {
+async function handlerCalculate() {
     const FIRST_VALUE_ELEMENT = document.getElementById('firstValue');
     const SECOND_VALUE_ELEMENT = document.getElementById('secondValue');
     const OPERATION_ELEMENT = document.getElementById('operation');
     const DATE_TEXT_ELEMENT = document.querySelector('[data-date-text]');
+    const RESULT_ELEMENT = document.getElementById('result');
+    clearElements([DATE_TEXT_ELEMENT, RESULT_ELEMENT]);
+    clearBigResult();
     const firstValue = FIRST_VALUE_ELEMENT.value;
     const secondValue = SECOND_VALUE_ELEMENT.value;
     const operation = OPERATION_ELEMENT.value;
     const startTime = Date.now();
-    const result = window.calculate(firstValue, secondValue, operation);
+    loadingSwitch(true);
+    const result = await window.calculate(firstValue, secondValue, operation);
     const calculationTime = Date.now() - startTime;
+    loadingSwitch(false);
     DATE_TEXT_ELEMENT.innerText = creatDateString(formatDate(new Date()), calculationTime);
-    showResult(result);
+    showResult(result, RESULT_ELEMENT);
     showBigResult(firstValue, secondValue, operation, result);
 }
 
