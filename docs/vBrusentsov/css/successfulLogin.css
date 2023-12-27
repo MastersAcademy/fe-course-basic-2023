@@ -1,0 +1,57 @@
+.successful-login-main {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  gap: 15px;
+  margin-top: 80px;
+}
+
+.successful-login-header {
+  font-family: Roboto;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+}
+
+.message-for-user {
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 32px;
+  text-align: center;
+}
+
+.go-to-home-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+
+.go-to-home-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70px;
+  border-radius: 6px;
+  background-color: #EF4934;
+  font-family: Roboto;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: #FFF;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+
+  .successful-login-main {
+    width: 80%;
+  }
+}

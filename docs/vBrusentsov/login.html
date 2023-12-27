@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./css/main.css">
+        <link rel="stylesheet" type="text/css" href="./css/login.css">
+        <title>Login</title>
+    </head>
+    <body>
+        <header class="header">
+            <img class="header-logo" src="./Img/logo.svg" width="55px" height="57.323px">
+            <nav class="nav-menu">
+                <ul>
+                    <li>
+                        <a href="./calculator.html">Calculator</a>
+                    </li>
+                    <li>
+                        <a href="./games.html">Games</a>
+                    </li>
+                    <li>
+                        <a href="./about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="./login.html">Login</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="login-main-section">
+            <h1 class="login-header">Login page</h1>
+            <form class="login-container">
+                <div class="login-email-container">
+                    <label class="label-email" for="email">Email</label>
+                    <input class="email" type="email" id="email" name="email" placeholder="Enter your email address" required>
+                </div>
+                <div class="email-errors-container" id="email-errors-container"></div>
+                <div class="login-password-container">
+                    <label class="label-password" for="password">Password</label>
+                    <input class="password" type="password" id="password" name="password" placeholder="Enter a password" required>
+                </div>
+                <div class="password-errors-container" id="password-errors-container"></div>
+                <div class="login-main-checkbox">
+                    <input class="checkbox-non-robot" type="checkbox" id="checking-for-non-robot" required>
+                    <label class="label-main-checkbox" for="checking-for-non-robot">I`m not a robot</label>
+                </div>
+                <div class="checkbox-errors-container" id="checkbox-errors-container"></div>
+                <button class="login-main-submit-button" id="login-main-submit-button" type="button">Login</button>
+            </form>
+        </main>
+        <footer class="footer">
+            <div class="social-links">
+                <img class="facebook-logo" src="./Img/facebook-logo.svg">
+                <img class="linkedin-logo" src="./Img/linkedin-logo.svg">
+                <img class="instagram-logo" src="./Img/instagram-logo.svg">
+            </div>
+            <p class="info-author">
+                Made with 💗 on course <a class="link-to-ma" href="https://www.mastersacademy.education/frontend-for-beginners-it"> 'Frontend for beginners' from Masters Academy in 2023,</a> by Vladyslav Brusentsov.
+            </p>
+        </footer>
+        <script src="./script/logining-veryfication-script.js"></script>
+    </body>
+</html>
