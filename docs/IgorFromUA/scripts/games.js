@@ -57,7 +57,7 @@ function markedSearchText(search, originString) {
     return originString.replaceAll(regex, (match) => `<span class="filter-matched-text">${match}</span>`);
 }
 
-function creatSearchQueryString() {
+function createSearchQueryString() {
     const selectedGenre = document.querySelector('[data-filter-select="genre"]').value;
     const selectedPlatform = document.querySelector('[data-filter-select="platform"]').value;
     const isNewGame = document.querySelector('[data-age-games="new"]').checked;
@@ -112,7 +112,7 @@ function getGames(url, place) {
 
 async function applyFilter(url, place) {
     try {
-        const urlGamesQuery = `${url}?${creatSearchQueryString()}`;
+        const urlGamesQuery = `${url}?${createSearchQueryString()}`;
         const isOldGame = document.querySelector('[data-age-games="old"]').checked;
         const games = await getGames(urlGamesQuery, place);
         if (isOldGame) games.reverse();
@@ -130,6 +130,24 @@ async function applyFilter(url, place) {
     }
 }
 
+function attachHandlers(url, place) {
+    const INPUT_GENGE = document.querySelector('[data-filter-select="genre"]');
+    const INPUT_PLATFORM = document.querySelector('[data-filter-select="platform"]');
+    const RADIO_NEW = document.querySelector('[data-age-games="new"]');
+    const RADIO_OLD = document.querySelector('[data-age-games="old"]');
+    const BUTTON_APPLY = document.querySelector('[data-filter-button]');
+    const FORM = document.querySelector('[data-form-filters]');
+    INPUT_GENGE.addEventListener('change', () => applyFilter(url, place));
+    INPUT_PLATFORM.addEventListener('change', () => applyFilter(url, place));
+    RADIO_NEW.addEventListener('change', () => applyFilter(url, place));
+    RADIO_OLD.addEventListener('change', () => applyFilter(url, place));
+    BUTTON_APPLY.addEventListener('click', () => applyFilter(url, place));
+    FORM.addEventListener('submit', (event) => {
+        event.preventDefault();
+        applyFilter(url, place);
+    });
+}
+
 async function init() {
     const urlGames = 'https://mmo-games.p.rapidapi.com/games';
     const CARDS_LIST = document.querySelector('[data-cards]');
@@ -140,21 +158,7 @@ async function init() {
     } catch (e) {
         console.log('init error: ', e.message);
     } finally {
-        const INPUT_GENGE = document.querySelector('[data-filter-select="genre"]');
-        const INPUT_PLATFORM = document.querySelector('[data-filter-select="platform"]');
-        const RADIO_NEW = document.querySelector('[data-age-games="new"]');
-        const RADIO_OLD = document.querySelector('[data-age-games="old"]');
-        const BUTTON_APPLY = document.querySelector('[data-filter-button]');
-        const FORM = document.querySelector('[data-form-filters]');
-        INPUT_GENGE.addEventListener('change', () => applyFilter(urlGames, CARDS_LIST));
-        INPUT_PLATFORM.addEventListener('change', () => applyFilter(urlGames, CARDS_LIST));
-        RADIO_NEW.addEventListener('change', () => applyFilter(urlGames, CARDS_LIST));
-        RADIO_OLD.addEventListener('change', () => applyFilter(urlGames, CARDS_LIST));
-        BUTTON_APPLY.addEventListener('click', () => applyFilter(urlGames, CARDS_LIST));
-        FORM.addEventListener('submit', (event) => {
-            event.preventDefault();
-            applyFilter(urlGames, CARDS_LIST);
-        });
+        attachHandlers(urlGames, CARDS_LIST);
     }
 }
 
