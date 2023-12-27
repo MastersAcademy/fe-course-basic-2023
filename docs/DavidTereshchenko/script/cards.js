@@ -87,7 +87,7 @@ async function getGames(platform) {
 }
 document.addEventListener('DOMContentLoaded', getGames(''));
 
-document.querySelector('[data-select="platform"]').addEventListener('change', () => {
+function platformFilter() {
     cardsBlock.innerText = '';
     switch (platformSelect.value) {
         case 'platform':
@@ -105,8 +105,7 @@ document.querySelector('[data-select="platform"]').addEventListener('change', ()
         default:
             getGames('all');
     }
-});
-
+}
 async function getCategory(genre) {
     let query = '';
     if (genre) {
@@ -133,8 +132,7 @@ async function getCategory(genre) {
         hideLoader();
     }
 }
-
-document.querySelector('[data-select="genre"]').addEventListener('change', () => {
+function categoryFilter() {
     cardsBlock.innerText = '';
     switch (genreSelect.value) {
         case 'genre':
@@ -160,7 +158,7 @@ document.querySelector('[data-select="genre"]').addEventListener('change', () =>
         default:
             getCategory('');
     }
-});
+}
 
 function sortFilter(element) {
     showLoader();
@@ -249,4 +247,6 @@ function checkBoxFilter(element) {
 }
 
 checkBoxFilter(dateYear);
+platformFilter();
+categoryFilter();
 sortFilter();

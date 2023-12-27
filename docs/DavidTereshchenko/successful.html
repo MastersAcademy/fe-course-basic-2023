@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" type="text/css" href="css/login.css">
+        <link rel="stylesheet" type="text/css" href="css/successful.css">
         <title>Game Project</title>
     </head>
     <body>
@@ -32,7 +32,6 @@
                             </ul>
                         </nav>
                     </div>
-                    <!-- Burger menu -->
                     <div class="header__burger">
                         <span></span>
                     </div>
@@ -40,41 +39,23 @@
             </header>
             <main class="page">
                 <div class="main__container">
-                    <div class="main__title">
-                        <h1 class="title__login">Login page</h1>
-                    </div>
-                    <div class="page__login">
-                        <form action="successful.html" class="login__form" target="_self">
-                            <div class="form__email">
-                                <label for="email" class="label-email">Email</label>
-                                <input
-                                    type="email"
-                                    name="email"
-                                    id="email"
-                                    class="form__input"
-                                    placeholder="Enter your email address"
-                                >
-                                <div id="errors-container__email"></div>
+                    <div class="success-block">
+                        <div class="success-checkmark">
+                            <div class="check-icon">
+                                <span class="icon-line line-tip"></span>
+                                <span class="icon-line line-long"></span>
+                                <div class="icon-circle"></div>
+                                <div class="icon-fix"></div>
                             </div>
-                            <div class="form__password">
-                                <label for="password" class="label-password">Password</label>
-                                <input
-                                    type="password"
-                                    name="password"
-                                    id="password"
-                                    class="form__input"
-                                    placeholder="Enter your password"
-                                >
-                                <div id="errors-container__password"></div>
+                        </div>
+                        <div class="success">
+                            <h1 class="success__title">Successful</h1>
+                            <p class="success__info">You can continue watching your favorite games</p>
+                        </div>
+                        <form action="game.html" class="success__form">
+                            <div class="success__back-home">
+                                <button type="submit" class="button">Continue</button>
                             </div>
-                            <div>
-                                <div class="form__checkbox">
-                                    <input type="checkbox" id="checkbox" class="checkbox">
-                                    <label for="checkbox">I’m not a robot</label>
-                                </div>
-                                <div id="errors-container__robot"></div>
-                            </div>
-                            <button type="button" id="button" class="form__button">Login</button>
                         </form>
                     </div>
                 </div>
@@ -99,6 +80,5 @@
             </footer>
         </div>
         <script src="script/burger.js"></script>
-        <script src="script/login.js"></script>
     </body>
 </html>

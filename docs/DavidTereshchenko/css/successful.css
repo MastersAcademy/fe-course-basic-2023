@@ -1,0 +1,232 @@
+/* add header and default */
+
+@import "header/header.css";
+@import "default/default.css";
+@import "Footer/footer.css";
+
+.success-block {
+  height: 70%;
+  width: 100%;
+  border: 2px solid #A9A9A9;
+  row-gap: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.main__container {
+  max-width: 575px;
+  height: 91.5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+}
+
+.success__title {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.success__info {
+  font-size: 18px;
+  color: #A9A9A9;
+  font-weight: 200;
+}
+
+.success__form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.success__back-home {
+  display: flex;
+  width: 40%;
+  padding: 20px 0;
+  background-color: #EF4934;
+  border-radius: 6px;
+  justify-content: center;
+  color: #FFF;
+  font-weight: 600;
+}
+
+/**
+ * Extracted from: SweetAlert
+ * Modified by: Istiak Tridip
+ */
+
+.success-checkmark {
+  display: flex;
+  width: 80px;
+  height: 70px;
+  margin: 0 auto;
+
+
+  .check-icon {
+    width: 80px;
+    height: 80px;
+    position: relative;
+
+    &::before {
+      top: 3px;
+      left: -2px;
+      width: 30px;
+      transform-origin: 100% 50%;
+      border-radius: 100px 0 0 100px;
+    }
+
+    &::after {
+      top: 0;
+      left: 30px;
+      width: 60px;
+      transform-origin: 0 50%;
+      border-radius: 0 100px 100px 0;
+      animation: rotate-circle 4.25s ease-in;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      height: 100px;
+      position: absolute;
+      background: #FFF;
+      transform: rotate(-45deg);
+    }
+
+    .icon-line {
+      height: 5px;
+      background-color: #EF4934;
+      display: block;
+      border-radius: 2px;
+      position: absolute;
+      z-index: 10;
+
+      &.line-tip {
+        top: 46px;
+        left: 14px;
+        width: 25px;
+        transform: rotate(45deg);
+        animation: icon-line-tip .75s;
+      }
+
+      &.line-long {
+        top: 38px;
+        right: 7px;
+        width: 47px;
+        transform: rotate(-45deg);
+        animation: icon-line-long .75s;
+      }
+    }
+
+    .icon-circle {
+      top: -5px;
+      left: -4px;
+      z-index: 10;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      position: absolute;
+      box-sizing: content-box;
+    }
+
+    .icon-fix {
+      top: 8px;
+      width: 5px;
+      left: 26px;
+      z-index: 1;
+      height: 85px;
+      position: absolute;
+      transform: rotate(-45deg);
+      background-color: #FFF;
+    }
+  }
+}
+
+@keyframes rotate-circle {
+
+  0% {
+    transform: rotate(-45deg);
+  }
+
+  5% {
+    transform: rotate(-45deg);
+  }
+
+  12% {
+    transform: rotate(-405deg);
+  }
+
+  100% {
+    transform: rotate(-405deg);
+  }
+}
+
+@keyframes icon-line-tip {
+
+  0% {
+    width: 0;
+    left: 1px;
+    top: 19px;
+  }
+
+  54% {
+    width: 0;
+    left: 1px;
+    top: 19px;
+  }
+
+  70% {
+    width: 50px;
+    left: -8px;
+    top: 37px;
+  }
+
+  84% {
+    width: 17px;
+    left: 21px;
+    top: 48px;
+  }
+
+  100% {
+    width: 25px;
+    left: 14px;
+    top: 45px;
+  }
+}
+
+@keyframes icon-line-long {
+
+  0% {
+    width: 0;
+    right: 46px;
+    top: 54px;
+  }
+
+  65% {
+    width: 0;
+    right: 46px;
+    top: 54px;
+  }
+
+  84% {
+    width: 55px;
+    right: 0;
+    top: 35px;
+  }
+
+  100% {
+    width: 47px;
+    right: 8px;
+    top: 38px;
+  }
+}
