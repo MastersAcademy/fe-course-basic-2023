@@ -49,8 +49,9 @@
 }
 
 .navigation__link {
-  font-size: 18px;
   color: #FFF;
+  font-size: 16px;
+  font-weight: 500;
   text-decoration: none;
 }
 
@@ -74,9 +75,5 @@
   .navigation__menu-icon {
     visibility: hidden;
     height: 1px;
-  }
-
-  .navigation__link {
-    font-size: 20px;
   }
 }

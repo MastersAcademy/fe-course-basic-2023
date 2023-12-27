@@ -76,7 +76,7 @@ function renderCards(container, arrGames) {
 
 function loadingSwitch(switching, place) {
     const LOADING_ELEMENT = document.querySelector('[data-loading]');
-    if (switching) place.textContent = '';
+    if (switching && place) place.textContent = '';
     LOADING_ELEMENT.style.visibility = switching ? 'visible' : 'hidden';
 }
 

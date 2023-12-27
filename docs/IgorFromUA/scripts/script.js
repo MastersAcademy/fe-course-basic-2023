@@ -25,6 +25,10 @@ function trimLastCard(num, place) {
     place.lastElementChild.style.clipPath = `polygon(0% ${trim}%, 100% ${trim}%, 100% calc(100% - ${trim}%), 0% calc(100% - ${trim}%))`;
 }
 
+function showErrorText(result, placeError, placeResult) {
+    (result === 'Too many games' ? placeResult : placeError).innerText = result;
+}
+
 function showManyCards(amount, place) {
     for (let i = 0; i < +amount; i++) {
         const img = document.createElement('img');
@@ -41,10 +45,8 @@ function showResult(result) {
     const RESULT_ELEMENT = document.getElementById('result');
     if ((typeof result) === 'number') {
         RESULT_ELEMENT.innerText = result + (result > 1 ? ' games' : ' game');
-        RESULT_ELEMENT.style.fontSize = '22px';
     } else {
         RESULT_ELEMENT.innerText = result;
-        RESULT_ELEMENT.style.fontSize = '12px';
     }
 }
 
@@ -87,7 +89,7 @@ function showBigResult(firstValue, secondValue, operation, res) {
         }
         showManyCards(result, RESULT_BIG_ELEMENT);
     } else {
-        ERROR_TEXT_ELEMENT.innerText = result;
+        showErrorText(result, ERROR_TEXT_ELEMENT, RESULT_BIG_ELEMENT);
     }
 }
 

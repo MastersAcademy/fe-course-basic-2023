@@ -32,6 +32,9 @@
 }
 
 .about__link {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
   color: #EF4934;
 }
 
@@ -59,6 +62,11 @@
     font-size: 18px;
     line-height: 24px;
   }
+
+  .about__link {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -80,6 +88,11 @@
   }
 
   .about__text {
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+  .about__link {
     font-size: 22px;
     line-height: 32px;
   }
