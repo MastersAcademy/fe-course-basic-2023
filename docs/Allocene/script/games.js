@@ -20,7 +20,7 @@ const radioOnline = document.querySelector('[data-type="online-radio"]');
 const searchField = document.querySelector('[data-type="inp-search"]');
 const noFound = document.querySelector('[data-type="text-h2"]');
 
-async function createCardElement(game) {
+function createCardElement(game) {
     const template = document.querySelector('template[data-type="card-template"]');
     const cardCopy = document.importNode(template.content, true);
 
@@ -121,7 +121,7 @@ async function reRenderCards() {
     await renderCards(ulContainer, dynamicUrl);
 }
 
-const selectElement = document.getElementById('genre');
+const selectElement = document.querySelector('[data-type="genre-select"]');
 selectElement.addEventListener('change', async () => {
     await reRenderCards();
 });
@@ -155,7 +155,7 @@ function checkboxFilter(params) {
 }
 
 function searchFilter() {
-    searchField.addEventListener('input', () => {
+    function applySearchFilter() {
         const searchTerm = searchField.value.toLowerCase();
         const cards = document.querySelectorAll('.game__cod2');
         console.log(searchTerm);
@@ -174,7 +174,9 @@ function searchFilter() {
             }
         });
         noFound.innerText = anyCardFound ? '' : 'No results found!';
-    });
+    }
+
+    searchField.addEventListener('input', applySearchFilter);
 }
 
 async function init(params) {

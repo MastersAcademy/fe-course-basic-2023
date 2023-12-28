@@ -1,6 +1,6 @@
 @import url("./font.css");
 
-main {
+.main {
   width: 100%;
   display: flex;
   align-items: center;

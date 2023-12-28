@@ -2,7 +2,7 @@
 @import url("./footer.css");
 @import url("./font.css");
 
-main {
+.main {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,7 +27,7 @@ main {
   margin-bottom: 150px;
 }
 
-.img {
+.image {
   align-items: start;
 }
 
@@ -60,13 +60,13 @@ main {
     justify-content: center;
   }
 
-  .img {
+  .image {
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .img img {
+  .image__img {
     width: calc(90%);
     height: auto;
   }
@@ -100,7 +100,7 @@ main {
     margin-bottom: 100px;
   }
 
-  .img {
+  .image {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -133,7 +133,7 @@ main {
     margin-bottom: 100px;
   }
 
-  .img {
+  .image {
     max-width: 600px;
   }
 

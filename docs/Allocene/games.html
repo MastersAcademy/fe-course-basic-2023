@@ -20,23 +20,23 @@
                     <div class="header__logo-section">
                         <img class="logo-section__img" src="./img/logo.png" alt="logo">
                     </div>
-                    <div class="header__menu-section">
+                    <div class="header__menu-section" data-type="header__menu-section">
                         <ul class="menu__list">
                             <li class="menu__list-li">
-                                <a href="./calculator.html" class="menu__list-a menu__list-link">Calculator</a>
+                                <a href="./calculator.html" class="menu__list-a menu__list-link" data-type="menu__list-a">Calculator</a>
                             </li>
                             <li class="menu__list-li">
-                                <a href="./games.html" class="menu__list-a menu__list-link">Games</a>
+                                <a href="./games.html" class="menu__list-a menu__list-link" data-type="menu__list-a">Games</a>
                             </li>
                             <li class="menu__list-li">
-                                <a href="./index.html" class="menu__list-a menu__list-link">About</a>
+                                <a href="./index.html" class="menu__list-a menu__list-link" data-type="menu__list-a">About</a>
                             </li>
                             <li class="menu__list-li">
-                                <a href="./login.html" class="menu__list-a menu__list-link">Login</a>
+                                <a href="./login.html" class="menu__list-a menu__list-link" data-type="menu__list-a">Login</a>
                             </li>
                         </ul>
                     </div>
-                    <div class="header__burger">
+                    <div class="header__burger" data-type="header__burger">
                         <span class="header__burger-span"></span>
                     </div>
                 </div>
@@ -47,14 +47,14 @@
                 <form action="#" class="search__form">
                     <div class="form__select">
                         <select name="genre" id="genre" class="genre" title="genre" data-type="genre-select">
-                            <option value="genre" selected disabled hidden>Genre</option>
-                            <option value="shooter">Shooter</option>
-                            <option value="arpg">ARPG</option>
-                            <option value="battleRoyale">Battle Royale</option>
-                            <option value="strategy">Strategy</option>
-                            <option value="mmorpg">MMORPG</option>
-                            <option value="fighting">Fighting</option>
-                            <option value="allgames">All games</option>
+                            <option value="genre" class="option" selected disabled hidden>Genre</option>
+                            <option value="shooter" class="option">Shooter</option>
+                            <option value="arpg" class="option">ARPG</option>
+                            <option value="battleRoyale" class="option">Battle Royale</option>
+                            <option value="strategy" class="option">Strategy</option>
+                            <option value="mmorpg" class="option">MMORPG</option>
+                            <option value="fighting" class="option">Fighting</option>
+                            <option value="allgames" class="option">All games</option>
                         </select>
                     </div>
                     <div class="radio">
@@ -89,11 +89,11 @@
                     </div>
                 </form>
                 <div class="plate">
-                    <h3 data-type="plate">Open game filters</h3>
+                    <h3 data-type="plate" class="plate__h3">Open game filters</h3>
                 </div>
             </div>
         </section>
-        <main data-type="main-games">
+        <main data-type="main-games" class="main">
             <div class="contain">
                 <div class="content">
                     <div class="text">
@@ -109,7 +109,7 @@
                             <li class="game__cod2" data-type="cards">
                                 <div class="cod2__general">
                                     <div class="cod2__general--img" data-type="image">
-                                        <img src="#">
+                                        <img src="#" class="cod2__general--image">
                                     </div>
                                     <div class="cod2__general--desc">
                                         <h3 data-type="title"></h3>
