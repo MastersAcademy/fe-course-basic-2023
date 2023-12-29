@@ -27,7 +27,7 @@
   align-items: center;
 }
 
-.header__logo-section img {
+.logo-section__img {
   width: 50px;
   cursor: pointer;
 }
@@ -37,19 +37,19 @@
   align-items: center;
 }
 
-.header__menu-section a {
+.menu__list-a {
   text-decoration: none;
   color: #FFF;
 }
 
-.header__menu-section a:active {
+.menu__list-a:active {
   transition: all .3s;
   color: #FFF;
   padding-bottom: 7px;
   border-bottom: 1px solid #FFF;
 }
 
-.header__menu-section a:hover {
+.menu__list-a:hover {
   transition: all .3s;
   color: #FFF;
   padding-bottom: 7px;
@@ -60,9 +60,9 @@
   display: flex;
 }
 
-.menu__list li {
+.menu__list-li {
   list-style: none;
-  margin: 0 0 0 20px;
+  margin: 0 0 0 50px;
 }
 
 .menu__list-link {
@@ -90,7 +90,7 @@
     height: 18px;
   }
 
-  .header__burger span {
+  .header__burger-span {
     height: 2.5px;
     width: 80%;
     transform: scale(1);
