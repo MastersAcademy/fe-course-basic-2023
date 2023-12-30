@@ -1,7 +1,7 @@
-* {
-  margin: 0;
-  padding: 0;
-}
+@import url("./header.css");
+@import url("./footer.css");
+@import url("./font.css");
+@import url("./index.css");
 
 .wrapper_result {
   height: 100vh;

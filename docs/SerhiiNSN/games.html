@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic"
+            rel="stylesheet"
+        >
+        <link rel="stylesheet" href="css/style.css">
+        <title>GamesProject</title>
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="header__container">
+                <a class="header__logo" href="#">
+                    <img src="img/logo.svg" alt="logo">
+                </a>
+                <div class="header__burger">
+                    <span></span>
+                </div>
+                <nav class="nav">
+                    <ul class="header__menu">
+                        <li class="menu__list">
+                            <a href="calculator.html" class="menu__link">Calculator</a>
+                        </li>
+                        <li class="menu__list">
+                            <a href="games.html" class="menu__link">Games</a>
+                        </li>
+                        <li class="menu__list">
+                            <a href="index.html" class="menu__link">About</a>
+                        </li>
+                        <li class="menu__list">
+                            <a href="login.html" class="menu__link">Login</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main class="main">
+            <section class="filters">
+                <div class="filters__container">
+                    <form action="#">
+                        <div class="set-forms">
+                            <select name="drop-list" class="drop-list" disabled>
+                                <option value="Genre" disabled selected>
+                                    Genre
+                                </option>
+                                <option value="Sport">Sport</option>
+                                <option value="Shooter">Shooter</option>
+                                <option value="Racing">Racing</option>
+                                <option value="Horror">Horror</option>
+                            </select>
+                            <div class="radio-block">
+                                <div class="radio">
+                                    <input
+                                        class="custom-radio"
+                                        type="radio"
+                                        id="var1"
+                                        name="platform"
+                                        disabled
+                                    >
+                                    <label for="var1">Platform</label>
+                                </div>
+                                <div class="radio">
+                                    <input
+                                        class="custom-radio"
+                                        type="radio"
+                                        id="var2"
+                                        name="platform"
+                                        disabled
+                                    >
+                                    <label for="var2">Online games</label>
+                                </div>
+                            </div>
+                            <div class="chekbox-block">
+                                <label class="checkbox-container">
+                                    <input type="checkbox" data-filter="new">
+                                    <span class="checkmark"></span>
+                                    <p>New</p>
+                                </label>
+                                <label class="checkbox-container">
+                                    <input type="checkbox" data-filter="old">
+                                    <span class="checkmark"></span>
+                                    <p>Old</p>
+                                </label>
+                            </div>
+                            <div
+                                action=""
+                                name="search-area"
+                                class="search-area"
+                            >
+                                <img
+                                    src="img/search.svg"
+                                    alt="search-icon"
+                                    class="search-img"
+                                >
+                                <input
+                                    type="text"
+                                    name="text"
+                                    class="search"
+                                    placeholder="Search"
+                                    disabled
+                                >
+                                <button type="button" class="submit" disabled>
+                                    Apply
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section class="games">
+                <div class="games__container">
+                    <div class="games__tittle">Study project "Games"</div>
+                    <div class="loading-overlay">
+                        <p>Loading...</p>
+                    </div>
+                    <ul class="games__list" data-type="card-container">
+                        <template data-type="card-template">
+                            <div class="card__item">
+                                <div class="card__icon">
+                                    <img
+                                        data-card-img
+                                        src="img/Game/game-icon.jpg"
+                                        alt=""
+                                    >
+                                </div>
+                                <div class="card__description">
+                                    <div class="card__tittle" data-card-title>
+                                        Overwatch 2
+                                    </div>
+                                    <div class="card__text">
+                                        Big changes come to the Overwatch
+                                        formula in this sequel...
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card__about">
+                                <p>
+                                    <span class="bold">Genre:</span> Shooter
+                                </p>
+                                <p>
+                                    <span class="bold">Platform:</span> PC
+                                    (Windows)
+                                </p>
+                                <p>
+                                    <span class="bold">Publisher:</span>
+                                    Activision Blizzard King
+                                </p>
+                                <p>
+                                    <span class="bold">Developer:</span>
+                                    Blizzard Entertainment
+                                </p>
+                                <p data-card-release>
+                                    <span class="bold">Release_date:</span>
+                                </p>
+                            </div>
+                        </template>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__social">
+                    <a href="https://www.facebook.com/profile.php?id=100011383900387&locale=uk_UA">
+                        <img src="./img/Footer/face.svg" alt="facebook">
+                    </a>
+                    <a href="https://www.linkedin.com/in/%D1%81%D0%B5%D1%80%D0%B3%D1%96%D0%B9-%D0%BD%D0%BE%D1%81%D0%BA%D0%BE%D0%B2-54148928a/">
+                        <img src="./img/Footer/linkdn.svg" alt="linkedin">
+                    </a>
+                    <a href="https://www.instagram.com/yasnyy.sirius/">
+                        <img src="./img/Footer/inst.svg" alt="instagram">
+                    </a>
+                </div>
+                <div class="footer__text">
+                    Made with 💗 on course 'Frontend for beginners' from Masters Academy in 2023, by Serhii Noskov
+                </div>
+            </div>
+        </footer>
+        <script src="./scripts/games.js"></script>
+        <script src="./scripts/burger.js"></script>
+    </body>
+</html>
