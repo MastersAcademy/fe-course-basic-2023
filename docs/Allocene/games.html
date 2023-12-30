@@ -18,43 +18,43 @@
             <div class="header__box">
                 <div class="header__box-content">
                     <div class="header__logo-section">
-                        <img src="./img/logo.png" alt="logo">
+                        <img class="logo-section__img" src="./img/logo.png" alt="logo">
                     </div>
-                    <div class="header__menu-section">
+                    <div class="header__menu-section" data-type="header__menu-section">
                         <ul class="menu__list">
-                            <li>
-                                <a href="./calculator.html" class="menu__list-link">Calculator</a>
+                            <li class="menu__list-li">
+                                <a href="./calculator.html" class="menu__list-a menu__list-link" data-type="menu__list-a">Calculator</a>
                             </li>
-                            <li>
-                                <a href="./games.html" class="menu__list-link">Games</a>
+                            <li class="menu__list-li">
+                                <a href="./games.html" class="menu__list-a menu__list-link" data-type="menu__list-a">Games</a>
                             </li>
-                            <li>
-                                <a href="./index.html" class="menu__list-link">About</a>
+                            <li class="menu__list-li">
+                                <a href="./index.html" class="menu__list-a menu__list-link" data-type="menu__list-a">About</a>
                             </li>
-                            <li>
-                                <a href="./login.html" class="menu__list-link">Login</a>
+                            <li class="menu__list-li">
+                                <a href="./login.html" class="menu__list-a menu__list-link" data-type="menu__list-a">Login</a>
                             </li>
                         </ul>
                     </div>
-                    <div class="header__burger">
-                        <span></span>
+                    <div class="header__burger" data-type="header__burger">
+                        <span class="header__burger-span"></span>
                     </div>
                 </div>
             </div>
         </header>
-        <section class="search search-hidden">
+        <section class="search search-hidden" data-type="search">
             <div class="search__contain">
                 <form action="#" class="search__form">
                     <div class="form__select">
                         <select name="genre" id="genre" class="genre" title="genre" data-type="genre-select">
-                            <option value="genre" selected disabled hidden>Genre</option>
-                            <option value="shooter">Shooter</option>
-                            <option value="arpg">ARPG</option>
-                            <option value="battleRoyale">Battle Royale</option>
-                            <option value="strategy">Strategy</option>
-                            <option value="mmorpg">MMORPG</option>
-                            <option value="fighting">Fighting</option>
-                            <option value="allgames">All games</option>
+                            <option value="genre" class="option" selected disabled hidden>Genre</option>
+                            <option value="shooter" class="option">Shooter</option>
+                            <option value="arpg" class="option">ARPG</option>
+                            <option value="battleRoyale" class="option">Battle Royale</option>
+                            <option value="strategy" class="option">Strategy</option>
+                            <option value="mmorpg" class="option">MMORPG</option>
+                            <option value="fighting" class="option">Fighting</option>
+                            <option value="allgames" class="option">All games</option>
                         </select>
                     </div>
                     <div class="radio">
@@ -84,16 +84,16 @@
                         </label>
                     </div>
                     <div class="form__search">
-                        <input class="inp__search" type="search" placeholder="Search" data-type="search">
+                        <input class="inp__search" type="search" placeholder="Search" data-type="inp-search">
                         <button class="search__button" type="submit">Apply</button>
                     </div>
                 </form>
                 <div class="plate">
-                    <h3 id="plate">Open game filters</h3>
+                    <h3 data-type="plate" class="plate__h3">Open game filters</h3>
                 </div>
             </div>
         </section>
-        <main>
+        <main data-type="main-games" class="main">
             <div class="contain">
                 <div class="content">
                     <div class="text">
@@ -109,7 +109,7 @@
                             <li class="game__cod2" data-type="cards">
                                 <div class="cod2__general">
                                     <div class="cod2__general--img" data-type="image">
-                                        <img src="#">
+                                        <img src="#" class="cod2__general--image">
                                     </div>
                                     <div class="cod2__general--desc">
                                         <h3 data-type="title"></h3>
@@ -132,17 +132,17 @@
                     <ul class="social__icon">
                         <li class="icon__fb">
                             <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener">
-                                <img src="./img/icons/logo fb.png" alt="icon facebook">
+                                <img class="icon__fb-img" src="./img/icons/logo fb.png" alt="icon facebook">
                             </a>
                         </li>
                         <li class="icon__link">
                             <a href="https://www.linkedin.com/" target="_blank" rel="noopener">
-                                <img src="./img/icons/logo link.png" alt="icon linkedin">
+                                <img class="icon__link-img" src="./img/icons/logo link.png" alt="icon linkedin">
                             </a>
                         </li>
                         <li class="icon__inst">
                             <a href="https://www.instagram.com/">
-                                <img src="./img/icons/logo inst.png" alt="icon instagram">
+                                <img class="icon__inst-img" src="./img/icons/logo inst.png" alt="icon instagram">
                             </a>
                         </li>
                     </ul>

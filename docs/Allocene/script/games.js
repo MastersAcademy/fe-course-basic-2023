@@ -1,4 +1,26 @@
-async function createCardElement(game) {
+const queryParams = {
+    genre: '',
+    shooter: '&category=shooter',
+    arpg: '&category=action-rpg',
+    battleRoyale: '&category=battle-royale',
+    strategy: '&category=strategy',
+    mmorpg: '&category=mmorpg',
+    fighting: '&category=fighting',
+    allgames: '',
+    platform: '&platform=pc',
+    online: '&platform=browser',
+    newGames: '&sort-by=release-date',
+    oldGames: '&sort-by=alphabetical',
+};
+
+const checkNew = document.querySelector('[data-type="check-new"]');
+const checkOld = document.querySelector('[data-type="check-old"]');
+const radioPlatform = document.querySelector('[data-type="platform-radio"]');
+const radioOnline = document.querySelector('[data-type="online-radio"]');
+const searchField = document.querySelector('[data-type="inp-search"]');
+const noFound = document.querySelector('[data-type="text-h2"]');
+
+function createCardElement(game) {
     const template = document.querySelector('template[data-type="card-template"]');
     const cardCopy = document.importNode(template.content, true);
 
@@ -70,28 +92,6 @@ async function renderCards(container, genre) {
     }
 }
 
-const queryParams = {
-    genre: '',
-    shooter: '&category=shooter',
-    arpg: '&category=action-rpg',
-    battleRoyale: '&category=battle-royale',
-    strategy: '&category=strategy',
-    mmorpg: '&category=mmorpg',
-    fighting: '&category=fighting',
-    allgames: '',
-    platform: '&platform=pc',
-    online: '&platform=browser',
-    newGames: '&sort-by=release-date',
-    oldGames: '&sort-by=alphabetical',
-};
-
-const checkNew = document.querySelector('[data-type="check-new"]');
-const checkOld = document.querySelector('[data-type="check-old"]');
-const radioPlatform = document.querySelector('[data-type="platform-radio"]');
-const radioOnline = document.querySelector('[data-type="online-radio"]');
-const searchField = document.querySelector('[data-type="search"]');
-const noFound = document.querySelector('[data-type="text-h2"]');
-
 function genreFilter(params) {
     const selectElement = document.getElementById('genre');
     const selectedGenreNow = selectElement.value;
@@ -116,27 +116,25 @@ function buildDynamicUrl(params) {
     return `${params.genre}${dynamicUrl}${platform}${online}${newGames}${oldGames}`;
 }
 
-async function applyFiltersAndRenderCards() {
+async function reRenderCards() {
     const dynamicUrl = buildDynamicUrl(queryParams);
     await renderCards(ulContainer, dynamicUrl);
 }
 
-const selectElement = document.getElementById('genre');
+const selectElement = document.querySelector('[data-type="genre-select"]');
 selectElement.addEventListener('change', async () => {
-    await applyFiltersAndRenderCards();
+    await reRenderCards();
 });
-
-genreFilter(queryParams);
 
 function radioFilter(params) {
     radioPlatform.addEventListener('change', async () => {
         params.dynamicUrl = radioPlatform.checked ? params.platform : params.allgames;
-        await applyFiltersAndRenderCards();
+        await reRenderCards();
     });
 
     radioOnline.addEventListener('change', async () => {
         params.dynamicUrl = radioOnline.checked ? params.online : params.allgames;
-        await applyFiltersAndRenderCards();
+        await reRenderCards();
     });
 }
 
@@ -145,21 +143,22 @@ function checkboxFilter(params) {
 
     checkNew.addEventListener('change', async () => {
         dynamicUrl = checkNew.checked ? params.newGames : params.allgames;
-        await applyFiltersAndRenderCards();
+        await reRenderCards();
     });
 
     checkOld.addEventListener('change', async () => {
         dynamicUrl = checkOld.checked ? params.oldGames : params.allgames;
-        await applyFiltersAndRenderCards();
+        await reRenderCards();
     });
 
     renderCards(ulContainer, dynamicUrl);
 }
 
 function searchFilter() {
-    searchField.addEventListener('input', () => {
+    function applySearchFilter() {
         const searchTerm = searchField.value.toLowerCase();
         const cards = document.querySelectorAll('.game__cod2');
+        console.log(searchTerm);
 
         let anyCardFound = false;
 
@@ -175,15 +174,17 @@ function searchFilter() {
             }
         });
         noFound.innerText = anyCardFound ? '' : 'No results found!';
-    });
+    }
+
+    searchField.addEventListener('input', applySearchFilter);
 }
 
-async function callFunctionsAndRenderCards(params) {
-    await applyFiltersAndRenderCards(params);
+async function init(params) {
+    await reRenderCards(params);
     genreFilter(params);
     radioFilter(params);
     checkboxFilter(params);
     searchFilter();
 }
 
-callFunctionsAndRenderCards(queryParams);
+init(queryParams);

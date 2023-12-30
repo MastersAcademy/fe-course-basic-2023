@@ -2,7 +2,7 @@
 @import url("./footer.css");
 @import url("./font.css");
 
-main {
+.main {
   width: 100%;
   display: flex;
   align-items: flex-start;
@@ -12,7 +12,7 @@ main {
 }
 
 .contain {
-  width: 100%;
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,7 +35,7 @@ main {
 .content {
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   flex-direction: column;
 }
@@ -50,7 +50,7 @@ main {
   justify-content: flex-end;
 }
 
-label {
+.item__lable {
   font-size: 22px;
   font-weight: 600;
   line-height: 26px;
@@ -87,7 +87,7 @@ label {
   margin-right: 16px;
 }
 
-button {
+.button {
   height: 36px;
   width: 122px;
   font-size: 14px;
@@ -100,7 +100,7 @@ button {
   transition: background-color .2s ease-in-out;
 }
 
-button:hover {
+.button:hover {
   background-color: #CD412F;
 }
 
@@ -141,19 +141,24 @@ button:hover {
   padding-left: 25px;
 }
 
-@media screen and (min-width: 1px) and (max-width: 767px) {
+@media screen and (min-width: 1px) and (max-width: 915px) {
 
   .content,
   .visualInterpritation,
   .item,
   .inp__select,
   .inp,
-  button {
+  .button {
     width: calc(100%);
   }
 
   .contain {
     margin-bottom: 50px;
+  }
+
+  .field {
+    display: flex;
+    width: auto;
   }
 
   .main__heading {
@@ -239,7 +244,7 @@ button:hover {
     line-height: 10px;
   }
 
-  label {
+  .item__lable {
     font-size: 12px;
     font-weight: 600;
     line-height: 26px;
