@@ -28,10 +28,10 @@ body {
   align-items: center;
 }
 
-
 .logo__img {
-  width: 190px;
-  height: 30px;
+  width: 100%;
+  max-width: 190px;
+  height: auto;
 }
 
 /* navigation settings */
@@ -72,13 +72,6 @@ page we are on will behave
   flex: 1;
 }
 
-.field {
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
-  margin: 20px;
-}
-
 .title__txt {
   display: flex;
   justify-content: center;
@@ -87,11 +80,33 @@ page we are on will behave
   line-height: 48px;
 }
 
+.field__output-info {
+  margin: 20px;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  column-gap: 10px;
+  margin: 20px;
+}
+
+.field__label {
+  width: 100%;
+}
+
 .input__form {
-  padding: 15px 75px;
+  width: 100%;
+  max-width: 225px;
+  height: 50px;
+  margin-right: auto;
+  margin-left: auto;
   border-radius: 6px;
   border: solid 1px;
   text-align: center;
+  padding: 0;
 }
 
 .calculate {
@@ -100,6 +115,7 @@ page we are on will behave
 }
 
 .result {
+  width: 100%;
   font-family: inherit;
   font-size: 22px;
   font-weight: 400;
@@ -146,33 +162,12 @@ page we are on will behave
 
 @media (max-width: 900px) {
 
-  .header__page, .container__main, .navigation {
+  .header__page, .container__main, .navigation, .field__output-info {
     flex-direction: column;
     align-items: center;
   }
 
   /* media main */
-
-  .container__main {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .field {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
-
-  .input__form {
-    width: 250px;
-    height: 40px;
-    padding: 0;
-  }
-
-  .output__result-txt {
-    text-align: center;
-  }
 
   .logo {
     margin: 25px 0;
@@ -181,6 +176,34 @@ page we are on will behave
   .navigation {
     margin: 0 0 28px;
     gap: 15px;
+  }
+
+  .field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .input__form {
+    max-width: 900px;
+    height: 60px;
+  }
+
+  .field__label, .result, .calculate {
+    width: 80%;
+    text-align: center;
+  }
+
+  .field__output-info {
+    display: flex;
+  }
+
+  .output__result-txt {
+    text-align: center;
   }
 
   /* media footer */

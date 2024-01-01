@@ -28,8 +28,9 @@ body {
 }
 
 .logo__img {
-  width: 190px;
-  height: 30px;
+  width: 100%;
+  max-width: 190px;
+  height: auto;
 }
 
 /* navigation settings */
@@ -79,8 +80,9 @@ page we are on will behave
 }
 
 .title__img {
-  width: 150px;
-  height: 150px;
+  width: 100%;
+  max-width: 150px;
+  max-height: 150px;
 }
 
 .btn__return {
@@ -90,12 +92,17 @@ page we are on will behave
   line-height: 26px;
   color: #FFF;
   background-color: #EF4934;
+  width: 80%;
+  max-width: 500px;
+  height: 70px;
   border: none;
   border-radius: 6px;
-  width: 575px;
-  height: 70px;
   box-shadow: 0 4px 30px 0;
   margin-bottom: 20px;
+}
+
+.form {
+  width: 80%;
 }
 
 .title__txt {
@@ -157,12 +164,6 @@ page we are on will behave
     margin: 25px 0;
   }
 
-  .title__img {
-    width: 100px;
-    max-width: 100%;
-    height: auto;
-  }
-
   .title {
     margin-top: 20px;
   }
@@ -174,10 +175,6 @@ page we are on will behave
   .navigation {
     margin: 0 0 28px;
     gap: 15px;
-  }
-
-  .btn__return {
-    width: 320px;
   }
 
   /* media footer */
@@ -192,7 +189,7 @@ page we are on will behave
     font-size: 22px ;
   }
 
-  .footer__main-txt, .main__txt {
+  .footer__main-txt, .main__txt, .btn__return {
     font-size: 16px;
   }
 

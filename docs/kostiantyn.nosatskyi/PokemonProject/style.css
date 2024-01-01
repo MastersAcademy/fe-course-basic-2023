@@ -28,8 +28,9 @@ body {
 }
 
 .logo__img {
-  width: 190px;
-  height: 30px;
+  width: 100%;
+  max-width: 190px;
+  height: auto;
 }
 
 /* navigation settings */
@@ -74,9 +75,13 @@ page we are on will behave
   flex: 1;
 }
 
+.image {
+  max-width: 532px;
+}
+
 .main__img {
-  width: 532px;
-  height: 297px;
+  width: 100%;
+  height: auto;
 }
 
 .title__txt {
@@ -148,11 +153,6 @@ page we are on will behave
   .container__main {
     margin-top: 30px;
     gap: 10px;
-  }
-
-  .main__img {
-    max-width: 100%;
-    height: auto;
   }
 
   .logo {

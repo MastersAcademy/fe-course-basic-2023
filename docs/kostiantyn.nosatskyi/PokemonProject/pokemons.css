@@ -81,11 +81,13 @@ body {
   align-items: center;
   background-color: #FFF;
   border-radius: 6px;
-  width: 377px;
+  width: 100%;
+  max-width: 377px;
 }
 
 .search__img {
-  width: 19px;
+  width: 100%;
+  max-width: 19px;
   height: 20px;
   background-color: #FFF;
   padding: 3px 2px 2px 3px;

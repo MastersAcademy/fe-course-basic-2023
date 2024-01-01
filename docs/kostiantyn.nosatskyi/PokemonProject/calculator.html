@@ -32,10 +32,10 @@
             <main class="container__main">
                 <h1 class="title__txt">Calculator v. 1</h1>
                 <div class="field">
-                    <label>
-                        <input data-firstValue class="input__form input__form-data" placeholder="Enter a number here">
+                    <label for="first-value" class="field__label">
+                        <input type="text" id="first-value" data-firstValue class="input__form input__form-data" placeholder="Enter a number here">
                     </label>
-                    <label>
+                    <label class="field__label">
                         <select name="operation" data-operation class="input__form">
                             <option value="+">+</option>
                             <option value="-">-</option>
@@ -44,13 +44,13 @@
                             <option value="**">**</option>
                         </select>
                     </label>
-                    <label>
+                    <label class="field__label">
                         <input data-secondValue class="input__form input__form-data" placeholder="Enter a number here">
                     </label>
                     <button data-calculate type="button" class="input__form calculate">=</button>
                     <span data-result class="result"></span>
                 </div>
-                <div class="field">
+                <div class="field__output-info">
                     <span data-now class="output__result-txt"></span>
                     <span data-timeBenchmark class="output__result-txt"></span>
                 </div>
