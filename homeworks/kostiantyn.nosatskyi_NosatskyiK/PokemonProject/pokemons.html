@@ -70,8 +70,11 @@
         </div>
         <main>
             <h1 class="title__txt">Study project "Pokemons"</h1>
+            <div class="loader__container">
+                <div id="loader" class="loader"></div>
+            </div>
             <template data-cardTemplate>
-                <section class="card">
+                <section class="card" data-card>
                     <div class="card__information">
                         <div class="card__information-title">
                             <div class="card__information-img">
@@ -109,7 +112,7 @@
                 </section>
             </template>
         </main>
-        <div id="cardContainer" class="card-container" data-cards="10"></div>
+        <div id="cardContainer" class="card-container" data-cards="50"></div>
         <script src="js/pokemon.js"></script>
     </body>
 </html>
