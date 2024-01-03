@@ -6,21 +6,12 @@ const RESULT_PAGE_PATH = './login-success.html';
 
 const submitButton = document.getElementById(SUBMIT_BUTTON_ID);
 
-/**
- * Return input value by id.
- * @param {string} elementId
- * @return {string|boolean} input value
- */
 function getValueById(elementId) {
     const element = document.getElementById(elementId);
     const type = element.getAttribute('type');
     return type === 'checkbox' ? element.checked : element.value;
 }
 
-/**
- * Add errors to errors container.
- * @param {Object} inputData in format like: { [input_id]: error_text, ... }
- */
 function setErrors(inputId, errorMessage) {
     const inputElement = document.getElementById(inputId);
     const associatedLabels = inputElement.labels;
@@ -33,17 +24,11 @@ function setErrors(inputId, errorMessage) {
     associatedLabels[0].insertAdjacentElement('afterend', errorElement);
 }
 
-/**
- * Delete all errors from errors container.
- */
 function deleteErrors() {
     const errorElement = document.querySelectorAll('[data-error]');
     errorElement.forEach((element) => element.remove());
 }
 
-/**
- * Goes to the page with the result.
- */
 function navigateToResultPage() {
     window.location.href = RESULT_PAGE_PATH;
 }
@@ -69,9 +54,9 @@ function validateForm() {
     deleteErrors();
 
     const errorMessages = {
-        [EMAIL_INPUT_ID]: 'Халепа... Перевірте формат пошти (приклад: email@localDomen.domen)',
-        [PASSWORD_INPUT_ID]: 'Упс... Довжина пароля має бути у діапазоні від 8 до 12 символів.',
-        [NOT_A_ROBOT_CHECKBOX_ID]: 'Ви шо, робот? Жмакніть на чекбокс!',
+        [EMAIL_INPUT_ID]: 'Please fill in the correct email (format example: email@localdomen.domen)',
+        [PASSWORD_INPUT_ID]: 'Oops... The password length should be in the range of 8 to 12 characters.',
+        [NOT_A_ROBOT_CHECKBOX_ID]: 'Are you a robot? Click on the checkbox!',
     };
 
     const formValues = {

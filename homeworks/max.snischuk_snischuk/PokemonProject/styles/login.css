@@ -1,35 +1,28 @@
+@import "./base.css";
 @import "./header.css";
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Roboto, sans-serif;
-}
+@import "./footer.css";
 
 .login {
-  padding: 0 15px;
+  min-width: 300px;
+  padding: 0 var(--padding-container);
   max-width: 605px;
-  margin: 80px auto;
+  margin: 40px auto;
 }
 
 .login__title {
   text-align: center;
-  margin-bottom: 60px;
-  color: #221F1F;
+  margin-bottom: 30px;
+  color: var(--color-dark);
   font-family: Roboto;
-  font-size: 48px;
-  line-height: 32px;
+  font-size: 32px;
+  line-height: 36px;
   font-weight: 700;
 }
 
 .login__label {
+  margin-top: 60px;
   display: block;
-  margin-top: 40px;
-  color: #221F1F;
+  color: var(--color-dark);
   font-family: Roboto;
   font-size: 22px;
   line-height: normal;
@@ -37,18 +30,19 @@ body {
 }
 
 .login__field {
-  margin-top: 22px;
+  margin-top: 10px;
   padding: 30px 20px;
   display: block;
   width: 100%;
   border-radius: 6px;
-  border: .6px solid #A9A9A9;
+  border: 1px solid #A9A9A9;
   background: #FFF;
-  color: #221F1F;
+  color: var(--color-dark);
   font-family: Roboto;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
+  border-bottom: 5px solid #A9A9A9;
 }
 
 .login__field::placeholder {
@@ -59,9 +53,10 @@ body {
   font-weight: 400;
 }
 
+.login__field:hover,
 .login__field:focus {
   outline: none;
-  border-bottom: 5px solid #EF4934;
+  border-bottom: 5px solid var(--color-accent);
 }
 
 .login__checkbox-input {
@@ -69,10 +64,10 @@ body {
 }
 
 .login__checkbox-custom {
+  margin-top: 60px;
   display: flex;
   align-items: center;
-  margin-top: 40px;
-  color: #221F1F;
+  color: var(--color-dark);
   font-size: 14px;
   line-height: 21px;
 }
@@ -85,7 +80,7 @@ body {
   width: 20px;
   height: 20px;
   border-radius: 6px;
-  border: 1px solid #EF4934;
+  border: 1px solid var(--color-accent);
   background-color: #FFF;
 }
 
@@ -96,13 +91,13 @@ body {
 }
 
 .login__btn {
-  margin-top: 40px;
+  margin-top: 60px;
   cursor: pointer;
   width: 100%;
   padding: 27px;
   border: none;
   border-radius: 6px;
-  background: #EF4934;
+  background: var(--color-accent);
   box-shadow: 0 4px 30px 0 rgba(38, 58, 67, .15);
   color: #FFF;
   font-family: Roboto;
@@ -117,8 +112,43 @@ body {
 }
 
 .error {
+  position: absolute;
   margin: 5px;
   color: #F00;
   font-size: 14px;
   line-height: 21px;
+}
+
+.error::before {
+  content: "x";
+  margin-right: 5px;
+}
+
+@media (min-width: 769px) {
+
+  .login {
+    margin: 80px auto;
+  }
+
+  .login__title {
+    margin-bottom: 60px;
+    font-size: 42px;
+    line-height: 46px;
+  }
+
+  .login__label {
+    margin-top: 40px;
+  }
+
+  .login__field {
+    margin-top: 22px;
+  }
+
+  .login__checkbox-custom {
+    margin-top: 40px;
+  }
+
+  .login__btn {
+    margin-top: 40px;
+  }
 }
