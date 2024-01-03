@@ -71,12 +71,12 @@ async function initPokemons() {
             weakness,
         } = pokemon;
 
-        const typesButtons = type
-            .map((subtype) => `<button class="card-pokemon__btn card-pokemon__btn--${subtype.toLowerCase()}" type="button">${subtype.charAt(0).toUpperCase()}${subtype.toLowerCase().slice(1)}</button>`)
+        const typesTags = type
+            .map((subtype) => `<span class="card-pokemon__tag card-pokemon__tag--${subtype.toLowerCase()}">${subtype.charAt(0).toUpperCase()}${subtype.toLowerCase().slice(1)}</span>`)
             .join('');
 
-        const weaknessesButtons = weakness
-            .map((subtype) => `<button class="card-pokemon__btn card-pokemon__btn--${subtype.toLowerCase()}" type="button">${subtype}</button>`)
+        const weaknessesTags = weakness
+            .map((subtype) => `<span class="card-pokemon__tag card-pokemon__tag--${subtype.toLowerCase()}">${subtype}</span>`)
             .join('');
 
         const cardTemplateStr = `
@@ -97,11 +97,11 @@ async function initPokemons() {
                     </li>
                     <li class="card-pokemon__text">
                         <span class="card-pokemon__text--bold">Type: </span>
-                        ${typesButtons}
+                        ${typesTags}
                     </li>
                     <li class="card-pokemon__text">
                         <span class="card-pokemon__text--bold">Weaknesses: </span>
-                        ${weaknessesButtons}
+                        ${weaknessesTags}
                     </li>
                 </ul>
             </li>
@@ -187,7 +187,7 @@ async function initPokemons() {
         renderCards(CARDS_CONTAINER_ELEMENT, updatedFilteredCards);
     }
 
-    async function fetchAndRenderPokemons() {
+    async function fetchPokemons() {
         try {
             showLoader();
 
@@ -197,15 +197,8 @@ async function initPokemons() {
             };
 
             const response = await fetch(`${pokemonsUrl}`, options);
-            const pokemons = await response.json();
-            allCards = [...pokemons];
 
-            renderCards(CARDS_CONTAINER_ELEMENT, allCards);
-
-            TEXT_INPUT_ELEMENT.addEventListener('input', onInputSearchHandler);
-            FORM_FILTERS_ELEMENT.addEventListener('change', onChangeFiltersHandler);
-            SELECT_CUSTOM_LIST.addEventListener('click', onClickCustomSelectHandler);
-            FORM_FILTERS_ELEMENT.addEventListener('submit', onSubmitFiltersHandler);
+            return await response.json();
         } catch (error) {
             console.error(`GET error: ${error.message}`);
             CARDS_CONTAINER_ELEMENT.innerHTML = `GET error: ${error.message}... Please try again later.`;
@@ -215,7 +208,14 @@ async function initPokemons() {
     }
 
     initCustomSelect();
-    await fetchAndRenderPokemons();
+
+    const fetchedPokemons = await fetchPokemons();
+    renderCards(CARDS_CONTAINER_ELEMENT, fetchedPokemons);
+
+    TEXT_INPUT_ELEMENT.addEventListener('input', onInputSearchHandler);
+    FORM_FILTERS_ELEMENT.addEventListener('change', onChangeFiltersHandler);
+    SELECT_CUSTOM_LIST.addEventListener('click', onClickCustomSelectHandler);
+    FORM_FILTERS_ELEMENT.addEventListener('submit', onSubmitFiltersHandler);
 }
 
 document.addEventListener('DOMContentLoaded', initPokemons);

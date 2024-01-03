@@ -49,78 +49,69 @@
   font-weight: 600;
 }
 
-.card-pokemon__btn {
-  cursor: pointer;
+.card-pokemon__tag {
+  display: inline-block;
+  text-align: center;
   min-width: 69px;
   margin: 5px;
   padding: 7px 9px;
-  font-family: Roboto, sans-serif;
-  font-size: 14px;
-  line-height: 21px;
-  font-weight: 400;
   color: #FFF;
   background-color: var(--color-accent);
-  border: none;
   border-radius: 3px;
-  transition: filter .3s ease-in-out;
 }
 
-.card-pokemon__btn:hover {
-  filter: brightness(.9);
-}
-
-.card-pokemon__btn--flying {
+.card-pokemon__tag--flying {
   background-color: #FDB714;
 }
 
-.card-pokemon__btn--fire {
+.card-pokemon__tag--fire {
   background-color: #FC8B00;
 }
 
-.card-pokemon__btn--psychic {
+.card-pokemon__tag--psychic {
   background-color: #FF87F3;
 }
 
-.card-pokemon__btn--dragon {
+.card-pokemon__tag--dragon {
   background-color: #803078;
 }
 
-.card-pokemon__btn--ice {
+.card-pokemon__tag--ice {
   background-color: #A5CEDC;
 }
 
-.card-pokemon__btn--water {
+.card-pokemon__tag--water {
   background-color: #00BAF7;
 }
 
-.card-pokemon__btn--rock {
+.card-pokemon__tag--rock {
   background-color: #7D7C7C;
 }
 
-.card-pokemon__btn--ground {
+.card-pokemon__tag--ground {
   background-color: #27561A;
 }
 
-.card-pokemon__btn--electric {
+.card-pokemon__tag--electric {
   background-color: #7B00FF;
 }
 
-.card-pokemon__btn--poison {
+.card-pokemon__tag--poison {
   background-color: #0F740F;
 }
 
-.card-pokemon__btn--grass {
+.card-pokemon__tag--grass {
   background-color: #738319;
 }
 
-.card-pokemon__btn--ghost {
+.card-pokemon__tag--ghost {
   background-color: #B173B9;
 }
 
-.card-pokemon__btn--normal {
+.card-pokemon__tag--normal {
   background-color: #1B0A7C;
 }
 
-.card-pokemon__btn--dark {
+.card-pokemon__tag--dark {
   background-color: #414145;
 }
