@@ -1,4 +1,4 @@
-.aboutMe-block {
+.container {
   display: inline-grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 63px;
@@ -6,20 +6,20 @@
   padding-bottom: 140px;
 }
 
-.aboutMe-block__image {
+.container__image {
   width: 535px;
   height: 356px;
   border-radius: 5%;
 }
 
-.aboutMe-block__article {
+.container__article {
   display: block;
   width: 575px;
   height: min-content;
   padding-right: 53px;
 }
 
-.aboutMe-block__paragraf {
+.container__text {
   margin-bottom: 20px;
   font-size: 22px;
   font-weight: 400;
@@ -32,7 +32,7 @@
 
 @media (max-width: 1200px) {
 
-  .aboutMe-block {
+  .container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,16 +41,16 @@
 
 @media (max-width: 600px) {
 
-  .aboutMe-block__image {
+  .container__image {
     width: 350px;
     height: 250px;
   }
 
-  .aboutMe-block__article {
+  .container__article {
     width: 350px;
   }
 
-  .aboutMe-block__paragraf {
+  .container__text {
     font-size: 18px;
   }
 }

@@ -27,7 +27,7 @@
   z-index: 9999;
 }
 
-.filter__button {
+.filter__burger-button {
   display: none;
 }
 
@@ -207,7 +207,7 @@
     justify-content: space-between;
   }
 
-  .filter__button {
+  .filter__burger-button {
     display: flex;
     justify-content: center;
     align-items: center;
