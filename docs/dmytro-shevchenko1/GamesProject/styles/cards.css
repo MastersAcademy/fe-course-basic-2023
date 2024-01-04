@@ -55,6 +55,7 @@
 .cards-main {
   padding: 0 53px;
   margin-bottom: 46px;
+  min-height: 100vh;
 }
 
 .cards-h1 {
@@ -71,9 +72,6 @@
   justify-content: center;
   gap: 25px;
   padding: 0;
-}
-
-ul.cards {
   margin: 0;
 }
 
@@ -175,7 +173,6 @@ ul.cards {
 
 @media (max-width: 590px) {
   .nav-items {
-    gap:25px;
     padding: 0;
   }
 

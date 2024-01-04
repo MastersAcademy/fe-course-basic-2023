@@ -82,8 +82,6 @@ async function fetchDataCards() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', fetchDataCards);
-
 function filterGames() {
     const newGamesCheck = document.querySelector('[data-type-filter="new"]');
     const oldGamesCheck = document.querySelector('[data-type-filter="old"]');
@@ -116,7 +114,7 @@ function filterGames() {
     renderCards(gameList, filteredGames);
 }
 
-function init() {
+function attachHandlers() {
     const filterForm = document.querySelector('[data-type="filter-form"]');
     const newCheckbox = document.querySelector('[data-type-filter="new"]');
     const oldCheckbox = document.querySelector('[data-type-filter="old"]');
@@ -140,4 +138,9 @@ function init() {
     renderCards(gameList, games);
 }
 
-init();
+function init() {
+    attachHandlers();
+    fetchDataCards();
+}
+
+document.addEventListener('DOMContentLoaded', init);
