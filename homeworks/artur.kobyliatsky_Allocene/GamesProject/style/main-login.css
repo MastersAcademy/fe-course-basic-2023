@@ -8,6 +8,7 @@ main {
   align-items: center;
   justify-content: center;
   min-height: calc(100vh - 160px);
+  min-width: 400px;
 }
 
 .contain {
@@ -25,7 +26,7 @@ main {
   justify-content: center;
   flex-direction: column;
   margin-top: 80px;
-  margin-bottom: 177px;
+  margin-bottom: 150px;
 }
 
 .form_h1 {
@@ -44,7 +45,6 @@ main {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  /* margin-bottom: 55px; */
 }
 
 .item {
@@ -96,9 +96,6 @@ main {
   text-align: left;
 }
 
-
-/*custom checkbox*/
-
 .inp__check {
   height: 0;
   width: 0;
@@ -140,10 +137,7 @@ main {
   transform: translate(-50%, -50%) scale(1);
 }
 
-
-/*button*/
-
-button {
+.button {
   height: 70px;
   font-size: 24px;
   border-radius: 6px;
@@ -155,12 +149,9 @@ button {
   transition: background-color .2s ease-in-out;
 }
 
-button:hover {
+.button:hover {
   background-color: #CD412F;
 }
-
-
-/*error*/
 
 .error {
   display: flex;
@@ -172,4 +163,45 @@ button:hover {
   border-radius: 6px;
   margin-top: 5px;
   background-color: #EF4A342D;
+}
+
+@media screen and (min-width: 1px) and (max-width: 767px) {
+
+  .content {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  .h1 {
+    font-size: 34px;
+    line-height: 12px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .inp {
+    box-sizing: border-box;
+    height: 45px;
+    width: calc(100%);
+    font-size: 15px;
+    margin-top: 12px;
+    border-radius: 6px;
+    outline: 0;
+    border: solid .6px #A9A9A9;
+    padding-left: 19px;
+  }
+
+  .item {
+    margin-top: 25px;
+    width: 100%;
+  }
+
+  .button {
+    height: 45px;
+  }
 }
