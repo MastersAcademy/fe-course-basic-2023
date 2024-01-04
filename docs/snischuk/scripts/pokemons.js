@@ -209,8 +209,8 @@ async function initPokemons() {
 
     initCustomSelect();
 
-    const fetchedPokemons = await fetchPokemons();
-    renderCards(CARDS_CONTAINER_ELEMENT, fetchedPokemons);
+    allCards = await fetchPokemons();
+    renderCards(CARDS_CONTAINER_ELEMENT, allCards);
 
     TEXT_INPUT_ELEMENT.addEventListener('input', onInputSearchHandler);
     FORM_FILTERS_ELEMENT.addEventListener('change', onChangeFiltersHandler);
