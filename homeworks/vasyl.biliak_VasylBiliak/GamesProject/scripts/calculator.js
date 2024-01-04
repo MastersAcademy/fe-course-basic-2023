@@ -102,7 +102,7 @@ function calculate(operator) {
 
     resultTimestamp.innerHTML = getTimestampString();
 
-    resultOutput.textContent = `${result} ${Math.abs(result) > 1 ? 'Stranges' : 'Strange'}`;
+    resultOutput.textContent = `${parseFloat(result.toFixed(3))} ${Math.abs(result) > 1 ? 'Stranges' : 'Strange'}`;
 
     results.push(`Results: ${results.length + 1}: ${num1} ${operator} ${num2} = ${result}`);
     console.log(results);
@@ -120,7 +120,9 @@ function calculate(operator) {
     const numColumns = Math.ceil(Math.abs(result) / 10);
     containerResult.style.gridTemplateColumns = `repeat(${numColumns}, 1fr)`;
     if (Math.abs(result) < 1) {
-        containerResult.appendChild(sliceImage(Math.abs(result)));
+        if (result !== 0) {
+            containerResult.appendChild(sliceImage(Math.abs(result)));
+        }
     } else {
         for (let i = 0; i < Math.abs(Math.floor(result)); i++) {
             containerResult.appendChild(crateImg());
