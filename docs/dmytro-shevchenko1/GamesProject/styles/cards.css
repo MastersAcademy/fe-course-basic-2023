@@ -52,10 +52,13 @@
   color: #221F1F;
 }
 
+.games-main {
+  flex-grow: 1;
+}
+
 .cards-main {
   padding: 0 53px;
   margin-bottom: 46px;
-  min-height: 100vh;
 }
 
 .cards-h1 {

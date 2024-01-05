@@ -5,8 +5,8 @@
 }
 
 .calculator-field {
-  margin: 60px;
-  min-height: 100vh;
+  margin: 0 53px 529px;
+  flex-grow: 1;
 }
 
 .field {
@@ -17,7 +17,7 @@
 }
 
 .calc-input {
-  border: .006rem solid #A9A9A9;
+  border: 1px solid #A9A9A9;
   border-radius: 6px;
   font-size: 20px;
   padding: 8px;

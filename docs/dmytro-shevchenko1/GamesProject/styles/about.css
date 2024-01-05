@@ -1,3 +1,7 @@
+.about-main {
+  flex-grow: 1;
+}
+
 .intro {
   color: #221F1F;
   font-size: 22px;

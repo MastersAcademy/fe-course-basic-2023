@@ -15,6 +15,7 @@
 .login-main {
   margin-bottom: 17px;
   padding: 0 53px;
+  flex-grow: 1;
 }
 
 .checkbox-group {
