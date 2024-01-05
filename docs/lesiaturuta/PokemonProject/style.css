@@ -19,9 +19,14 @@ body {
 /*HEADER*/
 
 .nav {
-  height: 80px;
+  min-height: 80px;
   background-color: #333;
   width: 100%;
+  padding: 0 10px;
+}
+
+.form__search-container {
+  padding: 0 10px;
 }
 
 .nav__logo {
@@ -128,12 +133,12 @@ body {
   display: grid;
   grid-template: repeat(2, 1fr)/repeat(4, 1fr);
   gap: 22px;
-  margin-top: 35px;
+  margin: 35px auto 0;
 }
 
 .card {
   width: 275px;
-  height: 288px;
+  min-height: 288px;
   background-color: #ECECEC;
   padding: 12px 12px 22px;
   border-radius: 12px;
@@ -175,7 +180,7 @@ body {
 /*GAMES FORM*/
 
 .form__search {
-  height: 60px;
+  min-height: 60px;
   background-color: #221F1F;
   width: 100%;
   font-size: 14px;
@@ -194,7 +199,7 @@ body {
 
 .form__search-select {
   width: 114px;
-  height: 36px;
+  min-height: 36px;
   border-radius: 6px;
   background-color: #333;
   color: #FFF;
@@ -385,11 +390,12 @@ body {
 .login__form {
   max-width: 575px;
   width: 100%;
-  height: 520px;
+  min-height: 520px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  padding: 20px 0;
 }
 
 .login__form-title {
@@ -640,56 +646,35 @@ body {
   display: none;
 }
 
-@media screen and (max-width: 1220px) {
+@media screen and (max-width: 991px) {
 
-  .nav__container {
-    padding: 0 10px;
-  }
-
-  .main__container {
-    align-items: center;
-    flex-direction: column;
+  .nav {
+    min-height: 110px;
   }
 
   .cards {
     grid-template: repeat(2, 1fr)/repeat(3, 1fr);
-    gap: 10px;
-    justify-items: center
+  }
+
+  .form__search-container {
+    flex-direction: column;
+  }
+
+  .nav__container {
+    flex-direction: column;
+    align-items: center;
   }
 
   .form__search {
     padding: 0 10px;
   }
-}
-
-@media screen and (max-width: 630px) {
-
-  .nav {
-    height: 100px;
-  }
-
-  .nav__menu {
-    margin-top: 10px;
-  }
-
-  .nav__container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .login__form-button {
-    padding: 0 50px;
-  }
-}
-
-@media screen and (max-width: 1000px) {
 
   .form__search {
     height: 200px;
   }
 
-  .form__search-container {
-    flex-direction: column;
+  .nav__menu {
+    margin-top: 10px;
   }
 
   .form__search-select,
@@ -700,33 +685,19 @@ body {
   }
 }
 
-@media screen and (max-width: 880px) {
-
-  .cards {
-    grid-template: repeat(2, 1fr)/repeat(2, 1fr);
-  }
-}
-
-@media screen and (max-width: 600px) {
-
-  .cards {
-    grid-template: repeat(2, 1fr)/repeat(1, 1fr);
-  }
-
-  .title-pokemon {
-    font-size: 30px;
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
 
   .nav {
-    height: 190px;
+    min-height: 190px;
   }
 
   .main {
     margin-top: 10px;
+  }
+
+  .nav__container {
+    flex-direction: column;
+    align-items: center;
   }
 
   .nav__menu {
@@ -750,7 +721,7 @@ body {
   }
 
   .login__form {
-    padding: 0 30px;
+    padding: 20px 30px;
   }
 
   .calculate__container,
@@ -768,9 +739,28 @@ body {
     font-size: 30px;
   }
 
+  .cards {
+    grid-template: repeat(1, 1fr)/repeat(1, 1fr);
+  }
+
+  .description,
+  .login__form-title,
+  .title-pokemon {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .login__form-button {
+    padding: 0 50px;
+  }
+
+  .main__container {
+    align-items: center;
+    flex-direction: column;
+  }
+
   .footer {
     padding: 20px 10px;
-    height: auto;
     min-height: auto;
   }
 }
