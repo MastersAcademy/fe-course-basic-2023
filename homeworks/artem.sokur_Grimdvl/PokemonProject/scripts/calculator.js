@@ -51,9 +51,7 @@ const renderHistory = () => {
     });
 };
 
-const addTimeAndDate = () => {
-    return new Date().toISOString();
-};
+const addTimeAndDate = () => new Date().toISOString();
 
 const updateHistory = () => {
     const formattedDate = new Date(stateInputs.dateOperation);
@@ -76,7 +74,6 @@ const updateHistory = () => {
     saveToLocalStorage(operationHistory);
     renderHistory();
 };
-
 
 const calculate = (firstNum, operator, secondNum) => {
     const startTime = performance.now();
