@@ -1,4 +1,4 @@
-// script for index.html
+// script for calculator.html
 const firstNum = 20;
 const secondNum = 10;
 
