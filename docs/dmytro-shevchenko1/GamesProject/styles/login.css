@@ -1,0 +1,152 @@
+.login-h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+
+.login-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 53px;
+}
+
+.login-main {
+  margin-bottom: 17px;
+  padding: 0 53px;
+  flex-grow: 1;
+}
+
+.checkbox-group {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 14px;
+  gap: 12px;
+}
+
+.email-label,
+.password-label {
+  display: flex;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 22px;
+}
+
+.email-input,
+.password-input,
+.login-checkbox {
+  padding: 30px 450px 30px 20px ;
+  margin-bottom: 40px;
+  font-size: 14px;
+  border: .006rem solid #A9A9A9;
+  border-radius: 6px;
+}
+
+.email-input:focus,
+.password-input:focus {
+  outline: none;
+  box-shadow: inset 0 -5px 0 #EF4934;
+}
+
+.submit-button {
+  display: block;
+  min-width: 100%;
+  padding: 27px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #FFF;
+  background-color: #EF4934;
+  border: none;
+  border-radius: 6px;
+  margin-bottom: 177px;
+}
+
+.error-container {
+  color: #EF4934;
+  font-weight: 500;
+}
+
+@media (max-width: 800px) {
+  .email-input,
+  .password-input,
+  .login-checkbox {
+    padding: 30px 200px 30px 20px ;
+
+  }
+
+  .login-h1 {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 520px) {
+  .email-input,
+  .password-input,
+  .login-checkbox {
+    padding: 30px 100px 30px 20px ;
+  }
+
+  .login-h1 {
+    font-size: 36px;
+  }
+
+}
+
+
+/* checkbox */
+.check-label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 40px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.check-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #FFF;
+  border: 1px solid #EF4934;
+  border-radius: 6px;
+
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.check-label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.check-label .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 4px;
+  height: 10px;
+  border: solid #EF4934;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

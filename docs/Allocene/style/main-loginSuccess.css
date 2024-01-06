@@ -1,0 +1,32 @@
+@import url("./font.css");
+
+.main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.h1__success {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.return {
+  height: 70px;
+  font-size: 24px;
+  border-radius: 6px;
+  outline: 0;
+  border: 0;
+  color: #FFF;
+  background-color: #EF4934;
+  transition: background-color .2s ease-in-out;
+}
+
+.return:hover {
+  background-color: #CD412F;
+}

@@ -28,30 +28,60 @@ body {
   border: none;
 }
 
-.filters__select {
-  appearance: none;
-  padding: 13px 42px 13px 12px;
-  border: 1px solid transparent;
-  border-radius: 6px;
+.filters__select-custom {
+  position: relative;
   background-color: #333;
-  background-image: url("../images/icon-select-arrow.svg");
-  background-repeat: no-repeat;
-  background-position: 90% 50%;
-  font-family: Roboto;
-  color: var(--color-light);
-  font-size: 14px;
-  line-height: 21px;
-  font-weight: 400;
-  transition: all .3s ease-in-out;
+  border-radius: 6px;
 }
 
-.filters__select:hover,
-.filters__select:focus {
+.filters__select-custom-btn {
+  padding: 13px 20px;
   cursor: pointer;
-  outline: none;
-  border: 1px solid var(--color-accent);
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  color: var(--color-light);
+  transition: color .3s ease-in-out;
+}
+
+.filters__select-custom-btn:hover {
   color: var(--color-accent);
-  transition: all .3s ease-in-out;
+}
+
+.filters__select-list {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.filters__select-list--active {
+  display: block;
+}
+
+.filters__select-option {
+  padding: 13px 20px;
+  cursor: pointer;
+  background-color: #333;
+  font-size: 16px;
+  color: var(--color-light);
+  transition: color .3s ease-in-out;
+}
+
+.filters__select-option:last-child {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.filters__select-option:hover {
+  color: var(--color-accent);
+}
+
+.filters__select-option--selected {
+  color: rgb(100, 200, 100);
 }
 
 .filters__group {
@@ -74,7 +104,7 @@ body {
   font-weight: 400;
   position: relative;
   padding-left: 40px;
-  transition: all .3s ease-in-out;
+  transition: color .3s ease-in-out;
 }
 
 .filters__custom:hover {
@@ -95,7 +125,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
   left: 0;
-  transition: all .3s ease-in-out;
+  transition: border .3s ease-in-out;
 }
 
 .filters__custom:hover::before,
@@ -107,33 +137,15 @@ body {
   border-radius: 50%;
 }
 
-.filters__custom--checkbox::before {
-  border-radius: 6px;
-}
-
 .filters__custom--radio::after {
   opacity: 0;
   border-radius: 50%;
   background-image: url("../images/icon-radio-filter.svg");
   background-repeat: no-repeat;
   background-size: contain;
-  transition: opacity .3s ease-in-out;
-}
-
-.filters__custom--checkbox::after {
-  opacity: 0;
-  border-radius: 6px;
-  background-image: url("../images/icon-check-filter.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  transition: opacity .3s ease-in-out;
 }
 
 .filters__input:checked+.filters__custom--radio::after {
-  opacity: 1;
-}
-
-.filters__input:checked+.filters__custom--checkbox::after {
   opacity: 1;
 }
 
@@ -219,10 +231,40 @@ body {
 .pokemons__cards {
   list-style-type: none;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+  grid-template-columns: repeat(auto-fit, 275px);
   gap: 25px;
 }
 
 .pokemons__card-item {
   max-width: 275px;
+}
+
+.pokemons__loader-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.pokemons__loader-text {
+  color: var(--color-dark);
+  font-size: 40px;
+}
+
+.pokemons__loader-animation {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border: 3px solid rgba(255, 255, 255, .3);
+  border-radius: 50%;
+  border-top-color: var(--color-accent);
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+
+  to {
+    transform: rotate(360deg);
+  }
 }

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Cards</title>
+        <link rel="stylesheet" type="text/css" href="styles/style.css">
+        <link rel="stylesheet" type="text/css" href="styles/header.css">
+        <link rel="stylesheet" type="text/css" href="styles/cards.css">
+        <link rel="stylesheet" type="text/css" href="styles/loading.css">
+        <link rel="stylesheet" type="text/css" href="styles/footer.css">
+    </head>
+
+    <body class="game-page">
+        <header class="header">
+            <div class="container">
+                <div class="header-flex">
+                    <img src="images/logo.svg" alt="Logo">
+                    <div class="nav">
+                        <ul class="nav-items">
+                            <li>
+                                <a class="calc-link" href="calculator.html">Calculator</a>
+                            </li>
+                            <li>
+                                <a class="cards-link" href="cards.html">Games</a>
+                            </li>
+                            <li>
+                                <a class="about-link" href="index.html">About</a>
+                            </li>
+                            <li>
+                                <a class="login-link" href="login.html">Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="games-main">
+            <section class="filter">
+                <div class="container">
+                <form class="filter-form" data-type="filter-form">
+                    <div class="select-group">
+                        <div class="filter-select">
+                            <label for="GameGenre"></label>
+                            <select id="GameGenre" name="GenreSelect" class="select-name" data-type-filter="genre">
+                                <option value="Genre" disabled selected>Genre</option>
+                                <option value="Action">Action</option>
+                                <option value="ARPG">ARPG</option>
+                                <option value="Battle Royale">Battle Royale</option>
+                                <option value="Fighting">Fighting</option>
+                                <option value="Shooter">Shooter</option>
+                                <option value="Strategy">Strategy</option>
+                                <option value="MMORPG">MMORPG</option>
+                                <option value="Card Game">Card Game</option>
+                            </select>
+                        </div>
+                        <div class="platform-select">
+                            <label for="gamePlatform"></label>
+                            <select id="gamePlatform" name="PlatformSelect" class="select-name" data-type-filter="platform">
+                                <option value="Platform" disabled selected>Platform</option>
+                                <option value="PC">PC (Windows)</option>
+                                <option value="Web">Web Browser</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filter-radio">
+                        <label class="radio-check" for="new-first">New First
+                            <input type="radio" id="new-first" name="Radio" data-type-filter="new">
+                            <span class="checkmark-radio"></span>
+                        </label>
+                        <label class="radio-check" for="old-first">Old First
+                            <input type="radio" id="old-first" name="Radio" data-type-filter="old">
+                            <span class="checkmark-radio"></span>
+                        </label>
+                    </div>
+                    <div class="filter-search">
+                        <input type="text" id="Search" name="Search" placeholder="Search" class="search-input" data-type-filter="search">
+                        <label for="Search"></label>
+                        <button type="button" id="search-button" class="search-button" data-type-filter="search-button">Search</button>
+                    </div>
+                </form>
+                </div>
+            </section>
+            <section class="cards-main">
+                <section class="container" >
+                    <h1 class="cards-h1">
+                        Study project "Games"
+                    </h1>
+                    <section class="loading-center" data-type="loading-section">
+                        <p class="loading-text">Loading...</p>
+                        <p class="loading"></p>
+                    </section>
+                    <section class="cards">
+                        <ul class="cards" data-type="games-list"></ul>
+                        <template data-type="card-template">
+                            <div class="game-card">
+                                <div class="upper-card">
+                                    <img class="game-img" src="" alt="" data-card-img>
+                                    <div class="game-title">
+                                        <h3 class="game-name" data-card-title></h3>
+                                        <p class="text-game" data-card-description></p>
+                                    </div>
+                                </div>
+                                <div class="lower-card">
+                                    <p data-card-genre></p>
+                                    <p data-card-platform></p>
+                                    <p data-card-publisher></p>
+                                    <p data-card-developer></p>
+                                    <p data-card-release-date></p>
+                                </div>
+                            </div>
+                        </template>
+                    </section>
+                </section>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-flex">
+                    <div class="footer-logos">
+                        <a href="https://www.facebook.com/profile.php?id=100086849614305">
+                            <img src="images/facebook.svg" width="42px" height="42px" alt="Logo">
+                        </a>
+                    </div>
+                    <p>
+                        Made with 💗 on course 'Frontend for beginners' from Masters Academy in 2023, by Dmytro S.
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <script src="scripts/games.js"></script>
+    </body>
+</html>
