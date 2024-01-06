@@ -4,11 +4,15 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://fonts.google.com/share?selection.family=Roboto:wght@100;300;700">
-        <link rel="stylesheet" href="style/style.css">
         <link rel="stylesheet" href="style/pokemons.css">
-        <title>PokemonProject</title>
+        <link rel="stylesheet" href="style/style.css">
+        <title>Pokemons</title>
+        <link type="image/png" sizes="16x16" rel="icon" href="img/favicons/icons8-покебол-16.png">
+        <link type="image/png" sizes="32x32" rel="icon" href="img/favicons/icons8-покебол-32.png">
+        <link type="image/png" sizes="96x96" rel="icon" href="img/favicons/icons8-покебол-96.png">
     </head>
     <body>
+        <div class="overlay"></div>
         <header>
             <div class="container" style="background-color: #333;">
                 <section class="head">
@@ -16,7 +20,8 @@
                         <img class="head__logo-img" src="img/icons/logo-ma.svg" alt="masters-academy">
                         <span class="head__logo-title">MASTERS ACADEMY</span>
                     </a>
-    
+
+                    <div class="hamburger"></div>
                     <nav class="head__navigation">
                         <a class="head__navigation-item" href="calculator.html">Calculator</a>
                         <a class="head__navigation-item active" href="#">Pokemons</a>
@@ -33,21 +38,23 @@
                             <select title="type" name="type" id="type" size="1">
                                 <option value="Type" selected>Type</option>
                                 
-                                <option value="fighting">Fighting</option>
-                                <option value="dark">Dark</option>
-
-                                <option value="grass">grass</option>
-                                <option value="poison">poison</option>
-                                <option value="fire">fire</option>
-                                <option value="flying">flying</option>
-                                <option value="dragon">dragon</option>
+                                <option value="electric">Electric</option>
+                                <option value="psychic">Psychic</option>
+                                <option value="water">Water</option>
+                                <option value="bug">Bug</option>
+                                <option value="normal">Normal</option>
+                                <option value="grass">Grass</option>
+                                <option value="poison">Poison</option>
+                                <option value="fire">Fire</option>
+                                <option value="flying">Flying</option>
+                                <option value="dragon">Dragon</option>
                             </select>
                         </div>
 
                         <div class="filters__form-choice">
-                            <input type="radio" id="highFirst" name="sort" value="HighFirst">
+                            <input type="radio" id="highFirst" class="highFirst" name="sort" value="HighFirst">
                             <label for="highFirst">High first</label>
-                            <input type="radio" id="lowFirst" name="sort" value="LowFirst">
+                            <input type="radio" id="lowFirst" class="lowFirst" name="sort" value="LowFirst">
                             <label for="lowFirst">Low first</label>
                         </div>
 
@@ -141,6 +148,7 @@
             </section>
         </footer>
 
+        <script src="scripts/script.js"></script>
         <script type="module" src="scripts/pokemonsCards.js"></script>
     </body>
 </html>

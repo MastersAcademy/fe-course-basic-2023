@@ -6,13 +6,17 @@ const smallCheckbox = document.getElementById('small');
 const applyButton = document.querySelector('.filters__search--button');
 const searchInput = document.getElementById('search');
 const selectElement = document.getElementById('type');
-const spinner = document.querySelector('.loading'); // Получаем элемент спиннера по его id
+const spinner = document.querySelector('.loading');
+const lowFirst = document.getElementById('lowFirst');
+const highFirst = document.getElementById('highFirst');
+const formSelect = document.querySelector('.filters__form-select select');
 
 spinner.style.display = 'inline-block';
 
 // let filteredPokemons = [...pokemons];
 let allPokemons = [];
 let filteredPokemons = [];
+let currentSortType = null;
 
 function createPokemonCard(pokemon) {
     const {
@@ -28,6 +32,7 @@ function createPokemonCard(pokemon) {
         // description,
     } = pokemon;
 
+    // код був закоментований так як в api немає опису покемонів
     // const slicer = description.length > 100 ? `${description.slice(0, 100)}...` : description;
     // <span>${slicer}</span>
 
@@ -112,13 +117,13 @@ function applySearchFilter() {
 function filterPokemons() {
     const isBigChecked = bigCheckbox.checked;
     const isSmallChecked = smallCheckbox.checked;
-
+    // код був відредагований так як в api немає покемонів більше 100 висотою
     filteredPokemons = allPokemons.filter((pokemon) => {
         if (isBigChecked && isSmallChecked) {
-            return pokemon.height > 100 || pokemon.height < 50;
+            return pokemon.height > 50 || pokemon.height < 50;
         }
         if (isBigChecked) {
-            return pokemon.height > 100;
+            return pokemon.height > 50;
         }
         if (isSmallChecked) {
             return pokemon.height < 50;
@@ -139,12 +144,9 @@ function sortPokemonsByHeight(order, pokemonList) {
     renderCards(container, sortedPokemons);
 }
 
-let currentSortType = null;
-
 function applyAllFilters() {
+    filterPokemons();
     if (currentSortType) {
-        filterPokemons();
-
         const selectedType = selectElement.value.toLowerCase();
         const searchValue = searchInput.value.toLowerCase().trim();
 
@@ -164,21 +166,18 @@ function filterByType(event) {
     renderCardsByType(container, filteredPokemons, selectedType);
 }
 
-document.getElementById('highFirst').addEventListener('change', () => {
-    currentSortType = 'HighFirst';
+function renderByHeight(event) {
+    if (event.target === highFirst) {
+        currentSortType = 'HighFirst';
+    } else if (event.target === lowFirst) {
+        currentSortType = 'LowFirst';
+    }
     applyAllFilters();
-});
+}
 
-document.getElementById('lowFirst').addEventListener('change', () => {
-    currentSortType = 'LowFirst';
-    applyAllFilters();
-});
-
-selectElement.addEventListener('change', filterByType);
-applyButton.addEventListener('click', applyAllFilters);
-bigCheckbox.addEventListener('change', applyAllFilters);
-smallCheckbox.addEventListener('change', applyAllFilters);
-searchInput.addEventListener('input', applyAllFilters);
+function typeSelect() {
+    formSelect.parentNode.classList.toggle('active');
+}
 
 fetch('https://my-json-server.typicode.com/electrovladyslav/pokemon-json-server/pokemons')
     .then((response) => {
@@ -200,3 +199,12 @@ fetch('https://my-json-server.typicode.com/electrovladyslav/pokemon-json-server/
         console.error('There was a problem fetching data:', error);
         spinner.style.display = 'none';
     });
+
+highFirst.addEventListener('change', renderByHeight);
+lowFirst.addEventListener('change', renderByHeight);
+selectElement.addEventListener('change', filterByType);
+applyButton.addEventListener('click', applyAllFilters);
+bigCheckbox.addEventListener('change', applyAllFilters);
+smallCheckbox.addEventListener('change', applyAllFilters);
+searchInput.addEventListener('input', applyAllFilters);
+formSelect.addEventListener('click', typeSelect);

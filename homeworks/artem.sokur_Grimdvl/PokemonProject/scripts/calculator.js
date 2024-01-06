@@ -1,85 +1,130 @@
-window.addEventListener('DOMContentLoaded', () => {
-    const numbers = document.querySelectorAll('.number');
-    const signs = document.querySelectorAll('.sign');
-    const buttons = document.querySelectorAll('.button');
-    const resultOutput = document.querySelector('.output-result');
-    const resultInput = document.querySelector('.input-result');
-    const equel = document.querySelectorAll('.output-equal');
+const firstInputNumber = document.querySelectorAll('.number__first--input');
+const firstOutputNumber = document.querySelector('.number__first--output');
+const secondInputNumber = document.querySelectorAll('.number__second--input');
+const secondOutputNumber = document.querySelector('.number__second--output');
+const signSelect = document.querySelectorAll('.math__sign--select');
+const signOutput = document.querySelector('.math__sign--output');
+const outputs = document.querySelectorAll('.calculator__outputs-numbers div');
+const equelButton = document.querySelectorAll('.equel--button');
+const resultInput = document.querySelector('.result--input');
+const resultOutput = document.querySelector('.output-result');
+const equel = document.querySelectorAll('.output-equal');
+const historyDiv = document.querySelector('.calculator__inputs-history');
 
-    const stateInputs = {};
+const stateInputs = {};
+const MAX_HISTORY_ITEMS = 3;
 
-    // transform value to numbers
-    const checkNumInputs = (selector) => {
-        const numInputs = document.querySelectorAll(selector);
-        numInputs.forEach((item) => {
-            item.addEventListener('input', () => {
-                item.value = item.value.replace(/[^0-9.]/g, '');
-            });
+let result;
+
+// transform value to numbers
+const checkNumInputs = (selector) => {
+    selector.forEach((item) => {
+        item.addEventListener('input', () => {
+            item.value = item.value.replace(/[^0-9.]/g, '');
         });
+    });
+};
+
+const saveToLocalStorage = (operation) => {
+    const history = JSON.parse(localStorage.getItem('calculatorHistory')) || [];
+
+    if (history.length >= MAX_HISTORY_ITEMS) {
+        history.pop();
+    }
+
+    history.unshift(operation);
+    localStorage.setItem('calculatorHistory', JSON.stringify(history));
+};
+
+const getHistoryFromLocalStorage = () => {
+    const history = JSON.parse(localStorage.getItem('calculatorHistory')) || [];
+    return history.slice(0, MAX_HISTORY_ITEMS);
+};
+
+const renderHistory = () => {
+    historyDiv.innerHTML = '';
+    const history = getHistoryFromLocalStorage();
+    history.forEach((operation) => {
+        const historyItem = document.createElement('p');
+        historyItem.textContent = operation;
+        historyDiv.appendChild(historyItem);
+    });
+};
+
+const addTimeAndDate = () => {
+    const currentDate = new Date();
+    const dateOptions = {
+        year: 'numeric',
+        month: 'numeric',
+        day: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+        second: 'numeric',
     };
+    const formattedDate = currentDate.toLocaleDateString(undefined, dateOptions);
+    return formattedDate;
+};
 
-    // class PokemonsCards {
-    //     constructor(src, alt, parentSelector, ...classes) {
-    //         this.src = src;
-    //         this.alt = alt;
-    //         this.classes = classes;
-    //         this.parent = document.querySelector(parentSelector);
-    //     }
+const updateHistory = () => {
+    const formattedDate = new Date(stateInputs.dateOperation);
+    const dateOptions = {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+    };
+    const formattedDateTime = formattedDate.toLocaleDateString(undefined, dateOptions);
 
-    //     render() {
-    //         const element = document.createElement('div');
-    //         if (this.classes.length === 0) {
-    //             this.classes = 'output-card';
-    //             element.classList.add(this.classes);
-    //         } else {
-    //             this.classes.forEach((className) => element.classList.add(className));
-    //         }
-    //         element.innerHTML = `<img src=${this.src} alt=${this.alt}>`;
-    //         this.parent.append(element);
-    //     }
-    // }
+    const operationHistory = `
+        Math. operation: ${stateInputs.firstNumber} ${stateInputs.sign} ${stateInputs.secondNumber} = ${stateInputs.result}. 
+        Date of calculation: ${formattedDateTime}. 
+        Time of function execution: ${stateInputs.timeOperation} ms.`;
 
-    // const drawPokemons = (inputValue, containerSelector) => {
-    //     const cardContainer = document.querySelector(containerSelector);
-    //     cardContainer.innerHTML = '';
-    //     const numberOfPokemons = parseInt(inputValue, 10);
-    //     const isNegative = numberOfPokemons < 0;
-    //     for (let i = 0; i < Math.abs(numberOfPokemons); i++) {
-    //         new PokemonsCards(
-    //             'img/pokemon.png',
-    //             'pokemon',
-    //             containerSelector,
-    //         ).render();
-    //     }
-    //     if (inputValue > 100) {
-    //         resultOutputCards.textContent = 'To many pokemons';
-    //     }
-    //     return isNegative ? -numberOfPokemons : numberOfPokemons;
-    // };
+    saveToLocalStorage(operationHistory);
+    renderHistory();
+};
 
-    let result;
-    const calculate = (firstNum, operator, secondNum) => {
+const calculate = (firstNum, operator, secondNum) => {
+    const startTime = performance.now();
+
+    if (!firstNum || !secondNum) {
+        outputs.forEach((item) => {
+            item.textContent = '';
+        });
+        result = 'Enter all numbers';
+    } else if (!operator) {
+        outputs.forEach((item) => {
+            item.textContent = '';
+        });
+        result = 'Invalid operator';
+    } else {
+        const num1 = Number(firstNum);
+        const num2 = Number(secondNum);
+        firstOutputNumber.textContent = num1;
+        secondOutputNumber.textContent = num2;
+        signOutput.textContent = operator;
         switch (operator) {
             case '+':
-                result = firstNum + secondNum;
+                result = num1 + num2;
                 break;
             case '-':
-                result = firstNum - secondNum;
+                result = num1 - num2;
                 break;
             case '*':
-                result = firstNum * secondNum;
+                result = num1 * num2;
                 break;
             case '/':
                 if (secondNum === 0) {
-                    return 'Choose another second number';
+                    return 'Сant divide by zero';
                 }
-                result = firstNum / secondNum;
+                result = num1 / num2;
                 break;
             case '%':
-                result = firstNum % secondNum;
+                result = num1 % num2;
                 break;
             case '**':
-                result = firstNum ** secondNum;
+                result = num1 ** num2;
                 break;
             default:
                 result = 'Invalid operator';
@@ -92,145 +137,74 @@ window.addEventListener('DOMContentLoaded', () => {
         equel.forEach((item) => {
             item.textContent = '=';
         });
-        if (operator === 'sign') {
-            result = 'Invalid operator';
-            equel.forEach((item) => {
-                item.textContent = '';
-            });
+        if (result <= 1 && result >= -1) {
+            result = `${result} pokemon`;
         } else {
             result = `${result} pokemons`;
         }
-        return result;
-    };
+        const endTime = performance.now();
+        let timeDiff = endTime - startTime;
+        timeDiff = (timeDiff / 10).toFixed(3);
 
-    // Calculator
-    const changeState = (state) => {
-        const calculator = (event, elem, prop) => {
-            checkNumInputs('#first-number');
-            checkNumInputs('#second-number');
+        const timeOperation = timeDiff;
+        const dateOperation = addTimeAndDate();
 
-            elem.forEach((item, i) => {
-                item.addEventListener(event, () => {
-                    const inputNumber = numbers[i];
-                    const inputSign = signs[i];
-                    const buttonOutput = buttons[i];
-                    switch (item.nodeName) {
-                        case 'INPUT':
-                            if (inputNumber) {
-                                if (i === 0) {
-                                    state[prop] = item.value;
-                                    const num1 = +inputNumber.value;
-                                    numbers[2].textContent = num1;
-                                    // drawPokemons(num1, '.calculator .output__first');
-                                    if (numbers[0].value.trim() === '') {
-                                        numbers[2].textContent = '';
-                                        resultOutput.textContent = 'Please enter the first numbers';
-                                        const errorMessage = resultOutput.textContent;
-                                        return errorMessage;
-                                    }
-                                    if (numbers[1].value.trim() === '') {
-                                        numbers[3].textContent = '';
-                                        resultOutput.textContent = 'Please enter the second numbers';
-                                        const errorMessage = resultOutput.textContent;
-                                        return errorMessage;
-                                    }
-                                    result = calculate(
-                                        +num1,
-                                        signs[0].value,
-                                        +numbers[1].value,
-                                    );
-                                    // drawPokemons(result, '.calculator .output__result');
-                                    resultOutput.textContent = result;
-                                } else if (i === 1) {
-                                    state[prop] = item.value;
-                                    const num2 = +inputNumber.value;
-                                    numbers[3].textContent = num2;
-                                    // drawPokemons(num2, '.calculator .output__second');
-                                    if (numbers[0].value.trim() === '') {
-                                        numbers[2].textContent = '';
-                                        resultOutput.textContent = 'Please enter the first numbers';
-                                        const errorMessage = resultOutput.textContent;
-                                        return errorMessage;
-                                    }
-                                    if (numbers[1].value.trim() === '') {
-                                        numbers[3].textContent = '';
-                                        resultOutput.textContent = 'Please enter the second numbers';
-                                        const errorMessage = resultOutput.textContent;
-                                        return errorMessage;
-                                    }
-                                    result = calculate(
-                                        +numbers[0].value,
-                                        signs[0].value,
-                                        +num2,
-                                    );
-                                    resultOutput.textContent = result;
-                                    // drawPokemons(result, '.calculator .output__result');
-                                }
-                            }
-                            break;
-                        case 'SELECT':
-                            if (inputSign) {
-                                if (i === 0) {
-                                    state[prop] = item.value;
-                                    const sign = inputSign.value;
-                                    signs[1].textContent = sign;
-                                    // signs[2].textContent = sign;
-                                    if (numbers[0].value.trim() === '') {
-                                        numbers[2].textContent = '';
-                                        resultOutput.textContent = 'Please enter the first numbers';
-                                        const errorMessage = resultOutput.textContent;
-                                        return errorMessage;
-                                    }
-                                    if (numbers[1].value.trim() === '') {
-                                        numbers[3].textContent = '';
-                                        resultOutput.textContent = 'Please enter the second numbers';
-                                        const errorMessage = resultOutput.textContent;
-                                        return errorMessage;
-                                    }
-                                    result = calculate(
-                                        +numbers[0].value,
-                                        sign,
-                                        +numbers[1].value,
-                                    );
-                                    resultOutput.textContent = result;
-                                    // drawPokemons(result, '.calculator .output__result');
-                                }
-                            }
-                            break;
-                        case 'BUTTON':
-                            if (buttonOutput) {
-                                if (i === 0) {
-                                    if (numbers[0].value.trim() === '') {
-                                        resultInput.textContent = 'Please enter the first numbers';
-                                        const errorMessage = resultInput.textContent;
-                                        return errorMessage;
-                                    }
-                                    if (numbers[1].value.trim() === '') {
-                                        resultInput.textContent = 'Please enter the first numbers';
-                                        const errorMessage = resultInput.textContent;
-                                        return errorMessage;
-                                    }
-                                    state[prop] = item.textContent;
-                                    result = calculate(
-                                        +numbers[0].value,
-                                        signs[0].value,
-                                        +numbers[1].value,
-                                    );
-                                    resultInput.textContent = result;
-                                }
-                            }
-                            break;
-                        default:
-                            console.log('Error');
-                    }
-                    console.log(state);
-                    return result;
-                });
+        stateInputs.timeOperation = timeOperation;
+        stateInputs.dateOperation = dateOperation;
+    }
+    stateInputs.result = result;
+    resultOutput.textContent = result;
+    return result;
+};
+
+// Calculator
+const changeState = (state) => {
+    const calculator = (event, elem, prop) => {
+        checkNumInputs(firstInputNumber);
+        checkNumInputs(secondInputNumber);
+
+        elem.forEach((item) => {
+            item.addEventListener(event, () => {
+                const items = item.value;
+                switch (item.nodeName) {
+                    case 'INPUT':
+                        if (item.classList.contains('number__first--input')) {
+                            state[prop] = items;
+                            calculate(state.firstNumber, state.sign, state.secondNumber);
+                        } else if (item.classList.contains('number__second--input')) {
+                            state[prop] = items;
+                            calculate(state.firstNumber, state.sign, state.secondNumber);
+                        }
+                        break;
+                    case 'SELECT':
+                        if (item.classList.contains('math__sign--select')) {
+                            state[prop] = items;
+                            calculate(state.firstNumber, state.sign, state.secondNumber);
+                        }
+                        break;
+                    case 'BUTTON':
+                        if (item.classList.contains('equel--button')) {
+                            state[prop] = result;
+                            updateHistory();
+                            calculate(state.firstNumber, state.sign, state.secondNumber);
+                            resultInput.textContent = result;
+                        }
+                        break;
+                    default:
+                        console.log('Error');
+                }
+                console.log(state);
+                return result;
             });
-        };
-        calculator('input', numbers, 'number');
-        calculator('change', signs, 'sign');
-        calculator('click', buttons, 'button');
+        });
     };
-    changeState(stateInputs);
+    calculator('input', firstInputNumber, 'firstNumber');
+    calculator('input', secondInputNumber, 'secondNumber');
+    calculator('change', signSelect, 'sign');
+    calculator('click', equelButton, 'result');
+};
+changeState(stateInputs);
+
+window.addEventListener('DOMContentLoaded', () => {
+    renderHistory();
 });

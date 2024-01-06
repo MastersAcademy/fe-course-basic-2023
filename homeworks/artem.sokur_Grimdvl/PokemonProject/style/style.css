@@ -1,5 +1,7 @@
 /* main styles */
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
 * {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -120,7 +122,7 @@ footer {
 }
 
 .foot__social {
-  width: 192px;
+  width: 200px;
   display: flex;
   justify-content: space-around;
   margin: 0 auto;
@@ -134,6 +136,7 @@ footer {
   align-items: center;
   background-color: #FFF;
   border-radius: 100%;
+  transition: .5s;
 }
 
 .foot__subscription {
@@ -145,7 +148,8 @@ footer {
 }
 
 .foot__subscription-link {
-  color: #FFF;
+  text-decoration: underline;
+  color: #000;
 }
 
 /* section success */
@@ -174,24 +178,440 @@ footer {
 }
 
 .success--button:hover {
-  background-color: #FF6C58;
-  transition: .5s;
+  box-shadow: 0 0 1rem #EF4934;
 }
 
-.success--button::before {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  width: 107%;
-  height: 143%;
-  background: #FF6C58;
-  border-radius: 6px;
-  filter: blur(5px);
-  transition: .5s;
-  opacity: 0;
+/* adaptive section */
+
+@media (max-width: 992px) {
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .head {
+    height: 60px;
+  }
+
+  footer {
+    min-height: 120px;
+  }
+
+  main {
+    padding-top: 120px;
+  }
+
+  .filters__form {
+    row-gap: 5px;
+  }
+
+  .filters__form-select {
+    margin-left: 70px;
+  }
+
+  .filters__form-select select {
+    font-size: 15px;
+  }
+
+  .filters__form-size {
+    margin-left: 60px;
+  }
+
+  .filters__form-size {
+    font-size: 14px;
+  }
+
+  .head__navigation {
+    font-size: 15px;
+  }
+
+  .about__text-subscription {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .foot__subscription {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
-.success--button:hover::before {
-  opacity: .3;
+@media (max-width: 768px) {
+
+  main {
+    padding-top: 100px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about__logo-pokemon {
+    width: 100%;
+    height: 100%;
+  }
+
+  .about__logo {
+    width: 90%;
+    height: 90%;
+  }
+
+  .about__logo-pokemon {
+    transform: scale(1.1);
+  }
+
+  .about__logo-pokemon-ball {
+    transform: rotate(-30deg);
+  }
+
+  .head__logo-title {
+    font-size: 14px;
+  }
+
+  .head__navigation {
+    font-size: 14px;
+    gap: 15px;
+  }
+
+  .about__text-subscription {
+    font-size: 18px;
+    line-height: 26px;
+    margin: 16px auto;
+  }
+
+  .filters__form-select {
+    margin-left: 10px;
+  }
+
+  .filters__form-select.active::before {
+    transform: rotate(0);
+  }
+
+  .filters__form-select.active::after {
+    transform: rotate(0);
+  }
+
+  .filters__form-size {
+    margin-left: 0;
+  }
+
+  .login__form {
+    margin-top: 20px;
+  }
+
+  .login__form-input label {
+    font-size: 20px;
+  }
+
+  .login__form--submit {
+    font-size: 20px;
+  }
+
+  .foot__subscription {
+    line-height: 22px;
+    margin-top: 10px;
+    font-size: 18px;
+  }
+
+  .calculator__inputs {
+    gap: 15px;
+  }
+
+  .calculator__inputs-number input {
+    width: 80px;
+    font-size: 18px;
+  }
+
+  .calculator__inputs-sign select {
+    font-size: 18px;
+    width: 60px;
+  }
+
+  .calculator__inputs-result div {
+    font-size: 18px;
+    min-width: 200px;
+  }
+
+  .calculator__outputs-numbers {
+    font-size: 30px;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .menu-open {
+    overflow: hidden;
+  }
+
+  section {
+    padding: 0 5px;
+  }
+
+  .head {
+    height: 50px;
+    padding: 0 15px;
+  }
+
+  .head__logo {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+  }
+
+  .hamburger {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .hamburger::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background: #FFF;
+    transform: translateY(-8px);
+    transition: .5s;
+  }
+
+  .hamburger::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background: #FFF;
+    transform: translateY(8px);
+    box-shadow: 0 -8px 0 #FFF;
+    transition: .5s;
+  }
+
+  .hamburger.active::before {
+    transform: translate(0) rotate(45deg);
+  }
+
+  .hamburger.active::after {
+    transform: translate(0) rotate(-45deg);
+    box-shadow: 0 0 0 #000;
+  }
+
+  .head__logo {
+    width: 170px;
+  }
+
+  .head__navigation {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 0;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    font-size: 20px;
+    gap: 30px;
+    transition: .5s;
+    transition-delay: 0;
+  }
+
+  .head__navigation.active {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: .5s;
+  }
+
+  main {
+    padding-top: 100px;
+  }
+
+  footer {
+    height: 100px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  .filters {
+    grid-template-columns: repeat(1, minmax(100%, 1fr));
+    padding: 10px;
+  }
+
+  .filters__form {
+    row-gap: 0;
+  }
+
+  .filters__form-select {
+    margin-left: 0;
+  }
+
+  .filters__form-choice input[type="radio"]:nth-child(1) {
+    margin-left: 0;
+  }
+
+  .filters__form-size input[type="checkbox"]:nth-child(1) {
+    margin-left: 0;
+  }
+
+  header .container:nth-child(1) {
+    position: absolute;
+    z-index: 2;
+    height: 50px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: .5s;
+  }
+
+  header .container:nth-child(1).active {
+    height: 50vh;
+  }
+
+  header .container:nth-child(2) {
+    margin-top: 50px;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFF;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+  }
+
+  .overlay.active {
+    opacity: .75;
+    visibility: visible;
+    z-index: 2;
+  }
+
+  .pokemons__title {
+    padding-top: 80px;
+  }
+
+  .foot__social-media {
+    width: 35px;
+    height: 35px;
+  }
+
+  .foot__subscription {
+    line-height: 20px;
+    font-size: 16px;
+  }
+
+  .foot__social {
+    width: 170px;
+  }
+
+  .calculator__inputs {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .calculator__inputs .calculator__inputs--button,
+  .calculator__inputs .calculator__inputs-result {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .calculator__inputs-result div {
+    justify-content: center;
+  }
+
+  .calculator__inputs-history {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  h1 {
+    font-size: 30px;
+  }
+
+  main {
+    padding-top: 80px;
+  }
+
+  .pokemons__title {
+    padding-top: 140px;
+  }
+
+  .head__logo-title {
+    display: none;
+  }
+
+  .about__text-subscription {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .about__text-subscription {
+    margin: 12px auto;
+  }
+
+  .calculator__outputs-numbers {
+    font-size: 26px;
+    gap: 5px;
+  }
+
+  .calculator__inputs-number input {
+    font-size: 16px;
+  }
+
+  .about__logo-pokemon-ball {
+    height: 80px;
+    width: 80px;
+  }
+
+  .about__logo-pokemon-ball::after,
+  .about__logo-pokemon-ball::before {
+    width: 70px;
+    height: 35px;
+  }
+
+  .about__logo-pokemon-ball::before {
+    margin-top: 40px;
+  }
+
+  .about__logo-pokemon-ball-item {
+    width: 70px;
+    margin-top: 39px;
+    height: 4px;
+  }
+
+  .about__logo-pokemon-ball-item::after {
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    top: -12px;
+  }
+
+  .foot__subscription {
+    font-size: 14px;
+  }
 }

@@ -17,6 +17,7 @@
   border-radius: 22px;
   background-color: #FDB714;
   transition: .5s all;
+  cursor: pointer;
 }
 
 .about__logo-pokemon {
