@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>PokemonProject: Login</title>
+        <link
+            href="css/login.css"
+            rel="stylesheet"
+            type="text/css">
+    </head>
+    <body>
+        <header class="upper-header">
+            <div class="ma-logo">
+                <img class="MAlogo" src="images/MA-logo.svg" alt="Masters Academy">
+            </div>
+            <ul class="navigation">
+                <li>
+                    <a href="../5-logic/index.html" class="navigation-item calculator">Calculator</a>
+                </li>
+                <li>
+                    <a href="./pokemons.html" class="navigation-item pokemons">Pokemons</a>
+                </li>
+                <li>
+                    <a href="./index.html" class="navigation-item about">About</a>
+                </li>
+                <li>
+                    <a href="#" class="navigation-item login">Login</a>
+                </li>
+            </ul>
+        </header>
+        <div class="content">
+            <h1 class="headline">Login page</h1>
+            <section class="enter-content">
+                <form action="./result.html">
+                    <div class="email-check">
+                        <label for="email">Email</label>
+                        <input class="input-email" type="email" id="email" name="email" placeholder="Enter your email address" required>
+                        <div class="error-container" id="email-error"></div>
+                    </div>
+                    <div class="password-check">
+                        <label for="password">Password</label>
+                        <input class="input-password" type="password" id="password" name="password" placeholder="Enter your password" required>
+                        <div class="error-container" id="password-error"></div>
+                    </div>
+                    <div class="robot-check">
+                        <label class="label-checkbox">
+                            <input type="checkbox" id="checkbox" name="robot-check" value="checkbox" required>
+                            <label for="checkbox">I'm not a robot</label>
+                        </label>
+                        <div class="error-container" id="checkbox-error"></div>
+                    </div>
+                    <div id="errors-container"></div>
+                    <button type="button" class="button-login" id="button-login">Login</button>
+                </form>
+            </section>
+        </div>
+        <footer>
+            <div class="social-networks">
+                <img class="networks" src="images/networks.svg" alt="Masters Academy">
+            </div>
+            <p class="footer-text">
+                Made with 🤍 on course <a href="https://www.mastersacademy.education/frontend-for-beginners-it" class="link"> 'Frontend for beginners' from Masters Academy in 2023</a>, by Katya Sharova
+            </p>
+        </footer>
+        <script src="./scripts/script.js"></script>
+    </body>
+</html>

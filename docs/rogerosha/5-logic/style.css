@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.upper-header {
+  background-color: #333;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr auto;
+  padding: 10px;
+  color: #333;
+  gap: 50px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.ma-logo {
+  display: flex;
+  align-items: center;
+}
+
+.MAlogo {
+  margin-left: 53px;
+}
+
+.navigation {
+  text-align: right;
+  display: flex;
+  align-items: center;
+}
+
+.navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation-item {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #FFF;
+  line-height: 19px;
+  margin-right: 50px;
+}
+
+.pokemons, .about, .login {
+  text-decoration: none;
+}
+
+.headline {
+  color: #221F1F;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 32px;
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+
+.field {
+  display: flex;
+  gap: 16px;
+}
+
+.firstValue, .secondValue {
+  padding: 13px;
+  border-radius: 6px;
+  display: flex;
+  text-align: center;
+}
+
+.operation {
+  border-radius: 6px;
+  background-color: #FFF;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  border: 1px solid #333;
+  padding-block: 13px;
+  padding-left: 12px;
+  padding-right: 95px;
+}
+
+.button {
+  background-color: #EF4934;
+  color: #FFF;
+  border-radius: 6px;
+  border: 1px solid #EF4934;
+  display: inline-flex;
+  padding: 13px 57px;
+  justify-content: center;
+  align-items: center;
+}
+
+.result {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.result-display {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  color: #EF4934;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 32px;
+  gap: 16px;
+  padding-bottom: 52px;
+}
+
+footer {
+  background-color: #EF4934;
+  color: #FFF;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+}
+
+.footer-text {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+}
+
+.link {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.social-networks {
+  margin-block: 30px;
+}
