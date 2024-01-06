@@ -47,7 +47,7 @@
                         <div class="filter__checkbox">
                             <div class="filter__select">
                                 <label>
-                                    <select class="select__genre" name="user_profile_color_1" data-select="genre">
+                                    <select class="select__genre" name="user_profile_color_1" data-select="genre" onchange="categoryFilter()">
                                         <option value="genre">Genre</option>
                                         <option value="shooter">Shooter</option>
                                         <option value="pvp">PvP</option>
@@ -86,7 +86,7 @@
                         </div>
                         <div class="filter__search">
                             <input type="search" class="search__input" placeholder="Search">
-                            <button type="button" class="search__button" data-search="button">Apply</button>
+                            <button type="button" class="search__button" data-search="button" onclick="search()">Apply</button>
                         </div>
                     </nav>
                 </div>
@@ -100,7 +100,6 @@
                         <div class="loader"></div>
                     </div>
                 </div>
-                <div class="paginate"></div>
             </main>
             <footer class="footer">
                 <div class="footer__container">
@@ -123,6 +122,6 @@
         </div>
         <script src="script/burger.js"></script>
         <script src="script/filter.js"></script>
-        <script src="script/cards.js"></script>
+        <script src="script/game.js"></script>
     </body>
 </html>

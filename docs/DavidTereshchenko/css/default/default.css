@@ -39,6 +39,14 @@ img {
   vertical-align: top;
 }
 
+input:focus-visible {
+  outline: none;
+}
+
+select:focus-visible {
+  outline: none;
+}
+
 h1,
 h2,
 h3,
