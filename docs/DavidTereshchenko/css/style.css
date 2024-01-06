@@ -1,0 +1,94 @@
+/* add header and default */
+
+@import "header/header.css";
+@import "default/default.css";
+@import "Footer/footer.css";
+
+/* Main Section */
+
+.page {
+  display: flex;
+  justify-content: center;
+}
+
+.main-section {
+  max-width: 1175px;
+  display: flex;
+  justify-content: center;
+  margin-top: 72px;
+}
+
+.main-contend__container {
+  display: grid;
+  grid-template-columns: 50% 1fr;
+  /*grid-auto-flow: row;*/
+
+  width: 100%;
+  gap: 64px;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  max-width: 575px;
+  padding: 0 10px;
+}
+
+.about-me {
+  font-size: 44px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.about-text {
+  font-size: 22px;
+  margin-bottom: 24px;
+}
+
+.about-text a {
+  text-decoration-line: underline;
+  color: #EF4934;
+}
+
+p {
+  line-height: 32px;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 970px) {
+
+  .main-contend__container {
+    display: grid;
+    grid-template-rows: 1fr  3fr;
+    grid-template-columns: none;
+    row-gap: 40px;
+  }
+}
+
+@media (max-width: 550px) {
+
+  .main-contend__container {
+    max-width: 400px;
+  }
+
+  .main-contend__container__img {
+    width: 370px;
+  }
+
+  .about-me {
+    font-size: 24px;
+  }
+
+  .about-text {
+    font-size: 14px;
+    max-width: 370px;
+    line-height: 5px;
+  }
+
+  .about-text p {
+    font-size: 14px;
+    max-width: 370px;
+    line-height: 25px;
+  }
+}

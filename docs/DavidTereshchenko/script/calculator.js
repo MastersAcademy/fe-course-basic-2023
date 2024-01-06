@@ -10,7 +10,7 @@ const countGame = document.querySelector('[data-count-game]');
 const countGamesVisual = document.querySelector('[data-count-game-visual]');
 const date = document.querySelector('[data-date]');
 
-btn.onclick = function () {
+function calculate() {
     const numberOne = Number(document.querySelector('[data-number-one="one"]').value);
     const numberTwo = Number(document.querySelector('[data-number-two="two"]').value);
     const result = document.querySelector('.result');
@@ -47,7 +47,7 @@ btn.onclick = function () {
         case '/':
             if (numberTwo === 0) {
                 result.innerText = 'Number must not be zero';
-                visualResult.innerText = 'ENumber must not be zero';
+                visualResult.innerText = 'Number must not be zero';
                 visualOperator.innerText = '';
                 visualNumberOne.innerText = '';
                 visualNumberTwo.innerText = '';
@@ -79,7 +79,9 @@ btn.onclick = function () {
         return result;
     }
 
-    function executionTime() { return new Date() - currentDate; }
+    function executionTime() {
+        return new Date() - currentDate;
+    }
 
     function dateNow() {
         const year = currentDate.getFullYear();
@@ -88,6 +90,7 @@ btn.onclick = function () {
 
         return `${day}-${month}-${year}`;
     }
+
     function hourNow() {
         let hour = currentDate.getHours();
         let minute = currentDate.getMinutes();
@@ -122,4 +125,6 @@ btn.onclick = function () {
     date.innerText = `Date of calculation: ${dateNow()}, ${hourNow()}. Time of function execution: ${executionTime()} ms`;
 
     return result;
-};
+}
+
+btn.addEventListener('click', calculate);

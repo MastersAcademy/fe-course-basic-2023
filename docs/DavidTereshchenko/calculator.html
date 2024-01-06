@@ -45,45 +45,37 @@
                     <div class="title__calculator">
                         <h1>Calculate Games</h1>
                     </div>
-                    <div class="calculator__container">
-                        <div class="number__container">
-                            <div class="number-1">
-                                <label for="firstNumber">First number</label>
-                                <input id="firstNumber" data-number-one="one" class="number__block one" name="number1" required>
-                            </div>
-                            <div class="operator__block">
-                                <label>
-                                    <select class="operator" data-operation="operator">
-                                        <option value="+">+</option>
-                                        <option value="-">-</option>
-                                        <option value="×">×</option>
-                                        <option value="/">/</option>
-                                        <option value="%">%</option>
-                                        <option value="**">**</option>
-                                    </select>
-                                </label>
-                            </div>
-                            <div class="number-2">
-                                <label for="secondNumber">Second number</label>
-                                <input id="secondNumber" data-number-two="two" class="number__block two" name="number2" required>
-                            </div>
-                            <div class="return">
-                                <button type="button" class="button" data-button="button-result">=</button>
-                            </div>
+                    <div class="calculator">
+                        <div class="number-block">
+                            <label for="firstNumber">First number
+                                <input id="firstNumber" data-number-one="one" class="number__block-input one" name="number1" required>
+                            </label>
+                            <label for="select">
+                                <select id="select" class="operator" data-operation="operator">
+                                    <option value="+">+</option>
+                                    <option value="-">-</option>
+                                    <option value="×">×</option>
+                                    <option value="/">/</option>
+                                    <option value="%">%</option>
+                                    <option value="**">**</option>
+                                </select>
+                            </label>
+                            <label for="secondNumber">First number
+                                <input id="secondNumber" data-number-two ="two" class="number__block-input one" name="number2" required>
+                            </label>
+                            <button type="button" class="button" data-button="button-result">=</button>
                             <div class="result__block">
                                 <p class="resul__number result"></p>
                                 <span class="count-games" data-count-game></span>
                             </div>
                         </div>
-                        <div class="count-block" data-count-block="count-block">
-                            <div class="visual-counting">
-                                <span class="number__1" data-number-one="number-one"></span>
-                                <span class="oper" data-operation-visual="operation-visual"></span>
-                                <span class="number__2" data-number-two="number-two"></span>
-                                <span class="equals" data-equals="equals"></span>
-                                <span class="visual-result" data-result-visual="visual-result"></span>
-                                <span class="count-games__visual" data-count-game-visual="count-game"></span>
-                            </div>
+                        <div class="visual-counting count-block" data-count-block="count-block">
+                            <span data-number-one="number-one"></span>
+                            <span data-operation-visual="operation-visual"></span>
+                            <span data-number-two="number-two"></span>
+                            <span data-equals="equals"></span>
+                            <span data-result-visual="visual-result"></span>
+                            <span data-count-game-visual="count-game"></span>
                         </div>
                         <span class="date" data-date="data"></span>
                     </div>
