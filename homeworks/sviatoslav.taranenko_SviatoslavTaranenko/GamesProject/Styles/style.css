@@ -1,6 +1,9 @@
 body {
   margin: 0;
   padding: 0;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
@@ -54,6 +57,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-left: 25px;
+    padding-bottom: 15px;
   }
 }
 
@@ -197,10 +201,11 @@ body {
 }
 
 .footer {
-  background-color: #221F1F;
-  border: none;
-  width: 100%;
-  min-height: 100px;
+  margin-top: auto;
+  background-color: #333;
+  color: #FFF;
+  padding: 10px;
+  text-align: center;
 }
 
 .footer__icons {
@@ -236,9 +241,15 @@ body {
   margin-top: 10px;
   justify-content: center;
   align-content: center;
+  text-align: center;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 22px;
   line-height: 32px;
   color: #FFF;
+}
+
+.about__text_link {
+  color: #FFF;
+  text-decoration: none;
 }

@@ -29,11 +29,16 @@ function showResult(result) {
  * - else return number of result: 1 '+' 2 returns 3
  */
 function calculate(firstValue, secondValue, operation) {
+
+    if (!firstValue.trim() || !secondValue.trim()) {
+        return 'Enter a number';
+    }
+
     const firstNumber = Number(firstValue);
     const secondNumber = Number(secondValue);
 
     if (Number.isNaN(firstNumber) || Number.isNaN(secondNumber)) {
-        return 'Enter a number';
+        return 'Enter a valid number';
     }
 
     let result;

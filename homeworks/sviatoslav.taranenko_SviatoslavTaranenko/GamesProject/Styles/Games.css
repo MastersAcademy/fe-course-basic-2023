@@ -1,6 +1,9 @@
 body {
   margin: 0;
   padding: 0;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
 }
 
 .loading-overlay {
@@ -69,6 +72,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-left: 25px;
+    padding-bottom: 15px;
   }
 }
 
