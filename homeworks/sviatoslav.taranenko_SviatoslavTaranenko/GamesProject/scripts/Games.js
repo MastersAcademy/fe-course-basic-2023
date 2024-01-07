@@ -103,9 +103,4 @@ function renderGames(games) {
     });
 }
 
-renderGames();
-
-function init() {
-}
-
 document.addEventListener('DOMContentLoaded', init);
