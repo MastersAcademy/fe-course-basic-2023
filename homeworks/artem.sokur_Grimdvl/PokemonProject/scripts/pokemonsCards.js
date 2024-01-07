@@ -135,24 +135,29 @@ function sortPokemonsByHeight(order, pokemonList) {
 
 function applyAllFilters() {
     filterPokemons();
-    if (currentSortType) {
-        const selectedType = selectElement.value.toLowerCase();
-        const searchValue = searchInput.value.toLowerCase().trim();
 
-        const filteredByType = filteredPokemons.filter((pokemon) => selectedType === 'type' || pokemon.type.includes(selectedType));
+    const selectedType = selectElement.value.toLowerCase();
+    const searchValue = searchInput.value.toLowerCase().trim();
 
-        const filteredBySearch = filteredByType.filter((pokemon) => {
-            const pokemonName = pokemon.name.toLowerCase();
-            return pokemonName.includes(searchValue);
-        });
+    let filteredByType = [...filteredPokemons];
 
-        sortPokemonsByHeight(currentSortType, filteredBySearch);
+    if (selectedType !== 'type') {
+        filteredByType = filteredPokemons.filter((pokemon) => pokemon.type.includes(selectedType));
     }
+
+    const filteredBySearch = filteredByType.filter((pokemon) => {
+        const pokemonName = pokemon.name.toLowerCase();
+        return pokemonName.includes(searchValue);
+    });
+
+    sortPokemonsByHeight(currentSortType, filteredBySearch);
 }
 
 function filterByType(event) {
     const selectedType = event.target.value.toLowerCase();
+    sortPokemonsByHeight(currentSortType, filteredPokemons);
     renderCardsByType(container, filteredPokemons, selectedType);
+    applyAllFilters();
 }
 
 function renderByHeight(event) {
@@ -168,32 +173,39 @@ function typeSelect() {
     formSelect.parentNode.classList.toggle('active');
 }
 
-fetch('https://my-json-server.typicode.com/electrovladyslav/pokemon-json-server/pokemons')
-    .then((response) => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.json();
-    })
-    .then((data) => {
-        allPokemons = data;
-        filteredPokemons = [...allPokemons];
+function fetchData() {
+    fetch('https://my-json-server.typicode.com/electrovladyslav/pokemon-json-server/pokemons')
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then((data) => {
+            allPokemons = data;
+            filteredPokemons = [...allPokemons];
 
-        renderCards(container, filteredPokemons);
-        applyAllFilters();
+            renderCards(container, filteredPokemons);
+            applyAllFilters();
 
-        spinner.style.display = 'none';
-    })
-    .catch((error) => {
-        console.error('There was a problem fetching data:', error);
-        spinner.style.display = 'none';
-    });
+            spinner.style.display = 'none';
+        })
+        .catch((error) => {
+            console.error('There was a problem fetching data:', error);
+            spinner.style.display = 'none';
+        });
+}
 
-highFirst.addEventListener('change', renderByHeight);
-lowFirst.addEventListener('change', renderByHeight);
-selectElement.addEventListener('change', filterByType);
-applyButton.addEventListener('click', applyAllFilters);
-bigCheckbox.addEventListener('change', applyAllFilters);
-smallCheckbox.addEventListener('change', applyAllFilters);
-searchInput.addEventListener('input', applyAllFilters);
-formSelect.addEventListener('click', typeSelect);
+function init() {
+    highFirst.addEventListener('change', renderByHeight);
+    lowFirst.addEventListener('change', renderByHeight);
+    selectElement.addEventListener('change', filterByType);
+    applyButton.addEventListener('click', applyAllFilters);
+    bigCheckbox.addEventListener('change', applyAllFilters);
+    smallCheckbox.addEventListener('change', applyAllFilters);
+    searchInput.addEventListener('input', applyAllFilters);
+    formSelect.addEventListener('click', typeSelect);
+}
+
+fetchData();
+init();
