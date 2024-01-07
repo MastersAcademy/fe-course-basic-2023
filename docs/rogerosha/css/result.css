@@ -1,28 +1,13 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Roboto, sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .headline-result {
-  font-family: Roboto, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 60px;
+  margin-top: 60px;
 }
 
 .button-return {
   font-size: 22px;
   font-weight: 600;
-}
-
-button {
   background-color: #EF4934;
   color: #FFF;
   text-decoration: none;
@@ -34,8 +19,5 @@ button {
   border-radius: 6px;
   gap: 10px;
   border: 1px solid #EF4934;
-}
-
-.social-networks {
-  margin-block: 30px;
+  margin-block: 60px;
 }
