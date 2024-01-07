@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="style/header.css">
+        <link rel="stylesheet" href="style/pokemon_page.css">
+        <link rel="stylesheet" href="style/filters.css">
+        <link rel="stylesheet" href="style/footer.css">
+        <title>PokemonProject</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="header">
+                <div class="container">
+                    <section class="header__inner">
+                        <a class="header__main-link" href="index.html">
+                            <img src="./image/logo.svg" alt="Logo">
+                        </a>
+                        <div class="header__burger">
+                            <span class="header__burger-item"></span>
+                        </div>
+                        <nav class="navigation">
+                            <ul class="navigation__list">
+                                <li class="navigation__item">
+                                    <a class="navigation__link" href="calculator.html">Calculator</a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a class="navigation__link" href="#">Pokemons</a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a class="navigation__link" href="index.html">About</a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a class="navigation__link" href="login.html">Login</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </section>
+                </div>
+            </header>
+            <main class="main">
+                <section class="filters">
+                    <div class="container">
+                        <form class="filters__form" data-type="filters">
+                            <select class="filters__drop-list" disabled>
+                                <option value="Type" selected>Type</option>
+                                <option value="Fighting">Fighting</option>
+                                <option value="Dark">Dark</option>
+                                <option value="Fairy">Fairy</option>
+                                <option value="Flying">Flying</option>
+                            </select>
+                            <fieldset class="filters__group">
+                                <input class="filters__radio" id="only-new" type="radio" name="radio" disabled>
+                                <label class="filters__label-radio" for="only-new">Only new</label>
+                                <input class="filters__radio" id="favorites" type="radio" name="radio" disabled>
+                                <label class="filters__label-radio" for="favorites">Favorites</label>
+                            </fieldset>
+                            <fieldset class="filters__group">
+                                <input class="filters__checkbox" id="big" type="checkbox" name="big" data-type-big>
+                                <label class="filters__label-checkbox" for="big">Big</label>
+                                <input class="filters__checkbox" id="small" type="checkbox" name="small" data-type-small>
+                                <label class="filters__label-checkbox" for="small">Small</label>
+                            </fieldset>
+                            <fieldset class="filters__search">
+                                <input class="filters__search-input" type="search" placeholder="Search" disabled>
+                                <button class="filters__button" type="button">Apply</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </section>
+                <div class="container">
+                    <section class="pokemon">
+                        <h1 class="pokemon__title">Study project "Pokemons"</h1>
+                        <ul class="pokemon__cards-list" data-type="cards-list"></ul>
+                        <template data-type="card-template">
+                            <li class="pokemon__card-item">
+                                <div class="pokemon__card-img">
+                                    <img class="pokemon__image" src="./image/pokemon-image.svg" alt="pokemon-image" width="90px" height="90px" data-card-image>
+                                    <h4 class="pokemon__name" data-card-name>Urshifu</h4>
+                                </div>
+                                <ul class="pokemon__special-list">
+                                    <li class="pokemon__special">
+                                        <span class="pokemon__special-bold">Height:</span>
+                                        <span class="pokemon__special-height" data-card-height>6'03</span>
+                                        <span class="pokemon__special-height">"</span>
+                                    </li>
+                                    <li class="pokemon__special">
+                                        <span class="pokemon__special-bold">Weight:</span>
+                                        <span class="pokemon__special-weight" data-card-weight>231.5</span>
+                                        <span class="pokemon__special-lbs">lbs</span>
+                                    </li>
+                                    <li class="pokemon__special">
+                                        <span class="pokemon__special-bold">Number:</span>
+                                        <span class="pokemon__special-number" data-card-number>0002</span>
+                                    </li>
+                                    <li class="pokemon__special-inner">
+                                        <p class="pokemon__special-type">
+                                            <span class="pokemon__special-bold">Type:</span>
+                                        </p>
+                                        <span class="pokemon__fighting">Fighting</span>
+                                        <span class="pokemon__dark">Dark</span>
+                                    </li>
+                                    <li class="pokemon__special-ls">
+                                        <p class="pokemon__special-weaknesses">
+                                            <span class="pokemon__special-bold">Weaknesses:</span>
+                                        </p>
+                                        <span class="pokemon__fairy">Fairy</span>
+                                        <span class="pokemon__flying">Flying</span>
+                                    </li>
+                                </ul>
+                            </li>
+                        </template>
+                    </section>
+                    <div class="loading" data-type="loading">
+                        <h3 class="loading-title">Loading...</h3>
+                        <div class="loading-item"></div>
+                    </div>
+                </div>
+            </main>
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer__inner">
+                        <div class="footer__image-container">
+                            <a href="https://uk-ua.facebook.com/">
+                                <img src="./image/facebook-icon.svg" alt="facebook-icon">
+                            </a>
+                            <a href="https://www.instagram.com/">
+                                <img src="./image/instagram-icon.svg" alt="instagram-icon">
+                            </a>
+                            <a href="https://www.linkedin.com/in/rostyslav-vyshemirskyi-b33bbb1b4/">
+                                <img src="./image/linkedin-icon.svg" alt="linkedin-icon">
+                            </a>
+                        </div>
+                        <h3 class="footer__title">Made with 🤍 on course
+                            <a class="footer__link" href="https://www.mastersacademy.education/frontend-for-beginners-it">
+                                'Frontend for beginners' from Masters Academy in 2023</a>, by Rostyslav Vyshemirskyi
+                        </h3>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="./scripts/pokemons.js"></script>
+        <script src="./scripts/burger.js"></script>
+    </body>
+</html>

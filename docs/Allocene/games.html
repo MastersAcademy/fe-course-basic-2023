@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/b3adce1055.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./style/main-games.css">
+        <link rel="icon" type="image/x-icon" href="./img/logo.png">
+        <title>Games</title>
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="header__box">
+                <div class="header__box-content">
+                    <div class="header__logo-section">
+                        <img class="logo-section__img" src="./img/logo.png" alt="logo">
+                    </div>
+                    <div class="header__menu-section" data-type="header__menu-section">
+                        <ul class="menu__list">
+                            <li class="menu__list-li">
+                                <a href="./calculator.html" class="menu__list-a menu__list-link" data-type="menu__list-a">Calculator</a>
+                            </li>
+                            <li class="menu__list-li">
+                                <a href="./games.html" class="menu__list-a menu__list-link" data-type="menu__list-a">Games</a>
+                            </li>
+                            <li class="menu__list-li">
+                                <a href="./index.html" class="menu__list-a menu__list-link" data-type="menu__list-a">About</a>
+                            </li>
+                            <li class="menu__list-li">
+                                <a href="./login.html" class="menu__list-a menu__list-link" data-type="menu__list-a">Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header__burger" data-type="header__burger">
+                        <span class="header__burger-span"></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="search search-hidden" data-type="search">
+            <div class="search__contain">
+                <form action="#" class="search__form">
+                    <div class="form__select">
+                        <select name="genre" id="genre" class="genre" title="genre" data-type="genre-select">
+                            <option value="genre" class="option" selected disabled hidden>Genre</option>
+                            <option value="shooter" class="option">Shooter</option>
+                            <option value="arpg" class="option">ARPG</option>
+                            <option value="battleRoyale" class="option">Battle Royale</option>
+                            <option value="strategy" class="option">Strategy</option>
+                            <option value="mmorpg" class="option">MMORPG</option>
+                            <option value="fighting" class="option">Fighting</option>
+                            <option value="allgames" class="option">All games</option>
+                        </select>
+                    </div>
+                    <div class="radio">
+                        <label class="form__radio">
+                            <input class="inp__radio" type="radio" name="platformsOrOnline" value="platform"
+                                data-type="platform-radio">
+                            <span class="custom__radio"></span>
+                            Platform
+                        </label>
+                        <label class="form__radio">
+                            <input class="inp__radio" type="radio" name="platformsOrOnline" value="online-games"
+                                data-type="online-radio">
+                            <span class="custom__radio"></span>
+                            Online games
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label class="form__checkbox">
+                            <input class="inp__check" type="checkbox" name="newOrOld" value="new" data-type="check-new">
+                            <span class="custom__check"></span>
+                            Sort by realese date
+                        </label>
+                        <label class="form__checkbox">
+                            <input class="inp__check" type="checkbox" name="newOrOld" value="old" data-type="check-old">
+                            <span class="custom__check"></span>
+                            Sort by name
+                        </label>
+                    </div>
+                    <div class="form__search">
+                        <input class="inp__search" type="search" placeholder="Search" data-type="inp-search">
+                        <button class="search__button" type="submit">Apply</button>
+                    </div>
+                </form>
+                <div class="plate">
+                    <h3 data-type="plate" class="plate__h3">Open game filters</h3>
+                </div>
+            </div>
+        </section>
+        <main data-type="main-games" class="main">
+            <div class="contain">
+                <div class="content">
+                    <div class="text">
+                        <h1 class="text__heading">
+                            Study project "Games"
+                        </h1>
+                        <h2 class="text__heading" data-type="text-h2">
+                        </h2>
+                    </div>
+                    <div class="game__cards">
+
+                        <template data-type="card-template">
+                            <li class="game__cod2" data-type="cards">
+                                <div class="cod2__general">
+                                    <div class="cod2__general--img" data-type="image">
+                                        <img src="#" class="cod2__general--image">
+                                    </div>
+                                    <div class="cod2__general--desc">
+                                        <h3 data-type="title"></h3>
+                                        <p data-type="description"></p>
+                                    </div>
+                                </div>
+                                <ul class="cod2__description" data-type="short-description">
+                                </ul>
+                            </li>
+                        </template>
+
+                        <ul data-type="cards-container" class="cards-container"></ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__content">
+                    <ul class="social__icon">
+                        <li class="icon__fb">
+                            <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener">
+                                <img class="icon__fb-img" src="./img/icons/logo fb.png" alt="icon facebook">
+                            </a>
+                        </li>
+                        <li class="icon__link">
+                            <a href="https://www.linkedin.com/" target="_blank" rel="noopener">
+                                <img class="icon__link-img" src="./img/icons/logo link.png" alt="icon linkedin">
+                            </a>
+                        </li>
+                        <li class="icon__inst">
+                            <a href="https://www.instagram.com/">
+                                <img class="icon__inst-img" src="./img/icons/logo inst.png" alt="icon instagram">
+                            </a>
+                        </li>
+                    </ul>
+                    <h3 class="copyright">
+                        Made with 💗 on course 'Frontend for beginners' from Masters Academy in 2023, by Artur
+                        Kobyliatsky
+                    </h3>
+                </div>
+            </div>
+        </footer>
+        <script type="module" src="./script/games.js"></script>
+        <script type="module" src="./script/burger.js"></script>
+        <script type="module" src="./script/filters.js"></script>
+    </body>
+
+</html>

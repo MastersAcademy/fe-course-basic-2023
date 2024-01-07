@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/b3adce1055.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./style/main-login.css">
+        <link rel="icon" type="image/x-icon" href="./img/logo.png">
+        <title>Login</title>
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="header__box">
+                <div class="header__box-content">
+                    <div class="header__logo-section">
+                        <img class="logo-section__img" src="./img/logo.png" alt="logo">
+                    </div>
+                    <div class="header__menu-section" data-type="header__menu-section">
+                        <ul class="menu__list">
+                            <li class="menu__list-li">
+                                <a href="./calculator.html" class="menu__list-a menu__list-link" data-type="menu__list-a">Calculator</a>
+                            </li>
+                            <li class="menu__list-li">
+                                <a href="./games.html" class="menu__list-a menu__list-link" data-type="menu__list-a">Games</a>
+                            </li>
+                            <li class="menu__list-li">
+                                <a href="./index.html" class="menu__list-a menu__list-link" data-type="menu__list-a">About</a>
+                            </li>
+                            <li class="menu__list-li">
+                                <a href="./login.html" class="menu__list-a menu__list-link" data-type="menu__list-a">Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header__burger" data-type="header__burger">
+                        <span class="header__burger-span"></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="contain">
+                <div class="content">
+                    <div class="form__h1">
+                        <h1 class="h1">Login page</h1>
+                    </div>
+                    <form action="./login-success.html" method="#" class="form">
+                        <div class="form__login">
+                            <div class="item">
+                                <label class="label" for="email">Email</label>
+                                <input class="inp" id="email" type="email" name="email"
+                                    placeholder="Enter your email address">
+                            </div>
+                            <div id="errors-container-email" class="errors-container-email"></div>
+                            <div class="item">
+                                <label class="label" for="password">Password</label>
+                                <input class="inp" id="password" type="password" name="password"
+                                    placeholder="Enter your password">
+                            </div>
+                            <div id="errors-container-password" class="errors-container-password"></div>
+                            <label class="item__check">
+                                <input class="inp__check" id="checkbox" type="checkbox" name="checkbox">
+                                <span class="custom__check"></span>
+                                I’m not a robot
+                            </label>
+                            <div id="errors-container-checkbox" class="errors-container-checkbox"></div>
+                            <div class="item__button">
+                                <button type="button" id="button" class="button">Login</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__content">
+                    <ul class="social__icon">
+                        <li class="icon__fb">
+                            <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener">
+                                <img class="icon__fb-img" src="./img/icons/logo fb.png" alt="icon facebook">
+                            </a>
+                        </li>
+                        <li class="icon__link">
+                            <a href="https://www.linkedin.com/" target="_blank" rel="noopener">
+                                <img class="icon__link-img" src="./img/icons/logo link.png" alt="icon linkedin">
+                            </a>
+                        </li>
+                        <li class="icon__inst">
+                            <a href="https://www.instagram.com/">
+                                <img class="icon__inst-img" src="./img/icons/logo inst.png" alt="icon instagram">
+                            </a>
+                        </li>
+                    </ul>
+                    <h3 class="copyright">
+                        Made with 💗 on course 'Frontend for beginners' from Masters Academy in 2023, by Artur
+                        Kobyliatsky
+                    </h3>
+                </div>
+            </div>
+        </footer>
+        <script src="./script/validate.js"></script>
+        <script type="module" src="./script/burger.js"></script>
+    </body>
+
+</html>
