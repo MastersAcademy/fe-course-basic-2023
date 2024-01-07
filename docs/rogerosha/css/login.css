@@ -1,78 +1,16 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Roboto, sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.upper-header {
-  background-color: #333;
-  display: grid;
-  align-items: center;
-  grid-template-columns: 1fr auto;
-  padding: 10px;
-  color: #333;
-  gap: 50px;
-  width: 100%;
-  justify-content: space-between;
-}
-
-.ma-logo {
-  display: flex;
-  align-items: center;
-}
-
-.MAlogo {
-  margin-left: 53px;
-}
-
-.navigation {
-  text-align: right;
-  display: flex;
-  align-items: center;
-}
-
-.navigation ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.navigation-item {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  color: #FFF;
-  line-height: 19px;
-  margin-right: 50px;
-}
-
 .pokemons, .about, .calculator {
   text-decoration: none;
-}
-
-.content {
-  max-width: 1280px;
-  padding-inline: 352px;
-}
-
-.headline {
-  color: #221F1F;
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 32px;
-  margin-top: 80px;
-  text-align: center;
 }
 
 .enter-content {
   align-items: center;
   padding-bottom: 52px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .email {
@@ -85,8 +23,6 @@ body {
   flex-direction: column;
   align-items: flex-start;
   gap: 22px;
-  margin-top: 60px;
-  margin-bottom: 20px;
   font-weight: 600;
 }
 
@@ -107,7 +43,6 @@ body {
   flex-direction: column;
   align-items: flex-start;
   gap: 22px;
-  margin-block: 20px;
   font-weight: 600;
 }
 
@@ -123,7 +58,6 @@ body {
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
-  margin-block: 40px;
 }
 
 .label-checkbox {
@@ -137,43 +71,16 @@ body {
 .button-login {
   font-size: 22px;
   font-weight: 600;
-}
-
-button {
   background-color: #EF4934;
   color: #FFF;
   text-decoration: none;
   cursor: pointer;
   display: flex;
-  width: 575px;
-  padding: 27px 258px;
+  width: 100%;
+  padding: 27px 48px;
   justify-content: center;
   border: 2px solid #EF4934;
   align-items: center;
   border-radius: 6px;
   gap: 10px;
-}
-
-footer {
-  background-color: #EF4934;
-  color: #FFF;
-  padding: 20px;
-  text-align: center;
-  width: 100%;
-  margin-bottom: 0;
-}
-
-.footer-text {
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 32px;
-}
-
-.link {
-  color: #FFF;
-  text-decoration: none;
-}
-
-.social-networks {
-  margin-block: 30px;
 }

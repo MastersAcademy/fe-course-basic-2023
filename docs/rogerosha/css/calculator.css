@@ -1,70 +1,5 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Roboto, sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-
-.upper-header {
-  background-color: #333;
-  display: grid;
-  align-items: center;
-  grid-template-columns: 1fr auto;
-  padding: 10px;
-  color: #333;
-  gap: 50px;
-  width: 100%;
-  justify-content: space-between;
-}
-
-.ma-logo {
-  display: flex;
-  align-items: center;
-}
-
-.MAlogo {
-  margin-left: 53px;
-}
-
-.navigation {
-  text-align: right;
-  display: flex;
-  align-items: center;
-}
-
-.navigation ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.navigation-item {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  color: #FFF;
-  line-height: 19px;
-  margin-right: 50px;
-}
-
 .pokemons, .about, .login {
   text-decoration: none;
-}
-
-.headline {
-  color: #221F1F;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 32px;
-  margin-top: 80px;
-  margin-bottom: 60px;
 }
 
 .field {
@@ -119,31 +54,17 @@ body {
   font-style: normal;
   font-weight: 700;
   font-size: 48px;
-  line-height: 32px;
   gap: 16px;
   padding-bottom: 52px;
 }
 
-footer {
-  background-color: #EF4934;
-  color: #FFF;
-  padding: 20px;
-  text-align: center;
-  width: 100%;
-  bottom: 0;
+.content {
+  max-width: 1280px;
 }
 
-.footer-text {
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 32px;
-}
+@media screen and (max-width: 768px) {
 
-.link {
-  color: #FFF;
-  text-decoration: none;
-}
-
-.social-networks {
-  margin-block: 30px;
+  .field {
+    flex-direction: column;
+  }
 }

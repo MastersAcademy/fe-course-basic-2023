@@ -1,32 +1,9 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Roboto, sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.upper-header {
-  background-color: #333;
-  display: grid;
-  align-items: center;
-  grid-template-columns: 1fr auto;
-  padding: 10px;
-  color: #333;
-  gap: 50px;
-  width: 100%;
-  justify-content: space-between;
-}
-
 .second-header {
   width: 100%;
-  padding-block: 12px;
   background-color: #221F1F;
   display: flex;
+  padding: 24px;
+  gap: 16px;
   color: #FFF;
   justify-content: space-around;
 }
@@ -103,53 +80,12 @@ body {
   gap: 10px;
 }
 
-.ma-logo {
-  display: flex;
-  align-items: center;
-}
-
-.MAlogo {
-  margin-left: 53px;
-}
-
-.navigation {
-  text-align: right;
-  display: flex;
-  align-items: center;
-}
-
-.navigation ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.navigation-item {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  color: #FFF;
-  line-height: 19px;
-  margin-right: 50px;
-}
-
 .about, .login, .calculator {
   text-decoration: none;
 }
 
 .content {
   max-width: 1280px;
-  padding-inline: 52px;
-  padding-bottom: 52px;
-}
-
-.headline {
-  color: #221F1F;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 32px;
-  margin-block: 40px;
 }
 
 .card-container {
@@ -184,6 +120,7 @@ body {
 }
 
 .card-title {
+  margin: 0;
   font-size: 18px;
   font-weight: 700;
 }
@@ -240,30 +177,6 @@ body {
   background-color: #FF87F3;
 }
 
-footer {
-  background-color: #EF4934;
-  color: #FFF;
-  padding: 20px;
-  text-align: center;
-  width: 100%;
-  bottom: 0;
-}
-
-.footer-text {
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 32px;
-}
-
-.link {
-  color: #FFF;
-  text-decoration: none;
-}
-
-.social-networks {
-  margin-block: 30px;
-}
-
 .loading {
   display: inline-block;
   width: 50px;
@@ -292,4 +205,39 @@ footer {
 
 .hide {
   display: none;
+}
+
+@media screen and (max-width: 1024px) {
+
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .second-header {
+    flex-direction: column;
+    align-items: baseline;
+  }
+
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-header {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .card-header {
+    flex-direction: column;
+  }
 }
