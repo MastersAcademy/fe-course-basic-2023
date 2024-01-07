@@ -8,48 +8,81 @@
         <title>About</title>
         <link rel="stylesheet" href="css/index.css">
     </head>
-    <body class="about_body">
-        <header class="about_header--main">
-            <img src="Images/about_logo.png" alt="no img" class="about_header--logo">
-            <nav class="about_header--nav">
-                <ul class="about_header--ul">
+    <body class="body">
+        <header class="header">
+            <img src="Images/about_logo.png" alt="no img" class="header_logo">
+            <nav class="header_menu">
+                <input type="checkbox" id="checkbox" class="burger">
+                <label for="checkbox" class="burger_button">
+                    <span class="button_line"></span>
+                    <span class="button_line"></span>
+                    <span class="button_line"></span>
+                </label>
+                <ul class="header_ul">
                     <li>
-                        <a href="games.html" class="about_header--li">Games</a>
+                        <a href="calculator.html" class="header_li">Calculator</a>
                     </li>
-                    <li class="about_header--li about_li--underline">About</li>
                     <li>
-                        <a href="login.html" class="about_header--li">Login</a>
+                        <a href="games.html" class="header_li">Games</a>
+                    </li>
+                    <li class="header_li header_li--underline">About</li>
+                    <li>
+                        <a href="login.html" class="header_li">Login</a>
                     </li>
                 </ul>
             </nav>
         </header>
-        <div class="about_content--container">
-            <div>
-                <img src="Images/about_pic.png" alt="no img" class="about_img">
-            </div>
-            <div class="about_text">
-                <h1 class="about_title">About me</h1>
-                <div class="about_text--content">
-                    <p>
-                        Hi! My name is Sasha, and I'm a Junior Frontend Developer.
-                        I am already familiar with main Web Technologies like HTML, CSS, JavaScript and Git version control system.
-                    </p>
-                    <p>
-                        This page was developed during the course
-                        <a href="https://www.mastersacademy.education/frontend-for-beginners-it" class="about_link--style">
-                            Frontend for beginners' from Masters Academy in 2023.</a>
-                    </p>
-                    <p>
-                        This is a social project from MOCG company where I got an opportunity to work with Frontend mentors and to
-                        create my own small project for the portfolio.
-                    </p>
-                    <p>
-                        You can contact me via
-                        <a href="https://www.instagram.com/sasha.dmk/" class="about_link--style">Instagram</a>
-                        and/or check out my <a href="https://github.com/SashaDemi" class="about_link--style">GitHub</a>.
-                    </p>
+        <div class="_container">
+            <main class="main">
+                <div>
+                    <img src="Images/about_pic.png" alt="no img" class="mail_img">
                 </div>
-            </div>
+                <div class="main_text">
+                    <h1 class="main_text--title">About me</h1>
+                    <div class="main_text--content">
+                        <p>
+                            Hi! My name is Sasha, and I'm a Junior Frontend Developer.
+                            I am already familiar with main Web Technologies like HTML, CSS, JavaScript and Git version control system.
+                        </p>
+                        <p>
+                            This page was developed during the course
+                            <a href="https://www.mastersacademy.education/frontend-for-beginners-it" class="main_text--link">
+                                Frontend for beginners' from Masters Academy in 2023.</a>
+                        </p>
+                        <p>
+                            This is a social project from MOCG company where I got an opportunity to work with Frontend mentors and to
+                            create my own small project for the portfolio.
+                        </p>
+                        <p>
+                            You can contact me via
+                            <a href="https://www.instagram.com/sasha.dmk/" class="main_text--link">Instagram</a>
+                            and/or check out my <a href="https://github.com/SashaDemi" class="main_text--link">GitHub</a>.
+                        </p>
+                    </div>
+                </div>
+            </main>
         </div>
+        <footer class="footer">
+            <ul class="footer_ul">
+                <li>
+                    <a href="https://www.facebook.com/profile.php?id=100006067830226">
+                        <img src="Images/facebook_logo.svg" alt="no img" class="footer_img">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://ua.linkedin.com/">
+                        <img src="Images/linkedin_logo.svg" alt="no img" class="footer_img">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/sasha.dmk/">
+                        <img src="Images/instagram_logo.svg" alt="no img" class="footer_img">
+                    </a>
+                </li>
+            </ul>
+            <p class="footer_p">
+                Made with 💗 on course 'Frontend for beginners' from Masters Academy in 2023, by Sasha Demidenko
+            </p>
+        </footer>
     </body>
 </html>
