@@ -12,6 +12,7 @@
 }
 
 .about__logo {
+  position: relative;
   width: 530px;
   height: 275px;
   border-radius: 22px;
@@ -35,7 +36,7 @@
 }
 
 .about__logo-pokemon-ball {
-  position: relative;
+  position: absolute;
   content: "";
   display: block;
   width: 100px;
@@ -44,14 +45,13 @@
   border-radius: 50%;
   display: flex;
   justify-content: center;
-  margin: 0 auto;
-  transform: rotate(0deg);
-  transition: .5s all;
+  left: 50%;
+  transform: translateX(-50%) rotate(0deg);
+  transition: transform .5s;
 }
 
 .about__logo:hover .about__logo-pokemon-ball {
-  transform: rotate(-30deg);
-  transition: .5s all;
+  transform: translateX(-50%) rotate(-30deg);
 }
 
 .about__logo-pokemon-ball::before {

@@ -1,7 +1,7 @@
 .calculator {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 30px;
   padding-bottom: 50px;
 }
 

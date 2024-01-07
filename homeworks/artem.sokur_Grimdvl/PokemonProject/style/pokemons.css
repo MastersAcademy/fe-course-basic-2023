@@ -265,6 +265,17 @@
   border-radius: 20px;
 }
 
+@keyframes cardShake {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+.pokemons__cards-item:hover {
+  cursor: pointer;
+  animation: cardShake .25s;
+}
+
 .card__pokemon {
   display: flex;
   align-items: center;

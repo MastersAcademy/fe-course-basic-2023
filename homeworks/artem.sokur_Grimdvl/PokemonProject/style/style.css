@@ -129,14 +129,45 @@ footer {
 }
 
 .foot__social-media {
+  position: relative;
   width: 42px;
   height: 42px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #FFF;
+  border: 2px solid #FFF;
   border-radius: 100%;
   transition: .5s;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.foot__social-media::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 0;
+  scale: 1 0;
+  transform-origin: bottom;
+  transition: scale .5s ease;
+}
+
+.foot__social-media:hover::before {
+  scale: 1 1;
+}
+
+.foot__social-media img {
+  color: #000;
+  transition: .5s ease;
+  z-index: 2;
+}
+
+.foot__social-media:hover img {
+  filter: invert(100%);
+  transform: rotateY(360deg);
 }
 
 .foot__subscription {
@@ -197,8 +228,8 @@ footer {
     min-height: 120px;
   }
 
-  main {
-    padding-top: 120px;
+  .about {
+    gap: 40px;
   }
 
   .filters__form {
@@ -232,15 +263,73 @@ footer {
 
   .foot__subscription {
     font-size: 20px;
-    line-height: 26px;
+    line-height: 20px;
+    margin-top: 10px;
   }
-}
 
-@media (max-width: 768px) {
+  .about__logo-pokemon {
+    transform: scale(1.1);
+  }
+
+  .about__logo-pokemon-ball {
+    transform: translateX(-50%) rotate(-30deg);
+  }
 
   main {
     padding-top: 100px;
   }
+
+  .pokemons__title {
+    padding-top: 100px;
+  }
+
+  .login__form--submit:hover {
+    box-shadow: none;
+  }
+
+  .filters__search--button:hover {
+    box-shadow: none;
+  }
+
+  .filters__form-select.active::before {
+    transform: rotate(0);
+  }
+
+  .filters__form-select.active::after {
+    transform: rotate(0);
+  }
+
+  .calculator__inputs--button button:hover {
+    box-shadow: none;
+  }
+
+  .head__navigation-item:hover::after {
+    transform: scaleX(0);
+  }
+
+  .head__navigation-item:hover.active::after {
+    transform: scaleX(1);
+  }
+
+  .login {
+    padding-bottom: 80px;
+  }
+
+  .pokemons__cards-item:hover {
+    animation: none;
+  }
+
+  .foot__social-media:hover img {
+    filter: invert(0);
+    transform: rotateY(0deg);
+  }
+
+  .foot__social-media:hover::before {
+    scale: 0 0;
+  }
+}
+
+@media (max-width: 768px) {
 
   h1 {
     font-size: 36px;
@@ -256,19 +345,16 @@ footer {
   .about__logo-pokemon {
     width: 100%;
     height: 100%;
+    padding-bottom: 50px;
+  }
+
+  .about__logo-pokemon-ball {
+    top: 80%;
   }
 
   .about__logo {
     width: 90%;
     height: 90%;
-  }
-
-  .about__logo-pokemon {
-    transform: scale(1.1);
-  }
-
-  .about__logo-pokemon-ball {
-    transform: rotate(-30deg);
   }
 
   .head__logo-title {
@@ -290,14 +376,6 @@ footer {
     margin-left: 10px;
   }
 
-  .filters__form-select.active::before {
-    transform: rotate(0);
-  }
-
-  .filters__form-select.active::after {
-    transform: rotate(0);
-  }
-
   .filters__form-size {
     margin-left: 0;
   }
@@ -315,8 +393,6 @@ footer {
   }
 
   .foot__subscription {
-    line-height: 22px;
-    margin-top: 10px;
     font-size: 18px;
   }
 
@@ -347,12 +423,40 @@ footer {
 
 @media (max-width: 576px) {
 
+  .about__logo-pokemon-ball {
+    height: 80px;
+    width: 80px;
+  }
+
+  .about__logo-pokemon-ball::after,
+  .about__logo-pokemon-ball::before {
+    width: 70px;
+    height: 35px;
+  }
+
+  .about__logo-pokemon-ball::before {
+    margin-top: 40px;
+  }
+
+  .about__logo-pokemon-ball-item {
+    width: 70px;
+    margin-top: 39px;
+    height: 4px;
+  }
+
+  .about__logo-pokemon-ball-item::after {
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    top: -12px;
+  }
+
   .menu-open {
     overflow: hidden;
   }
 
   section {
-    padding: 0 5px;
+    padding: 0 10px;
   }
 
   .head {
@@ -414,9 +518,9 @@ footer {
 
   .head__navigation {
     position: absolute;
-    top: 150px;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(-50%);
     min-width: 0;
     display: flex;
     opacity: 0;
@@ -428,7 +532,6 @@ footer {
     font-size: 20px;
     gap: 30px;
     transition: .5s;
-    transition-delay: 0;
   }
 
   .head__navigation.active {
@@ -506,17 +609,13 @@ footer {
     z-index: 2;
   }
 
-  .pokemons__title {
-    padding-top: 80px;
-  }
-
   .foot__social-media {
     width: 35px;
     height: 35px;
   }
 
   .foot__subscription {
-    line-height: 20px;
+    line-height: 18px;
     font-size: 16px;
   }
 
@@ -544,10 +643,55 @@ footer {
 
   .calculator__inputs-history {
     font-size: 14px;
+    line-height: 14px;
+  }
+
+  .login {
+    padding-bottom: 60px;
   }
 }
 
 @media (max-width: 480px) {
+
+  .about {
+    gap: 30px;
+  }
+
+  section {
+    padding: 0 5px;
+  }
+
+  .about__logo-pokemon-ball {
+    top: 75%;
+  }
+
+  .about__logo-pokemon-ball {
+    height: 70px;
+    width: 70px;
+  }
+
+  .about__logo-pokemon-ball::after,
+  .about__logo-pokemon-ball::before {
+    width: 60px;
+    height: 30px;
+  }
+
+  .about__logo-pokemon-ball::before {
+    margin-top: 35px;
+  }
+
+  .about__logo-pokemon-ball-item {
+    width: 70px;
+    margin-top: 33px;
+    height: 4px;
+  }
+
+  .about__logo-pokemon-ball-item::after {
+    left: 23px;
+    width: 14px;
+    height: 14px;
+    top: -9px;
+  }
 
   h1 {
     font-size: 30px;
@@ -581,34 +725,6 @@ footer {
 
   .calculator__inputs-number input {
     font-size: 16px;
-  }
-
-  .about__logo-pokemon-ball {
-    height: 80px;
-    width: 80px;
-  }
-
-  .about__logo-pokemon-ball::after,
-  .about__logo-pokemon-ball::before {
-    width: 70px;
-    height: 35px;
-  }
-
-  .about__logo-pokemon-ball::before {
-    margin-top: 40px;
-  }
-
-  .about__logo-pokemon-ball-item {
-    width: 70px;
-    margin-top: 39px;
-    height: 4px;
-  }
-
-  .about__logo-pokemon-ball-item::after {
-    left: 20px;
-    width: 20px;
-    height: 20px;
-    top: -12px;
   }
 
   .foot__subscription {
