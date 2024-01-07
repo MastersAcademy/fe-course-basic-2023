@@ -1,4 +1,3 @@
-// card create from API data
 async function createCardElement(game) {
     const template = document.querySelector('template[data-type="card-template"]');
     const cardCopy = document.importNode(template.content, true);
@@ -38,7 +37,6 @@ async function createCardElement(game) {
     return cardCopy;
 }
 
-// fetch API
 const apiUrl = 'https://mmo-games.p.rapidapi.com/games?';
 const ulContainer = document.querySelector('[data-type="cards-container"]');
 
@@ -57,28 +55,22 @@ async function renderCards(container, genre) {
 
     try {
         const response = await fetch(url, options);
-        if (response.ok) {
-            const gamesList = await response.json();
+        const gamesList = await response.json();
 
-            container.innerHTML = '';
+        container.innerHTML = '';
 
-            const limitedGames = gamesList.length > 50 ? gamesList.slice(0, 50) : gamesList;
+        const limitedGames = gamesList.length > 50 ? gamesList.slice(0, 50) : gamesList;
 
-            limitedGames.forEach(async (game) => {
-                const cardElement = await createCardElement(game);
-                container.appendChild(cardElement);
-            });
-        } else {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
+        limitedGames.forEach(async (game) => {
+            const cardElement = await createCardElement(game);
+            container.appendChild(cardElement);
+        });
     } catch (error) {
         console.error('Error fetching games:', error);
     }
 }
 
-// filters
 const queryParams = {
-    // for genre filter
     genre: '',
     shooter: '&category=shooter',
     arpg: '&category=action-rpg',
@@ -87,15 +79,12 @@ const queryParams = {
     mmorpg: '&category=mmorpg',
     fighting: '&category=fighting',
     allgames: '',
-    // for radio filter
     platform: '&platform=pc',
     online: '&platform=browser',
-    // for checkbox filter
     newGames: '&sort-by=release-date',
     oldGames: '&sort-by=alphabetical',
 };
 
-// announcement data-type
 const checkNew = document.querySelector('[data-type="check-new"]');
 const checkOld = document.querySelector('[data-type="check-old"]');
 const radioPlatform = document.querySelector('[data-type="platform-radio"]');
@@ -103,14 +92,12 @@ const radioOnline = document.querySelector('[data-type="online-radio"]');
 const searchField = document.querySelector('[data-type="search"]');
 const noFound = document.querySelector('[data-type="text-h2"]');
 
-// Genre filtering
 function genreFilter(params) {
     const selectElement = document.getElementById('genre');
     const selectedGenreNow = selectElement.value;
     return params[selectedGenreNow] || params.allgames;
 }
 
-// Function to apply all filters and render cards
 function buildDynamicUrl(params) {
     const dynamicUrl = genreFilter(params);
     const platform = document.querySelector('[data-type="platform-radio"]').checked
@@ -141,7 +128,6 @@ selectElement.addEventListener('change', async () => {
 
 genreFilter(queryParams);
 
-// Radio filtering
 function radioFilter(params) {
     radioPlatform.addEventListener('change', async () => {
         params.dynamicUrl = radioPlatform.checked ? params.platform : params.allgames;
@@ -154,7 +140,6 @@ function radioFilter(params) {
     });
 }
 
-// Checkbox filtering
 function checkboxFilter(params) {
     let dynamicUrl = params.allgames;
 
@@ -171,7 +156,6 @@ function checkboxFilter(params) {
     renderCards(ulContainer, dynamicUrl);
 }
 
-// Search field filtering
 function searchFilter() {
     searchField.addEventListener('input', () => {
         const searchTerm = searchField.value.toLowerCase();
@@ -190,12 +174,16 @@ function searchFilter() {
                 card.style.display = 'none';
             }
         });
-
-        // Display 'No results found!' if no matching cards are found
         noFound.innerText = anyCardFound ? '' : 'No results found!';
     });
 }
 
-radioFilter(queryParams);
-checkboxFilter(queryParams);
-searchFilter();
+async function callFunctionsAndRenderCards(params) {
+    await applyFiltersAndRenderCards(params);
+    genreFilter(params);
+    radioFilter(params);
+    checkboxFilter(params);
+    searchFilter();
+}
+
+callFunctionsAndRenderCards(queryParams);

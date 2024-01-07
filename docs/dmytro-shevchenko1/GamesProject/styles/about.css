@@ -1,0 +1,53 @@
+.about-main {
+  flex-grow: 1;
+}
+
+.intro {
+  color: #221F1F;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 32px;
+  margin: 60px 53px 238px;
+}
+
+.about-h1 {
+  color: #221F1F;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 32px;
+  margin-top: 0;
+}
+
+.link {
+  color: #EF4934;
+}
+
+.intro-flex{
+  display: flex;
+  justify-content: space-between;
+  gap: 70px;
+}
+
+@media (max-width: 1000px) {
+  .about-img {
+    width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-img {
+    width: 300px;
+  }
+}
+
+@media (max-width: 730px) {
+  .intro-flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-img {
+    width: 100%;
+  }
+}
+

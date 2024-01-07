@@ -31,27 +31,27 @@
             </nav>
         </header>
         <main>
-            <form class="filters" action="./pokemons.html" method="get" data-form-filters>
+            <form class="filters" action="#" data-form-filters>
                 <fieldset class="filters__container">
-                    <select class="filters__select" name="pokemons-types">
-                        <option value="" selected>Type</option>
-                        <option value="Fire">Fire</option>
-                        <option value="Dragon">Dragon</option>
-                        <option value="Poison">Poison</option>
-                        <option value="Flying">Flying</option>
-                        <option value="Ground">Ground</option>
-                    </select>
+                    <div class="filters__select-custom">
+                        <button class="filters__select-custom-btn" data-select-custom-btn type="button">Apply type:</button>
+                        <ul class="filters__select-list" data-select-custom-list>
+                            <li class="filters__select-option" data-option-value="grass">Grass</li>
+                            <li class="filters__select-option" data-option-value="poison">Poison</li>
+                            <li class="filters__select-option" data-option-value="electric">Electric</li>
+                            <li class="filters__select-option" data-option-value="psychic">Psychic</li>
+                            <li class="filters__select-option" data-option-value="fire">Fire</li>
+                            <li class="filters__select-option" data-option-value="flying">Flying</li>
+                            <li class="filters__select-option" data-option-value="water">Water</li>
+                            <li class="filters__select-option" data-option-value="bug">Bug</li>
+                            <li class="filters__select-option" data-option-value="normal">Normal</li>
+                        </ul>
+                    </div>
                     <fieldset class="filters__group">
-                        <input class="filters__input" id="all" type="radio" name="radio-options" value="all">
-                        <label class="filters__custom filters__custom--radio" for="all">All</label>
-                        <input class="filters__input" id="favorites" type="radio" name="radio-options" value="favorites">
-                        <label class="filters__custom filters__custom--radio" for="favorites">Favorites</label>
-                    </fieldset>
-                    <fieldset class="filters__group">
-                        <input class="filters__input" id="big" type="checkbox" name="size" value="big">
-                        <label class="filters__custom filters__custom--checkbox" for="big">Big</label>
-                        <input class="filters__input" id="small" type="checkbox" name="size" value="small">
-                        <label class="filters__custom filters__custom--checkbox" for="small">Small</label>
+                        <input class="filters__input" type="radio" name="sort-height" value="High first" id="high">
+                        <label class="filters__custom filters__custom--radio" for="high">High first</label>
+                        <input class="filters__input" type="radio" name="sort-height" value="Low first" id="low">
+                        <label class="filters__custom filters__custom--radio" for="low">Low first</label>
                     </fieldset>
                     <fieldset class="filters__search">
                         <input class="filters__search-input" type="search" name="search-query" placeholder="Search...">
@@ -63,6 +63,7 @@
                 <div class="pokemons__container">
                     <h2 class="pokemons__title">Study project "Pokemons"</h2>
                     <ul class="pokemons__cards" data-cards-container></ul>
+                    <div class="pokemons__loader-container" data-loader-container></div>
                 </div>
             </section>
         </main>
