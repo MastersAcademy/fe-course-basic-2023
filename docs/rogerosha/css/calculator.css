@@ -12,6 +12,7 @@
   border-radius: 6px;
   display: flex;
   text-align: center;
+  border: 1px solid #333;
 }
 
 .operation {
@@ -66,5 +67,9 @@
 
   .field {
     flex-direction: column;
+  }
+
+  .operation, .firstValue, .secondValue, .button {
+    font-size: 20px;
   }
 }
