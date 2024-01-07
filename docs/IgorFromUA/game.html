@@ -10,10 +10,10 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="styles/styles.css">
         <link rel="stylesheet" type="text/css" href="styles/header.css">
-        <link rel="stylesheet" type="text/css" href="styles/calculator.css">
         <link rel="stylesheet" type="text/css" href="styles/loading-spin.css">
+        <link rel="stylesheet" type="text/css" href="styles/game.css">
         <link rel="stylesheet" type="text/css" href="styles/footer.css">
-        <title>Calculator</title>
+        <title>GamesProject</title>
     </head>
     <body class="wrapper-all">
         <div class="wrapper">
@@ -31,10 +31,10 @@
                             </div>
                             <ul class="navigation__list">
                                 <li class="navigation__item">
-                                    <a class="navigation__link navigation__link_active" href="./calculator.html">Calculator</a>
+                                    <a class="navigation__link" href="./calculator.html">Calculator</a>
                                 </li>
                                 <li class="navigation__item">
-                                    <a class="navigation__link" href="./games.html">Games</a>
+                                    <a class="navigation__link navigation__link_active" href="./games.html">Games</a>
                                 </li>
                                 <li class="navigation__item">
                                     <a class="navigation__link" href="./index.html">About</a>
@@ -47,40 +47,9 @@
                     </div>
                 </div>
             </header>
-            <main class="container">
-                <h1 class="field__title">Calculate Games</h1>
-                <div class="field">
-                    <span class="limit__min">max 10</span>
-                    <span class="limit__max">max100</span>
-                    <label class="field__label-firstValue">
-                        <input id="firstValue" class="field__input">
-                    </label>
-                    <label class="field__label-select">
-                        <select name="operation" id="operation" class="field__select">
-                            <option value="+">+</option>
-                            <option value="-">-</option>
-                            <option value="/">/</option>
-                            <option value="*">*</option>
-                            <option value="**">**</option>
-                        </select>
-                    </label>
-                    <label class="field__label-SecondValue">
-                        <input id="secondValue" class="field__input">
-                    </label>
-                    <button id="calculate" type="button" class="field__button">=</button>
-                    <span id="result" class="field__result"></span>
-                </div>
-                <div class="date-text" data-date-text=""></div>
-                <div class="error-text" data-error-text></div>
+            <main class="container" data-game>
                 <div class="loading">
                     <div class="loading__spin" data-loading></div>
-                </div>
-                <div class="big-result" data-big-result>
-                    <div class="big-result__first-number" data-big-result="first-number"></div>
-                    <div class="big-result__operator" data-big-result="operation"></div>
-                    <div class="big-result__second-number" data-big-result="second-number"></div>
-                    <div class="big-result__equal" data-big-result="equal"></div>
-                    <div class="big-result__result" data-big-result="result"></div>
                 </div>
             </main>
         </div>
@@ -117,7 +86,7 @@
                     Zapisochiy</p>
             </div>
         </footer>
+        <script src="./scripts/game.js">
+        </script>
     </body>
-    <script src="./scripts/script.js"></script>
-    <script src="./scripts/homework.js"></script>
 </html>
