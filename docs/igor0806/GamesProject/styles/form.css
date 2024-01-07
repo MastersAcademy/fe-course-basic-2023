@@ -1,45 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
-
-body {
-  font-family: "Roboto", sans-serif;
-  color: #221F1F;
-  margin: 0;
-  min-width: 400px;
-}
-
-.container {
-  max-width: 1175px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.intro {
-  background-color: #EF4934;
-}
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
-}
-
-.link_list {
-  list-style: none;
-  color: #FFF;
-  display: flex;
-  gap: 50px;
-}
-
-.link:hover {
-  text-decoration: underline;
-}
-
-.nav-link {
-  text-decoration: none;
-  color: #FFF;
-  font-size: 16px;
-  font-weight: 500;
+.main_login {
+  flex-grow: 1;
 }
 
 .login_title {
@@ -56,19 +16,15 @@ body {
 }
 
 .login_input {
-  width: 80%;
+  width: 92%;
   border-radius: 7px;
   border: .006em solid #A9A9A9;
   font-size: 14px;
-}
-
-.login_input {
   display: block;
   margin: 20px 0 40px;
   padding: 30px 20px;
   color: #A9A9A9;
   font-weight: 400;
-  font-size: 14px;
 }
 
 .login_input:focus {
@@ -90,7 +46,7 @@ body {
 }
 
 .btn_form {
-  width: 575px;
+  width: 100%;
   font-weight: 600;
   font-size: 22px;
   background-color: #EF4934;
@@ -101,35 +57,16 @@ body {
   border-radius: 6px;
 }
 
-/* Footer */
-
-.footer {
-  background-color: #221F1F;
-  padding: 30px;
-}
-
-.social {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.footer_text {
+.btn_success {
+  width: 50%;
+  font-weight: 600;
+  font-size: 22px;
+  background-color: #EF4934;
   color: #FFF;
-  text-align: center;
-}
-
-a {
-  text-decoration: none;
-}
-
-.footer_link {
-  color: #FFF;
-}
-
-.center_title {
-  text-align: center;
-  padding-top: 200px;
+  padding: 27px 0;
+  margin-bottom: 170px;
+  border: none;
+  border-radius: 6px;
 }
 
 @media (max-width: 520px) {

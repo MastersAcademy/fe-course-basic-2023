@@ -9,6 +9,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>About</title>
         <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="./styles/common.css">
     </head>
 
     <body>
@@ -83,8 +84,9 @@
                     </div>
 
                     <div class="filter_search">
-                        <input type="text" id="search" name="search" placeholder="Search" class="search-input" data-type-filter="search">
-                        <label for="search"></label>
+                        <label for="search">
+                            <input type="text" id="search" name="search" placeholder="Search" class="search-input" data-type-filter="search">
+                        </label>
                         <button type="button" id="search-button" class="search-button" data-type-filter="search-button">Search</button>
                     </div>
                 </div>
@@ -103,8 +105,8 @@
                     <template data-type="card-template">
                         <div class="card_card">
                             <div class="card_games">
-                                <div class="card_img">
-                                    <img data-card-img alt="img" src="" width="90px" height="90px">
+                                <div>
+                                    <img class="card_img" data-card-img alt="img" src="">
                                 </div>
                                 <div class="card_title">
                                     <h3 class="name_game" data-card-title></h3>
@@ -132,15 +134,15 @@
 
         <footer class="footer">
             <div class="social">
-                <a href="#">
+                <a class="footer_img" href="#">
                     <img src="icon/facebook.svg" alt="img">
                 </a>
 
-                <a href="#">
+                <a class="footer_img" href="#">
                     <img src="icon/in.svg" alt="img">
                 </a>
 
-                <a href="#">
+                <a class="footer_img" href="#">
                     <img src="icon/insta.svg" alt="img">
                 </a>
             </div>

@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>Basic JS</title>
         <link rel="stylesheet" href="./styles/calculator.css">
+        <link rel="stylesheet" href="./styles/common.css">
     </head>
     <body>
 
@@ -39,41 +40,42 @@
                 </div>
             </div>
         </header>
-
-        <div class="container">
-            <h1>Calculator v. 1</h1>
-            <div class="field">
-                <label>
-                    <input id="firstValue" class="firstValue">
-                </label>
-                <label>
-                    <select name="operation" id="operation">
-                        <option value="+">+</option>
-                        <option value="-">-</option>
-                        <option value="/">/</option>
-                        <option value="*">*</option>
-                        <option value="**">**</option>
-                    </select>
-                </label>
-                <label>
-                    <input id="secondValue" class="secondValue">
-                </label>
-                <button id="calculate" type="button" class="btn_calculator">=</button>
-                <span id="result"></span>
+        <section class="calculator_main">
+            <div class="container">
+                <h1 class="calculator_title">Calculator v. 1</h1>
+                <div class="field">
+                    <label>
+                        <input id="firstValue" class="firstValue">
+                    </label>
+                    <label>
+                        <select name="operation" id="operation">
+                            <option value="+">+</option>
+                            <option value="-">-</option>
+                            <option value="/">/</option>
+                            <option value="*">*</option>
+                            <option value="**">**</option>
+                        </select>
+                    </label>
+                    <label>
+                        <input id="secondValue" class="secondValue">
+                    </label>
+                    <button id="calculate" type="button" class="btn_calculator">=</button>
+                    <span id="result"></span>
+                </div>
             </div>
-        </div>
+        </section>
 
         <footer class="footer">
             <div class="social">
-                <a href="#">
+                <a class="footer_img" href="#">
                     <img src="icon/facebook.svg" alt="img">
                 </a>
 
-                <a href="#">
+                <a class="footer_img" href="#">
                     <img src="icon/in.svg" alt="img">
                 </a>
 
-                <a href="#">
+                <a class="footer_img" href="#">
                     <img src="icon/insta.svg" alt="img">
                 </a>
             </div>

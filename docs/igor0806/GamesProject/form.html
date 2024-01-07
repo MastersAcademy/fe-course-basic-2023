@@ -9,6 +9,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Form</title>
         <link rel="stylesheet" href="styles/form.css">
+        <link rel="stylesheet" href="./styles/common.css">
     </head>
     <body>
 
@@ -44,31 +45,34 @@
                 </div>
             </div>
         </header>
-        <div class="container">
-            <h1 class="login_title">Login page</h1>
-            <form class="login_form" action="./succes.html">
-                <label for="email_input" class="email">Email</label>
-                <input type="text" class="login_input" id="email_input" name="email" placeholder="Enter your email address">
-                <label for="password_input" class="password">Password</label>
-                <input type="password" class="login_input" id="password_input" name="password" placeholder="Enter your password">
-                <input type="checkbox" class="checkbox" id="not_a_robot_checkbox" name="not_a_robot">
-                <label for="not_a_robot_checkbox">I’m not a robot</label>
-                <div id="errors-container"></div>
-                <button type="button" class="btn_form" id="submit_button" value="Login">Login</button>
-            </form>
-        </div>
+
+        <main class="main_login">
+            <div class="container">
+                <h1 class="login_title">Login page</h1>
+                <form class="login_form" action="./succes.html">
+                    <label for="email_input" class="email">Email</label>
+                    <input type="text" class="login_input" id="email_input" name="email" placeholder="Enter your email address">
+                    <label for="password_input" class="password">Password</label>
+                    <input type="password" class="login_input" id="password_input" name="password" placeholder="Enter your password">
+                    <input type="checkbox" class="checkbox" id="not_a_robot_checkbox" name="not_a_robot">
+                    <label for="not_a_robot_checkbox">I’m not a robot</label>
+                    <div id="errors-container"></div>
+                    <button type="button" class="btn_form" id="submit_button" value="Login">Login</button>
+                </form>
+            </div>
+        </main>
 
         <footer class="footer">
             <div class="social">
-                <a href="#">
+                <a class="footer_img" href="#">
                     <img src="icon/facebook.svg" alt="img">
                 </a>
 
-                <a href="#">
+                <a class="footer_img" href="#">
                     <img src="icon/in.svg" alt="img">
                 </a>
 
-                <a href="#">
+                <a class="footer_img" href="#">
                     <img src="icon/insta.svg" alt="img">
                 </a>
             </div>

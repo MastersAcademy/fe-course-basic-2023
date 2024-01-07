@@ -1,4 +1,3 @@
-// games-mock.js
 let games = [];
 const gameList = document.querySelector('[data-type ="games-list"]');
 const loadingCard = document.querySelector('[data-type="loading"]');
@@ -33,11 +32,11 @@ function createCardElement(game) {
     cardDescription.textContent = words.length > maxWord
         ? `${words.slice(0, maxWord).join(' ')}...`
         : game.short_description;
-    cardGenre.textContent = game.genre;
-    cardPlatform.textContent = game.platform;
-    cardPublisher.textContent = game.publisher;
-    cardDeveloper.textContent = game.developer;
-    cardReleased.textContent = game.release_date;
+    cardGenre.textContent = `Genre: ${game.genre}`;
+    cardPlatform.textContent = `Platform: ${game.platform}`;
+    cardPublisher.textContent = `Publisher: ${game.publisher}`;
+    cardDeveloper.textContent = `Developer: ${game.developer}`;
+    cardReleased.textContent = `Released : ${game.release_date}`;
 
     return cardClone;
 }
@@ -112,22 +111,22 @@ function filterGames() {
 }
 
 function init() {
-    const filterForm = document.querySelector('[data-type="filter-form"]');
     const newCheckbox = document.querySelector('[data-type-filter="new"]');
     const oldCheckbox = document.querySelector('[data-type-filter="old"]');
     const genreSelect = document.querySelector('[data-type-filter="genre"]');
     const platformSelect = document.querySelector('[data-type-filter="platform"]');
     const searchButton = document.querySelector('[data-type-filter="search-button"]');
 
-    filterForm.addEventListener('change', filterGames);
     newCheckbox.addEventListener('change', filterGames);
     oldCheckbox.addEventListener('change', filterGames);
     genreSelect.addEventListener('change', filterGames);
     platformSelect.addEventListener('change', filterGames);
 
-    searchButton.addEventListener('click', (event) => {
-        event.preventDefault();
-        filterGames();
+    searchButton.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            filterGames();
+        }
     });
 
     renderCards(gameList, games);
