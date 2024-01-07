@@ -32,9 +32,6 @@ function createCardElement(game) {
         cardsDescription.dataset.fullText = game.short_description;
         cardsDescription.textContent = `${game.short_description.substring(0, descMaxLength)}...`;
         cardsDescription.style.cursor = 'pointer';
-        cardsDescription.addEventListener('click', function () {
-            this.textContent = this.dataset.fullText;
-        });
     }
 
     cardsGenre.textContent = `Genre: ${game.genre}`;
@@ -62,17 +59,12 @@ function filterOldGames(allGames) {
 }
 
 function displayCards(cont, gamesList, isNewChecked, isOldChecked) {
-    // None of check-boxes is selected.
     let filteredGames = gamesList;
-    // Only new selected.
     if (isNewChecked && !isOldChecked) {
         filteredGames = filterNewGames(gamesList);
-        // Only old selected.
     } else if (!isNewChecked && isOldChecked) {
         filteredGames = filterOldGames(gamesList);
-        // Both selected.
     } else if (isNewChecked && isOldChecked) {
-        // We link results from new and old games together.
         filteredGames = filterNewGames(gamesList).concat(filterOldGames(gamesList));
     }
     const fragment = document.createDocumentFragment();
@@ -96,7 +88,6 @@ function hideLoading() {
 async function fetchCards() {
     try {
         showLoading();
-        // fetch takes two param.: url and object param.
         const response = await fetch('https://mmo-games.p.rapidapi.com/games', {
             method: 'get',
             headers: {
@@ -104,10 +95,8 @@ async function fetchCards() {
                 'X-RapidAPI-Host': 'mmo-games.p.rapidapi.com',
             },
         });
-        // converting to json
         const json = await response.json();
         games = json.slice(0, 50);
-        // Errors block
     } catch (err) {
         console.log('Error data:', err);
         container.innerHTML = 'Error loading data';

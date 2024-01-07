@@ -8,21 +8,12 @@ const RESULT_PAGE_PATH = './success.html';
 const submitButton = document.getElementById(SUBMIT_BUTTON_ID);
 const passwordHide = document.getElementById(PASSWORD_INPUT_ID);
 
-/**
- * Return input value by id.
- * @param {string} elementId
- * @return {string|boolean} input value
- */
 function getValueById(elementId) {
     const element = document.getElementById(elementId);
     const type = element.getAttribute('type');
     return type === 'checkbox' ? element.checked : element.value;
 }
 
-/**
- * Add errors to errors container.
- * @param {Object} inputData in format like: { [input_id]: error_text, ... }
- */
 function setErrors(inputData) {
     const errorContainerElement = document.getElementById(ERRORS_CONTAINER_ID);
     Object.values(inputData).forEach((error) => {
@@ -33,17 +24,11 @@ function setErrors(inputData) {
     });
 }
 
-/**
- * Delete all errors from errors container.
- */
 function deleteErrors() {
     const errorContainerElement = document.getElementById(ERRORS_CONTAINER_ID);
     errorContainerElement.replaceChildren();
 }
 
-/**
- * Goes to the page with the result.
- */
 function navigateToResultPage() {
     window.location.href = RESULT_PAGE_PATH;
 }
