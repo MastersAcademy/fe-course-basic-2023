@@ -430,3 +430,7 @@ body {
   color: #FFF;
   text-decoration: none;
 }
+
+.about__text_link:hover {
+  color: #EF4934;
+}
