@@ -4,7 +4,7 @@ const secondInputNumber = document.querySelectorAll('.number__second--input');
 const secondOutputNumber = document.querySelector('.number__second--output');
 const signSelect = document.querySelectorAll('.math__sign--select');
 const signOutput = document.querySelector('.math__sign--output');
-const outputs = document.querySelectorAll('.calculator__outputs-numbers div');
+const outputs = document.querySelectorAll('[data-type="outputs"]');
 const equelButton = document.querySelectorAll('.equel--button');
 const resultInput = document.querySelector('.result--input');
 const resultOutput = document.querySelector('.output-result');
@@ -16,7 +16,6 @@ const MAX_HISTORY_ITEMS = 3;
 
 let result;
 
-// transform value to numbers
 const checkNumInputs = (selector) => {
     selector.forEach((item) => {
         item.addEventListener('input', () => {
@@ -42,7 +41,7 @@ const getHistoryFromLocalStorage = () => {
 };
 
 const renderHistory = () => {
-    historyDiv.innerHTML = '';
+    historyDiv.textContent = '';
     const history = getHistoryFromLocalStorage();
     history.forEach((operation) => {
         const historyItem = document.createElement('p');
@@ -147,7 +146,6 @@ const calculate = (firstNum, operator, secondNum) => {
     return result;
 };
 
-// Calculator
 const changeState = (state) => {
     const calculator = (event, elem, prop) => {
         checkNumInputs(firstInputNumber);
