@@ -51,6 +51,7 @@
 .input-search {
   border: 1px solid #FFF;
   width: 100%;
+  border-radius: 6px 0 0 6px;
   background-image: url("../images/search.svg");
   background-repeat: no-repeat;
   background-position: 5px center;
