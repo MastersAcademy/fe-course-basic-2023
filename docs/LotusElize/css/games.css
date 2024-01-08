@@ -368,7 +368,7 @@
     width: 277px;
     height: 36px;
   }
-  
+
   .games-filter__box {
     justify-content: center;
   }
@@ -397,11 +397,11 @@
 
 @media  (max-width: 1023px) {
   .section_game-cards {
-    margin-top: 250px;
+    margin-top: 470px;
   }
 
   .games-filter {
-    top: 110px;
+    top: 250px;
     width: 100%;
     height: 380px;
     display: grid;
@@ -423,23 +423,23 @@
     display: flex;
     justify-content: center;
   }
-  
+
   .game-cards {
     display: flex;
     flex-wrap:wrap;
     justify-content:center;
     gap: 15px;
     padding: 0;
-  
+
   }
-  
+
   .card {
     gap: 22px;
     width: 80%;
     height: 280px;
     font-size: 15px;
   }
-  
+
 }
 
 @media (max-width: 400px) {

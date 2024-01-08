@@ -1,13 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700 &display=swap");
+
 body {
   font-family: "Roboto", sans-serif;
-  font-style: normal;
+  font-weight: 400;
   color: #221F1F;
   margin: 0;
   padding: 0;
@@ -65,7 +67,7 @@ a {
 
 .menu__nav-link {
   font-size: 16px;
-  color: #FFF;
+  color: #fff;
   text-decoration: none;
   font-style: normal;
   font-weight: 500;
@@ -73,7 +75,7 @@ a {
 
 .main {
   max-width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -109,7 +111,7 @@ a {
 }
 
 .about__me_title {
-  color: #221F1F;
+  color: #221f1f;
   font-size: 48px;
   font-style: normal;
   font-weight: 700;
@@ -129,7 +131,7 @@ a {
 }
 
 .section__link {
-  color: #F04934;
+  color: #f04934;
 }
 
 .footer {

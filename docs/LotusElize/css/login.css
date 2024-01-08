@@ -159,3 +159,9 @@
 .errors-container {
   display: none;
 }
+
+@media  (max-width:1024px) {
+  .login_form_box {
+    margin-top: 150px;
+  }
+}
