@@ -6,6 +6,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="./img/logo.png">
         <link rel="stylesheet" href="./style/games.css">
         <title>Games</title>
     </head>
@@ -13,54 +14,96 @@
         <header class="header">
             <div class="header__box">
                 <img class="header__logo" src="img/logo.png" alt="logo" width="55px" height="57px">
-                <nav class="header__links">
-                    <a class="header__link" href="./games.html">Games</a>
-                    <a class="header__link" href="./index.html">About</a>
-                    <a class="header__link" href="./login.html">Login</a>
-                </nav>
+                <div class="wrap_links">
+                    <nav class="header__links">
+                        <a class="header__link" href="./calculator.html">Calculator</a>
+                        <a class="header__link" href="./games.html">Games</a>
+                        <a class="header__link" href="./index.html">About</a>
+                        <a class="header__link" href="./login.html">Login</a>
+                    </nav>
+                </div>
+                <div class="wrap-button">
+                    <button type="button" id="toggle_menu" class="navbar__toggler" data-easy-toggle="#mobile-menu" data-easy-class="mobile-wrap_show">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </button>
+                </div>
             </div>
         </header>
         <form class="wrapper__filter-search" action="./games.html" method="get" data-form-filters>
             <div class="filter-search">
-                <select class="filter-search__select-option" name="games-types">
-                    <option class="select-option" value="" selected>All</option>
-                    <option class="select-option" value="Shooter">Shooter</option>
-                    <option class="select-option" value="ARPG">ARPG</option>
-                    <option class="select-option" value="Strategy">Strategy</option>
-                    <option class="select-option" value="MMORPG">MMORPG</option>
+                <select class="filter-search__select-option" name="games-category">
+                    <option class="select-option" value="all" selected>all</option>
+                    <option class="select-option" value="mmorpg">mmorpg</option>
+                    <option class="select-option" value="shooter">shooter</option>
+                    <option class="select-option" value="strategy">strategy</option>
+                    <option class="select-option" value="moba">moba</option>
+                    <option class="select-option" value="racing">racing</option>
+                    <option class="select-option" value="sports">sports</option>
+                    <option class="select-option" value="social">social</option>
+                </select>
+                <select class="filter-search__select-option" name="games-platform">
+                    <option value="all" selected>All platforms</option>
+                    <option value="pc">PC (Windows)</option>
+                    <option value="browser">Web Browser</option>
                 </select>
 
-                <div class="filter-search__radio-select">
-                    <label class="radio-select__label" for="platform">
-                        <input class="radio-select__btn" type="radio" id="platform" name="radio-btns" value="platform">Platform
+                <div class="filter-search__radio-select" name="radio-date-sort">
+                    <label class="radio-select__label" for="game_date_new">
+                        <input class="radio-select__btn" type="radio" id="game_date_new" name="game_date" value="New First">New First
                     </label>
-                    <label class="radio-select__label" for="online_games">
-                        <input class="radio-select__btn" type="radio" id="online_games" name="radio-btns" value="online_games">Online games
-                    </label>
-                </div>
-                <div class="filter-search__checkbox">
-                    <label class="checkbox__label" for="game_date_new">
-                        <input class="checkbox__game-date" type="checkbox" id="game_date_new" name="game_date_new" value="not-robot">New
-                    </label>
-                    <label class="checkbox__label" for="game_date_old">
-                        <input class="checkbox__game-date" type="checkbox" id="game_date_old" name="game_date_old" value="not-robot">Old
+                    <label class="radio-select__label" for="game_date_old">
+                        <input class="radio-select__btn" type="radio" id="game_date_old" name="game_date" value="Old First">Old First
                     </label>
                 </div>
-
                 <div class="search">
                     <label class="search__input">
                         <img class="search__img" src="img/search.png" alt="search" width="24px" height="24px">
                         <input class="search__input-text" type="text" name="search-query" placeholder="Search" pattern=".{1,20}" required>
                     </label>
-                    <input class="search__btn" type="submit" value="Apply">
+                    <button class="search__btn" type="button" id="applyButton">Apply</button>
                 </div>
             </div>
         </form>
         <main class="wrapper">
             <h1 class="contain__heading"> Study project "Games"</h1>
+            <div class="loading-overlay">
+                <div class="loading-overlay__spinner">
+                </div>
+            </div>
             <section class="card-games">
             </section>
         </main>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__content">
+                    <ul class="social-icon">
+                        <li class="icon__fb">
+                            <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener">
+                                <img src="./img/icon/icon_fb.png" alt="icon facebook">
+                            </a>
+                        </li>
+                        <li class="icon__link">
+                            <a href="https://www.linkedin.com/" target="_blank" rel="noopener">
+                                <img src="./img/icon/icon_link.png" alt="icon linkedin">
+                            </a>
+                        </li>
+                        <li class="icon__inst">
+                            <a href="https://www.instagram.com/">
+                                <img src="./img/icon/icon_inst.png" alt="icon instagram">
+                            </a>
+                        </li>
+                    </ul>
+                    <h3 class="copyright">
+                        Made with 💗 on course 'Frontend for beginners' from Masters Academy in 2023, by Vasyl Biliak
+                    </h3>
+                </div>
+            </div>
+        </footer>
+        <script src="scripts/menu.js"></script>
         <script src="./scripts/games.js"></script>
+
     </body>
 </html>
+
