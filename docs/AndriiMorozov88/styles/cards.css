@@ -146,9 +146,9 @@
   color: #221F1F;
 }
 
-.card__paragraf {
+.card__data {
   font-size: 14px;
-  width: 250px;
+  max-width: 250px;
   font-weight: 400;
   line-height: 21px;
   margin-bottom: 6px;
@@ -157,12 +157,29 @@
   white-space: nowrap;
 }
 
-.card__paragraf--short {
-  width: 180px;
+.card__data--short {
+  max-width: 180px;
 }
 
 .card__description {
   grid-area: card-description;
+}
+
+.button-up--hidden {
+  display: none;
+}
+
+.button-up--active {
+  position: fixed;
+  bottom: 150px;
+  right: 40px;
+  border: none;
+  background: none;
+}
+
+.button-up__svg {
+  width: 40px;
+  height: 40px;
 }
 
 @media (min-width: 700px) {
@@ -226,7 +243,7 @@
   .filter__select {
     width: 90%;
     height: 60px;
-    font-size: 20px;
+    font-size: 15px;
     margin: 10px;
   }
 
@@ -234,7 +251,7 @@
     display: flex;
     flex-wrap: wrap;
     min-width: 90%;
-    font-size: 25px;
+    font-size: 18px;
     margin: 10px;
   }
 
