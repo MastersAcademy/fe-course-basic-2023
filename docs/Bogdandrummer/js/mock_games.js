@@ -1,4 +1,4 @@
-export const games = [
+export const gamesMock = [
     {
         id: 1136,
         title: 'Overwatch 2',

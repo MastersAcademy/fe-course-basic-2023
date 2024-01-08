@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/*Обнуление*/
 
 * {
   padding: 0;
@@ -92,5 +91,3 @@ h6 {
   font-size: inherit;
   font-weight: 400;
 }
-
-/*--------------------*/

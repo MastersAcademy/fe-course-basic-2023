@@ -1,4 +1,5 @@
 import { burgerButton, burgerAction } from './header.js';
+import { gamesMock } from './mock_games.js';
 
 burgerButton.addEventListener('click', burgerAction);
 const preloader = document.querySelector('.preloader');
@@ -70,9 +71,6 @@ async function loadGames() {
                 'X-RapidAPI-Host': 'mmo-games.p.rapidapi.com',
             },
         });
-        if (!response.ok) {
-            throw new Error(`We have a trouble : ${response.statusText}`);
-        }
         games = await response.json();
         preloader.style.display = 'none';
         renderCards(gamesList, games.slice(0, 50));
@@ -80,9 +78,12 @@ async function loadGames() {
         preloader.style.display = 'none';
         gamesList.innerHTML = '';
         gamesList.append(Err);
+        renderCards(gamesList, gamesMock);
     }
+    return games;
 }
-const startRender = () => {
+
+const init = () => {
     const oldCheck = document.querySelector('[data-type="old-release"]');
     const newCheck = document.querySelector('[data-type="new-release"]');
     const formFilter = document.querySelector('[data-type="form-filter"]');
@@ -92,7 +93,7 @@ const startRender = () => {
     newCheck.addEventListener('click', filterGames);
     loadGames();
 };
-startRender();
+init();
 const buttonTop = document.querySelector('[data-arrow__up]');
 const genreList = document.querySelector('[data-GenreList]');
 const radioMain = document.querySelector('[data-radio__main]');
