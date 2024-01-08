@@ -1,0 +1,62 @@
+.header {
+  max-width: 100%;
+  background-color: #EF4934;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 53px;
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-items {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+}
+
+.nav-items a {
+  font-size: 16px;
+  font-weight: 500;
+  color: #FFF;
+  text-decoration: none;
+}
+
+.game-page .nav-items .cards-link {
+  text-decoration: underline;
+  text-underline-offset: 7px;
+  text-decoration-thickness: 1px;
+}
+
+.about-page .nav-items .about-link {
+  text-decoration: underline;
+  text-underline-offset: 7px;
+  text-decoration-thickness: 1px;
+}
+
+.login-page .nav-items .login-link {
+  text-decoration: underline;
+  text-underline-offset: 7px;
+  text-decoration-thickness: 1px;
+}
+
+.calculator-page .nav-items .calc-link {
+  text-decoration: underline;
+  text-underline-offset: 7px;
+  text-decoration-thickness: 1px;
+}
+
+@media (max-width: 590px) {
+  .nav-items {
+    gap:20px;
+    padding: 0;
+  }
+
+  .header-flex {
+    flex-wrap: wrap;
+  }
+}
