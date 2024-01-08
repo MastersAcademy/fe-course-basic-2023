@@ -108,16 +108,13 @@ function createCard() {
                 </li>
                 <li class="card-pokemon__text">
                     <span class="card-pokemon__text--bold">Type: </span>
-                    <button class="card-pokemon__btn card-pokemon__btn--yellow"
-                        type="button">Fighting</button>
-                    <button class="card-pokemon__btn card-pokemon__btn--red" type="button">Dark</button>
+                    <span class="card-pokemon__tag card-pokemon__tag--fighting">Fighting</span>
+                    <span class="card-pokemon__tag card-pokemon__tag--dark">Dark</span>
                 </li>
                 <li class="card-pokemon__text">
                     <span class="card-pokemon__text--bold">Weaknesses: </span>
-                    <button class="card-pokemon__btn card-pokemon__btn--pink"
-                        type="button">Fairy</button>
-                    <button class="card-pokemon__btn card-pokemon__btn--purple"
-                        type="button">Flying</button>
+                    <span class="card-pokemon__tag card-pokemon__tag--ice">Ice</span>
+                    <span class="card-pokemon__tag card-pokemon__tag--flying">Flying</span>
                 </li>
             </ul>
         </article>
@@ -187,9 +184,9 @@ function firstOutputOperandHandler() {
         overlapStyle(pokemonsCardsCount, cardsList);
 
         addElement(MATH_FIRST_OPERAND_ELEMENT, cardsList);
+        
+        MATH_FIRST_OPERAND_ELEMENT.style.paddingBottom = '280px';
     }
-
-    MATH_FIRST_OPERAND_ELEMENT.style.paddingBottom = '280px';
 }
 
 function lastOutputOperandHandler() {
