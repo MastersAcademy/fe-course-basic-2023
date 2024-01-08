@@ -1,0 +1,39 @@
+@import url("main.css");
+
+.about__inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 65px;
+  padding: 60px 0;
+}
+
+.about__text {
+  color: #221F1F;
+}
+
+.about__text-title {
+  font-size: 48px;
+  padding-bottom: 24px;
+}
+
+.about__text-info {
+  font-size: 22px;
+}
+
+.about__text-link {
+  color: #EF4934;
+  text-decoration: underline;
+}
+
+@media (max-width: 860px) {
+
+  .about__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about__text {
+    text-align: center;
+  }
+}

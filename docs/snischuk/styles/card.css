@@ -1,0 +1,117 @@
+.card-pokemon {
+  width: 100%;
+  padding: 22px 12px;
+  background-color: #ECECEC;
+  border-radius: 12px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, .25);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 90px 1fr;
+  row-gap: 22px;
+}
+
+.card-pokemon__header {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  column-gap: 12px;
+  align-items: center;
+}
+
+.card-pokemon__image {
+  max-width: 90px;
+}
+
+.card-pokemon__title {
+  color: var(--color-dark);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.card-pokemon__body {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 16px;
+}
+
+.card-pokemon__text {
+  color: var(--color-dark);
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.card-pokemon__text--bold {
+  color: var(--color-dark);
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 600;
+}
+
+.card-pokemon__tag {
+  display: inline-block;
+  text-align: center;
+  min-width: 69px;
+  margin: 5px;
+  padding: 7px 9px;
+  color: #FFF;
+  background-color: var(--color-accent);
+  border-radius: 3px;
+}
+
+.card-pokemon__tag--flying {
+  background-color: #FDB714;
+}
+
+.card-pokemon__tag--fire {
+  background-color: #FC8B00;
+}
+
+.card-pokemon__tag--psychic {
+  background-color: #FF87F3;
+}
+
+.card-pokemon__tag--dragon {
+  background-color: #803078;
+}
+
+.card-pokemon__tag--ice {
+  background-color: #A5CEDC;
+}
+
+.card-pokemon__tag--water {
+  background-color: #00BAF7;
+}
+
+.card-pokemon__tag--rock {
+  background-color: #7D7C7C;
+}
+
+.card-pokemon__tag--ground {
+  background-color: #27561A;
+}
+
+.card-pokemon__tag--electric {
+  background-color: #7B00FF;
+}
+
+.card-pokemon__tag--poison {
+  background-color: #0F740F;
+}
+
+.card-pokemon__tag--grass {
+  background-color: #738319;
+}
+
+.card-pokemon__tag--ghost {
+  background-color: #B173B9;
+}
+
+.card-pokemon__tag--normal {
+  background-color: #1B0A7C;
+}
+
+.card-pokemon__tag--dark {
+  background-color: #414145;
+}

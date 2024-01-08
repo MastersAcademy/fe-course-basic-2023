@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Pokemons</title>
+        <link rel="stylesheet" type="text/css" href="pokemons.css">
+    </head>
+    <body>
+        <div class="container__page">
+            <header class="header__page">
+                <div class="logo">
+                    <img class="logo__img" src="img/logo1.png" alt="logo">
+                </div>
+                <nav class="menu">
+                    <ul class="navigation">
+                        <li class="navigation__item">
+                            <a class="navigation__item-link" href="calculator.html">Calculator</a>
+                        </li>
+                        <li class="navigation__item active">
+                            <a class="navigation__item-link" href="#">Pokemons</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__item-link" href="index.html">About</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__item-link" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="filter-bar">
+                <div>
+                    <select class="drop-down-list" name="list" id="list" disabled>
+                        <option value="1">Fighting</option>
+                        <option value="2">Dark</option>
+                    </select>
+                </div>
+                <div class="radio">
+                    <form class="radio__label" action="#">
+                        <div class="radio__only-new">
+                            <input class="radio" type="radio" name="radio" id="radio1" disabled>
+                            <label class="label label__txt-radio" for="radio1">Only new</label>
+                        </div>
+                        <div class="radio__favorites">
+                            <input class="radio" type="radio" name="radio" id="radio2" disabled>
+                            <label class="label label__txt-radio" for="radio2">Favorites</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="checkbox">
+                    <form class="checkbox__label" action="#">
+                        <div class="checkbox__big">
+                            <input class="checkbox" type="checkbox" name="checkbox" id="bigPokemon" data-bigPokemon>
+                            <label class="label" for="bigPokemon">Big</label>
+                        </div>
+                        <div class="checkbox__small">
+                            <input class="checkbox" type="checkbox" name="checkbox" id="smallPokemon">
+                            <label class="label" for="smallPokemon">Small</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="search-bar">
+                    <div class="search">
+                        <img class="search__img" src="img/search.png" alt="search-img">
+                        <input class="search" type="search" placeholder="Sorry, but search is now unavailable">
+                    </div>
+                    <input class="search__btn" type="button" value="Apply">
+                </div>
+            </div>
+            <main class="container__main">
+                <h1 class="title__txt">Study project "Pokemons"</h1>
+                <div class="loader__container">
+                    <div id="loader" class="loader"></div>
+                </div>
+                <template data-cardTemplate>
+                    <section class="card" data-card>
+                        <div class="card__information">
+                            <div class="card__information-title">
+                                <div class="card__information-img">
+                                    <img class="card__img" data-newSrc="" src="img/heroe1.png" alt="hero" data-cardImg>
+                                </div>
+                                <div class="card__information-head">
+                                    <h3 data-cardName>Urshifu</h3>
+                                </div>
+                            </div>
+                            <div class="card__information-txt">
+                                <div class="heightPokemon">
+                                    <span class="property">Height:</span>
+                                    <span class="value" data-cardHeight> 6'03'</span>
+                                </div>
+                                <div class="card__information-txt-weight">
+                                    <span class="property">Weight:</span>
+                                    <span class="value"> 231.5 lbs</span>
+                                </div>
+                                <div class="card__information-txt-number">
+                                    <span class="property">Number:</span>
+                                    <span class="value"> 0002</span>
+                                </div>
+                                <div class="card__information-txt-type">
+                                    <span class="property">Type:</span>
+                                    <span class="value value-yellow type"> Fighting</span>
+                                    <span class="value value-red type"> Dark</span>
+                                </div>
+                                <div class="card__information-txt-weaknesses">
+                                    <span class="">Weaknesses:</span>
+                                    <span class="value value-pink weaknesses"> Fairy</span>
+                                    <span class="value value-blue weaknesses"> Flying</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </template>
+            </main>
+            <div id="cardContainer" class="card-container" data-cards="50"></div>
+            <footer>
+                <div class="footer__container">
+                    <div class="footer__social-img">
+                        <img class="social-img" src="./img/facebook.png" alt="facebook">
+                        <img class="social-img" src="./img/linkedin.png" alt="linkedin">
+                        <img class="social-img" src="./img/instagram.png" alt="instagram">
+                    </div>
+                    <div class="footer__txt">
+                        <span class="footer__main-txt">Made with
+                            <span class="heart"> &hearts; </span> on course
+                            <a class="footer__link" href="https://www.mastersacademy.education/frontend-for-beginners-it">'Frontend for beginners' from Masters
+                                Academy </a> in 2023, Kostyiantyn Nosatskyi</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="js/pokemon.js"></script>
+    </body>
+</html>
