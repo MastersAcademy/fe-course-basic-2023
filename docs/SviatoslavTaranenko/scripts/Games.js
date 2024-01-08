@@ -103,7 +103,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 function init() {
-
 }
 
 document.addEventListener('DOMContentLoaded', init);
