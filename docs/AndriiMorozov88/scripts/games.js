@@ -11,6 +11,7 @@ const oldFirstButton = document.querySelector('[data-old-first]');
 const infoElement = document.querySelector('[data-info]');
 const burgerButton = document.querySelector('[data-burger-button]');
 const filterBlock = document.querySelector('[data-filter-block]');
+const upButton = document.querySelector('[data-up-button]');
 async function getGamesArray() {
     infoElement.classList.replace('cards-loading-info--disabled', 'cards-loading-info');
     footerElement.classList.replace('footer--relative', 'footer--absolute');
@@ -45,10 +46,7 @@ async function getGamesArray() {
     } else {
         games = await allGames;
     }
-    for (let count = 0; count < 100000; count++) {
-        console.log(count);
-        console.clear();
-    }
+    for (let count = 0; count < 1000000000; count++);
     return games;
 }
 function createCardElement(game, array) {
@@ -134,6 +132,21 @@ async function showFilterArray() {
     renderCards(cardContainer, getFilterArray(await getGamesArray()));
 }
 
+function goToUp() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    });
+}
+
+function showUpButton() {
+    if (window.scrollY > 500) {
+        upButton.classList.replace('button-up--hidden', 'button-up--active');
+    } else {
+        upButton.classList.replace('button-up--active', 'button-up--hidden');
+    }
+}
+
 async function init() {
     footerElement.classList.add('footer--absolute');
     renderCards(cardContainer, await getGamesArray());
@@ -151,7 +164,8 @@ async function init() {
     });
     burgerButton.addEventListener('click', () => {
         filterBlock.classList.toggle('filter__block--active');
-        console.log(1);
     });
+    upButton.addEventListener('click', goToUp);
+    window.addEventListener('scroll', showUpButton);
 }
 window.addEventListener('load', init);

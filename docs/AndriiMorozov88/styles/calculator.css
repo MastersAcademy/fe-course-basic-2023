@@ -55,17 +55,14 @@
 }
 
 .comment-container {
-  display: flex;
-  justify-content: center;
   max-width: 600px;
-  align-items: center;
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 400;
-  padding: 0 10px;
+  padding: 20px;
 }
 
 .comment-container--error {
-  font-size: 48px;
+  font-size: 30px;
   font-weight: 600;
   color: #E35734;
 }
@@ -92,7 +89,9 @@
   }
 
   .comment-container {
-    font-size: 24px;
+    text-align: center;
+    font-size: 20px;
+    max-width: 400px;
   }
 
   .comment-container--error {
