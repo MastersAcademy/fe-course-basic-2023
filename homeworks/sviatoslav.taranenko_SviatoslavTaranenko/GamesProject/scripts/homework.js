@@ -29,7 +29,6 @@ function showResult(result) {
  * - else return number of result: 1 '+' 2 returns 3
  */
 function calculate(firstValue, secondValue, operation) {
-
     if (!firstValue.trim() || !secondValue.trim()) {
         return 'Enter a number';
     }
