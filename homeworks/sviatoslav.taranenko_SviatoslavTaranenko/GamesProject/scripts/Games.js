@@ -103,4 +103,8 @@ function renderGames(games) {
     });
 }
 
+function init() {
+
+}
+
 document.addEventListener('DOMContentLoaded', init);

@@ -196,15 +196,6 @@ body {
   color: #EF4934;
 }
 
-.about__text_link {
-  color: #FFF;
-  text-decoration: none;
-}
-
-.about__text_link:hover {
-  color: #EF4934;
-}
-
 .about__all .about__text .about__text_link {
   color: #EF4934;
 }

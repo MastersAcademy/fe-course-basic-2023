@@ -192,11 +192,11 @@ body {
   text-decoration: none;
 }
 
-.about__all .about__text .about__text_link {
+.about__text_link:hover {
   color: #EF4934;
 }
 
-.about__text_link:hover {
+.about__all .about__text .about__text_link {
   color: #EF4934;
 }
 
