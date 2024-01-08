@@ -5,8 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./styles/about.css">
-        <title>About</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.ico">
+        <link rel="stylesheet" href="./styles/login.css">
+        <title>Login page</title>
     </head>
     <body>
         <header class="header">
@@ -22,44 +23,30 @@
                         <a class="header__nav-link" href="./pokemons.html">Pokemons</a>
                     </li>
                     <li>
-                        <a class="header__nav-link--active" href="./index.html">About</a>
+                        <a class="header__nav-link" href="./index.html">About</a>
                     </li>
                     <li>
-                        <a class="header__nav-link" href="./login.html">Login</a>
+                        <a class="header__nav-link--active" href="./login.html">Login</a>
                     </li>
                 </ul>
             </nav>
         </header>
-        <main class="about">
-            <div class="about__container">
-                <img class="about__image" src="./images/about.jpeg" alt="pokemon">
-                <div class="about__content">
-                    <h2 class="about__title">About me</h2>
-                    <p class="about__text">
-                        Hi! My name is Max and I'm a Junior Frontend Developer. I am already
-                        familiar with main Web Technologies like HTML, CSS, JavaScript and
-                        Git version control system.
-                    </p>
-                    <p class="about__text">
-                        This page was developed during the course
-                        <a class="about__link" href="https://www.mastersacademy.education/frontend-for-beginners-it"
-                            target="_blank">
-                            'Frontend for beginners' from Masters Academy in 2023.
-                        </a>
-                    </p>
-                    <p class="about__text">
-                        This is a social project from MOCG company where I got an
-                        opportunity to work with Frontend mentors and to create my own small
-                        project for the portfolio.
-                    </p>
-                    <p class="about__text">
-                        You can contact me via
-                        <a class="about__link" href="https://t.me/max_snischuk" target="_blank">Telegram</a>
-                        and/or check out my
-                        <a class="about__link" href="https://github.com/snischuk" target="_blank">GitHub</a>.
-                    </p>
-                </div>
-            </div>
+        <main>
+            <form class="login">
+                <h2 class="login__title">Login page</h2>
+                <label class="login__label">
+                    Email
+                    <input class="login__field" id="email" type="text" placeholder="Enter your email address">
+                </label>
+                <label class="login__label">
+                    Password
+                    <input class="login__field" id="password" type="password" placeholder="Enter your password">
+                </label>
+                <input class="login__checkbox-input" id="checkbox" type="checkbox">
+                <label class="login__checkbox-custom" for="checkbox">I'm not a robot</label>
+                <div class="login__errors-container" id="erros-container"></div>
+                <button class="login__btn" id="submit" type="button">Login</button>
+            </form>
         </main>
         <footer class="footer">
             <div class="footer__container">
@@ -106,5 +93,6 @@
                 </span>
             </div>
         </footer>
+        <script src="./scripts/validateForm.js"></script>
     </body>
 </html>

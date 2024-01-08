@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
+:root {
+  --color-dark: #221F1F;
+  --color-light: #FFF;
+  --color-accent: #EF4934;
+
+  --padding-container: 16px;
+}
+
+@media (min-width: 769px) {
+
+  :root {
+    --padding-container: 50px;
+  }
+}
