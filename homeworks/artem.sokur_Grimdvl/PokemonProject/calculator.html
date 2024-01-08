@@ -3,12 +3,16 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style/style.css">
         <link rel="stylesheet" href="style/calculator.css">
-        <title>PokemonProject</title>
+        <link rel="stylesheet" href="style/style.css">
+        <title>Pokemons</title>
+        <link type="image/png" sizes="16x16" rel="icon" href="img/favicons/icons8-покебол-16.png">
+        <link type="image/png" sizes="32x32" rel="icon" href="img/favicons/icons8-покебол-32.png">
+        <link type="image/png" sizes="96x96" rel="icon" href="img/favicons/icons8-покебол-96.png">
     </head>
 
     <body>
+        <div class="overlay"></div>
         <header>
             <div class="container" style="background-color: #333;">
                 <section class="head">
@@ -17,6 +21,7 @@
                         <span class="head__logo-title">MASTERS ACADEMY</span>
                     </a>
 
+                    <div class="hamburger"></div>
                     <nav class="head__navigation">
                         <a class="head__navigation-item active" href="#">Calculator</a>
                         <a class="head__navigation-item" href="pokemons.html">Pokemons</a>
@@ -31,13 +36,13 @@
             <section class="calculator">
                 <div class="calculator__inputs">
                     <div class="calculator__inputs-number">
-                        <label for="first-number">Number 1</label>
-                        <input class="number" data-type="number" id="first-number" type="text" maxlength="4">
+                        <label for="number__first--input">Number 1</label>
+                        <input id="number__first--input" class="number__first--input" type="text" maxlength="5">
                     </div>
 
                     <div class="calculator__inputs-sign">
-                        <label for="sign">Math</label>
-                        <select class="sign" data-type="sign" name="sign" id="sign">
+                        <label for="math__sign--select">Math</label>
+                        <select id="math__sign--select" class="math__sign--select" name="sign">
                             <option value="sign" selected hidden>sign</option>
                             <option value="+">+</option>
                             <option value="-">-</option>
@@ -49,42 +54,30 @@
                     </div>
 
                     <div class="calculator__inputs-number">
-                        <label for="second-number">Number 2</label>
-                        <input class="number" data-type="number" id="second-number" type="text" maxlength="4">
+                        <label for="number__second--input">Number 2</label>
+                        <input id="number__second--input" class="number__second--input" type="text" maxlength="5">
                     </div>
 
                     <div class="calculator__inputs--button">
-                        <label for="button">Button</label>
-                        <button class="button" id="button" type="button">=</button>
+                        <label for="equel--button">Button</label>
+                        <button id="equel--button" class="equel--button" type="button">=</button>
                     </div>
                     <div class="calculator__inputs-result">
                         <span class="equal">Result</span>
-                        <div class="input-result" data-type="result" id="result"></div>
+                        <div id="result--input" class="result--input"></div>
                     </div>
                 </div>
 
+                <div class="calculator__inputs-history"></div>
+
                 <div class="calculator__outputs">
                     <h1 class="calculator__outputs-numbers">
-                        <div class="number" data-type="number"></div>
-                        <div class="sign" data-type="sign"></div>
-                        <div class="number" data-type="number"></div>
-                        <div class="output-equal"></div>
-                        <div class="output-result" data-type="result"></div>
+                        <div class="number__first--output" data-type="outputs"></div>
+                        <div class="math__sign--output" data-type="outputs"></div>
+                        <div class="number__second--output" data-type="outputs"></div>
+                        <div class="output-equal" data-type="outputs"></div>
+                        <div class="output-result" data-type="outputs"></div>
                     </h1>
-
-                    <div class="calculator__outputs-cards">
-                        <div class="output__first">
-                            <!-- <img class="output__first-card" src="img/pokemon.png" alt="pokemon"> -->
-                        </div>
-                        <div class="signs" data-type="sign"></div>
-                        <div class="output__second">
-                            <!-- <img src="img/pokemon.png" alt="pokemon"> -->
-                        </div>
-                        <div class="output-equals"></div>
-                        <div class="output__result">
-                            <!-- <img src="img/pokemon.png" alt="pokemon"> -->
-                        </div>
-                    </div>
                 </div>
             </section>
         </main>
@@ -111,5 +104,6 @@
         </footer>
 
         <script src="scripts/calculator.js"></script>
+        <script src="scripts/script.js"></script>
     </body>
 </html>
