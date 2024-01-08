@@ -1,0 +1,151 @@
+@import url("main.css");
+
+.checkbox {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  background-color: #221F1F;
+}
+
+.checkbox__item {
+  color: #FFF;
+}
+
+.checkbox__item-inp {
+  height: 0;
+  width: 0;
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox__item-check {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-color: #221F1F;
+  border: solid 1px #FFF;
+  border-radius: 6px;
+  margin-right: 12px;
+  vertical-align: sub;
+}
+
+.checkbox__item-check::before {
+  content: " ";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-image: url("../images/check-black.png");
+  background-size: contain;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: .2s ease-in-out;
+}
+
+.checkbox__item-inp:checked+.checkbox__item-check::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.games__text-title {
+  font-size: 48px;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.games__loading {
+  font-size: 48px;
+  color: #221F1F;
+}
+
+.games__loading-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.games__cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  gap: 25px;
+  padding: 0;
+  margin: 0 0 46px;
+}
+
+.games__box-item {
+  background-color: #ECECEC;
+  padding: 12px 12px 22px;
+  border-radius: 12px;
+  max-width: 100%;
+}
+
+.games__box-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.games__top-icon {
+  max-height: 72px;
+  max-width: 96px;
+  border-radius: 8px;
+}
+
+.games__top-name {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.games__top-info {
+  line-height: 21px;
+}
+
+.games__box-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding-top: 22px;
+}
+
+@media (max-width: 1180px) {
+
+  .games__cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    gap: 25px;
+    padding: 0;
+  }
+}
+
+@media (max-width: 890px) {
+
+  .games__cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    padding: 0 25px;
+    margin: 0;
+    width: 100%;
+  }
+
+  .games__box-bottom {
+    margin: 0;
+  }
+}
+
+@media (max-width: 680px) {
+
+  .games__text-title {
+    font-size: 30px;
+    padding: 30px 0;
+  }
+
+  .games__cards-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 25px;
+    margin: 0;
+  }
+}
+

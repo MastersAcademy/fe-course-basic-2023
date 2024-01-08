@@ -1,0 +1,62 @@
+@import url("main.css");
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.field__title {
+  margin: 20px 0;
+  text-align: center;
+  font-size: 48px;
+}
+
+.field__calculate {
+  display: flex;
+  column-gap: 20px;
+}
+
+.field__select,
+.field__input,
+.field__button,
+.field__result {
+  font-size: 22px;
+}
+
+.field__input,
+.field__select {
+  border-radius: 6px;
+  border: .6px solid #A9A9A9;
+}
+
+.field__select {
+  background-color: #333;
+  color: #FFF;
+}
+
+.field__button {
+  border-radius: 6px;
+  background: #EF4934;
+  border-width: 0;
+  color: #FFF;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 860px) {
+
+  .field__calculate {
+    display: flex;
+    line-height: 58px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .field__select,
+  .field__input,
+  .field__button,
+  .field__result {
+    font-size: 30px;
+  }
+}
