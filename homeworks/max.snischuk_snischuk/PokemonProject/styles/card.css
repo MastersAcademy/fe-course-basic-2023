@@ -1,4 +1,5 @@
 .card-pokemon {
+  width: 100%;
   padding: 22px 12px;
   background-color: #ECECEC;
   border-radius: 12px;
@@ -21,7 +22,7 @@
 }
 
 .card-pokemon__title {
-  color: #221F1F;
+  color: var(--color-dark);
   font-size: 18px;
   font-weight: 700;
   line-height: normal;
@@ -35,14 +36,14 @@
 }
 
 .card-pokemon__text {
-  color: #221F1F;
+  color: var(--color-dark);
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
 }
 
 .card-pokemon__text--bold {
-  color: #221F1F;
+  color: var(--color-dark);
   font-size: 14px;
   line-height: 21px;
   font-weight: 600;
@@ -58,7 +59,7 @@
   line-height: 21px;
   font-weight: 400;
   color: #FFF;
-  background-color: #EF4934;
+  background-color: var(--color-accent);
   border: none;
   border-radius: 3px;
   transition: filter .3s ease-in-out;
