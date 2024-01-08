@@ -21,27 +21,28 @@
                         <img src="./img/logo.png" alt="logo">
                     </div>
                     <div class="header__menu-section">
-                        <div class="header__menu-section">
-                            <ul class="menu__list">
-                                <li>
-                                    <a href="./calculator.html" class="menu__list-link">Calculator</a>
-                                </li>
-                                <li>
-                                    <a href="./games.html" class="menu__list-link">Games</a>
-                                </li>
-                                <li>
-                                    <a href="./about.html" class="menu__list-link">About</a>
-                                </li>
-                                <li>
-                                    <a href="./login.html" class="menu__list-link">Login</a>
-                                </li>
-                            </ul>
-                        </div>
+                        <ul class="menu__list">
+                            <li>
+                                <a href="./calculator.html" class="menu__list-link">Calculator</a>
+                            </li>
+                            <li>
+                                <a href="./games.html" class="menu__list-link">Games</a>
+                            </li>
+                            <li>
+                                <a href="./index.html" class="menu__list-link">About</a>
+                            </li>
+                            <li>
+                                <a href="./login.html" class="menu__list-link">Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header__burger">
+                        <span></span>
                     </div>
                 </div>
             </div>
         </header>
-        <section class="search">
+        <section class="search search-hidden">
             <div class="search__contain">
                 <form action="#" class="search__form">
                     <div class="form__select">
@@ -87,6 +88,9 @@
                         <button class="search__button" type="submit">Apply</button>
                     </div>
                 </form>
+                <div class="plate">
+                    <h3 id="plate">Open game filters</h3>
+                </div>
             </div>
         </section>
         <main>
@@ -125,7 +129,7 @@
         <footer class="footer">
             <div class="footer__container">
                 <div class="footer__content">
-                    <ul class="social-icon">
+                    <ul class="social__icon">
                         <li class="icon__fb">
                             <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener">
                                 <img src="./img/icons/logo fb.png" alt="icon facebook">
@@ -150,6 +154,8 @@
             </div>
         </footer>
         <script type="module" src="./script/games.js"></script>
+        <script type="module" src="./script/burger.js"></script>
+        <script type="module" src="./script/filters.js"></script>
     </body>
 
 </html>

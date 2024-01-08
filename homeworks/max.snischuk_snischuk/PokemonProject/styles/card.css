@@ -1,10 +1,12 @@
 .card-pokemon {
+  width: 100%;
   padding: 22px 12px;
   background-color: #ECECEC;
   border-radius: 12px;
   box-shadow: 0 0 6px rgba(0, 0, 0, .25);
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: 90px 1fr;
   row-gap: 22px;
 }
 
@@ -20,7 +22,7 @@
 }
 
 .card-pokemon__title {
-  color: #221F1F;
+  color: var(--color-dark);
   font-size: 18px;
   font-weight: 700;
   line-height: normal;
@@ -34,14 +36,14 @@
 }
 
 .card-pokemon__text {
-  color: #221F1F;
+  color: var(--color-dark);
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
 }
 
 .card-pokemon__text--bold {
-  color: #221F1F;
+  color: var(--color-dark);
   font-size: 14px;
   line-height: 21px;
   font-weight: 600;
@@ -57,7 +59,7 @@
   line-height: 21px;
   font-weight: 400;
   color: #FFF;
-  background-color: #EF4934;
+  background-color: var(--color-accent);
   border: none;
   border-radius: 3px;
   transition: filter .3s ease-in-out;
@@ -101,4 +103,24 @@
 
 .card-pokemon__btn--electric {
   background-color: #7B00FF;
+}
+
+.card-pokemon__btn--poison {
+  background-color: #0F740F;
+}
+
+.card-pokemon__btn--grass {
+  background-color: #738319;
+}
+
+.card-pokemon__btn--ghost {
+  background-color: #B173B9;
+}
+
+.card-pokemon__btn--normal {
+  background-color: #1B0A7C;
+}
+
+.card-pokemon__btn--dark {
+  background-color: #414145;
 }

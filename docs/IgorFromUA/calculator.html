@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="styles/styles.css">
+        <link rel="stylesheet" type="text/css" href="styles/header.css">
+        <link rel="stylesheet" type="text/css" href="styles/calculator.css">
+        <link rel="stylesheet" type="text/css" href="styles/loading-spin.css">
+        <link rel="stylesheet" type="text/css" href="styles/footer.css">
+        <title>Calculator</title>
+    </head>
+    <body class="wrapper-all">
+        <div class="wrapper">
+            <header class="header">
+                <div class="container">
+                    <div class="header__wrapper">
+                        <img class="header__logo" src="./src/logo.png" width="55" height="58" alt="logo masters academy">
+                        <nav class="navigation">
+                            <div class="navigation__menu-icon">
+                                <svg width="34" height="19" viewBox="0 0 34 19">
+                                    <rect width="34" height="3.5" rx="1" fill="#FFF"></rect>
+                                    <rect y="8" width="34" height="3.5" rx="1" fill="#FFF"></rect>
+                                    <rect y="16" width="34" height="3.5" rx="1" fill="#FFF"></rect>
+                                </svg>
+                            </div>
+                            <ul class="navigation__list">
+                                <li class="navigation__item">
+                                    <a class="navigation__link navigation__link_active" href="./calculator.html">Calculator</a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a class="navigation__link" href="./games.html">Games</a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a class="navigation__link" href="./index.html">About</a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a class="navigation__link" href="./login.html">Login</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <main class="container">
+                <h1 class="field__title">Calculate Games</h1>
+                <div class="field">
+                    <span class="limit__min">max 10</span>
+                    <span class="limit__max">max100</span>
+                    <label class="field__label-firstValue">
+                        <input id="firstValue" class="field__input">
+                    </label>
+                    <label class="field__label-select">
+                        <select name="operation" id="operation" class="field__select">
+                            <option value="+">+</option>
+                            <option value="-">-</option>
+                            <option value="/">/</option>
+                            <option value="*">*</option>
+                            <option value="**">**</option>
+                        </select>
+                    </label>
+                    <label class="field__label-SecondValue">
+                        <input id="secondValue" class="field__input">
+                    </label>
+                    <button id="calculate" type="button" class="field__button">=</button>
+                    <span id="result" class="field__result"></span>
+                </div>
+                <div class="date-text" data-date-text=""></div>
+                <div class="error-text" data-error-text></div>
+                <div class="loading">
+                    <div class="loading__spin" data-loading></div>
+                </div>
+                <div class="big-result" data-big-result>
+                    <div class="big-result__first-number" data-big-result="first-number"></div>
+                    <div class="big-result__operator" data-big-result="operation"></div>
+                    <div class="big-result__second-number" data-big-result="second-number"></div>
+                    <div class="big-result__equal" data-big-result="equal"></div>
+                    <div class="big-result__result" data-big-result="result"></div>
+                </div>
+            </main>
+        </div>
+        <footer class="footer wrapper">
+            <div class="container">
+                <div class="footer__link">
+                    <a href="https://www.facebook.com/profile.php?id=100001989712819" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
+                            <circle cx="21" cy="21" r="21" fill="white"></circle>
+                            <path
+                                d="M29.9 11H12.1C11.8083 11 11.5285 11.1159 11.3222 11.3222C11.1159 11.5285 11 11.8083 11 12.1V29.9C11 30.1917 11.1159 30.4715 11.3222 30.6778C11.5285 30.8841 11.8083 31 12.1 31H21.68V23.25H19.08V20.25H21.68V18C21.6261 17.4718 21.6885 16.9381 21.8627 16.4365C22.0369 15.9349 22.3188 15.4775 22.6885 15.0964C23.0582 14.7153 23.5068 14.4196 24.0028 14.2302C24.4989 14.0408 25.0304 13.9623 25.56 14C26.3383 13.9952 27.1163 14.0353 27.89 14.12V16.82H26.3C25.04 16.82 24.8 17.42 24.8 18.29V20.22H27.8L27.41 23.22H24.8V31H29.9C30.0445 31 30.1875 30.9715 30.321 30.9163C30.4544 30.861 30.5757 30.78 30.6778 30.6778C30.78 30.5757 30.861 30.4544 30.9163 30.321C30.9715 30.1875 31 30.0445 31 29.9V12.1C31 11.9555 30.9715 11.8125 30.9163 11.679C30.861 11.5456 30.78 11.4243 30.6778 11.3222C30.5757 11.22 30.4544 11.139 30.321 11.0837C30.1875 11.0285 30.0445 11 29.9 11Z"
+                                fill="#EF4934"></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ihor-zapisochnyi-751b9424b/" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
+                            <circle cx="21" cy="21" r="21" fill="white"></circle>
+                            <path
+                                d="M28.7778 11C29.3671 11 29.9324 11.2341 30.3491 11.6509C30.7659 12.0676 31 12.6329 31 13.2222V28.7778C31 29.3671 30.7659 29.9324 30.3491 30.3491C29.9324 30.7659 29.3671 31 28.7778 31H13.2222C12.6329 31 12.0676 30.7659 11.6509 30.3491C11.2341 29.9324 11 29.3671 11 28.7778V13.2222C11 12.6329 11.2341 12.0676 11.6509 11.6509C12.0676 11.2341 12.6329 11 13.2222 11H28.7778ZM28.2222 28.2222V22.3333C28.2222 21.3727 27.8406 20.4513 27.1613 19.772C26.482 19.0927 25.5607 18.7111 24.6 18.7111C23.6556 18.7111 22.5556 19.2889 22.0222 20.1556V18.9222H18.9222V28.2222H22.0222V22.7444C22.0222 21.8889 22.7111 21.1889 23.5667 21.1889C23.9792 21.1889 24.3749 21.3528 24.6666 21.6445C24.9583 21.9362 25.1222 22.3319 25.1222 22.7444V28.2222H28.2222ZM15.3111 17.1778C15.8062 17.1778 16.281 16.9811 16.631 16.631C16.9811 16.281 17.1778 15.8062 17.1778 15.3111C17.1778 14.2778 16.3444 13.4333 15.3111 13.4333C14.8131 13.4333 14.3355 13.6312 13.9833 13.9833C13.6312 14.3355 13.4333 14.8131 13.4333 15.3111C13.4333 16.3444 14.2778 17.1778 15.3111 17.1778ZM16.8556 28.2222V18.9222H13.7778V28.2222H16.8556Z"
+                                fill="#EF4934"></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
+                            <circle cx="21" cy="21" r="21" fill="white"></circle>
+                            <path
+                                d="M21 17.6714C19.1571 17.6714 17.6714 19.1714 17.6714 21C17.6714 22.8286 19.1714 24.3286 21 24.3286C22.8286 24.3286 24.3286 22.8286 24.3286 21C24.3286 19.1714 22.8286 17.6714 21 17.6714ZM31 21C31 19.6143 31 18.2571 30.9286 16.8714C30.8571 15.2714 30.4857 13.8429 29.3143 12.6857C28.1429 11.5143 26.7286 11.1429 25.1286 11.0714C23.7429 11 22.3857 11 21 11C19.6143 11 18.2571 11 16.8714 11.0714C15.2714 11.1429 13.8429 11.5143 12.6857 12.6857C11.5143 13.8571 11.1429 15.2714 11.0714 16.8714C11 18.2571 11 19.6143 11 21C11 22.3857 11 23.7429 11.0714 25.1286C11.1429 26.7286 11.5143 28.1571 12.6857 29.3143C13.8571 30.4857 15.2714 30.8571 16.8714 30.9286C18.2571 31 19.6143 31 21 31C22.3857 31 23.7429 31 25.1286 30.9286C26.7286 30.8571 28.1571 30.4857 29.3143 29.3143C30.4857 28.1429 30.8571 26.7286 30.9286 25.1286C31.0143 23.7571 31 22.3857 31 21ZM21 26.1286C18.1571 26.1286 15.8714 23.8429 15.8714 21C15.8714 18.1571 18.1571 15.8714 21 15.8714C23.8429 15.8714 26.1286 18.1571 26.1286 21C26.1286 23.8429 23.8429 26.1286 21 26.1286ZM26.3429 16.8571C25.6857 16.8571 25.1429 16.3286 25.1429 15.6571C25.1429 14.9857 25.6714 14.4571 26.3429 14.4571C27.0143 14.4571 27.5429 14.9857 27.5429 15.6571C27.5465 15.8136 27.5179 15.9692 27.4589 16.1142C27.4 16.2592 27.3118 16.3905 27.2 16.5C27.0905 16.6118 26.9592 16.7 26.8142 16.7589C26.6692 16.8179 26.5136 16.8465 26.3571 16.8429L26.3429 16.8571Z"
+                                fill="#EF4934"></path>
+                        </svg>
+                    </a>
+                </div>
+                <p class="footer__text">Made with 💗 on course 'Frontend for beginners' from Masters Academy in 2023, by
+                    Ihor
+                    Zapisochiy</p>
+            </div>
+        </footer>
+    </body>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/homework.js"></script>
+</html>
