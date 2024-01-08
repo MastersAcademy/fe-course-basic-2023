@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        >
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Form</title>
+        <link rel="stylesheet" href="styles/form.css">
+        <link rel="stylesheet" href="./styles/common.css">
+    </head>
+    <body>
+
+        <!-- Header  -->
+        <header class="intro">
+            <div class="container">
+                <div class="nav">
+                    <div class="logo">
+                        <img src="icon/logo.svg" alt="img">
+                    </div>
+
+                    <div class="nav-menu">
+                        <ul class="link_list">
+
+                            <li class="link">
+                                <a class="nav-link" href="./calculator.html">Calculator</a>
+                            </li>
+
+                            <li class="link">
+                                <a class="nav-link" href="./games.html">Games</a>
+                            </li>
+
+                            <li class="link">
+                                <a class="nav-link" href="./index.html">About</a>
+                            </li>
+
+                            <li class="link">
+                                <a class="nav-link" href="./form.html">Login</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main_login">
+            <div class="container">
+                <h1 class="login_title">Login page</h1>
+                <form class="login_form" action="./succes.html">
+                    <label for="email_input" class="email">Email</label>
+                    <input type="text" class="login_input" id="email_input" name="email" placeholder="Enter your email address">
+                    <label for="password_input" class="password">Password</label>
+                    <input type="password" class="login_input" id="password_input" name="password" placeholder="Enter your password">
+                    <input type="checkbox" class="checkbox" id="not_a_robot_checkbox" name="not_a_robot">
+                    <label for="not_a_robot_checkbox">I’m not a robot</label>
+                    <div id="errors-container"></div>
+                    <button type="button" class="btn_form" id="submit_button" value="Login">Login</button>
+                </form>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="social">
+                <a class="footer_img" href="#">
+                    <img src="icon/facebook.svg" alt="img">
+                </a>
+
+                <a class="footer_img" href="#">
+                    <img src="icon/in.svg" alt="img">
+                </a>
+
+                <a class="footer_img" href="#">
+                    <img src="icon/insta.svg" alt="img">
+                </a>
+            </div>
+
+            <p class="footer_text">
+                Made with 💗 on course <a class="footer_link" href="https://www.mastersacademy.education/frontend-
+                       for-beginners-it">'Frontend for beginners' from Masters Academy in 2023,</a> by Igor</p>
+
+        </footer>
+        <script src="./scripts/script.js"></script>
+    </body>
+</html>
