@@ -1,0 +1,35 @@
+@import url("./header.css");
+@import url("./footer.css");
+@import url("./font.css");
+@import url("./index.css");
+
+.wrapper_result {
+  height: 100vh;
+}
+
+.result {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-row-gap: 120px;
+  justify-content: center;
+  align-items: center;
+}
+
+.success__title {
+  padding-top: 50px;
+}
+
+.success__btn-back {
+  height: 40px;
+  border-radius: 6px;
+  background-color: #EF4934;
+  color: #FFFF;
+  box-shadow: 0 4px 30px 0;
+  cursor: pointer;
+  border: none;
+}
+
+.success__btn-back:hover {
+  background-color: #C03A24FF;
+  cursor: pointer;
+}

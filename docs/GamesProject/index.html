@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -8,8 +8,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <link rel="icon" type="image/x-icon" href="./img/logo.png">
-        <link rel="stylesheet" href="./style/calculator.css">
-        <title>Calculate dr. Strange</title>
+        <link href="style/index.css" rel="stylesheet" type="text/css">
+        <title>About</title>
     </head>
     <body>
         <header class="header">
@@ -32,45 +32,26 @@
                 </div>
             </div>
         </header>
-        <main class="wrapper-calculator">
-            <p class="calculator-title">Calculate dr. Strange</p>
-            <p class="calculator-description__text">Open console to see the results</p>
-            <div class="calculator-description">
-                <p class="calculator-description__text">max 10</p>
-                <p class="calculator-description__text">max 100</p>
+        <main>
+            <div class="about">
+                <img class="about__img" src="img/about.png" alt="" width="532px" height="356px">
+                <div class="about__text">
+                    <h1 class="about__title">About me</h1>
+                    <p class="about__text-info"> Hi! My name is Vasyl and I'm a Junior Frontend Developer. I am already familiar with main Web Technologies like HTML, CSS, JavaScript, and the Git version control system.
+                    </p>
+                    <p class="about__text-info">
+                        This page was developed during the course
+                        <a class="about__text-link" href="https://www.mastersacademy.education/frontend-for-beginners-it">'Frontend for beginners' from Masters Academy in 2023.</a>
+                    </p>
+                    <p class="about__text-info">This is a social project from MOCG company where I got an opportunity to work with Frontend mentors and to create my own small project for the portfolio.
+                    </p>
+                    <p class="about__text-info">
+                        You can contact me via
+                        <a class="about__text-link" href="https://www.facebook.com/profile.php?id=100010348604050"> facebook</a>and/or check out
+                        <a class="about__text-link" href="https://github.com/VasylBiliak"> my GitHub.</a>
+                    </p>
+                </div>
             </div>
-
-            <section class="calculator">
-                <input class="input_number" id="number1" type="number" placeholder="number 1" maxlength="1" max="10" min="-10">
-                <select class="select-option" id="operatorSelect">
-                    <option class="selected-option" value="+">+</option>
-                    <option class="selected-option" value="-">-</option>
-                    <option class="selected-option" value="*">*</option>
-                    <option class="selected-option" value="/">/</option>
-                    <option class="selected-option" value="%">%</option>
-                    <option class="selected-option" value="**">**</option>
-                </select>
-                <input class="input_number" id="number2" type="number" placeholder="number 2" max="100" min="-100">
-                <button class="select-option" id="equals" type="button">=</button>
-                <h1 class="result" id="result"></h1>
-                <div class="calculator__input-foto result">
-                    <div class="img" id="input-quantity-img">
-                    </div>
-                </div>
-                <div class="calculator__label-foto calculator__label" id="selectedOperator">
-                </div>
-
-                <div class="calculator__label-foto calculator__label" id="valueNumber2">
-                </div>
-                <div class="calculator__label-foto calculator__label">
-                    =
-                </div>
-                <div class="calculator__input-foto result">
-                    <div class="img" id="photo-container">
-                    </div>
-                </div>
-            </section>
-            <div id="result-timestamp" class="result-timestamp"></div>
         </main>
         <footer class="footer">
             <div class="footer__container">
@@ -98,8 +79,6 @@
                 </div>
             </div>
         </footer>
-
         <script src="scripts/menu.js"></script>
-        <script src="./scripts/calculator.js"></script>
     </body>
 </html>

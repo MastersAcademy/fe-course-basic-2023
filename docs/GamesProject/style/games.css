@@ -62,36 +62,9 @@
   background-color: #EF4934;
 }
 
-/*.checkbox__game-date {*/
-/*  margin-right: 12px;*/
-/*  appearance: none;*/
-/*  width: 15px;*/
-/*  height: 15px;*/
-/*  border: 2px solid #FFF;*/
-/*  border-radius: 5px;*/
-/*  background-color: transparent;*/
-/*  cursor: pointer;*/
-/*  position: relative;*/
-/*}*/
-
-/*.checkbox__game-date:checked::before {*/
-/*  content: "✔";*/
-/*  font-size: 14px;*/
-/*  color: #EF4934;*/
-/*  position: absolute;*/
-/*  top: 50%;*/
-/*  left: 50%;*/
-/*  transform: translate(-50%, -50%);*/
-/*}*/
-
 .filter-search__radio-select {
   display: flex;
 }
-
-/*.checkbox__game-date:checked {*/
-/*  background-color: #FFF;*/
-/*  border: 2px solid transparent;*/
-/*}*/
 
 .radio-select__label {
   width: 100%;
@@ -270,9 +243,11 @@
   }
 
   .search__img {
-    position: relative;
-    z-index: 2;
-    margin: 4px -6px;
+    position: static;
+  }
+
+  .radio-select__label {
+    padding-bottom: 4px;
   }
 
   .search__btn {

@@ -1,0 +1,256 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #EF4934;
+  height: 80px;
+}
+
+.header__box {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 53px;
+}
+
+.header__logo {
+  width: 55px;
+  height: 57px;
+}
+
+.header__links {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header__link {
+  margin-left: 20px;
+  position: relative;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: 0;
+  text-align: left;
+  text-decoration: none;
+  color: #FFF;
+}
+
+.header__link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  border-bottom: 2px solid #FFF;
+  opacity: 0;
+}
+
+.header__link:hover::after {
+  opacity: 1;
+}
+
+.footer {
+  width: 100%;
+  background-color: #1C2321;
+  margin-top: auto;
+  height: 160px;
+}
+
+.footer__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__content {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.copyright {
+  color: #EEF1EF;
+  margin-bottom: 0;
+  font-weight: 400;
+  line-height: 32px;
+  font-size: 22px;
+  text-align: center;
+}
+
+.social-icon {
+  height: 42px;
+  width: 192px;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 33px;
+  position: relative;
+  list-style-type: none;
+}
+
+.icon__fb {
+  background-color: #FFF;
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+}
+
+.icon__fb img {
+  background-color: #FFF;
+  height: 20px;
+  width: 20px;
+  left: 11px;
+  top: 11px;
+  position: absolute;
+}
+
+.icon__link {
+  background-color: #FFF;
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+}
+
+.icon__link img {
+  background-color: #FFF;
+  height: 20px;
+  width: 20px;
+  left: 86px;
+  top: 11px;
+  position: absolute;
+}
+
+.icon__inst {
+  background-color: #FFF;
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+}
+
+.icon__inst img {
+  background-color: #FFF;
+  height: 20px;
+  width: 20px;
+  left: 161px;
+  top: 11px;
+  position: absolute;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+
+  .copyright {
+    color: #EEF1EF;
+    margin-top: 0;
+    margin-bottom: 3px;
+    font-weight: 400;
+    line-height: 25px;
+    font-size: 15px;
+    text-align: center;
+  }
+}
+
+/* tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+  .copyright {
+    color: #EEF1EF;
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-weight: 400;
+    line-height: 28px;
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+
+/*.footer {*/
+/*  background-color: #2D343C;*/
+/*  padding: 60px 0;*/
+/*}*/
+
+/*.footer ul {*/
+/*  padding-left: 0;*/
+/*  margin-bottom: 0;*/
+/*  list-style-type: none;*/
+/*}*/
+
+/*.footer ul li {*/
+/*  margin-bottom: 15px;*/
+/*  font-size: 14px;*/
+/*  letter-spacing: 0.05em;*/
+/*}*/
+
+/*.footer ul li a {*/
+/*  color: #fff;*/
+/*  text-decoration: none;*/
+/*  transition: all .09s ease-out;*/
+/*}*/
+
+/*.footer ul li a:hover {*/
+/*  color: #D4C17F;*/
+/*}*/
+
+/*.footer ul li:last-child {*/
+/*  margin-bottom: 0;*/
+/*}*/
+
+/*.footer__menu {*/
+/*}*/
+
+/*.footer__contacts li a {*/
+/*  font-weight: 700;*/
+/*  color: #D4C17F !important;*/
+/*}*/
+
+/*.footer__social {*/
+/*  margin-top: 20px;*/
+/*}*/
+
+/*.footer__social li {*/
+/*  display: inline-block;*/
+/*  margin-right: 20px;*/
+/*  margin-bottom: 0 !important;*/
+/*}*/
+
+/*.footer__social li:last-child {*/
+/*  margin-right: 0;*/
+/*}*/
+
+/*.footer__social [class*="icon-"]:before {*/
+/*  font-size: 20px;*/
+/*  transition: all .09s ease-out;*/
+/*}*/
+
+/*.footer__social a:hover [class*="icon-"]:before {*/
+/*  color: #D4C17F;*/
+/*}*/
+
+
+/*@media (max-width: 992px) {*/
+/*  .footer {*/
+/*    text-align: center;*/
+/*  }*/
+
+/*  .footer .brand {*/
+/*    margin-bottom: 30px;*/
+/*    display: block;*/
+/*  }*/
+
+/*  .footer__menu {*/
+/*    margin-bottom: 15px !important;*/
+/*  }*/
+
+/*  .footer__contacts {*/
+/*    margin-top: 15px;*/
+/*  }*/
+/*}*/
