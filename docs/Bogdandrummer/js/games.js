@@ -94,46 +94,14 @@ const init = () => {
     loadGames();
 };
 init();
+
 const buttonTop = document.querySelector('[data-arrow__up]');
-const genreList = document.querySelector('[data-GenreList]');
-const radioMain = document.querySelector('[data-radio__main]');
-const checkMain = document.querySelector('[data-check__main]');
 const formFilter = document.querySelector('[data-type="form-filter"]');
 const changeFilter = () => {
-    if (genreList.style.display === '' || genreList.style.display === 'none') {
-        genreList.style.display = 'flex';
-    } else {
-        genreList.style.display = 'none';
-    }
-    if (radioMain.style.display === '' || radioMain.style.display === 'none') {
-        radioMain.style.display = 'flex';
-    } else {
-        radioMain.style.display = 'none';
-    }
-    if (checkMain.style.display === '' || checkMain.style.display === 'none') {
-        checkMain.style.display = 'flex';
-    } else {
-        checkMain.style.display = 'none';
-    }
-    if (formFilter.style.height === '' || formFilter.style.height === '100px') {
-        formFilter.style.height = 'fit-content';
-        console.log(formFilter.style.height);
+    if (formFilter.style.height === '100px') {
+        formFilter.style.height = '100%';
     } else {
         formFilter.style.height = '100px';
     }
 };
 buttonTop.addEventListener('click', changeFilter);
-const mainMenuEvent = () => {
-    if (window.innerWidth > '767') {
-        genreList.style.display = 'flex';
-        radioMain.style.display = 'flex';
-        checkMain.style.display = 'flex';
-        formFilter.style.height = '60px';
-    } else {
-        genreList.style.display = 'none';
-        radioMain.style.display = 'none';
-        checkMain.style.display = 'none';
-        formFilter.style.height = '100px';
-    }
-};
-window.addEventListener('resize', mainMenuEvent);
