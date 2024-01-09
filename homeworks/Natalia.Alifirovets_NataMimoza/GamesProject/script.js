@@ -61,15 +61,15 @@ function validateForm() {
     const errors = {};
 
     if (!isEmail(email)) {
-        errors[EMAIL_INPUT_ID] = 'Email має бути в форматі email@localDomen.domen';
+        errors[EMAIL_INPUT_ID] = 'The email must be in the format of email@localDomain.domain';
     }
 
     if (password.length < 8 || password.length > 12) {
-        errors[PASSWORD_INPUT_ID] = 'Пароль має бути від 8 до 12 символів';
+        errors[PASSWORD_INPUT_ID] = 'Password must be from 8 to 12 characters';
     }
 
     if (!checkboxChecked) {
-        errors[NOT_A_ROBOT_CHECKBOX_ID] = 'Ви повинні відзначити, що ви не робот';
+        errors[NOT_A_ROBOT_CHECKBOX_ID] = 'You must indicate that you are not a robot';
     }
 
     if (Object.keys(errors).length > 0) {
