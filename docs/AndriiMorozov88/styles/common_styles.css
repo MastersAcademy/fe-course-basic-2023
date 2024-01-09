@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  min-width: 400px;
+}
+
+body {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  font-family: Roboto;
+}
+
+.main__heading {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 600px) {
+
+  .main__heading {
+    font-size: 36px;
+  }
+}

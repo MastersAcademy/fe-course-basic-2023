@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Success</title>
+        <link rel="stylesheet" href="styles/login.css">
+        <link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/common_styles.css">
+        <link rel="stylesheet" href="styles/footer.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Roboto:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__logo">
+                <svg class="logo">
+                    <use xlink:href="sprite.svg#logo"></use>
+                </svg>
+            </div>
+            <div class="header__navigation">
+                <ul class="navigation">
+                    <li class="navigation__line">
+                        <a class="navigation__link" href="cards.html">Games</a>
+                    </li>
+                    <li class="navigation__line">
+                        <a class="navigation__link" href="about.html">About</a>
+                    </li>
+                    <li class="navigation__line">
+                        <a class="navigation__link" href="calculator.html">Calculator</a>
+                    </li>
+                    <li class="navigation__line navigation__line--underline">
+                        LogIn
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main class="main main__log-in">
+            <h1 class="main__heading">Logged</h1>
+            <form action="about.html" target="_self">
+                <fieldset class="log-in">
+                    <button type="submit" class="log-in__button">Return to homepage</button>
+                </fieldset>
+            </form>
+        </main>
+        <footer class="footer" data-footer>
+            <section class="footer__svg-container">
+                <svg class="footer__svg">
+                    <use xlink:href="sprite.svg#facebook"></use>
+                </svg>
+                <svg class="footer__svg">
+                    <use xlink:href="sprite.svg#linked_in"></use>
+                </svg>
+                <svg class="footer__svg">
+                    <use xlink:href="sprite.svg#instagram"></use>
+                </svg> 
+            </section>
+            <section class="footer__text">
+                <p>Made with 💗 on course 
+                    <a class="footer__link" target="_blank" href="https://www.mastersacademy.education/frontend-for-beginners-it">'Frontend for beginners' from Masters Academy in 2023</a>
+                    , by Andrii Morozov</p>
+            </section>
+        </footer>
+    </body>
+</html>
