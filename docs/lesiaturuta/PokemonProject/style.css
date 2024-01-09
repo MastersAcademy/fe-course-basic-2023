@@ -54,6 +54,7 @@ body {
 .menu__link {
   color: #FFF;
   text-decoration: none;
+  line-height: 35px;
 }
 
 .menu__link--active {
@@ -104,6 +105,7 @@ body {
 
 .container {
   width: 1175px;
+  padding: 0 15px;
 }
 
 .justify__content--between {
@@ -127,6 +129,7 @@ body {
   font-size: 48px;
   font-weight: 700;
   line-height: 32px;
+  padding: 0 10px;
 }
 
 .cards {
@@ -646,6 +649,13 @@ body {
   display: none;
 }
 
+@media screen and (max-width: 1200px) {
+
+  .cards {
+    grid-template: repeat(2, 1fr)/repeat(3, 1fr);
+  }
+}
+
 @media screen and (max-width: 991px) {
 
   .nav {
@@ -653,7 +663,7 @@ body {
   }
 
   .cards {
-    grid-template: repeat(2, 1fr)/repeat(3, 1fr);
+    grid-template: repeat(2, 1fr)/repeat(2, 1fr);
   }
 
   .form__search-container {
