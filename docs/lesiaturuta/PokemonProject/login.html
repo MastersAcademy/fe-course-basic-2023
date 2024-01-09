@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>PokemonProject</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body class="height100vh">
+        <header class="header">
+            <nav class="nav justify__content--center">
+                <div class="container justify__content--between nav__container">
+                    <div class="nav__logo">
+                        <img class="logo__icon" src="./assets/logo-icon.svg" alt="logo">
+                        <img class="logo__title" src="./assets/name-icon.svg" alt="name">
+                    </div>
+                    <ul class="nav__menu">
+                        <li>
+                            <a class="menu__link" href="calculate.html">Calculator</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="./cards.html">Pokemons</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="./about.html">About</a>
+                        </li>
+                        <li>
+                            <a class="menu__link menu__link--active" href="./login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main class="login">
+            <form class="login__form" action="./get-result.html">
+                <h1 class="login__form-title">Login page</h1>
+                <div class="login__form-email">
+                    <label class="login__form-email-label" for="email">
+                        Email
+                    </label>
+                    <input class="login__form-email-input" id="email" placeholder="Enter your email address" type="email" value="">
+                    <span class="error-text" data-mailInfo></span>
+                </div>
+                <div class="login__form-password">
+                    <label class="login__form-password-label" for="password">
+                        Password
+                    </label>
+                    <input class="login__form-password-input" id="password" placeholder="Enter your password" type="password" value="">
+                    <span class="error-text" data-passInfo></span>
+                </div>
+                <div class="login__form-checkbox">
+                    <input class="login__form-checkbox-input gap-right6" id="checkbox" type="checkbox">
+                    <label class="login__form-checkbox-name" for="checkbox">
+                        I’m not a robot
+                    </label>
+                    <span class="error-text" data-checkboxInfo></span>
+                </div>
+                <div id="errors-container"></div>
+                <button class="login__form-button" id="button" type="button">Login</button>
+            </form>
+        </main>
+        <footer class="footer">
+            <ul class="footer__icons">
+                <li class="footer__icon-facebook item gap-right33">
+                    <a class="item__link-facebook" href="#">
+                        <img class="item__icon-facebook" src="./assets/media_icons/facebook.svg" alt="facebook">
+                    </a>
+                </li>
+                <li class="footer__icon-linkedin item gap-right33">
+                    <a class="item__link-linkedin" href="#">
+                        <img class="item__icon-linkedin" src="./assets/media_icons/linkedin.svg" alt="linkedin">
+                    </a>
+                </li>
+                <li class="footer__icon-instagram item">
+                    <a class="item__link-instagram" href="#">
+                        <img class="item__icon-instagram" src="./assets/media_icons/instagram.svg" alt="instagram">
+                    </a>
+                </li>
+            </ul>
+            <p class="footer__description">
+                Made with 🤍 on course
+                <a class="footer__description-link"
+                    href="https://www.mastersacademy.education/frontend-for-beginners-it" target="_blank">'Frontend
+                    for beginners' from Masters Academy in 2023
+                </a>, by Lesia Turuta
+            </p>
+        </footer>
+        <script src="./scripts/script.js"></script>
+    </body>
+
+</html>

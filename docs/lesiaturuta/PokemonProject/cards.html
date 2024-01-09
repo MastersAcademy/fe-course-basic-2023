@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>PokemonProject</title>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./loader/loader.css">
+    </head>
+    <body>
+        <header class="header">
+            <nav class="nav justify__content--center">
+                <div class="container justify__content--between nav__container">
+                    <div class="nav__logo">
+                        <img class="logo__icon" src="./assets/logo-icon.svg" alt="logo">
+                        <img class="logo__title" src="./assets/name-icon.svg" alt="name">
+                    </div>
+                    <ul class="nav__menu">
+                        <li>
+                            <a class="menu__link" href="calculate.html">Calculator</a>
+                        </li>
+                        <li>
+                            <a class="menu__link menu__link--active" href="./cards.html">Pokemons</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="./about.html">About</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="./login.html">Login</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+            <form class="form__search justify__content--center">
+                <div class="container justify__content--between form__search-container">
+                    <select class="form__search-select" id="select" name="select" data-filter-select-search>
+
+                    </select>
+                    <fieldset class="form__search-radio">
+                        <div class="justify__content--center">
+                            <input class="form__search-radio-radio gap-right6" type="radio" id="only-new" name="sel"
+                                value="Only new" data-filter-high>
+                            <label class="form__search-radio-label" for="only-new">High first</label>
+                        </div>
+                        <div class="justify__content--center">
+                            <input class="form__search-radio-radio gap-right6" type="radio" id="favorites" name="sel"
+                                value="Favorites" data-filter-Low>
+                            <label class="form__search-radio-label" for="favorites">Low First</label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form__search-checkbox">
+                        <div class="justify__content--center">
+                            <input class="form__search-checkbox-checkbox gap-right6" type="checkbox" id="big" name="big"
+                                value="Big" data-filter-big>
+                            <label class="form__search-checkbox-label" for="big">Big</label>
+                        </div>
+                        <div class="justify__content--center">
+                            <input class="form__search-checkbox-checkbox gap-right6" type="checkbox" id="small" name="small"
+                                value="Small" data-filter-small>
+                            <label class="form__search-checkbox-label" for="small">Small</label>
+                        </div>
+                    </fieldset>
+                    <div class="form__search-input">
+                        <input type="text" class="form__search-input-search" placeholder="Search" data-filter-search>
+                        <img src="./assets/search.png" alt="search" class="form__search-input-image">
+                        <button class="form__search-input-button" type="submit" data-filter-button>Apply</button>
+                    </div>
+                </div>
+            </form>
+
+        </header>
+        <main class="main">
+            <div class="container justify__content--between flex-direction-column">
+                <h1 class="title-pokemon">Study project "Pokemons"</h1>
+                <div class="cards" data-cards></div>
+                <div class="loading" data-loading></div>
+            </div>
+        </main>
+        <footer class="footer">
+            <ul class="footer__icons">
+                <li class="footer__icon-facebook item gap-right33">
+                    <a class="item__link-facebook" href="#">
+                        <img class="item__icon-facebook" src="./assets/media_icons/facebook.svg" alt="facebook">
+                    </a>
+                </li>
+                <li class="footer__icon-linkedin item gap-right33">
+                    <a class="item__link-linkedin" href="#">
+                        <img class="item__icon-linkedin" src="./assets/media_icons/linkedin.svg" alt="linkedin">
+                    </a>
+                </li>
+                <li class="footer__icon-instagram item">
+                    <a class="item__link-instagram" href="#">
+                        <img class="item__icon-instagram" src="./assets/media_icons/instagram.svg" alt="instagram">
+                    </a>
+                </li>
+            </ul>
+            <p class="footer__description">
+                Made with 🤍 on course
+                <a class="footer__description-link"
+                    href="https://www.mastersacademy.education/frontend-for-beginners-it" target="_blank">'Frontend
+                    for beginners' from Masters Academy in 2023
+                </a>, by Lesia Turuta
+            </p>
+        </footer>
+        <template data-type="card-template">
+            <article class="card">
+                <div class="card__header">
+                    <img src="" alt="card-logo" class="card__header-img" data-card-image>
+                    <h3 class="card__header-title" data-card-title></h3>
+                </div>
+                <div class="card__footer">
+                    <p class="card__footer-text">
+                        <span class="text-weight">Height:</span>
+                        <span data-card-height></span>
+                    </p>
+                    <p class="card__footer-text gap-top6">
+                        <span class="text-weight ">Weight:</span>
+                        <span data-card-weight></span>
+                    </p>
+                    <p class="card__footer-text gap-top6">
+                        <span class="text-weight ">Number:</span>
+                        <span data-card-number></span>
+                    </p>
+                    <p class="card__footer-text gap-top12">
+                        <span class="text-weight">Type:</span>
+                        <span class="block-select gap-right6 color-background-FDB714"
+                            data-card-type1>Fighting</span>
+                        <span class="block-select color-background-EF4934" data-card-type2>Dark</span>
+                    </p>
+                    <p class="card__footer-text gap-top12">
+                        <span class="text-weight">Weaknesses:</span>
+                        <span class="block-select gap-right6 color-background-FF87F3"
+                            data-card-weaknesses1>Fairy</span>
+                        <span class="block-select color-background-3447EF" data-card-weaknesses2>Flying</span>
+                    </p>
+                </div>
+            </article>
+        </template>
+        <script src="./scripts/pokemon.js"></script>
+    </body>
+
+</html>
