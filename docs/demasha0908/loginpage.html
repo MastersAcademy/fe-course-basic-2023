@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Games project</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/loginpage.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="header">
+                <div class="container">
+                    <div class="header__inner">
+                        <a class="logo" href="https://www.mastersacademy.education/frontend-for-beginners-it">
+                            <img src="images/logo.png" alt="icon menu">
+                        </a>
+                        <nav class="menu">
+                            <button class="menu__btn" type="button">
+                                <span class="menu__btn-span"></span>
+                                <span class="menu__btn-span"></span>
+                                <span class="menu__btn-span"></span>
+                            </button>
+                            <ul class="menu__list">
+                                <li class="menu__list-item">
+                                    <a class="menu__list-link" href="calculator.html">Calculator</a>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a class="menu__list-link" href="games.html">Games</a>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a class="menu__list-link" href="index.html">About</a>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a class="menu__list-link menu__list-link--active" href="loginpage.html">Login</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <main class="main">
+                <div class="login">
+                    <div class="container">
+                        <div class="login__form">
+                            <form action="success.html">
+                                <h3 class="login__form-title">Login page</h3>
+                                <div class="login__form-group">
+                                    <label class="login__form-label" for="email">Email</label>
+                                    <input class="login__form-item" type="text" name="email" id="email" placeholder="Enter your email address">
+                                    <span class="error" id="email__error"></span>
+                                </div>
+
+                                <div class="login__form-group">
+                                    <label class="login__form-label" for="password">Password</label>
+                                    <input class="login__form-item" type="password" name="Пароль" id="password" placeholder="Enter your password">
+                                    <span class="error" id="password__error"></span>
+                                </div>
+                                <div class="login__form-group">
+
+                                    <label class="login__form-text" for="checkbox">
+                                        <input class="login__form-checkbox" id="checkbox" type="checkbox">
+                                        <span class="login__checkbox-custom"></span>
+                                        I’m not a robot
+                                    </label>
+                                </div>
+                                <span id="checkbox__error"></span>
+                                <div class="login__form-group">
+                                    <button class="login__form-btn" id="button" type="button">Login</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer__content">
+                        <ul class="footer__content-icons">
+                            <li class="footer__icons-facebook">
+                                <a href="https://www.facebook.com/profile.php?id=100004895010154">
+                                    <img src="images/facebook.png" alt="facebook">
+                                </a>
+                            </li>
+                            <li class="footer__icons-linkedin">
+                                <a href="https://www.linkedin.com/">
+                                    <img src="images/linkedin.png" alt="linkedin">
+                                </a>
+                            </li>
+                            <li class="footer__icons-instagram">
+                                <a href="https://www.instagram.com/mary.demch/">
+                                    <img src="images/instagram.png" alt="instagram">
+                                </a>
+                            </li>
+                        </ul>
+                        <h3 class="footer__copyright">
+                            Made with 💗 on course <a href="https://www.mastersacademy.education/frontend-for-beginners-it">'Frontend for beginners' from Masters Academy in 2023</a>, by Mariia Demchenko
+                        </h3>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="scripts/script.js"></script>
+        <script src="scripts/menubtn.js"></script>
+    </body>
+</html>

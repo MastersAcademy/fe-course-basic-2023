@@ -4,19 +4,33 @@
   margin: 0;
 }
 
+html {
+  height: 100%;
+  min-width: 400px;
+}
+
 body {
   width: 100%;
   min-height: 100%;
 }
 
-html {
-  height: 100%;
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Roboto;
 }
 
-.page--loaded {
-  position: relative;
+.main__heading {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 40px;
 }
 
-.page--empty {
-  position: absolute;
+@media (max-width: 700px) {
+
+  .main__heading {
+    font-size: 36px;
+  }
 }

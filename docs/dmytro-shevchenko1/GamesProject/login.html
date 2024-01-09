@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Login Page</title>
+        <link rel="stylesheet" type="text/css" href="styles/style.css">
+        <link rel="stylesheet" type="text/css" href="styles/header.css">
+        <link rel="stylesheet" type="text/css" href="styles/login.css">
+        <link rel="stylesheet" type="text/css" href="styles/footer.css">
+    </head>
+    <body class="login-page">
+        <header class="header">
+            <div class="container">
+                <div class="header-flex">
+                    <img src="images/logo.svg" alt="Logo">
+                    <div class="nav">
+                        <ul class="nav-items">
+                            <li>
+                                <a class="calc-link" href="calculator.html">Calculator</a>
+                            </li>
+                            <li>
+                                <a class="cards-link" href="cards.html">Games</a>
+                            </li>
+                            <li>
+                                <a class="about-link" href="index.html">About</a>
+                            </li>
+                            <li>
+                                <a class="login-link" href="login.html">Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="login-main">
+            <div class="container">
+                <div class="login-flex">
+                    <h1 class="login-h1">
+                        Login Page
+                    </h1>
+                    <form class="login-form" action="success-page.html">
+                        <label class="email-label" for="email">Email</label>
+                        <input class="email-input" type="email" id="email" name="email" placeholder="Enter your email address">
+                        <label class="password-label" for="password">Password</label>
+                        <input class="password-input" type="password" id="password" name="password" placeholder="Enter your password">
+                        <div id="checkbox-group" class="checkbox-group">
+                            <label class="check-label" for="check">I'm not a robot
+                                <input type="checkbox" id="check" name="robot" class="login-checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class ="error-container" id="errors-container"></div>
+                        <button type="button" id="submit-button" class="submit-button">Login</button>
+                    </form>
+                    </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-flex">
+                    <div class="footer-logos">
+                        <a href="https://www.facebook.com/profile.php?id=100086849614305">
+                            <img src="images/facebook.svg" width="42px" height="42px" alt="Logo">
+                        </a>
+                    </div>
+                    <p>
+                        Made with 💗 on course 'Frontend for beginners' from Masters Academy in 2023, by Dmytro S.
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <script src="scripts/script.js"></script>
+    </body>
+</html>

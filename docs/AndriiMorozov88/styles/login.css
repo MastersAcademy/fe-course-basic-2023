@@ -1,0 +1,62 @@
+.main__log-in {
+  flex-direction: column;
+  align-items: center;
+  padding-top: 140px;
+}
+
+.log-in {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 575px;
+  border: none;
+}
+
+.log-in__label {
+  margin-top: 20px;
+}
+
+.log-in__input {
+  height: 70px;
+  border: 2px solid #D1D1D1;
+  font-size: 14px;
+  font-weight: 400;
+  padding-left: 10px;
+  margin-top: 15px;
+}
+
+.log-in__checkbox {
+  margin-right: 10px;
+}
+
+.log-in__button {
+  background-color: #EF4934;
+  color: #FFF;
+  font-weight: 600;
+  font-size: 22px;
+  padding: 35px 0;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: none;
+}
+
+.log-in__button:hover {
+  cursor: pointer;
+  background-color: #080;
+}
+
+.error {
+  border: 2px #F00 solid;
+  font-size: 20px;
+  background-color: #000;
+  color: #F00;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+
+  .log-in {
+    width: 350px;
+  }
+}

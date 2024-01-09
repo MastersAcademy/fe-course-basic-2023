@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="./styles/style.css">
+        <link rel="stylesheet" type="text/css" href="./styles/header.css">
+        <link rel="stylesheet" type="text/css" href="./styles/calculator.css">
+        <link rel="stylesheet" type="text/css" href="styles/footer.css">
+        <title>Calculator</title>
+    </head>
+    <body class="calculator-page">
+        <header class="header">
+            <div class="container">
+                <div class="header-flex">
+                    <img src="images/logo.svg" alt="Logo">
+                    <div class="nav">
+                        <ul class="nav-items">
+                            <li>
+                                <a class="calc-link" href="calculator.html">Calculator</a>
+                            </li>
+                            <li>
+                                <a class="cards-link" href="cards.html">Games</a>
+                            </li>
+                            <li>
+                                <a class="about-link" href="index.html">About</a>
+                            </li>
+                            <li>
+                                <a class="login-link" href="login.html">Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="calculator-field">
+            <div class="container">
+                <h1 class="calculator-h1">Calculator v. 1</h1>
+                <div class="field">
+                    <label>
+                        <input class="calc-input" id="firstValue">
+                    </label>
+                    <label>
+                        <select class="select-operations" name="operation" id="operation">
+                            <option value="+">+</option>
+                            <option value="-">-</option>
+                            <option value="/">/</option>
+                            <option value="*">*</option>
+                            <option value="**">**</option>
+                        </select>
+                    </label>
+                    <label>
+                        <input class="calc-input" id="secondValue">
+                    </label>
+                    <button class="result-button" id="calculate" type="button">=</button>
+                    <span class="result-text" id="result"></span>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-flex">
+                    <div class="footer-logos">
+                        <a href="https://www.facebook.com/profile.php?id=100086849614305">
+                            <img src="images/facebook.svg" width="42px" height="42px" alt="Logo">
+                        </a>
+                    </div>
+                    <p>
+                        Made with 💗 on course 'Frontend for beginners' from Masters Academy in 2023, by Dmytro S.
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <script src="./scripts/calculator/script.js"></script>
+        <script src="./scripts/calculator/homework.js"></script>
+    </body>
+</html>

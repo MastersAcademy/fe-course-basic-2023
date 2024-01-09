@@ -188,6 +188,8 @@ function firstOutputOperandHandler() {
 
         addElement(MATH_FIRST_OPERAND_ELEMENT, cardsList);
     }
+
+    MATH_FIRST_OPERAND_ELEMENT.style.paddingBottom = '280px';
 }
 
 function lastOutputOperandHandler() {
@@ -226,20 +228,25 @@ function lastOutputOperandHandler() {
             addElement(MATH_LAST_OPERAND_ELEMENT, cardsList);
             remainingCards -= cardsInCurrentColumn;
         }
+
+        MATH_LAST_OPERAND_ELEMENT.style.paddingBottom = '280px';
     }
 }
 
-CALCULATE_BUTTON_ELEMENT.addEventListener('click', () => {
+function clickCalculateBtnHandler() {
     const measuredTime = measureTimeFn(renderMathExpressionElement);
     const dateCalculation = formatCustomDate(new Date());
     CALCULATOR_TIME.innerHTML = `${dateCalculation} ${measuredTime}`;
-});
+}
 
-FIRST_VALUE_ELEMENT.addEventListener('input', () => {
+function inputFirstValueHandler() {
     renderMathExpressionElement();
     firstOutputOperandHandler();
 
     const measuredTime = measureTimeFn(lastOutputOperandHandler);
     const dateCalculation = formatCustomDate(new Date());
     CALCULATOR_TIME.innerHTML = `${dateCalculation} ${measuredTime}`;
-});
+}
+
+CALCULATE_BUTTON_ELEMENT.addEventListener('click', clickCalculateBtnHandler);
+FIRST_VALUE_ELEMENT.addEventListener('input', inputFirstValueHandler);
