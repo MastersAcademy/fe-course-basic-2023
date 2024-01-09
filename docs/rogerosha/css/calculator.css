@@ -61,6 +61,7 @@
 
 .content {
   max-width: 1280px;
+  min-height: calc(100vh - 250px);
 }
 
 @media screen and (max-width: 768px) {
