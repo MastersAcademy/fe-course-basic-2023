@@ -1,0 +1,112 @@
+.main__calc {
+  max-width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  margin-top: 180px;
+}
+
+.section__calc{
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  width: 1280px;
+}
+
+.section__calc__title {
+  align-self: center;
+  height: 34px;
+}
+
+.calc__title {
+  color: #221F1F;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 48px;
+  text-align: center;
+  margin: 0;
+}
+
+.calc__game_field {
+  width: 630px;
+  height: 74px;
+}
+
+.calc-max {
+  display: flex;
+  justify-content: space-between;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 22px;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.calculator__input-number,.calc__btn {
+  outline: none;
+  border: 1px solid #221F1F;
+  width: 122px;
+  height: 36px;
+  text-align: center;
+  border-radius: 6px;
+  background-color: #FFFF;
+  cursor: pointer;
+}
+
+.calc__btn {
+  background-color: #EF4A34;
+  color: #FFF;
+  border: none;
+  min-width: 122px;
+}
+
+.calc__drop_down {
+  position: relative;
+}
+
+.calc__select {
+  width: 114px;
+  height: 36px;
+  border-radius: 6px;
+  padding: 0 12px;
+  border: 1px solid #221F1F;
+  background-color: #FFF;
+  cursor: pointer;
+  appearance: none;
+}
+
+.calc__result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+
+/**/
+
+.calc__result-visual {
+  width: 578px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  margin-top: 20px;
+}
+
+
+.calc__result-visual-value {
+  font-size: 48px;
+  font-weight: 400;
+  color: #EF4A34;
+}

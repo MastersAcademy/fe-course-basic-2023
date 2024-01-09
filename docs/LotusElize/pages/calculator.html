@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="this page about games">
+        <meta name="keywords" content="game,gamer,news">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="stylesheet" type="text/css" href="../css/calculator.css">
+        <link rel="stylesheet" type="text/css" href="../css/media.css">
+        <title>Games project</title>
+    </head>
+    <body>
+    <header class="header">
+        <div class="header__wrap">
+            <a href="../index.html">
+                <img src="../images/main/logo.svg" alt="Logo" class="header__logo">
+            </a>
+            <nav class="navigation">
+                <ul class="nav__menu">
+                    <li class="nav__menu_list">
+                        <a href="calculator.html" class="menu__nav-link">Calculator</a>
+                    </li>
+                    <li class="nav__menu_list">
+                        <a href="games.html" class="menu__nav-link">Games</a>
+                    </li>
+                    <li class="nav__menu_list">
+                        <a href="../index.html" class="menu__nav-link">About</a>
+                    </li>
+                    <li class="nav__menu_list">
+                        <a href="login.html" class="menu__nav-link">Login</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+        <main class="main__calc">
+            <section class="section__calc">
+                <div class="section__calc__title">
+                    <h1 class="calc__title">Calculate Games</h1>
+                </div>
+                <div class="calc__game_field">
+                    <div class="calc-max">
+                        <div class="max">max 10</div>
+                        <div class="min">max 100</div>
+                    </div>
+                    <div class="calculator">
+                        <label class="calculator__label">
+                            <input class="calculator__input-number" id="firstValue" type="text">
+                        </label>
+                        <label>
+                            <div class="calc__drop_down">
+                                <select class="calc__select" name="operation" id="operation">
+                                    <option value="+">+</option>
+                                    <option value="-">-</option>
+                                    <option value="/">/</option>
+                                    <option value="*">*</option>
+                                    <option value="**">**</option>
+                                </select>
+                            </div>
+                        </label>
+                        <label class="calculator__label">
+                            <input class="calculator__input-number" id="secondValue" type="text">
+                        </label>
+                        <button class="calc__btn" id="calculate" type="button">=</button>
+                        <span class="calc__result" id="result"></span>
+                    </div>
+                </div>
+            </section>
+        </main>
+    <footer class="footer">
+        <nav class="footer__social_container">
+            <ul class="footer__social_list">
+                <li class="social__list-item">
+                    <a class="social__item-link" href="#">
+                        <img class="social__ico" src="../images/ico/fb-soc-ico.svg" alt="Facebook">
+                    </a>
+                </li>
+                <li class="social__list-item">
+                    <a class="social__item-link" href="#">
+                        <img class="social__ico" src="../images/ico/link-soc-ico.svg" alt="LinkedIn">
+                    </a>
+                </li>
+                <li class="social__list-item">
+                    <a class="social__item-link" href="#">
+                        <img class="social__ico" src="../images/ico/insta-soc-ico.svg" alt="Instagram">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="footer__about">
+            <p class="footer__about_info">
+                Made with 💗 on course<a href="https://www.mastersacademy.education/frontend-for-beginners-it"
+                    target="_blank">'Frontend for beginners' from Masters Academy in
+                    2023,</a>from Masters Academy in 2023, by Taras
+            </p>
+        </div>
+    </footer>
+        <script src="../js/script.js"></script>
+        <script src="../js/main.js"></script>
+    </body>
+
+</html>
