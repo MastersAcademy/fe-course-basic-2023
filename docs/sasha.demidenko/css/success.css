@@ -1,0 +1,23 @@
+.success_form {
+  display: grid;
+  font-family: Roboto, sans-serif;
+  justify-content: center;
+  margin-top: 250px;
+}
+
+.success_tittle {
+  font-size: 48px;
+  display: flex;
+  justify-content: center;
+}
+
+.success_button {
+  width: 500px;
+  height: 70px;
+  background-color: #EF4934;
+  color: #FFF;
+  border: solid #EF4934;
+  border-radius: 6px;
+  font-size: 22px;
+  font-weight: 600;
+}
