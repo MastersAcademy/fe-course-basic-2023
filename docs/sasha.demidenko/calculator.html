@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Calculator</title>
+        <link rel="stylesheet" href="css/calculator.css">
+    </head>
+    <body class="body">
+        <header class="header">
+            <img src="Images/about_logo.png" alt="no img" class="header_logo">
+            <nav class="header_menu">
+                <input type="checkbox" id="checkbox" class="burger">
+                <label for="checkbox" class="burger_button">
+                    <span class="button_line"></span>
+                    <span class="button_line"></span>
+                    <span class="button_line"></span>
+                </label>
+                <ul class="header_ul">
+                    <li class="header_li header_li--underline">Calculator</li>
+                    <li>
+                        <a href="games.html" class="header_li">Games</a>
+                    </li>
+                    <li>
+                        <a href="index.html" class="header_li">About</a>
+                    </li>
+                    <li>
+                        <a href="login.html" class="header_li">Login</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="_container">
+            <main class="main">
+                <h1 class="name-title">Calculate Games</h1>
+                <label>
+                    <input id="firstValue" class="input-value">
+                </label>
+                <label>
+                    <select name="operation" id="operation" class="select-operation">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="/">/</option>
+                        <option value="*">*</option>
+                        <option value="**">**</option>
+                    </select>
+                </label>
+                <label>
+                    <input id="secondValue" class="input-value">
+                </label>
+                <button id="calculate" type="button" class="button-result">=</button>
+                <span id="result" class="result"></span>
+            </main>
+        </div>
+        <footer class="footer">
+            <ul class="footer_ul">
+                <li>
+                    <a href="https://www.facebook.com/profile.php?id=100006067830226">
+                        <img src="Images/facebook_logo.svg" alt="no img" class="footer_img">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://ua.linkedin.com/">
+                        <img src="Images/linkedin_logo.svg" alt="no img" class="footer_img">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/sasha.dmk/">
+                        <img src="Images/instagram_logo.svg" alt="no img" class="footer_img">
+                    </a>
+                </li>
+            </ul>
+            <p class="footer_p">
+                Made with 💗 on course 'Frontend for beginners' from Masters Academy in 2023, by Sasha Demidenko
+            </p>
+        </footer>
+        <script src="scripts/calculator-script.js"></script>
+        <script src="scripts/calculator.js"></script>
+    </body>
+</html>

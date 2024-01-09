@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title>Games</title>
+        <link rel="stylesheet" href="css/games.css">
+        <link rel="stylesheet" href="css/loading.css">
+    </head>
+    <body class="body">
+        <header class="header">
+            <img src="Images/about_logo.png" alt="no img" class="header_logo">
+            <nav class="header_menu">
+                <input type="checkbox" id="checkbox" class="burger">
+                <label for="checkbox" class="burger_button">
+                    <span class="button_line"></span>
+                    <span class="button_line"></span>
+                    <span class="button_line"></span>
+                </label>
+                <ul class="header_ul">
+                    <li>
+                        <a href="calculator.html" class="header_li">Calculator</a>
+                    </li>
+                    <li class="header_li header_li--underline">Games</li>
+                    <li>
+                        <a href="index.html" class="header_li">About</a>
+                    </li>
+                    <li>
+                        <a href="login.html" class="header_li">Login</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <form action="/#" class="form_section">
+            <label for="select">
+                <select disabled id="select" name="select" class="select_type">
+                    <option value="arcade">Arcade</option>
+                    <option value="sport">Sport</option>
+                    <option value="shooter">Shooter</option>
+                </select>
+            </label>
+            <div class="form_radio">
+                <div class="form_radio--platform">
+                    <input disabled type="radio" id="platform" name="type" value="platform" data-type="platform-input">
+                    <label for="platform">Platform</label>
+                </div>
+                <div>
+                    <input disabled type="radio" id="online-games" name="type" value="online-game" data-type="online">
+                    <label for="online-games">Online games</label>
+                </div>
+            </div>
+            <div class="form_checkbox">
+                <div class="form_checkbox--new">
+                    <input type="checkbox" id="new" name="new" value="new" data-type="new">
+                    <label for="new">New</label>
+                    <br >
+                </div>
+                <div>
+                    <input type="checkbox" id="old" name="old" value="old" data-type="old">
+                    <label for="old">Old</label>
+                    <br >
+                </div>
+            </div>
+            <label class="label_input">
+                <input disabled type="text" class="form_input" placeholder="Search">
+                <button type="reset" class="form_input--button">Apply</button>
+            </label>
+        </form>
+        <div class="_container">
+            <main class="main">
+                <h1 class="games_h1">
+                    Study project "Games"
+                </h1>
+                <div class="cards_wrapper">
+                    <template data-type="card-template">
+                        <article data-is-new="true" data-is-old="false">
+                            <div class="game_container">
+                                <div class="game_title-name">
+                                    <div class="title-img">
+                                        <img src="Images/Overwatch_img.jpg" alt="no img" data-type="thumbnail">
+                                    </div>
+                                    <h2 class="title-name" data-type="title">Overwatch 2</h2>
+                                    <div class="title-description" data-type="short_description">
+                                        Big changes come to the Overwatch formula in this sequel...
+                                    </div>
+                                </div>
+                                <div class="game_list">
+                                    <p class="game_list--p">
+                                        <span class="game_subtitle--style" data-type="genre"></span>
+                                    </p>
+                                    <p class="game_list--p">
+                                        <span class="game_subtitle--style" data-type="platform"></span>
+                                    </p>
+                                    <p class="game_list--p">
+                                        <span class="game_subtitle--style" data-type="publisher"></span>
+                                    </p>
+                                    <p class="game_list--p">
+                                        <span class="game_subtitle--style" data-type="developer"></span>
+                                    </p>
+                                    <p class="game_list--p">
+                                        <span class="game_subtitle--style" data-type="release_date"></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </template>
+                </div>
+                <div id="loading-spinner" class="loading">
+                    Loading...
+                    <div id="loading"></div>
+                </div>
+                <ul data-type="cards-container" class="cards_wrapper"></ul>
+            </main>
+        </div>
+        <footer class="footer">
+            <ul class="footer_ul">
+                <li>
+                    <a href="https://www.facebook.com/profile.php?id=100006067830226">
+                        <img src="Images/facebook_logo.svg" alt="no img" class="footer_img">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://ua.linkedin.com/">
+                        <img src="Images/linkedin_logo.svg" alt="no img" class="footer_img">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/sasha.dmk/">
+                        <img src="Images/instagram_logo.svg" alt="no img" class="footer_img">
+                    </a>
+                </li>
+            </ul>
+            <p class="footer_p">
+                Made with 💗 on course 'Frontend for beginners' from Masters Academy in 2023, by Sasha Demidenko
+            </p>
+        </footer>
+        <script src="scripts/games.js"></script>
+    </body>
+</html>

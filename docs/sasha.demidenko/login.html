@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title>Login</title>
+        <link rel="stylesheet" href="css/login.css">
+    </head>
+    <body class="body">
+        <header class="header">
+            <img src="Images/about_logo.png" alt="no img" class="header_logo">
+            <nav class="header_menu">
+                <input type="checkbox" id="checkbox" class="burger">
+                <label for="checkbox" class="burger_button">
+                    <span class="button_line"></span>
+                    <span class="button_line"></span>
+                    <span class="button_line"></span>
+                </label>
+                <ul class="header_ul">
+                    <li>
+                        <a href="calculator.html" class="header_li">Calculator</a>
+                    </li>
+                    <li>
+                        <a href="games.html" class="header_li">Games</a>
+                    </li>
+                    <li>
+                        <a href="index.html" class="header_li">About</a>
+                    </li>
+                    <li class="header_li header_li--underline">Login</li>
+                </ul>
+            </nav>
+        </header>
+        <div class="_container">
+            <main class="main">
+                <h1 class="main_h1">Login page</h1>
+                <form class="main_form">
+                    <p class="form_p">
+                        <label for="email-input" class="form_email">Email</label>
+                        <br >
+                        <input id="email-input" name="email" required="required"
+                            placeholder="Enter your email address" class="form_email--input">
+                    </p>
+                    <p class="form_p">
+                        <label for="password-input" class="form_pass">Password</label>
+                        <br >
+                        <input id="password-input" name="pwd" required="required"
+                            placeholder="Enter your password" class="form_pass--input">
+                    </p>
+                    <label for="not-a-robot" class="checkbox_main">
+                        <input type="checkbox" id="not-a-robot" name="robot"
+                            value="check" class="form_checkbox" required="required">
+                        <span class="custom-checkbox"></span>
+                        I'm not a robot
+                    </label>
+                    <div id="errors-container"></div>
+                    <p class="form_button--p">
+                        <button type="button" id="submit-button" class="submit_button">Login</button>
+                    </p>
+                </form>
+            </main>
+        </div>
+        <footer class="footer">
+            <ul class="footer_ul">
+                <li>
+                    <a href="https://www.facebook.com/profile.php?id=100006067830226">
+                        <img src="Images/facebook_logo.svg" alt="no img" class="footer_img">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://ua.linkedin.com/">
+                        <img src="Images/linkedin_logo.svg" alt="no img" class="footer_img">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/sasha.dmk/">
+                        <img src="Images/instagram_logo.svg" alt="no img" class="footer_img">
+                    </a>
+                </li>
+            </ul>
+            <p class="footer_p">
+                Made with 💗 on course 'Frontend for beginners' from Masters Academy in 2023, by Sasha Demidenko
+            </p>
+        </footer>
+        <script src="scripts/script.js"></script>
+    </body>
+</html>
