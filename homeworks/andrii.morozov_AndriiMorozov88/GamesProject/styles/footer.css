@@ -1,12 +1,13 @@
 .footer {
   height: 140px;
-  width: 100%;
+  width: inherit;
   background-color: #221F1F;
   bottom: 0;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
+  position: fixed;
 }
 
 .footer__svg {
@@ -24,4 +25,25 @@
 .footer__link {
   text-decoration: none;
   color: #FFF;
+}
+
+.footer--fixed {
+  position: fixed;
+  bottom: 0;
+}
+
+.footer--absolute {
+  position: absolute;
+  bottom: 0;
+}
+
+.footer--relative {
+  position: relative;
+}
+
+@media (max-width: 1100px) {
+
+  .footer__text {
+    display: none;
+  }
 }

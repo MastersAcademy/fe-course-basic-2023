@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cards</title>
-        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="styles/cards.css">
         <link rel="stylesheet" href="styles/header.css">
         <link rel="stylesheet" href="styles/common_styles.css">
         <link rel="stylesheet" href="styles/footer.css">
@@ -38,44 +38,51 @@
             </div>
         </header>
         <form action="#" method="post" class="filter">
-            <section>
-                <select name="select-genre" class="filter__select" data-select-genre>
-                    <option value="0" selected>All Genres</option>
-                    <option value="Shooter">Shooter</option>
-                    <option value="ARPG">ARPG</option>
-                    <option value="Battle Royale">Battle Royale</option>
-                    <option value="Strategy">Strategy</option>
-                    <option value="MMORPG">MMORPG</option>
-                    <option value="Fighting">Fighting</option>
-                    <option value="Card Game">Card Game</option>
-                </select>
-            </section>
-            <section>
-                <select name="select-platform" class="filter__select" data-select-platform>
-                    <option value="all" selected>All Platforms</option>
-                    <option value="PC (Windows)">PC (Windows)</option>
-                    <option value="Web Browser">Web Browser</option>
-                </select>
-            </section>
-            <section>
-                <input type="radio" name="radio" data-old-first>
-                <label for="new" class="filter-element">
-                    Old First
-                </label>
-                <input type="radio" name="radio" data-new-first>
-                <label for="favorites">
-                    New First
-                </label>
-            </section>
-            <section>
-                <input type="checkbox" data-new-games>
-                <label for="new" class="filter-element">
-                    New
-                </label>
-                <input type="checkbox" data-old-games>
-                <label for="old">
-                    Old
-                </label>
+            <button type="button" class="filter__button" data-burger-button>
+                <svg class="button__logo">
+                    <use xlink:href="sprite.svg#filter"></use>
+                </svg>
+            </button>
+            <section class="filter__block" data-filter-block>
+                <section>
+                    <select name="select-genre" class="filter__select" data-select-genre>
+                        <option value="0" selected>All Genres</option>
+                        <option value="Shooter">Shooter</option>
+                        <option value="ARPG">ARPG</option>
+                        <option value="Battle Royale">Battle Royale</option>
+                        <option value="Strategy">Strategy</option>
+                        <option value="MMORPG">MMORPG</option>
+                        <option value="Fighting">Fighting</option>
+                        <option value="Card Game">Card Game</option>
+                    </select>
+                </section>
+                <section>
+                    <select name="select-platform" class="filter__select" data-select-platform>
+                        <option value="all" selected>All Platforms</option>
+                        <option value="PC (Windows)">PC (Windows)</option>
+                        <option value="Web Browser">Web Browser</option>
+                    </select>
+                </section>
+                <section class="filter__radio">
+                    <input type="radio" name="radio" data-old-first>
+                    <label for="new" class="filter-element">
+                        Old First
+                    </label>
+                    <input type="radio" name="radio" data-new-first>
+                    <label for="favorites">
+                        New First
+                    </label>
+                </section>
+                <section class="filter__checkbox">
+                    <input type="checkbox" data-new-games>
+                    <label for="new" class="filter-element">
+                        New
+                    </label>
+                    <input type="checkbox" data-old-games>
+                    <label for="old">
+                        Old
+                    </label>
+                </section>
             </section>
             <section class="filter__search">
                 <div class="search__svg">
@@ -110,12 +117,14 @@
                     <p class="card__paragraf" data-game-profile-url></p>
                 </div>
             </section>
-        </template>  
-        <main class="main games__main">
-            <h1 class="main__heading">Study project "Games"</h1>
-            <p class="main__info--disabled" data-info></p>
-            <article class="card-container" data-card-container>
-            </article>
+        </template>
+        <h1 class="main__heading cards__heading">Games</h1>
+        <main class="main">
+            <section class="main__cards">
+                <p class="cards-loading-info--disabled" data-info></p>
+                <div class="card-container" data-card-container>
+                </div>
+            </section>
         </main>
         <footer class="footer" data-footer>
             <section class="footer__svg-container">
