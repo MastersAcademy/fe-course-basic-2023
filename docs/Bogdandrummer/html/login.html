@@ -10,19 +10,14 @@
     </head>
 
     <body>
-        <!--Wrapper-->
         <div class="wrapper">
-            <!--Header-->
             <header class="head">
-                <!--Menu-->
                 <nav class="header__menu">
                     <a href="https://www.mastersacademy.education/frontend-for-beginners-it" class="header__logo">
                         <img src="../images/other_logos/logo.svg" alt="logo">
                     </a>
                     <div class="menu__field">
-                        <!--Burger-->
                         <img class="burger" src="../images/other_logos/burger.svg" alt="#" data-burger>
-                        <!--Menu list-->
                         <ul class="menu__list" data-menu__list>
                             <li>
                                 <a class="menu__link-about" href="calculator.html">Calculator</a>
@@ -40,32 +35,24 @@
                     </div>
                 </nav>
             </header>
-            <!--Main-->
             <main class="main">
-                <!--Форма Login-->
                 <form action="success.html" class="login__form">
-                    <!--Оглавление-->
                     <h2 class="form__title">Login page</h2>
-                    <!--Поле email-->
                     <label class="email__label" for="e_mail">Email</label>
                     <input class="email" type="email" id="e_mail" name="email" placeholder="enter your email address" required>
                     <div class="errors__row" id="email__error"></div>
-                    <!--Password-->
                     <label class="password__label" for="pass">Password</label>
                     <input class="password" type="password" id="pass" name="pass" minlength="4" maxlength="50" required
                         placeholder="enter your password">
                     <div class="errors__row" id="password__error"></div>
-                    <!--Not a robot-->
                     <label class="check__label" for="check">
                         <input type="checkbox" class="check" id="check" name="check" value="not a robot" required>
                         <span class="custom__checkbox"></span>
                         I'm not a robot</label>
                     <div class="errors__row" id="check__error"></div>
-                    <!--Button-->
                     <button class="login__button" name="login" type="button" id="sub__button">Login</button>
                 </form>
             </main>
-            <!--Footer-->
             <footer class="footer">
                 <ul class="footer__logos-social">
                     <li class="social__item">
