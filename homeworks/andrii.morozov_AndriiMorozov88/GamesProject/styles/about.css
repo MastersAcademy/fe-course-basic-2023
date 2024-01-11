@@ -1,0 +1,55 @@
+.aboutMe-block {
+  display: inline-grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 63px;
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+
+.aboutMe-block__image {
+  width: 535px;
+  height: 356px;
+  border-radius: 5%;
+}
+
+.aboutMe-block__article {
+  display: block;
+  width: 575px;
+  height: min-content;
+  padding-right: 53px;
+}
+
+.aboutMe-block__paragraf {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.link--red {
+  color: #EF4934;
+}
+
+@media (max-width: 1200px) {
+
+  .aboutMe-block {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .aboutMe-block__image {
+    width: 350px;
+    height: 250px;
+  }
+
+  .aboutMe-block__article {
+    width: 350px;
+  }
+
+  .aboutMe-block__paragraf {
+    font-size: 18px;
+  }
+}

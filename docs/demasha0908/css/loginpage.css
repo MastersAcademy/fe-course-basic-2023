@@ -1,0 +1,106 @@
+@import url("main.css");
+
+.login__form {
+  margin: 80px auto 0;
+  max-width: 575px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login__form-title {
+  margin-bottom: 60px;
+  font-size: 48px;
+  text-align: center;
+}
+
+.login__form-group {
+  margin-bottom: 40px;
+  max-height: 149px;
+}
+
+.login__form-label {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.login__form-item {
+  max-height: 70px;
+  padding: 30px 216px 30px 20px;
+  width: 100%;
+  margin-top: 22px;
+  border-radius: 6px;
+  outline: none;
+  border: 1px solid #A9A9A9;
+  background: #FFF;
+}
+
+.login__form-item:focus {
+  border-bottom: solid 6px #EF4934;
+}
+
+
+.login__form-checkbox {
+  height: 0;
+  width: 0;
+  opacity: 0;
+  position: absolute;
+}
+
+.login__checkbox-custom {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-color: #FFF;
+  border: solid 1px #EF4934;
+  border-radius: 6px;
+  margin-right: 12px;
+  vertical-align: sub;
+}
+
+.login__checkbox-custom::before {
+  content: " ";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-image: url("../images/check.png");
+  background-size: contain;
+  transform: translate(-50%, -50%) scale(0);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transition: .2s ease-in-out;
+}
+
+.login__form-checkbox:checked+.login__checkbox-custom::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.login__form-btn {
+  border-radius: 6px;
+  background: #EF4934;
+  padding: 27px 258px;
+  border-color: #FFF;
+  border-width: 0;
+  color: #FFF;
+  font-size: 22px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login__form-btn:hover {
+  opacity: 1;
+}
+
+.error {
+  color: #EF4934;
+}
+
+@media (max-width: 560px) {
+
+  .login__form-btn {
+    padding: 27px;
+    width: 100%;
+  }
+}
+

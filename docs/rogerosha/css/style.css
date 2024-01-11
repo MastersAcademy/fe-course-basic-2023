@@ -1,0 +1,64 @@
+.pokemons, .login, .calculator {
+  text-decoration: none;
+}
+
+.white-rectangle {
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 52px;
+  gap: 24px;
+}
+
+.pokemon-image {
+  width: 532px;
+  max-width: 532px;
+  height: 275px;
+}
+
+.headline {
+  text-align: left;
+  margin: 0;
+}
+
+.text-about {
+  color: #221F1F;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+  margin: 0;
+}
+
+.link {
+  color: #EF4934;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+}
+
+.footer-link {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.content {
+  max-width: 1280px;
+  gap: 68px;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 1024px) {
+
+  .pokemon-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .content {
+    gap: 20px;
+    align-items: center;
+    flex-direction: column;
+  }
+}

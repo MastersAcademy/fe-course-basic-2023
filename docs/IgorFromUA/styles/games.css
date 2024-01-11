@@ -1,0 +1,111 @@
+.title {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 275px;
+  grid-gap: 25px;
+  justify-content: center;
+}
+
+.card {
+  width: 275px;
+  height: 260px;
+  padding: 12px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 12px;
+  color: #221F1F;
+  background: #ECECEC;
+  border-radius: 12px;
+}
+
+.card__img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  margin: auto 0;
+}
+
+.description__title {
+  width: 150px;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 6px 0 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.description__text {
+  height: 60px;
+  width: 150px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card__actors {
+  grid-column: span 2;
+  list-style: none;
+  font-size: 14px;
+  padding-left: 10px;
+  margin: 0;
+}
+
+.card__actor {
+  line-height: 26px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.filter-matched-text {
+  background: #FFD500;
+}
+
+.error-message {
+  font-size: 24px;
+  color: #F00;
+  grid-column: 1/5;
+}
+
+
+@media (min-width: 480px) {
+
+  .title {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 680px) {
+
+  .cards {
+    grid-template-columns: repeat(2, 275px);
+    justify-content: space-between;
+  }
+
+  .title {
+    font-size: 48px;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .cards {
+    grid-template-columns: repeat(3, 275px);
+  }
+}
+
+@media (min-width: 1280px) {
+
+  .cards {
+    grid-template-columns: repeat(4, 275px);
+  }
+}

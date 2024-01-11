@@ -5,18 +5,40 @@
 @import url("header.css");
 @import url("footer.css");
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  width: 100%;
+  min-width: 400px;
+  min-height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
 .main {
   display: flex;
   flex-direction: column;
-  flex: 1 1 auto;
+  flex: 1 0 auto;
   justify-content: center;
   margin: 0 auto 40px;
-  box-sizing: border-box;
   padding: 60px 52px 0;
+  box-sizing: border-box;
 }
 
-.content {
-  max-width: 1280px;
+@media (max-width: 997px) {
+
+  .main {
+    padding: 30px 0;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .main {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .calculator {
@@ -29,15 +51,33 @@
   display: flex;
   flex-direction: column;
   max-width: 80%;
+  min-width: 400px;
   margin: 60px auto 0;
   align-items: center;
   gap: 20px;
+}
+
+@media (max-width: 997px) {
+
+  .calc__row {
+    max-width: 100%;
+    min-width: 400px;
+    padding: 0 10px;
+  }
 }
 
 .task {
   display: flex;
   flex-direction: row;
   gap: 20px;
+}
+
+@media (max-width: 997px) {
+
+  .task {
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .title {
@@ -51,19 +91,34 @@
   margin-top: 40px;
 }
 
+@media (max-width: 767px) {
+
+  .title {
+    font-size: 40px;
+  }
+}
+
 .input__field {
-  max-width: 200px;
+  max-width: 100px;
   height: 70px;
-  padding-left: 20px;
+  padding: 0 10px;
   color: #444;
   font-family: Roboto;
   font-size: 30px;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
+  text-align: center;
   border: 1px solid #A9A9A9;
   border-radius: 6px;
   transition: all 100ms;
+}
+
+@media (max-width: 997px) {
+
+  .input__field {
+    width: 100%;
+  }
 }
 
 .input__field::placeholder {
@@ -78,7 +133,7 @@
 
 .operation {
   display: flex;
-  width: 120px;
+  width: 100px;
   height: 70px;
   align-items: center;
   justify-content: center;
@@ -129,10 +184,11 @@
 .result {
   display: flex;
   align-items: center;
-  width: 500px;
+  justify-content: center;
+  width: 100%;
   height: 70px;
   margin: 0 auto;
-  padding-left: 20px;
+  padding: 0 20px;
   color: #444;
   font-family: Roboto;
   font-size: 30px;
@@ -142,6 +198,20 @@
   border: 1px solid #A9A9A9;
   border-radius: 6px;
   transition: all 100ms;
+}
+
+@media (max-width: 997px) {
+
+  .result {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .result {
+    font-size: 25px;
+  }
 }
 
 .visual__result {
@@ -155,7 +225,30 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  column-gap: 20px;
+  gap: 20px;
+}
+
+@media (max-width: 997px) {
+
+  .result__field {
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 15px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .result__field {
+    padding: 0 20px;
+    gap: 5px;
+  }
+}
+
+.expression {
+  display: flex;
+  gap: 15px;
 }
 
 .symbol {
@@ -165,6 +258,14 @@
   font-weight: 700;
   line-height: 32px;
   color: #EF4934;
+}
+
+@media (max-width: 768px) {
+
+  .symbol {
+    font-size: 40px;
+    line-height: 40px;
+  }
 }
 
 .cards__field {
@@ -186,7 +287,9 @@
   justify-content: center;
   font-family: Roboto;
   font-size: 22px;
+  line-height: 28px;
   margin-top: 30px;
+  padding: 0 20px;
 }
 
 .card1 {

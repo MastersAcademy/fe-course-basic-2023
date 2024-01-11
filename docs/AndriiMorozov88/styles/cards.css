@@ -1,0 +1,271 @@
+.cards-loading-info {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  color: #F00;
+  font-size: 40px;
+  font-weight: 700;
+  transform: translate(-50%);
+}
+
+.cards-loading-info--disabled {
+  display: none;
+}
+
+.filter {
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+  background-color: #221F1F;
+  padding-left: 3%;
+  padding-right: 3%;
+  align-items: center;
+  height: 60px;
+  position: fixed;
+  width: inherit;
+  top: 80px;
+  color: #FFF;
+  z-index: 9999;
+}
+
+.filter__burger-button {
+  display: none;
+}
+
+.filter__block {
+  display: grid;
+  grid-template-columns: 20fr 20fr 35fr 35fr;
+  align-items: center;
+}
+
+.filter-element {
+  margin-right: 5%;
+}
+
+.filter__select {
+  width: 114px;
+  height: 36px;
+  font-size: 14px;
+}
+
+.filter__search {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search__input-field {
+  background-color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 290px;
+  height: 40px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding-left: 10px;
+}
+
+.search__input {
+  outline: none;
+  border: none;
+  height: 40px;
+}
+
+.search__svg {
+  background-color: #FFF;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.svg--search {
+  width: 24px;
+  height: 24px;
+}
+
+.search__button {
+  height: 40px;
+  width: 70px;
+  background-color: #EF4934;
+  border: none;
+  color: #FFF;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-weight: 400;
+}
+
+.cards__heading {
+  margin-top: 180px;
+  text-align: center;
+}
+
+.card-container {
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.main__cards {
+  padding-bottom: 50px;
+}
+
+.card {
+  width: 300px;
+  height: max-content;
+  border-radius: 10px;
+  padding: 12px 12px 22px;
+  display: grid;
+  grid-template-columns: 90px 175px;
+  grid-template-rows: 100px 1fr;
+  gap: 12px;
+  grid-template-areas: "image card-name" "card-description card-description";
+  background-color: #ECECEC;
+  margin: 10px;
+}
+
+.card__image-container {
+  grid-area: image;
+}
+
+.card__image {
+  width: 90px;
+  height: 85px;
+  border-radius: 5px;
+}
+
+.card__name {
+  grid-area: card-name;
+  width: 170px;
+}
+
+.card__heading {
+  font-size: 18px;
+  font-weight: 700;
+  color: #221F1F;
+}
+
+.card__data {
+  font-size: 14px;
+  max-width: 250px;
+  font-weight: 400;
+  line-height: 21px;
+  margin-bottom: 6px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.card__data--short {
+  max-width: 180px;
+}
+
+.card__description {
+  grid-area: card-description;
+}
+
+.button-up--hidden {
+  display: none;
+}
+
+.button-up--active {
+  position: fixed;
+  bottom: 150px;
+  right: 40px;
+  border: none;
+  background: none;
+}
+
+.button-up__svg {
+  width: 40px;
+  height: 40px;
+}
+
+@media (min-width: 700px) {
+
+  .card-container {
+    width: 700px;
+  }
+}
+
+@media (min-width: 1000px) {
+
+  .card-container {
+    width: 1000px;
+  }
+}
+
+@media (min-width: 1300px) {
+
+  .card-container {
+    width: 1300px;
+  }
+}
+
+@media (min-width: 1600px) {
+
+  .card-container {
+    width: 1600px;
+  }
+}
+
+@media (min-width: 2000px) {
+
+  .card-container {
+    width: 2000px;
+  }
+}
+
+@media (max-width: 1100px) {
+
+  .filter {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .filter__burger-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #221F1F;
+  }
+
+  .button__logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .filter__block {
+    display: none;
+  }
+
+  .filter__select {
+    width: 90%;
+    height: 60px;
+    font-size: 15px;
+    margin: 10px;
+  }
+
+  .filter__element {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 90%;
+    font-size: 18px;
+    margin: 10px;
+  }
+
+  .filter__block--active {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 140px;
+    background-color: #221F1F;
+    width: 40%;
+    height: max-content;
+    opacity: .9;
+    left: 0;
+    align-items: flex-start;
+  }
+}
+

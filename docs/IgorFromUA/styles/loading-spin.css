@@ -1,0 +1,24 @@
+.loading {
+  width: 100%;
+  text-align: center;
+}
+
+.loading__spin {
+  display: inline-block;
+  position: relative;
+  top: 50px;
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(255, 213, 0, .3);
+  border-radius: 50%;
+  border-top-color: #FFD500;
+  animation: spin 1s ease-in-out infinite;
+  visibility: hidden;
+}
+
+@keyframes spin {
+
+  to {
+    transform: rotate(360deg);
+  }
+}
