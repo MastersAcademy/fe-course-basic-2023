@@ -141,3 +141,10 @@ function init() {
 }
 
 init();
+
+const btn = document.querySelector('.menu-btn');
+const filt = document.querySelector('.filters');
+
+btn.addEventListener('click', () => {
+    filt.classList.toggle('menu-open');
+});
