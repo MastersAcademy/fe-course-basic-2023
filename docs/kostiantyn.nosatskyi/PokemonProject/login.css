@@ -1,0 +1,273 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container__page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* navigation menu */
+
+.header__page {
+  background-color: #333;
+  color: #FFF;
+}
+
+.logo {
+  margin: 25px auto 25px 53px;
+}
+
+.header__page, .logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo__img {
+  width: 100%;
+  max-width: 190px;
+  height: auto;
+}
+
+/* navigation settings */
+
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 50px;
+  margin: 34px 52px 28px auto;
+  padding: 0;
+}
+
+.navigation__item {
+  list-style: none;
+}
+
+.navigation__item-link {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  color: #FFF;
+}
+
+/*
+  class that defines how the button of the
+  page we are on will behave
+*/
+
+.active {
+  text-decoration: underline;
+}
+
+/* main information */
+
+.container__page {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.login__title {
+  display: flex;
+  justify-content: center;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.form, .login__form, .login__form-email, .login__form-password {
+  display: flex;
+  justify-content: center;
+}
+
+.login__form, .login__form-email, .login__form-password {
+  flex-direction: column;
+}
+
+.login__form {
+  gap: 15px;
+}
+
+.form__input {
+  padding-left: 20px;
+  border: 1px solid #A9A9A9;
+  border-radius: 6px;
+  height: 70px;
+}
+
+.login__form-email, .login__form-password {
+  gap: 5px;
+}
+
+.login__form {
+  width: 90%;
+  max-width: 595px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.form__txt {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 26px;
+}
+
+.login__form-checkbox-captcha {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.login__form-checkbox {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.login__form-checkbox-captcha, .form__txt, .login__title {
+  color: #221F1F;
+}
+
+.btn__submit {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #FFF;
+  background-color: #EF4934;
+  border: none;
+  border-radius: 6px;
+  height: 70px;
+  box-shadow: 0 4px 30px 0;
+}
+
+.form__checkbox[type="checkbox"] {
+  margin: 0;
+}
+
+.form__input::placeholder {
+  color: #A9A9A9;
+}
+
+.output-error {
+  font-size: 16px;
+  color: #EF4934;
+  display: flex;
+  align-items: center;
+}
+
+/* footer */
+
+.footer__container {
+  background-color: #EF4934;
+  margin-top: 50px;
+}
+
+.heart {
+  color: #DADADA;
+}
+
+.footer__social-img {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  margin: 0;
+  padding: 30px 0 32px;
+}
+
+.footer__txt {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+  margin: 0;
+}
+
+.footer__main-txt {
+  text-align: center;
+  margin: 0 10px;
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 400;
+  color: #FFF;
+}
+
+.footer__link {
+  color: #FFF;
+}
+
+@media (max-width: 900px) {
+
+  .header__page, .navigation {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* media main */
+
+  .logo {
+    margin: 25px 0;
+  }
+
+  .navigation {
+    margin: 0 0 28px;
+    gap: 15px;
+  }
+
+  .login__form {
+    max-width: 900px;
+  }
+
+  .login__form-checkbox, .login__form-email, .login__form-password {
+    gap: 12px;
+    flex-direction: column;
+  }
+
+  .form__input, .btn__submit {
+    height: 60px;
+  }
+
+  /* media footer */
+
+  .footer__txt {
+    margin: 0 15px;
+    text-align: center;
+  }
+
+  /* media text */
+
+  .login__title {
+    font-size: 32px ;
+  }
+
+  .form__txt, .btn__submit {
+    font-size: 18px;
+  }
+
+  .login__form-checkbox-captcha, .output-error {
+    font-size: 14px;
+  }
+
+  .footer__main-txt {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+
+  .navigation__item-link {
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .form__input, .btn__submit {
+    height: 50px;
+  }
+}

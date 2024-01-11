@@ -1,0 +1,76 @@
+.pokemons, .about, .login {
+  text-decoration: none;
+}
+
+.field {
+  display: flex;
+  gap: 16px;
+}
+
+.firstValue, .secondValue {
+  padding: 13px;
+  border-radius: 6px;
+  display: flex;
+  text-align: center;
+  border: 1px solid #333;
+}
+
+.operation {
+  border-radius: 6px;
+  background-color: #FFF;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  border: 1px solid #333;
+  padding-block: 13px;
+  padding-left: 12px;
+  padding-right: 95px;
+}
+
+.button {
+  background-color: #EF4934;
+  color: #FFF;
+  border-radius: 6px;
+  border: 1px solid #EF4934;
+  display: inline-flex;
+  padding: 13px 57px;
+  justify-content: center;
+  align-items: center;
+}
+
+.result {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.result-display {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  color: #EF4934;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  gap: 16px;
+  padding-bottom: 52px;
+}
+
+.content {
+  max-width: 1280px;
+  min-height: calc(100vh - 250px);
+}
+
+@media screen and (max-width: 768px) {
+
+  .field {
+    flex-direction: column;
+  }
+
+  .operation, .firstValue, .secondValue, .button {
+    font-size: 20px;
+  }
+}

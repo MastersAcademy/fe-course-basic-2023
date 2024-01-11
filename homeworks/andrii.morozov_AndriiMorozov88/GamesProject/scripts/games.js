@@ -9,8 +9,12 @@ const searchInput = document.querySelector('[data-search-input]');
 const newFirstButton = document.querySelector('[data-new-first]');
 const oldFirstButton = document.querySelector('[data-old-first]');
 const infoElement = document.querySelector('[data-info]');
+const burgerButton = document.querySelector('[data-burger-button]');
+const filterBlock = document.querySelector('[data-filter-block]');
 async function getGamesArray() {
-    infoElement.classList.replace('main__info--disabled', 'main__info');
+    infoElement.classList.replace('cards-loading-info--disabled', 'cards-loading-info');
+    footerElement.classList.replace('footer--relative', 'footer--absolute');
+    cardContainer.innerHTML = '';
     infoElement.innerText = 'Loading...';
     const option = {
         headers: {
@@ -82,12 +86,12 @@ function renderCards(container, gamesArray) {
         fragment.append(createCardElement(count, gamesArray));
     }
     container.append(fragment);
-    infoElement.classList.replace('main__info', 'main__info--disabled');
+    infoElement.classList.replace('cards-loading-info', 'cards-loading-info--disabled');
     if (gamesArray.length !== 0) {
-        footerElement.classList.replace('page--empty', 'page--loaded');
+        footerElement.classList.replace('footer--absolute', 'footer--relative');
     } else {
-        footerElement.classList.add('page--empty');
-        infoElement.classList.replace('main__info--disabled', 'main__info');
+        footerElement.classList.add('footer--absolute');
+        infoElement.classList.replace('cards-loading-info--disabled', 'cards-loading-info');
         infoElement.innerText = 'No Results';
     }
 }
@@ -131,7 +135,7 @@ async function showFilterArray() {
 }
 
 async function init() {
-    footerElement.classList.add('page--empty');
+    footerElement.classList.add('footer--absolute');
     renderCards(cardContainer, await getGamesArray());
     genreSelect.addEventListener('change', showFilterArray);
     platformSelect.addEventListener('change', showFilterArray);
@@ -144,6 +148,10 @@ async function init() {
     });
     searchButton.addEventListener('click', () => {
         if (searchInput.value.trim() !== '') showFilterArray();
+    });
+    burgerButton.addEventListener('click', () => {
+        filterBlock.classList.toggle('filter__block--active');
+        console.log(1);
     });
 }
 window.addEventListener('load', init);

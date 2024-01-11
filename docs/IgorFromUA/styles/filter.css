@@ -1,12 +1,16 @@
 .filter {
+  width: 100%;
+  color: #FFF;
+  background: #221F1F;
+}
+
+.filter__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   column-gap: 10px;
   row-gap: 20px;
-  color: #FFF;
-  background: #221F1F;
   padding-top: 12px;
   padding-bottom: 12px;
   font-size: 14px;

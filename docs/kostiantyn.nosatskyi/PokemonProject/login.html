@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Pokemons | Login</title>
+        <link rel="stylesheet" type="text/css" href="login.css">
+    </head>
+    <body>
+        <div class="container__page">
+            <header class="header__page">
+                <div class="logo">
+                    <img class="logo__img" src="img/logo1.png" alt="logo">
+                </div>
+                <nav>
+                    <ul class="navigation">
+                        <li class="navigation__item">
+                            <a class="navigation__item-link" href="calculator.html">Calculator</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__item-link" href="pokemons.html">Pokemons</a>
+                        </li>
+                        <li class="navigation__item ">
+                            <a class="navigation__item-link" href="index.html">About</a>
+                        </li>
+                        <li class="navigation__item active">
+                            <a class="navigation__item-link" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <section class="login">
+                    <div>
+                        <h1 class="login__title">Login page</h1>
+                    </div>
+                    <div class="form">
+                        <form class="login__form">
+                            <div class="login__form-email">
+                                <label class="form__txt" for="email">Email</label>
+                                <input type="text" name="email" id="email" class="form__input" placeholder="Enter your email address">
+                                <span id="output-email" class="output-error"></span>
+                            </div>
+                            <div class="login__form-password">
+                                <label class="form__txt" for="password">Password</label>
+                                <input type="password" name="password" id="password" class="form__input" placeholder="Enter your password">
+                                <span id="output-password" class="output-error"></span>
+                            </div>
+                            <div class="login__form-checkbox">
+                                <div class="container-checkbox">
+                                    <input type="checkbox" name="checkbox" id="checkbox" class="form__checkbox">
+                                    <label class="form__txt login__form-checkbox-captcha" for="checkbox">I'm not a robot</label>
+                                </div>
+                                <span id="output-checkbox" class="output-error"></span>
+                            </div>
+                            <button id="button" type="submit" class="btn__submit">Login</button>
+                        </form>
+                    </div>
+                </section>
+            </main>
+            <footer>
+                <div class="footer__container">
+                    <div class="footer__social-img">
+                        <img class="social-img" src="./img/facebook.png" alt="facebook">
+                        <img class="social-img" src="./img/linkedin.png" alt="linkedin">
+                        <img class="social-img" src="./img/instagram.png" alt="instagram">
+                    </div>
+                    <div class="footer__txt">
+                        <span class="footer__main-txt">Made with
+                            <span class="heart"> &hearts; </span> on course
+                            <a class="footer__link" href="https://www.mastersacademy.education/frontend-for-beginners-it">'Frontend for beginners' from Masters
+                                Academy </a> in 2023, Kostyiantyn Nosatskyi</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="js/login.js"></script>
+    </body>
+</html>

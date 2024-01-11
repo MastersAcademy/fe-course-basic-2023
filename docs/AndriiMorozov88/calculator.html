@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculator</title>
+        <link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/footer.css">
+        <link rel="stylesheet" href="styles/calculator.css">
+        <link rel="stylesheet" href="styles/common_styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Roboto:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__logo">
+                <svg class="logo">
+                    <use xlink:href="sprite.svg#logo"></use>
+                </svg>
+            </div>
+            <div class="header__navigation">
+                <ul class="navigation">
+                    <li class="navigation__line">
+                        <a class="navigation__link" href="cards.html">Games</a>
+                    </li>
+                    <li class="navigation__line">
+                        <a class="navigation__link" href="about.html">About</a>
+                    </li>
+                    <li class="navigation__line navigation__line--underline">
+                        Calculator
+                    </li>
+                    <li class="navigation__line">
+                        <a class="navigation__link" href="login.html">LogIn</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main class="main main__calculator">
+            <h1 class="main__heading">
+                Basic math operation
+            </h1>
+            <section class="calculator">
+                <label for="first-number">
+                    <input type="text" class="calculator__operand" id="first-number" placeholder="first number" data-first-number>
+                </label>
+                <select name="operation" class="calculator__operation" data-operation>
+                    <option value="1" selected>+</option>
+                    <option value="2">-</option>
+                    <option value="3">*</option>
+                    <option value="4">/</option>
+                    <option value="5">POW</option>
+                </select>
+                <label for="second-number">
+                    <input type="text" class="calculator__operand" id="second-number" placeholder="second number" data-second-number>
+                </label>
+                <button type="button" class="calculator__button" data-button>=</button>
+                <div data-result class="calculator__result"></div>
+            </section>
+            <section class="comment-container" data-comment></section>
+        </main>
+        <footer class="footer" data-footer>
+            <section class="footer__svg-container">
+                <svg class="footer__svg">
+                    <use xlink:href="sprite.svg#facebook"></use>
+                </svg>
+                <svg class="footer__svg">
+                    <use xlink:href="sprite.svg#linked_in"></use>
+                </svg>
+                <svg class="footer__svg">
+                    <use xlink:href="sprite.svg#instagram"></use>
+                </svg> 
+            </section>
+            <section class="footer__text">
+                <p>Made with 💗 on course 
+                    <a class="footer__link" target="_blank" href="https://www.mastersacademy.education/frontend-for-beginners-it">'Frontend for beginners' from Masters Academy in 2023</a>
+                    , by Andrii Morozov</p>
+            </section>
+        </footer>
+        <script src="./scripts/logic.js"></script>
+    </body>
+</html>

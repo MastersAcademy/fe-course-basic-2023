@@ -1,0 +1,23 @@
+.headline-result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.button-return {
+  font-size: 22px;
+  font-weight: 600;
+  background-color: #EF4934;
+  color: #FFF;
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  padding: 27px 258px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  gap: 10px;
+  border: 1px solid #EF4934;
+  margin-block: 60px;
+}

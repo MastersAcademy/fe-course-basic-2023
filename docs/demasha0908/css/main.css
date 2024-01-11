@@ -1,0 +1,185 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  min-width: 400px;
+  margin: 0;
+  color: #221F1F;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+img,
+button {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1175px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header {
+  background-color: #EF4934;
+  max-height: 80px;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  max-width: 55px;
+  max-height: 57px;
+  margin: 11px 0;
+}
+
+.menu__btn {
+  width: 30px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+}
+
+.menu__btn-span {
+  height: 2px;
+  background-color: #FFF;
+  width: 100%;
+}
+
+.menu__list {
+  display: flex;
+  gap: 50px;
+}
+
+.menu__list-link {
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.menu__list-link--active {
+  padding-bottom: 7px;
+  position: relative;
+
+  &::after {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-image: url("../images/Line1.svg");
+  }
+}
+
+.footer {
+  width: 100%;
+  background-color: #1C2321;
+  margin-top: auto;
+}
+
+.footer__content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 30px 0 40px;
+}
+
+.footer__copyright {
+  color: #EEF1EF;
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.footer__content-icons {
+  display: flex;
+  padding: 0;
+  margin: 0 0 32px;
+  height: 42px;
+  gap: 33px;
+}
+
+@media (max-width: 860px) {
+
+  .menu__btn {
+    display: flex;
+  }
+
+  .menu__btn,
+  .logo {
+    position: relative;
+    z-index: 10;
+  }
+
+  .menu__list {
+    position: absolute;
+    z-index: 5;
+    background-color: #EF4934;
+    flex-direction: column;
+    gap: 50px;
+    padding-top: 200px;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    transform: translateY(-150%);
+    transition: transform .3s ease;
+  }
+
+  .menu__list-link {
+    font-size: 45px;
+  }
+
+  .menu__list.menu__list-active {
+    transform: translateY(0%);
+  }
+}

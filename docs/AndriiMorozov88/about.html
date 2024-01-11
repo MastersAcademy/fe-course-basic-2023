@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Me</title>
+        <link rel="stylesheet" href="styles/about.css">
+        <link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/common_styles.css">
+        <link rel="stylesheet" href="styles/footer.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Roboto:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__logo">
+                <svg class="logo">
+                    <use xlink:href="sprite.svg#logo"></use>
+                </svg>
+            </div>
+            <div class="header__navigation">
+                <ul class="navigation">
+                    <li class="navigation__line">
+                        <a class="navigation__link" href="cards.html">Games</a>
+                    </li>
+                    <li class="navigation__line navigation__line--underline">
+                        About
+                    </li>
+                    <li class="navigation__line">
+                        <a class="navigation__link" href="calculator.html">Calculator</a>
+                    </li>
+                    <li class="navigation__line">
+                        <a class="navigation__link" href="login.html">LogIn</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main class="main container">
+            <img class="container__image" src="images/computers.jpg" alt="image">
+            <article class="container__article">
+                <h1 class="main__heading">About Me</h1>
+                <p class="container__text">
+                    Hi! My name is Andrii Morozov and I'm a Junior Frontend Developer. I am already familiar with main Web Technologies like HTML, CSS, JavaScript and Git version control system.
+                </p>
+                <p class="container__text">
+                    This page was developed during the course <a href="https://www.mastersacademy.education/frontend-for-beginners-it" class="link--red" target="_blank">'Frontend for beginners' from Masters Academy in 2023.</a>
+                </p>
+                <p class="container__text">
+                    This is a social project from MOCG company where I got an opportunity to work with Frontend mentors and to create my own small project for the portfolio. 
+                </p>
+                <p class="container__text">
+                    You can contact me via <a href="https://www.facebook.com/profile.php?id=100024573128932" class="link--red" target="_blank">facebook</a> 
+                    or check out my <a href="https://github.com AndriiMorozov88" class="link--red" target="_blank">GitHub</a>.
+                </p>
+            </article>
+        </main>
+        <footer class="footer" data-footer>
+            <section class="footer__svg-container">
+                <svg class="footer__svg">
+                    <use xlink:href="sprite.svg#facebook"></use>
+                </svg>
+                <svg class="footer__svg">
+                    <use xlink:href="sprite.svg#linked_in"></use>
+                </svg>
+                <svg class="footer__svg">
+                    <use xlink:href="sprite.svg#instagram"></use>
+                </svg> 
+            </section>
+            <section class="footer__text">
+                <p>Made with 💗 on course 
+                    <a class="footer__link" target="_blank" href="https://www.mastersacademy.education/frontend-for-beginners-it">'Frontend for beginners' from Masters Academy in 2023</a>
+                    , by Andrii Morozov</p>
+            </section>
+        </footer>
+    </body>
+</html>
