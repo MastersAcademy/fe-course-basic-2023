@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="./css/calculator.css">
+        <link rel="stylesheet" type="text/css" href="./css/main.css">
+        <title>Basic JS</title>
+    </head>
+    <body>
+        <header class="header">
+            <img class="header-logo" src="./Img/logo.svg" width="55px" height="57.323px">
+            <nav class="nav-menu">
+                <ul>
+                    <li>
+                        <a href="./calculator.html">Calculator</a>
+                    </li>
+                    <li>
+                        <a href="./games.html">Games</a>
+                    </li>
+                    <li>
+                        <a href="./index.html">About</a>
+                    </li>
+                    <li>
+                        <a href="./login.html">Login</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main">
+            <h1>Calculator v. 1</h1>
+            <div class="field">
+                <label class="firstValue">
+                    <input id="firstValue">
+                </label>
+                <label class="operation">
+                    <select name="operation" id="operation">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="/">/</option>
+                        <option value="*">*</option>
+                        <option value="**">**</option>
+                    </select>
+                </label>
+                <label class="secondValue">
+                    <input id="secondValue">
+                </label>
+                <button class="calculate" id="calculate" type="button">=</button>
+                <span class="result" id="result"></span>
+            </div>
+            <div class="result-operation">
+                <h2 id="calculate-operation" class="calculate-operation"></h2>
+                <h3 id="calculate-benchmark" class="calculate-benchmark"></h3>
+            </div>
+        </main>
+        <script src="./script/calculator.js"></script>
+        <script src="./script/script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+body {
+  gap: 60px;
+}
+
+.main__section {
+  display: flex;
+  max-width: 1175px;
+  max-height: 479px;
+}
+
+.about-main__content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 64.5px;
+  gap: 24px;
+}
+
+.about-me__header {
+  font-family: Roboto;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  margin: 0;
+}
+
+.about-main__content p {
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 32px;
+  margin: 0;
+}
+
+.main-content {
+  margin: 0;
+}
+
+.link {
+  color: #EF4934;
+}
+
