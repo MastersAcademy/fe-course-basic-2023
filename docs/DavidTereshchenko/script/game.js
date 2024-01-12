@@ -87,7 +87,7 @@ async function getGames(platform) {
 }
 document.addEventListener('DOMContentLoaded', getGames(''));
 
-document.querySelector('[data-select="platform"]').addEventListener('change', () => {
+function platformFilter() {
     cardsBlock.innerText = '';
     switch (platformSelect.value) {
         case 'platform':
@@ -105,8 +105,7 @@ document.querySelector('[data-select="platform"]').addEventListener('change', ()
         default:
             getGames('all');
     }
-});
-
+}
 async function getCategory(genre) {
     let query = '';
     if (genre) {
@@ -133,8 +132,7 @@ async function getCategory(genre) {
         hideLoader();
     }
 }
-
-document.querySelector('[data-select="genre"]').addEventListener('change', () => {
+function categoryFilter() {
     cardsBlock.innerText = '';
     switch (genreSelect.value) {
         case 'genre':
@@ -160,7 +158,7 @@ document.querySelector('[data-select="genre"]').addEventListener('change', () =>
         default:
             getCategory('');
     }
-});
+}
 
 function sortFilter(element) {
     showLoader();
@@ -184,9 +182,9 @@ function sortFilter(element) {
     }, 1000);
 }
 
-document.querySelector('[data-search]').addEventListener('click', () => {
+function search() {
     showLoader();
-    const search = games.filter((el) => {
+    const searchCards = games.filter((el) => {
         const searchThem = searchInput.value.toLowerCase();
         return el.title.toLowerCase().includes(searchThem)
             || el.short_description.toLowerCase().includes(searchThem)
@@ -198,23 +196,22 @@ document.querySelector('[data-search]').addEventListener('click', () => {
     cardsBlock.innerText = '';
     setTimeout(() => {
         hideLoader();
-        createCard(search);
+        createCard(searchCards);
     }, 500);
-});
 
-searchInput.oninput = function () {
-    showLoader();
-    newCheck.checked = false;
-    oldCheck.checked = false;
-    if (!this.value.length) {
-        cardsBlock.innerText = '';
-        setTimeout(() => {
-            hideLoader();
-            createCard(games);
-        }, 500);
-    }
-};
-
+    searchInput.oninput = function () {
+        showLoader();
+        newCheck.checked = false;
+        oldCheck.checked = false;
+        if (!this.value.length) {
+            cardsBlock.innerText = '';
+            setTimeout(() => {
+                hideLoader();
+                createCard(games);
+            }, 500);
+        }
+    };
+}
 function checkBoxFilter(element) {
     showLoader();
     const filterCards = games.filter((el) => {
@@ -248,5 +245,12 @@ function checkBoxFilter(element) {
     }, 1000);
 }
 
-checkBoxFilter(dateYear);
-sortFilter();
+function init() {
+    checkBoxFilter(dateYear);
+    platformFilter();
+    search();
+    categoryFilter();
+    sortFilter();
+}
+
+init();

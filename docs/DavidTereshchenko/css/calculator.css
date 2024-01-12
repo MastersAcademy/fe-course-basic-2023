@@ -6,6 +6,10 @@
   min-height: calc(100vh - 200px);
 }
 
+.calculator {
+  max-width: 100%;
+}
+
 .title__calculator {
   display: flex;
   justify-content: center;
@@ -15,52 +19,51 @@
   font-weight: 700;
 }
 
-.number__container {
+.number-block {
   display: flex;
-  flex-wrap: wrap;
   justify-content: start;
   align-items: flex-end;
-  max-width: 100%;
   gap: 16px;
   margin-top: 60px;
   border-radius: 6px;
 }
 
-.number__container input {
+.number-block input {
   height: 36px;
   text-align: center;
 }
 
-.number__block {
+.number__block-input {
   display: flex;
   margin-top: 15px;
-  max-width: 350px;
+  width: 100%;
   padding: 12px 10px;
   border-radius: 6px;
   border: 1px solid #A9A9A9;
 }
 
-.operator__block select {
+.operator {
   display: flex;
   justify-content: flex-end;
   text-align: center;
-  min-width: 114px;
+  max-width: 50px;
+  margin: 0 auto;
+  align-items: center;
+  padding: 0 5px;
   height: 36px;
   border-radius: 6px;
   border: 1px solid #A9A9A9;
 }
 
-.operator {
-  max-width: 50px;
-  margin: 0 auto;
-  align-items: center;
+.return {
+  width: 100px;
 }
 
 .button {
-  padding: 10px;
+  padding: 10px 15px;
   border-radius: 6px;
   border: 1px solid #A9A9A9;
-  min-width: 114px;
+  width: 100px;
   font-size: 14px;
   background-color: #000;
   color: #FFF;
@@ -72,6 +75,7 @@
 
 .result__block {
   display: flex;
+  width: 100px;
   flex-direction: row;
   gap: 10px;
 }
@@ -103,16 +107,11 @@
   gap: 20px;
   flex-direction: row;
   letter-spacing: .4rem;
+  margin-bottom: 20px;
 }
 
 .error {
   border: 1px solid #EF4934;
-}
-
-.oper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .visual-counting span {
@@ -121,9 +120,8 @@
 }
 
 .date {
-  display: flex;
-  line-height: 30px;
   margin-top: 30px;
+  line-height: 30px;
 }
 
 /* Adaptation */
@@ -134,16 +132,12 @@
     font-size: 38px;
   }
 
-  .number__container {
-    justify-content: space-between;
+  .number-block {
+    justify-content: center;
   }
 
   .visual-counting span {
     font-size: 38px;
-  }
-
-  .result__block {
-    display: none;
   }
 }
 
