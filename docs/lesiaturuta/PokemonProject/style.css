@@ -1,0 +1,776 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #221F1F;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+/*HEADER*/
+
+.nav {
+  min-height: 80px;
+  background-color: #333;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.form__search-container {
+  padding: 0 10px;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  width: 190px;
+  justify-content: space-between;
+}
+
+.logo__title {
+  margin-top: 10px;
+}
+
+.nav__menu {
+  display: flex;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  color: #FFF;
+  align-items: center;
+  width: 383px;
+  justify-content: space-between;
+}
+
+.menu__link {
+  color: #FFF;
+  text-decoration: none;
+  line-height: 35px;
+}
+
+.menu__link--active {
+  text-decoration: underline;
+  text-underline-offset: 8px;
+}
+
+.nav__menu li {
+  list-style-type: none;
+}
+
+.nav__menu li:hover {
+  transform: scale(1.1);
+}
+
+/*MAIN*/
+
+.main {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.info {
+  max-width: 575px;
+}
+
+.description {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.text,
+.title-math {
+  font-size: 22px;
+  font-weight: 400;
+  margin-top: 28px;
+  line-height: 32px;
+}
+
+.link--red {
+  color: #EF4934;
+}
+
+
+.container {
+  width: 1175px;
+  padding: 0 15px;
+}
+
+.justify__content--between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.justify__content--center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-pokemon {
+  width: 100%;
+}
+
+/* MAIN CARDS*/
+
+.title-pokemon {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 32px;
+  padding: 0 10px;
+}
+
+.cards {
+  display: grid;
+  grid-template: repeat(2, 1fr)/repeat(4, 1fr);
+  gap: 22px;
+  margin: 35px auto 0;
+}
+
+.card {
+  width: 275px;
+  min-height: 288px;
+  background-color: #ECECEC;
+  padding: 12px 12px 22px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card__header {
+  display: flex;
+  align-items: center;
+}
+
+.card__header-title,
+.title-math__operation {
+  margin-left: 15px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21px;
+  color: #221F1F;
+}
+
+.card__header-img {
+  width: 90px;
+  height: 90px;
+}
+
+.card__footer {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.card__footer-text {
+  display: flex;
+  align-items: center;
+}
+
+/*GAMES FORM*/
+
+.form__search {
+  min-height: 60px;
+  background-color: #221F1F;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #FFF;
+}
+
+.form__search-radio,
+.form__search-select,
+.form__search-checkbox,
+.form__search-input {
+  display: flex;
+  align-items: center;
+}
+
+.form__search-select {
+  width: 114px;
+  min-height: 36px;
+  border-radius: 6px;
+  background-color: #333;
+  color: #FFF;
+  padding: 0 10px;
+}
+
+.form__search-radio {
+  width: 211px;
+  justify-content: space-between;
+  border: none;
+}
+
+.form__search-checkbox {
+  width: 152px;
+  justify-content: space-between;
+  border: none;
+}
+
+.form__search-input-button {
+  width: 75px;
+  height: 36px;
+  border-radius: 0 6px 6px 0;
+  background-color: #EF4934;
+  color: #FFF;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  border: none;
+}
+
+.form__search-input-search {
+  width: 302px;
+  height: 36px;
+  border-radius: 6px 0 0 6px;
+  border: none;
+  padding: 0 40px;
+}
+
+.form__search-input-search::placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.form__search-input {
+  position: relative;
+}
+
+.form__search-input-image {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translate(0, -50%);
+}
+
+/*CHECKBOX*/
+
+.login__form-checkbox-input,
+.form__search-radio-radio,
+.form__search-checkbox-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.login__form-checkbox-input,
+.login__form-checkbox-name,
+.form__search-radio-radio,
+.form__search-checkbox-checkbox,
+.form__search-radio-label,
+.form__search-checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+.form__search-radio-radio::before,
+.form__search-radio-label::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #FFF;
+  border-radius: 50%; /* Используйте 50% для создания круга */
+  margin-right: .5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.login__form-checkbox-input ::before,
+.login__form-checkbox-name::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #EF4934;
+  border-radius: .25em;
+  margin-right: .5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.form__search-checkbox-checkbox::before,
+.form__search-checkbox-label::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #FFF;
+  border-radius: .25em;
+  margin-right: .5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.login__form-checkbox-input:checked + .login__form-checkbox-name::before,
+.form__search-radio-radio:checked + .form__search-radio-label::before,
+.form__search-checkbox-checkbox:checked + .form__search-checkbox-label::before {
+  border-color: #0B76EF;
+  background-color: #0B76EF;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+/*FOOTER*/
+
+.footer {
+  margin-top: 20px;
+  width: 100%;
+  min-height: 160px;
+  background: #EF4934;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+.footer__icons {
+  display: flex;
+}
+
+.footer__description,
+.footer__description-link {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #FFF;
+}
+
+.footer__description-link {
+  text-decoration: none;
+}
+
+.item {
+  list-style-type: none;
+}
+
+.item__link-facebook,
+.item__icon-linkedin,
+.item__icon-instagram {
+  cursor: not-allowed;
+}
+
+.footer__description {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/*LOGIN*/
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.login__form {
+  max-width: 575px;
+  width: 100%;
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.login__form-title {
+  margin-top: 10px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 32px;
+  color: #221F1F;
+}
+
+.login__form-email,
+.login__form-password {
+  width: 100%;
+  height: 108px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.login__form-email-input,
+.login__form-password-input {
+  width: 100%;
+  height: 70px;
+  border: 1px solid #A9A9A9;
+  border-radius: 6px;
+  padding-left: 20px;
+}
+
+.login__form-email-input::placeholder,
+.login__form-password-input::placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #A9A9A9;
+}
+
+.login__form-email-label,
+.login__form-password-label {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #221F1F;
+}
+
+.login__form-checkbox {
+  width: 100%;
+  position: relative;
+}
+
+.block-select {
+  display: flex;
+  width: 69px;
+  height: 24px;
+  border-radius: 3px;
+  color: #FFF;
+  justify-content: center;
+  align-items: center;
+}
+
+.login__form-button {
+  width: 100%;
+  height: 70px;
+  padding: 27px 258px;
+  border-radius: 6px;
+  background: #EF4934;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+/*RESULT*/
+
+.result {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.result__title {
+  margin-bottom: 30px;
+}
+
+.result__link {
+  text-decoration: none;
+}
+
+/*CALCULATE*/
+
+.calculate__title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 48px;
+}
+
+.field {
+  width: 100%;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.field__label {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #221F1F;
+}
+
+.calculate__first-value,
+.calculate__operation,
+.calculate__second-value,
+.calculate__button {
+  width: 122px;
+  height: 36px;
+  border-radius: 6px;
+  border: 1px solid #221F1F;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.calculate__result {
+  height: 36px;
+}
+
+.calculate__first-value,
+.calculate__operation,
+.calculate__second-value {
+  color: #221F1F;
+}
+
+.calculate__button {
+  background: #EF4934;
+  color: #FFF;
+  border: none;
+}
+
+.calculate__result {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 36px;
+  color: #221F1F;
+}
+
+.calculate__show {
+  width: 100%;
+  margin-top: 80px;
+  display: flex;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 48px;
+  color: #EF4934;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.calculate__show-operation,
+.calculate__show-equals {
+  margin: 0 100px;
+}
+
+.main__calculate {
+  align-items: flex-start;
+}
+
+/*ERRORS*/
+
+.error-text {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  color: #FA0A0A;
+}
+
+.border-error {
+  border: 4px solid #FA0A0A;
+}
+
+.border-ok {
+  border: 4px solid #66EA11;
+}
+
+/*HELPER*/
+
+.height100vh {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.text-weight {
+  font-weight: 600;
+  line-height: 21px;
+  margin-right: 10px;
+}
+
+.flex-direction-column {
+  flex-direction: column;
+}
+
+.gap-top6 {
+  margin-top: 6px;
+}
+
+.gap-top12 {
+  margin-top: 12px;
+}
+
+.gap-right6 {
+  margin-right: 6px;
+}
+
+.gap-right33 {
+  margin-right: 33px;
+}
+
+.color-background-FDB714 {
+  background-color: #FDB714;
+}
+
+.color-background-EF4934 {
+  background: #EF4934;
+}
+
+.color-background-FF87F3 {
+  background: #FF87F3;
+}
+
+.color-background-3447EF {
+  background: #3447EF;
+}
+
+.flex-direction-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.display-none {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+
+  .cards {
+    grid-template: repeat(2, 1fr)/repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 991px) {
+
+  .nav {
+    min-height: 110px;
+  }
+
+  .cards {
+    grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+  }
+
+  .form__search-container {
+    flex-direction: column;
+  }
+
+  .nav__container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form__search {
+    padding: 0 10px;
+  }
+
+  .form__search {
+    height: 200px;
+  }
+
+  .nav__menu {
+    margin-top: 10px;
+  }
+
+  .form__search-select,
+  .form__search-radio,
+  .form__search-checkbox,
+  .form__search-input {
+    margin-top: 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  .nav {
+    min-height: 190px;
+  }
+
+  .main {
+    margin-top: 10px;
+  }
+
+  .nav__container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav__menu {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    z-index: 55;
+    width: 100%;
+  }
+
+  .menu__link {
+    justify-content: flex-start;
+  }
+
+  .nav__menu-item {
+    margin-top: 8px;
+  }
+
+  .info {
+    padding: 0 10px;
+  }
+
+  .login__form {
+    padding: 20px 30px;
+  }
+
+  .calculate__container,
+  .field,
+  .calculate__show {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .calculate__container {
+    text-align: center;
+  }
+
+  .calculate__title {
+    font-size: 30px;
+  }
+
+  .cards {
+    grid-template: repeat(1, 1fr)/repeat(1, 1fr);
+  }
+
+  .description,
+  .login__form-title,
+  .title-pokemon {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .login__form-button {
+    padding: 0 50px;
+  }
+
+  .main__container {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .footer {
+    padding: 20px 10px;
+    min-height: auto;
+  }
+}
