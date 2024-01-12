@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta charset="UTF-8">
+        <title>Calculator</title>
+        <link rel="stylesheet" href="calculator.css">
+    </head>
+    <body>
+        <div class="container__page">
+            <header class="header__page">
+                <div class="logo">
+                    <img class="logo__img" src="img/logo1.png" alt="logo">
+                </div>
+                <nav>
+                    <ul class="navigation">
+                        <li class="navigation__item active">
+                            <a class="navigation__item-link" href="#">Calculator</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__item-link" href="pokemons.html">Pokemons</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__item-link" href="index.html">About</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__item-link" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <main class="container__main">
+                <h1 class="title__txt">Calculator v. 1</h1>
+                <div class="field">
+                    <label for="first-value" class="field__label">
+                        <input type="text" id="first-value" data-firstValue class="input__form input__form-data" placeholder="Enter a number here">
+                    </label>
+                    <label class="field__label">
+                        <select name="operation" data-operation class="input__form">
+                            <option value="+">+</option>
+                            <option value="-">-</option>
+                            <option value="/">/</option>
+                            <option value="*">*</option>
+                            <option value="**">**</option>
+                        </select>
+                    </label>
+                    <label class="field__label">
+                        <input data-secondValue class="input__form input__form-data" placeholder="Enter a number here">
+                    </label>
+                    <button data-calculate type="button" class="input__form calculate">=</button>
+                    <span data-result class="result"></span>
+                </div>
+                <div class="field__output-info">
+                    <span data-now class="output__result-txt"></span>
+                    <span data-timeBenchmark class="output__result-txt"></span>
+                </div>
+            </main>
+            <footer>
+                <div class="footer__container">
+                    <div class="footer__social-img">
+                        <img class="social-img" src="./img/facebook.png" alt="facebook">
+                        <img class="social-img" src="./img/linkedin.png" alt="linkedin">
+                        <img class="social-img" src="./img/instagram.png" alt="instagram">
+                    </div>
+                    <div class="footer__txt">
+                        <span class="footer__main-txt">Made with
+                            <span class="heart"> &hearts; </span> on course
+                            <a class="footer__link" href="https://www.mastersacademy.education/frontend-for-beginners-it">'Frontend for beginners' from Masters
+                                Academy </a> in 2023, Kostyiantyn Nosatskyi</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="js/script.js"></script>
+        <script src="js/homework.js"></script>
+    </body>
+</html>

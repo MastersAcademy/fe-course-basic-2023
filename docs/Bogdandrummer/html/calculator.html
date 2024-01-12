@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../styles/calculator.css">
+        <link rel="icon" href="../images/other_logos/favicon.ico">
+        <title>Games calculator</title>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <header class="head">
+                <nav class="header__menu">
+                    <a href="https://www.mastersacademy.education/frontend-for-beginners-it" class="header__logo">
+                        <img src="../images/other_logos/logo.svg" alt="logo">
+                    </a>
+                    <div class="menu__field">
+                        <img class="burger" src="../images/other_logos/burger.svg" alt="#" data-burger>
+                        <ul class="menu__list" data-menu__list>
+                            <li>
+                                <a class="menu__link-about" href="calculator.html">Calculator</a>
+                            </li>
+                            <li>
+                                <a class="menu__link-about" href="games.html">Games</a>
+                            </li>
+                            <li>
+                                <a class="menu__link-about" href="../index.html">About</a>
+                            </li>
+                            <li>
+                                <a class="menu__link-about" href="login.html">Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <main class="main">
+                <div class="calculator">
+                    <h1 class="title">Calculator v. 1</h1>
+                    <div class="calc__row">
+                        <div class="task">
+                            <label>
+                                <input class="input__field" id="firstValue">
+                            </label>
+                            <label>
+                                <select class="operation" name="operation" id="operation">
+                                    <option class="option__field" value="+">+</option>
+                                    <option class="option__field" value="-">-</option>
+                                    <option class="option__field" value="/">/</option>
+                                    <option class="option__field" value="*">*</option>
+                                    <option class="option__field" value="**">**</option>
+                                    <option class="option__field" value="%">%</option>
+                                </select>
+                            </label>
+                            <label>
+                                <input class="input__field" id="secondValue">
+                            </label>
+                        </div>
+                        <button class="calculate" id="calculate" type="button">=</button>
+                        <span class="result" id="result">0</span>
+                    </div>
+                </div>
+                <section class="visual__result">
+                    <div class="result__field">
+                        <div class="expression">
+                            <h2 class="symbol" id="first__numb"></h2>
+                            <h2 class="symbol" id="oper"></h2>
+                            <h2 class="symbol" id="second__numb"></h2>
+                        </div>
+                        <h2 class="symbol" id="symb"></h2>
+                        <h2 class="symbol" id="rlt"></h2>
+                    </div>
+                    <div class="date__field" id="date"></div>
+                </section>
+                <section class="cards__field">
+                    <div class="result__field">
+                        <h2 class="symbol" id="oper__card"></h2>
+                        <h2 class="symbol" id="second__card"></h2>
+                        <h2 class="symbol" id="symb__card"></h2>
+                        <div class="symbol" id="rlt__card"></div>
+                    </div>
+                </section>
+            </main>
+            <footer class="footer">
+                <ul class="footer__logos-social">
+                    <li class="social__item">
+                        <a href="https://www.facebook.com/">
+                            <img src="../images/social__logos/facebook.svg" alt="facebook">
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="https://www.linkedin.com/">
+                            <img src="../images/social__logos/linkedin.svg" alt="linkedin">
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="https://www.instagram.com/">
+                            <img src="../images/social__logos/insta.svg" alt="instagram">
+                        </a>
+                    </li>
+                </ul>
+                <h2 class="footer__title">Made with 💗 on course 'Frontend for beginners' from Masters Academy in 2023, by
+                    Bogdan Yatsentiuk</h2>
+            </footer>
+        </div>
+
+        <script src="../js/calculator.js" type="module"></script>
+    </body>
+
+</html>

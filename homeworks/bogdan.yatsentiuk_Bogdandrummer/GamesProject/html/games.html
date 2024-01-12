@@ -3,18 +3,16 @@
 
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="../styles/games.css">
+        <link rel="icon" href="../images/other_logos/favicon.ico">
         <title>Games</title>
     </head>
 
     <body>
         <!--Wrapper-->
         <div class="wrapper">
-            <!--Preloader-->
-            <div class="preloader">
-                <span class="loader"></span>
-            </div>
+            <div id="top"></div>
             <!--Header-->
             <header class="head">
                 <!--Menu-->
@@ -22,43 +20,61 @@
                     <a href="https://www.mastersacademy.education/frontend-for-beginners-it" class="header__logo">
                         <img src="../images/other_logos/logo.svg" alt="logo">
                     </a>
-                    <!--Menu list-->
-                    <ul class="menu__list">
-                        <li>
-                            <a class="menu__link-about" href="calculator.html">Calculator</a>
-                        </li>
-                        <li>
-                            <a class="menu__link-about" href="games.html">Games</a>
-                        </li>
-                        <li>
-                            <a class="menu__link-about" href="../index.html">About</a>
-                        </li>
-                        <li>
-                            <a class="menu__link-about" href="login.html">Login</a>
-                        </li>
-                    </ul>
+                    <div class="menu__field">
+                        <!--Burger-->
+                        <img class="burger" src="../images/other_logos/burger.svg" alt="#" data-burger>
+                        <!--Menu list-->
+                        <ul class="menu__list" data-menu__list>
+                            <li>
+                                <a class="menu__link-about" href="calculator.html">Calculator</a>
+                            </li>
+                            <li>
+                                <a class="menu__link-about" href="games.html">Games</a>
+                            </li>
+                            <li>
+                                <a class="menu__link-about" href="../index.html">About</a>
+                            </li>
+                            <li>
+                                <a class="menu__link-about" href="login.html">Login</a>
+                            </li>
+                        </ul>
+                    </div>
                 </nav>
             </header>
             <!--Main-->
             <main class="main">
+                <!--Preloader-->
+                <div class="preloader">
+                    <span class="loader"></span>
+                </div>
                 <!--Меню в Main-->
                 <form action="#" class="main__menu" data-type="form-filter">
+                    <!--Filters кнопка-->
+                    <div class="show__filters" data-arrow__up>Show filters
+                        <img src="../images/other_logos/caret-down-solid_white.svg" alt="">
+                    </div>
                     <!--Input жанры-->
-                    <select list="genre__datalist" name="ganre__datalist" class="genres__inp" id="genres__inp" placeholder="Genres" disabled>
+                    <select list="genre__datalist" name="ganre__datalist" class="genres__inp" id="genres__inp"
+                        placeholder="Genres" data-genreList disabled>
                         <option class="option__item" value="Sport">Sport</option>
                         <option class="option__item" value="Shooter">Shooter</option>
                         <option class="option__item" value="Racing">Racing</option>
                         <option class="option__item" value="Horror">Horror</option>
                     </select>
                     <!--Radio box-->
-                    <div class="radio__main">
-                        <input class="radio__input" type="radio" name="game" id="platform__ch1" value="Platform" disabled>
-                        <label class="radio__label" for="platform__ch1">Platform</label>
-                        <input class="radio__input online__ch2" type="radio" name="game" id="online__ch2" value="Online games" disabled>
-                        <label class="radio__label" for="online__ch2">Online games</label>
+                    <div class="radio__main" data-radio__main>
+                        <div class="radio__unit">
+                            <input class="radio__input" type="radio" name="game" id="platform__ch1" value="Platform" disabled>
+                            <label class="radio__label" for="platform__ch1">Platform</label>
+                        </div>
+                        <div class="radio__unit">
+                            <input class="radio__input online__ch2" type="radio" name="game" id="online__ch2" value="Online games"
+                                disabled>
+                            <label class="radio__label" for="online__ch2">Online games</label>
+                        </div>
                     </div>
                     <!--Check box-->
-                    <div class="main__checkbox">
+                    <div class="main__checkbox" data-check__main>
                         <label class="check__label" for="date_1">
                             <input class="check" type="checkbox" id="date_1" name="date" value="Old" data-type="old-release">
                             <span class="custom__checkbox"></span>
@@ -84,22 +100,28 @@
 
                     </section>
                 </div>
+                <a href="#top">
+                    <img class="arrow__up" src="../images/other_logos/arrow-up-solid.svg" alt="">
+                </a>
             </main>
             <!--Footer-->
             <footer class="footer">
                 <ul class="footer__logos-social">
                     <li class="social__item">
                         <a href="https://www.facebook.com/">
-                            <img src="../images/social__logos/facebook.svg"
-                                alt="facebook"></a></li>
+                            <img src="../images/social__logos/facebook.svg" alt="facebook">
+                        </a>
+                    </li>
                     <li class="social__item">
                         <a href="https://www.linkedin.com/">
-                            <img src="../images/social__logos/linkedin.svg"
-                                alt="linkedin"></a></li>
+                            <img src="../images/social__logos/linkedin.svg" alt="linkedin">
+                        </a>
+                    </li>
                     <li class="social__item">
                         <a href="https://www.instagram.com/">
-                            <img src="../images/social__logos/insta.svg"
-                                alt="instagram"></a></li>
+                            <img src="../images/social__logos/insta.svg" alt="instagram">
+                        </a>
+                    </li>
                 </ul>
                 <h2 class="footer__title">Made with 💗 on course 'Frontend for beginners' from Masters Academy in 2023, by
                     Bogdan Yatsentiuk</h2>

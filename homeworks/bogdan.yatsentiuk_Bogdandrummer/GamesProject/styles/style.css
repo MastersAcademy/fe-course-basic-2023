@@ -6,30 +6,34 @@
 @import url("header.css");
 @import url("footer.css");
 
-* {
-  padding: 0;
-  margin: 0;
-}
-
 .wrapper {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  min-width: 400px;
   height: 100vh;
 }
 
 .content {
   max-width: 1280px;
+  width: 100%;
 }
 
 .main {
   display: flex;
-  flex: 1 1 auto;
+  flex: 1 0 auto;
   justify-content: center;
   margin: 0 auto;
   box-sizing: border-box;
   margin-bottom: 40px;
   padding: 60px 52px 0;
+}
+
+@media (max-width: 997px) {
+
+  .main {
+    flex-direction: column;
+  }
 }
 
 .left__side-main {
@@ -41,6 +45,7 @@
 
 .img__about {
   max-width: 535px;
+  width: 100%;
   object-fit: contain;
   border-radius: 20px;
 }
@@ -51,6 +56,13 @@
   flex: 0 1 50%;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+@media (max-width: 997px) {
+
+  .right__side-main {
+    margin-top: 32px;
+  }
 }
 
 .about__title {

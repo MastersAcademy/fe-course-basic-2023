@@ -1,0 +1,33 @@
+.footer {
+  height: 140px;
+  width: inherit;
+  background-color: #221F1F;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer__svg {
+  width: 42px;
+  height: 42px;
+  margin-right: 33px;
+}
+
+.footer__text {
+  font-size: 22px;
+  color: #FFF;
+  font-weight: 400;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: #FFF;
+}
+
+@media (max-width: 1100px) {
+
+  .footer__text {
+    display: none;
+  }
+}

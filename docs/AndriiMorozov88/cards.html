@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cards</title>
+        <link rel="stylesheet" href="styles/cards.css">
+        <link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/common_styles.css">
+        <link rel="stylesheet" href="styles/footer.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Roboto:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__logo">
+                <svg class="logo">
+                    <use xlink:href="sprite.svg#logo"></use>
+                </svg>
+            </div>
+            <div class="header__navigation">
+                <ul class="navigation">
+                    <li class="navigation__line navigation__line--underline">
+                        Games
+                    </li>
+                    <li class="navigation__line">
+                        <a class="navigation__link" href="about.html">About</a>
+                    </li>
+                    <li class="navigation__line">
+                        <a class="navigation__link" href="calculator.html">Calculator</a>
+                    </li>
+                    <li class="navigation__line">
+                        <a class="navigation__link" href="login.html">LogIn</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <form action="#" method="post" class="filter">
+            <button type="button" class="filter__burger-button" data-burger-button>
+                <svg class="button__logo">
+                    <use xlink:href="sprite.svg#filter"></use>
+                </svg>
+            </button>
+            <section class="filter__block" data-filter-block> 
+                <select name="select-genre" class="filter__select" data-select-genre>
+                    <option value="0" selected>All Genres</option>
+                    <option value="Shooter">Shooter</option>
+                    <option value="ARPG">ARPG</option>
+                    <option value="Battle Royale">Battle Royale</option>
+                    <option value="Strategy">Strategy</option>
+                    <option value="MMORPG">MMORPG</option>
+                    <option value="Fighting">Fighting</option>
+                    <option value="Card Game">Card Game</option>
+                </select>
+                <select name="select-platform" class="filter__select" data-select-platform>
+                    <option value="all" selected>All Platforms</option>
+                    <option value="PC (Windows)">PC (Windows)</option>
+                    <option value="Web Browser">Web Browser</option>
+                </select>
+                <section class="filter__element">
+                    <label class="filter-element">
+                        <input type="radio" name="radio" data-old-first>
+                        Old First
+                    </label>
+                    <label for="old-first" class="filter-element">
+                        <input type="radio" name="radio" data-new-first>
+                        New First
+                    </label> 
+                </section>
+                <section class="filter__element">
+                    <label for="new" class="filter-element">
+                        <input type="checkbox" data-new-games>
+                        New
+                    </label>
+                    <label for="old">
+                        <input type="checkbox" data-old-games>
+                        Old
+                    </label>
+                </section>
+            </section>
+            <section class="filter__search">
+                <div class="search__svg">
+                    <svg class="svg--search">
+                        <use xlink:href="sprite.svg#search"></use>
+                    </svg>
+                </div>
+                <div class="search__input-field">
+                    <input type="text" class="search__input" placeholder="Search" data-search-input>
+                    <button type="button" class="search__button" data-search-button>Apply</button>
+                </div>
+            </section>
+        </form>
+        <template data-card-template>
+            <section class="card">
+                <div class="card__image-container">
+                    <img class="card__image" data-game-image src="https://www.mmobomb.com/g/1136/thumbnail.jpg" alt="overwatch">
+                </div>
+                <div class="card__name">
+                    <h2 class="card__heading" data-game-title></h2>
+                    <p class="card__data" data-game-id></p>
+                    <p class="card__data card__data--short" data-game-description></p>
+                </div>
+                <div class="card__description">
+                    <p class="card__data card__data--short" data-game-description></p>
+                    <p class="card__data" data-game-genre></p>
+                    <p class="card__data" data-game-url></p>
+                    <p class="card__data" data-game-platform></p>
+                    <p class="card__data" data-game-publisher></p>
+                    <p class="card__data" data-game-developer></p>
+                    <p class="card__data" data-game-release></p>
+                    <p class="card__data" data-game-profile-url></p>
+                </div>
+            </section>
+        </template>
+        <h1 class="main__heading cards__heading">Games</h1>
+        <main class="main">
+            <section class="main__cards">
+                <p class="cards-loading-info--disabled" data-info></p>
+                <div class="card-container" data-card-container>
+                </div>
+            </section>
+        </main>
+        <button type="button" class="button-up--hidden" data-up-button>
+            <svg class="button-up__svg">
+                <use xlink:href="sprite.svg#up_button"></use>
+            </svg>
+        </button>
+        <footer class="footer" data-footer>
+            <section class="footer__svg-container">
+                <svg class="footer__svg">
+                    <use xlink:href="sprite.svg#facebook"></use>
+                </svg>
+                <svg class="footer__svg">
+                    <use xlink:href="sprite.svg#linked_in"></use>
+                </svg>
+                <svg class="footer__svg">
+                    <use xlink:href="sprite.svg#instagram"></use>
+                </svg> 
+            </section>
+            <section class="footer__text">
+                <p>Made with 💗 on course 
+                    <a class="footer__link" target="_blank" href="https://www.mastersacademy.education/frontend-for-beginners-it">'Frontend for beginners' from Masters Academy in 2023</a>
+                    , by Andrii Morozov</p>
+            </section>
+        </footer>
+        <script type="module" src="scripts/games.js"></script>
+    </body>
+</html>

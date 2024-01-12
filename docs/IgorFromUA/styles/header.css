@@ -1,10 +1,13 @@
 .header {
   width: 100%;
+  background: #EF4934;
+}
+
+.header__wrapper {
   height: 80px;
   display: grid;
   grid-template-columns: min-content min-content;
   justify-content: space-between;
-  background: #EF4934;
 }
 
 .header__logo, .navigation {

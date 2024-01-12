@@ -5,6 +5,8 @@
 
 .loading__spin {
   display: inline-block;
+  position: relative;
+  top: 50px;
   width: 50px;
   height: 50px;
   border: 3px solid rgba(255, 213, 0, .3);

@@ -4,11 +4,15 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://fonts.google.com/share?selection.family=Roboto:wght@100;300;700">
-        <link rel="stylesheet" href="style/style.css">
         <link rel="stylesheet" href="style/login.css">
-        <title>PokemonProject</title>
+        <link rel="stylesheet" href="style/style.css">
+        <title>Pokemons</title>
+        <link type="image/png" sizes="16x16" rel="icon" href="img/favicons/icons8-покебол-16.png">
+        <link type="image/png" sizes="32x32" rel="icon" href="img/favicons/icons8-покебол-32.png">
+        <link type="image/png" sizes="96x96" rel="icon" href="img/favicons/icons8-покебол-96.png">
     </head>
     <body>
+        <div class="overlay"></div>
         <header>
             <div class="container" style="background-color: #333;">
                 <section class="head">
@@ -16,7 +20,8 @@
                         <img class="head__logo-img" src="img/icons/logo-ma.svg" alt="masters-academy">
                         <span class="head__logo-title">MASTERS ACADEMY</span>
                     </a>
-    
+
+                    <div class="hamburger"></div>
                     <nav class="head__navigation">
                         <a class="head__navigation-item" href="calculator.html">Calculator</a>
                         <a class="head__navigation-item" href="pokemons.html">Pokemons</a>
@@ -33,12 +38,12 @@
                 <form class="login__form" action="success.html">
                     <div class="login__form-input">
                         <label for="email">Email</label>
-                        <input id="email" placeholder="Enter your email address" name="email">
+                        <input id="email" placeholder="Enter your email address" name="email" type="email">
                     </div>
                     <div class="errors-container" id="errors-email"></div>
                     <div class="login__form-input">
                         <label for="password">Password</label>
-                        <input id="password" placeholder="Enter your password" name="password">
+                        <input id="password" placeholder="Enter your password" name="password" type="password">
                     </div>
                     <div class="errors-container" id="errors-password"></div>
                     <div class="login__form-checkbox">
@@ -71,6 +76,8 @@
                 </div>    
             </section>
         </footer>
+
+        <script src="scripts/script.js"></script>
         <script src="scripts/login.js"></script>
     </body>
 </html>
