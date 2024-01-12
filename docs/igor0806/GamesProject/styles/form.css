@@ -1,0 +1,78 @@
+.main_login {
+  flex-grow: 1;
+}
+
+.login_title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 48px;
+  margin-top: 70px;
+  margin-bottom: 40px;
+}
+
+.login_form {
+  margin: 0 auto;
+  max-width: 60%;
+}
+
+.login_input {
+  width: 92%;
+  border-radius: 7px;
+  border: .006em solid #A9A9A9;
+  font-size: 14px;
+  display: block;
+  margin: 20px 0 40px;
+  padding: 30px 20px;
+  color: #A9A9A9;
+  font-weight: 400;
+}
+
+.login_input:focus {
+  border-bottom: 5px solid #EF4934;
+}
+
+.email,
+.password {
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.checkbox {
+  border: #EF4934;
+  margin-bottom: 40px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #221F1F;
+}
+
+.btn_form {
+  width: 100%;
+  font-weight: 600;
+  font-size: 22px;
+  background-color: #EF4934;
+  color: #FFF;
+  padding: 27px 0;
+  margin-bottom: 170px;
+  border: none;
+  border-radius: 6px;
+}
+
+.btn_success {
+  width: 50%;
+  font-weight: 600;
+  font-size: 22px;
+  background-color: #EF4934;
+  color: #FFF;
+  padding: 27px 0;
+  margin-bottom: 170px;
+  border: none;
+  border-radius: 6px;
+}
+
+@media (max-width: 520px) {
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+  }
+}

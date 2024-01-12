@@ -1,0 +1,39 @@
+.calculator_main {
+  flex-grow: 1;
+}
+
+.calculator_title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 48px;
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+
+.field {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  column-gap: 10px;
+  margin: 20px;
+}
+
+.firstValue,
+.secondValue {
+  margin: 20px 0 40px;
+  padding: 11px 2px;
+  color: #A9A9A9;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.btn_calculator {
+  font-weight: 600;
+  font-size: 22px;
+  background-color: #EF4934;
+  color: #FFF;
+  padding: 10px 17px;
+  border: none;
+  border-radius: 6px;
+}
+
