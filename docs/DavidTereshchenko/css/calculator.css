@@ -1,0 +1,143 @@
+@import "header/header.css";
+@import "default/default.css";
+@import "Footer/footer.css";
+
+.page {
+  min-height: calc(100vh - 200px);
+}
+
+.calculator {
+  max-width: 100%;
+}
+
+.title__calculator {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  margin-bottom: 60px;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.number-block {
+  display: flex;
+  justify-content: start;
+  align-items: flex-end;
+  gap: 16px;
+  margin-top: 60px;
+  border-radius: 6px;
+}
+
+.number-block input {
+  height: 36px;
+  text-align: center;
+}
+
+.number__block-input {
+  display: flex;
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px 10px;
+  border-radius: 6px;
+  border: 1px solid #A9A9A9;
+}
+
+.operator {
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+  max-width: 50px;
+  margin: 0 auto;
+  align-items: center;
+  padding: 0 5px;
+  height: 36px;
+  border-radius: 6px;
+  border: 1px solid #A9A9A9;
+}
+
+.return {
+  width: 100px;
+}
+
+.button {
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: 1px solid #A9A9A9;
+  width: 100px;
+  font-size: 14px;
+  background-color: #000;
+  color: #FFF;
+}
+
+.title {
+  font-size: 48px;
+}
+
+.result__block {
+  display: flex;
+  width: 100px;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.result {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+.result p {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.count-block {
+  display: none;
+  flex-direction: row;
+  margin-top: 40px;
+  gap: 20px;
+  align-items: center;
+}
+
+.visual-counting {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  flex-direction: row;
+  letter-spacing: .4rem;
+  margin-bottom: 20px;
+}
+
+.error {
+  border: 1px solid #EF4934;
+}
+
+.visual-counting span {
+  font-size: 48px;
+  color: #EF4934;
+}
+
+.date {
+  margin-top: 30px;
+  line-height: 30px;
+}
+
+/* Adaptation */
+
+@media screen and (max-width: 700px) {
+
+  .title__calculator {
+    font-size: 38px;
+  }
+
+  .number-block {
+    justify-content: center;
+  }
+
+  .visual-counting span {
+    font-size: 38px;
+  }
+}
+

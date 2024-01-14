@@ -1,5 +1,3 @@
-// const c = console.log; // for short use console.log
-
 let games = [];
 const cardsBlock = document.querySelector('.game__item-blocks');
 const searchInput = document.querySelector('.search__input');
@@ -7,6 +5,8 @@ const newCheck = document.querySelector('#newGames');
 const oldCheck = document.querySelector('#oldGames');
 const dateYear = '2020-01-01';
 const loading = document.querySelector('[data-type="loading"]');
+const genreSelect = document.querySelector('[data-select="genre"]');
+const platformSelect = document.querySelector('[data-select="platform"]');
 
 function showLoader() {
     loading.style.display = 'flex';
@@ -16,81 +16,173 @@ function hideLoader() {
     loading.style.display = 'none';
 }
 
-function renderCard(
-    releaseDate,
-    genre,
-    platform,
-    thumbnail,
-    title,
-    shortDescription,
-    publisher,
-    developer,
-) {
-    return `<div class="item-block__game-item ">
+function createCard(cards) {
+    const cardsLimit = cards.filter((el) => el.id <= 50);
+    cardsLimit.forEach((el) => {
+        const maxDescription = 48;
+        const world = el.short_description.split('');
+        el.short_description = world.length > maxDescription
+            ? `${world.slice(0, maxDescription).join('')}...`
+            : el.short_description;
+
+        cardsBlock.insertAdjacentHTML('beforeend', `<div class="item-block__game-item ">
                                 <div class="game-item-item__header">
                                     <div class="header__icon">
-                                        <img src="${thumbnail}" class="header__img" alt="game icon" width="90" height="90">
+                                        <img src="${el.thumbnail}" class="header__img" alt="game icon" width="90" height="90">
                                     </div>
                                     <div class="header__about">
-                                        <h2 class="header__game-name cards-title">${title}</h2>
-                                        <div class="about__p">${shortDescription}</div>
+                                        <h2 class="header__game-name cards-title">${el.title}</h2>
+                                        <div class="about__p">${el.short_description}</div>
                                     </div>
                                 </div>
                                 <div class="game-item__info-list">
                                     <ul class="info-game" data-info="info">
                                         <li>
-                                            <b>Genre:</b>${genre}
+                                            <b>Genre:</b>${el.genre}
                                         </li>
                                         <li>
-                                            <b>Platform:</b>${platform}
+                                            <b>Platform:</b>${el.platform}
                                         </li>
                                         <li>
-                                            <b>Publisher:</b>${publisher}
+                                            <b>Publisher:</b>${el.publisher}
                                         </li>
                                         <li>
-                                            <b>Developer:</b>${developer}
+                                            <b>Developer:</b>${el.developer}
                                         </li>
                                         <li>
-                                            <b>Release_date:</b>${releaseDate}
+                                            <b>Release_date:</b>${el.release_date}
                                         </li>
                                     </ul>
                                 </div>
-                            </div>`;
+                            </div>`);
+    });
 }
 
-async function getJSON() {
+const apiURL = 'https://mmo-games.p.rapidapi.com/games';
+
+async function getGames(platform) {
+    let query = '';
+    if (platform) {
+        query = `?platform=${platform}`;
+    }
+    const url = `${apiURL}${query}`;
+    const response = await fetch(url, {
+        method: 'GET',
+        mode: 'cors',
+        cache: 'no-cache',
+        headers: {
+            'X-RapidAPI-Key': '1c3169c707mshb51bff34cbc9ff6p1749b9jsn648a19134256',
+            'X-RapidAPI-Host': 'mmo-games.p.rapidapi.com',
+        },
+    });
     try {
         showLoader();
-        const response = await fetch('https://mmo-games.p.rapidapi.com/games', {
-            method: 'GET',
-            cache: 'no-cache',
-            headers: {
-                'X-RapidAPI-Key': '1c3169c707mshb51bff34cbc9ff6p1749b9jsn648a19134256',
-                'X-RapidAPI-Host': 'mmo-games.p.rapidapi.com',
-            },
-        });
-
         games = await response.json();
-        games = games.slice(0, 50);
-        games.forEach((cards) => {
-            cardsBlock.innerHTML += renderCard(
-                cards.release_date,
-                cards.genre,
-                cards.platform,
-                cards.thumbnail,
-                cards.title,
-                cards.short_description,
-                cards.publisher,
-                cards.developer,
-            );
-        });
+        createCard(games);
     } catch (error) {
         console.error('Error:', error);
     } finally {
         hideLoader();
     }
 }
-document.addEventListener('DOMContentLoaded', getJSON);
+document.addEventListener('DOMContentLoaded', getGames(''));
+
+document.querySelector('[data-select="platform"]').addEventListener('change', () => {
+    cardsBlock.innerText = '';
+    switch (platformSelect.value) {
+        case 'platform':
+            getGames('all');
+            break;
+
+        case 'pc':
+            getGames('pc');
+            break;
+
+        case 'browser':
+            getGames('browser');
+            break;
+
+        default:
+            getGames('all');
+    }
+});
+
+async function getCategory(genre) {
+    let query = '';
+    if (genre) {
+        query = `?category=${genre}`;
+    }
+    cardsBlock.innerText = '';
+    const urlCategory = new URL(`${apiURL}${query}`);
+    const response = await fetch(urlCategory, {
+        method: 'GET',
+        cache: 'no-cache',
+        mode: 'cors',
+        headers: {
+            'X-RapidAPI-Key': '1c3169c707mshb51bff34cbc9ff6p1749b9jsn648a19134256',
+            'X-RapidAPI-Host': 'mmo-games.p.rapidapi.com',
+        },
+    });
+    try {
+        showLoader();
+        games = await response.json();
+        createCard(games);
+    } catch (error) {
+        console.error(error);
+    } finally {
+        hideLoader();
+    }
+}
+
+document.querySelector('[data-select="genre"]').addEventListener('change', () => {
+    cardsBlock.innerText = '';
+    switch (genreSelect.value) {
+        case 'genre':
+            getCategory('');
+            break;
+
+        case 'shooter':
+            getCategory('shooter');
+            break;
+
+        case 'pvp':
+            getCategory('pvp');
+            break;
+
+        case 'mmorpg':
+            getCategory('mmorpg');
+            break;
+
+        case 'pve':
+            getCategory('pve');
+            break;
+
+        default:
+            getCategory('');
+    }
+});
+
+function sortFilter(element) {
+    showLoader();
+    searchInput.value = '';
+    function compareDates(dataOld, dataNew) {
+        if (element.dataset.radio === 'new') {
+            return new Date(dataNew.release_date) - new Date(dataOld.release_date);
+        }
+
+        if (element.dataset.radio === 'old') {
+            return new Date(dataOld.release_date) - new Date(dataNew.release_date);
+        }
+        return compareDates();
+    }
+    games.sort(compareDates);
+    cardsBlock.innerText = '';
+
+    setTimeout(() => {
+        hideLoader();
+        createCard(games);
+    }, 1000);
+}
 
 document.querySelector('[data-search]').addEventListener('click', () => {
     showLoader();
@@ -106,18 +198,7 @@ document.querySelector('[data-search]').addEventListener('click', () => {
     cardsBlock.innerText = '';
     setTimeout(() => {
         hideLoader();
-        search.forEach((cards) => {
-            cardsBlock.innerHTML += renderCard(
-                cards.release_date,
-                cards.genre,
-                cards.platform,
-                cards.thumbnail,
-                cards.title,
-                cards.short_description,
-                cards.publisher,
-                cards.developer,
-            );
-        });
+        createCard(search);
     }, 500);
 });
 
@@ -129,18 +210,7 @@ searchInput.oninput = function () {
         cardsBlock.innerText = '';
         setTimeout(() => {
             hideLoader();
-            games.forEach((cards) => {
-                cardsBlock.innerHTML += renderCard(
-                    cards.release_date,
-                    cards.genre,
-                    cards.platform,
-                    cards.thumbnail,
-                    cards.title,
-                    cards.short_description,
-                    cards.publisher,
-                    cards.developer,
-                );
-            });
+            createCard(games);
         }, 500);
     }
 };
@@ -154,17 +224,16 @@ function checkBoxFilter(element) {
         }
 
         if (newCheck.checked === false && oldCheck.checked === false) {
-            showLoader();
             return element;
         }
 
-        if (element.dataset.check === 'new' && newCheck.checked === true) {
+        if (element.dataset.check === 'old' && newCheck.checked === true) {
             return el.release_date >= dateYear;
         } if (oldCheck.checked === true) {
             return el.release_date <= dateYear;
         }
 
-        if (element.dataset.check === 'old' && oldCheck.checked === true) {
+        if (element.dataset.check === 'new' && oldCheck.checked === true) {
             return el.release_date <= dateYear;
         } if (newCheck.checked === true) {
             return el.release_date >= dateYear;
@@ -175,19 +244,9 @@ function checkBoxFilter(element) {
 
     setTimeout(() => {
         hideLoader();
-        filterCards.forEach((cards) => {
-            cardsBlock.innerHTML += renderCard(
-                cards.release_date,
-                cards.genre,
-                cards.platform,
-                cards.thumbnail,
-                cards.title,
-                cards.short_description,
-                cards.publisher,
-                cards.developer,
-            );
-        });
-    }, 500);
+        createCard(filterCards);
+    }, 1000);
 }
 
 checkBoxFilter(dateYear);
+sortFilter();

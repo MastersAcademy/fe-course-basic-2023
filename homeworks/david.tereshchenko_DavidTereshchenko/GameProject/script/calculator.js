@@ -1,8 +1,8 @@
 const operator = document.querySelector('[data-operation]');
 const btn = document.querySelector('[data-button]');
-const visualNumberTwo = document.querySelector('[data-number-two]');
+const visualNumberTwo = document.querySelector('[data-number-two="number-two"]');
 const visualOperator = document.querySelector('[data-operation-visual]');
-const visualNumberOne = document.querySelector('[data-number-one]');
+const visualNumberOne = document.querySelector('[data-number-one="number-one"]');
 const equals = document.querySelector('[data-equals]');
 const visualResult = document.querySelector('[data-result-visual]');
 const countBlock = document.querySelector('[data-count-block]');
@@ -11,8 +11,8 @@ const countGamesVisual = document.querySelector('[data-count-game-visual]');
 const date = document.querySelector('[data-date]');
 
 btn.onclick = function () {
-    const one = Number(document.getElementById('firstNumber').value);
-    const two = Number(document.getElementById('secondNumber').value);
+    const numberOne = Number(document.querySelector('[data-number-one="one"]').value);
+    const numberTwo = Number(document.querySelector('[data-number-two="two"]').value);
     const result = document.querySelector('.result');
 
     const currentDate = new Date();
@@ -21,7 +21,7 @@ btn.onclick = function () {
 
     let calc;
 
-    if (Number.isNaN(one) || Number.isNaN(two)) {
+    if (Number.isNaN(numberOne) || Number.isNaN(numberTwo)) {
         result.innerText = 'Enter a number';
         visualResult.innerText = 'Enter a number';
         visualOperator.innerText = '';
@@ -33,19 +33,19 @@ btn.onclick = function () {
 
     switch (operator.value) {
         case '+':
-            calc = one + two;
+            calc = numberOne + numberTwo;
             break;
 
         case '-':
-            calc = one - two;
+            calc = numberOne - numberTwo;
             break;
 
         case '×':
-            calc = one * two;
+            calc = numberOne * numberTwo;
             break;
 
         case '/':
-            if (two === 0) {
+            if (numberTwo === 0) {
                 result.innerText = 'Number must not be zero';
                 visualResult.innerText = 'ENumber must not be zero';
                 visualOperator.innerText = '';
@@ -54,7 +54,7 @@ btn.onclick = function () {
                 equals.innerText = '';
                 return result;
             }
-            calc = one / two;
+            calc = numberOne / numberTwo;
             break;
 
         default:
@@ -109,9 +109,9 @@ btn.onclick = function () {
         game = 'Games';
     }
 
-    visualNumberOne.innerText = one;
+    visualNumberOne.innerText = numberOne;
     visualOperator.innerText = operator.value;
-    visualNumberTwo.innerText = two;
+    visualNumberTwo.innerText = numberTwo;
     equals.innerText = '=';
     visualResult.innerText = calc;
     countGamesVisual.innerText = game;

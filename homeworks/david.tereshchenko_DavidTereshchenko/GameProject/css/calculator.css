@@ -3,11 +3,7 @@
 @import "Footer/footer.css";
 
 .page {
-  min-height: 75%;
-}
-
-.wrapper {
-  height: 100%;
+  min-height: calc(100vh - 200px);
 }
 
 .title__calculator {
@@ -21,6 +17,7 @@
 
 .number__container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: start;
   align-items: flex-end;
   max-width: 100%;
@@ -102,6 +99,7 @@
 
 .visual-counting {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   flex-direction: row;
   letter-spacing: .4rem;
@@ -124,5 +122,28 @@
 
 .date {
   display: flex;
+  line-height: 30px;
   margin-top: 30px;
 }
+
+/* Adaptation */
+
+@media screen and (max-width: 700px) {
+
+  .title__calculator {
+    font-size: 38px;
+  }
+
+  .number__container {
+    justify-content: space-between;
+  }
+
+  .visual-counting span {
+    font-size: 38px;
+  }
+
+  .result__block {
+    display: none;
+  }
+}
+

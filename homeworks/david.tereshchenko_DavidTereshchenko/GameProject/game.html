@@ -38,32 +38,39 @@
                 </div>
             </header>
             <div class="filter">
-                <div class="filter__container">
+                <div class="filter__container" data-type="filter-container">
                     <div class="filter__icon">
-                        <img src="img/icons/filter.png" height="512" class="filter-icon" id="filter-icon" alt="filter-icon">
+                        <img src="img/icons/filter.png" height="30" class="filter-icon-img" id="filter-icon" alt="filter-icon" width="30">
                         <label for="filter-icon">Filter</label>
                     </div>
                     <nav class="filter__list">
                         <div class="filter__checkbox">
                             <div class="filter__select">
                                 <label>
-                                    <select class="select__option" name="user_profile_color_1">
-                                        <option value="1">Genre</option>
-                                        <option value="2">Sport</option>
-                                        <option value="3">Shooter</option>
-                                        <option value="4">Racing</option>
-                                        <option value="5">Horror</option>
+                                    <select class="select__genre" name="user_profile_color_1" data-select="genre" onchange="categoryFilter(this)">
+                                        <option value="genre">Genre</option>
+                                        <option value="shooter">Shooter</option>
+                                        <option value="pvp">PvP</option>
+                                        <option value="mmorpg">MMORPG</option>
+                                        <option value="pve">PvE</option>
+                                    </select>
+                                </label>
+                                <label>
+                                    <select class="select__platform" name="user_profile_color_1" data-select="platform" onchange="platformFilter(this)">
+                                        <option value="platform">Platform</option>
+                                        <option value="pc">PC</option>
+                                        <option value="browser">Web</option>
                                     </select>
                                 </label>
                             </div>
                             <div class="checkbox__radio">
                                 <label>
-                                    <input type="radio" name="name1" class="radioButton" value="" checked>
-                                    Platform
+                                    <input type="radio" name="name1" class="radioButton" value="desc" data-radio="old" onclick="sortFilter(this)">
+                                    Old First
                                 </label>
                                 <label>
-                                    <input type="radio" name="name1" class="radioButton" value="">
-                                    Online games
+                                    <input type="radio" name="name1" class="radioButton" value="asc" data-radio="new" onclick="sortFilter(this)">
+                                    New First
                                 </label>
                             </div>
                             <div class="checkbox__checkbox">
@@ -93,6 +100,7 @@
                         <div class="loader"></div>
                     </div>
                 </div>
+                <div class="paginate"></div>
             </main>
             <footer class="footer">
                 <div class="footer__container">
@@ -114,6 +122,7 @@
             </footer>
         </div>
         <script src="script/burger.js"></script>
+        <script src="script/filter.js"></script>
         <script src="script/cards.js"></script>
     </body>
 </html>

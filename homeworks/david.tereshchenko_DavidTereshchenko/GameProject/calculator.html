@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -49,7 +49,7 @@
                         <div class="number__container">
                             <div class="number-1">
                                 <label for="firstNumber">First number</label>
-                                <input id="firstNumber" class="number__block one" name="number1" required>
+                                <input id="firstNumber" data-number-one="one" class="number__block one" name="number1" required>
                             </div>
                             <div class="operator__block">
                                 <label>
@@ -65,7 +65,7 @@
                             </div>
                             <div class="number-2">
                                 <label for="secondNumber">Second number</label>
-                                <input id="secondNumber" class="number__block two" name="number2" required>
+                                <input id="secondNumber" data-number-two="two" class="number__block two" name="number2" required>
                             </div>
                             <div class="return">
                                 <button type="button" class="button" data-button="button-result">=</button>
@@ -93,13 +93,19 @@
                 <div class="footer__container">
                     <div class="container__image">
                         <div class="img__social">
-                            <img src="img/icons/social/Group%202.svg" alt="Facebook">
+                            <a href="https://www.facebook.com/david.tereshchenko.77" target="_blank">
+                                <img src="img/icons/social/Group%202.svg" alt="Facebook">
+                            </a>
                         </div>
                         <div class="img__social">
-                            <img src="img/icons/social/Group%203.svg" alt="LinkedIn">
+                            <a href="https://www.linkedin.com/in/david-tereshchenko-7bb98b240" target="_blank">
+                                <img src="img/icons/social/Group%203.svg" alt="LinkedIn">
+                            </a>
                         </div>
                         <div class="img__social">
-                            <img src="img/icons/social/Group%204.svg" alt="Instagram">
+                            <a href="https://www.instagram.com/davidushka_te?igshid=YzVkODRmOTdmMw%3D%3D&utm_source=qr" target="_blank">
+                                <img src="img/icons/social/Group%204.svg" alt="Instagram">
+                            </a>
                         </div>
                     </div>
                     <div class="container__text">
