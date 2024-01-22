@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/media.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <title>Login page</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__wrap">
+            <a href="../index.html">
+                <img src="../images/main/logo.svg" alt="Logo" class="header__logo">
+            </a>
+            <nav class="navigation">
+                <ul class="nav__menu">
+                    <li class="nav__menu_list">
+                        <a href="calculator.html" class="menu__nav-link">Calculator</a>
+                    </li>
+                    <li class="nav__menu_list">
+                        <a href="games.html" class="menu__nav-link">Games</a>
+                    </li>
+                    <li class="nav__menu_list">
+                        <a href="../index.html" class="menu__nav-link">About</a>
+                    </li>
+                    <li class="nav__menu_list">
+                        <a href="login.html" class="menu__nav-link">Login</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main__login">
+        <section class="login_form_box">
+            <form action="success.html" method="post" name="autorization" target="_self" class="login_form"
+                id="login_form">
+
+                <div class="login_title">
+                    <h1>Login page</h1>
+                </div>
+                <div class="form_input__info">
+                    <div class="email">
+                        <label class="input_name" for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Enter your email address"
+                            class="add__info_place" autocomplete="email">
+                        <span class="errors_info" id="email_container"></span>
+                    </div>
+                    <div class="password">
+                        <label for="password" class="input_name">Password</label>
+                        <input type="password" name="password" id="password" placeholder="Enter your password"
+                            class="add__info_place">
+                        <div class="errors_info" id="password_container"></div>
+                    </div>
+                    <div class="not_a_robot_-container">
+                        <div class="verify-container">
+                            <input type="checkbox" value="verify" id="not_a_robot" name="verify"
+                                class="verify-container__input">
+                            <label for="not_a_robot" class="verify-container__label">I’m not a robot</label>
+                        </div>
+                        <div class="errors_info" id="not_a_robot_container"></div>
+                    </div>
+
+                    <div id="errors-container" class="errors-container"></div>
+                    <button type="button" value="login" class="btn__success" id="login_button">Login</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <nav class="footer__social_container">
+            <ul class="footer__social_list">
+                <li class="social__list-item">
+                    <a class="social__item-link" href="#">
+                        <img class="social__ico" src="../images/ico/fb-soc-ico.svg" alt="Facebook">
+                    </a>
+                </li>
+                <li class="social__list-item">
+                    <a class="social__item-link" href="#">
+                        <img class="social__ico" src="../images/ico/link-soc-ico.svg" alt="LinkedIn">
+                    </a>
+                </li>
+                <li class="social__list-item">
+                    <a class="social__item-link" href="#">
+                        <img class="social__ico" src="../images/ico/insta-soc-ico.svg" alt="Instagram">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="footer__about">
+            <p class="footer__about_info">
+                Made with 💗 on course<a href="https://www.mastersacademy.education/frontend-for-beginners-it"
+                    target="_blank">'Frontend for beginners' from Masters Academy in
+                    2023,</a>from Masters Academy in 2023, by Taras
+            </p>
+        </div>
+    </footer>
+    <script src="../js/form-validator.js"></script>
+</body>
+
+</html>
