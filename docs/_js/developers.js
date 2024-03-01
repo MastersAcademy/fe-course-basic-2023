@@ -1,6 +1,6 @@
 export const developers = [
-    { firstName: 'Ekaterina', lastName: 'Sharova', action: './kostiantyn.nosatskyi/PokemonProject/index.html' },
-    { firstName: 'Kostiantyn', lastName: 'Nosatskyi', action: './rogerosha/index.html' },
+    { firstName: 'Ekaterina', lastName: 'Sharova', action: './rogerosha/index.html' },
+    { firstName: 'Kostiantyn', lastName: 'Nosatskyi', action: './kostiantyn.nosatskyi/PokemonProject/index.html' },
     { firstName: 'Max', lastName: 'Snischuk', action: './snischuk/index.html' },
     { firstName: 'Rostyslav', lastName: 'Vyshemirskyi', action: './rooosss/index.html' },
     { firstName: 'Ihor', lastName: 'Zapisochniy', action: './IgorFromUA/index.html' },

@@ -43,7 +43,7 @@
                     </div>
                 </nav>
             </header>
-            <main class="main container">
+            <main class="main container" data-card-container>
                 <h1 class="main__title">Hall of Fame</h1>
                 <div class="main__description">
                     <p class="text__description">Welcome to our Hall of Fame! Browse through the graduation projects
@@ -61,7 +61,7 @@
                         <a class="text__link" href="https://www.mastersacademy.education/events-9">here</a>.
                     </p>
                 </div>
-                <template>
+                <template data-template>
                     <section class="card">
                         <div class="card__information">
                             <div class="card__information-img">
@@ -72,7 +72,7 @@
                             </div>
                             <div class="card__information-text">
                                 <span class="card__text">by</span>
-                                <span class="card__text">Ivan Ivanov</span>
+                                <span class="card__text" data-template-name>Ivan Ivanov</span>
                             </div>
                             <div class="card__overlay">
                                 <p class="card__overlay-text">
@@ -102,7 +102,7 @@
                             </a>
                         </div>
                         <div class="card__btn">
-                            <form class="card__btn-form" action="#">
+                            <form class="card__btn-form" action="#" data-template-form>
                                 <button type="submit" class="card__btn-button">visit site</button>
                             </form>
                         </div>
@@ -137,6 +137,6 @@
             </footer>
         </div>
         <script src="_js/header.js"></script>
-        <script src="_js/developers.js"></script>
+        <script type="module" src="_js/cards.js"></script>
     </body>
 </html>
