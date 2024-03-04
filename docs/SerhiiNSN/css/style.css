@@ -587,7 +587,6 @@ body {
   display: flex;
   column-gap: 10px;
   align-items: center;
-  justify-content: center;
   padding: 0 53px;
   font-size: 22px;
 }
