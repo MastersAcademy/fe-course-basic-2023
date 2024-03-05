@@ -2,115 +2,144 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>MA Projects</title>
+        <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="_styles/styles.css">
+        <link rel="stylesheet" href="_styles/style.css">
+        <link rel="icon" href="_images/favicon.ico">
+        <title>Hall of Fame</title>
     </head>
     <body>
-        <main>
-            <h1>MA Projects</h1>
-            <ul>
-                <li>
-                    David Tereshchenko - <a href="./DavidTereshchenko/index.html">Final Project</a>
-                </li>
-                <li>
-                    Bogdandrummer - <a href="./Bogdandrummer/index.html">Games Project</a>
-                </li>
-                <li>
-
-                    Taras Bobov - <a href="./LotusElize/index.html">Final project</a>
-                </li>
-                <li>
-
-                    Andrii Morozov - <a href="./AndriiMorozov88/about.html">Lecture 5</a>
-                </li>
-                <li>
-                    Mariia Demchenko - <a href="./demasha0908/index.html">Final project</a>
-                </li>
-                <li>
-                    Sviatoslav Taranenko - <a href="./SviatoslavTaranenko/index.html">Final Project</a>
-
-                </li>
-                <li>
-                    Dmytro Shevchenko - <a href="./dmytro-shevchenko1/GamesProject/index.html">Games Project</a>
-                </li>
-                <li>
-                    Serhii Noskov - <a href="./SerhiiNSN/index.html">Final Project</a>
-                </li>
-                <li class="allocene">
-                    Artur Kobyliatsky - <a href="./Allocene/index.html">Final Project</a>
-                </li>
-                <li>
-                    Ihor Zapisochniy - <a href="./IgorFromUA/index.html">Final project</a>
-                </li>
-                <li>
-                    Lesia Turuta - <a href="./lesiaturuta/PokemonProject/login.html">Pokemons</a>
-                </li>
-                <li>
-                    Rostyslav Vyshemirskyi - <a href="./rooosss/index.html">Final Project</a>
-                </li>
-                <li>
-                    Vladyslav Brusentsov - <a href="./vBrusentsov/index.html">Final Project</a>
-                </li>
-                <li>
-                    Max Snischuk - <a href="./snischuk/index.html">Final Project</a>
-                </li>
-                <li>
-                    Kostiantyn Nosatskyi - <a href="./kostiantyn.nosatskyi/PokemonProject/index.html">Lecture 5</a>
-                </li>
-                <li>
-                    Ekaterina Sharova - <a href="./rogerosha/index.html">Final Project</a>
-                </li>
-                <li>
-                    Igor Orel - <a href="./igor0806/GamesProject/index.html">Games Project</a>
-                </li>
-            </ul>
-            <template>
-                <section class="card">
-                    <div class="card__information">
-                        <div class="card__information-img">
-                            <img class="card__img" src="_img/title_pokemon.png" alt="pokemon">
-                        </div>
-                        <div class="card__information-title">
-                            <h2 class="card__title">Project Pokemon</h2>
-                        </div>
-                        <div class="card__information-text">
-                            <span class="card__text">by</span>
-                            <span class="card__text">Ivan Ivanov</span>
-                        </div>
-                        <div class="card__overlay">
-                            <p class="card__overlay-text">
-                                This is a project about Pokemon, or about games.
-                                Depending on what kind of card😅🙈
-                            </p>
-                        </div>
+        <div class="wrapper">
+            <header class="head">
+                <nav class="header__menu">
+                    <a href="https://www.mastersacademy.education/frontend-for-beginners-it" class="header__logo">
+                        <img src="_images/main_logo.svg" alt="logo">
+                    </a>
+                    <div class="menu__field">
+                        <img class="burger" src="_images/burger.svg" alt="burger" data-burger>
+                        <ul class="menu__list" data-menu__list>
+                            <li>
+                                <a class="menu__link-about" href="index.html">Hall of Fame</a>
+                            </li>
+                            <li>
+                                <a class="menu__link-about" href="https://www.mastersacademy.education/events-9">Season 9</a>
+                            </li>
+                            <li>
+                                <a class="menu__link-about" href="https://www.mastersacademy.education/about-project">About the
+                                    project</a>
+                            </li>
+                            <li>
+                                <a class="menu__link-about" href="https://www.mastersacademy.education/it-courses">Library of IT
+                                    courses</a>
+                            </li>
+                            <li>
+                                <a class="menu__link-about" href="https://www.mastersacademy.education/blagodiynist">Charity</a>
+                            </li>
+                            <li>
+                                <a class="menu__link-about menu__button"
+                                    href="https://www.mastersacademy.education/events-9">Сhoose a course</a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="card__social">
-                        <a href="#" class="social__link">
-                            <div class="card__social-github">
-                                <div class="social__img-github">
-                                </div>
+                </nav>
+            </header>
+            <main class="main container">
+                <h1 class="main__title">Hall of Fame</h1>
+                <div class="main__description">
+                    <p class="text__description">Welcome to our Hall of Fame! Browse through the graduation projects
+                        from the
+                        <a class="text__link" href="https://www.mastersacademy.education/frontend-for-beginners-it">'Frontend for
+                            Beginners 2023'
+                            course </a>
+                        at Masters Academy.
+                    </p>
+                    <p class="text__description">In this study-for-donation initiative, participants learned the basics of web
+                        development, covering HTML,
+                        CSS, and JS.</p>
+                    <p class="text__description">Interested in other courses like Databases, AI, Softskills,
+                        and more? Explore your options
+                        <a class="text__link" href="https://www.mastersacademy.education/events-9">here</a>.
+                    </p>
+                </div>
+                <template data-template>
+                    <section class="card">
+                        <div class="card__information">
+                            <div class="card__information-img">
+                                <img class="card__img" src="_img/title_pokemon.png" alt="pokemon">
                             </div>
-                        </a>
-                        <a href="#" class="social__link">
-                            <div class="card__social-gmail">
-                                <div class="social__img-gmail">
-                                </div>
+                            <div class="card__information-title">
+                                <h2 class="card__title">Project Pokemon</h2>
                             </div>
-                        </a>
-                        <a href="#" class="social__link">
-                            <div class="card__social-telegram">
-                                <div class="social__img-telegram">
-                                </div>
+                            <div class="card__information-text">
+                                <span class="card__text">by</span>
+                                <span class="card__text" data-template-name>Ivan Ivanov</span>
                             </div>
+                            <div class="card__overlay">
+                                <p class="card__overlay-text">
+                                    This is a project about Pokemon, or about games.
+                                    Depending on what kind of card😅🙈
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card__social">
+                            <a href="#" class="social__link">
+                                <div class="card__social-github">
+                                    <div class="social__img-github">
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="social__link">
+                                <div class="card__social-gmail">
+                                    <div class="social__img-gmail">
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" data-telegram class="social__link">
+                                <div class="card__social-telegram">
+                                    <div class="social__img-telegram">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card__btn">
+                            <form class="card__btn-form" action="#" target="_blank" data-template-form>
+                                <button type="submit" class="card__btn-button">visit site</button>
+                            </form>
+                        </div>
+                    </section>
+                </template>
+                <div class="card-container" data-card-container>
+
+                </div>
+            </main>
+            <footer class="footer">
+                <ul class="footer__logos-social">
+                    <li class="social__item">
+                        <a href="https://www.facebook.com/">
+                            <svg class="svg" width="42" height="42">
+                                <use xlink:href="_images/sprite.svg#facebook"></use>
+                            </svg>
                         </a>
-                    </div>
-                    <div class="card__btn">
-                        <form class="card__btn-form" action="#">
-                            <button type="submit" class="card__btn-button">visit site</button>
-                        </form>
-                    </div>
-                </section>
-            </template>
-        </main>
+                    </li>
+                    <li class="social__item">
+                        <a href="https://www.linkedin.com/">
+                            <svg class="svg" width="42" height="42">
+                                <use xlink:href="_images/sprite.svg#linked_in"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="https://www.instagram.com/">
+                            <svg class="svg" width="42" height="42" fill="red">
+                                <use xlink:href="_images/sprite.svg#instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <h2 class="footer__title">Made with 💗 on course 'Frontend for beginners' from Masters Academy in 2023</h2>
+            </footer>
+        </div>
+        <script src="_js/header.js"></script>
+        <script type="module" src="_js/cards.js"></script>
     </body>
 </html>

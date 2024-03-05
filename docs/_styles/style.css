@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap");
+@import url("null.css");
+@import url("header.css");
+@import url("footer.css");
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  min-width: 400px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 930px;
+  margin: 0 auto;
+}
+
+.main__title {
+  font-family: Roboto;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: center;
+  color: #000;
+  margin-top: 45px;
+}
+
+.main__description {
+  margin-top: 45px;
+}
+
+.text__description {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.75px;
+  color: #000;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.text__link {
+  text-decoration: underline;
+  color: #EF4934;
+}
