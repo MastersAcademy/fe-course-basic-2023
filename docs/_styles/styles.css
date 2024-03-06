@@ -1,17 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 body {
-  margin: 10px;
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
 
-.wrapper {
+.wrapper, .card-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 50px;
+}
+
+.card-container {
+  margin: 50px 0 auto;
 }
 
 .card, .card__information, .card__information-text {
@@ -20,13 +23,21 @@ body {
   align-items: center;
 }
 
+.card, .card__information {
+  gap: 20px;
+}
+
 .card {
   border: solid 1px #EF4934;
   border-radius: 20px;
   width: 100%;
   max-width: 276px;
   padding: 10px 0;
-  gap: 20px;
+  transition: all 250ms ease-in-out;
+}
+
+.card:hover {
+  scale: 1.1;
 }
 
 .card__img {

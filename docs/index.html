@@ -43,7 +43,7 @@
                     </div>
                 </nav>
             </header>
-            <main class="main container" data-card-container>
+            <main class="main container">
                 <h1 class="main__title">Hall of Fame</h1>
                 <div class="main__description">
                     <p class="text__description">Welcome to our Hall of Fame! Browse through the graduation projects
@@ -65,10 +65,10 @@
                     <section class="card">
                         <div class="card__information">
                             <div class="card__information-img">
-                                <img class="card__img" src="_img/title_pokemon.png" alt="pokemon">
+                                <img class="card__img" src="_img/title_pokemon.png" alt="pokemon" data-template-image>
                             </div>
                             <div class="card__information-title">
-                                <h2 class="card__title">Project Pokemon</h2>
+                                <h2 class="card__title" data-template-project-name>Project Pokemon</h2>
                             </div>
                             <div class="card__information-text">
                                 <span class="card__text">by</span>
@@ -76,7 +76,7 @@
                             </div>
                             <div class="card__overlay">
                                 <p class="card__overlay-text">
-                                    This is a project about Pokemon, or about games.
+                                    This is a project about Pokemon, or about Games.
                                     Depending on what kind of card😅🙈
                                 </p>
                             </div>
@@ -94,7 +94,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="#" class="social__link">
+                            <a href="#" data-telegram class="social__link">
                                 <div class="card__social-telegram">
                                     <div class="social__img-telegram">
                                     </div>
@@ -102,12 +102,15 @@
                             </a>
                         </div>
                         <div class="card__btn">
-                            <form class="card__btn-form" action="#" data-template-form>
+                            <form class="card__btn-form" action="#" target="_blank" data-template-form>
                                 <button type="submit" class="card__btn-button">visit site</button>
                             </form>
                         </div>
                     </section>
                 </template>
+                <div class="card-container" data-card-container>
+
+                </div>
             </main>
             <footer class="footer">
                 <ul class="footer__logos-social">
