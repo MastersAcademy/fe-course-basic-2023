@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.wrapper, .card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.card-container {
+  margin: 50px 0 auto;
+}
+
+.card, .card__information, .card__information-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card, .card__information {
+  gap: 20px;
+}
+
+.card {
+  border: solid 1px #EF4934;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 276px;
+  padding: 10px 0;
+  transition: all 250ms ease-in-out;
+}
+
+.card:hover {
+  scale: 1.1;
+}
+
+.card__img {
+  width: 100%;
+  max-width: 256px;
+}
+
+.card__social, .card__social-github, .card__social-gmail, .card__social-telegram, .social__link {
+  display: flex;
+  gap: 20px;
+}
+
+.card__social-img {
+  width: 100%;
+  max-width: 30px;
+}
+
+.card__title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.card__text {
+  font-style: italic;
+  font-weight: 100;
+  color: #A0A0A0
+}
+
+.card__btn-button {
+  border-radius: 60px;
+  background-color: #EF4934;
+  color: #FFF;
+  border: solid 1px #FFF;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 4px;
+  padding: 16px 66px;
+  transition: all 500ms ease-out;
+}
+
+.card__btn-button:hover {
+  background-color: #FFF;
+  color: #EF4934;
+  border: solid 1px #EF4934;
+}
+
+.card__overlay {
+  background-color: #FFF;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  max-width: 256px;
+  height: 100%;
+  max-height: 255px;
+  border-radius: 10px;
+  transition: all 500ms ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__overlay:hover {
+  opacity: .95;
+}
+
+.card__overlay-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 32px;
+  text-align: center;
+  transition: inherit;
+}
+
+.social__img-gmail, .social__img-github, .social__img-telegram {
+  width: 30px;
+  height: 30px;
+  transition: all 500ms ease-out;
+}
+
+.social__img-github {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='none'%3e%3cpath fill='%23000' d='M15 2.5A12.5 12.5 0 0 0 2.5 15c0 5.525 3.588 10.212 8.55 11.875.625.1.825-.288.825-.625v-2.113c-3.463.75-4.2-1.675-4.2-1.675-.575-1.45-1.388-1.837-1.388-1.837-1.137-.775.088-.75.088-.75 1.25.087 1.912 1.288 1.912 1.288 1.088 1.9 2.925 1.337 3.638 1.037.112-.813.438-1.363.787-1.675-2.774-.313-5.687-1.387-5.687-6.15 0-1.387.475-2.5 1.287-3.387-.124-.313-.562-1.613.126-3.3 0 0 1.05-.338 3.437 1.275A11.778 11.778 0 0 1 15 8.55c1.063 0 2.137.137 3.125.412 2.387-1.612 3.438-1.274 3.438-1.274.687 1.687.25 2.987.125 3.3.812.887 1.287 2 1.287 3.387 0 4.775-2.925 5.825-5.713 6.137.45.388.863 1.15.863 2.313v3.425c0 .337.2.738.837.625C23.925 25.2 27.5 20.525 27.5 15A12.5 12.5 0 0 0 15 2.5Z'/%3e%3c/svg%3e");
+}
+
+.social__img-github:hover {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='none'%3e%3cpath fill='%23EF4934' d='M15 2.5A12.5 12.5 0 0 0 2.5 15c0 5.525 3.588 10.212 8.55 11.875.625.1.825-.288.825-.625v-2.113c-3.463.75-4.2-1.675-4.2-1.675-.575-1.45-1.388-1.837-1.388-1.837-1.137-.775.088-.75.088-.75 1.25.087 1.912 1.288 1.912 1.288 1.088 1.9 2.925 1.337 3.638 1.037.112-.813.438-1.363.787-1.675-2.774-.313-5.687-1.387-5.687-6.15 0-1.387.475-2.5 1.287-3.387-.124-.313-.562-1.613.126-3.3 0 0 1.05-.338 3.437 1.275A11.778 11.778 0 0 1 15 8.55c1.063 0 2.137.137 3.125.412 2.387-1.612 3.438-1.274 3.438-1.274.687 1.687.25 2.987.125 3.3.812.887 1.287 2 1.287 3.387 0 4.775-2.925 5.825-5.713 6.137.45.388.863 1.15.863 2.313v3.425c0 .337.2.738.837.625C23.925 25.2 27.5 20.525 27.5 15A12.5 12.5 0 0 0 15 2.5Z'/%3e%3c/svg%3e");
+}
+
+.social__img-telegram {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='none'%3e%3cpath fill='%23000' d='M15 2.5C8.1 2.5 2.5 8.1 2.5 15S8.1 27.5 15 27.5 27.5 21.9 27.5 15 21.9 2.5 15 2.5Zm5.8 8.5c-.188 1.975-1 6.775-1.413 8.988-.175.937-.524 1.25-.85 1.287-.724.063-1.274-.475-1.974-.938-1.1-.724-1.725-1.174-2.788-1.875-1.238-.812-.438-1.262.275-1.987.188-.188 3.387-3.1 3.45-3.363a.25.25 0 0 0-.063-.225c-.075-.062-.175-.037-.262-.024-.113.024-1.863 1.187-5.275 3.487-.5.337-.95.512-1.35.5-.45-.013-1.3-.25-1.938-.463-.787-.25-1.4-.387-1.35-.825.026-.224.338-.45.926-.687 3.65-1.588 6.074-2.637 7.287-3.137 3.475-1.45 4.188-1.7 4.662-1.7.1 0 .338.024.488.15.125.1.163.237.175.337-.012.075.012.3 0 .475Z'/%3e%3c/svg%3e");
+}
+
+.social__img-telegram:hover {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='none'%3e%3cpath fill='%23EF4934' d='M15 2.5C8.1 2.5 2.5 8.1 2.5 15S8.1 27.5 15 27.5 27.5 21.9 27.5 15 21.9 2.5 15 2.5Zm5.8 8.5c-.188 1.975-1 6.775-1.413 8.988-.175.937-.524 1.25-.85 1.287-.724.063-1.274-.475-1.974-.938-1.1-.724-1.725-1.174-2.788-1.875-1.238-.812-.438-1.262.275-1.987.188-.188 3.387-3.1 3.45-3.363a.25.25 0 0 0-.063-.225c-.075-.062-.175-.037-.262-.024-.113.024-1.863 1.187-5.275 3.487-.5.337-.95.512-1.35.5-.45-.013-1.3-.25-1.938-.463-.787-.25-1.4-.387-1.35-.825.026-.224.338-.45.926-.687 3.65-1.588 6.074-2.637 7.287-3.137 3.475-1.45 4.188-1.7 4.662-1.7.1 0 .338.024.488.15.125.1.163.237.175.337-.012.075.012.3 0 .475Z'/%3e%3c/svg%3e");
+}
+
+.social__img-gmail {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='none'%3e%3cpath fill='%23000' d='M25 22.5h-2.5V11.562L15 16.25l-7.5-4.688V22.5H5v-15h1.5l8.5 5.313L23.5 7.5H25M25 5H5a2.491 2.491 0 0 0-2.5 2.5v15A2.5 2.5 0 0 0 5 25h20a2.5 2.5 0 0 0 2.5-2.5v-15A2.5 2.5 0 0 0 25 5Z'/%3e%3c/svg%3e");
+}
+
+.social__img-gmail:hover {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='none'%3e%3cpath fill='%23EF4934' d='M25 22.5h-2.5V11.562L15 16.25l-7.5-4.688V22.5H5v-15h1.5l8.5 5.313L23.5 7.5H25M25 5H5a2.491 2.491 0 0 0-2.5 2.5v15A2.5 2.5 0 0 0 5 25h20a2.5 2.5 0 0 0 2.5-2.5v-15A2.5 2.5 0 0 0 25 5Z'/%3e%3c/svg%3e");
+}
