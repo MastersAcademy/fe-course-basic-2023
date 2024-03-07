@@ -76,6 +76,7 @@ export const developers = [
         action: './AndriiMorozov88/about.html',
         project: 'Project Games',
         image: '_img/games.jpg',
+        telegram: 'https://t.me/slonyara8888',
     },
     {
         firstName: 'Bogdan',
