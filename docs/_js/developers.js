@@ -88,7 +88,7 @@ export const developers = [
         project: 'Project Games',
         image: '_img/games.jpg',
         telegram: 'https://t.me/slonyara8888',
-        github: 'https://github.com AndriiMorozov88',
+        github: 'https://github.com/AndriiMorozov88',
     },
     {
         firstName: 'Bogdan',
