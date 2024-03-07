@@ -10,11 +10,11 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 50px;
 }
 
 .card-container {
   margin: 50px 0 auto;
+  gap: 50px;
 }
 
 .card, .card__information, .card__information-text {
@@ -38,11 +38,13 @@ body {
 
 .card:hover {
   scale: 1.1;
+  box-shadow: 0 0 32px -5px rgba(150,150,150,1);
 }
 
 .card__img {
-  width: 100%;
-  max-width: 256px;
+  width: 256px;
+  max-height: 143px;
+  border-radius: 12px;
 }
 
 .card__social, .card__social-github, .card__social-gmail, .card__social-telegram, .social__link {
@@ -62,8 +64,9 @@ body {
 }
 
 .card__text {
+  font-size: 16px;
   font-style: italic;
-  font-weight: 100;
+  font-weight: 400;
   color: #A0A0A0
 }
 
@@ -140,4 +143,15 @@ body {
 
 .social__img-gmail:hover {
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='none'%3e%3cpath fill='%23EF4934' d='M25 22.5h-2.5V11.562L15 16.25l-7.5-4.688V22.5H5v-15h1.5l8.5 5.313L23.5 7.5H25M25 5H5a2.491 2.491 0 0 0-2.5 2.5v15A2.5 2.5 0 0 0 5 25h20a2.5 2.5 0 0 0 2.5-2.5v-15A2.5 2.5 0 0 0 25 5Z'/%3e%3c/svg%3e");
+}
+
+@media (max-width: 965px) {
+
+  .card-container {
+    margin: 50px 20px 0;
+  }
+
+  .card:hover {
+    scale: 1.05;
+  }
 }

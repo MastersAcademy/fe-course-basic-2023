@@ -18,6 +18,10 @@
   margin: 0 auto;
 }
 
+.main {
+  position: relative;
+}
+
 .main__title {
   font-family: Roboto;
   font-size: 48px;
@@ -45,4 +49,25 @@
 .text__link {
   text-decoration: underline;
   color: #EF4934;
+}
+
+.arrow__up {
+  width: 0;
+  height: 0;
+  position: fixed;
+  bottom: 255px;
+  right: 2%;
+  z-index: 3;
+  border-radius: 50%;
+  opacity: .5;
+  transition: all 250ms ease-in;
+}
+
+.arrow__up:hover {
+  opacity: 1;
+  transition: all 250ms ease-in;
+}
+
+.d__none {
+  display: none;
 }
