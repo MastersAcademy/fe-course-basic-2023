@@ -15,7 +15,7 @@ function addSocialLinks(link, object, field) {
     if (field in object) {
         link.href = object[field];
     } else {
-        console.log(1);
+        link.removeAttribute('href');
     }
 }
 
@@ -26,6 +26,5 @@ developers.forEach((element) => {
     cardTemplateImage.src = element.image;
     addSocialLinks(cardSocialTelegramLink, element, 'telegram');
     const cardEl = cardTemplate.content.cloneNode(true);
-    cardSocialTelegramLink.href = '#';
     cardContainer.append(cardEl);
 });
