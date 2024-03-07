@@ -5,6 +5,8 @@ export const developers = [
         action: './rogerosha/index.html',
         project: 'Project Pokemons',
         image: '_img/title_pokemon.png',
+        telegram: 'https://www.t.me/rogerosha',
+        github: 'https://www.github.com/rogerosha',
     },
     {
         firstName: 'Kostiantyn',
@@ -13,6 +15,7 @@ export const developers = [
         project: 'Project Pokemons',
         image: '_img/title_pokemon.png',
         telegram: 'https://t.me/kostyaa_n',
+        github: 'https://github.com/NosatskyiK',
     },
     {
         firstName: 'Max',
@@ -20,6 +23,8 @@ export const developers = [
         action: './snischuk/index.html',
         project: 'Project Pokemons',
         image: '_img/title_pokemon.png',
+        telegram: 'https://t.me/max_snischuk',
+        github: 'https://github.com/snischuk',
     },
     {
         firstName: 'Rostyslav',
@@ -27,6 +32,8 @@ export const developers = [
         action: './rooosss/index.html',
         project: 'Project Pokemons',
         image: '_img/title_pokemon.png',
+        telegram: 'https://t.me/Rohanskyi',
+        github: 'https://github.com/Rooosss',
     },
     {
         firstName: 'Ihor',
@@ -34,6 +41,7 @@ export const developers = [
         action: './IgorFromUA/index.html',
         project: 'Project Games',
         image: '_img/games.jpg',
+        github: 'https://github.com/IgorFromUA',
     },
     {
         firstName: 'Artur',
@@ -41,6 +49,7 @@ export const developers = [
         action: './Allocene/index.html',
         project: 'Project Games',
         image: '_img/games.jpg',
+        github: 'https://github.com/Allocene',
     },
     {
         firstName: 'Serhii',
@@ -55,6 +64,7 @@ export const developers = [
         action: './dmytro-shevchenko1/GamesProject/index.html',
         project: 'Project Games',
         image: '_img/games.jpg',
+        github: 'https://github.com/dmytro-shevchenko1',
     },
     {
         firstName: 'Sviatoslav',
@@ -62,6 +72,7 @@ export const developers = [
         action: './SviatoslavTaranenko/index.html',
         project: 'Project Games',
         image: '_img/games.jpg',
+        github: 'https://github.com/SviatoslavTaranenko',
     },
     {
         firstName: 'Mariia',
@@ -77,6 +88,7 @@ export const developers = [
         project: 'Project Games',
         image: '_img/games.jpg',
         telegram: 'https://t.me/slonyara8888',
+        github: 'https://github.com AndriiMorozov88',
     },
     {
         firstName: 'Bogdan',
@@ -84,5 +96,6 @@ export const developers = [
         action: './Bogdandrummer/index.html',
         project: 'Project Games',
         image: '_img/games.jpg',
+        github: 'https://github.com/Bogdandrummer',
     },
 ];
