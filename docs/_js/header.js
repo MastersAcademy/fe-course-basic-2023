@@ -9,21 +9,13 @@ const burgerAction = () => {
     }
 };
 
-// const arrowAppearance = () => {
-//     if (window.innerWidth < 602) {
-//         liftUp.style.width = '50';
-//         liftUp.style.height = '50';
-//     } else {
-//         liftUp.style.width = '0';
-//         liftUp.style.height = '0';
-//     }
-// };
-
 const arrowAppearance = () => {
-    if (window.scrollY > 500) {
-        liftUp.classList.replace('arrow__up--hidden', 'arrow__up');
+    if (window.innerWidth < 602) {
+        liftUp.style.width = '50';
+        liftUp.style.height = '50';
     } else {
-        liftUp.classList.replace('arrow__up', 'arrow__up--hidden');
+        liftUp.style.width = '0';
+        liftUp.style.height = '0';
     }
 };
 
@@ -31,6 +23,6 @@ const handleButtonClick = () => {
     liftPoint.scrollIntoView({ block: 'center', behavior: 'smooth' });
 };
 liftUp.addEventListener('click', handleButtonClick);
-// arrowAppearance();
-window.addEventListener('scroll', arrowAppearance);
+arrowAppearance();
+window.addEventListener('resize', arrowAppearance);
 burgerButton.addEventListener('click', burgerAction);
