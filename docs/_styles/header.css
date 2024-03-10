@@ -181,3 +181,7 @@
     width: fit-content;
   }
 }
+
+.d__flex {
+  display: flex;
+}
