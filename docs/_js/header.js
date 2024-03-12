@@ -10,14 +10,14 @@ const burgerAction = () => {
 };
 
 const checkScroll = () => {
-    if (window.scrollY > 500) {
-        liftUp.style.right = '30';
+    if (window.scrollY > 500 && window.innerWidth < 602) {
+        liftUp.style.right = '7';
     } else {
         liftUp.style.right = '-50';
     }
 };
 const arrowAppearance = () => {
-    if (window.innerWidth < 602) {
+    if (window.innerWidth < 602 || window.innerWidth > 602) {
         checkScroll();
     }
 };
