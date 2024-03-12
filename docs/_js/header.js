@@ -9,20 +9,24 @@ const burgerAction = () => {
     }
 };
 
+const checkScroll = () => {
+    if (window.scrollY > 500) {
+        liftUp.style.right = '30';
+    } else {
+        liftUp.style.right = '-50';
+    }
+};
 const arrowAppearance = () => {
     if (window.innerWidth < 602) {
-        liftUp.style.width = '50';
-        liftUp.style.height = '50';
-    } else {
-        liftUp.style.width = '0';
-        liftUp.style.height = '0';
+        checkScroll();
     }
 };
 
 const handleButtonClick = () => {
     liftPoint.scrollIntoView({ block: 'center', behavior: 'smooth' });
 };
+
 liftUp.addEventListener('click', handleButtonClick);
-arrowAppearance();
 window.addEventListener('resize', arrowAppearance);
+window.addEventListener('scroll', arrowAppearance);
 burgerButton.addEventListener('click', burgerAction);
