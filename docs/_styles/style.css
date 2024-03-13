@@ -36,6 +36,14 @@
   margin-top: 45px;
 }
 
+@media (max-width: 965px) {
+
+  .main__description {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
 .text__description {
   font-family: Roboto;
   font-size: 16px;
@@ -52,12 +60,12 @@
 }
 
 .arrow__up {
-  width: 0;
-  height: 0;
   position: fixed;
   bottom: 255px;
-  right: 2%;
-  z-index: 3;
+  right: -50px;
+  z-index: 5;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   opacity: .5;
   transition: all 250ms ease-in;
