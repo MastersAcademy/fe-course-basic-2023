@@ -12,8 +12,8 @@ const cardSocialGithubLink = cardTemplate.content.querySelector('[data-github-li
 const cardSocialGmailLink = cardTemplate.content.querySelector('[data-gmail-link]');
 
 function addSocialLinks(link, object, field) {
-    if (field in object) {
-        link.href = object[field];
+    if (field in object.links) {
+        link.href = object.links[field];
     } else {
         link.removeAttribute('href');
     }

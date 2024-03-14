@@ -5,8 +5,10 @@ export const developers = [
         action: './rogerosha/index.html',
         project: 'Project Pokemons',
         image: '_img/title_pokemon.png',
-        telegram: 'https://www.t.me/rogerosha',
-        github: 'https://www.github.com/rogerosha',
+        links: {
+            telegram: 'https://www.t.me/rogerosha',
+            github: 'https://www.github.com/rogerosha',
+        },
     },
     {
         firstName: 'Kostiantyn',
@@ -14,8 +16,10 @@ export const developers = [
         action: './kostiantyn.nosatskyi/PokemonProject/index.html',
         project: 'Project Pokemons',
         image: '_img/title_pokemon.png',
-        telegram: 'https://t.me/kostyaa_n',
-        github: 'https://github.com/NosatskyiK',
+        links: {
+            telegram: 'https://t.me/kostyaa_n',
+            github: 'https://github.com/NosatskyiK',
+        },
     },
     {
         firstName: 'Max',
@@ -23,8 +27,10 @@ export const developers = [
         action: './snischuk/index.html',
         project: 'Project Pokemons',
         image: '_img/title_pokemon.png',
-        telegram: 'https://t.me/max_snischuk',
-        github: 'https://github.com/snischuk',
+        links: {
+            telegram: 'https://t.me/max_snischuk',
+            github: 'https://github.com/snischuk',
+        },
     },
     {
         firstName: 'Rostyslav',
@@ -32,8 +38,10 @@ export const developers = [
         action: './rooosss/index.html',
         project: 'Project Pokemons',
         image: '_img/title_pokemon.png',
-        telegram: 'https://t.me/Rohanskyi',
-        github: 'https://github.com/Rooosss',
+        links: {
+            telegram: 'https://t.me/Rohanskyi',
+            github: 'https://github.com/Rooosss',
+        },
     },
     {
         firstName: 'Ihor',
@@ -41,7 +49,10 @@ export const developers = [
         action: './IgorFromUA/index.html',
         project: 'Project Games',
         image: '_img/games.jpg',
-        github: 'https://github.com/IgorFromUA',
+        links: {
+            github: 'https://github.com/IgorFromUA',
+            linkedIn: 'https://www.linkedin.com/in/ihor-zapisochnyi-751b9424b/',
+        },
     },
     {
         firstName: 'Artur',
@@ -49,7 +60,10 @@ export const developers = [
         action: './Allocene/index.html',
         project: 'Project Games',
         image: '_img/games.jpg',
-        github: 'https://github.com/Allocene',
+        links: {
+            github: 'https://github.com/Allocene',
+            linkedIn: 'https://www.linkedin.com/in/artur-kobylatsky/',
+        },
     },
     {
         firstName: 'Serhii',
@@ -57,6 +71,9 @@ export const developers = [
         action: './SerhiiNSN/index.html',
         project: 'Project Games',
         image: '_img/games.jpg',
+        links: {
+            telegram: 'https://t.me/sergo_sj',
+        },
     },
     {
         firstName: 'Dmytro',
@@ -64,7 +81,10 @@ export const developers = [
         action: './dmytro-shevchenko1/GamesProject/index.html',
         project: 'Project Games',
         image: '_img/games.jpg',
-        github: 'https://github.com/dmytro-shevchenko1',
+        links: {
+            github: 'https://github.com/dmytro-shevchenko1',
+            facebook: 'https://www.facebook.com/profile.php?id=100086849614305',
+        },
     },
     {
         firstName: 'Sviatoslav',
@@ -72,7 +92,10 @@ export const developers = [
         action: './SviatoslavTaranenko/index.html',
         project: 'Project Games',
         image: '_img/games.jpg',
-        github: 'https://github.com/SviatoslavTaranenko',
+        links: {
+            github: 'https://github.com/SviatoslavTaranenko',
+            instagram: 'https://www.instagram.com/sviat_taranenko',
+        },
     },
     {
         firstName: 'Mariia',
@@ -80,6 +103,9 @@ export const developers = [
         action: './demasha0908/index.html',
         project: 'Project Games',
         image: '_img/games.jpg',
+        links: {
+            instagram: 'https://www.instagram.com/mary.demch/',
+        },
     },
     {
         firstName: 'Andrii',
@@ -87,8 +113,10 @@ export const developers = [
         action: './AndriiMorozov88/about.html',
         project: 'Project Games',
         image: '_img/games.jpg',
-        telegram: 'https://t.me/slonyara8888',
-        github: 'https://github.com/AndriiMorozov88',
+        links: {
+            telegram: 'https://t.me/slonyara8888',
+            github: 'https://github.com/AndriiMorozov88',
+        },
     },
     {
         firstName: 'Bogdan',
@@ -96,7 +124,10 @@ export const developers = [
         action: './Bogdandrummer/index.html',
         project: 'Project Games',
         image: '_img/games.jpg',
-        github: 'https://github.com/Bogdandrummer',
+        links: {
+            github: 'https://github.com/Bogdandrummer',
+            linkedIn: 'https://www.linkedin.com/in/%D0%B1%D0%BE%D0%B3%D0%B4%D0%B0%D0%BD-%D1%8F%D1%86%D0%B5%D0%BD%D1%82%D1%8E%D0%BA-841247270/',
+        },
     },
     {
         firstName: 'David',
@@ -104,8 +135,10 @@ export const developers = [
         action: './DavidTereshchenko/index.html',
         project: 'Project Games',
         image: '_img/games.jpg',
-        telegram: 'https://t.me/davidka_T',
-        github: 'https://github.com/DavidTereshchenko',
+        links: {
+            telegram: 'https://t.me/davidka_T',
+            github: 'https://github.com/DavidTereshchenko',
+        },
     },
     {
         firstName: 'Taras',
@@ -113,7 +146,9 @@ export const developers = [
         action: './LotusElize/index.html',
         project: 'Project Games',
         image: '_img/games.jpg',
-        github: 'https://github.com/LotusElize',
+        links: {
+            github: 'https://github.com/LotusElize',
+        },
     },
     {
         firstName: 'Lesia',
@@ -121,7 +156,10 @@ export const developers = [
         action: './lesiaturuta/PokemonProject/login.html',
         project: 'Project Pokemons',
         image: '_img/title_pokemon.png',
-        github: 'https://github.com/lesiaturuta',
+        links: {
+            github: 'https://github.com/lesiaturuta',
+            facebook: 'https://www.facebook.com/lesia.turuta',
+        },
     },
     {
         firstName: 'Vladyslav',
@@ -129,8 +167,10 @@ export const developers = [
         action: './vBrusentsov/index.html',
         project: 'Project Games',
         image: '_img/games.jpg',
-        telegram: 'https://t.me/Arconiel',
-        github: 'https://github.com/vBrusentsov',
+        links: {
+            telegram: 'https://t.me/Arconiel',
+            github: 'https://github.com/vBrusentsov',
+        },
     },
     {
         firstName: 'Igor',
@@ -138,6 +178,9 @@ export const developers = [
         action: './igor0806/GamesProject/index.html',
         project: 'Project Games',
         image: '_img/games.jpg',
-        github: 'https://github.com/igor0806',
+        links: {
+            github: 'https://github.com/igor0806',
+            facebook: 'https://www.facebook.com/profile.php?id=100009665057721',
+        },
     },
 ];
