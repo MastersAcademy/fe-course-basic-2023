@@ -115,7 +115,7 @@ body {
   transition: inherit;
 }
 
-.social__img-gmail, .social__img-github, .social__img-telegram, .social__img {
+.social__img {
   width: 30px;
   height: 30px;
   transition: all 500ms ease-out;
