@@ -47,7 +47,7 @@ body {
   border-radius: 12px;
 }
 
-.card__social, .card__social-github, .card__social-gmail, .card__social-telegram, .social__link {
+.card__social, .social__link {
   display: flex;
   gap: 20px;
 }
