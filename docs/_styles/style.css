@@ -8,6 +8,7 @@
   flex-direction: column;
   margin: 0 auto;
   min-width: 400px;
+  min-height: 100vh;
 }
 
 .container {
@@ -18,8 +19,12 @@
   margin: 0 auto;
 }
 
+.main {
+  flex-grow: 1;
+}
+
 .main__title {
-  font-family: Roboto;
+  font-family: Roboto sans-serif;
   font-size: 48px;
   font-weight: 700;
   line-height: 32px;
@@ -30,14 +35,16 @@
 
 .main__description {
   margin-top: 45px;
+  text-align: center;
 }
 
 .text__description {
-  font-family: Roboto;
+  font-family: Roboto sans-serif;
   font-size: 16px;
   font-weight: 500;
-  line-height: 18.75px;
+  line-height: 18px;
   color: #000;
+
   padding-left: 15px;
   padding-right: 15px;
 }
