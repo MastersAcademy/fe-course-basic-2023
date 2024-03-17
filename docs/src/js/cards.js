@@ -14,7 +14,7 @@ developers.forEach((element) => {
     cardTemplateForm.action = element.action;
     cardTemplateProjectName.innerText = element.project;
     cardTemplateImage.src = element.image;
-    cardSocialTelegram.href = element.telegram;
+    cardSocialTelegram && (cardSocialTelegram.href = element.telegram);
     const cardEl = cardTemplate.content.cloneNode(true);
 
     cardContainer.append(cardEl);
