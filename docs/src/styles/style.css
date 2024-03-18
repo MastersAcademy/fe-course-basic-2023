@@ -8,6 +8,7 @@
   flex-direction: column;
   margin: 0 auto;
   min-width: 400px;
+  min-height: 100vh;
 }
 
 .container {
@@ -19,11 +20,11 @@
 }
 
 .main {
-  position: relative;
+  flex-grow: 1;
 }
 
 .main__title {
-  font-family: Roboto;
+  font-family: Roboto sans-serif;
   font-size: 48px;
   font-weight: 700;
   line-height: 32px;
@@ -34,6 +35,7 @@
 
 .main__description {
   margin-top: 45px;
+  text-align: center;
 }
 
 @media (max-width: 965px) {
@@ -45,11 +47,12 @@
 }
 
 .text__description {
-  font-family: Roboto;
+  font-family: Roboto sans-serif;
   font-size: 16px;
   font-weight: 500;
-  line-height: 18.75px;
+  line-height: 18px;
   color: #000;
+  margin-top: 10px;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -57,25 +60,4 @@
 .text__link {
   text-decoration: underline;
   color: #EF4934;
-}
-
-.arrow__up {
-  position: fixed;
-  bottom: 255px;
-  right: -50px;
-  z-index: 5;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  opacity: .5;
-  transition: all 250ms ease-in;
-}
-
-.arrow__up:hover {
-  opacity: 1;
-  transition: all 250ms ease-in;
-}
-
-.d__none {
-  display: none;
 }
