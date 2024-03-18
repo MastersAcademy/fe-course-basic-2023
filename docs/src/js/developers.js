@@ -4,7 +4,7 @@ export const developers = [
         lastName: 'Sharova',
         action: './rogerosha/index.html',
         project: 'Project Pokemons',
-        image: '_img/title_pokemon.png',
+        image: 'src/img/title_pokemon.png',
         links: {
             telegram: 'https://www.t.me/rogerosha',
             github: 'https://www.github.com/rogerosha',
@@ -15,7 +15,7 @@ export const developers = [
         lastName: 'Nosatskyi',
         action: './kostiantyn.nosatskyi/PokemonProject/index.html',
         project: 'Project Pokemons',
-        image: '_img/title_pokemon.png',
+        image: 'src/img/title_pokemon.png',
         links: {
             telegram: 'https://t.me/kostyaa_n',
             github: 'https://github.com/NosatskyiK',
@@ -26,7 +26,7 @@ export const developers = [
         lastName: 'Snischuk',
         action: './snischuk/index.html',
         project: 'Project Pokemons',
-        image: '_img/title_pokemon.png',
+        image: 'src/img/title_pokemon.png',
         links: {
             telegram: 'https://t.me/max_snischuk',
             github: 'https://github.com/snischuk',
@@ -37,7 +37,7 @@ export const developers = [
         lastName: 'Vyshemirskyi',
         action: './rooosss/index.html',
         project: 'Project Pokemons',
-        image: '_img/title_pokemon.png',
+        image: 'src/img/title_pokemon.png',
         links: {
             telegram: 'https://t.me/Rohanskyi',
             github: 'https://github.com/Rooosss',
@@ -48,7 +48,7 @@ export const developers = [
         lastName: 'Zapisochniy',
         action: './IgorFromUA/index.html',
         project: 'Project Games',
-        image: '_img/games.jpg',
+        image: 'src/img/games.jpg',
         links: {
             github: 'https://github.com/IgorFromUA',
             linkedIn: 'https://www.linkedin.com/in/ihor-zapisochnyi-751b9424b/',
@@ -59,7 +59,7 @@ export const developers = [
         lastName: 'Kobyliatsky',
         action: './Allocene/index.html',
         project: 'Project Games',
-        image: '_img/games.jpg',
+        image: 'src/img/games.jpg',
         links: {
             github: 'https://github.com/Allocene',
             linkedIn: 'https://www.linkedin.com/in/artur-kobylatsky/',
@@ -70,7 +70,7 @@ export const developers = [
         lastName: 'Noskov',
         action: './SerhiiNSN/index.html',
         project: 'Project Games',
-        image: '_img/games.jpg',
+        image: 'src/img/games.jpg',
         links: {
             telegram: 'https://t.me/sergo_sj',
         },
@@ -80,7 +80,7 @@ export const developers = [
         lastName: 'Shevchenko',
         action: './dmytro-shevchenko1/GamesProject/index.html',
         project: 'Project Games',
-        image: '_img/games.jpg',
+        image: 'src/img/games.jpg',
         links: {
             github: 'https://github.com/dmytro-shevchenko1',
             facebook: 'https://www.facebook.com/profile.php?id=100086849614305',
@@ -91,7 +91,7 @@ export const developers = [
         lastName: 'Taranenko',
         action: './SviatoslavTaranenko/index.html',
         project: 'Project Games',
-        image: '_img/games.jpg',
+        image: 'src/img/games.jpg',
         links: {
             github: 'https://github.com/SviatoslavTaranenko',
             instagram: 'https://www.instagram.com/sviat_taranenko',
@@ -102,7 +102,7 @@ export const developers = [
         lastName: 'Demchenko',
         action: './demasha0908/index.html',
         project: 'Project Games',
-        image: '_img/games.jpg',
+        image: 'src/img/games.jpg',
         links: {
             instagram: 'https://www.instagram.com/mary.demch/',
         },
@@ -112,7 +112,7 @@ export const developers = [
         lastName: 'Morozov',
         action: './AndriiMorozov88/about.html',
         project: 'Project Games',
-        image: '_img/games.jpg',
+        image: 'src/img/games.jpg',
         links: {
             telegram: 'https://t.me/slonyara8888',
             github: 'https://github.com/AndriiMorozov88',
@@ -123,7 +123,7 @@ export const developers = [
         lastName: 'Yatsentiuk',
         action: './Bogdandrummer/index.html',
         project: 'Project Games',
-        image: '_img/games.jpg',
+        image: 'src/img/games.jpg',
         links: {
             github: 'https://github.com/Bogdandrummer',
             linkedIn: 'https://www.linkedin.com/in/%D0%B1%D0%BE%D0%B3%D0%B4%D0%B0%D0%BD-%D1%8F%D1%86%D0%B5%D0%BD%D1%82%D1%8E%D0%BA-841247270/',
@@ -134,7 +134,7 @@ export const developers = [
         lastName: 'Tereshchenko',
         action: './DavidTereshchenko/index.html',
         project: 'Project Games',
-        image: '_img/games.jpg',
+        image: 'src/img/games.jpg',
         links: {
             telegram: 'https://t.me/davidka_T',
             github: 'https://github.com/DavidTereshchenko',
@@ -145,7 +145,7 @@ export const developers = [
         lastName: 'Bobov',
         action: './LotusElize/index.html',
         project: 'Project Games',
-        image: '_img/games.jpg',
+        image: 'src/img/games.jpg',
         links: {
             github: 'https://github.com/LotusElize',
         },
@@ -155,7 +155,7 @@ export const developers = [
         lastName: 'Turuta',
         action: './lesiaturuta/PokemonProject/login.html',
         project: 'Project Pokemons',
-        image: '_img/title_pokemon.png',
+        image: 'src/img/title_pokemon.png',
         links: {
             github: 'https://github.com/lesiaturuta',
             facebook: 'https://www.facebook.com/lesia.turuta',
@@ -166,7 +166,7 @@ export const developers = [
         lastName: 'Brusentsov',
         action: './vBrusentsov/index.html',
         project: 'Project Games',
-        image: '_img/games.jpg',
+        image: 'src/img/games.jpg',
         links: {
             telegram: 'https://t.me/Arconiel',
             github: 'https://github.com/vBrusentsov',
@@ -177,7 +177,7 @@ export const developers = [
         lastName: 'Orel',
         action: './igor0806/GamesProject/index.html',
         project: 'Project Games',
-        image: '_img/games.jpg',
+        image: 'src/img/games.jpg',
         links: {
             github: 'https://github.com/igor0806',
             facebook: 'https://www.facebook.com/profile.php?id=100009665057721',
