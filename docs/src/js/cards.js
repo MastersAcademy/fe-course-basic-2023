@@ -7,26 +7,29 @@ const cardTemplateName = cardTemplate.content.querySelector('[data-template-name
 const cardTemplateProjectName = cardTemplate.content.querySelector('[data-template-project-name]');
 const cardTemplateImage = cardTemplate.content.querySelector('[data-template-image]');
 const cardTemplateForm = cardTemplate.content.querySelector('[data-template-form]');
-// const cardSocialTelegramLink = cardTemplate.content.querySelector('[data-telegram-link]');
-// const cardSocialGithubLink = cardTemplate.content.querySelector('[data-github-link]');
-// const cardSocialGmailLink = cardTemplate.content.querySelector('[data-gmail-link]');
+const cardTemplateSocialContainer = cardTemplate.content.querySelector('[data-template-social-container]');
+const socialTemplate = document.querySelector('[data-template-social]');
+const cardSocialTemplateLink = socialTemplate.content.querySelector('[data-template-social-link]');
+const cardSocialTemplateIcon = socialTemplate.content.querySelector('[data-template-social-icon]');
 
-// function addSocialLinks(link, object, field) {
-//     if (field in object.links) {
-//         link.href = object.links[field];
-//     } else {
-//         link.removeAttribute('href');
-//     }
-// }
+function addSocialLinks(container, object) {
+    container.innerHTML = '';
+    Object.entries(object).forEach((element) => {
+        console.log(element);
+        cardSocialTemplateIcon.classList.add(`social__img-${element[0]}`);
+        cardSocialTemplateLink.href = `${element[1]}`;
+        const icon = socialTemplate.content.cloneNode(true);
+        container.append(icon);
+        cardSocialTemplateIcon.classList.remove(`social__img-${element[0]}`);
+    });
+}
 
 developers.forEach((element) => {
     cardTemplateName.innerText = `${element.firstName} ${element.lastName}`;
     cardTemplateForm.action = element.action;
     cardTemplateProjectName.innerText = element.project;
     cardTemplateImage.src = element.image;
-    // addSocialLinks(cardSocialTelegramLink, element, 'telegram');
-    // addSocialLinks(cardSocialGithubLink, element, 'github');
-    // addSocialLinks(cardSocialGmailLink, element, 'gmail');
+    addSocialLinks(cardTemplateSocialContainer, element.links);
     const cardEl = cardTemplate.content.cloneNode(true);
     cardContainer.append(cardEl);
 });
