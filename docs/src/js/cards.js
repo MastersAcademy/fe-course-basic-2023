@@ -15,8 +15,9 @@ const cardSocialTemplateIcon = socialTemplate.content.querySelector('[data-templ
 function addSocialLinks(container, object) {
     container.innerHTML = '';
     Object.entries(object).forEach((element) => {
-        cardSocialTemplateIcon.classList.add(`social__img-${element[0]}`);
-        cardSocialTemplateLink.href = `${element[1]}`;
+        const [socialName, link] = element;
+        cardSocialTemplateIcon.classList.add(`social__img-${socialName}`);
+        cardSocialTemplateLink.href = link;
         const icon = socialTemplate.content.cloneNode(true);
         container.append(icon);
         cardSocialTemplateIcon.classList.remove(`social__img-${element[0]}`);
