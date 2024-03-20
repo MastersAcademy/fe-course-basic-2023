@@ -20,7 +20,7 @@ function addSocialLinks(container, object) {
         cardSocialTemplateLink.href = link;
         const icon = socialTemplate.content.cloneNode(true);
         container.append(icon);
-        cardSocialTemplateIcon.classList.remove(`social__img-${element[0]}`);
+        cardSocialTemplateIcon.classList.remove(`social__img-${socialName}`);
     });
 }
 
