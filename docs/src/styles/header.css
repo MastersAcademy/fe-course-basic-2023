@@ -16,7 +16,7 @@
   padding-left: 85px;
   padding-right: 85px;
   background-color: #333;
-  font-family: Roboto;
+  font-family: Roboto sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -85,6 +85,7 @@
   list-style: none;
   text-decoration: none;
   color: #FFF;
+  font-family: Roboto, sans-serif;
 }
 
 
@@ -116,7 +117,7 @@
   flex: 1 1 auto;
   text-decoration: none;
   color: #FFF;
-  font-family: Roboto;
+  font-family: Roboto sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 18.75px;
@@ -145,7 +146,7 @@
   }
 
   .menu__link-about:first-child {
-    margin-top: 0;
+    margin: 0;
   }
 
   .menu__link-about:hover {
