@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap");
-@import url("null.css");
+@import url("reset.css");
 @import url("header.css");
 @import url("footer.css");
 
 .wrapper {
+  font-family: Roboto, "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -20,11 +21,11 @@
 }
 
 .main {
+  position: relative;
   flex-grow: 1;
 }
 
 .main__title {
-  font-family: Roboto sans-serif;
   font-size: 48px;
   font-weight: 700;
   line-height: 32px;
@@ -38,7 +39,7 @@
   text-align: center;
 }
 
-@media (max-width: 965px) {
+@media (max-width: 997px) {
 
   .main__description {
     margin-left: 50px;
@@ -47,7 +48,7 @@
 }
 
 .text__description {
-  font-family: Roboto sans-serif;
+  font-family: Roboto, "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 18px;
@@ -60,4 +61,26 @@
 .text__link {
   text-decoration: underline;
   color: #EF4934;
+}
+
+
+.arrow__up {
+  position: fixed;
+  bottom: 255px;
+  right: -50px;
+  z-index: 5;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  opacity: .5;
+  transition: all 250ms ease-in;
+}
+
+.arrow__up:hover {
+  opacity: 1;
+  transition: all 250ms ease-in;
+}
+
+.d__none {
+  display: none;
 }
