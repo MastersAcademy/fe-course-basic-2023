@@ -16,7 +16,6 @@
   padding-left: 85px;
   padding-right: 85px;
   background-color: #333;
-  font-family: Roboto sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -32,7 +31,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: var(--pocket-width)) {
 
   .header__menu {
     padding-left: 20px;
@@ -65,7 +64,7 @@
   display: none;
 }
 
-@media (max-width: 767px) {
+@media (max-width: var(--pocket-width)) {
 
   .burger {
     display: block;
@@ -85,11 +84,10 @@
   list-style: none;
   text-decoration: none;
   color: #FFF;
-  font-family: Roboto, sans-serif;
 }
 
 
-@media (max-width: 767px) {
+@media (max-width: var(--pocket-width)) {
 
   .menu__list {
     display: none;
@@ -117,7 +115,6 @@
   flex: 1 1 auto;
   text-decoration: none;
   color: #FFF;
-  font-family: Roboto sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 18.75px;
@@ -129,7 +126,7 @@
   transition: all 250ms;
 }
 
-@media (max-width: 767px) {
+@media (max-width: var(--pocket-width)) {
 
   .menu__link-about {
     min-width: 100%;
@@ -176,7 +173,7 @@
   transform: scale(.985);
 }
 
-@media (max-width: 767px) {
+@media (max-width: var(--pocket-width)) {
 
   .menu__button {
     width: fit-content;

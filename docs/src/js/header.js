@@ -10,15 +10,10 @@ const burgerAction = () => {
 };
 
 const checkScroll = () => {
-    if (window.scrollY > 500 && window.innerWidth < 602) {
+    if (window.scrollY) {
         liftUp.style.right = '7';
     } else {
         liftUp.style.right = '-50';
-    }
-};
-const arrowAppearance = () => {
-    if (window.innerWidth < 602 || window.innerWidth > 602) {
-        checkScroll();
     }
 };
 
@@ -27,6 +22,5 @@ const handleButtonClick = () => {
 };
 
 liftUp.addEventListener('click', handleButtonClick);
-window.addEventListener('resize', arrowAppearance);
-window.addEventListener('scroll', arrowAppearance);
+window.addEventListener('scroll', checkScroll);
 burgerButton.addEventListener('click', burgerAction);

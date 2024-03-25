@@ -3,8 +3,16 @@
 @import url("header.css");
 @import url("footer.css");
 
-.wrapper {
+:root {
+  --tablet-width: 997px;
+  --pocket-width: 767px;
+}
+
+body {
   font-family: Roboto, "Roboto", sans-serif;
+}
+
+.wrapper {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -48,7 +56,6 @@
 }
 
 .text__description {
-  font-family: Roboto, "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 18px;
@@ -67,7 +74,7 @@
 .arrow__up {
   position: fixed;
   bottom: 255px;
-  right: -50px;
+  right: 7px;
   z-index: 5;
   width: 50px;
   height: 50px;
