@@ -31,7 +31,7 @@
   }
 }
 
-@media (max-width: var(--pocket-width)) {
+@media (max-width: 767px) {
 
   .header__menu {
     padding-left: 20px;
@@ -64,7 +64,7 @@
   display: none;
 }
 
-@media (max-width: var(--pocket-width)) {
+@media (max-width: 767px) {
 
   .burger {
     display: block;
@@ -87,7 +87,7 @@
 }
 
 
-@media (max-width: var(--pocket-width)) {
+@media (max-width: 767px) {
 
   .menu__list {
     display: none;
@@ -126,14 +126,14 @@
   transition: all 250ms;
 }
 
-@media (max-width: var(--pocket-width)) {
+@media (max-width: 767px) {
 
   .menu__link-about {
     min-width: 100%;
     height: 35px;
     font-size: 26px;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
     margin-left: 30px;
     padding: 3px 7px;
     border-radius: 5px;
@@ -173,7 +173,7 @@
   transform: scale(.985);
 }
 
-@media (max-width: var(--pocket-width)) {
+@media (max-width: 767px) {
 
   .menu__button {
     width: fit-content;

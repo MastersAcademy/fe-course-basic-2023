@@ -3,11 +3,6 @@
 @import url("header.css");
 @import url("footer.css");
 
-:root {
-  --tablet-width: 997px;
-  --pocket-width: 767px;
-}
-
 body {
   font-family: Roboto, "Roboto", sans-serif;
 }
@@ -74,7 +69,7 @@ body {
 .arrow__up {
   position: fixed;
   bottom: 255px;
-  right: 7px;
+  right: -50px;
   z-index: 5;
   width: 50px;
   height: 50px;
