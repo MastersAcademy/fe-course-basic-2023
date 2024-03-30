@@ -6,7 +6,7 @@ export const developers = [
         project: 'Project Pokemons',
         image: 'src/img/title_pokemon.png',
         links: {
-            telegram: 'https://www.t.me/rogerosha',
+            // telegram: 'https://www.t.me/rogerosha',
             github: 'https://www.github.com/rogerosha',
         },
     },
@@ -17,7 +17,7 @@ export const developers = [
         project: 'Project Pokemons',
         image: 'src/img/title_pokemon.png',
         links: {
-            telegram: 'https://t.me/kostyaa_n',
+            // telegram: 'https://t.me/kostyaa_n',
             github: 'https://github.com/NosatskyiK',
         },
     },
@@ -28,11 +28,11 @@ export const developers = [
         project: 'Project Pokemons',
         image: 'src/img/title_pokemon.png',
         links: {
-            telegram: 'https://t.me/max_snischuk',
+            // telegram: 'https://t.me/max_snischuk',
             github: 'https://github.com/snischuk',
-            linkedIn: 'https://www.linkedin.com/in/max-snischuk/',
-            facebook: 'https://www.facebook.com/s.max.target',
-            instagram: 'https://www.instagram.com/max_snischuk/',
+            // linkedIn: 'https://www.linkedin.com/in/max-snischuk/',
+            // facebook: 'https://www.facebook.com/s.max.target',
+            // instagram: 'https://www.instagram.com/max_snischuk/',
         },
     },
     {
@@ -42,9 +42,9 @@ export const developers = [
         project: 'Project Pokemons',
         image: 'src/img/title_pokemon.png',
         links: {
-            telegram: 'https://t.me/Rohanskyi',
+            // telegram: 'https://t.me/Rohanskyi',
             github: 'https://github.com/Rooosss',
-            linkedIn: 'https://www.linkedin.com/in/rostyslav-vyshemirskyi-b33bbb1b4/',
+            // linkedIn: 'https://www.linkedin.com/in/rostyslav-vyshemirskyi-b33bbb1b4/',
         },
     },
     {
@@ -55,7 +55,7 @@ export const developers = [
         image: 'src/img/games.jpg',
         links: {
             github: 'https://github.com/IgorFromUA',
-            linkedIn: 'https://www.linkedin.com/in/ihor-zapisochnyi-751b9424b/',
+            // linkedIn: 'https://www.linkedin.com/in/ihor-zapisochnyi-751b9424b/',
         },
     },
     {
@@ -66,7 +66,7 @@ export const developers = [
         image: 'src/img/games.jpg',
         links: {
             github: 'https://github.com/Allocene',
-            linkedIn: 'https://www.linkedin.com/in/artur-kobylatsky/',
+            // linkedIn: 'https://www.linkedin.com/in/artur-kobylatsky/',
         },
     },
     {
@@ -76,7 +76,8 @@ export const developers = [
         project: 'Project Games',
         image: 'src/img/games.jpg',
         links: {
-            telegram: 'https://t.me/sergo_sj',
+            // telegram: 'https://t.me/sergo_sj',
+            github: 'https://github.com/SerhiiNSN',
         },
     },
     {
@@ -87,7 +88,7 @@ export const developers = [
         image: 'src/img/games.jpg',
         links: {
             github: 'https://github.com/dmytro-shevchenko1',
-            facebook: 'https://www.facebook.com/profile.php?id=100086849614305',
+            // facebook: 'https://www.facebook.com/profile.php?id=100086849614305',
         },
     },
     {
@@ -98,8 +99,8 @@ export const developers = [
         image: 'src/img/games.jpg',
         links: {
             github: 'https://github.com/SviatoslavTaranenko',
-            instagram: 'https://www.instagram.com/sviat_taranenko',
-            linkedIn: 'https://www.linkedin.com/in/%D1%81%D0%B2%D1%8F%D1%82%D0%BE%D1%81%D0%BB%D0%B0%D0%B2-%D1%82%D0%B0%D1%80%D0%B0%D0%BD%D0%B5%D0%BD%D0%BA%D0%BE-6bb602273/',
+            // instagram: 'https://www.instagram.com/sviat_taranenko',
+            // linkedIn: 'https://www.linkedin.com/in/%D1%81%D0%B2%D1%8F%D1%82%D0%BE%D1%81%D0%BB%D0%B0%D0%B2-%D1%82%D0%B0%D1%80%D0%B0%D0%BD%D0%B5%D0%BD%D0%BA%D0%BE-6bb602273/',
         },
     },
     {
@@ -109,7 +110,7 @@ export const developers = [
         project: 'Project Games',
         image: 'src/img/games.jpg',
         links: {
-            instagram: 'https://www.instagram.com/mary.demch/',
+            github: 'https://github.com/demasha0908',
         },
     },
     {
@@ -119,7 +120,7 @@ export const developers = [
         project: 'Project Games',
         image: 'src/img/games.jpg',
         links: {
-            telegram: 'https://t.me/slonyara8888',
+            // telegram: 'https://t.me/slonyara8888',
             github: 'https://github.com/AndriiMorozov88',
         },
     },
@@ -131,7 +132,7 @@ export const developers = [
         image: 'src/img/games.jpg',
         links: {
             github: 'https://github.com/Bogdandrummer',
-            linkedIn: 'https://www.linkedin.com/in/%D0%B1%D0%BE%D0%B3%D0%B4%D0%B0%D0%BD-%D1%8F%D1%86%D0%B5%D0%BD%D1%82%D1%8E%D0%BA-841247270/',
+            // linkedIn: 'https://www.linkedin.com/in/%D0%B1%D0%BE%D0%B3%D0%B4%D0%B0%D0%BD-%D1%8F%D1%86%D0%B5%D0%BD%D1%82%D1%8E%D0%BA-841247270/',
         },
     },
     {
@@ -141,11 +142,11 @@ export const developers = [
         project: 'Project Games',
         image: 'src/img/games.jpg',
         links: {
-            telegram: 'https://t.me/davidka_T',
+            // telegram: 'https://t.me/davidka_T',
             github: 'https://github.com/DavidTereshchenko',
-            linkedIn: 'https://www.linkedin.com/in/david-tereshchenko-7bb98b240',
-            instagram: 'https://www.instagram.com/davidushka_te?igshid=YzVkODRmOTdmMw%3D%3D&utm_source=qr',
-            facebook: 'https://www.facebook.com/david.tereshchenko.77',
+            // linkedIn: 'https://www.linkedin.com/in/david-tereshchenko-7bb98b240',
+            // instagram: 'https://www.instagram.com/davidushka_te?igshid=YzVkODRmOTdmMw%3D%3D&utm_source=qr',
+            // facebook: 'https://www.facebook.com/david.tereshchenko.77',
         },
     },
     {
@@ -166,7 +167,7 @@ export const developers = [
         image: 'src/img/title_pokemon.png',
         links: {
             github: 'https://github.com/lesiaturuta',
-            facebook: 'https://www.facebook.com/lesia.turuta',
+            // facebook: 'https://www.facebook.com/lesia.turuta',
         },
     },
     {
@@ -176,7 +177,7 @@ export const developers = [
         project: 'Project Games',
         image: 'src/img/games.jpg',
         links: {
-            telegram: 'https://t.me/Arconiel',
+            // telegram: 'https://t.me/Arconiel',
             github: 'https://github.com/vBrusentsov',
         },
     },
@@ -188,7 +189,7 @@ export const developers = [
         image: 'src/img/games.jpg',
         links: {
             github: 'https://github.com/igor0806',
-            facebook: 'https://www.facebook.com/profile.php?id=100009665057721',
+            // facebook: 'https://www.facebook.com/profile.php?id=100009665057721',
         },
     },
 ];
