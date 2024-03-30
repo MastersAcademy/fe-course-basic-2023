@@ -1,4 +1,4 @@
-import { developers } from './developers.js';
+import { developers, supportedSocials } from './developers.js';
 
 developers.sort(() => Math.random() - 0.5);
 const cardContainer = document.querySelector('[data-card-container]');
@@ -12,9 +12,12 @@ const socialTemplate = document.querySelector('[data-template-social]');
 const cardSocialTemplateLink = socialTemplate.content.querySelector('[data-template-social-link]');
 const cardSocialTemplateIcon = socialTemplate.content.querySelector('[data-template-social-icon]');
 
-function addSocialLinks(container, object) {
+function addSocialLinks(container, socialLinks) {
     container.innerHTML = '';
-    Object.entries(object).forEach((element) => {
+    Object.entries(socialLinks).forEach((element) => {
+        if (!supportedSocials.includes(element[0])) {
+            return;
+        }
         const [socialName, link] = element;
         cardSocialTemplateIcon.classList.add(`social__img-${socialName}`);
         cardSocialTemplateLink.href = link;
