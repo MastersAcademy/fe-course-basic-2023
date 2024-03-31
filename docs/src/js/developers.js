@@ -58,6 +58,7 @@ export const developers = [
         image: 'src/img/games.jpg',
         links: {
             github: 'https://github.com/IgorFromUA',
+            linkedIn: 'https://www.linkedin.com/in/ihor-zapisochnyi-751b9424b/',
         },
     },
     {
